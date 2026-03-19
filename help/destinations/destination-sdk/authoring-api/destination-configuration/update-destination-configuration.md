@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Actualizar una configuración de destino
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '369'
 ht-degree: 2%
 
 ---
@@ -34,11 +34,11 @@ Para obtener una descripción detallada de las capacidades de una configuración
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Actualizar una configuración de destino {#update}
 
@@ -59,6 +59,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Parámetro | Descripción |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | El ID de la configuración de destino que desea actualizar. Para obtener una configuración de destino existente y su correspondiente `{INSTANCE_ID}`, vea [Recuperar una configuración de destino](retrieve-destination-configuration.md). |
+
+{style="table-layout:auto"}
 
 +++Solicitud
 
@@ -209,7 +211,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo actualizar una configuración de destino a través del extremo de la API de Destination SDK `/authoring/destinations`.
 

@@ -2,9 +2,9 @@
 description: En esta página se explica cómo utilizar el extremo /authoring/testing/template/render para visualizar el aspecto que tendrían los campos de datos del cliente con plantillas definidos en la configuración de destino.
 title: Validar campos de cliente con plantilla
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ El extremo genera valores aleatorios para los campos de datos del cliente y los 
 
 ## Introducción {#getting-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
@@ -80,6 +80,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 | `destinationId` | El identificador de la [configuración de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que está probando. |
 | `templates` | Los nombres de campo con plantilla definidos en su [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
 
+{style="table-layout:auto"}
+
 **Respuesta**
 
 Una respuesta correcta devuelve un estado `HTTP 200 OK` y el cuerpo incluye valores generados aleatoriamente para los campos con plantilla.
@@ -100,6 +102,6 @@ Esta respuesta puede ayudarle a validar la estructura correcta de los campos de 
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo validar la configuración del campo de datos del cliente definida en su [servidor de destino](../../authoring-api/destination-server/create-destination-server.md).

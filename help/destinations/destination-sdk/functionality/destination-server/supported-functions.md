@@ -1,23 +1,23 @@
 ---
-description: Experience Platform Destination SDK utiliza plantillas Pebble, lo que permite transformar los datos exportados desde Experience Platform al formato requerido por el destino.
-title: Funciones de transformación compatibles en Destination SDK
+description: Experience Platform Destination SDK utiliza plantillas de guijarros, lo que le permite transformar los datos exportados desde Experience Platform en el formato requerido por el destino.
+title: Funciones de transformación compatibles con Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
-# Funciones de transformación compatibles en Destination SDK
+# Funciones de transformación compatibles con Destination SDK
 
-El Destination SDK de Experience Platform usa [[!DNL Pebble] templates](https://pebbletemplates.io/), lo que le permite transformar los datos exportados desde el Experience Platform al formato requerido por el destino.
+Experience Platform Destination SDK usa [[!DNL Pebble] templates](https://pebbletemplates.io/), lo que le permite transformar los datos exportados desde Experience Platform al formato requerido por su destino.
 
-La implementación del Experience Platform [!DNL Pebble] tiene algunos cambios, en comparación con la versión predeterminada proporcionada por [!DNL Pebble]. Además de las funciones predeterminadas proporcionadas por [!DNL Pebble], Adobe ha creado algunas funciones adicionales que puede usar con Destination SDK.
+La implementación de Experience Platform [!DNL Pebble] tiene algunos cambios, en comparación con la versión predeterminada proporcionada por [!DNL Pebble]. Además de las funciones predeterminadas que proporciona [!DNL Pebble], Adobe ha creado algunas funciones adicionales que puede usar con Destination SDK.
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por el Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Dónde se usa {#where-to-use}
 
@@ -27,13 +27,13 @@ La plantilla de transformación de mensajes se usa en la [configuración del ser
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender los conceptos y las funciones de esta página de referencia, lea primero el documento [formato del mensaje](message-format.md). Necesita comprender la [estructura de un perfil](message-format.md#profile-structure) en Experience Platform para poder usar las plantillas [!DNL Pebble] para transformar y exportar los datos.
+Para comprender los conceptos y las funciones de esta página de referencia, lea primero el documento [formato del mensaje](message-format.md). Necesita comprender la [estructura de un perfil](message-format.md#profile-structure) en Experience Platform para poder usar [!DNL Pebble] plantillas para transformar los datos exportados.
 
 Antes de avanzar a las funciones documentadas a continuación, revise los ejemplos de creación de plantillas en la sección [Uso de un idioma de creación de plantillas para las transformaciones de identidad, atributos y pertenencia a audiencias](message-format.md#using-templating). Los ejemplos comienzan muy simples y aumentan en complejidad.
 
 ## Funciones [!DNL Pebble] compatibles {#supported-functions}
 
-Desde la sección de etiquetas [!DNL Pebble], el Destination SDK solo admite:
+Desde la sección de etiquetas [!DNL Pebble], Destination SDK solo admite:
 
 * [filtro](https://pebbletemplates.io/wiki/tag/filter/)
 * [para](https://pebbletemplates.io/wiki/tag/for/)
@@ -47,21 +47,21 @@ Desde la sección de etiquetas [!DNL Pebble], el Destination SDK solo admite:
 > * Para ver un ejemplo de un elemento de matriz, piense en las identidades de un área de nombres [identityMap](message-format.md#identities), donde podría iterar a través de elementos como `identityMap.gaid`, `identityMap.email` o similares.
 > * Para ver un ejemplo de un elemento de asignación, vea [segmentMembership](message-format.md#segment-membership).
 
-Desde la sección de filtros [!DNL Pebble], el Destination SDK admite todas las funciones. Un ejemplo más abajo muestra cómo se puede usar la función `date` en el Destination SDK.
+Desde la sección de filtros [!DNL Pebble], Destination SDK admite todas las funciones. Un ejemplo más abajo muestra cómo se puede usar la función `date` en Destination SDK.
 
-Desde la sección de funciones [!DNL Pebble], el Adobe *no* admite la función [range](https://pebbletemplates.io/wiki/function/range/).
+Desde la sección de funciones [!DNL Pebble], Adobe *no* admite la función [range](https://pebbletemplates.io/wiki/function/range/).
 
 ## Ejemplo de cómo se utiliza la función `date` {#date-function}
 
 Para ejemplificar cómo se usan las funciones [!DNL Pebble] en Destination SDK, vea a continuación cómo se usa la función de fecha ([link en la documentación de Pebble](https://pebbletemplates.io/wiki/filter/date/)) para transformar el formato de una marca de tiempo.
 
-### Ejemplo de uso
+### Ejemplo de uso {#date-use-case}
 
-Desea cambiar la marca de tiempo `lastQualificationTime` del valor predeterminado [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) que el Experience Platform exporta a otro valor preferido por el destino.
+Desea cambiar la marca de tiempo `lastQualificationTime` del valor predeterminado [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) que Experience Platform exporta a otro valor preferido por el destino.
 
-### Ejemplo
+### Ejemplo {#date-example}
 
-#### Entrada
+#### Entrada {#date-input}
 
 ```json
 {
@@ -69,13 +69,13 @@ Desea cambiar la marca de tiempo `lastQualificationTime` del valor predeterminad
 }
 ```
 
-#### Formato
+#### Formato {#date-format}
 
 ```java
 {{ lastQualificationTime | date(existingFormat="yyyy-MM-dd'T'HH:mm:sss.SSSX", format="yyyy-MM-dd'T'HH:mm:ssX") }}
 ```
 
-#### Salida
+#### Output {#date-output}
 
 ```json
 {
@@ -85,17 +85,17 @@ Desea cambiar la marca de tiempo `lastQualificationTime` del valor predeterminad
 
 ## Funciones agregadas por Adobe {#functions-added-by-adobe}
 
-Además de las funciones predeterminadas proporcionadas por [!DNL Pebble], vea a continuación las funciones adicionales creadas por Adobe que puede utilizar para sus exportaciones de datos.
+Además de las funciones predeterminadas que proporciona [!DNL Pebble], vea a continuación las funciones adicionales creadas por Adobe que puede usar para sus exportaciones de datos.
 
 ### Funciones `addedSegments` y `removedSegments` {#addedsegments-removedsegments-functions}
 
-#### Ejemplo de uso
+#### Ejemplo de uso {#segments-use-case}
 
 Estas funciones se pueden utilizar para obtener una lista de audiencias que se añadieron o eliminaron de un perfil.
 
-#### Ejemplo
+#### Ejemplo {#segments-example}
 
-##### Entrada
+##### Entrada {#segments-input}
 
 ```json
 {
@@ -128,13 +128,13 @@ Estas funciones se pueden utilizar para obtener una lista de audiencias que se a
 }
 ```
 
-##### Formato
+##### Formato {#segments-format}
 
 ```java
 added: {% for s in addedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}; removed: {% for s in removedSegments(segmentMembership.ups) %}<{{s.key}}>{% endfor %}
 ```
 
-##### Salida
+##### Output {#segments-output}
 
 ```json
 added: <111111><333333>; removed: <222222>
@@ -197,9 +197,9 @@ added: <111111><333333>;|removed: <222222>;
 
 -->
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
-Ahora sabe qué funciones de [!DNL Pebble] se admiten en Destination SDK, así como cómo utilizarlas para ajustar el formato de los datos exportados según sus necesidades. A continuación, debe revisar las siguientes páginas:
+Ahora sabe qué funciones de [!DNL Pebble] son compatibles con Destination SDK, así como cómo utilizarlas para ajustar el formato de los datos exportados y adaptarlos a sus necesidades. A continuación, debe revisar las siguientes páginas:
 
 * [Creación y prueba de una plantilla de transformación de mensajes](../../testing-api/streaming-destinations/create-template.md)
 * [Procesar operaciones de API de plantilla](../../testing-api/streaming-destinations/render-template-api.md)

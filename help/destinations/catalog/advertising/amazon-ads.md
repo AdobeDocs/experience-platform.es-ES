@@ -3,9 +3,9 @@ title: Amazon Ads
 description: Amazon Ads ofrece una serie de opciones para ayudarle a lograr sus objetivos publicitarios para vendedores registrados, proveedores, proveedores de libros, autores de Kindle Direct Publishing (KDP), desarrolladores de aplicaciones y/o agencias. La integración de Amazon Ads con Adobe Experience Platform proporciona una integración llave en mano con los productos de Amazon Ads, incluido Amazon DSP (ADSP). Con el destino Amazon Ads en Adobe Experience Platform, los usuarios pueden definir audiencias de anunciante para la segmentación y activación en Amazon DSP.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2164'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ La integración de [!DNL Amazon Ads] con Adobe Experience Platform proporciona i
 
 Si usan el destino [!DNL Amazon Ads] en Adobe Experience Platform, los usuarios podrán definir audiencias de anunciante para el direccionamiento y la activación en Amazon DSP.  Además, los usuarios pueden cargar sus datos en [!DNL Amazon Marketing Cloud] para comprender el rendimiento por audiencia, las dimensiones proporcionadas por el anunciante, la pertenencia a segmentos de Amazon u otras señales disponibles en AMC. Después de cargar audiencias de anunciante en AMC, los usuarios pueden usar [!DNL Amazon Marketing Cloud] para modificar, mejorar o anexar a los miembros de la audiencia señales de Amazon desde [!DNL Amazon Marketing Cloud].
 
-AMC reúne señales únicas de todas las propiedades de Amazon y operadas, abarcando todos los medios, incluyendo pantalla, vídeo, streaming de TV, audio y anuncios patrocinados. Los usuarios pueden enviar fácilmente segmentos depurados de Adobe Experience Platform a AMC para mejorar el aprendizaje, como grupos de mercado de audiencias, cohortes de estilo de vida y patrones de participación de la marca. Los segmentos aumentados se pueden utilizar para optimizar las activaciones de medios en Amazon DSP.
+AMC reúne señales únicas de todas las propiedades de Amazon y operadas, abarcando todos los medios, incluyendo pantalla, vídeo, streaming de TV, audio y anuncios patrocinados. Los usuarios pueden enviar segmentos depurados de Adobe Experience Platform a AMC para mejorar el aprendizaje, como grupos de mercado de audiencias, cohortes de estilo de vida y patrones de participación de la marca. Los segmentos aumentados se pueden utilizar para optimizar las activaciones de medios en Amazon DSP.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Esta integración con Amazon DSP permite que los anunciantes de [!DNL Amazon Ads
 
 Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite que los anunciantes de [!DNL Amazon Ads] pasen segmentos CDP del formulario de Adobe Experience Platform a AMC. Los anunciantes pueden unirse a las entradas de CDP con señales de [!DNL Amazon Ads] y realizar análisis personalizados sobre temas como el impacto de los medios, los segmentos de audiencia y los recorridos de los clientes en un formato compatible con la privacidad. Por ejemplo: un anunciante puede cargar una lista de sus clientes existentes para comprender el rendimiento agregado de la campaña de publicidad, o estadísticas agregadas de eventos de conversión sin conexión a Amazon, como ver una página de detalles del producto, agregar un producto a un carro de compras o comprar un producto.
 
-### Optimización de Advertising
+### Optimización de Advertising {#advertising-optimization}
 
 Esta integración con [!DNL Amazon Marketing Cloud] (AMC) permite a los anunciantes cargar sus propias listas de clientes y, mediante [!DNL Amazon Marketing Cloud] SQL, realizar análisis de superposición, supresiones, adiciones u optimizaciones a las audiencias de forma recurrente antes de crear una audiencia lista para la activación en Amazon DSP para el direccionamiento.
 
@@ -103,7 +103,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -141,8 +141,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

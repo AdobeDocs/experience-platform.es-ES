@@ -4,9 +4,9 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '4976'
+source-wordcount: '4973'
 ht-degree: 4%
 
 ---
@@ -53,11 +53,11 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesita conocer para activar datos en destinos basados en archivos en Experience Platform.
+Las secciones siguientes proporcionan información adicional que debe conocer para activar datos en destinos basados en archivos en Experience Platform.
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
@@ -148,7 +148,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 **Solicitud**
 
@@ -447,7 +447,7 @@ Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connec
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
@@ -703,7 +703,7 @@ Observe la línea resaltada con comentarios en línea en el ejemplo [!DNL connec
 
 >[!ENDTABS]
 
-Con las propiedades especificadas en la especificación de autenticación (es decir, `authSpec` de la respuesta) puede crear una conexión base con las credenciales necesarias, específicas para cada tipo de destino, como se muestra en los ejemplos siguientes:
+Con las propiedades especificadas en la especificación de autenticación (que es `authSpec` de la respuesta) puede crear una conexión base con las credenciales necesarias, específicas para cada tipo de destino, como se muestra en los ejemplos siguientes:
 
 >[!BEGINTABS]
 
@@ -791,7 +791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 **Solicitud**
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la página de documentación de destino de Azure Blob Storage.
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la página de documentación de destino de almacenamiento de Azure Blob.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en el destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la página de documentación de destino de Azure Data Lake Gen 2(ADLS Gen2).
+>Para obtener información sobre cómo obtener las credenciales de autenticación necesarias, consulte la sección [autenticar en destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la página de documentación de destino de Azure Data Lake Gen 2(ADLS Gen2).
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -1094,7 +1094,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Añadir cifrado a los archivos exportados
+### Añadir cifrado a los archivos exportados {#add-encryption}
 
 Opcionalmente, puede agregar cifrado a los archivos exportados. Para ello, debe agregar elementos del objeto `encryption`. Consulte el ejemplo de solicitud que aparece a continuación con los parámetros obligatorios resaltados:
 
@@ -1417,7 +1417,7 @@ Observe las líneas resaltadas con comentarios en línea en el ejemplo [!DNL con
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando parámetros de conexión de destino
 
@@ -2488,7 +2488,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 **Solicitud**
 
@@ -3017,7 +3017,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 **Solicitud**
 
@@ -3273,7 +3273,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Tenga en cuenta el ID de flujo de datos de la respuesta. Este ID será necesario en pasos posteriores.
 
-### Añadir audiencias a la exportación
+### Añadir audiencias a la exportación {#add-audiences}
 
 En este paso, también puede seleccionar qué audiencias desea exportar al destino. Para obtener información detallada sobre este paso y el formato de solicitud para agregar una audiencia al flujo de datos, vea los ejemplos en la sección [Actualizar un flujo de datos de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentación de referencia de la API.
 
@@ -3292,7 +3292,7 @@ Por ejemplo, para obtener la siguiente asignación que se muestra en la interfaz
 
 ![Ejemplo de paso de asignación](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Creación de un esquema de entrada
+### Creación de un esquema de entrada {#create-input-schema}
 
 Para crear un esquema de entrada, primero debe recuperar su [esquema de unión](/help/profile/ui/union-schema.md) y las identidades que se pueden exportar al destino. Este es el esquema de atributos e identidades que puede seleccionar como asignación de origen.
 
@@ -3730,7 +3730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 El ID de la respuesta representa el identificador único del esquema de entrada que ha creado. Copie el ID de la respuesta, ya que lo reutilizará en un paso posterior.
 
-### Creación de un esquema de salida
+### Creación de un esquema de salida {#create-output-schema}
 
 A continuación, debe configurar el esquema de salida para la exportación. En primer lugar, debe buscar e inspeccionar el esquema de socio existente.
 

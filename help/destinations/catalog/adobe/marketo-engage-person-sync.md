@@ -4,9 +4,9 @@ description: Utilice el conector de sincronización de personas de Marketo Engag
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1223'
 ht-degree: 6%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 6%
 Utilice el conector de sincronización de personas de Marketo Engage para transmitir las actualizaciones de las audiencias de persona a los registros correspondientes de la instancia de Marketo Engage.
 
 >[!IMPORTANT]
-> 
+>
 >El [Conector de sincronización de audiencia de Marketo V2](/help/destinations/catalog/adobe/marketo-engage.md) no se debe usar en el modo de creación junto con el Conector de sincronización de actualización de perfil
 
 ## Identidades y atributos admitidos {#support-identities-and-attributes}
@@ -91,7 +91,7 @@ Si su empresa tiene acceso a varias organizaciones, asegúrese de utilizar la mi
 
 >[!IMPORTANT]
 >
->El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
+>El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
 
 ![Conectar con destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,10 +102,10 @@ Si su empresa tiene acceso a varias organizaciones, asegúrese de utilizar la mi
 * **[!UICONTROL First searchable field]**: campo en el que se deduplicará. El campo debe estar presente en cada registro de posibles clientes de la entrada. El valor predeterminado es correo electrónico
 * **[!UICONTROL First searchable field]**: campo secundario en el que se va a deduplicar. El campo debe estar presente en cada registro de posibles clientes de la entrada. Opcional
 
-Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
+Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
 
 >[!IMPORTANT]
-> 
+>
 >Después de activar una audiencia en el destino de Marketo por primera vez, rellenar los perfiles que ya existían en la audiencia antes de la activación del destino de Marketo puede tardar *hasta 24 horas*. En adelante, cada vez que los perfiles se añadan a la audiencia, se añadirán a Marketo inmediatamente.
 
 ### Campos de deduplicación {#deduplication-fields}
@@ -123,10 +123,10 @@ Si no se encuentra ningún registro de posible cliente coincidente, se creará u
 ## Activar audiencias {#activate-audiences}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 En el paso Activar audiencias, podrá seleccionar entre las audiencias de persona que sean visibles para usted.
 

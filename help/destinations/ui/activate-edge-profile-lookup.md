@@ -3,9 +3,9 @@ title: Búsqueda de atributos de perfil de Edge en tiempo real
 description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante el destino de Personalization personalizado y la API de Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,12 @@ Al configurar el caso de uso descrito en esta página, utilizará los siguientes
 
 Los casos de uso de búsqueda de perfiles de Edge están sujetos a las protecciones de rendimiento específicas que se describen en la tabla siguiente. Para obtener más información acerca de las protecciones de la API de Edge Network, consulte las protecciones [página de documentación](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
-| Servicio de Edge Network | Segmentación de Edge | Solicitudes por segundo |
+| Servicio de Edge Network | Segmentación perimetral | Solicitudes por segundo |
 |---------|----------|---------|
 | [Destino de personalización personalizado](../catalog/personalization/custom-personalization.md) mediante [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Sí | 1500 |
 | [Destino de personalización personalizado](../catalog/personalization/custom-personalization.md) mediante [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | No | 1500 |
+
+{style="table-layout:auto"}
 
 ## Paso 1: Crear y configurar una secuencia de datos {#create-datastream}
 
@@ -88,7 +90,7 @@ Al configurar el nuevo destino, seleccione la secuencia de datos que creó en el
 Después de crear una conexión de **[!UICONTROL Custom Personalization With Attributes]**, ya puede enviar datos de perfil a Edge Network.
 
 >[!IMPORTANT]
-> 
+>
 > * Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
@@ -204,6 +206,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sí. | ID de la secuencia de datos que creó en el [paso 1](#create-datastream). |
 
+{style="table-layout:auto"}
+
 ### Respuesta {#response}
 
 Una respuesta correcta devuelve el estado HTTP `200 OK`, con un objeto `Handle` que incluye información similar a los ejemplos de las pestañas siguientes, en función de si el perfil se encuentra en el perímetro o no.
@@ -283,6 +287,8 @@ El objeto `handle` proporciona la información descrita en la tabla siguiente.
 | `type` | `handle` objetos están agrupados por tipo. En los casos de uso de búsqueda de perfiles perimetrales, el tipo del objeto `handle` siempre es `activation:pull`. |
 | `eventIndex` | Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
 
+{style="table-layout:auto"}
+
 >[!TAB El perfil no existe en el perímetro]
 
 Si el perfil no existe en el perímetro de, recibirá una respuesta similar a la que se muestra a continuación.
@@ -307,6 +313,8 @@ El objeto `handle` proporciona la información descrita en la tabla siguiente.
 | `payload` | Cuando el perfil no está presente en el perímetro, el objeto `payload` está vacío. |
 | `type` | `payload` objetos están agrupados por tipo. En los casos de uso de búsqueda de perfiles perimetrales, el tipo del objeto `payload` siempre es `activation:pull`. |
 | `eventIndex` | Edge Network recibe eventos del cliente en forma de matrices. El orden de los eventos de la matriz se conserva durante su procesamiento y se refleja en este índice. La indexación de eventos comienza con `0`. |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

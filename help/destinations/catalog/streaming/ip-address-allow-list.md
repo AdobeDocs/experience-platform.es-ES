@@ -4,9 +4,9 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de flujo continuo
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar de forma segura datos de Experience Platform a su extremo de la API de REST HTTP o a la instancia de Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---

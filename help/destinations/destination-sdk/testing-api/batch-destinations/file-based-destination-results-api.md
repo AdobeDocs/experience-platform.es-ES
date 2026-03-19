@@ -2,9 +2,9 @@
 description: Esta página explica cómo utilizar el extremo de la API /testing/destinationInstance para ver los detalles completos de los resultados de las pruebas. Este extremo de API devuelve el mismo resultado que obtendría al utilizar la API de Flow Service para monitorizar flujos de datos.
 title: Ver resultados detallados de la activación
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Si desea ver información más detallada sobre el flujo de activación, puede ut
 
 ## Introducción {#getting-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | El ID de la instancia de destino para la que está generando perfiles de muestra. Consulte la sección [requisitos previos](#prerequisites) para obtener más información sobre cómo obtener este ID. |
 
+{style="table-layout:auto"}
+
 | Parámetros de cadena de consulta | Descripción |
 | -------- | ----------- |
 | `flowRunIds` | Los ID de ejecución de flujo correspondientes a las audiencias activadas. Puede encontrar los ID de ejecución de flujo en la propiedad `results` devuelta en la [respuesta de la llamada de prueba de destino](file-based-destination-testing-api.md). |
+
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -215,7 +219,7 @@ La respuesta contiene los detalles completos del flujo de activación. Puede obt
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo probar la configuración de destino basada en archivos y ver los detalles completos de los resultados de activación.
 

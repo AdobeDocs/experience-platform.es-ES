@@ -5,9 +5,9 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ El diagrama siguiente ilustra el flujo de trabajo completo para activar audienci
 
 ## Casos de uso {#use-cases}
 
-### Ventas o promociones Flash
+### Ventas o promociones Flash {#flash-sales}
 
 Un retailer en línea está preparando una venta flash limitada y quiere notificar a los clientes con un breve aviso. A través de la API de activación ad-hoc de Experience Platform, el equipo de marketing puede exportar audiencias bajo demanda y enviar rápidamente correos electrónicos promocionales a la base de clientes.
 
-### Eventos actuales o noticias de última hora
+### Eventos actuales o noticias de última hora {#current-events}
 
 Un hotel espera un tiempo inclemente en los próximos días, y el equipo quiere informar a los huéspedes que llegan rápidamente, para que puedan planificar en consecuencia. El equipo de marketing puede utilizar la API de activación ad-hoc de Experience Platform para exportar audiencias bajo demanda y notificar a los invitados.
 
-### Pruebas de integración
+### Pruebas de integración {#integration-testing}
 
 Los administradores de TI pueden utilizar la API de activación ad hoc de Experience Platform para exportar audiencias bajo demanda, de modo que puedan probar su integración personalizada con Adobe Experience Platform y asegurarse de que todo funciona correctamente.
 

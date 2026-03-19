@@ -4,9 +4,9 @@ title: Actualizar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para actualizar las cuentas de destino en la IU de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-La ficha **[!UICONTROL Cuentas]** muestra detalles acerca de las conexiones que ha establecido con varios destinos. Consulta la [descripción general de cuentas](../ui/destinations-workspace.md#accounts) para obtener toda la información que puedes obtener sobre cada cuenta de destino.
+La ficha **[!UICONTROL Accounts]** muestra detalles acerca de las conexiones que ha establecido con varios destinos. Consulta la [descripción general de cuentas](../ui/destinations-workspace.md#accounts) para obtener toda la información que puedes obtener sobre cada cuenta de destino.
 
-Este tutorial explica los pasos para actualizar los detalles de la cuenta de destino mediante la interfaz de usuario de Experience Platform.
+Este tutorial cubre los pasos para actualizar los detalles de la cuenta de destino mediante la interfaz de usuario de Experience Platform.
 
 Puede actualizar los detalles de la cuenta de destino para actualizar y volver a autenticar las credenciales de sus cuentas actuales o caducadas para los destinos que está utilizando actualmente. Normalmente, los tokens de OAuth y portador tienen una duración limitada, según la plataforma de destino. Cuando estos tokens caduquen, puede actualizarlos en el flujo de trabajo que se describe más adelante. Este flujo de trabajo le indica que pase por el flujo de trabajo de OAuth o que vuelva a insertar un token. Del mismo modo, si ha cambiado la contraseña o el acceso de un usuario en la plataforma descendente, puede actualizar las credenciales.
 
@@ -29,7 +29,7 @@ Para los destinos por lotes, puede actualizar el acceso o la clave secreta, si a
 
 Siga los pasos a continuación para actualizar los detalles de conexión a destinos existentes.
 
-1. Inicie sesión en la [interfaz de usuario del Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Cuentas]** del encabezado superior para ver sus cuentas existentes.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Accounts]** en el encabezado superior para ver sus cuentas existentes.
 
    ![Pestaña Cuentas](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,13 +37,13 @@ Siga los pasos a continuación para actualizar los detalles de conexión a desti
 
    ![Filtrar cuentas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activar audiencias]**, **[!UICONTROL Editar detalles]** y **[!UICONTROL Eliminar]** la cuenta. Seleccione el botón ![Editar detalles](/help/images/icons/edit.png) **[!UICONTROL Editar detalles]** para editar la información de la cuenta.
+3. Seleccione los puntos suspensivos (`...`) junto al nombre de la cuenta que desea actualizar. Aparece un panel emergente que proporciona opciones para **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** y **[!UICONTROL Delete]** la cuenta. Seleccione el botón ![Editar detalles](/help/images/icons/edit.png) **[!UICONTROL Edit details]** para editar la información de la cuenta.
 
    ![Editar cuenta](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Introduzca las credenciales actualizadas de la cuenta.
 
-   * Para las cuentas que usan un tipo de conexión `OAuth1` o `OAuth2`, seleccione **[!UICONTROL Volver a conectar OAuth]** para renovar las credenciales de su cuenta. También puede actualizar el nombre y la descripción de su cuenta.
+   * Para las cuentas que usan un tipo de conexión `OAuth1` o `OAuth2`, seleccione **[!UICONTROL Reconnect OAuth]** para renovar las credenciales de su cuenta. También puede actualizar el nombre y la descripción de su cuenta.
 
    ![Editar detalles de OAuth](../assets/ui/update-accounts/edit-details-oauth.png)
 
@@ -59,10 +59,10 @@ Siga los pasos a continuación para actualizar los detalles de conexión a desti
 
    ![Editar detalles de servidor a servidor](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Seleccione **[!UICONTROL Guardar]** para finalizar la actualización de los detalles de la cuenta.
+5. Seleccione **[!UICONTROL Save]** para finalizar la actualización de detalles de la cuenta.
 
-## Pasos siguientes
+## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente el área de trabajo **[!UICONTROL destinos]** para actualizar las cuentas existentes.
+Al seguir este tutorial, ha utilizado correctamente el área de trabajo **[!UICONTROL destinations]** para actualizar las cuentas existentes.
 
 Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).

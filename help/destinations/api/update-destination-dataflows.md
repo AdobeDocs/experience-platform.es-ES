@@ -5,9 +5,9 @@ title: Actualización de flujos de datos de destino mediante la API de Flow Serv
 type: Tutorial
 description: Este tutorial cubre los pasos para actualizar un flujo de datos de destino. Obtenga información sobre cómo habilitar o deshabilitar el flujo de datos, actualizar su información básica o agregar y quitar audiencias y atributos mediante la API de Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 4%
 
 ---
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{FLOW_ID}` | El valor `id` único del flujo de datos de destino que desea recuperar. |
+
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | Define la parte del flujo que se va a actualizar. |
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 
+{style="table-layout:auto"}
+
 **Respuesta**
 
 Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
@@ -507,6 +511,8 @@ curl -X PATCH \
 | `endDate` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> No aplicable al seleccionar `"exportMode":"DAILY_FULL_EXPORT"` y `"frequency":"ONCE"`. <br>: establece la fecha en la que los miembros de la audiencia dejan de exportarse al destino. |
 | `startTime` | Solo para *destinos por lotes*. Este campo solo es necesario cuando se añade una audiencia a un flujo de datos en destinos de exportación de archivos por lotes como Amazon S3, SFTP o Azure Blob. <br> obligatorio. Seleccione el momento en que se deben generar y exportar al destino los archivos que contienen miembros de la audiencia. |
 
+{style="table-layout:auto"}
+
 **Respuesta**
 
 Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace` y `remove`. Para quitar una audiencia de un flujo de datos, use la operación `remove`. |
 | `path` | Especifica qué audiencia existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de las audiencias en un flujo de datos, realice una llamada GET al extremo `/flows` e inspeccione la propiedad `transformations.segmentSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
+{style="table-layout:auto"}
 
 **Respuesta**
 
@@ -796,6 +803,8 @@ curl -X PATCH \
 | `path` | Define la parte del flujo que se va a actualizar. Al añadir un atributo de perfil a un flujo de datos, utilice la ruta especificada en el ejemplo. |
 | `value.path` | El valor del atributo de perfil que está agregando al flujo de datos. |
 
+{style="table-layout:auto"}
+
 **Respuesta**
 
 Una respuesta correcta devuelve su ID de flujo y una etiqueta actualizada. Puede comprobar la actualización realizando una petición GET a la API [!DNL Flow Service], al tiempo que proporciona su ID de flujo.
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | La llamada de operación utilizada para definir la acción necesaria para actualizar el flujo de datos. Las operaciones incluyen: `add`, `replace` y `remove`. Para quitar una audiencia de un flujo de datos, use la operación `remove`. |
 | `path` | Especifica qué atributo de perfil existente debe eliminarse del flujo de datos de destino, según el índice del selector de audiencia. Para recuperar el orden de los atributos de perfil en un flujo de datos, realice una llamada GET al extremo `/flows` e inspeccione la propiedad `transformations.profileSelectors`. Para eliminar la primera audiencia en el flujo de datos, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
+{style="table-layout:auto"}
 
 **Respuesta**
 

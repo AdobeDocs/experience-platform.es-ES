@@ -3,9 +3,9 @@ keywords: destinos de publicidad;destinos;destinos de plataforma
 title: Información general sobre destinos Advertising
 description: Conecte Adobe Experience Platform a una plataforma de publicidad de terceros (por ejemplo, DSP, red de publicidad, SSP) y comparta audiencias seudónimas con estas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 8d0cd63b6262170689ca5a6eb76350c4fc024566
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Actualmente, Experience Platform admite los destinos publicitarios que se enumer
 
 Para comprender la diferencia entre las conexiones y las extensiones, vea [Conexiones](../../destination-types.md#connections) en la página Tipos de destino y categorías.
 
-### Conexiones
+### Conexiones {#connections}
 
 * [(Beta) Acxiom Audience Distribution](acxiom-audience-connection.md)
 * [(Beta) Conexión de audiencia de Acxiom Real ID](acxiom-real-id-audience-connection.md)
@@ -50,7 +50,7 @@ Para comprender la diferencia entre las conexiones y las extensiones, vea [Conex
 * [(Beta) La conexión CRM de Trade Desk](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
-### Extensiones
+### Extensiones {#extensions}
 
 * [Extensión de Adobe Advertising Cloud](adobe-advertising-cloud.md)
 * [Awin Advertising extensión de etiqueta de conversión](awin-conversiontag.md)

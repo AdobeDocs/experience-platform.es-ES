@@ -3,9 +3,9 @@ keywords: gtag;google tag;extensión de google;extensión de google tag;GTAG
 title: Extensión gtag de Google
 description: La extensión de etiquetas Google es un destino de publicidad en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '506'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->La extensión Google gtag descrita aquí ha quedado obsoleta y se ha reemplazado por la extensión [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) desarrollada por [!DNL Acronym]. Puede encontrar la extensión [!DNL Google Global Site Tag (gtag)] en el área de trabajo [[!UICONTROL Etiquetas]](../../../tags/home.md) en la IU de recopilación de datos o en la IU de Experience Platform.
+>La extensión Google gtag descrita aquí ha quedado obsoleta y se ha reemplazado por la extensión [[!DNL Google Global Site Tag (gtag)]](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) desarrollada por [!DNL Acronym]. Puede encontrar la extensión [!DNL Google Global Site Tag (gtag)] en el área de trabajo [[!UICONTROL Tags]](../../../tags/home.md) en la IU de recopilación de datos o en la IU de Experience Platform.
 
 ## Información general {#overview}
 
@@ -30,17 +30,17 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
-Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para poder instalar extensiones.
+Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
 Para instalar la extensión de etiqueta de Google:
 
-En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Seleccione la extensión del catálogo o utilice la barra de búsqueda.
 
-Haga clic en el destino para resaltarlo y, a continuación, seleccione **[!UICONTROL Configurar]** en el carril derecho. Si el control **[!UICONTROL Configure]** está deshabilitado, no tendrá el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
+Seleccione el destino y, a continuación, seleccione **[!UICONTROL Configure]** en el carril derecho. Si el control **[!UICONTROL Configure]** está deshabilitado, no tiene el permiso **[!UICONTROL manage_properties]**. Consulte [Requisitos previos](#prerequisites).
 
 Seleccione la propiedad en la que desea instalar la extensión. También tiene la opción de crear una nueva propiedad. Una propiedad es una colección de reglas, elementos de datos, extensiones configuradas, entornos y bibliotecas. Obtenga información acerca de las propiedades en la [sección de la página Propiedades](../../../tags/ui/administration/companies-and-properties.md#properties-page) de en la documentación de etiquetas.
 

@@ -2,11 +2,11 @@
 title: Mejora de datos de Acxiom
 description: Utilice este conector para activar perfiles de Adobe de origen en Real-Time CDP a Acxiom para el enriquecimiento de datos y su uso en todos los canales de marketing. A continuación, puede utilizar la fuente Acxiom para importar los perfiles con datos mejorados y trabajar con ellos en Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1436'
 ht-degree: 4%
 
 ---
@@ -47,7 +47,7 @@ El cliente usaría la tarjeta de origen [Acxiom Data Ingestion](/help/sources/co
 
 >[!IMPORTANT]
 >
->* Para conectarse al destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [6&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para conectarse al destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [6}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 ## Audiencias compatibles {#supported-audiences}
@@ -99,7 +99,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
-Para acceder a su bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
+Para acceder al bloque en Experience Platform, debe proporcionar valores válidos para las siguientes credenciales:
 
 | Credencial | Descripción |
 |---------------|----------------------------------------------------------------------------------------------------------|
@@ -107,13 +107,13 @@ Para acceder a su bloque en Experience Platform, debe proporcionar valores váli
 | Clave secreta de S3 | El ID de clave secreta de su cubo. Puede recuperar este valor del equipo [!DNL Acxiom]. |
 | Nombre del segmento | Este es el espacio en el que se compartirán los archivos. Puede recuperar este valor del equipo [!DNL Acxiom]. |
 
-### Nueva cuenta
+### Nueva cuenta {#new-account}
 
 Para definir una nueva ubicación de Acxiom Managed S3:
 
 ![Nueva cuenta](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Cuenta existente
+### Cuenta existente {#existing-account}
 
 Las cuentas ya definidas con el destino [!DNL Acxiom Data Enhancement] aparecen en una lista emergente. Cuando se selecciona, puede ver los detalles de la cuenta en el carril derecho. Vea el ejemplo desde la interfaz de usuario cuando vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
@@ -147,12 +147,12 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
-### Sugerencias de asignación
+### Sugerencias de asignación {#mapping-suggestions}
 
 El procesamiento correcto de archivos en el lado Acxiom requiere elementos de nombre y dirección. Aunque no todos los elementos son necesarios, proporcionar todo lo posible ayudará a que la coincidencia tenga éxito.
 
@@ -177,7 +177,7 @@ En la tabla siguiente se proporcionan sugerencias de asignación. Se enumeran lo
 
 Para comprobar si los datos se han exportado correctamente, compruebe el bloque [!DNL Amazon S3 Storage] y asegúrese de que los archivos exportados contienen las poblaciones de perfiles esperadas.
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha creado correctamente un flujo de datos para exportar datos de perfil de Experience Platform a su ubicación de S3 administrada de [!DNL Acxiom]. A continuación, debe ponerse en contacto con su representante de Acxiom con el nombre de la cuenta, los nombres de archivo y la ruta del bloque para que se pueda configurar el procesamiento.
 

@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar las opciones de formato de archivo al activar datos en destinos basados en archivos
 title: Configurar las opciones de formato de archivo para los destinos basados en archivos
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1189'
 ht-degree: 17%
 
 ---
@@ -12,12 +12,12 @@ ht-degree: 17%
 # Configurar las opciones de formato de archivo para los destinos basados en archivos
 
 >[!IMPORTANT]
-> 
+>
 >Las opciones de formato de archivo descritas en este documento solo están disponibles actualmente para archivos CSV.
 
 La opción de configurar varias opciones de formato de archivo para los archivos exportados está disponible cuando [conecte](/help/destinations/ui/connect-destination.md) a un destino basado en archivos, como [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-Puede configurar varias opciones de formato de archivo para los archivos exportados mediante la interfaz de usuario de Experience Platform. Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos de su lado, a fin de leer e interpretar de forma óptima los archivos recibidos de Experience Platform.
+Puede configurar varias opciones de formato de archivo para los archivos exportados mediante la interfaz de usuario de Experience Platform. Puede modificar varias propiedades de los archivos exportados para que coincidan con los requisitos del sistema de recepción de archivos de su lado, y así leer e interpretar de forma óptima los archivos recibidos de Experience Platform.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -51,15 +51,15 @@ Utilice este control para definir un separador para cada campo y valor de los ar
 * Punto y coma `(;)`
 * Ficha `(\t)`
 
-#### Ejemplos
+#### Ejemplos {#delimiter-examples}
 
 Vea los ejemplos siguientes del contenido en los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL Colon `(:)`]** seleccionado: `male:John:Doe`
-* Ejemplo de salida con **[!UICONTROL Comma `(,)`]** seleccionado: `male,John,Doe`
-* Ejemplo de salida con **[!UICONTROL Pipe `(|)`]** seleccionado: `male|John|Doe`
-* Ejemplo de salida con **[!UICONTROL Semicolon `(;)`]** seleccionado: `male;John;Doe`
-* Ejemplo de salida con **[!UICONTROL Tab `(\t)`]** seleccionado: `male \t John \t Doe`
+* Ejemplo de salida con [!UICONTROL Colon `(:)`] seleccionado: `male:John:Doe`
+* Ejemplo de salida con [!UICONTROL Comma `(,)`] seleccionado: `male,John,Doe`
+* Ejemplo de salida con [!UICONTROL Pipe `(|)`] seleccionado: `male|John|Doe`
+* Ejemplo de salida con [!UICONTROL Semicolon `(;)`] seleccionado: `male;John;Doe`
+* Ejemplo de salida con [!UICONTROL Tab `(\t)`] seleccionado: `male \t John \t Doe`
 
 ### Carácter de comillas {#quote-character}
 
@@ -72,17 +72,17 @@ Utilice esta opción para controlar si las comillas dobles deben eliminarse o ma
 
 Las opciones disponibles son:
 
-* **[!UICONTROL Null Character (\0000)]**. Utilice esta opción para eliminar comillas dobles de los archivos CSV exportados.
-* **[!UICONTROL Double Quotes (")]**. Utilice esta opción cuando los valores de cadena contengan un delimitador o comillas dobles. Esta opción le ayuda a mantener los delimitadores o las comillas dobles en los archivos CSV exportados, para que pueda identificar correctamente qué valor corresponde a cada campo.
+* [!UICONTROL Null Character (\0000)]. Utilice esta opción para eliminar comillas dobles de los archivos CSV exportados.
+* [!UICONTROL Double Quotes (")]. Utilice esta opción cuando los valores de cadena contengan un delimitador o comillas dobles. Esta opción le ayuda a mantener los delimitadores o las comillas dobles en los archivos CSV exportados, para que pueda identificar correctamente qué valor corresponde a cada campo.
 
-#### Ejemplos
+#### Ejemplos {#quote-character-examples}
 
 Considere el valor de entrada `Anna,"Doe,John"`.
 
 Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL Null Character (\0000)]** seleccionado: `Anna,Doe,John`
-* Ejemplo de salida con **[!UICONTROL Double Quotes (")]** seleccionado: `Anna,"Doe,John"`
+* Ejemplo de salida con [!UICONTROL Null Character (\0000)] seleccionado: `Anna,Doe,John`
+* Ejemplo de salida con [!UICONTROL Double Quotes (")] seleccionado: `Anna,"Doe,John"`
 
 ### Carácter de escape {#escape-character}
 
@@ -96,12 +96,12 @@ Utilice esta opción para establecer un solo carácter para las comillas de esca
 * Barra invertida `(\)`
 * Comilla simple `(')`
 
-#### Ejemplos
+#### Ejemplos {#escape-character-examples}
 
 Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL Back slash `(\)`]** seleccionado: `"Test,\"John\",LastName"`
-* Ejemplo de salida con **[!UICONTROL Single quote `(')`]** seleccionado: `"Test,'"John'",LastName"`
+* Ejemplo de salida con [!UICONTROL Back slash `(\)`] seleccionado: `"Test,\"John\",LastName"`
+* Ejemplo de salida con [!UICONTROL Single quote `(')`] seleccionado: `"Test,'"John'",LastName"`
 
 ### Salida de valor vacío {#empty-value-output}
 
@@ -112,17 +112,17 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 Utilice este control para establecer la representación de cadena de un valor vacío. Esta opción determina cómo se representan los valores vacíos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **Cadena vacía entre comillas dobles (&quot;&quot;)**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### Ejemplos
+#### Ejemplos {#empty-value-examples}
 
 Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL null]** seleccionado: `male,NULL,TestLastName`. En este caso, Experience Platform transforma el valor vacío en un valor nulo.
+* Ejemplo de salida con [!UICONTROL null] seleccionado: `male,NULL,TestLastName`. En este caso, Experience Platform transforma el valor vacío en un valor nulo.
 * Ejemplo de salida con **&quot;&quot;** seleccionado: `male,"",TestLastName`. En este caso, Experience Platform transforma el valor vacío en un par de comillas dobles.
-* Ejemplo de salida con **[!UICONTROL Empty string]** seleccionado: `male,,TestLastName`. En este caso, Experience Platform mantiene el valor vacío y lo exporta tal cual (sin comillas dobles).
+* Ejemplo de salida con [!UICONTROL Empty string] seleccionado: `male,,TestLastName`. En este caso, Experience Platform mantiene el valor vacío y lo exporta tal cual (sin comillas dobles).
 
 >[!TIP]
 >
@@ -137,17 +137,17 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 Utilice este control para establecer la representación de cadena de un valor nulo dentro de los archivos exportados. Esta opción determina cómo se representan los valores nulos en los archivos CSV exportados. Entre las opciones disponibles se encuentran:
 
-* **[!UICONTROL Null (null)]**
+* [!UICONTROL Null (null)]
 * **Cadena vacía entre comillas dobles (&quot;&quot;)**
-* **[!UICONTROL Empty string]**
+* [!UICONTROL Empty string]
 
-#### Ejemplos
+#### Ejemplos {#null-value-examples}
 
 Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cada una de las selecciones en la interfaz de usuario.
 
-* Ejemplo de salida con **[!UICONTROL null]** seleccionado: `male,NULL,TestLastName`. En este caso, no se produce ninguna transformación y el archivo CSV contiene el valor nulo.
+* Ejemplo de salida con [!UICONTROL null] seleccionado: `male,NULL,TestLastName`. En este caso, no se produce ninguna transformación y el archivo CSV contiene el valor nulo.
 * Ejemplo de salida con **&quot;&quot;** seleccionado: `male,"",TestLastName`. En este caso, Experience Platform reemplaza el valor nulo con comillas dobles alrededor de una cadena vacía.
-* Ejemplo de salida con **[!UICONTROL Empty string]** seleccionado: `male,,TestLastName`. En este caso, Experience Platform reemplaza el valor nulo con una cadena vacía (sin comillas dobles).
+* Ejemplo de salida con [!UICONTROL Empty string] seleccionado: `male,,TestLastName`. En este caso, Experience Platform reemplaza el valor nulo con una cadena vacía (sin comillas dobles).
 
 ### Formato de compresión {#compression-format}
 
@@ -158,33 +158,33 @@ Vea los ejemplos siguientes del contenido de los archivos CSV exportados con cad
 
 Define qué tipo de compresión se utilizará al guardar datos en un archivo. Las opciones compatibles son GZIP y NONE. Esta opción determina si va a exportar archivos comprimidos o no.
 
-### Codificación
+### Codificación {#encoding}
 
 *No se muestra en la captura de pantalla de la interfaz*. Especifica la codificación (conjunto de caracteres) de los archivos CSV guardados. Las opciones son UTF-8 o UTF-16.
 
-### Casilla de escape
+### Casilla de escape {#char-to-escape-quote}
 
 *No se muestra en la captura de pantalla de la interfaz*. Un indicador que indica si los valores que contienen comillas siempre deben incluirse entre comillas.
 
 El valor predeterminado es omitir todos los valores que contengan un carácter de comillas.
 
-### Separador de líneas
+### Separador de líneas {#line-separator}
 
 *No se muestra en la captura de pantalla de la interfaz*. Define el separador de líneas que se debe utilizar para escribir. La longitud máxima es de 1 carácter.
 
-### Ignorar espacio inicial
+### Ignorar espacio inicial {#ignore-leading-whitespace}
 
 *No se muestra en la captura de pantalla de la interfaz*. Un indicador que indica si se deben omitir o no los espacios en blanco iniciales de los valores exportados.
 
-Ejemplo de salida con **[!UICONTROL True]** seleccionado: `"male","John","TestLastName"`
-Ejemplo de salida con **[!UICONTROL False]** seleccionado: `" male","John","TestLastName"`
+Ejemplo de salida con [!UICONTROL True] seleccionado: `"male","John","TestLastName"`
+Ejemplo de salida con [!UICONTROL False] seleccionado: `" male","John","TestLastName"`
 
-### Ignorar espacio final
+### Ignorar espacio final {#ignore-trailing-whitespace}
 
 No se muestra en la captura de pantalla de la IU. Un indicador que indica si se deben omitir o no los espacios en blanco finales de los valores exportados.
 
-Ejemplo de salida con **[!UICONTROL True]** seleccionado: `"male","John","TestLastName"`
-Ejemplo de salida con **[!UICONTROL False]** seleccionado: `"male ","John","TestLastName"`
+Ejemplo de salida con [!UICONTROL True] seleccionado: `"male","John","TestLastName"`
+Ejemplo de salida con [!UICONTROL False] seleccionado: `"male ","John","TestLastName"`
 
 ### Próximos pasos {#next-steps}
 

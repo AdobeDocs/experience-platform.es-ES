@@ -3,9 +3,9 @@ title: PubMatic Connect
 description: PubMatic maximiza el valor del cliente al ofrecer el supply chain de marketing digital programático del futuro. PubMatic Connect combina la tecnología de la plataforma y el servicio dedicado para mejorar la forma en que se empaquetan y se realizan las transacciones de inventario y datos.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1146'
 ht-degree: 3%
 
 ---
@@ -131,15 +131,15 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 >
-> - Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> - Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >
 > - Para exportar _identidades_, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](../../assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 
@@ -154,7 +154,7 @@ Selección de campos de destino:
 
 ![Asignar atributos e identidades](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
-### Programación de audiencias
+### Programación de audiencias {#audience-scheduling}
 
 Si utiliza el destino de PubMatic Connect (asignación de ID de audiencia personalizada), debe proporcionar un ID de asignación para cada audiencia que corresponda a la &quot;ID de audiencia de Source&quot; en la plataforma de PubMatic.
 

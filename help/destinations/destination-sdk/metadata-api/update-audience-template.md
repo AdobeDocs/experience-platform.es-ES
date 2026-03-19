@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para actualizar una plantilla de audiencia a través de Adobe Experience Platform Destination SDK.
 title: Actualización de una plantilla de audiencia
 exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 2%
 
 ---
@@ -21,11 +21,11 @@ Para obtener una descripción detallada de las funcionalidades que puede configu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Actualización de una plantilla de audiencia {#create}
 
@@ -42,6 +42,8 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 | Parámetro | Descripción |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | El ID de la plantilla de audiencia que desea actualizar. Para obtener una plantilla de audiencia existente y sus `{INSTANCE_ID}` correspondientes, vea [Recuperar una plantilla de audiencia](retrieve-audience-template.md). |
+
+{style="table-layout:auto"}
 
 La siguiente solicitud actualiza una plantilla de metadatos de audiencia existente, configurada por los parámetros proporcionados en la carga útil.
 
@@ -268,10 +270,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 +++
 
-## Administración de errores de API
+## Administración de errores de API {#error-handling}
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, sabe cuándo usar plantillas de audiencia y cómo actualizar una plantilla de audiencia mediante el punto de conexión de API `/authoring/audience-templates`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar los atributos de la interfaz de usuario, como el vínculo de documentación, la categoría de la tarjeta de destino, el tipo de conexión de destino y la frecuencia, para los destinos creados con Destination SDK.
 title: Atributos de IU
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Este artículo describe todos los atributos de interfaz de usuario admitidos que
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -47,6 +47,8 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 |---|---|
 | Integraciones en tiempo real (streaming) | Sí |
 | Integraciones basadas en archivos (por lotes) | Sí |
+
+{style="table-layout:auto"}
 
 ## Parámetros admitidos {#supported-parameters}
 
@@ -66,7 +68,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 Use el siguiente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre del destino. Para un destino llamado Moviestar, utilizaría `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Los usuarios pueden ver y visitar el vínculo de documentación desde la página del catálogo de destinos en la interfaz de usuario. Necesitan ir a la tarjeta de destino, seleccionar **[!UICONTROL Más acciones]** y luego **[!UICONTROL Ver documentación]**, como se muestra en la imagen siguiente.
+Los usuarios pueden ver y visitar el vínculo de documentación desde la página del catálogo de destinos en la interfaz de usuario. Deben buscar la tarjeta de destino, seleccionar **[!UICONTROL More actions]** y después **[!UICONTROL View documentation]**, como se muestra en la imagen siguiente.
 
 ![Imagen de la interfaz de usuario que muestra la ubicación del vínculo de documentación.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Los usuarios pueden ver el tipo de conexión de destino en la ficha [Examinar](.
 
 `frequency` es un parámetro de cadena que hace referencia al tipo de exportación de datos compatible con el destino. Se establece en `Streaming` para integraciones basadas en API o en `Batch` al exportar archivos a sus destinos.
 
-Los usuarios pueden ver el tipo de frecuencia en la página **[!UICONTROL Flujo de datos se ejecuta]** de cada conexión de destino.
+Los usuarios pueden ver el tipo de frecuencia en la página **[!UICONTROL Dataflow runs]** de cada conexión de destino.
 
 ![Imagen de la interfaz de usuario que muestra la ubicación del tipo de frecuencia en la interfaz de usuario.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
@@ -114,7 +116,7 @@ Puede añadir un icono de logotipo a su destino, como se muestra en la siguiente
 
 Para agregar un logotipo a tu tarjeta de destino, debes compartir la imagen deseada con el equipo de Adobe cuando [envíes el destino a revisión](../../guides/submit-destination.md#logo).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor qué atributos de la interfaz de usuario puede configurar para su destino y dónde los verán los usuarios en la interfaz de usuario de Experience Platform.
 

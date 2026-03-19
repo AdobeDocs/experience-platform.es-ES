@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para probar la configuración de destino de flujo continuo antes de publicarla.
 title: Resumen de API de prueba de destino de streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -233,6 +233,6 @@ Tenga en cuenta que el contenido del parámetro `results.httpCalls` es específi
 
 Para obtener descripciones de los parámetros de solicitud y respuesta, consulte [Operaciones de API de prueba de destino](../../testing-api/streaming-destinations/destination-testing-api.md).
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
 Después de probar el destino y confirmar que está configurado correctamente, use la [API de publicación de destino](../../publishing-api/create-publishing-request.md) para enviar la configuración a Adobe para que la revise.

@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3039'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -135,7 +135,7 @@ curl --location --request POST 'https://some-api.com/token' \
 ## Conectar con el destino {#connect-destination}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). Al conectarse a este destino, debe proporcionar la siguiente información:
@@ -186,7 +186,7 @@ Si selecciona el tipo de autenticación **[!UICONTROL OAuth 2 Client Credentials
 ![Imagen de la pantalla de la interfaz de usuario donde puede conectarse al destino de la API HTTP mediante OAuth 2 con autenticación de credenciales de cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
-> 
+>
 >Al utilizar la autenticación [!UICONTROL OAuth 2 Client Credentials], [!UICONTROL Access Token URL] puede tener un máximo de un parámetro de consulta. Si se agrega un(a) [!UICONTROL Access Token URL] con más parámetros de consulta, pueden producirse problemas al conectarse al extremo.
 
 >[!NOTE]
@@ -248,8 +248,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -268,7 +268,9 @@ Experience Platform optimiza el comportamiento de exportación de perfiles a su 
 
 En todos los casos descritos anteriormente, solo los perfiles en los que se han producido actualizaciones relevantes se exportan a su destino. Por ejemplo, si una audiencia asignada al flujo de destino tiene cien miembros y cinco perfiles nuevos cumplen los requisitos para el segmento, la exportación a su destino es incremental y solo incluye los cinco perfiles nuevos.
 
-Tenga en cuenta que todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
+>[!NOTE]
+>
+>Todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
 
 ### Qué determina una exportación de datos y qué se incluye en la exportación {#what-determines-export-what-is-included}
 
@@ -373,7 +375,9 @@ A continuación se muestran más ejemplos de datos exportados, según la configu
       }
 ```
 
-**Nota**: En este ejemplo, el primer segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) está asignado al destino e incluye el campo `name`. El segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) no está asignado al destino y no incluye el campo `name`, aunque la opción **[!UICONTROL Include Segment Names]** esté habilitada.
+>[!NOTE]
+>
+>En este ejemplo, el primer segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) está asignado al destino e incluye el campo `name`. El segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) no está asignado al destino y no incluye el campo `name`, aunque la opción **[!UICONTROL Include Segment Names]** esté habilitada.
 
 +++
 

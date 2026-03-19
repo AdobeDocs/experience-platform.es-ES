@@ -3,9 +3,9 @@ title: Kevel Connection
 description: Utilice el destino de streaming de Kevel para activar audiencias directamente en las API de UserDB y Administración de segmentos de Kevel y admitir la segmentación en tiempo real en el momento de la decisión.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1168'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 El destino de streaming de [!DNL Kevel] para Adobe Experience Platform permite a los clientes activar audiencias de Adobe directamente en las API de UserDB y Administración de segmentos de [!DNL Kevel] para admitir el direccionamiento en tiempo real en el momento de la decisión de anuncios.
 
 >[!IMPORTANT]
-> 
+>
 >Si tiene preguntas o desea solicitar una actualización con respecto al destino [!DNL Kevel] o su documentación, envíe un correo electrónico al equipo de [!DNL Kevel] a [support@kevel.com](mailto:support@kevel.com).
 
 ## Casos de uso {#use-cases}
@@ -50,9 +50,9 @@ El destino [!DNL Kevel] admite la activación de cualquier identidad que la apli
 
 {style="table-layout:auto"}
 
-### Compatibilidad con áreas de nombres de identidad personalizadas
+### Compatibilidad con áreas de nombres de identidad personalizadas {#custom-identity-namespaces}
 
-El destino [!DNL Kevel]0&rbrace; también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
+El destino [!DNL Kevel]0} también acepta áreas de nombres personalizadas **, tal como se definieron en su implementación de Experience Platform.**
 
 Esto significa que:
 
@@ -60,7 +60,7 @@ Esto significa que:
 - Estas áreas de nombres se pueden asignar a `kevel_user_key1`, `kevel_user_key2` o `kevel_user_key3` de la misma manera que las áreas de nombres globales.
 - [!DNL Kevel] generará **un registro UserDB por instancia de cada identidad asignada**, lo que permitirá la coincidencia en tiempo real en el momento de la decisión de anuncio para cada identificador que envíen sus sistemas.
 
-### Comportamiento de asignación de identidad
+### Comportamiento de asignación de identidad {#identity-mapping-behavior}
 
 - Puede asignar **hasta tres** áreas de nombres de identidad de Experience Platform a las tres ranuras de identidad de [!DNL Kevel].
 - Para cada perfil activado, [!DNL Kevel] recibe **un registro UserDB por instancia de cada identidad asignada**.
@@ -105,7 +105,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 Siga el flujo de trabajo estándar de Experience Platform [connect a destination](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
-> 
+>
 >Debe tener los permisos de **Ver destinos** y **Administrar destinos**.
 
 ### Autenticarse en el destino {#authenticate}
@@ -126,10 +126,9 @@ Después de la autenticación, configure:
 
 ![Detalles del destino de Kevel](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## Activar segmentos en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
-Para enviar audiencias a [!DNL Kevel], siga el flujo de trabajo en\
-[Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Para enviar audiencias a [!DNL Kevel], siga el flujo de trabajo de [Activar audiencias en los destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Desactivación de audiencias {#deactivate}
 
@@ -155,7 +154,7 @@ Durante la activación, seleccione las áreas de nombres de identidad que config
 
 Cuando un perfil califica para una audiencia o sale de ella, Experience Platform envía una actualización de flujo continuo a [!DNL Kevel].
 
-### Carga útil de ejemplo recibida por [!DNL Kevel] UserDB
+### Carga útil de ejemplo recibida por [!DNL Kevel] UserDB {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ A continuación se muestra un ejemplo de un perfil exportado que muestra:
 }
 ```
 
-#### Cómo [!DNL Kevel] interpreta este perfil
+#### Cómo [!DNL Kevel] interpreta este perfil {#kevel-profile-interpretation}
 
 Con la configuración de destino [!DNL Kevel], cada identidad asignada genera un registro UserDB distinto, lo que significa que [!DNL Kevel] recibe:
 

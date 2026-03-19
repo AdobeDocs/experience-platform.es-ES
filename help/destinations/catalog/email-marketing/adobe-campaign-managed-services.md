@@ -2,9 +2,9 @@
 title: Conexión de Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=es#release-8-4-1).
+>Esta integración funciona con [Adobe Campaign versión 8.4 o superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Información general {#overview}
 
-Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=es)
+Adobe Campaign Managed Cloud Services ofrece una plataforma para diseñar experiencias multicanal para clientes, y proporciona un entorno para la organización visual de la campaña, la administración de interacciones en tiempo real y la ejecución multicanal. [Introducción a Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Utilice Campaign para lo siguiente:
 
@@ -117,7 +117,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -126,12 +126,12 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
+![El formulario de detalles de destino de Adobe Campaign Managed Cloud Services muestra campos de nombre, descripción, selección de instancias, asignación de destino y tipo de sincronización.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
 * **[!UICONTROL Select instance]**: su instancia de marketing **[!DNL Campaign]**.
-* **[!UICONTROL Target mapping]**: seleccione la asignación de destino que está utilizando en **[!DNL Adobe Campaign]** para realizar envíos. [Más información](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=es).
+* **[!UICONTROL Target mapping]**: seleccione la asignación de destino que está utilizando en **[!DNL Adobe Campaign]** para realizar envíos. [Más información](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**:
 
    * **[!UICONTROL Audience sync]**: utilice esta opción para enviar audiencias de Adobe Experience Platform a Adobe Campaign.
@@ -152,11 +152,11 @@ Para obtener más información acerca de las acciones de marketing, consulte la 
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) para obtener instrucciones sobre cómo activar datos de audiencia en este destino.
 
 ### Asignar atributos e identidades {#map}
 
@@ -183,7 +183,7 @@ Seleccione los campos XDM que desea exportar con los perfiles y asígnelos a los
      >
      >Asegúrese de que el nombre del atributo de clave de anulación de duplicación coincida con un nombre de columna de la asignación de destino seleccionada.
 
-   ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
+   ![Pantalla de asignación de atributos que muestra campos de origen XDM asignados a campos de destino de Adobe Campaign, con indicadores clave obligatorios y de anulación de duplicación.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. Una vez realizada la asignación, puede revisar y completar la configuración de destino para empezar a enviar datos a **[!DNL Campaign]**.
    [Obtenga información sobre cómo revisar y completar la configuración de destino](/help/destinations/destination-types.md#review).
@@ -196,13 +196,13 @@ Una vez activado un destino, puede acceder al trabajo correspondiente y a los da
 
 Vaya al menú **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Audience load jobs]** para monitorizar todos los trabajos de exportación activados desde Adobe Experience Platform.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
+![Pantalla de trabajos de carga de audiencia de Adobe Campaign que muestra los trabajos de exportación activados desde Adobe Experience Platform.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Acceso a datos exportados {#data}
 
 Para **[!UICONTROL Audience sync]**, puede comprobar la audiencia exportada si navega hasta el menú **[!UICONTROL Profile and target]** > **[!UICONTROL List]** > **[!UICONTROL AEP audiences]**.
 
-![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+![Vista de lista de audiencias de Adobe Campaign AEP que muestra las audiencias exportadas de Experience Platform disponibles en Perfil y destino.](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
 Para **[!UICONTROL Profile sync (Update only)]**, los datos se actualizan automáticamente en la base de datos de Campaign para cada perfil dirigido por la audiencia activada en el destino.
 

@@ -5,9 +5,9 @@ title: Conéctese a destinos por lotes y active los datos mediante la API de Flo
 description: Instrucciones paso a paso para utilizar la API de Flow Service para crear un almacenamiento en la nube por lotes o un destino de marketing por correo electrónico en Experience Platform y activar los datos
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3431'
 ht-degree: 4%
 
 ---
@@ -15,10 +15,10 @@ ht-degree: 4%
 # Conéctese a destinos de marketing por correo electrónico basados en archivos y active los datos mediante la API de Flow Service
 
 >[!IMPORTANT]
-> 
+>
 >* Para conectarse a un destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;.](/help/access-control/home.md#permissions)
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}.](/help/access-control/home.md#permissions)
 >
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 >
@@ -27,7 +27,7 @@ ht-degree: 4%
 Este tutorial muestra cómo utilizar la API de Flow Service para crear un [destino de marketing por correo electrónico](../catalog/email-marketing/overview.md) basado en archivos, crear un flujo de datos al destino recién creado y exportar datos al destino recién creado mediante archivos CSV.
 
 >[!TIP]
-> 
+>
 >Para aprender a activar datos en destinos de almacenamiento en la nube mediante la API de Flow Service, lea el [tutorial de API dedicado](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 Este tutorial utiliza el destino [!DNL Adobe Campaign] en todos los ejemplos, pero los pasos son idénticos para los destinos de marketing por correo electrónico basados en archivos.
@@ -44,7 +44,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de los datos de [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
-Las secciones siguientes proporcionan información adicional que necesita conocer para activar datos en destinos por lotes en Experience Platform.
+Las secciones siguientes proporcionan información adicional que debe conocer para activar datos en destinos por lotes en Experience Platform.
 
 ### Recopilar credenciales necesarias {#gather-required-credentials}
 
@@ -144,7 +144,7 @@ A continuación, debe conectarse a los datos de [!DNL Experience Platform] para 
 1. En primer lugar, debe realizar una llamada para autorizar el acceso a los datos en [!DNL Experience Platform], configurando una conexión base.
 2. A continuación, usando el identificador de conexión base, realice otra llamada en la que cree una *conexión de origen*, que establezca la conexión con sus datos de [!DNL Experience Platform].
 
-### Autorizar el acceso a sus datos en [!DNL Experience Platform]
+### Autorizar el acceso a sus datos en [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **Formato de API**
 
@@ -551,7 +551,7 @@ Una respuesta correcta contiene el identificador único de la conexión base (`i
 [!DNL Adobe Experience Platform] exporta datos para destinos de marketing por correo electrónico y almacenamiento en la nube por lotes en forma de [!DNL CSV] archivos. En este paso, puede determinar la ruta de acceso a la ubicación de almacenamiento en la que se exportarán los archivos.
 
 >[!IMPORTANT]
-> 
+>
 >[!DNL Adobe Experience Platform] divide automáticamente los archivos de exportación en 5 millones de registros (filas) por archivo. Cada fila representa un perfil.
 >
 >Los nombres de los archivos divididos se anexan con un número que indica que el archivo forma parte de una exportación mayor, como por ejemplo: `filename.csv`, `filename_2.csv`, `filename_3.csv`.

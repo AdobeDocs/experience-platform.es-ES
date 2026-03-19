@@ -2,7 +2,7 @@
 title: Algolia
 description: Utilice este conector para activar audiencias en Algolia para la personalización y el uso en búsquedas y recomendaciones. A continuación, puede utilizar el conector de origen del perfil de usuario de Algolia para importar los perfiles en Real-Time CDP y crear audiencias enriquecidas.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 4%
@@ -43,7 +43,7 @@ A continuación, utilice el conector de origen [[!DNL Algolia User Profiles]](/h
 
 >[!IMPORTANT]
 >
->* Para conectarse al destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [6&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para conectarse al destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [6}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 ## Identidades admitidas {#supported-identities}
@@ -111,7 +111,7 @@ Para obtener más información sobre estas credenciales, consulte la [!DNL Algol
 
 ![Nueva cuenta](../../assets/catalog/personalization/algolia/connection.png)
 
-### Rellenar detalles de destino
+### Rellenar detalles de destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -131,11 +131,11 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions).
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
 
-Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#mapping-attributes-identities}
 

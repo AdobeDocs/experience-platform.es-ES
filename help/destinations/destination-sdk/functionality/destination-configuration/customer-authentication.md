@@ -2,9 +2,9 @@
 description: Aprenda a configurar un mecanismo de autenticación para su destino y a introducir insight en lo que los usuarios verán en la interfaz de usuario, según el método de autenticación que seleccione.
 title: Configuración de autenticación del cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Este artículo describe todas las configuraciones de autenticación de cliente a
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -53,6 +53,8 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 |---|---|
 | Integraciones en tiempo real (streaming) | Sí |
 | Integraciones basadas en archivos (por lotes) | Sí |
+
+{style="table-layout:auto"}
 
 ## Configuración de regla de autenticación {#authentication-rule}
 
@@ -105,7 +107,7 @@ Para configurar la autenticación de tipo portador para su destino, configure la
 
 ## Autenticación OAuth 2 {#oauth2}
 
-Los usuarios seleccionan **[!UICONTROL Conectar con destino]** para almacenar en déclencheur el flujo de autenticación de OAuth 2 en su destino, como se muestra en el ejemplo siguiente para el destino de Audiencias personalizadas de Twitter. Para obtener información detallada sobre la configuración de la autenticación OAuth 2 en el extremo de destino, lea la [página de autenticación OAuth 2 de Destination SDK](oauth2-authorization.md).
+Los usuarios seleccionan **[!UICONTROL Connect to destination]** para almacenar en déclencheur el flujo de autenticación de OAuth 2 en su destino, como se muestra en el ejemplo siguiente para el destino de Audiencias personalizadas de Twitter. Para obtener información detallada sobre la configuración de la autenticación OAuth 2 en el extremo de destino, lea la [página de autenticación OAuth 2 de Destination SDK](oauth2-authorization.md).
 
 ![Procesamiento de IU con autenticación de OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -141,7 +143,7 @@ Para configurar la autenticación [!DNL Amazon S3] para su destino, configure la
 
 La autenticación [!DNL Azure Blob Storage] es compatible con destinos basados en archivos en Experience Platform.
 
-Al configurar el tipo de autenticación de Azure Blob, los usuarios deben introducir la cadena de conexión.
+Al configurar el tipo de autenticación Azure Blob, los usuarios deben introducir la cadena de conexión.
 
 ![Procesamiento de IU con autenticación de blob](../../assets/functionality/destination-configuration/blob-authentication-ui.png)
 
@@ -159,7 +161,7 @@ Para configurar la autenticación [!DNL Azure Blob] para su destino, configure e
 
 La autenticación [!DNL Azure Data Lake Storage] es compatible con destinos basados en archivos en Experience Platform.
 
-Al configurar el tipo de autenticación [!DNL Azure Data Lake Storage], los usuarios deben especificar las credenciales principales del servicio de Azure y su información de inquilino.
+Al configurar el tipo de autenticación [!DNL Azure Data Lake Storage], los usuarios deben especificar las credenciales de la entidad de seguridad del servicio de Azure y su información de inquilino.
 
 ![Procesamiento de IU con [!DNL Azure Data Lake Storage] autenticación](../../assets/functionality/destination-configuration/adls-authentication-ui.png)
 
@@ -173,7 +175,7 @@ Para configurar la autenticación [!DNL Azure Data Lake Storage] (ADLS) para su 
 ]
 ```
 
-## SFTP con autenticación de contraseña
+## SFTP con autenticación de contraseña {#sftp-password-auth}
 
 Se admite la autenticación [!DNL SFTP] con contraseña para destinos basados en archivos en Experience Platform.
 
@@ -191,7 +193,7 @@ Para configurar la autenticación SFTP con contraseña para su destino, configur
 ]
 ```
 
-## SFTP con autenticación de clave SSH
+## SFTP con autenticación de clave SSH {#sftp-ssh-key-auth}
 
 La autenticación [!DNL SFTP] con la clave [!DNL SSH] es compatible con destinos basados en archivos en Experience Platform.
 
@@ -213,7 +215,7 @@ Para configurar la autenticación SFTP con clave SSH para su destino, configure 
 
 La autenticación [!DNL Google Cloud Storage] es compatible con destinos basados en archivos en Experience Platform.
 
-Al configurar el tipo de autenticación [!DNL Google Cloud Storage], los usuarios deben especificar [!DNL Google Cloud Storage] [!UICONTROL identificador de clave de acceso] y [!UICONTROL clave de acceso secreta].
+Al configurar el tipo de autenticación [!DNL Google Cloud Storage], los usuarios deben especificar [!DNL Google Cloud Storage] [!UICONTROL access key ID] y [!UICONTROL secret access key].
 
 ![Procesamiento de IU con autenticación de Google Cloud Storage](../../assets/functionality/destination-configuration/google-cloud-storage-ui.png)
 
@@ -227,7 +229,7 @@ Para configurar la autenticación [!DNL Google Cloud Storage] para su destino, c
 ]
 ```
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo puede configurar la autenticación de usuarios en la plataforma de destino.
 

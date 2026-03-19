@@ -3,9 +3,9 @@ title: Activar audiencias de cuenta en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de cuenta en destinos
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Vaya a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** y seleccione
 
 ![Destinos que admiten audiencias de cuenta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
-## Vídeo introductorio
+## Vídeo introductorio {#video-overview}
 
 Vea el siguiente vídeo para obtener información general sobre la creación y activación de audiencias de cuenta y los casos de uso admitidos al activar audiencias de cuenta.
 
@@ -69,17 +69,21 @@ Siga las instrucciones para seleccionar un destino al que exportar los conjuntos
 
 ## Seleccione las audiencias de la cuenta {#select-account-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de audiencias de la cuenta para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Next]**. Tenga en cuenta que solo se muestran *audiencias de cuenta* en esta vista, y no se muestran otros tipos de audiencia.
+Utilice las casillas de verificación de la izquierda de los nombres de audiencias de la cuenta para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>En esta vista solo se muestran *audiencias de cuenta*, y no se muestran otros tipos de audiencia.
 
 ![Flujo de trabajo de exportación del conjunto de datos que muestra el paso Seleccionar audiencias, donde puede seleccionar qué audiencias de cuenta desea exportar.](/help/destinations/assets/ui/activate-account-audiences/select-account-audiences.png)
 
-## Programación y pasos siguientes
+## Programación y pasos siguientes {#scheduling-and-next-steps}
 
 Para el resto del flujo de trabajo de activación para exportar audiencias de cuenta, lea el tutorial sobre la activación de datos en destinos basados en archivos. Continúe desde el paso [programar exportación de audiencia](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling). Si está activando audiencias de cuenta en el destino **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, lea el tutorial sobre la activación de destinos de flujo continuo. Continúe desde el [paso de asignación](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping).
 
 >[!NOTE]
 >
->Tenga en cuenta que en el paso de programación al exportar audiencias de cuenta a destinos de almacenamiento en la nube, el flujo de trabajo para activar audiencias de cuenta solo le permite exportar [archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _en una programación diaria_. No se admiten exportaciones por hora. Tenga en cuenta también que **[!UICONTROL After audience evaluation]** es el único tipo de evaluación admitido.
+>En el paso de programación al exportar audiencias de cuenta a destinos de almacenamiento en la nube, el flujo de trabajo para activar audiencias de cuenta solo le permite exportar [archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una programación diaria_. No se admiten exportaciones por hora. **[!UICONTROL After audience evaluation]** es el único tipo de evaluación admitido.
 
 ## Llamadas importantes y limitaciones conocidas {#important-callouts-known-limitations}
 
@@ -95,6 +99,8 @@ Al activar audiencias de cuenta en el destino **[!UICONTROL (Companies) LinkedIn
 |---------|----------|
 | `accountName` | `companyName` |
 | `accountKey.sourceKey` | `primaryId` (seleccione este campo en la vista **[!UICONTROL Select Identity namespace]**, al seleccionar **[!UICONTROL Target Field]**). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar las audiencias de cuenta en los destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar las audiencias de cuenta en los destinos."){width="100" zoomable="yes"} |
+
+{style="table-layout:auto"}
 
 ### Aplicación de gobernanza de datos {#data-governance-enforcement}
 

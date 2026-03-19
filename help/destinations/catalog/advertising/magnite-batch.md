@@ -3,9 +3,9 @@ title: Destino del lote Magnite
 description: Utilice este destino para enviar audiencias de Adobe CDP a la plataforma de streaming Magnite por lotes.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1779'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Para obtener más información sobre el destino en tiempo real, consulte [esta p
 
 >[!IMPORTANT]
 >
->El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL Magnite]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos al `adobe-tech@magnite.com`.
+>El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL Magnite]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en `adobe-tech@magnite.com`.
 
 ## Casos de uso {#use-cases}
 
@@ -136,7 +136,7 @@ conexión/instancia de destino en el futuro.
 
 >[!NOTE]
 >
->Si planea enviar varios tipos de ID (GAID, IDFA, etc.) utilizando el destino de lote, se requiere una nueva conexión/instancia de destino para cada uno. Póngase en contacto con el representante de su cuenta de Magnite para obtener más información.
+>Si planea enviar varios tipos de ID (GAID, IDFA, etc.) utilizando el destino de lote, se requiere una nueva conexión/instancia de destino para cada uno. Póngase en contacto con su representante de cuentas de Magnite para obtener más información.
 
 Puede continuar seleccionando **[!UICONTROL Next]**
 
@@ -152,11 +152,11 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-### Activar segmentos en este destino {#activate}
+### Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
@@ -172,7 +172,7 @@ En este ejemplo, seleccionamos **[!UICONTROL Target field]**: magnite_deviceId_C
 
 >[!NOTE]
 >
->Si planea enviar/asignar varios tipos de ID (GAID, IDFA, etc.) utilizando el destino por lotes, se requiere una nueva conexión/instancia de destino para cada uno. Póngase en contacto con el representante de su cuenta de Magnite para obtener más información.
+>Si planea enviar/asignar varios tipos de ID (GAID, IDFA, etc.) utilizando el destino por lotes, se requiere una nueva conexión/instancia de destino para cada uno. Póngase en contacto con su representante de cuentas de Magnite para obtener más información.
 
 
 En la pantalla &quot;Configure a filename and export schedule for each audience&quot; (Configurar un nombre de archivo y una programación de exportación para cada audiencia), ahora debe configurar una fecha de inicio (obligatoria), una fecha de finalización (opcional) y un ID de asignación (obligatorio) para cada audiencia.

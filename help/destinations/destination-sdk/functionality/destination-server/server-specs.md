@@ -2,7 +2,7 @@
 description: Aprenda a configurar las especificaciones del servidor de destino en Adobe Experience Platform Destination SDK mediante el punto final /authoring/destination-servers.
 title: Especificaciones del servidor para destinos creados con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2775'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Esta página muestra todos los tipos de servidor de destino admitidos por Destin
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -57,7 +57,7 @@ Los parámetros del servidor de destino tienen dos campos configurables. Estas o
 
 {style="table-layout:auto"}
 
-### Cuándo utilizar campos con código o con plantilla
+### Cuándo utilizar campos con código o con plantilla {#when-to-use-hard-coded-vs-templatized}
 
 Los campos con plantilla y los campos codificados tienen sus propios usos en Destination SDK, según el tipo de integración que cree.
 
@@ -225,7 +225,7 @@ El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino
 | `fileBasedSFTPDestination.rootDirectory.value` | Cadena | Ruta al directorio que alojará los archivos exportados. Puede ser un campo con plantilla que leerá el valor de los [campos de datos del cliente](../destination-configuration/customer-data-fields.md) rellenados por el usuario (como se muestra en el ejemplo anterior) o un valor codificado, como `"value":"Storage/MyDirectory"` |
 | `fileBasedSFTPDestination.hostName.templatingStrategy` | Cadena | *Requerido*. Establezca este valor según el tipo de valor utilizado en el campo `hostName.value`.<ul><li>Si desea que los usuarios introduzcan su propio nombre de host en la interfaz de usuario de Experience Platform, establezca este valor en `PEBBLE_V1`. En este caso, debe crear una plantilla del campo `hostName.value` para leer un valor proporcionado por el usuario de los [campos de datos del cliente](../destination-configuration/customer-data-fields.md) rellenados por el usuario. Este caso de uso se muestra en el ejemplo anterior.</li><li>Si está usando un nombre de host predefinido para su integración, como `"hostName.value":"my.hostname.com"`, establezca este valor en `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | Cadena | El nombre de host del servidor SFTP. Puede ser un campo con plantilla que leerá el valor de los [campos de datos del cliente](../destination-configuration/customer-data-fields.md) rellenados por el usuario (como se muestra en el ejemplo anterior) o un valor codificado, como `"hostName.value":"my.hostname.com"`. |
-| `port` | Entero | El puerto del servidor de archivos SFTP. |
+| `port` | Número entero | El puerto del servidor de archivos SFTP. |
 | `encryptionMode` | Cadena | Indica si se debe utilizar el cifrado de archivos. Valores compatibles: <ul><li>PGP</li><li>Ninguna</li></ul> |
 
 {style="table-layout:auto"}

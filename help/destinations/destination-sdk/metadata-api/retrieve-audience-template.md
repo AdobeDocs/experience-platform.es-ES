@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para recuperar una plantilla de audiencia a través de Adobe Experience Platform Destination SDK.
 title: Recuperación de una plantilla de audiencia
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 1%
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +21,11 @@ Para obtener una descripción detallada de las funcionalidades que puede configu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de plantillas de audiencia {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperación de una plantilla de audiencia {#retrieve}
 
@@ -198,6 +198,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 | -------- | ----------- |
 | `{INSTANCE_ID}` | El ID de la plantilla de audiencia que desea recuperar. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Respuesta
@@ -319,6 +321,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la planti
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo recuperar detalles acerca de la configuración del servidor de destino mediante el extremo de API `/authoring/destination-servers`. Lee [cómo usar Destination SDK para configurar tu destino](../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

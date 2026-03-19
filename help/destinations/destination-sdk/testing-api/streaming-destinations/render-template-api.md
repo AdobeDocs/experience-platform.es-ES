@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para validar la salida en el destino de flujo continuo, en función de la plantilla de transformación de mensajes.
 title: Validar estructura de perfil exportada
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Esta página enumera y describe todas las operaciones de API que puede realizar 
 
 ## Introducción a las operaciones de API de plantilla de procesamiento {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Procesar perfiles exportados basados en la plantilla de transformación de mensajes {#render-exported-data}
 
@@ -1068,6 +1068,6 @@ Una respuesta incorrecta devolverá el estado HTTP 400 junto con descripciones d
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo utilizar la plantilla de transformación de mensajes para generar perfiles exportados que coincidan con el formato de datos esperado del destino. Lee [cómo usar Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para saber dónde encaja este paso en el proceso de configuración de tu destino.

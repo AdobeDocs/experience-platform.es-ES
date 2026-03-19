@@ -3,7 +3,7 @@ title: Exportación de matrices, mapas y objetos desde Real-Time CDP
 type: Tutorial
 description: Obtenga información sobre cómo exportar matrices, mapas y objetos de Real-Time CDP a destinos de almacenamiento en la nube.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 13%
@@ -34,7 +34,7 @@ Aprenda a exportar matrices, asignaciones y objetos de Real-Time CDP a [destinos
 
 Considere esta página como su lugar de referencia para todo lo que desee saber acerca de la exportación de matrices, mapas y otros tipos de objetos de Experience Platform.
 
-## Línea inferior delante
+## Línea inferior delante {#bottom-line}
 
 Obtenga la información más importante acerca de la funcionalidad de esta sección y continúe a las demás secciones del documento para obtener información detallada.
 

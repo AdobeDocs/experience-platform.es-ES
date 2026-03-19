@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para generar una plantilla de transformación de mensaje de prueba para su destino.
 title: Generar una plantilla de transformación de mensaje de ejemplo
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '375'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Esta página enumera y describe todas las operaciones de API que puede realizar 
 
 ## Introducción a las operaciones de API de plantilla de muestra {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Obtener plantilla de muestra {#generate-sample-template}
 
@@ -39,6 +39,8 @@ GET authoring/testing/template/sample/{DESTINATION_ID}
 | Parámetro | Descripción |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | El ID de la configuración de destino para la que está generando una plantilla de transformación de mensajes. |
+
+{style="table-layout:auto"}
 
 **Solicitud**
 
@@ -134,6 +136,6 @@ Si el id. de destino proporcionado corresponde a una plantilla de servidor de de
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo generar una plantilla de transformación de mensajes utilizando el extremo de API `/authoring/testing/template/sample`. A continuación, puede usar el [extremo de la API de la plantilla de procesamiento](render-template-api.md) para generar perfiles exportados basados en la plantilla y compararlos con el formato de datos esperado del destino.

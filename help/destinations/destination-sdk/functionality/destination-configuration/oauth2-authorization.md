@@ -2,7 +2,7 @@
 description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2273'
 ht-degree: 2%
@@ -18,7 +18,7 @@ En esta página se describen los distintos flujos de autorización de OAuth 2 ad
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -133,7 +133,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 
 {style="table-layout:auto"}
 
-## OAuth 2 con concesión de contraseña
+## OAuth 2 con concesión de contraseña {#oauth2-password-grant}
 
 Para la concesión de contraseña de OAuth 2 (lea las [especificaciones de los estándares RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform requiere el nombre de usuario y la contraseña del usuario. En el flujo de autorización, Experience Platform intercambia estas credenciales por un token de acceso y, opcionalmente, un token de actualización.
 Adobe utiliza las entradas estándar siguientes para simplificar la configuración de destino, con la capacidad de anular los valores:
@@ -176,7 +176,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 
 {style="table-layout:auto"}
 
-## OAuth 2 con concesión de credenciales de cliente
+## OAuth 2 con concesión de credenciales de cliente {#oauth2-client-credentials-grant}
 
 Puede configurar un destino de credenciales de cliente de OAuth 2 (lea las [especificaciones de estándares RFC](https://tools.ietf.org/html/rfc6749#section-4.4)), que admita las entradas y salidas estándar que se enumeran a continuación. Tiene la capacidad de personalizar los valores. Consulte [Personalizar la configuración de OAuth 2](#customize-configuration) para obtener más información.
 

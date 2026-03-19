@@ -4,13 +4,13 @@ type: Tutorial
 hide: true
 hidefromtoc: true
 description: Obtenga información sobre cómo actualizar la fecha de finalización de los flujos de datos de exportación del conjunto de datos con una fecha de finalización actual del 1 de mayo de 2025.
-source-git-commit: aeabbb56002f8640b79ff3a7e3dc532d01ebbadf
+exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
-
 
 # Actualizar la fecha de finalización de los flujos de datos de exportación del conjunto de datos (acción necesaria el 1 de mayo de 2025)
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Los elementos de acción de esta página se aplican si su organización configura flujos de datos de exportación de conjuntos de datos antes de la versión de septiembre de 2024 de Experience Platform.
 
-## ¿Qué está sucediendo?
+## ¿Qué está sucediendo? {#what-is-happening}
 
 En la versión de [septiembre de 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) se introdujo la opción de establecer una fecha de `endTime` para exportar flujos de datos del conjunto de datos. Adobe también ha introducido una fecha de finalización predeterminada del 1 de mayo de 2025 para todos los flujos de datos de exportación de conjuntos de datos creados *antes de la versión de septiembre de 2024*. Estos flujos de datos muestran actualmente un mensaje similar al que se muestra a continuación.
 
@@ -26,21 +26,21 @@ En la versión de [septiembre de 2024 de Experience Platform](/help/release-note
 
 **Elemento de acción**: Para cualquiera de estos flujos de datos, debe actualizar manualmente la fecha de finalización antes de que caduque; de lo contrario, se detendrán las exportaciones. Utilice la IU de Experience Platform para identificar qué flujos de datos están configurados para detenerse el 1 de mayo de 2025.
 
-## ¿Por qué se me notifica?
+## ¿Por qué se me notifica? {#why-notified}
 
 Se ha identificado a su organización como si tuviera flujos de datos de exportación de conjuntos de datos activos con una fecha de finalización del 1 de mayo de 2025.
 
-## Uso de la interfaz de usuario para actualizar la fecha de finalización
+## Uso de la interfaz de usuario para actualizar la fecha de finalización {#use-ui}
 
 Utilice la interfaz de usuario de Experience Platform para identificar los flujos de datos con una fecha de finalización del 1 de mayo de 2025 y actualizarlos a una fecha futura.
 
-### Buscar los flujos de datos que deben actualizarse
+### Buscar los flujos de datos que deben actualizarse {#find-dataflows}
 
 Vaya a **Destinos > Examinar** y busque el tipo de datos **Conjuntos de datos** en la columna **Tipo de datos**, como se muestra a continuación. Seleccione los flujos de datos deseados para inspeccionarlos.
 
 ![Flujos de datos de exportación de conjuntos de datos resaltados en la ficha Examinar.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
-### Actualizar la fecha de finalización de los flujos de datos
+### Actualizar la fecha de finalización de los flujos de datos {#update-end-date}
 
 Para actualizar la fecha de finalización de los flujos de datos:
 
@@ -54,8 +54,8 @@ Para actualizar la fecha de finalización de los flujos de datos:
 
 Para obtener información detallada sobre el paso de programación, lea el tutorial de la interfaz de usuario [exportar conjuntos de datos](/help/destinations/api/export-datasets.md#scheduling).
 
-## Utilice la API para actualizar la fecha de finalización
+## Utilice la API para actualizar la fecha de finalización {#use-api}
 
-### Buscar los flujos de datos que deben actualizarse
+### Buscar los flujos de datos que deben actualizarse {#find-dataflows-api}
 
-### Actualizar la fecha de finalización de los flujos de datos
+### Actualizar la fecha de finalización de los flujos de datos {#update-end-date-api}

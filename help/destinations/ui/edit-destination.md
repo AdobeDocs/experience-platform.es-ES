@@ -3,7 +3,7 @@ title: Editar destinos
 type: Tutorial
 description: Obtenga información sobre cómo editar y actualizar cuentas de destinos existentes en la IU de Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Para editar varios componentes de una conexión de destino existente:
 
 1. Vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleccione el destino que desee editar.
-3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;para editar las conexiones de destino existentes.
+3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar las conexiones de destino existentes.
 4. En la ventana modal, edite la configuración que desee. Seleccione **[!UICONTROL Save]** cuando haya terminado.
 
 En la ventana de edición de destino, puede actualizar cualquier configuración que haya configurado al conectarse inicialmente al destino. Esta configuración es diferente en función de la plataforma de destino que esté actualizando.
@@ -49,7 +49,7 @@ A continuación se muestran algunos ejemplos de la configuración que puede actu
 >
 >Se ha actualizado la configuración de la conexión de destino.
 
-## Otras opciones de edición
+## Otras opciones de edición {#other-editing-options}
 
 Mediante la interfaz de usuario de Experience Platform o la API de Flow Service, puede editar varias configuraciones de destino como se detalla en los vínculos siguientes:
 
@@ -59,7 +59,7 @@ Mediante la interfaz de usuario de Experience Platform o la API de Flow Service,
 | [Editar cuentas](/help/destinations/ui/update-accounts.md) | [Editar componentes de conexión base (parámetros de autenticación y otros componentes)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Editar flujos de datos de activación](/help/destinations/ui/edit-activation.md) | [Actualizar flujos de datos de destino](/help/destinations/api/update-destination-dataflows.md) |
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinations]** para actualizar las conexiones de destino existentes.
 

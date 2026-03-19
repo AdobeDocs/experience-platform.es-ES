@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para probar si el destino de flujo continuo está configurado correctamente y verificar la integridad de los flujos de datos a su destino configurado.
 title: Prueba del destino de flujo continuo con perfiles de muestra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
@@ -26,13 +26,13 @@ Puede usar la [API de generación de perfiles de muestra](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con su destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=es) para obtener más información.
->* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=es).
->  &#x200B;>![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino &#x200B;](../../assets/testing-api/get-destination-instance-id.png)
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+>* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino ](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introducción a las operaciones de API de prueba de destino {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Pruebe la configuración de destino sin añadir perfiles a la llamada {#test-without-adding-profiles}
 
@@ -324,6 +324,6 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con la respuesta de la 
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Platform.
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo probar el destino. Ahora puede usar el [proceso de documentación de autoservicio](../../docs-framework/documentation-instructions.md) de Adobe para crear una página de documentación para su destino.

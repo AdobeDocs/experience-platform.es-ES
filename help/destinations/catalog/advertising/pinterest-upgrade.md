@@ -1,45 +1,45 @@
 ---
-title: Migración de destino de pinterest a una nueva API. Acción del cliente requerida.
-description: Pinterest está desaprobando la API de anunciante v4 que actualmente utiliza el destino de Pinterest en Real-Time CDP. Comprenda sus elementos de acción para una transición sin problemas a la nueva API sin interrupciones para sus campañas de Pinterest.
+title: Migración de destino de Pinterest a una nueva API. Acción del cliente requerida.
+description: Pinterest está desaprobando la API de anunciante v4 que actualmente utiliza el destino de Pinterest en Real-Time CDP. Comprenda sus elementos de acción para pasar sin problemas a la nueva API sin interrumpir sus campañas de Pinterest.
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
 
-# Actualización del destino de pinterest a una nueva API. Acción del cliente requerida para el 18 de enero de 2024.
+# Actualización del destino de Pinterest a una nueva API. Acción del cliente requerida para el 18 de enero de 2024.
 
 >[!IMPORTANT]
 >
 >Los elementos de acción del cliente de esta página se aplican a usted si su organización ha configurado flujos de datos para exportar datos a Pinterest antes del 16 de noviembre de 2023, la fecha en la que se agregó el nuevo destino **[!UICONTROL Pinterest]**, con la última API de Pinterest, al catálogo de destinos.
 
-## ¿Qué está sucediendo?
+## ¿Qué está sucediendo? {#what-is-happening}
 
-Pinterest ha desaprobado la API de anunciante v4 que usaba [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) en Real-Time CDP. El Adobe actualizó el destino para usar la API del anunciante [v5](https://developers.pinterest.com/docs/getting-started/migration/). Lea esta página para comprender los elementos de su acción con el fin de realizar una transición sin problemas a la nueva API sin interrupciones para sus campañas de Pinterest.
+Pinterest ha desaprobado la API de anunciante v4 que usaba [Pinterest destination](/help/destinations/catalog/advertising/pinterest.md) en Real-Time CDP. Adobe actualizó el destino para usar la API del anunciante [v5](https://developers.pinterest.com/docs/getting-started/migration/). Lea esta página para comprender los elementos de acción y realizar una transición sin problemas a la nueva API sin interrupciones en las campañas de Pinterest.
 
-## ¿Por qué se me notifica?
+## ¿Por qué se me notifica? {#why-notified}
 
 Hemos identificado su organización como si tuviera flujos de datos activos para activar audiencias en Pinterest.
 
-## ¿Cuál es el plan?
+## ¿Cuál es el plan? {#what-is-the-plan}
 
-Adobe ha lanzado una nueva tarjeta de destino de Pinterest que aprovecha la API de Pinterest v5 y conservará los flujos de datos existentes en la nueva conexión.
+Adobe ha lanzado una nueva tarjeta de destino de Pinterest que aprovecha la API v5 de Pinterest y conservará los flujos de datos existentes en la nueva conexión.
 
-## ¿Debo hacer algo para mantener mis audiencias activadas en funcionamiento?
+## ¿Debo hacer algo para mantener mis audiencias activadas en funcionamiento? {#action-required}
 
 Sí, antes del 18 de enero de 2024, debe autenticarse en el nuevo destino de Pinterest con su cuenta de anunciante de Pinterest en Real-Time CDP. Consulte las instrucciones detalladas a continuación.
 
 ### Volver a autenticar en Pinterest {#reauthenticate}
 
-1. Vaya a **[!UICONTROL Destinos > Cuentas]** y use el filtro de la pantalla para filtrar solo el destino de Pinterest.
+1. Vaya a **[!UICONTROL Destinations > Accounts]** y utilice el filtro de la pantalla para filtrar solo el destino de Pinterest.
    ![Solo filtrar cuentas de Pinterest](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. En el destino **Pinterest**, seleccione el símbolo de tres puntos... y seleccione **[!UICONTROL Editar detalles]**.
+2. En el destino **Pinterest**, seleccione el símbolo de tres puntos... y seleccione **[!UICONTROL Edit details]**.
    ![Seleccionar Editar detalles](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Seleccione **[!UICONTROL Volver a conectar OAuth]** e inicie sesión en su cuenta de Pinterest.
+3. Seleccione **[!UICONTROL Reconnect OAuth]** e inicie sesión en su cuenta de Pinterest.
    ![Seleccionar OAuth de reconexión](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Continúe con el elemento de acción en la sección siguiente
 
@@ -47,9 +47,9 @@ Sí, antes del 18 de enero de 2024, debe autenticarse en el nuevo destino de Pin
 
 A continuación, debe habilitar los flujos de datos en la nueva tarjeta **[!UICONTROL Pinterest]**.
 
-1. Vaya a **[!UICONTROL Destinos > Examinar]** y utilice el filtro de la pantalla para filtrar solo el destino **[!UICONTROL Pinterest]**.
+1. Vaya a **[!UICONTROL Destinations > Browse]** y utilice el filtro de la pantalla para filtrar solo el destino **[!UICONTROL Pinterest]**.
    ![Filtrar flujos de datos de Pinterest solo en la ficha Examinar](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Seleccione el nombre de la conexión con hipervínculo (campaña de fidelización en el ejemplo de captura de pantalla anterior) al destino **[!UICONTROL Pinterest]** y cambie el conmutador **[!UICONTROL Habilitar]** a **activado**.
+2. Seleccione el nombre de la conexión hipervinculada (campaña de fidelización en el ejemplo de captura de pantalla anterior) al destino **[!UICONTROL Pinterest]** y cambie **[!UICONTROL Enable]** a **on**.
    ![Activar y desactivar para las conexiones antiguas](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
@@ -58,7 +58,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-## ¿Puede compartir algunos cronogramas de alto nivel?
+## ¿Puede compartir algunos cronogramas de alto nivel? {#high-level-timelines}
 
 Sí, consulte lo siguiente:
 

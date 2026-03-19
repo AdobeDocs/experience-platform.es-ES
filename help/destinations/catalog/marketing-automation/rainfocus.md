@@ -3,10 +3,10 @@ title: Perfiles de los asistentes de RainFocus
 description: Aprenda a utilizar el conector de destino Perfiles de asistente de RainFocus para sincronizar perfiles de audiencia con el Perfil de asistente global de RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 5%
+source-wordcount: '1091'
+ht-degree: 4%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Utilice el destino de [!DNL RainFocus Attendee Profiles] para transmitir perfiles de clientes de Adobe Experience Platform a la plataforma [!DNL RainFocus] con el fin de crear y actualizar perfiles de asistentes.
+Use el destino [!DNL RainFocus Attendee Profiles] para transmitir perfiles de clientes desde Adobe Experience Platform a la plataforma [!DNL RainFocus] y crear y actualizar perfiles de asistentes.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Rai
 
 ### Caso de uso #1 {#use-case-1}
 
-Una gran compañía tecnológica empresarial tiene previsto abrir el registro para su próxima exposición global y le gustaría insertar los perfiles de clientes en [!DNL RainFocus] para optimizar el proceso de registro.
+Una gran compañía de tecnología empresarial tiene previsto abrir el registro para su próxima exposición global y le gustaría insertar los perfiles de clientes en [!DNL RainFocus] para optimizar el proceso de registro.
 
 ### Caso de uso #2 {#use-case-2}
 
@@ -91,8 +91,8 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -123,13 +123,13 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 
@@ -172,4 +172,4 @@ Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las política
 
 ## Recursos adicionales {#additional-resources}
 
-* [Conector de Source de flujo RainFocus](https://experienceleague.adobe.com/es/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de flujo RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

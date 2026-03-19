@@ -3,9 +3,9 @@ title: Conexión HubSpot
 description: El destino de HubSpot le permite administrar los registros de contacto en su cuenta de HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1638'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Consulte las secciones siguientes para conocer todos los requisitos previos que 
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL HubSpot], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL HubSpot], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -40,7 +40,7 @@ Tenga en cuenta los siguientes requisitos previos para exportar datos de Experie
 
 #### Debe tener una cuenta de [!DNL HubSpot] {#prerequisites-account}
 
-Para exportar datos de Experience Platform a su cuenta de [!DNL Hubspot], necesita tener una cuenta de [!DNL HubSpot]. Si todavía no tiene una, visite la página [Configurar su cuenta de HubSpot](https://knowledge.hubspot.com/get-started/set-up-your-account) y siga las instrucciones para registrarse y crear su cuenta.
+Para exportar datos de Experience Platform a su cuenta de [!DNL Hubspot], debe tener una cuenta de [!DNL HubSpot]. Si todavía no tiene una, visite la página [Configurar su cuenta de HubSpot](https://knowledge.hubspot.com/get-started/set-up-your-account) y siga las instrucciones para registrarse y crear su cuenta.
 
 #### Recopilar el token de acceso privado a la aplicación [!DNL HubSpot] {#gather-credentials}
 
@@ -149,7 +149,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -159,7 +159,7 @@ Para enviar correctamente los datos de audiencia de Adobe Experience Platform al
 
 Para asignar correctamente los campos XDM a los campos de destino [!DNL HubSpot], siga los pasos a continuación:
 
-#### Asignando la identidad `Email`
+#### Asignando la identidad `Email` {#map-email-identity}
 
 La identidad `Email` es una asignación obligatoria para este destino. Siga los pasos a continuación para asignarlo:
 
@@ -177,7 +177,7 @@ La identidad `Email` es una asignación obligatoria para este destino. Siga los 
 A continuación, se muestra un ejemplo con la asignación de identidad:
 ![Ejemplo de captura de pantalla de IU de Experience Platform con asignación de identidad de correo electrónico.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Asignando atributos **optional**
+#### Asignando atributos **optional** {#mapping-optional-attributes}
 
 Para agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la cuenta [!DNL HubSpot], repita los pasos a continuación:
 
@@ -224,7 +224,7 @@ A continuación encontrará información útil adicional de la documentación de
 * [Métodos de autenticación en HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * Referencias de API [!DNL HubSpot] para las API [Contacts](https://developers.hubspot.com/docs/api/crm/contacts) y [Properties](https://developers.hubspot.com/docs/api/crm/properties).
 
-### Changelog
+### Changelog {#changelog}
 
 Esta sección recoge la funcionalidad y las actualizaciones significativas de la documentación realizadas en este conector de destino.
 

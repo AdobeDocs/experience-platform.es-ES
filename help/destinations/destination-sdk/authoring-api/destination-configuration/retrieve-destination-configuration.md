@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para recuperar una configuración de destino a través de Adobe Experience Platform Destination SDK.
 title: Recuperación de una configuración de destino
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 1%
+source-wordcount: '366'
+ht-degree: 2%
 
 ---
 
@@ -15,11 +15,11 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperación de una configuración de destino {#retrieve}
 
@@ -190,6 +190,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | -------- | ----------- |
 | `{INSTANCE_ID}` | El ID de la configuración de destino que desea recuperar. |
 
+{style="table-layout:auto"}
+
 +++
 
 +++Respuesta
@@ -308,7 +310,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con los detalles de la config
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo recuperar una configuración de destino a través del extremo de la API de Destination SDK `/authoring/destinations`.
 

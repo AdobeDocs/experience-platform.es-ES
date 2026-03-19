@@ -3,9 +3,9 @@ title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 14%
 
 ---
@@ -63,11 +63,15 @@ Siga las instrucciones para seleccionar un destino al que exportar los conjuntos
 
 ## Seleccionar las audiencias de clientes potenciales {#select-prospect-audiences}
 
-Utilice las casillas de verificación de la izquierda de los nombres de las audiencias de clientes potenciales para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Next]**. Tenga en cuenta que solo se muestran las audiencias de clientes potenciales en esta vista y no se muestran otras audiencias.
+Utilice las casillas de verificación de la izquierda de los nombres de las audiencias de clientes potenciales para seleccionar las audiencias que desea exportar al destino y, a continuación, seleccione **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>En esta vista solo se muestran las audiencias de clientes potenciales y no se muestran otras audiencias.
 
 ![Flujo de trabajo de exportación del conjunto de datos que muestra el paso Seleccionar audiencias, donde puede seleccionar qué audiencias de cliente potencial exportar.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Programación y pasos siguientes
+## Programación y pasos siguientes {#scheduling-and-next-steps}
 
 Para el resto del flujo de trabajo de activación para exportar audiencias potenciales, lea el tutorial sobre la activación de datos en destinos basados en archivos. Continúe desde el paso [programar exportación de audiencia](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 

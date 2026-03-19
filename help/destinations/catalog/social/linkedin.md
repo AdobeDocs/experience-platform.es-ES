@@ -3,7 +3,7 @@ keywords: conexión de linkedin;conexión de linkedin;destinos de linkedin;linke
 title: Conexión de audiencias coincidentes de Linkedin
 description: Active perfiles para sus campañas de LinkedIn para la segmentación, personalización y supresión de audiencias, en función de los correos electrónicos con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 4%
@@ -18,7 +18,7 @@ Active perfiles para sus campañas [!DNL LinkedIn] de segmentación, personaliza
 
 ![Destino de LinkedIn en la interfaz de usuario de Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL LinkedIn Matched Audiences], hay un caso de uso que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
 
@@ -30,7 +30,7 @@ Una empresa de software organiza una conferencia y desea mantenerse en contacto 
 
 >[!IMPORTANT]
 >
->A partir de septiembre de 2025, ya no podrá asignar [!DNL IDFA] como identidad de destino, puesto que [!DNL IDFA] ya no es compatible con el destino [!DNL LinkedIn Matched Audiences]. Consulte la [!DNL LinkedIn Matched Audiences]documentación[&#x200B; de la integración de &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obtener más información. Este cambio se debe a los requisitos de LinkedIn y no está relacionado con ninguna actualización del servicio de destino de Experience Platform.
+>A partir de septiembre de 2025, ya no podrá asignar [!DNL IDFA] como identidad de destino, puesto que [!DNL IDFA] ya no es compatible con el destino [!DNL LinkedIn Matched Audiences]. Consulte la [!DNL LinkedIn Matched Audiences]documentación[ de la integración de ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obtener más información. Este cambio se debe a los requisitos de LinkedIn y no está relacionado con ninguna actualización del servicio de destino de Experience Platform.
 
 
 | Identidad de destino | Descripción | Consideraciones |
@@ -117,14 +117,14 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL LinkedIn Matched Audiences] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Una vez caducado el token, las exportaciones de datos al destino dejan de funcio
    ![Ventana modal con la opción Reconectar OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Las credenciales de autenticación se actualizan y su hora de caducidad se restablece a 60 días.
 
 ### Rellenar detalles de destino {#destination-details}
@@ -177,8 +177,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

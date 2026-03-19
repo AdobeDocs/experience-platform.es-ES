@@ -2,9 +2,9 @@
 description: Aprenda a configurar las opciones de formato de archivo para los destinos basados en archivos creados con Adobe Experience Platform Destination SDK mediante el punto de conexión /destination-servers.
 title: Configuración de formato de archivo
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1092'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Esta página describe todos los valores de formato de archivo admitidos para los
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 

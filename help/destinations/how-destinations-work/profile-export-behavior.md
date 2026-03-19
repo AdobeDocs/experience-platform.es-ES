@@ -2,9 +2,9 @@
 title: Comportamiento de exportación de perfil
 description: Descubra cómo varía el comportamiento de exportación de perfiles entre los distintos patrones de integración admitidos en los destinos de Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Existen varios tipos de destinos en Experience Platform, como se muestra en el d
 
 ![Diagrama de tipos de destinos](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Agregación de mensajes en destinos de flujo continuo
+## Agregación de mensajes en destinos de flujo continuo {#message-aggregation}
 
 Antes de profundizar en información específica por tipo de destino, es importante comprender el concepto de agregación de mensajes para *destinos de streaming*.
 
@@ -47,7 +47,7 @@ La directiva de agregación se puede configurar y los desarrolladores de destino
 
 >[!IMPORTANT]
 >
-> Los destinos empresariales solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Los destinos empresariales solo están disponibles para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 Los [destinos empresariales](/help/destinations/destination-types.md#advanced-enterprise-destinations) de Experience Platform son Amazon Kinesis, Azure Event Hubs y la API de HTTP.
 
@@ -59,7 +59,9 @@ Experience Platform optimiza el comportamiento de exportación de perfiles a su 
 
 En todos los casos descritos anteriormente, solo los perfiles en los que se han producido actualizaciones relevantes se exportan a su destino. Por ejemplo, si una audiencia asignada al flujo de destino tiene cien miembros y cinco perfiles nuevos cumplen los requisitos para el segmento, la exportación a su destino es incremental y solo incluye los cinco perfiles nuevos.
 
-Tenga en cuenta que todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
+>[!NOTE]
+>
+>Todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
 
 ### Qué determina una exportación de datos y qué se incluye en la exportación {#enterprise-behavior}
 
@@ -106,7 +108,9 @@ Experience Platform optimiza el comportamiento de exportación de perfiles a su 
 
 En todos los casos descritos anteriormente, solo los perfiles en los que se han producido actualizaciones relevantes se exportan a su destino. Por ejemplo, si una audiencia asignada al flujo de destino tiene cien miembros y cinco perfiles nuevos cumplen los requisitos para el segmento, la exportación a su destino es incremental y solo incluye los cinco perfiles nuevos.
 
-Tenga en cuenta que todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
+>[!NOTE]
+>
+>Todos los atributos asignados se exportan para un perfil, independientemente de dónde se encuentren los cambios. Por lo tanto, en el ejemplo anterior, todos los atributos asignados para esos cinco nuevos perfiles se exportarán incluso si los atributos en sí no han cambiado.
 
 ### Qué determina una exportación de datos y qué se incluye en la exportación {#streaming-behavior}
 
@@ -171,7 +175,7 @@ Por ejemplo, en la configuración de exportación que se muestra a continuación
 
 >[!ENDSHADEBOX]
 
-### Qué determina una exportación de datos y qué se incluye en la exportación
+### Qué determina una exportación de datos y qué se incluye en la exportación {#file-based-export-details}
 
 En función de la información de la sección anterior, el comportamiento de exportación de perfiles a destinos basados en archivos se puede resumir como se describe a continuación:
 

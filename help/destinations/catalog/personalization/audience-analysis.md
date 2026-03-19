@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 4%
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Destino de Audience Analysis
 
-El destino [!UICONTROL Audience Analysis] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=es).
+El destino [!UICONTROL Audience Analysis] le permite enriquecer los datos de audiencia de Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
 >Este destino se encuentra en una fase de prueba limitada. Si está interesado en utilizar este destino, póngase en contacto con el equipo de cuenta de Adobe.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Se requiere lo siguiente antes de utilizar este destino:
 
@@ -28,7 +28,7 @@ Se requiere lo siguiente antes de utilizar este destino:
 * Debe estar aprovisionado para utilizar Customer Journey Analytics.
 * Debe tener al menos una audiencia creada en Adobe Experience Platform.
 
-## Identidades admitidas
+## Identidades admitidas {#supported-identities}
 
 El análisis de audiencia admite la activación de identidades que se describe en la tabla siguiente. Más información sobre [identidades](/help/identity-service/features/namespaces.md). Normalmente, se utiliza un Experience Cloud ID (ECID).
 
@@ -43,7 +43,7 @@ El análisis de audiencia admite la activación de identidades que se describe e
 
 {style="table-layout:auto"}
 
-## Audiencias compatibles
+## Audiencias compatibles {#supported-audiences}
 
 Se admiten los siguientes tipos de audiencias al utilizar este destino:
 
@@ -68,7 +68,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 {style="table-layout:auto"}
 
 
-## Tipo y frecuencia de exportación
+## Tipo y frecuencia de exportación {#export-type-frequency}
 
 Consulte la tabla siguiente para obtener información sobre el tipo y la frecuencia de exportación de destino.
 
@@ -79,15 +79,15 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Configurar nuevo destino
+## Configurar nuevo destino {#configure-destination}
 
 >[!IMPORTANT]
-> 
->Para crear un destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Para crear un destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para crear este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
-### Detalles del destino
+### Detalles del destino {#destination-details}
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
 
@@ -96,7 +96,7 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Datastream ID]**: ID de secuencia de datos que desea enriquecer con audiencias aptas. Puede obtener este identificador en el [administrador de flujos de datos](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]**: alias de la integración.
 
-### Alertas
+### Alertas {#alerts}
 
 Puede activar alertas para recibir notificaciones sobre el estado del flujo de datos a su destino. Para obtener más información sobre las alertas, consulte la guía sobre [suscripción a alertas de destinos mediante la interfaz de usuario](../../ui/alerts.md).
 
@@ -104,7 +104,7 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-### Política de gobernanza y medidas coercitivas
+### Política de gobernanza y medidas coercitivas {#governance-policy}
 
 Esta sección opcional le permite definir las políticas de control de datos y asegurarse de que los datos utilizados sean compatibles cuando las audiencias se envíen y estén activas.
 
@@ -113,8 +113,8 @@ Cuando termine de seleccionar las acciones de marketing deseadas para el destino
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Una vez creado el destino, puede activar las audiencias que desee para el destino.
 

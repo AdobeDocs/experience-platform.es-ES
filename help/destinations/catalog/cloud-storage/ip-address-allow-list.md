@@ -3,10 +3,10 @@ title: LISTA DE PERMITIDOS de direcciones IP para destinos de almacenamiento en 
 type: Documentation
 description: Esta página proporciona rangos de IP que puede agregar a su lista de permitidos para exportar con seguridad datos de Experience Platform a destinos de almacenamiento en la nube.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 1%
+source-wordcount: '288'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 La información del rango de IP de esta página se aplica a los siguientes conectores de almacenamiento en la nube basados en archivos en el catálogo de destinos:
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Almacenamiento en la nube de Google]](google-cloud-storage.md)
+* [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]

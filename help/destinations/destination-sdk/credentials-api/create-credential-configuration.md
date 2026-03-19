@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear una Adobe Experience Platform Destination SDK de configuración de credenciales.
 title: Crear una configuración de credenciales
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '584'
 ht-degree: 7%
 
 ---
@@ -31,11 +31,11 @@ Cuando use un sistema de autenticación global, debe establecer `"authentication
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Crear una configuración de credenciales {#create}
 
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | Parámetro | Tipo | Descripción |
 | -------- | ----------- | ----------- |
 | `url` | Cadena | URL del proveedor de autorización |
-| `tenant` | Cadena | inquilino de Azure Data Lake Storage |
+| `tenant` | Cadena | inquilino de almacenamiento de Azure Data Lake |
 | `servicePrincipalId` | Cadena | ID principal del servicio de Azure para el almacenamiento de Azure Data Lake |
 | `servicePrincipalKey` | Cadena | Clave principal del servicio de Azure para el almacenamiento de Azure Data Lake |
 
@@ -207,7 +207,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 +++
 
->[!TAB Almacenamiento de blob de Azure]
+>[!TAB Almacenamiento de Azure Blob]
 
 **Crear una configuración de credencial [!DNL Azure Blob Storage]**
 

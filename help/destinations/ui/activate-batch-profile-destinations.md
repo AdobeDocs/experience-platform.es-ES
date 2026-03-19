@@ -3,7 +3,7 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '4783'
 ht-degree: 11%
@@ -14,11 +14,11 @@ ht-degree: 11%
 # Activar audiencias para destinos de exportación de perfiles por lotes
 
 >[!IMPORTANT]
-> 
+>
 >* Para activar audiencias y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para activar audiencias sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
-> 
+>
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general {#overview}
@@ -205,7 +205,7 @@ Si los perfiles se actualizan después de la evaluación de audiencia, las expor
 
 Para exportaciones a petición, consulte la documentación sobre [exportación de archivos a petición](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Exportación de archivos incrementales
+### Exportación de archivos incrementales {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -278,7 +278,7 @@ Para editar varios nombres de archivo al mismo tiempo, seleccione las audiencias
 Seleccione **[!UICONTROL Apply changes]** para confirmar su selección.
 
 >[!IMPORTANT]
-> 
+>
 >Si no selecciona el componente **[!UICONTROL Date and Time]**, los nombres de archivo serán estáticos y el nuevo archivo exportado sobrescribirá el archivo anterior de su ubicación de almacenamiento con cada exportación. Cuando se ejecuta un trabajo de importación recurrente desde una ubicación de almacenamiento a una plataforma de marketing por correo electrónico, esta es la opción recomendada.
 
 Una vez que haya terminado de configurar todas sus audiencias, seleccione **[!UICONTROL Next]** para continuar.
@@ -298,7 +298,7 @@ En este paso, debe seleccionar los atributos de perfil que desea añadir a los a
 1. En la página **[!UICONTROL Select source field]**, seleccione los atributos e identidades de perfil que desee incluir en los archivos exportados al destino y, a continuación, elija **[!UICONTROL Select]**.
 
    >[!TIP]
-   > 
+   >
    >Puede utilizar el campo de búsqueda para reducir la selección, como se muestra en la siguiente imagen.
 
    Utilice la opción **[!UICONTROL Show only fields with data]** para mostrar solo los campos de esquema rellenados con valores. De forma predeterminada, solo se muestran los campos de esquema rellenados.
@@ -496,9 +496,9 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
-#### Consideraciones clave
+#### Consideraciones clave {#key-considerations}
 
 * **Selección determinística**: cuando varios perfiles tienen claves de anulación de duplicación idénticas y la misma marca de tiempo de referencia, la lógica de anulación de duplicación determina qué perfil se va a exportar ordenando los valores de otras columnas seleccionadas (excluyendo tipos complejos como matrices, mapas u objetos). Los valores ordenados se evalúan en orden lexicográfico y se selecciona el primer perfil.
 
@@ -535,7 +535,7 @@ Puede usar el control [Campos calculados](/help/destinations/ui/data-transformat
 
 La nueva página **[!UICONTROL Mapping]** tiene las siguientes limitaciones conocidas:
 
-#### El atributo de pertenencia a audiencia no se puede seleccionar mediante el flujo de trabajo de asignación
+#### El atributo de pertenencia a audiencia no se puede seleccionar mediante el flujo de trabajo de asignación {#audience-membership-attribute-mapping}
 
 Debido a una limitación conocida, actualmente no puede usar la ventana **[!UICONTROL Select field]** para agregar `segmentMembership.seg_namespace.seg_id.status` a sus exportaciones de archivos. En su lugar, debe pegar manualmente el valor `xdm: segmentMembership.seg_namespace.seg_id.status` en el campo de esquema, como se muestra a continuación.
 
@@ -556,7 +556,7 @@ Las exportaciones de archivos variarán de las siguientes maneras, dependiendo d
 
 Obtenga más información sobre [comportamiento de exportación de perfiles para destinos basados en archivos](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Actualmente no se pueden seleccionar áreas de nombres de identidad para las exportaciones
+#### Actualmente no se pueden seleccionar áreas de nombres de identidad para las exportaciones {#identity-namespaces-export-limitation}
 
 Actualmente no se admite la selección de áreas de nombres de identidad para exportar, como se muestra en la imagen siguiente. Si se seleccionan áreas de nombres de identidad para la exportación, se producirá un error en el paso **[!UICONTROL Review]**.
 
@@ -570,7 +570,7 @@ Como solución temporal si necesita agregar áreas de nombres de identidad a los
 ## Seleccionar atributos de perfil {#select-attributes}
 
 >[!IMPORTANT]
-> 
+>
 >Todos los destinos de almacenamiento en la nube del catálogo pueden ver un paso [[!UICONTROL Mapping] mejorado](#mapping) que reemplaza el paso **[!UICONTROL Select attributes]** descrito en esta sección.
 >
 >Este paso de **[!UICONTROL Select attributes]** sigue mostrándose para los destinos de marketing por correo electrónico de Adobe Campaign, Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
@@ -643,7 +643,7 @@ Seleccione **[!UICONTROL Next]** para pasar al paso [Revisar](#review).
 ## Revisar {#review}
 
 >[!NOTE]
-> 
+>
 >Si se han aplicado etiquetas de uso de datos a ciertos campos dentro de un conjunto de datos (en lugar de a todo el conjunto de datos), la aplicación de esas etiquetas de nivel de campo en la activación se produce en las siguientes condiciones:
 >
 >* Los campos se utilizan en la definición de audiencia.

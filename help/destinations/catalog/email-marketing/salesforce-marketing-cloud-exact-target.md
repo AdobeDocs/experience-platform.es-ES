@@ -2,9 +2,9 @@
 title: (API) Conexión de Salesforce Marketing Cloud
 description: El destino de Salesforce Marketing Cloud (anteriormente conocido como ExactTarget) le permite exportar los datos de su cuenta y activarlos dentro de Salesforce Marketing Cloud para sus necesidades comerciales.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2956'
+source-wordcount: '2954'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ El departamento de ventas de una plataforma de alquiler de viviendas desea difun
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL (API) Salesforce Marketing Cloud], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL (API) Salesforce Marketing Cloud], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -131,6 +131,8 @@ Observe los elementos siguientes antes de autenticarse en el destino [!DNL (API)
 |---|---|---|
 | contactKey | Clave de contacto [!DNL Salesforce Marketing Cloud]. Consulte la [!DNL Salesforce Marketing Cloud] [documentación](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) si necesita más instrucciones. | Obligatorio |
 
+{style="table-layout:auto"}
+
 ## Audiencias compatibles {#supported-audiences}
 
 Esta sección describe qué tipos de audiencias puede exportar a este destino.
@@ -187,6 +189,8 @@ Para autenticarse en el destino, rellene los campos obligatorios a continuación
 | **[!UICONTROL Client ID]** | Su [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Client Secret]** | Su [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
+{style="table-layout:auto"}
+
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra cómo autenticarse en Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 Si los detalles proporcionados son válidos, la interfaz de usuario muestra un estado de **[!UICONTROL Connected]** con una marca de verificación verde y, a continuación, puede continuar con el siguiente paso.
@@ -208,8 +212,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
-> * Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+> * Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 > * Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -269,6 +273,8 @@ Un ejemplo típico basado en la imagen mostrada arriba podría ser.
 | --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
+{style="table-layout:auto"}
 
 ## Validar exportación de datos {#exported-data}
 

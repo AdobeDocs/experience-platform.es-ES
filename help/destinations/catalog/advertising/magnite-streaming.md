@@ -3,9 +3,9 @@ title: Conexión de destino de Magnite Real-Time
 description: Utilice este destino para ofrecer audiencias CDP de Adobe a la plataforma de streaming Magnite en tiempo real.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1403'
 ht-degree: 2%
 
 ---
@@ -23,11 +23,13 @@ Para activar las audiencias en [!DNL Magnite Streaming], debe:
 * Activar las audiencias en el destino [!DNL Magnite: Real-Time], como se muestra en esta página.
 * Active la misma audiencia en el destino Magnite: Batch. El destino [!DNL Magnite: Batch] es un componente obligatorio. Si no se activa la audiencia en el destino del lote [!DNL Magnite Streaming], se producirá un error en la integración y las audiencias no se activarán.
 
-Nota: Al usar el destino en tiempo real, [!DNL Magnite Streaming] recibirá audiencias en tiempo real, pero Magnite solo puede almacenar audiencias en tiempo real temporalmente en su plataforma y se eliminarán del sistema en un par de días. Por esta razón, si desea usar el destino Magnite: Real-Time, *también* necesitará usar el destino Magnite: Batch: cada audiencia que active en el destino Real-Time, también deberá activar en el destino Batch.
+>[!NOTE]
+>
+>Al usar el destino en tiempo real, [!DNL Magnite Streaming] recibirá audiencias en tiempo real, pero Magnite solo puede almacenar audiencias en tiempo real temporalmente en su plataforma y se eliminarán del sistema en un par de días. Por esta razón, si desea usar el destino Magnite: Real-Time, *también* necesitará usar el destino Magnite: Batch: cada audiencia que active en el destino Real-Time, también deberá activar en el destino Batch.
 
 >[!IMPORTANT]
 >
->El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL Magnite]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos al `adobe-tech@magnite.com`.
+>El conector de destino y la página de documentación los crea y mantiene el equipo [!DNL Magnite]. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en `adobe-tech@magnite.com`.
 
 ## Casos de uso {#use-cases}
 
@@ -92,7 +94,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View destinations]** y **[!UICONTROL Manage destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View destinations]** y **[!UICONTROL Manage destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -129,14 +131,14 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 Una vez creada la conexión de destino, puede continuar con el flujo de activación de audiencia. En la siguiente sección se explica cómo activar audiencias mediante el destino en tiempo real.
 
@@ -178,7 +180,7 @@ Una vez que las audiencias se han cargado, puede validar que se han creado y car
 
 * Después de la ingesta, se espera que las audiencias aparezcan en [!DNL Magnite Streaming] en unos minutos y pueden aplicarse a una oferta. Para confirmarlo, busque el ID de segmento compartido durante los pasos de activación en Adobe Experience Platform.
 
-## Activar las mismas audiencias a través del destino [!DNL Magnite: Batch]
+## Activar las mismas audiencias a través del destino [!DNL Magnite: Batch] {#activate-magnite-batch}
 
 Las audiencias compartidas con [!DNL Magnite Streaming] que usan el destino en tiempo real también deberán compartirse usando el destino Magnite: Batch. Cuando se configura correctamente, los nombres de los segmentos en la interfaz de usuario de [!DNL Magnite Streaming] se actualizan para reflejar los utilizados en la actualización posterior al día de Adobe Experience Platform.
 

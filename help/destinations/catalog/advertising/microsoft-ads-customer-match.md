@@ -2,11 +2,11 @@
 keywords: publicidad; microsoft ads; coincidencia de clientes;
 title: Conexión de Microsoft Ads Customer Match
 description: Utilice el destino de coincidencia de clientes de Microsoft Ads para hacer coincidir clientes por dirección de correo electrónico y volver a interactuar con ellos en toda la red de Advertising de Microsoft, incluidos los anuncios de búsqueda y audiencia.
-badge: Beta
+badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -27,11 +27,11 @@ Use el destino [!DNL Microsoft Ads Customer Match] para buscar clientes por dire
 
 Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Microsoft Ads Customer Match], aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Una marca de comercio electrónico desea llegar a los clientes existentes a través de [!DNL Microsoft Search] y [!DNL Microsoft Audience Network] para personalizar las ofertas en función de sus compras anteriores y del historial de exploración. La marca puede ingerir direcciones de correo electrónico de su propio CRM en Experience Platform, crear audiencias a partir de sus propios datos sin conexión y enviar estas audiencias a [!DNL Microsoft Ads Customer Match] para que se utilicen en la búsqueda y en los anuncios de audiencia, lo que optimiza el gasto en publicidad.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Una empresa de tecnología lanzó un nuevo producto. Para promocionar este nuevo producto, buscan concienciar a los clientes que anteriormente compraron productos relacionados. Cargan direcciones de correo electrónico desde su base de datos de CRM en Experience Platform, utilizando las direcciones de correo electrónico como identificadores. Las audiencias se crean en función de los clientes que poseen productos relacionados. Estas audiencias se envían a [!DNL Microsoft Ads Customer Match], de modo que la empresa pueda dirigirse a los clientes actuales y similares de [!DNL Microsoft Advertising Network].
 
@@ -96,7 +96,7 @@ Al configurar el destino, debe proporcionar la siguiente información:
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
@@ -146,8 +146,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades* a destinos, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

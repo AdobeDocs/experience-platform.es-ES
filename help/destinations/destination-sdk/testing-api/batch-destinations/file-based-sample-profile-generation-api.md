@@ -2,9 +2,9 @@
 description: En esta página se explica cómo utilizar el extremo de API /sample-profiles de Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de muestra para probar la configuración de destino basada en archivos.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Los perfiles de muestra pueden ayudarle a comprender la estructura JSON de un pe
 
 ## Introducción {#getting-started}
 
-Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Requisitos previos {#prerequisites}
 
@@ -116,7 +116,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo generar perfiles de muestra basados en el esquema de origen que configuró en su [flujo de activación](../../../ui/activate-batch-profile-destinations.md) de destino.
 

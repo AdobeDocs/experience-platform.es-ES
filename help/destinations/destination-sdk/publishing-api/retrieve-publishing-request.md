@@ -2,10 +2,10 @@
 description: Esta página ejemplifica la llamada de API utilizada para recuperar detalles acerca de una solicitud de publicación de destino mediante Adobe Experience Platform Destination SDK.
 title: Recuperar una solicitud de publicación de destino
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 2%
+source-wordcount: '835'
+ht-degree: 3%
 
 ---
 
@@ -28,11 +28,11 @@ Utilice el punto final de la API de destinos de publicación para enviar una sol
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de publicación de destino {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Enumerar solicitudes de publicación de destino {#retrieve-list}
 
@@ -181,6 +181,6 @@ Si pasó `DESTINATION_ID` en la llamada de API, la respuesta devuelve el estado 
 
 >[!ENDTABS]
 
-## Administración de errores de API
+## Administración de errores de API {#error-handling}
 
 Los extremos de la API de Destination SDK siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](../../../landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](../../../landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform.

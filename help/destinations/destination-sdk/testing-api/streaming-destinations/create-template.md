@@ -2,7 +2,7 @@
 description: Aprenda a utilizar la API de prueba de destino para probar la plantilla de transformación de mensajes de destino de flujo continuo antes de publicar el destino.
 title: Creación y prueba de una plantilla de transformación de mensajes
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -18,17 +18,17 @@ Como parte de Destination SDK, Adobe proporciona herramientas para desarrollador
 
 Para **crear y probar una plantilla de transformación de mensajes** entre el esquema de destino en Adobe Experience Platform y el formato de mensaje admitido por el destino, use la *herramienta de creación de plantillas* que se describe más adelante.  Obtenga más información acerca de la transformación de datos entre el esquema de origen y el de destino en el [documento de formato de mensaje](../../functionality/destination-server/message-format.md#using-templating).
 
-A continuación se ilustra cómo la creación y prueba de una plantilla de transformación de mensajes se ajusta al [flujo de trabajo de configuración de destino](../../guides/configure-destination-instructions.md) en Destination SDK:
+A continuación se ilustra cómo la creación y la prueba de una plantilla de transformación de mensajes se ajustan al [flujo de trabajo de configuración de destino](../../guides/configure-destination-instructions.md) en Destination SDK:
 
 ![Gráfico de dónde encaja el paso para crear plantilla en el flujo de trabajo de configuración de destino](../../assets/testing-api/create-template-step.png)
 
 ## Por qué necesita crear y probar una plantilla de transformación de mensajes {#why-create-message-transformation-template}
 
-Uno de los primeros pasos para crear su destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a audiencias, identidades y atributos de perfil al exportarlo desde Adobe Experience Platform a su destino. Encuentre información acerca de la transformación entre el esquema XDM de Adobe y el esquema de destino en el [documento de formato de mensaje](../../functionality/destination-server/message-format.md#using-templating).
+Uno de los primeros pasos para crear su destino en Destination SDK es pensar en cómo se transforma el formato de datos para la pertenencia a audiencias, identidades y atributos de perfil al exportarse de Adobe Experience Platform a su destino. Encuentre información acerca de la transformación entre el esquema XDM de Adobe y su esquema de destino en el [documento de formato de mensaje](../../functionality/destination-server/message-format.md#using-templating).
 
 Para que la transformación tenga éxito, debe proporcionar una plantilla de transformación, similar a este ejemplo: [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
-Adobe proporciona una herramienta de plantilla que le permite crear y probar la plantilla de mensaje que transforma los datos del formato XDM de Adobe en el formato admitido por el destino. La herramienta tiene dos extremos de API que puede utilizar:
+Adobe proporciona una herramienta de plantilla que le permite crear y probar la plantilla de mensaje que transforma los datos del formato XDM de Adobe al formato admitido por el destino. La herramienta tiene dos extremos de API que puede utilizar:
 
 * Use la *API de plantilla de ejemplo* para obtener una plantilla de ejemplo.
 * Utilice la *API de plantilla de procesamiento* para procesar la plantilla de ejemplo y poder comparar el resultado con el formato de datos esperado del destino. Después de comparar los datos exportados con el formato de datos esperado por el destino, puede editar la plantilla. De este modo, los datos exportados que genere coincidirán con el formato de datos esperado por su destino.
@@ -54,7 +54,7 @@ El proceso para obtener y probar la plantilla es iterativo. Repita los pasos sig
 
 1. Primero, [obtenga una plantilla de ejemplo](../../testing-api/streaming-destinations/create-template.md#sample-template-api).
 2. Utilice la plantilla de ejemplo como punto de partida para crear un borrador propio.
-3. Llame al extremo [render template API](../../testing-api/streaming-destinations/create-template.md#render-template-api) con su propia plantilla. El Adobe genera perfiles de muestra basados en el esquema y devuelve el resultado de los errores encontrados.
+3. Llame al extremo [render template API](../../testing-api/streaming-destinations/create-template.md#render-template-api) con su propia plantilla. Adobe genera perfiles de muestra basados en el esquema y devuelve el resultado de los errores encontrados.
 4. Comparar los datos exportados con el formato de datos esperado por el destino. Si es necesario, edite la plantilla.
 5. Repita este proceso hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
 
@@ -167,6 +167,6 @@ Consulte la referencia de la API para ver ejemplos de llamadas que puede realiza
 
 Edite la plantilla y realice llamadas al extremo de la API de la plantilla de procesamiento hasta que los perfiles exportados coincidan con el formato de datos esperado del destino.
 
-## Añada la plantilla con caracteres de escape a la configuración del servidor de destino
+## Añada la plantilla con caracteres de escape a la configuración del servidor de destino {#add-template-to-server-config}
 
 Una vez que esté satisfecho con la plantilla de transformación de mensajes, agréguela a la [configuración del servidor de destino](../../authoring-api/destination-server/create-destination-server.md), en `httpTemplate.requestBody.value`.

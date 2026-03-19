@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una Adobe Experience Platform Destination SDK de configuración de credenciales.
 title: Eliminar una configuración de credenciales
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '416'
 ht-degree: 1%
 
 ---
@@ -31,11 +31,11 @@ Cuando use un sistema de autenticación global, debe establecer `"authentication
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Eliminar una configuración de credenciales {#delete}
 
@@ -52,6 +52,8 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 | Parámetro | Descripción |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | El `ID` de la configuración de credenciales que desea eliminar. |
+
+{style="table-layout:auto"}
 
 La siguiente solicitud elimina una configuración de credenciales definida por el parámetro `{INSTANCE_ID}`.
 

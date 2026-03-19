@@ -3,16 +3,16 @@ keywords: etiquetas de dirigible;destino de dirigible
 title: Conexión de etiquetas de dirigible
 description: Pase sin problemas los datos de audiencia de Adobe al dirigible como etiquetas de audiencia para segmentar dentro del dirigible.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1070'
 ht-degree: 3%
 
 ---
 
 # [!DNL Airship Tags] conexión {#airship-tags-destination}
 
-## Información general
+## Información general {#overview}
 
 [!DNL Airship] es la plataforma de participación del cliente líder, que le ayuda a entregar mensajes omnicanal significativos y personalizados a sus usuarios en cada etapa del ciclo de vida del cliente.
 
@@ -25,7 +25,7 @@ Para obtener más información sobre [!DNL Airship], consulte [Documentos de la 
 >
 >El equipo [!DNL Airship] crea y mantiene este conector de destino y esta página de documentación. Para cualquier consulta o solicitud de actualización, comuníquese directamente con ellos en [support.airship.com](https://support.airship.com/).
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Para poder enviar las audiencias de Adobe Experience Platform a [!DNL Airship], debe:
 
@@ -33,7 +33,7 @@ Para poder enviar las audiencias de Adobe Experience Platform a [!DNL Airship], 
 * Genere un token de portador para la autenticación.
 
 >[!TIP]
-> 
+>
 >Cree una cuenta de [!DNL Airship] a través de [este vínculo de suscripción](https://go.airship.eu/accounts/register/plan/starter/) si aún no lo ha hecho.
 
 ## Audiencias compatibles {#supported-audiences}
@@ -72,7 +72,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 {style="table-layout:auto"}
 
-## Grupos de etiquetas
+## Grupos de etiquetas {#tag-groups}
 
 El concepto de audiencias en Adobe Experience Platform es similar a [Etiquetas](https://docs.airship.com/guides/audience/tags/) en Airship, con ligeras diferencias en la implementación. Esta integración asigna el estado de la [pertenencia de un usuario a un segmento de Experience Platform](../../../xdm/field-groups/profile/segmentation.md) a la presencia o no presencia de una etiqueta [!DNL Airship]. Por ejemplo, en una audiencia de Experience Platform donde `xdm:status` cambia a `realized`, la etiqueta se agrega al canal [!DNL Airship] o al usuario con nombre al que se asigna este perfil. Si `xdm:status` cambia a `exited`, se quita la etiqueta.
 
@@ -84,25 +84,25 @@ Para habilitar esta integración, cree un *grupo de etiquetas* en [!DNL Airship]
 
 Consulte [Administrar grupos de etiquetas](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) para obtener instrucciones sobre cómo crear el grupo de etiquetas.
 
-## Generar token de portador
+## Generar token de portador {#generate-bearer-token}
 
 Vaya a **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** en el [tablero del dirigible](https://go.airship.com) y seleccione **[!UICONTROL Tokens]** en el menú de la izquierda.
 
 Haga clic en **[!UICONTROL Create Token]**.
 
-Proporcione un nombre descriptivo para el token, por ejemplo, &quot;Destino de etiquetas de Adobe&quot;, y seleccione &quot;Todo el acceso&quot; para el rol.
+Proporcione un nombre descriptivo para el token, por ejemplo &quot;Destino de etiquetas de Adobe&quot; y seleccione &quot;Todo el acceso&quot; para la función.
 
 Haga clic en **[!UICONTROL Create Token]** y guarde los detalles como confidenciales.
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL Airship Tags], aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Los minoristas o las plataformas de entretenimiento pueden crear perfiles de usuario en sus clientes fieles y pasar esas audiencias a [!DNL Airship] para la segmentación de mensajes en campañas móviles.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Almacene en déclencheur mensajes uno a uno en tiempo real cuando los usuarios entren o salgan de audiencias específicas dentro de Adobe Experience Platform.
 
@@ -111,7 +111,7 @@ Por ejemplo, un retailer configura una audiencia específica de marca de jeans e
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -139,8 +139,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

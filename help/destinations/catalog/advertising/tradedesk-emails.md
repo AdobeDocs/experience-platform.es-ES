@@ -3,9 +3,9 @@ title: La conexión de Trade Desk con CRM
 description: Active los perfiles en su cuenta de Trade Desk para la segmentación y supresión de audiencias en función de los datos de CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1812'
 ht-degree: 2%
 
 ---
@@ -106,7 +106,6 @@ Si selecciona hash las direcciones de correo electrónico usted mismo, asegúres
       * El punto (`.`) (código ASCII 46). Por ejemplo, normalice &quot;jane.doe@gmail.com&quot; a &quot;janedoe@gmail.com&quot;.
      * El carácter de signo más (`+`) (código ASCII 43) y todos los caracteres posteriores. Por ejemplo, normalice &quot;janedoe+home@gmail.com&quot; a &quot;janedoe@gmail.com&quot;.
   
-
 ## Normalización de números de teléfono y requisitos de hash {#phone-hashing}
 
 Esto es lo que debe saber acerca de cargar números de teléfono:
@@ -166,7 +165,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ### Rellene los detalles del destino {#fill-in-details}
 
-Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) este destino, debe proporcionar la siguiente información:
+Para poder enviar o activar datos de audiencia a un destino, debe configurar una conexión con su propia plataforma de destino. Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Account Type]**: Elija la opción **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
@@ -180,8 +179,8 @@ Al conectarse al destino, la configuración de una directiva de control de datos
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en un destino.
@@ -222,13 +221,14 @@ Selección de los campos de origen y destino:
 | netID | net_id |
 | FirstID | first_id |
 
+{style="table-layout:auto"}
 
 ## Validar exportación de datos {#validate}
 
 Para validar que los datos se exportan correctamente desde Experience Platform a [!DNL The Trade Desk], busque las audiencias en la pestaña Adobe 1PD en la biblioteca [!DNL The Trade Desk] &quot;Datos del anunciante e identidad&quot;. Estos son los pasos para encontrar el ID correspondiente en la interfaz de usuario de [!DNL Trade Desk]:
 
 1. Primero, seleccione la ficha **[!UICONTROL Libraries]** y revise la sección **[!UICONTROL Advertiser data and identity]**.
-2. Haga clic en **[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas para [!DNL The Trade Desk].
+2. Seleccione **[!UICONTROL Adobe 1PD]** y se enumerarán todas las audiencias activadas para [!DNL The Trade Desk].
 3. El nombre del segmento o el ID del segmento de Experience Platform aparecerán como el nombre del segmento en la interfaz de usuario de [!DNL Trade Desk].
 
 ## Uso de datos y gobernanza {#data-usage-governance}

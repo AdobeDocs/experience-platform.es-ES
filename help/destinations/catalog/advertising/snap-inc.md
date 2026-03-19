@@ -2,9 +2,9 @@
 title: Conexión de Snap Inc
 description: Aprenda a conectarse a la plataforma de anuncios de Snapchat y a exportar sus audiencias desde Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1161'
 ht-degree: 3%
 
 ---
@@ -42,12 +42,12 @@ El destino *Snap Inc* admite la activación de identidades descritas en la tabla
 Todos los identificadores enviados al destino *Snap Inc* deben tener un cifrado hash en formato SHA-256. Para hash los identificadores de texto sin formato antes de enviarlos al destino, marque la opción **[!UICONTROL Apply transformation]** al asignar identificadores de destino para el destino.
 
 >[!WARNING]
-> 
+>
 > El destino Snap Inc no aceptará identificadores no hash y su envío podría provocar errores.
 
 
 >[!IMPORTANT]
-> 
+>
 > El destino Snap Inc no admite varias identidades. Seleccione solo una identidad.
 
 | Identidad de destino | Descripción | Consideraciones |
@@ -99,7 +99,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 ## Conectando con Snap Inc {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ### Autenticarse en el destino {#authenticate}
@@ -124,10 +124,10 @@ Para configurar los detalles del destino, rellene los campos obligatorios y sele
 
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Account ID]**: el identificador de cuenta de anuncio asociado con la cuenta de anuncio a la que desea importar las audiencias. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el Centro de ayuda para empresas de Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL Account ID]**: el identificador de cuenta de anuncio asociado con la cuenta de anuncio a la que desea importar las audiencias. Para obtener más información sobre cómo encontrar esto, consulte [esta documentación en el Centro de ayuda empresarial de Snapchat](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
-> 
+>
 >Si se introduce un ID de cuenta de publicidad de Snapchat incorrecto o no válido, la activación de la audiencia fallará. Compruebe que ha introducido el ID de cuenta de publicidad correcto.
 
 ### Habilitar alertas {#enable-alerts}
@@ -139,8 +139,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -154,7 +154,7 @@ Después de activar audiencias en el destino *Snap Inc*, podrás ver las audienc
 
 ![Públicos](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente la verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [descripción general del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=es#evaluate-segments).
+Tenga en cuenta que cuando se activa por primera vez una audiencia de Adobe en Snap Inc, inicialmente se verá como una audiencia vacía. Esto se debe a que Adobe Experience Platform no exporta datos de miembros a Snap Inc hasta que evalúa la audiencia. Para obtener más información sobre cómo se evalúan las audiencias en Experience Platform, consulte la [descripción general del servicio de segmentación](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

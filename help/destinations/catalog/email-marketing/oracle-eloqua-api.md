@@ -3,9 +3,9 @@ title: (API) Conexión de Oracle Eloqua
 description: El destino Oracle Eloqua (API) le permite exportar los datos de su cuenta y activarlos dentro de Oracle Eloqua para sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2138'
+source-wordcount: '2136'
 ht-degree: 4%
 
 ---
@@ -27,13 +27,13 @@ El departamento de marketing de una plataforma en línea desea difundir una camp
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Oracle Eloqua], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Oracle Eloqua], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
 ### [!DNL Oracle Eloqua] requisitos previos {#prerequisites-destination}
 
-Para exportar datos de Experience Platform a su cuenta de [!DNL Oracle Eloqua], necesita tener una cuenta de [!DNL Oracle Eloqua].
+Para exportar datos de Experience Platform a su cuenta de [!DNL Oracle Eloqua], debe tener una cuenta de [!DNL Oracle Eloqua].
 
 Además, necesita, como mínimo, los *&quot;Usuarios avanzados - Permisos de marketing&quot;* para su instancia de [!DNL Oracle Eloqua]. Consulte la sección *&quot;Grupos de seguridad&quot;* en la página [Acceso seguro de usuarios](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) para obtener instrucciones. El destino requiere acceso para [determinar mediante programación la dirección URL base](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) al invocar la API [!DNL Oracle Eloqua].
 
@@ -47,6 +47,8 @@ Observe los elementos siguientes antes de autenticarse en el destino [!DNL Oracl
 | `Username` | El nombre de usuario de su cuenta de [!DNL Oracle Eloqua]. |
 | `Password` | Contraseña de su cuenta de [!DNL Oracle Eloqua]. |
 | `Pod` | [!DNL Oracle Eloqua] admite varios centros de datos, cada uno con un nombre de dominio único. [!DNL Oracle Eloqua] se refiere a ellos como &quot;pods&quot;, actualmente hay siete en total: p01, p02, p03, p04, p06, p07 y p08. Para saber en qué POD se encuentra, inicie sesión en [!DNL Oracle Eloqua] y anote la dirección URL en su explorador después de haber iniciado sesión correctamente. Por ejemplo, si la dirección URL de su explorador es `secure.p01.eloqua.com`, su `pod` es `p01`. Consulte la página [determinar su POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) para obtener más información. |
+
+{style="table-layout:auto"}
 
 Consulte [Iniciar sesión en [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) para obtener instrucciones.
 
@@ -70,6 +72,8 @@ Consulte [Iniciar sesión en [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cl
 | Identidad de destino | Descripción | Obligatorio |
 |---|---|---|
 | `EloquaId` | Identificador único del contacto. | Sí |
+
+{style="table-layout:auto"}
 
 ## Audiencias compatibles {#supported-audiences}
 
@@ -156,8 +160,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -251,7 +255,7 @@ Para obtener más información, consulte la documentación de [!DNL Oracle Eloqu
 * [Automatización de marketing Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [API de REST para el servicio Oracle Eloqua Marketing Cloud](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Esta sección recoge la funcionalidad y las actualizaciones significativas de la documentación realizadas en este conector de destino.
 

@@ -3,7 +3,7 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 # Crear una nueva conexión de destino
 
 >[!IMPORTANT]
-> 
+>
 >* Para conectarse a un destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para conectarse a un destino que admita exportaciones de conjuntos de datos, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage and Activate Dataset Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -25,19 +25,19 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
 
 1. Vaya a **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** y seleccione la ficha **[!UICONTROL Catalog]**.
 
-   ![Captura de pantalla del IU Experience Platform que muestra el Página del catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la página del catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
-2. Las tarjetas de destino del catálogo pueden tener diferentes controles de acción, dependiendo de si tiene una conexión existente con el destino y si los destinos admiten la activación de audiencias, la exportación de conjuntos de datos o ambos. Es posible que vea alguno de los siguientes controles para las tarjetas de destino:
+2. Las tarjetas de destino del catálogo pueden tener diferentes controles de acción, en función de si tiene una conexión existente con el destino y de si los destinos admiten la activación de audiencias y la exportación de conjuntos de datos, o ambos. Puede ver cualquiera de los siguientes controles para las tarjetas de destino:
 
-   * **[!UICONTROL Set up]**. Primero hay que configurar una conexión con este destino para poder activar audiencias o exportar conjuntos de datos.
+   * **[!UICONTROL Set up]**. Primero debe configurar una conexión con este destino para poder activar audiencias o exportar conjuntos de datos.
    * **[!UICONTROL Activate]**. Ya se ha configurado una conexión con este destino. Este destino admite la activación de audiencias y exportaciones de conjuntos de datos.
    * **[!UICONTROL Activate audiences]**. Ya se ha configurado una conexión con este destino. Este destino solo admite la activación de audiencias.
 
    Para obtener más información sobre la diferencia entre estos controles, también puede consultar la sección [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación del área de trabajo de destino.
 
-   Seleccione , **[!UICONTROL Set up]**&#x200B;**[!UICONTROL Activate]** o , dependiendo **[!UICONTROL Activate audiences]** del control que haya disponible.
+   Seleccione **[!UICONTROL Set up]**, **[!UICONTROL Activate]** o **[!UICONTROL Activate audiences]**, según el control que esté disponible.
 
-   ![Captura de pantalla del IU Experience Platform que muestra los Página del catálogo de destinos con el control Configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
+   ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra la página del catálogo de destinos con el control de configuración resaltado.](../assets/ui/connect-destinations/set-up.png)
 
    ![Captura de pantalla de la interfaz de usuario de Experience Platform, que muestra la página del catálogo de destinos con el control Activar audiencias resaltado.](../assets/ui/connect-destinations/activate-segments.png)
 
@@ -60,24 +60,24 @@ El primer paso para conectarse a un destino es autenticarse en la plataforma de 
 
 Según el destino al que se esté conectando, es posible que se le dirija a la página del socio de destino para autenticarse, o que se le pida que introduzca las credenciales de autenticación directamente en el flujo de trabajo de Experience Platform.
 
-Al configurar una nueva conexión de destino, debe proporcionar un **[!UICONTROL Account name]** y, opcionalmente, un archivo **[!UICONTROL Description]**. Estos campos están disponibles para todos los destinos.
+Al configurar una nueva conexión de destino, debe proporcionar un **[!UICONTROL Account name]** y, opcionalmente, un **[!UICONTROL Description]**. Estos campos están disponibles para todos los destinos.
 
-* **[!UICONTROL Account name]**: Introduzca un nombre que le ayude a identificar fácilmente este destino cuenta en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo destino.
-* **[!UICONTROL Description]** (Opcional): añadir cualquier detalle adicional que le ayude a usted o a su equipo a distinguir entre cuentas, como el propósito de la conexión o el contexto comercial relevante.
+* **[!UICONTROL Account name]**: escriba un nombre que le ayude a identificar fácilmente esta cuenta de destino en el futuro. Esto resulta especialmente útil si tiene varias conexiones al mismo destino.
+* **[!UICONTROL Description]** (opcional): agregue cualquier detalle adicional que le ayude a usted o a su equipo a distinguir entre cuentas, como el propósito de la conexión o el contexto empresarial relevante.
 
-Proporcionar información clara y descriptiva en estos campos facilita la administrar y la selección de las cuenta de destino correctas al activar audiencias.
+Proporcionar información clara y descriptiva en estos campos facilita la administración y selección de la cuenta de destino correcta al activar audiencias.
 
 A continuación se muestra un ejemplo de la entrada requerida para autenticarse en un destino [!DNL Amazon S3]. En cada página de documentación de destino se proporcionan instrucciones detalladas acerca de la entrada necesaria (vea, por ejemplo, la sección de autenticación de [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) y [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 Se requieren **[!DNL Amazon S3]y parámetros de autenticación opcionales**
 
-![Imagen muestra los parámetros de entrada opcionales y necesarios al autenticarse en un destino de Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
+![Imagen que muestra los parámetros de entrada opcionales y requeridos al autenticarse en un destino de Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
 
-## Configuración de los parámetros de conexión {#set-up-connection-parameters}
+## Configurar parámetros de conexión {#set-up-connection-parameters}
 
-Si ya configuró la autenticación en el destino, puede continuar con el cuenta existente o puede configurar un nuevo cuenta.
+Si ya ha configurado la autenticación en el destino, puede continuar con la cuenta existente o puede configurar una nueva cuenta.
 
-En función del destino al que se esté conectando, es posible que se le pida que introduzca diferentes tipos de parámetros de conexión. Por ejemplo, al conectarse a un destino [!DNL Amazon S3], se le pide que proporcione detalles sobre el nombre del contenedor [!DNL Amazon S3] y la ruta de acceso a la carpeta donde se depositarán los archivos. A continuación se muestran dos ejemplos de entradas necesarias para un destino [!DNL Amazon S3] y un destino [!DNL Trade Desk]. En cada página de documentación de destino se proporcionan instrucciones detalladas sobre la entrada requerida.
+Según el destino al que se conecte, es posible que se le pida que introduzca distintos tipos de parámetros de conexión. Por ejemplo, al conectarse a un destino [!DNL Amazon S3], se le pide que proporcione detalles sobre el nombre del contenedor [!DNL Amazon S3] y la ruta de acceso a la carpeta donde se depositarán los archivos. A continuación se muestran dos ejemplos de entradas necesarias para un destino [!DNL Amazon S3] y un destino [!DNL Trade Desk]. En cada página de documentación de destino se proporcionan instrucciones detalladas sobre la entrada requerida.
 
 >[!IMPORTANT]
 >
@@ -87,15 +87,15 @@ En función del destino al que se esté conectando, es posible que se le pida qu
 
 ![Imagen que muestra los parámetros de entrada opcionales y requeridos al conectarse a un destino de Amazon S3.](../assets/ui/connect-destinations/connect-destination-amazons3-example.png)
 
-**[!DNL The Trade Desk]Parámetros de entrada opcionales y requeridos**
+**[!DNL The Trade Desk]parámetros de entrada opcionales y requeridos**
 
-![Imagen que muestra los parámetros de entrada opcionales y requeridos al conectarse a un destino de Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
+![Imagen que muestra los parámetros de entrada requeridos y opcionales al conectarse a un destino de Trade Desk.](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
 ### Configurar las opciones de formato de archivo para los archivos exportados {#file-formatting-and-compression-options}
 
-Para los destinos basados en archivos, puede configurar distintas opciones relacionadas con el formato y la compresión de los archivos exportados. Para obtener más información sobre todas las opciones de formato y compresión disponibles, lea el [tutorial](/help/destinations/ui/batch-destinations-file-formatting-options.md) Configurar opciones de formato de archivo para destinos basados en archivos.
+Para los destinos basados en archivos, puede configurar varias opciones relacionadas con el formato y la compresión de los archivos exportados. Para obtener más información acerca de todas las opciones de formato y compresión disponibles, lea el [tutorial Configurar opciones de formato de archivo para destinos basados en archivos](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-![Imagen que muestra la selección del tipo de archivo y varias opciones para CSV archivos.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
+![Imagen que muestra la selección de tipo de archivo y varias opciones para los archivos CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
 ### Configurar la conexión de destino para la activación de audiencias, la activación de cuentas, la activación de clientes potenciales o las exportaciones de conjuntos de datos {#segment-activation-or-dataset-exports}
 
@@ -105,7 +105,7 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 >
 >Al exportar conjuntos de datos, tenga en cuenta que las exportaciones a archivos JSON solo se admiten en modo comprimido. Se admiten las exportaciones a [!DNL Parquet] archivos en los modos comprimido y sin comprimir.
 
-![Imagen que muestra el control de selección de tipo de datos que permite a los usuarios seleccionar entre audiencia activación y conjunto de datos exportaciones.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![Imagen que muestra el control de selección de tipo de datos que permite a los usuarios seleccionar entre activación de audiencia y exportaciones de conjuntos de datos.](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### Habilitar alertas de destino {#enable-alerts}
 
@@ -123,10 +123,10 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
    ![Cuadro de diálogo Configurar nuevo destino con las acciones de marketing disponibles resaltadas. Los controles disponibles para completar el flujo de trabajo Conectar con destino también están resaltados.](../assets/ui/connect-destinations/governance.png)
 
-2. Seleccione **[!UICONTROL Save & Exit]** esta opción para guardar la configuración de destino o para **[!UICONTROL Next]** continuar con el flujo[&#x200B; de activación de datos &#x200B;](activation-overview.md)de audiencia.
+2. Seleccione **[!UICONTROL Save & Exit]** para guardar la configuración de destino o seleccione **[!UICONTROL Next]** para continuar con los datos de audiencia [flujo de activación](activation-overview.md).
 
 ## Próximos pasos {#next-steps}
 
-Al leer este documento, ha aprendido cómo usar el IU Experience Platform para establecer una conexión con un destino. Como recordatorio, los parámetros de conexión disponibles y requeridos varían de un destino a otro. También debería consultar la página de documentación de destino en el [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica acerca de las entradas requeridas y las opciones disponibles por tipo de destino.
+Al leer este documento, ha aprendido a utilizar la interfaz de usuario de Experience Platform para establecer una conexión con un destino. Como recordatorio, los parámetros de conexión disponibles y requeridos varían de un destino a otro. También debería consultar la página de documentación de destino en el [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica acerca de las entradas requeridas y las opciones disponibles por tipo de destino.
 
 A continuación, puede [activar audiencias](/help/destinations/ui/activation-overview.md) o [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) a su destino.

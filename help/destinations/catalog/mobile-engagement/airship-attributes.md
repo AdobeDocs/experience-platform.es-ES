@@ -3,9 +3,9 @@ keywords: atributos del dirigible;destino del dirigible
 title: Conexión de Atributos del dirigible
 description: Pase sin problemas los datos de audiencias de Adobe a la aeronave como atributos de audiencia para segmentar dentro de la aeronave.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ Vaya a **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** en e
 
 Haga clic en **[!UICONTROL Create Token]**.
 
-Proporcione un nombre descriptivo para el token, por ejemplo, &quot;Atributos de Adobe Destino&quot;, y seleccione &quot;Todos los accesos&quot; para el rol.
+Proporcione un nombre descriptivo para el token, por ejemplo &quot;Adobe Attributes Destination&quot; y seleccione &quot;All Access&quot; para el rol.
 
 Haga clic en **[!UICONTROL Create Token]** y guarde los detalles como confidenciales.
 
@@ -91,18 +91,18 @@ Haga clic en **[!UICONTROL Create Token]** y guarde los detalles como confidenci
 
 Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL Airship Attributes], aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Aproveche los datos de perfil recopilados en Adobe Experience Platform para personalizar el mensaje y el contenido enriquecido en cualquiera de los canales de [!DNL Airship]. Por ejemplo, aproveche los datos de perfil de [!DNL Experience Platform] para establecer atributos de ubicación en [!DNL Airship]. Esto permitirá que la marca de un hotel muestre una imagen de la ubicación del hotel más cercana para cada usuario.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Aproveche los atributos de Adobe Experience Platform para enriquecer aún más los perfiles de [!DNL Airship] y combinarlos con datos predictivos de SDK o [!DNL Airship]. Por ejemplo, una retailer puede crear una audiencia con datos de ubicación y estado de fidelidad (atributos de Experience Platform) y [!DNL Airship] con predicciones de que producirán datos para enviar mensajes de alto nivel de segmentación a usuarios con estado de fidelidad de oro que vivan en Las Vegas, NV y que tengan una alta probabilidad de cancelación.
 
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -130,15 +130,15 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ## Consideraciones de asignación {#mapping-considerations}
 
-Los atributos de [!DNL Airship] se pueden establecer en un canal que represente una instancia de dispositivo (por ejemplo, iPhone) o un usuario designado que asigne todos los dispositivos de un usuario a un identificador común (por ejemplo, un ID de cliente). Si tiene direcciones de correo electrónico de texto sin formato (sin hash) como identidad principal en el esquema, seleccione el campo de correo electrónico en su **[!UICONTROL Source Attributes]** y asígnelo al usuario con nombre [!DNL Airship] en la columna derecha debajo de **[!UICONTROL Target Identities]**, como se muestra a continuación.
+Los atributos [!DNL Airship] se pueden establecer en un canal que represente una instancia de dispositivo (por ejemplo, iPhone) o un usuario designado que asigne todos los dispositivos de un usuario a un identificador común (por ejemplo, un ID de cliente). Si tiene direcciones de correo electrónico de texto sin formato (sin hash) como identidad principal en el esquema, seleccione el campo de correo electrónico en su **[!UICONTROL Source Attributes]** y asígnelo al usuario con nombre [!DNL Airship] en la columna derecha debajo de **[!UICONTROL Target Identities]**, como se muestra a continuación.
 
 ![Asignación de usuarios con nombre](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ En la interfaz de usuario de Adobe Experience Platform, puede ver y monitorizar 
 
 >[!NOTE]
 >
->La página de detalles de destinos forma parte del área de trabajo [!UICONTROL Destinos] en [!DNL Experience Platform] [!DNL UI]. Consulte la [[!UICONTROL Descripción general del área de trabajo de destinos]](./destinations-workspace.md) para obtener más información.
+>La página de detalles de destinos forma parte del área de trabajo [!UICONTROL Destinations] en [!DNL Experience Platform] [!DNL UI]. Vea la [[!UICONTROL Destinations] descripción general del área de trabajo](./destinations-workspace.md) para obtener más información.
 
 ## Ver detalles de destino {#view-details}
 
 Siga los pasos a continuación para ver más detalles sobre un destino existente. Puede averiguar el ID de destino de un destino, el usuario que lo creó, cuándo se creó y otra información.
 
-1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinos]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Examinar]** en el encabezado superior para ver los destinos existentes.
+1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los destinos existentes.
 
    ![Destinos de exploración](../assets/ui/details-page/browse-destinations.png)
 
@@ -54,31 +54,31 @@ La siguiente tabla recoge los controles y detalles proporcionados por el carril 
 
 | Elemento del carril derecho | Descripción |
 | --- | --- |
-| [!UICONTROL Activar audiencias] | Seleccione este control para editar qué audiencias se asignan al destino, actualizar las programaciones de exportación o añadir y eliminar atributos e identidades asignados. Consulte las guías sobre [activación de datos de audiencia a destinos de flujo continuo de audiencia](./activate-segment-streaming-destinations.md), [activación de datos de audiencia a destinos basados en perfiles por lotes](./activate-batch-profile-destinations.md) y [activación de datos de audiencia a destinos basados en perfiles de flujo](./activate-streaming-profile-destinations.md) para obtener más información. |
-| [!UICONTROL Eliminar] | Permite eliminar este flujo de datos y desasigna las audiencias que se activaron anteriormente, si las hay. |
-| [!UICONTROL Nombre de destino] | Este campo se puede editar para actualizar el nombre del destino. |
-| [!UICONTROL Descripción] | Este campo se puede editar para actualizar o añadir una descripción opcional al destino. |
-| [!UICONTROL Destino] | Representa la plataforma de destino a la que se envían las audiencias. Consulte el [catálogo de destinos](../catalog/overview.md) para obtener más información. |
-| [!UICONTROL Estado] | Indica si el destino está habilitado o deshabilitado. |
-| [!UICONTROL Acciones de marketing] | Indica las acciones de marketing (casos de uso) que se aplican a este destino con fines de control de datos. |
-| [!UICONTROL Categoría] | Indica el tipo de destino. Consulte el [catálogo de destinos](../catalog/overview.md) para obtener más información. |
-| [!UICONTROL Tipo de conexión] | Indica el formulario mediante el cual las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Cookie] y [!UICONTROL Basado en perfil]. |
-| [!UICONTROL Frecuencia] | Indica la frecuencia con la que las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Transmisión] y [!UICONTROL Lote]. |
-| [!UICONTROL Identidad] | Representa el área de nombres de identidad aceptado por el destino, como `GAID`, `IDFA` o `email`. Para obtener más información sobre áreas de nombres de identidad aceptadas, vea la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
-| [!UICONTROL Creado por] | Indica el usuario que creó este destino. |
-| [!UICONTROL Creado] | Indica la fecha y hora UTC en que se creó este destino. |
+| [!UICONTROL Activate audiences] | Seleccione este control para editar qué audiencias se asignan al destino, actualizar las programaciones de exportación o añadir y eliminar atributos e identidades asignados. Consulte las guías sobre [activación de datos de audiencia a destinos de flujo continuo de audiencia](./activate-segment-streaming-destinations.md), [activación de datos de audiencia a destinos basados en perfiles por lotes](./activate-batch-profile-destinations.md) y [activación de datos de audiencia a destinos basados en perfiles de flujo](./activate-streaming-profile-destinations.md) para obtener más información. |
+| [!UICONTROL Delete] | Permite eliminar este flujo de datos y desasigna las audiencias que se activaron anteriormente, si las hay. |
+| [!UICONTROL Destination name] | Este campo se puede editar para actualizar el nombre del destino. |
+| [!UICONTROL Description] | Este campo se puede editar para actualizar o añadir una descripción opcional al destino. |
+| [!UICONTROL Destination] | Representa la plataforma de destino a la que se envían las audiencias. Consulte el [catálogo de destinos](../catalog/overview.md) para obtener más información. |
+| [!UICONTROL Status] | Indica si el destino está habilitado o deshabilitado. |
+| [!UICONTROL Marketing actions] | Indica las acciones de marketing (casos de uso) que se aplican a este destino con fines de control de datos. |
+| [!UICONTROL Category] | Indica el tipo de destino. Consulte el [catálogo de destinos](../catalog/overview.md) para obtener más información. |
+| [!UICONTROL Connection type] | Indica el formulario mediante el cual las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Cookie] y [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Indica la frecuencia con la que las audiencias se envían al destino. Los valores posibles incluyen [!UICONTROL Streaming] y [!UICONTROL Batch]. |
+| [!UICONTROL Identity] | Representa el área de nombres de identidad aceptado por el destino, como `GAID`, `IDFA` o `email`. Para obtener más información sobre áreas de nombres de identidad aceptadas, vea la [descripción general del área de nombres de identidad](../../identity-service/features/namespaces.md). |
+| [!UICONTROL Created by] | Indica el usuario que creó este destino. |
+| [!UICONTROL Created] | Indica la fecha y hora UTC en que se creó este destino. |
 
 {style="table-layout:auto"}
 
-## Conmutador [!UICONTROL Enabled]/[!UICONTROL Disabled] {#enabled-disabled-toggle}
+## Conmutar [!UICONTROL Enabled]/[!UICONTROL Disabled] {#enabled-disabled-toggle}
 
-Puede usar la opción **[!UICONTROL Habilitado]/[!UICONTROL Deshabilitado]** para iniciar y pausar todas las exportaciones de datos al destino.
+Puede usar la opción **[!UICONTROL Enabled]/[!UICONTROL Disabled]** para iniciar y pausar todas las exportaciones de datos al destino.
 
 ![Activar o desactivar la opción de flujo de datos](../assets/ui/details-page/enable-disable.png)
 
-## [!UICONTROL Ejecuciones de flujo de datos] {#dataflow-runs}
+## [!UICONTROL Dataflow runs] {#dataflow-runs}
 
-La ficha [!UICONTROL Ejecuciones de flujo de datos] proporciona datos de métricas sobre las ejecuciones de flujo de datos a destinos por lotes y de flujo continuo. Consulte [Supervisar flujos de datos](monitor-dataflows.md) para obtener detalles y definiciones de métricas.
+La pestaña [!UICONTROL Dataflow runs] proporciona datos de métricas sobre las ejecuciones de flujo de datos a destinos de flujo y por lotes. Consulte [Supervisar flujos de datos](monitor-dataflows.md) para obtener detalles y definiciones de métricas.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Hay una diferencia en la duración mostrada de las ejecuciones de flujo de datos
 
 ### Destinos de streaming {#streaming}
 
-Aunque la **[!UICONTROL duración de procesamiento]** indicada para la mayoría de las ejecuciones de flujo de datos de streaming es de unas cuatro horas, como se muestra en la imagen siguiente, el tiempo de procesamiento real de cualquier ejecución de flujo de datos es mucho más corto. Las ventanas de ejecución de flujo de datos permanecen abiertas durante más tiempo en el caso de que Experience Platform necesite volver a intentar realizar llamadas al destino y también asegurarse de que no se pierda ningún dato que llegue tarde para la misma ventana de tiempo.
+Aunque **[!UICONTROL Processing duration]** se indica para la mayoría de las ejecuciones de flujo de datos de streaming en unas cuatro horas, como se muestra en la imagen siguiente, el tiempo de procesamiento real de cualquier ejecución de flujo de datos es mucho más corto. Las ventanas de ejecución de flujo de datos permanecen abiertas durante más tiempo en el caso de que Experience Platform necesite volver a intentar realizar llamadas al destino y también asegurarse de que no se pierda ningún dato que llegue tarde para la misma ventana de tiempo.
 
 ![Imagen de la página de ejecuciones de flujo de datos con la columna Tiempo de procesamiento resaltada para un destino de flujo continuo.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
@@ -101,23 +101,23 @@ Para obtener más información, lea acerca de [ejecuciones de flujo de datos a d
 
 ### Destinos basados en archivos {#file-based}
 
-Para que el flujo de datos se ejecute en destinos basados en archivos, la **[!UICONTROL duración del procesamiento]** depende del tamaño de los datos que se exportan y de la carga del sistema. Tenga en cuenta también que el flujo de datos se ejecuta en destinos basados en archivos y se desglosa por audiencia.
+Para que el flujo de datos se ejecute en destinos basados en archivos, **[!UICONTROL Processing duration]** depende del tamaño de los datos que se exportan y de la carga del sistema. Tenga en cuenta también que el flujo de datos se ejecuta en destinos basados en archivos y se desglosa por audiencia.
 
 ![Imagen del flujo de datos ejecuta la página con la columna Tiempo de procesamiento resaltada para un destino basado en archivos.](../assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
 Para obtener más información, lea acerca de [las ejecuciones de flujo de datos a destinos por lotes (basados en archivos)](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) en la documentación de supervisión.
 
-## [!UICONTROL Datos de activación] {#activation-data}
+## [!UICONTROL Activation data] {#activation-data}
 
-La pestaña **[!UICONTROL Datos de activación]** muestra una lista de audiencias que se han asignado al destino, incluidas su fecha de inicio y finalización (si corresponde), y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia determinada, seleccione su nombre en la lista.
+La pestaña **[!UICONTROL Activation data]** muestra una lista de audiencias que se han asignado al destino, incluidas su fecha de inicio y finalización (si corresponde) y otra información relevante para la exportación de datos, como el tipo de exportación, la programación y la frecuencia. Para ver los detalles de una audiencia determinada, seleccione su nombre en la lista.
 
 >[!TIP]
 >
->Para ver y editar los detalles sobre los atributos y las identidades asignados a un destino, seleccione **[!UICONTROL Activar audiencias]** en el [carril derecho](#right-rail).
+>Para ver y editar los detalles sobre los atributos y las identidades asignados a un destino, seleccione **[!UICONTROL Activate audiences]** en el [carril derecho](#right-rail).
 
 >[!BEGINSHADEBOX]
 
-Ficha **[!UICONTROL Datos de activación]** para un destino basado en archivos.
+La ficha **[!UICONTROL Activation data]** para un destino basado en archivos.
 
 ![Destino del lote de vista de datos de activación](../assets/ui/details-page/activation-data-batch.png)
 
@@ -126,7 +126,7 @@ Ficha **[!UICONTROL Datos de activación]** para un destino basado en archivos.
 
 >[!BEGINSHADEBOX]
 
-Ficha **[!UICONTROL Datos de activación]** para un destino de flujo continuo.
+La ficha **[!UICONTROL Activation data]** de un destino de flujo continuo.
 
 ![Destino de flujo de vista de datos de activación](../assets/ui/details-page/activation-data-streaming.png)
 
@@ -140,19 +140,19 @@ Para filtrar por la lista de audiencias activadas en un destino, introduzca un n
 
 ### Eliminar varias audiencias de los flujos de activación {#bulk-remove}
 
-Para quitar varias audiencias de los flujos de activación existentes, selecciónelas y, a continuación, seleccione **[!UICONTROL Quitar audiencias]**.
+Para quitar varias audiencias de los flujos de activación existentes, selecciónelas y, a continuación, seleccione **[!UICONTROL Remove audiences]**.
 
 ![Pantalla de datos de activación que resalta la opción Quitar audiencias.](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### Exportar varios archivos bajo demanda a destinos por lotes {#bulk-export}
 
-Puede [exportar varios archivos bajo demanda](../ui/export-file-now.md) desde la página de **[!UICONTROL datos de activación]**. Para ello, seleccione las audiencias para las que desea exportar archivos bajo demanda y seleccione el control **[!UICONTROL Exportar archivo ahora]** para almacenar en déclencheur una exportación única que enviará un archivo para cada audiencia seleccionada a su destino de lote.
+Puede [exportar varios archivos bajo demanda](../ui/export-file-now.md) desde la página **[!UICONTROL Activation data]**. Para ello, seleccione las audiencias para las que desea exportar archivos bajo demanda y seleccione el control **[!UICONTROL Export file now]** para almacenar en déclencheur una exportación única que enviará un archivo para cada audiencia seleccionada a su destino de lote.
 
 ![Imagen que resalta el botón Exportar archivo ahora.](../assets/ui/details-page/bulk-export-file-now.png)
 
 ### Editar programaciones de activación para varias audiencias exportadas a destinos por lotes {#bulk-edit-schedule}
 
-Para editar la programación de activación existente de varias audiencias al mismo tiempo, seleccione las audiencias que desee y luego seleccione **[!UICONTROL Editar programación]**. Para obtener información detallada sobre cómo definir o editar una programación de exportación, lea la sección [exportación de audiencia de programación](../ui/activate-batch-profile-destinations.md#scheduling).
+Para editar la programación de activación existente de varias audiencias al mismo tiempo, seleccione las audiencias que desee y luego seleccione **[!UICONTROL Edit schedule]**. Para obtener información detallada sobre cómo definir o editar una programación de exportación, lea la sección [exportación de audiencia de programación](../ui/activate-batch-profile-destinations.md#scheduling).
 
 ![Pantalla de datos de activación que resalta la opción de editar las programaciones de activación para varias audiencias.](../assets/ui/details-page/bulk-edit-schedule.png)
 
@@ -162,6 +162,6 @@ Para editar la programación de activación existente de varias audiencias al mi
 
 ### Editar nombres de archivo para varias audiencias exportadas a destinos por lotes {#bulk-edit-file-names}
 
-Para editar los nombres de archivo exportados de varias audiencias al mismo tiempo, seleccione las audiencias que desee y, a continuación, seleccione **[!UICONTROL Editar nombre de archivo]**. Para obtener información detallada sobre cómo definir o editar un nombre de archivo, lea la sección sobre cómo [configurar nombres de archivo](../ui/activate-batch-profile-destinations.md#configure-file-names).
+Para editar los nombres de archivo exportados de varias audiencias al mismo tiempo, seleccione las audiencias que desee y luego seleccione **[!UICONTROL Edit file name]**. Para obtener información detallada sobre cómo definir o editar un nombre de archivo, lea la sección sobre cómo [configurar nombres de archivo](../ui/activate-batch-profile-destinations.md#configure-file-names).
 
 ![Pantalla de datos de activación que resalta la opción de editar los nombres de archivo para varias audiencias.](../assets/ui/details-page/bulk-edit-file-name.png)

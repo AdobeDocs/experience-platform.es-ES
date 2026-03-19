@@ -5,9 +5,9 @@ title: Conéctese a destinos de flujo continuo y active los datos mediante la AP
 description: Este documento cubre la creación de destinos de flujo continuo mediante la API de Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2203'
 ht-degree: 3%
 
 ---
@@ -15,10 +15,10 @@ ht-degree: 3%
 # Conéctese a destinos de flujo continuo y active los datos mediante la API de Flow Service
 
 >[!IMPORTANT]
-> 
->Para conectarse a un destino, necesita los **[[!UICONTROL permisos de control de acceso]](/help/access-control/home.md#permissions) de Ver destinos&rbrack;** y **[!UICONTROL Administrar destinos]**&lbrack;5&rbrace;.
 >
->Para activar los datos, necesita los **[!UICONTROL permisos de control de acceso]**, **[!UICONTROL Activar destinos]**, **[!UICONTROL Ver perfiles]** y **[!UICONTROL Ver segmentos]**&#x200B;[para &#x200B;](/help/access-control/home.md#permissions).
+>Para conectarse a un destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+>
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}.](/help/access-control/home.md#permissions)
 >
 >Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -30,7 +30,7 @@ Este tutorial utiliza el destino [!DNL Amazon Kinesis] en todos los ejemplos, pe
 
 Si prefiere usar la interfaz de usuario de Experience Platform para conectarse a un destino y activar datos, consulte los tutoriales [Conectar un destino](../ui/connect-destination.md) y [Activar datos de audiencia en destinos de exportación de audiencias de streaming](../ui/activate-segment-streaming-destinations.md).
 
-## Introducción 
+## Introducción {#get-started}
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -40,7 +40,7 @@ Esta guía requiere una comprensión práctica de los siguientes componentes de 
 
 Las secciones siguientes proporcionan información adicional que deberá conocer para activar datos en destinos de flujo continuo en Experience Platform.
 
-### Recopilar credenciales necesarias
+### Recopilar credenciales necesarias {#gather-credentials}
 
 Para completar los pasos de este tutorial, debe tener las siguientes credenciales listas, según el tipo de destinos a los que conecte y active audiencias.
 
@@ -129,7 +129,7 @@ A continuación, debe conectarse a los datos de Experience Platform para poder e
 2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de origen, que establece la conexión con los datos de Experience Platform.
 
 
-### Autorizar el acceso a los datos en Experience Platform
+### Autorizar el acceso a los datos en Experience Platform {#authorize-access-experience-platform}
 
 **Formato de API**
 
@@ -224,7 +224,7 @@ En este paso, está configurando una conexión al destino de flujo continuo dese
 1. En primer lugar, debe realizar una llamada para autorizar el acceso al destino de flujo continuo configurando una conexión base.
 2. A continuación, utilizando el ID de conexión base, realizará otra llamada en la que creará una conexión de destino, que especifica la ubicación de la cuenta de almacenamiento a la que se enviarán los datos exportados, así como el formato de los datos que se exportarán.
 
-### Autorizar el acceso al destino de flujo continuo
+### Autorizar el acceso al destino de flujo continuo {#authorize-access-streaming-destination}
 
 **Formato de API**
 
@@ -287,7 +287,7 @@ Una respuesta correcta contiene el identificador único de la conexión base (`i
 }
 ```
 
-### Especificar la ubicación de almacenamiento y el formato de datos
+### Especificar la ubicación de almacenamiento y el formato de datos {#specify-storage-location-data-format}
 
 **Formato de API**
 
@@ -344,7 +344,7 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 }
 ```
 
-## Creación de un flujo de datos
+## Creación de un flujo de datos {#create-data-flow}
 
 ![Pasos de destino: paso de información general 4](../assets/api/streaming-destination/step4.png)
 
@@ -482,11 +482,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `id` | Especifique el ID de la audiencia que está agregando al flujo de datos de destino. |
 | `name` | *Opcional*. Especifique el nombre de la audiencia que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede añadir correctamente una audiencia al flujo de datos de destino sin proporcionar su nombre. |
 
+{style="table-layout:auto"}
+
 **Respuesta**
 
 Busque una respuesta 202 OK. No se devuelve ningún cuerpo de respuesta. Para comprobar que la solicitud es correcta, consulte el paso siguiente, Validación del flujo de datos.
 
-## Validación del flujo de datos
+## Validación del flujo de datos {#validate-data-flow}
 
 ![Pasos de destino: paso 6](../assets/api/streaming-destination/step6.png) de información general
 
@@ -563,7 +565,7 @@ La respuesta devuelta debe incluir en el parámetro `transformations` las audien
 
 >[!IMPORTANT]
 >
-> Además de los atributos de perfil y las audiencias en el paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=es), ID móvil, ID de Google, dirección de correo electrónico, etc.). Vea un ejemplo a continuación.
+> Además de los atributos de perfil y las audiencias en el paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvil, ID de Google, dirección de correo electrónico, etc.). Vea un ejemplo a continuación.
 
 ```json
 {
@@ -632,7 +634,7 @@ Para conectarse correctamente a los destinos mediante las colecciones [!DNL Post
 
 Los extremos de la API en este tutorial siguen los principios generales del mensaje de error de la API de Experience Platform. Consulte [Códigos de estado de API](/help/landing/troubleshooting.md#api-status-codes) y [errores de encabezado de solicitud](/help/landing/troubleshooting.md#request-header-errors) en la guía de solución de problemas de Experience Platform para obtener más información sobre cómo interpretar las respuestas de error.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de sus destinos de flujo continuo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden utilizar en el destino para el análisis de clientes o cualquier otra operación de datos que desee realizar. Consulte las siguientes páginas para obtener más información:
 

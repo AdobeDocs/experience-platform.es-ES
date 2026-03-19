@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destin
 >Al [configurar la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) *sin* mediante un ID de secuencia de datos, no se admiten los casos de uso descritos en este artículo. En ausencia de un conjunto de datos, solo se admiten los casos de uso de personalización de la sesión siguiente.
 
 >[!IMPORTANT]
-> 
+>
 >* Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los permisos de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [control de acceso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
@@ -39,11 +39,11 @@ Para obtener una breve descripción general sobre cómo configurar la conexión 
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Vea el siguiente vídeo para obtener una breve descripción general de cómo compartir audiencias y atributos de perfil en Adobe Target y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447358/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 
@@ -53,7 +53,7 @@ Los casos de uso que se describen a continuación incluyen personalización del 
 
 Para habilitar estos casos de uso, los clientes necesitan una forma rápida y sencilla de recuperar información de audiencias y atributos de perfil de Experience Platform y de enviar esta información a las conexiones de [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Personalization personalizado](../catalog/personalization/custom-personalization.md) en la interfaz de usuario de Experience Platform.
 
-### Personalización en la misma página {#same-page}
+### Personalización de la misma página {#same-page}
 
 Un usuario visita una página del sitio web. Puede utilizar la información de visita a la página actual (por ejemplo, la dirección URL de referencia, el idioma del explorador o la información de producto incrustada) para seleccionar la siguiente acción o decisión (por ejemplo, personalización), mediante la conexión de [Personalización personalizada](../catalog/personalization/custom-personalization.md) para plataformas que no sean de Adobe (por ejemplo, [!DNL Pega], [!DNL Optimizely] u otras).
 
@@ -61,7 +61,7 @@ Un usuario visita una página del sitio web. Puede utilizar la información de v
 
 Un usuario visita la página A del sitio web. En función de esta interacción, el usuario cumple los requisitos para un conjunto de audiencias. A continuación, el usuario hace clic en un vínculo que le lleva de la página A a la B. Las audiencias para las que el usuario estuvo cualificado durante la interacción anterior en la página A, junto con las actualizaciones de perfil determinadas por la visita actual al sitio web, se utilizan para activar la siguiente acción o decisión (por ejemplo, qué titular de publicidad se mostrará al visitante o, en el caso de las pruebas A/B, qué versión de la página se mostrará).
 
-### Personalización de la sesión siguiente {#next-session}
+### Personalización de próxima sesión {#next-session}
 
 Un usuario visita varias páginas del sitio web. En función de estas interacciones, el usuario cumple los requisitos para un conjunto de audiencias. A continuación, el usuario finaliza la sesión de exploración actual.
 

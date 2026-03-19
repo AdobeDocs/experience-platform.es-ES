@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Este artículo describe todas las opciones de configuración de áreas de nombre
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -92,11 +92,11 @@ Por ejemplo, los clientes podrían asignar un área de nombres [!DNL Experience 
 
 Obtenga más información sobre identidades en la [descripción general del área de nombres de identidad](../../../../identity-service/features/namespaces.md).
 
-## Consideraciones de asignación
+## Consideraciones de asignación {#mapping-considerations}
 
 Si los clientes seleccionan un área de nombres de identidad de origen y no seleccionan una asignación de destino, Experience Platform rellena automáticamente la asignación de destino con un atributo con el mismo nombre.
 
-## Configuración del hashing de campos de origen opcional
+## Configuración del hashing de campos de origen opcional {#configure-optional-hashing}
 
 Los clientes de Experience Platform pueden elegir ingerir datos en Experience Platform en formato hash o en texto sin formato. Si la plataforma de destino acepta datos con hash y sin hash, puede dar a los clientes la opción de elegir si Experience Platform debe tener hash en los valores de los campos de origen cuando se exporten al destino.
 
@@ -122,7 +122,7 @@ Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Exp
 
 Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la opción **Aplicar transformación** para que Adobe Experience Platform aplique automáticamente hash a los atributos de origen al activarlos.
 
-## Configuración del hashing obligatorio de campos de origen
+## Configuración del hashing obligatorio de campos de origen {#configure-mandatory-hashing}
 
 Si el destino solo acepta datos con hash, puede configurar los atributos exportados para que Experience Platform los aplique automáticamente. La configuración siguiente comprueba automáticamente la opción **Aplicar transformación** cuando se asignan las identidades `Email` y `Phone`.
 

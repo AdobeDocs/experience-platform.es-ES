@@ -4,7 +4,7 @@ type: Tutorial
 description: Obtenga información sobre cómo activar los datos de audiencia que tiene en Adobe Experience Platform enviando audiencias a destinos basados en perfiles de streaming.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Activación de audiencias en destinos de exportación de perfiles de flujo continuo
 
 >[!IMPORTANT]
-> 
+>
 > * Para activar los datos y habilitar el [paso de asignación](#mapping) del flujo de trabajo, necesita los **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 > * Para activar datos sin pasar por el [paso de asignación](#mapping) del flujo de trabajo, necesita los permisos de **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [control de acceso](/help/access-control/home.md#permissions).
 > 
@@ -95,7 +95,7 @@ En la página **[!UICONTROL Review]**, puede ver un resumen de su selección. Se
 
 ### Evaluación de directiva de consentimiento {#consent-policy-evaluation}
 
-[La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones a los tres destinos empresariales: Amazon Kinesis, Azure Event Hubs y la API HTTP.
+[La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones a los tres destinos empresariales: Amazon Kinesis, Azure Event Hubs y HTTP API.
 
 Esto significa que los perfiles que no han aceptado ser segmentados *se incluyen* en las exportaciones a estos tres destinos.
 

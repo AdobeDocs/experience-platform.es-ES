@@ -1,13 +1,13 @@
 ---
 title: Ciclo de vida de la audiencia en Experience Platform y destinos de flujo
 description: Descubra cómo se reflejan los nombres de audiencia y las asignaciones de Experience Platform en las plataformas de destino de streaming.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
 
 ---
-
 
 # Ciclo de vida de audiencia en destinos de flujo
 
@@ -86,6 +86,6 @@ Los siguientes destinos de flujo continuo admiten la eliminación automática de
 * [Audiencias personalizadas de Twitter](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinos que no admiten la eliminación de audiencias
+### Destinos que no admiten la eliminación de audiencias {#no-removal-support}
 
 Para destinos no enumerados anteriormente, al desasignar una audiencia del destino, Experience Platform solo elimina la asignación. La audiencia en la plataforma de destino permanece activa hasta que se elimina manualmente en la plataforma de socio.

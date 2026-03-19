@@ -2,7 +2,7 @@
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, Adobe la utilizará para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 2%
@@ -25,19 +25,19 @@ Según la configuración de la API, puede que necesite o no utilizar el punto de
 
 Con la compatibilidad con los metadatos de audiencia en Destination SDK, al configurar el destino de Experience Platform, puede proporcionar a los usuarios de Experience Platform una de varias opciones al asignar y activar audiencias en el destino. Puede controlar las opciones disponibles para el usuario mediante los parámetros de la sección [Configuración de metadatos de audiencia](../functionality/destination-configuration/audience-metadata-configuration.md) de la configuración de destino.
 
-### Caso de uso 1: Tiene una API de terceros y los usuarios no necesitan introducir ID de asignación
+### Caso de uso 1: Tiene una API de terceros y los usuarios no necesitan introducir ID de asignación {#use-case-1}
 
 Si tiene un punto final de API para crear, actualizar o eliminar audiencias o audiencias, puede utilizar plantillas de metadatos de audiencia para configurar Destination SDK de modo que coincida con las especificaciones del punto final de creación, actualización o eliminación de audiencias. Experience Platform puede crear, actualizar o eliminar audiencias mediante programación y sincronizar los metadatos con Experience Platform.
 
 Al activar audiencias en su destino en la interfaz de usuario de Experience Platform, los usuarios no necesitan rellenar manualmente un campo de ID de asignación de audiencia en el flujo de trabajo de activación.
 
-### Caso de uso 2: Los usuarios deben crear primero una audiencia en el destino y deben introducir manualmente el ID de asignación
+### Caso de uso 2: Los usuarios deben crear primero una audiencia en el destino y deben introducir manualmente el ID de asignación {#use-case-2}
 
 Si los socios o usuarios deben crear audiencias y otros metadatos manualmente en el destino, los usuarios deben rellenar manualmente el campo ID de asignación de audiencia en el flujo de trabajo de activación para sincronizar los metadatos de audiencia entre el destino y Experience Platform.
 
 ![Id. de asignación de entrada](../assets/functionality/input-mapping-id.png)
 
-### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform y los usuarios no necesitan introducir manualmente el ID de asignación
+### Caso de uso 3: Su destino acepta el ID de audiencia de Experience Platform y los usuarios no necesitan introducir manualmente el ID de asignación {#use-case-3}
 
 Si el sistema de destino acepta el ID de audiencia de Experience Platform, puede configurarlo en la plantilla de metadatos de audiencia. Los usuarios no tienen que rellenar un ID de asignación de audiencia al activar un segmento.
 
@@ -79,7 +79,7 @@ Observe cómo la dirección URL, los encabezados y los cuerpos de solicitud difi
 
 Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData.accessToken}}` o `{{segment.name}}` en la dirección URL, y en otros ejemplos se usan en los encabezados o en el cuerpo de la solicitud. Su uso depende de las especificaciones de la API de marketing.
 
-+++Ejemplo 1 de transmisión por secuencias
++++Ejemplo 1 de transmisión
 
 ```json
 {
@@ -190,7 +190,7 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 
 +++
 
-+++Ejemplo 2 de transmisión por secuencias
++++Ejemplo 2 de streaming
 
 ```json
 {
@@ -286,7 +286,7 @@ Tenga en cuenta que en algunos ejemplos se usan campos de macro como `{{authData
 
 +++
 
-+++Ejemplo 3 de transmisión por secuencias
++++Ejemplo 3 de transmisión
 
 ```json
 {

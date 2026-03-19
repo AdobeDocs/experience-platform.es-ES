@@ -3,9 +3,9 @@ title: Conexión de SAP Commerce
 description: Utilice el conector de destino de SAP Commerce para actualizar los registros de clientes en su cuenta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2306'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Consulte las secciones siguientes para conocer los requisitos previos que debe c
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL SAP Commerce], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL SAP Commerce], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -195,8 +195,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -205,7 +205,7 @@ Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de 
 
 Para enviar correctamente los datos de audiencia de Adobe Experience Platform al destino [!DNL SAP Commerce], debe pasar por el paso de asignación de campos. La asignación consiste en crear un vínculo entre los campos de esquema del Modelo de datos de experiencia (XDM) en la cuenta de Experience Platform y sus equivalentes correspondientes desde el destino de destino. Para asignar correctamente los campos XDM a los campos de destino [!DNL SAP Commerce], siga los pasos a continuación:
 
-#### Asignar la identidad `customerNumberSAP`
+#### Asignar la identidad `customerNumberSAP` {#map-customer-number-sap}
 
 La identidad `customerNumberSAP` es una asignación obligatoria para este destino. Siga los pasos a continuación para asignarlo:
 
@@ -223,7 +223,7 @@ La identidad `customerNumberSAP` es una asignación obligatoria para este destin
 A continuación, se muestra un ejemplo con la asignación de identidad:
 ![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo de asignación de identidad customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### Atributos de asignación
+#### Atributos de asignación {#mapping-attributes}
 
 Para agregar cualquier otro atributo que desee actualizar entre el esquema de perfil XDM y la cuenta [!DNL SAP Subscription Billing], repita los pasos a continuación:
 
@@ -238,7 +238,7 @@ Para agregar cualquier otro atributo que desee actualizar entre el esquema de pe
 >
 > Los nombres de los campos de destino distinguen entre mayúsculas y minúsculas y deben coincidir con los nombres de atributo [!DNL SAP Subscription Billing]. La única excepción es `country`, donde debería usar `countryCode` en su lugar. [!DNL SAP Subscription Billing] admite códigos de país alfa-2 (ISO 3166). El valor distingue entre mayúsculas y minúsculas y debe tener entre 0 y 3 caracteres, por lo que asegúrese de proporcionar exactamente como se definió si no encuentra errores: `The country code {} does not exist` o `size must be between 0 and 3`.
 
-#### Asignar atributos de `mandatory` para el tipo de cliente seleccionado
+#### Asignar atributos de `mandatory` para el tipo de cliente seleccionado {#map-mandatory-attributes}
 
 Las asignaciones de atributos obligatorias dependen del **[!UICONTROL Type of Customer]** que haya seleccionado. Para asignar los atributos obligatorios, seleccione una de las siguientes opciones:
 
@@ -251,6 +251,8 @@ Las asignaciones de atributos obligatorias dependen del **[!UICONTROL Type of Cu
 | `xdm: person.lastName` | `Attribute: lastName` | Sí |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sí |
 
+{style="table-layout:auto"}
+
 >[!TAB Cliente corporativo]
 
 | Campo de origen | Campo de destino | Obligatorio |
@@ -258,9 +260,11 @@ Las asignaciones de atributos obligatorias dependen del **[!UICONTROL Type of Cu
 | `xdm: b2b.companyName` | `Attribute: company` | Sí |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sí |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### Asignación de atributos adicionales
+#### Asignación de atributos adicionales {#mapping-additional-attributes}
 
 A continuación, puede agregar cualquier asignación adicional entre su esquema de perfil XDM y los atributos [!DNL SAP Subscription Billing] [schema](https://api.sap.com/api/BusinessPartner_APIs/schema) para un cliente, como se muestra a continuación:
 
@@ -274,6 +278,8 @@ A continuación, puede agregar cualquier asignación adicional entre su esquema 
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
 
+{style="table-layout:auto"}
+
 A continuación se muestra un ejemplo con asignaciones de atributos obligatorias y opcionales en las que el cliente es un individuo:
 ![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es un individuo.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -283,6 +289,8 @@ A continuación se muestra un ejemplo con asignaciones de atributos obligatorias
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | No |
 | `xdm: workAddress.city` | `Attribute: city` | No |
+
+{style="table-layout:auto"}
 
 A continuación se muestra un ejemplo con asignaciones de atributos obligatorias y opcionales en las que el cliente es una empresa:
 ![Imagen de la interfaz de usuario de Experience Platform que muestra un ejemplo con asignaciones de atributos obligatorias y opcionales donde el cliente es una empresa.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -345,7 +353,7 @@ A continuación encontrará información útil adicional de la documentación de
 
 * [Facturación de suscripción SAP integrada](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Esta sección recoge la funcionalidad y las actualizaciones significativas de la documentación realizadas en este conector de destino.
 

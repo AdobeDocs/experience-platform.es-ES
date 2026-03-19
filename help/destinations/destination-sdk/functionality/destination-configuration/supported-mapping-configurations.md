@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo configurar el destino para las configuraciones de asignación de atributos e identidad admitidas.
 title: Configuraciones de asignación compatibles
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Al crear el destino, configure el esquema y las áreas de nombres de identidad s
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Asignaciones compatibles con destinos de flujo continuo {#streaming-mappings}
 
@@ -32,7 +32,9 @@ Los destinos en tiempo real (streaming) creados con Destination SDK admiten las 
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo personalizado |
-| Área de nombres de identidad | Área de nombres de identidad |
+| Espacio de nombres de identidad | Espacio de nombres de identidad |
+
+{style="table-layout:auto"}
 
 El ejemplo de configuración siguiente permite a los clientes utilizar ambas asignaciones en la tabla anterior.
 
@@ -85,8 +87,10 @@ Los destinos basados en archivos creados con Destination SDK admiten las configu
 | Campo de origen | Campo de destino |
 | --- | --- |
 | Atributo XDM | Atributo / Atributo personalizado |
-| Área de nombres de identidad | Atributo / Atributo personalizado |
-| Área de nombres de identidad | Área de nombres de identidad |
+| Espacio de nombres de identidad | Atributo / Atributo personalizado |
+| Espacio de nombres de identidad | Espacio de nombres de identidad |
+
+{style="table-layout:auto"}
 
 El ejemplo de configuración siguiente permite a los clientes utilizar todas las asignaciones de la tabla anterior.
 
@@ -147,7 +151,7 @@ La experiencia de IU resultante se muestra en la siguiente imagen.
 ![Captura de pantalla de la interfaz de usuario de Experience Platform que muestra la asignación de identidad a destinos basados en archivos.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor qué asignaciones son compatibles con los destinos creados con Destination SDK.
 

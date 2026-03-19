@@ -2,9 +2,9 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1134'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,7 @@ Por ejemplo, considere que de dos conjuntos de datos diferentes, tiene los sigui
 |---------|----------|---------|--------|
 | correo electrónico1, ID de fidelización1 | John | Doe | correo electrónico 1 |
 
+{style="table-layout:auto"}
 
 **Fragmento de perfil dos**
 
@@ -50,11 +51,15 @@ Por ejemplo, considere que de dos conjuntos de datos diferentes, tiene los sigui
 |---------|----------|---------|--------|
 | correo electrónico2, ID de fidelización1 | John | Doe | correo electrónico 2 |
 
+{style="table-layout:auto"}
+
 El perfil combinado tendría el siguiente aspecto:
 
 | Mapa de identidad | Nombre | Apellidos | Atributo Email |
 |---------|----------|---------|--------|
 | correo electrónico 1, correo electrónico 2, ID de fidelización 1 | John | Doe | correo electrónico 2 |
+
+{style="table-layout:auto"}
 
 El comportamiento de exportación difiere según si selecciona `IdentityMap: Email` o `xdm: personalEmail.address` para la exportación.
 
@@ -66,29 +71,29 @@ La conclusión es que el número de registros exportados depende de las polític
 
 ## Destinos de streaming basados en API {#streaming-destinations}
 
-Los [destinos de streaming basados en API](/help/destinations/destination-types.md#streaming-destination) creados con [Destination SDK](/help/destinations/destination-sdk/overview.md) (por ejemplo [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] y otros) solo admiten identificadores específicos para la exportación. Para obtener información detallada sobre las identidades específicas que se pueden exportar a cada destino, lea la sección *identidades admitidas* en cada página de documentación de destino (por ejemplo, vea la sección [identidades admitidas](/help/destinations/catalog/advertising/pinterest.md) en la página de destino [!DNL Pinterest]).
+Los [destinos de streaming basados en API](/help/destinations/destination-types.md#streaming-destination) creados con [Destination SDK](/help/destinations/destination-sdk/overview.md) (por ejemplo, [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] y otros) solo admiten identificadores específicos para la exportación. Para obtener información detallada sobre las identidades específicas que se pueden exportar a cada destino, lea la sección *identidades admitidas* en cada página de documentación de destino (por ejemplo, vea la sección [identidades admitidas](/help/destinations/catalog/advertising/pinterest.md) en la página de destino [!DNL Pinterest]).
 
 Sin embargo, tenga en cuenta que tiene la flexibilidad de usar datos de [gráficos privados](/help/profile/merge-policies/overview.md#id-stitching) o de atributos como identidades. Esto significa que se pueden asignar atributos XDM al campo de identidad requerido por el destino. Vea a continuación un ejemplo para el destino [!DNL Pinterest], donde el atributo XDM `personalEmail.address` está asignado a la identidad [!DNL Pinterest] requerida `pinterest_audience`.
 
 >[!TIP]
 >
->Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Aplicar transformación]** para que el Experience Platform aplique automáticamente hash a los datos durante la activación. Obtenga más información sobre la opción **[!UICONTROL Aplicar transformación]** en el tutorial de activación de [destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
+>Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que Experience Platform agregue automáticamente los datos al activarlos. Obtenga más información acerca de la opción **[!UICONTROL Apply transformation]** en el tutorial de activación de [destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation).
 
 ![Ejemplo de atributo de dirección de correo electrónico asignado al campo de identidad para el destino de Pinterest.](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
 ### Destinos de Advertising que dependen de integraciones de cookies de terceros {#third-party-cookie-destinations}
 
-Los destinos de Advertising que dependen de cookies de terceros (por ejemplo: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) no requieren que los clientes seleccionen los ID en el flujo de trabajo de activación. Para estos destinos, al configurar un flujo de trabajo de activación, Experience Platform busca automáticamente la tabla de coincidencia de identidades creada por el [[!UICONTROL servicio de ID de Experience Cloud]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es) y exporta todas las identidades disponibles para un perfil que admite el destino.
+Los destinos de Advertising que dependen de cookies de terceros (por ejemplo: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google DV360], [!DNL Bing], [!DNL The Trade Desk]) no requieren que los clientes seleccionen los ID en el flujo de trabajo de activación. Para estos destinos, al configurar un flujo de trabajo de activación, Experience Platform busca automáticamente la tabla de coincidencia de identidades creada por [[!UICONTROL Experience Cloud ID service]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es) y exporta todas las identidades disponibles para un perfil y admitidas por el destino.
 
-Estos destinos requieren que se sincronice con el identificador a través del [!UICONTROL servicio de identificador de Experience Cloud] o a través del [!UICONTROL SDK web de Experience Platform].
+Estos destinos requieren que se sincronice el identificador a través de [!UICONTROL Experience Cloud ID service] o a través de [!UICONTROL Experience Platform Web SDK].
 
-Si está usando [!UICONTROL SDK web de Experience Platform] y el servicio [!UICONTROL ID de Experience Cloud] heredado no está implementado en la página, debe asegurarse de que la secuencia de datos del sitio web en cuestión esté habilitada para permitir la sincronización de ID de terceros, como se describe en [documentación de configuración de secuencia de datos](/help/datastreams/configure.md#create).
+Si está usando [!UICONTROL Experience Platform Web SDK] y el heredado [!UICONTROL Experience Cloud ID service] no está implementado en la página, debe asegurarse de que el conjunto de datos del sitio web en cuestión esté habilitado para permitir la sincronización de ID de terceros, como se describe en [configurar documentación del conjunto de datos](/help/datastreams/configure.md#create).
 
-Al configurar una secuencia de datos como se describe en la documentación vinculada anteriormente, debe asegurarse de que el control deslizante **[!UICONTROL Sincronización de ID de terceros]** esté habilitado. La mayoría de los clientes dejaría el campo `container_id` en blanco (el valor predeterminado será 0). Solo debe cambiar este valor si la implementación de Audience Manager heredada utiliza un ID de contenedor específico (tenga en cuenta, sin embargo, que esta sería la gran minoría de clientes).
+Al configurar una secuencia de datos como se describe en la documentación vinculada anteriormente, debe asegurarse de que el control deslizante **[!UICONTROL Third Party ID Sync]** esté habilitado. La mayoría de los clientes dejaría el campo `container_id` en blanco (el valor predeterminado será 0). Solo debe cambiar este valor si su implementación heredada de Audience Manager utiliza un ID de contenedor específico (tenga en cuenta, sin embargo, que esta sería la gran minoría de clientes).
 
 >[!NOTE]
 >
->La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Ver una [lista de todos los destinos basados en dispositivos compatibles en el Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=es)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre el Experience Platform y el Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
+>La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Ver una [lista de todos los destinos basados en dispositivos compatibles en Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre Experience Platform y Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
 
 ## Destinos empresariales {#enterprise-destinations}
 
@@ -96,14 +101,14 @@ Al configurar una secuencia de datos como se describe en la documentación vincu
 
 ## Destinos de Personalization {#personalization-destinations}
 
-[Los destinos de Personalization (o Edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (por ejemplo: Adobe Target, [!DNL Custom Personalization]) no requieren ninguna selección de identidad en el flujo de trabajo de activación, ya que la integración es una búsqueda de perfil. El cliente ([!DNL Target], [!DNL Web SDK] u otros) consulta la [[!UICONTROL Edge]](/help/collection/home.md#edge) y extrae la información de perfil que necesita para la personalización en el sitio.
+[Los destinos de Personalization (o Edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (por ejemplo: Adobe Target, [!DNL Custom Personalization]) no requieren ninguna selección de identidad en el flujo de trabajo de activación, ya que la integración es una búsqueda de perfil. El cliente ([!DNL Target], [!DNL Web SDK] u otros) consulta [[!UICONTROL Edge]](/help/collection/home.md#edge) y extrae la información de perfil que necesita para la personalización en el sitio.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)
 
 -->
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este documento, ahora sabe cómo averiguar qué identidades son compatibles o necesarias para destinos individuales. Ahora también sabe cómo funciona la selección de identidad para cada tipo de destino.
 

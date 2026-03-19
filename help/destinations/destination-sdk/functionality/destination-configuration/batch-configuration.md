@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1031'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Este artículo describe todas las opciones de configuración por lotes admitidas
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -109,27 +109,27 @@ Los valores que configuró aquí aparecen en el paso [Programar exportación de 
 Utilice macros de configuración de nombres de archivo para definir qué nombres de archivo exportados deben incluir. Las macros de la tabla siguiente describen los elementos que se encuentran en la interfaz de usuario de la pantalla [configuración de nombre de archivo](../../../ui/activate-batch-profile-destinations.md#file-names).
 
 >[!TIP]
-> 
+>
 >Como práctica recomendada, siempre debe incluir la macro `SEGMENT_ID` en los nombres de archivo exportados. Los ID de segmento son únicos, por lo que incluirlos en el nombre de archivo es la mejor manera de asegurarse de que los nombres de archivo también sean únicos.
 
 | Macro | Etiqueta de IU | Descripción | Ejemplo |
 |---|---|---|---|
-| `DESTINATION` | [!UICONTROL Destino] | Nombre del destino en la interfaz de usuario. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL ID de segmento] | ID único de audiencia generado por Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Nombre del segmento] | Nombre de audiencia definido por el usuario | suscriptor de VIP |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL ID de destino] | ID único de la instancia de destino generado por Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Nombre de destino] | Nombre definido por el usuario de la instancia de destino. | Mi destino de Advertising 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Nombre de la organización] | Nombre de la organización del cliente en Adobe Experience Platform. | Nombre de mi organización |
-| `SANDBOX_NAME` | [!UICONTROL Nombre de zona protegida] | Nombre de la zona protegida utilizada por el cliente. | picar |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL Fecha y hora] | `DATETIME` y `TIMESTAMP` definen cuándo se generó el archivo, pero en formatos diferentes. <br><br><ul><li>`DATETIME` usa el siguiente formato: AAAAMMDD_HHMMSS.</li><li>`TIMESTAMP` usa el formato Unix de 10 dígitos. </li></ul> `DATETIME` y `TIMESTAMP` se excluyen mutuamente y no se pueden usar simultáneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL Texto personalizado] | Texto personalizado definido por el usuario que se incluirá en el nombre del archivo. No se puede usar en `defaultFilename`. | My_Custom_Text |
-| `TIMESTAMP` | [!UICONTROL Fecha y hora] | Marca de tiempo de 10 dígitos de la hora en la que se generó el archivo, en formato Unix. | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL Id. de política de combinación] | El identificador de [política de combinación](../../../../profile/merge-policies/overview.md) usado para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Use esta macro junto con `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL Nombre de política de combinación] | Nombre de [política de combinación](../../../../profile/merge-policies/overview.md) que se utilizó para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Use esta macro junto con `segmentGroupingEnabled:true`. | Mi política de combinación personalizada |
+| `DESTINATION` | [!UICONTROL Destination] | Nombre del destino en la interfaz de usuario. | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | ID único de audiencia generado por Experience Platform | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Nombre de audiencia definido por el usuario | suscriptor de VIP |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | ID único de la instancia de destino generado por Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Nombre definido por el usuario de la instancia de destino. | Mi destino de Advertising 2022 |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Nombre de la organización del cliente en Adobe Experience Platform. | Nombre de mi organización |
+| `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Nombre de la zona protegida utilizada por el cliente. | picar |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` y `TIMESTAMP` definen cuándo se generó el archivo, pero en formatos diferentes. <br><br><ul><li>`DATETIME` usa el siguiente formato: AAAAMMDD_HHMMSS.</li><li>`TIMESTAMP` usa el formato Unix de 10 dígitos. </li></ul> `DATETIME` y `TIMESTAMP` se excluyen mutuamente y no se pueden usar simultáneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL Custom text] | Texto personalizado definido por el usuario que se incluirá en el nombre del archivo. No se puede usar en `defaultFilename`. | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL Date and time] | Marca de tiempo de 10 dígitos de la hora en la que se generó el archivo, en formato Unix. | 1652131584 |
+| `MERGE_POLICY_ID` | [!UICONTROL Merge Policy ID] | El identificador de [política de combinación](../../../../profile/merge-policies/overview.md) usado para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Use esta macro junto con `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL Merge Policy Name] | Nombre de [política de combinación](../../../../profile/merge-policies/overview.md) que se utilizó para generar la audiencia exportada. Utilice esta macro cuando agrupe audiencias exportadas en archivos, según la política de combinación. Use esta macro junto con `segmentGroupingEnabled:true`. | Mi política de combinación personalizada |
 
 {style="table-layout:auto"}
 
-### Ejemplo de configuración de nombre de archivo
+### Ejemplo de configuración de nombre de archivo {#file-name-configuration-example}
 
 El ejemplo de configuración siguiente muestra la correspondencia entre la configuración utilizada en la llamada de API y las opciones que se muestran en la interfaz de usuario.
 

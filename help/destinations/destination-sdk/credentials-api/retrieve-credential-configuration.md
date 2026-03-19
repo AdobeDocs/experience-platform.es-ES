@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para recuperar una configuración de credenciales a través de Adobe Experience Platform Destination SDK.
 title: Recuperar una configuración de credenciales
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
@@ -31,11 +31,11 @@ Cuando use un sistema de autenticación global, debe establecer `"authentication
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 
-Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas conocer para poder realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
+Antes de continuar, revisa la [guía de introducción](../getting-started.md) para obtener información importante que necesitas saber para realizar llamadas a la API correctamente, incluyendo cómo obtener el permiso de creación de destino requerido y los encabezados requeridos.
 
 ## Recuperar una configuración de credenciales {#retrieve}
 
@@ -122,6 +122,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parámetro | Descripción |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | El ID de la configuración de credenciales que desea recuperar. |
+
+{style="table-layout:auto"}
 
 +++
 

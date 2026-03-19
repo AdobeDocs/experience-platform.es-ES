@@ -4,9 +4,9 @@ description: Zeta Marketing Platform (ZMP) es un sistema basado en la nube que l
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1454'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Un anunciante pretende dirigirse a usuarios dentro de audiencias específicas a 
 
 ## Requisitos previos {#prerequisites}
 
-### Requisitos previos de Zeta Marketing Platform
+### Requisitos previos de Zeta Marketing Platform {#zmp-prerequisites}
 
 * Antes de configurar una nueva conexión al destino de Zeta Marketing Platform, debe crear una lista de clientes vacía en su cuenta de Zeta Marketing Platform. Debe elegir una de estas listas de clientes como destino designado para recibir la audiencia de Adobe Experience Platform que desea enviar. Puede crear una lista de clientes vacía en el ZMP siguiendo las instrucciones [aquí](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Aunque Adobe Experience Platform permite la activación de varias audiencias en una instancia de destino ZMP concreta, es obligatorio que cada instancia de destino ZMP reciba solo una audiencia de Experience Platform. Para gestionar varias audiencias desde Experience Platform, cree instancias de destino ZMP adicionales para cada audiencia y seleccione una lista de clientes diferente en el menú desplegable. Este método garantiza que las audiencias ZMP de destino no se sobrescriban. Consulte [Rellenar detalles de destino](#destination-details) para obtener más detalles.
@@ -48,6 +48,7 @@ Un anunciante pretende dirigirse a usuarios dentro de audiencias específicas a 
 [!DNL Zeta Marketing Platform] admite la activación de los identificadores de usuario personalizados que se describen en la tabla siguiente. Para obtener más información, consulte [identidades](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
+>
 > El destino de Zeta Marketing Platform requiere que asigne un área de nombres de identidad de origen a la identidad de destino ZMP `uid`. Esto ayuda a la plataforma de marketing Zeta a diferenciar cada perfil de forma exclusiva.
 
 | Identidad de destino | Descripción | Consideraciones | Notas |
@@ -69,6 +70,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 {style="table-layout:auto"}
 
 >[!NOTE]
+>
 > A medida que se agregan o eliminan miembros individuales de la audiencia de Experience Platform, se enviarán actualizaciones al ZMP para garantizar que la lista de clientes de destino se sincronice en consecuencia.
 
 ## Tipo y frecuencia de exportación {#export-type-frequency}
@@ -98,7 +100,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita el **[!UICONTROL Manage Destinations]** [permiso de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -127,14 +129,14 @@ Puede activar alertas para recibir notificaciones sobre el estado del flujo de d
 
 Cuando termine de proporcionar detalles para la conexión de destino, seleccione **[!UICONTROL Next]**.
 
-## Activar segmentos en este destino {#activate}
+## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 

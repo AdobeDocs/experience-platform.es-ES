@@ -4,9 +4,9 @@ title: Automatizaciones de Qualtrics
 description: Sincronice la experiencia y los datos operativos del cliente para desbloquear la personalización a escala. Utilice la agregación de varias fuentes de datos operativos en Adobe Experience Platform como entrada en Qualtrics Experience ID para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1283'
 ht-degree: 3%
 
 ---
@@ -39,14 +39,14 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de *Qu
 
 **Resultado**: La retroalimentación continua permite a la organización adaptarse y mejorar el proceso de incorporación, lo que se traduce en una mejor participación y productividad entre los nuevos empleados.
 
-## Requisitos previos
+## Requisitos previos {#prerequisites}
 
 Antes de configurar el destino de Qualtrics en Adobe Experience Platform, asegúrese de que se hayan cumplido los siguientes requisitos previos:
 
 * Tiene una cuenta de Qualtrics.
 * Ha obtenido el token de API necesario de Qualtrics.
 
-### Obtención de un token de API
+### Obtención de un token de API {#obtaining-api-token}
 
 A continuación se indican los pasos necesarios para obtener un token de API de Qualtrics.
 
@@ -105,7 +105,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
@@ -135,18 +135,18 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 ## Activar públicos en este destino {#activate}
 
 >[!IMPORTANT]
-> 
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Lea [Activar perfiles y segmentos en destinos de exportación de segmentos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
+Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#map}
 
 Este destino tiene un esquema abierto, por lo que puede enviar cualquier propiedad a Qualtrics.
 
-#### Asignar atributos
+#### Asignar atributos {#map-attributes}
 
-Para agregar un atributo a su asignación, simplemente seleccione **atributos personalizados** al agregar una nueva asignación. Puede introducir cualquier nombre para el atributo. Qualtrics promueve la convención de nombres *camelCase* para los nombres de atributos (vea la siguiente captura de pantalla para ver un ejemplo).
+Para agregar un atributo a su asignación, seleccione **atributos personalizados** al agregar una nueva asignación. Puede introducir cualquier nombre para el atributo. Qualtrics promueve la convención de nombres *camelCase* para los nombres de atributos (vea la siguiente captura de pantalla para ver un ejemplo).
 
 ![Atributo personalizado](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
@@ -154,7 +154,7 @@ Consulte la siguiente captura de pantalla para ver un ejemplo de posibles asigna
 
 ![Asignaciones de ejemplo](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
-#### Asignación de identidades
+#### Asignación de identidades {#map-identities}
 
 Es obligatorio seleccionar un área de nombres de identidad para este destino. Las dos asignaciones posibles de campos de origen a campos de destino son:
 

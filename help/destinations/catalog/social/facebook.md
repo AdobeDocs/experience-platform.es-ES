@@ -3,7 +3,7 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 5%
@@ -20,15 +20,15 @@ Puede usar este destino para segmentar audiencias en [!DNL Facebook's] familia d
 
 ![Destino de Facebook en la interfaz de usuario de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Facebook], aquí hay dos casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Un retailer en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. Retailer en línea puede ingerir direcciones de correo electrónico desde su propio CRM a Adobe Experience Platform, crear audiencias a partir de sus propios datos sin conexión y enviar estas audiencias a la plataforma social [!DNL Facebook], lo que optimiza el gasto en publicidad.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Una aerolínea tiene diferentes niveles de clientes (Bronce, Plata y Oro) y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que la compañía tiene sobre estos clientes son ID de miembros y direcciones de correo electrónico.
 
@@ -164,14 +164,14 @@ Antes de poder usar el área de nombres `Extern_ID` para enviar datos a [!DNL Fa
 ## Conectar con el destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions). Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -205,7 +205,7 @@ Para evitar que la caducidad del token interrumpa los flujos de datos de activac
    ![Ventana modal con la opción Reconectar OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Las credenciales de autenticación se actualizan y su hora de caducidad se restablece a 60 días.
 
 ### Rellenar detalles de destino {#destination-details}
@@ -250,8 +250,8 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 >abstract="Los anunciantes recopilaron datos directamente de sus clientes y socios."
 
 >[!IMPORTANT]
-> 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
