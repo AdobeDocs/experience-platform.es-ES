@@ -4,10 +4,11 @@ description: Obtenga información sobre las fuentes de Talon.One en Adobe Experi
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -40,6 +41,28 @@ Proporcione valores para las siguientes credenciales a fin de autenticar y conec
 ## Asignación {#mapping}
 
 Para ayudarle a asignar cada objeto de efecto en función de su valor `effectType` único, puede utilizar la función de preparación de datos `array_to_map`. Esto le permite convertir fácilmente una matriz desordenada de efectos en pares clave-valor que se ajusten a sus necesidades. Consulte el ejemplo siguiente para obtener instrucciones.
+
+También puede utilizar los grupos de campos de lealtad estandarizados que proporciona Adobe para modelar los conceptos del programa de lealtad de forma coherente.
+
+>[!BEGINTABS]
+
+>[!TAB Detalles de fidelización]
+
+Este es un grupo de campos XDM estándar para el perfil individual XDM, que se utiliza para describir el estado de pertenencia de fidelidad de una persona capturando sus atributos de registro, en lugar de los datos de evento. Utilice este grupo de campos en los esquemas de Perfil para capturar:
+
+* **Quién** es el miembro del programa (`loyaltyID`, `program`, `status`, `tier`)
+* Sus **saldos actuales y permanentes** (`points`, `lifetimePoints`, `expiredPoints`, etc.)
+* Clave **fechas de pertenencia** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Detalles del evento de fidelización]
+
+El grupo de campos Detalles del evento de fidelización está diseñado para capturar la actividad de fidelidad en el nivel de evento, como los puntos obtenidos o canjeados en una transacción específica. Este grupo de campos incluye campos como `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate` y `xdm:program`. Utilice este grupo de campos de nivel de evento en los esquemas de Experience Event para capturar:
+
+* **Movimientos por evento** en puntos (obtenidos, canjeados, caducados)
+* **Descuentos** impulsados por cupones de fidelidad o recomendaciones
+* **ID de programa** e ID de transacción para la reconciliación con el proveedor de fidelidad.
+
+>[!ENDTABS]
 
 | Fuente | Destino |
 | ---- | --- |
