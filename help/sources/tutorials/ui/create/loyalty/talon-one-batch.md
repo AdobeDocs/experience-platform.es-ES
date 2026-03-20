@@ -67,7 +67,7 @@ Una vez que se haya autenticado, proporcione valores para **applicationId** y **
 
 >[!TIP]
 >
->Para capturar las transacciones completadas (incluidos los puntos de lealtad obtenidos o canjeados, los cupones canjeados y los descuentos concedidos), seleccione el tipo de evento `talon_session_closed`. Para obtener más información sobre el filtrado de eventos por tipo, consulte el parámetro de consulta &quot;type&quot; [ en la  [!DNL Talon.One] documentación de la API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
+>Para capturar las transacciones completadas (incluidos los puntos de lealtad obtenidos o canjeados, los cupones canjeados y los descuentos concedidos), seleccione el tipo de evento `talon_session_closed`. Para obtener más información sobre el filtrado de eventos por tipo, consulte el parámetro de consulta &quot;type&quot; [&#x200B; en la  [!DNL Talon.One] documentación de la API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Los pasos para seleccionar datos y obtener una vista previa del flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
