@@ -4,7 +4,7 @@ description: Aprenda a crear una conexión de origen y un flujo de datos para in
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 6ab7c5c2e1f800c82d8906fba78fb897f8639877
+source-git-commit: 66b5b54cdb39a7865092b7e2efcf39046aa791cc
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parámetro | Descripción |
 | --- | --- | 
-| `webhook.address` | Punto final http al que se envían los mensajes de flujo continuo. La plantilla para el webhook es: `https://dcs.adobedc.net/collection/{INLET_ID}?{X_ADOBE_FLOW_ID}={FLOW_ID}.` |
+| `webhook.address` | Punto final http al que se envían los mensajes de flujo continuo. La plantilla para el webhook es: `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | El tema de la suscripción al webhook. Para obtener más información, lea la [[!DNL Shopify] guía de temas de eventos de ganchos web](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | El formato de los datos. |
 
