@@ -2,9 +2,9 @@
 title: Ciclo de vida de la audiencia en Experience Platform y destinos de flujo
 description: Descubra cómo se reflejan los nombres de audiencia y las asignaciones de Experience Platform en las plataformas de destino de streaming.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '466'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Los siguientes destinos de flujo continuo admiten actualizaciones automáticas d
 
 * [Conexión de Audiencia Acxiom](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -67,7 +67,7 @@ Los siguientes destinos de flujo continuo admiten la eliminación automática de
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Compañías) Audiencia coincidente de LinkedIn](../catalog/social/linkedin-b2b.md)
 * [(Heredado) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Audiencias de la cuenta Bombora](../catalog/advertising/bombora.md)
 * [Criteo](../catalog/advertising/criteo.md)
 * [Públicos de Experience Cloud](../catalog/adobe/experience-cloud-audiences.md)
