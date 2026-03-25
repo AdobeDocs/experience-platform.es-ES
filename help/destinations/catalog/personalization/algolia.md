@@ -133,9 +133,9 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 >[!IMPORTANT]
 >
 >* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
->* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).
+>* Para exportar identidades, necesita el permiso Ver gráfico de identidad [control de acceso](https://experienceleague.adobe.com/es/docs/experience-platform/access-control/home#permissions).
 
-Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 ### Asignar atributos e identidades {#mapping-attributes-identities}
 
