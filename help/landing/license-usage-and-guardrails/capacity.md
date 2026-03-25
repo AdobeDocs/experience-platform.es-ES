@@ -234,7 +234,7 @@ Puede resolver sus infracciones de rendimiento de segmentación de Edge adoptand
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475276/?captions=spa&learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 
