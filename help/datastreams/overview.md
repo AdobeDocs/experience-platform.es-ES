@@ -2,10 +2,10 @@
 title: Información general de secuencias de datos
 description: Descubra cómo los flujos de datos le ayudan a conectar su integración de Experience Platform SDK del lado del cliente con productos de Adobe y destinos de terceros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 60%
+source-wordcount: '706'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 Un conjunto de datos representa la configuración del lado del servidor para los SDK móviles y web de Adobe Experience Platform. Mientras que el comando [`configure`](/help/collection/js/commands/configure/overview.md) de SDK administra la configuración del lado del cliente (como `edgeDomain`), las secuencias de datos administran todas las demás configuraciones.
 
-Cuando envía una solicitud a Edge Network, `datastreamId` hace referencia al conjunto de datos al que se envían los datos. Esto le permite actualizar la configuración del lado del servidor sin cambiar el código del sitio web.
+Cuando envía una solicitud a Edge Network, `datastreamId` hace referencia al conjunto de datos al que se envían los datos. Puede actualizar la configuración del lado del servidor sin cambiar el código del sitio web.
 
 Puede crear y administrar flujos de datos seleccionando **[!UICONTROL Datastreams]** en el panel de navegación izquierdo de la interfaz de usuario de Adobe Experience Platform o de la recopilación de datos.
 
@@ -27,7 +27,7 @@ Para obtener más información sobre cómo configurar una secuencia de datos en 
 >
 >Este documento no contiene un asesoramiento legal ni está pensado para sustituirlo. Consulte con el departamento legal de su empresa para obtener asesoramiento sobre el tratamiento de datos confidenciales.
 
-Las políticas de administración de datos corporativos y los requisitos regulatorios son restricciones cada vez mayores sobre cómo se pueden recopilar, procesar y utilizar los datos confidenciales de los clientes. Esto incluye la recopilación, el procesamiento y el uso de los Datos de salud protegidos (PHI), que están sujetos a regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA).
+Las políticas de administración de datos corporativos y los requisitos regulatorios son restricciones cada vez mayores sobre cómo se pueden recopilar, procesar y utilizar los datos confidenciales de los clientes. Esto incluye la recopilación, el procesamiento y el uso de los Datos de salud protegidos (PHI), que están sujetos a regulaciones como la Ley de Portabilidad y Responsabilidad del Seguro de Salud (HIPAA, por sus siglas en inglés).
 
 Los flujos de datos ofrecen tres métodos para ayudarle a gestionar de forma segura sus datos confidenciales:
 
@@ -45,7 +45,7 @@ Las secuencias de datos utilizan las funciones integradas de control de datos de
 
 El siguiente vídeo proporciona una breve descripción sobre cómo se configuran y aplican las restricciones de uso de datos para secuencias de datos en la IU:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413101/?captions=spa&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
 En Experience Platform, puede aplicar [etiquetas de uso de datos confidenciales](../data-governance/labels/reference.md#sensitive) a esquemas y campos que contienen datos que su organización considera confidenciales. Por ejemplo, la etiqueta `RHD` se usa para denotar la Información médica protegida (PHI), y la etiqueta `S1` representa los datos de geolocalización.
 
@@ -65,6 +65,6 @@ Cada vez que un usuario crea, actualiza o elimina una secuencia de datos, se cre
 
 Consulte la documentación sobre [registros de auditoría](../landing/governance-privacy-security/audit-logs/overview.md) para obtener más información sobre cómo interpretar los registros de secuencias de datos y otros servicios compatibles.
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se proporciona una amplia descripción general de las secuencias de datos y su uso en la recopilación de datos y el procesamiento de datos confidenciales. Para ver los pasos sobre cómo configurar una nueva secuencia de datos, consulte la [guía de configuración de secuencia de datos](./configure.md).

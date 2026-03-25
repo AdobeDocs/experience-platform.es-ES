@@ -2,16 +2,16 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # Preparación de datos para la recopilación de datos
 
-La preparación de datos es un servicio de Adobe Experience Platform que le permite asignar, transformar y validar datos desde y hacia el [Modelo de datos de experiencia (XDM)](../xdm/home.md). Al configurar una secuencia de datos [habilitada para Experience Platform](./overview.md), puede usar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Experience Platform Edge Network.
+La preparación de datos es un servicio de Adobe Experience Platform que puede usar para asignar, transformar y validar datos desde y hacia [Experience Data Model (XDM)](../xdm/home.md). Al configurar una secuencia de datos [habilitada para Experience Platform](./overview.md), puede usar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Experience Platform Edge Network.
 
 Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por Experience Platform:
 
@@ -48,7 +48,7 @@ Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Par
 
 Para obtener una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/345563?captions=spa&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
@@ -158,7 +158,7 @@ Puede seleccionar la opción para cargar el objeto como un archivo o pegar el ob
 
 >[!NOTE]
 >
-> Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, los elementos de la capa de datos del carro de compras deben incluirse en este objeto JSON de muestra.
+>Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, los elementos de la capa de datos del carro de compras deben incluirse en este objeto JSON de muestra.
 
 ## [!UICONTROL Mapping]
 
@@ -231,6 +231,6 @@ Una vez que el recuento de campos requerido llegue a cero y esté satisfecho con
 
 ![Asignación completa](assets/data-prep/mapping-complete.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo asignar los datos a XDM al configurar una secuencia de datos en la interfaz de usuario. Si estaba siguiendo el tutorial general de secuencia de datos, ahora puede volver al paso sobre [visualización de detalles de secuencia de datos](./overview.md).

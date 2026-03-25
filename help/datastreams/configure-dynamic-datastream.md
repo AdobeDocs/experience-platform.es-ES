@@ -2,9 +2,9 @@
 title: Crear configuraciones de flujo de datos dinámico
 description: Aprenda a crear configuraciones de flujo de datos dinámico para enrutar los datos a varios servicios de Experience Cloud, según las reglas.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1092'
 ht-degree: 3%
 
 ---
@@ -52,29 +52,29 @@ Después de [crear un conjunto de datos](configure.md) y [agregarle un servicio]
 
 1. Vaya a la página **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** y seleccione la secuencia de datos que ha creado.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra la lista de flujos de datos.](assets/configure-dynamic-datastream/select-datastream.png)
+   ![Interfaz de usuario de flujos de datos que muestra la lista de flujos de datos.](assets/configure-dynamic-datastream/select-datastream.png)
 
 1. Seleccione la opción **[!UICONTROL Edit]** en el servicio para el que desea definir una configuración dinámica.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra los servicios agregados a un flujo de datos.](assets/configure-dynamic-datastream/select-service.png)
+   ![Interfaz de usuario de flujos de datos que muestra los servicios agregados a un flujo de datos.](assets/configure-dynamic-datastream/select-service.png)
 
 1. En la página **[!UICONTROL Configure]**, seleccione **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra la página de configuración del flujo de datos.](assets/configure-dynamic-datastream/save-and-edit.png)
+   ![Interfaz de usuario de flujos de datos que muestra la página de configuración de flujos de datos.](assets/configure-dynamic-datastream/save-and-edit.png)
 
 1. Seleccione **[!UICONTROL Add Dynamic Configuration]**.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra el mensaje de configuración dinámica sin regla agregada.](assets/configure-dynamic-datastream/add-dynamic-config.png)
+   ![Interfaz de usuario de flujos de datos que muestra la página de configuración dinámica antes de agregar reglas.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
 1. En el panel **[!UICONTROL Resources]**, arrastre y suelte los elementos con los que desee generar la regla en el lado derecho de la ventana. Puede combinar varios recursos para crear reglas complejas.
 
    Utilice las opciones de cada recurso, como **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, etc., para ajustar las reglas.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/drag-resources.png)
+   ![Interfaz de usuario de flujos de datos que muestra el generador de reglas de configuración dinámica con los recursos que se arrastran.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. En la sección **[!UICONTROL Configuration]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, en función de si desea que se envíen los datos a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio ascendente.
+1. En la sección **[!UICONTROL Configuration]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, en función de si desea que se envíen los datos a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio descendente.
 
-   ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/enable-service.png)
+   Interfaz de usuario de ![Datastreams que muestra la regla de configuración dinámica con conmutadores de servicio.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Cuando termine de configurar las reglas, seleccione **[!UICONTROL Save]**.
 
@@ -135,9 +135,9 @@ Por ejemplo, considere la regla compleja que se muestra en la siguiente imagen.
 
 Puede dividir esta regla en las siguientes reglas más sencillas:
 
-![Imagen de la interfaz de usuario de la plataforma que muestra una regla compleja.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Imagen de la interfaz de usuario de la plataforma que muestra la primera regla simplificada.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Imagen de la interfaz de usuario de la plataforma que muestra una regla compleja.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Imagen de la interfaz de usuario de la plataforma que muestra la segunda regla simplificada.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Evite reglas complejas**. Las reglas más sencillas garantizan una evaluación más rápida y una mejor capacidad de mantenimiento.
 

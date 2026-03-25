@@ -2,16 +2,16 @@
 title: Configurar anulaciones de secuencia de datos
 description: Obtenga información sobre cómo configurar las anulaciones de flujos de datos en la interfaz de usuario de flujos de datos y activarlas mediante Web SDK o Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 53%
+source-wordcount: '1043'
+ht-degree: 52%
 
 ---
 
 # Configurar anulaciones de secuencia de datos
 
-Las anulaciones de flujos de datos permiten definir configuraciones adicionales para los flujos de datos, que se pasan a Edge Network a través de Web SDK o Mobile SDK.
+Utilice las anulaciones de flujos de datos para definir configuraciones adicionales para los flujos de datos, que se pasan a Edge Network a través de Web SDK o Mobile SDK.
 
 Esto le ayuda a almacenar en déclencheur comportamientos de flujo de datos diferentes a los predeterminados, sin crear un flujo de datos ni modificar la configuración existente.
 
@@ -74,7 +74,7 @@ Ahora debe tener configuradas las anulaciones de la secuencia de datos de Adobe 
 
 Para configurar las anulaciones de secuencias de datos para una secuencia de datos de Adobe Analytics, primero debe tener una secuencia de datos de [Adobe Analytics](configure.md#analytics) creada. Siga las instrucciones de [configuración de una secuencia de datos](configure.md) con el servicio [Adobe Analytics](configure.md#analytics).
 
-Una vez que haya creado el conjunto de datos, edite el servicio [Adobe Analytics](configure.md#target) que ha agregado y utilice la sección **[!UICONTROL Report Suite Overrides]** para agregar las invalidaciones del conjunto de datos que desee, como se muestra en la siguiente imagen.
+Una vez que haya creado el conjunto de datos, edite el servicio [Adobe Analytics](configure.md#analytics) que ha agregado y utilice la sección **[!UICONTROL Report Suite Overrides]** para agregar las invalidaciones del conjunto de datos que desee, como se muestra en la siguiente imagen.
 
 Seleccione **[!UICONTROL Show Batch Mode]** para habilitar la edición por lotes de las invalidaciones del grupo de informes. Puede copiar y pegar una lista de anulaciones de grupos de informes introduciendo un grupo de informes por línea.
 
