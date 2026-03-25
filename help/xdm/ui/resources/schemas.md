@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creación y edición de esquemas en la interfaz de usuario
 description: Aprenda los conceptos básicos de cómo crear y editar esquemas en la interfaz de usuario de Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4635'
-ht-degree: 2%
+source-wordcount: '4680'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ A continuación, continúe con [definir claves principales](../fields/identity.m
 
 >[!NOTE]
 >
->Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL &#x200B; Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
+>Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL  Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
 >![El lienzo del Editor de esquemas que muestra una estructura de esquema relacional vacía con el tipo relacional resaltado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Cargar un archivo DDL {#upload-ddl-file}
@@ -151,7 +151,7 @@ Seleccione cualquier fila para elegir una clase y, a continuación, seleccione *
 
 ![Flujo de trabajo [!UICONTROL Create schema] con una clase seleccionada de la tabla de clases disponibles y [!UICONTROL Next] resaltada.](../../images/ui/resources/schemas/select-class.png)
 
-Después de seleccionar una clase, aparece la sección [!UICONTROL Name and review]. En esta sección, proporcione un nombre y una descripción para identificar el esquema. palo de golfLa estructura base del esquema (proporcionada por la clase ) se muestra en el lienzo para que revise y compruebe la clase y la estructura de esquema seleccionadas.
+Después de seleccionar una clase, aparece la sección [!UICONTROL Name and review]. En esta sección, proporcione un nombre y una descripción para identificar el esquema en cuestión.La estructura base del esquema (proporcionada por la clase ) se muestra en el lienzo para que revise y compruebe la clase y la estructura de esquema seleccionadas.
 
 Escriba un(a) [!UICONTROL Schema display name] descriptivo(a) en el campo de texto. A continuación, introduzca una descripción adecuada para ayudar a identificar el esquema. Una vez que haya revisado la estructura de esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finish]** para crear el esquema.
 
@@ -178,6 +178,12 @@ Para editar un esquema existente, seleccione la ficha **[!UICONTROL Browse]** y,
 Una vez seleccionado un esquema, [!DNL Schema Editor] aparece con la estructura del esquema mostrada en el lienzo. Ahora puede [agregar grupos de campos](#add-field-groups) al esquema (o [agregar campos individuales](#add-individual-fields) de esos grupos), [editar nombres para mostrar de campos](#display-names) o [editar grupos de campos personalizados existentes](./field-groups.md#edit) si el esquema emplea alguno.
 
 ## Más acciones {#more}
+
+>[!NOTE]
+>
+>Las acciones de XDM están disponibles en la tabla de inventario y en la vista de detalles de recursos (**[!UICONTROL More]**). Las acciones completas solo se aplican a recursos personalizados (definidos por el inquilino); los recursos estándar tienen opciones limitadas. Ver [Administrar esquemas, clases, grupos de campos y tipos de datos: acciones y eliminación](../explore.md#xdm-resource-actions).
+
+A continuación se describen las acciones de encabezado del Editor de esquemas.
 
 En el Editor de esquemas también puede realizar acciones rápidas para copiar la estructura JSON del esquema o eliminar el esquema si no se ha habilitado para el perfil del cliente en tiempo real o tiene conjuntos de datos asociados. Seleccione [!UICONTROL More] en la parte superior de la vista para mostrar una lista desplegable con acciones rápidas.
 

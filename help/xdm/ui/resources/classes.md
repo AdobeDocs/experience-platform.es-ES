@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Crear y editar clases en la IU
 description: Obtenga información sobre cómo crear y editar clases en la interfaz de usuario de Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1600'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,10 @@ En Adobe Experience Platform, la clase de un esquema define los aspectos de comp
 Adobe proporciona varias clases de modelo de datos de experiencia (XDM) estándar (&quot;principales&quot;), entre las que se incluyen [XDM Individual Profile](../../classes/individual-profile.md) y [XDM ExperienceEvent](../../classes/experienceevent.md). Además de estas clases principales, también puede crear sus propias clases personalizadas para describir casos de uso más específicos para su organización.
 
 Este documento proporciona información general sobre cómo crear, editar y administrar clases personalizadas en la interfaz de usuario de Experience Platform.
+
+>[!NOTE]
+>
+>Las acciones de XDM están disponibles en la tabla de inventario y en la vista de detalles de recursos (**[!UICONTROL More]**). Las acciones completas solo se aplican a recursos personalizados (definidos por el inquilino); los recursos estándar tienen opciones limitadas. Ver [Administrar esquemas, clases, grupos de campos y tipos de datos: acciones y eliminación](../explore.md#xdm-resource-actions).
 
 ## Requisitos previos {#prerequisites}
 
@@ -56,27 +60,27 @@ Seleccione **[!UICONTROL Create class]** de la ficha [!UICONTROL Classes] en el 
 
 ![La ficha [!UICONTROL Classes] del área de trabajo [!UICONTROL Schemas] con [!UICONTROL Create class] resaltado](../../images/ui/resources/classes/create-class.png)
 
-Aparecerá el cuadro de diálogo [!UICONTROL Create class]. Escriba [!UICONTROL Display name] y [!UICONTROL Description] para la clase y elija el comportamiento deseado de la clase con los botones de opción. Las clases pueden ser del tipo [!UICONTROL Record] o [!UICONTROL Time-series]. Seleccione **[!UICONTROL Create]** esta opción para confirmar sus [!UICONTROL Classes] opciones y volver al pestaña.
+Aparecerá el cuadro de diálogo [!UICONTROL Create class]. Escriba [!UICONTROL Display name] y [!UICONTROL Description] para la clase y elija el comportamiento deseado de la clase con los botones de opción. Las clases pueden ser del tipo [!UICONTROL Record] o [!UICONTROL Time-series]. Seleccione **[!UICONTROL Create]** para confirmar sus opciones y volver a la ficha [!UICONTROL Classes].
 
-![El [!UICONTROL Create class] cuadro de diálogo con [!UICONTROL Create] resaltado.](../../images/ui/resources/classes/create-class-dialog.png)
+![Se resaltó el cuadro de diálogo [!UICONTROL Create class] con [!UICONTROL Create].](../../images/ui/resources/classes/create-class-dialog.png)
 
-La clase que ha creado está disponible y aparece en el [!UICONTROL Classes] vista.
+La clase que ha creado está disponible y se enumera en la vista [!UICONTROL Classes].
 
 ![La ficha [!UICONTROL Classes] del área de trabajo [!UICONTROL Schemas] con la clase creada recientemente resaltada.](../../images/ui/resources/classes/new-class-listing.png)
 
 ### Crear esquema
 
-Como alternativa, puede crear una clase creando manualmente un esquema. Seleccione **[!UICONTROL Create schema]** una de las [!UICONTROL Classes] pestaña del [!UICONTROL Schemas] espacio de trabajo.
+Como alternativa, puede crear una clase creando manualmente un esquema. Seleccione **[!UICONTROL Create schema]** de la ficha [!UICONTROL Classes] en el área de trabajo [!UICONTROL Schemas].
 
-![El [!UICONTROL Classes] pestaña del [!UICONTROL Schemas] espacio de trabajo con [!UICONTROL Create schema] resaltado](../../images/ui/resources/classes/create-schema.png)
+![La ficha [!UICONTROL Classes] del área de trabajo [!UICONTROL Schemas] con [!UICONTROL Create schema] resaltado](../../images/ui/resources/classes/create-schema.png)
 
-Seleccione **[!UICONTROL Manual]** en el cuadro de [!UICONTROL Create a schema] diálogo que aparece.
+Seleccione **[!UICONTROL Manual]** en el cuadro de diálogo [!UICONTROL Create a schema] que aparece.
 
 >[!NOTE]
 >
->Si usa el flujo de trabajo de creación de esquema asistido por ML, puede cargar un archivo y usar algoritmos de ML para generar un esquema recomendado. En ese flujo de trabajo de creación de esquema, no es necesario especificar la clase base para el esquema. Para obtener información sobre cómo ML puede recomendar una estructura esquema basada en un archivo csv, consulte el [guía de creación de esquema](../ml-assisted-schema-creation.md) asistido por aprendizaje automático.
+>Si utiliza el flujo de trabajo de creación de esquemas asistidos por ML, puede cargar un archivo y utilizar algoritmos XML para generar un esquema recomendado. En ese flujo de trabajo de creación de esquemas, no es necesario especificar la clase base para el esquema. Para saber cómo ML puede recomendar una estructura de esquema basada en un archivo csv, consulte la [guía de creación de esquemas asistida por aprendizaje automático](../ml-assisted-schema-creation.md).
 
-![La Crear un cuadro de diálogo esquema con las opciones de flujo de trabajo y seleccione resaltado.](../../images/ui/resources/classes/manually-create-a-schema.png)
+![El cuadro de diálogo Crear un esquema con las opciones de flujo de trabajo y la selección resaltadas.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
 Aparecerá el flujo de trabajo de creación de esquemas. En la sección [!UICONTROL Schema details], seleccione **[!UICONTROL Other]**. Aparecerá una lista de las clases disponibles. Seleccione **[!UICONTROL Create class]**.
 
@@ -84,21 +88,21 @@ Aparecerá el flujo de trabajo de creación de esquemas. En la sección [!UICONT
 
 Aparecerá el cuadro de diálogo [!UICONTROL Create class]. Escriba [!UICONTROL Display name] y [!UICONTROL Description] para la clase y elija el comportamiento deseado de la clase con los botones de opción. Las clases pueden ser del tipo [!UICONTROL Record] o [!UICONTROL Time-series]. Seleccione **[!UICONTROL Create]** para confirmar sus opciones y volver a la ficha [!UICONTROL Classes].
 
-![El [!UICONTROL Create class] cuadro de diálogo con [!UICONTROL Create] resaltado.](../../images/ui/resources/classes/create-class-from-schema.png)
+![Se resaltó el cuadro de diálogo [!UICONTROL Create class] con [!UICONTROL Create].](../../images/ui/resources/classes/create-class-from-schema.png)
 
-La clase lista se actualiza en la [!UICONTROL Schema details] sección y la clase recién creada se selecciona automáticamente. Seleccione **[!UICONTROL Next]** esta opción para continuar creando la esquema.
+La lista de clases se actualiza en la sección [!UICONTROL Schema details] y la clase recién creada se selecciona automáticamente. Seleccione **[!UICONTROL Next]** para continuar creando su esquema.
 
-![Sección [!UICONTROL Schema details] con la nueva clase seleccionada y [!UICONTROL Next] resaltada.](../../images/ui/resources/classes/select-new-class.png)
+![La sección [!UICONTROL Schema details] con la nueva clase seleccionada y [!UICONTROL Next] resaltada.](../../images/ui/resources/classes/select-new-class.png)
 
-Después de seleccionar una clase, aparecerá la [!UICONTROL Name and review] sección. En esta sección, proporcionará un nombre y una descripción para identificar a su esquema.La estructura base del esquema (proporcionada por la clase) se muestra en el lienzo para que pueda revisar y verificar la clase seleccionada y esquema estructura.
+Después de seleccionar una clase, aparece la sección [!UICONTROL Name and review]. En esta sección, proporcione un nombre y una descripción para identificar el esquema en cuestión.La estructura base del esquema (proporcionada por la clase ) se muestra en el lienzo para que revise y compruebe la clase y la estructura de esquema seleccionadas.
 
-Introduzca un lenguaje práctico [!UICONTROL Schema display name] en el campo de texto. Siguiente, escriba una descripción adecuada para ayudar a identificar su esquema. Cuando haya revisado la estructura esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finish]** crear su esquema.
+Escriba un(a) [!UICONTROL Schema display name] descriptivo(a) en el campo de texto. A continuación, introduzca una descripción adecuada para ayudar a identificar el esquema. Una vez que haya revisado la estructura de esquema y esté satisfecho con la configuración, seleccione **[!UICONTROL Finish]** para crear el esquema.
 
-![La [!UICONTROL Name and review] sección del [!UICONTROL Create schema] flujo de trabajo con , [!UICONTROL Schema display name]&#x200B;[!UICONTROL Description]y [!UICONTROL Finish] resaltado.](../../images/ui/resources/classes/schema-details.png)
+![La sección [!UICONTROL Name and review] del flujo de trabajo [!UICONTROL Create schema] con [!UICONTROL Schema display name], [!UICONTROL Description] y [!UICONTROL Finish] resaltados.](../../images/ui/resources/classes/schema-details.png)
 
-## añadir campos a una clase {#add-fields}
+## Adición de campos a una clase {#add-fields}
 
-Una vez que tenga una esquema que emplea una clase personalizada abierta en el Editor de esquemas, puede inicio agregar campos a la clase. Para agregar un nuevo campo, seleccione el icono **más (+)** junto al nombre del esquema.
+Una vez que tenga un esquema que emplee una clase personalizada abierta en el Editor de esquemas, puede empezar a agregar campos a la clase. Para agregar un nuevo campo, seleccione el icono **más (+)** junto al nombre del esquema.
 
 >[!IMPORTANT]
 >
@@ -143,7 +147,7 @@ Realice los cambios que desee en el campo, desplazándose hacia abajo en el carr
 >
 > Cualquier actualización que realice en los campos se aplicará en todos los esquemas que empleen esa clase, siguiendo las [reglas de evolución del esquema](../../schema/composition.md#evolution).
 
-![Editor de esquemas con un campo seleccionado y la derecha carril expuesto, resaltando [!UICONTROL Apply].](../../images/ui/resources/classes/save-changes.png)
+![Editor de esquemas con un campo seleccionado y el carril derecho expuesto, destacando [!UICONTROL Apply].](../../images/ui/resources/classes/save-changes.png)
 
 Para agregar nuevos campos, siga la guía [agregar campos a una clase](#add-fields-to-a-class). Cuando termine, seleccione **[!UICONTROL Save]** para guardar el esquema y la clase.
 

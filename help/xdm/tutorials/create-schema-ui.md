@@ -5,9 +5,9 @@ title: Creación de un esquema con el editor de esquemas
 type: Tutorial
 description: Este tutorial trata los pasos para crear un esquema con el Editor de esquemas en Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
+source-wordcount: '4740'
 ht-degree: 1%
 
 ---
@@ -360,6 +360,10 @@ Seleccione **[!UICONTROL Enable]** para confirmar su elección. Puede volver a s
 
 ## Más acciones {#more}
 
+>[!NOTE]
+>
+>Al trabajar con recursos XDM, las acciones están disponibles tanto en la tabla de inventario (menú de fila) como en la vista de detalles de recursos (**[!UICONTROL More]**). Para acceder al conjunto completo de acciones, como **Eliminar**, **Copiar la estructura de JSON** y **Agregar al paquete**, debe seleccionar un recurso personalizado (definido por el inquilino). Los recursos estándar (proporcionados por Adobe) tienen acciones limitadas. Para obtener una descripción general completa de las acciones, restricciones y permisos, vea [Administrar esquemas, clases, grupos de campos y tipos de datos: acciones y eliminación](../ui/explore.md#xdm-resource-actions).
+
 En el Editor de esquemas también puede realizar acciones rápidas para copiar la estructura JSON del esquema o eliminarlo. Seleccione [!UICONTROL More] en la parte superior de la vista para mostrar una lista desplegable con acciones rápidas.
 
 ![Editor de esquemas con el botón Más resaltado y las opciones desplegables mostradas.](../images/tutorials/create-schema/more-actions.png)
@@ -409,11 +413,11 @@ El esquema &quot;Miembros socio&quot; también está disponible para ser visto y
 
 El siguiente vídeo muestra cómo crear un esquema simple en la interfaz de usuario de [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430223?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 El siguiente vídeo tiene como objetivo reforzar su comprensión del trabajo con grupos y clases de campo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413601?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Apéndice
 

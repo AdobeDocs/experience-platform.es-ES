@@ -4,10 +4,10 @@ title: Exportación de esquemas XDM en la IU
 description: Obtenga información sobre cómo exportar un esquema existente a una zona protegida u organización diferente en la interfaz de usuario de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ Para resolver esta necesidad, el área de trabajo [!UICONTROL Schemas] de la int
 ## Requisitos previos
 
 Aunque la IU de Experience Platform permite exportar recursos XDM, debe utilizar la API de Registro de esquemas para importar esos recursos en otras zonas protegidas u organizaciones para completar el flujo de trabajo. Consulte la guía sobre [introducción a la API de Registro de esquemas](../api/getting-started.md) para obtener información importante sobre los encabezados de autenticación requeridos antes de seguir esta guía.
+
+>[!NOTE]
+>
+>Si no encuentra acciones como **Eliminar** o **Copiar la estructura de JSON**, asegúrese de que está trabajando con un recurso personalizado (definido por el inquilino) y de que tiene acceso a él desde el menú de fila de tabla o la vista de detalles (**[!UICONTROL More]**). La disponibilidad de la acción también depende de los permisos y las restricciones de uso. Ver [Administrar esquemas, clases, grupos de campos y tipos de datos: acciones y eliminación](./explore.md#xdm-resource-actions).
 
 ## Generación de una carga útil de exportación {#generate-export-payload}
 
