@@ -62,7 +62,7 @@ Después de exportar las audiencias, las activa usando el destino [[!DNL LiveRam
 
 Vea el siguiente vídeo para obtener una explicación completa del flujo de trabajo descrito en esta página.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452659?captions=spa)
 
 ### Paso 1: Envío de audiencias de Experience Platform a LiveRamp, a través del destino [!DNL LiveRamp - Onboarding] {#onboarding}
 

@@ -39,11 +39,11 @@ Vea el siguiente vídeo para obtener una breve descripción general sobre cómo 
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
 
 Vea el siguiente vídeo para obtener información general sobre cómo compartir audiencias y atributos de perfil para [!DNL Adobe Target] y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447358/?captions=spa&quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 
