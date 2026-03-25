@@ -1,22 +1,15 @@
 ---
 title: Crear configuraciones de flujo de datos dinámico
 description: Aprenda a crear configuraciones de flujo de datos dinámico para enrutar los datos a varios servicios de Experience Cloud, según las reglas.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 # Crear configuraciones de flujo de datos dinámico
-
->[!AVAILABILITY]
->
->* La opción para definir configuraciones de flujo de datos dinámico se encuentra actualmente en Beta y está disponible para un número limitado de clientes. Para obtener acceso a esta funcionalidad, póngase en contacto con su representante de Adobe. La documentación y las funcionalidades están sujetas a cambios.
 
 De manera predeterminada, Experience Platform Edge Network envía todos los eventos que llegan a una secuencia de datos a todos los [servicios](configure.md#add-services) de Experience Cloud que haya habilitado para sus secuencias de datos. Este podría no ser siempre el flujo de trabajo ideal, según sus casos de uso.
 
@@ -57,7 +50,7 @@ Si habilita tanto las configuraciones de flujo de datos dinámico como las inval
 
 Después de [crear un conjunto de datos](configure.md) y [agregarle un servicio](configure.md#add-services), siga los pasos a continuación para agregar una configuración dinámica al servicio.
 
-1. Vaya a la página **[!UICONTROL Recopilación de datos]** > **[!UICONTROL Flujos de datos]** y seleccione el flujo de datos que ha creado.
+1. Vaya a la página **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** y seleccione la secuencia de datos que ha creado.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la lista de flujos de datos.](assets/configure-dynamic-datastream/select-datastream.png)
 
@@ -65,25 +58,25 @@ Después de [crear un conjunto de datos](configure.md) y [agregarle un servicio]
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra los servicios agregados a un flujo de datos.](assets/configure-dynamic-datastream/select-service.png)
 
-1. En la página **[!UICONTROL Configurar]**, seleccione **[!UICONTROL Guardar y editar configuración dinámica]**.
+1. En la página **[!UICONTROL Configure]**, seleccione **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la página de configuración del flujo de datos.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Seleccione **[!UICONTROL Agregar configuración dinámica]**.
+1. Seleccione **[!UICONTROL Add Dynamic Configuration]**.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra el mensaje de configuración dinámica sin regla agregada.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. En el panel **[!UICONTROL Recursos]**, arrastre y suelte los elementos con los que desee generar la regla en el lado derecho de la ventana. Puede combinar varios recursos para crear reglas complejas.
+1. En el panel **[!UICONTROL Resources]**, arrastre y suelte los elementos con los que desee generar la regla en el lado derecho de la ventana. Puede combinar varios recursos para crear reglas complejas.
 
-   Use las opciones de cada recurso, como **[!UICONTROL igual a]**, **[!UICONTROL no es igual a]**, **[!UICONTROL existe]** y más, para ajustar las reglas.
+   Utilice las opciones de cada recurso, como **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]**, etc., para ajustar las reglas.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. En la sección **[!UICONTROL Configuración]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, dependiendo de si desea que los datos se envíen a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio ascendente.
+1. En la sección **[!UICONTROL Configuration]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, en función de si desea que se envíen los datos a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio ascendente.
 
    ![Imagen de la interfaz de usuario de flujos de datos que muestra la regla de configuración dinámica.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Cuando termine de configurar las reglas, seleccione **[!UICONTROL Guardar]**.
+1. Cuando termine de configurar las reglas, seleccione **[!UICONTROL Save]**.
 
 ## Consideraciones de prioridad de reglas {#considerations}
 
@@ -128,7 +121,7 @@ Las reglas pueden utilizar los siguientes operadores, según el tipo de datos:
 
 >[!NOTE]
 >
->El operador **[!UICONTROL EXCLUDE]** no se admite directamente, pero puede lograr una lógica equivalente usando **[!UICONTROL INCLUDE]** con operadores de comparación negados (por ejemplo, &quot;no es igual que&quot;).
+>El operador **[!UICONTROL EXCLUDE]** no se admite directamente, pero puede lograr una lógica equivalente si usa **[!UICONTROL INCLUDE]** con operadores de comparación negados (por ejemplo, &quot;no es igual que&quot;).
 
 ### Estructura de reglas {#rule-structure}
 
