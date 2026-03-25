@@ -2,9 +2,9 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2026'
 description: Las notas de la versión de marzo de 2026 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1713'
 ht-degree: 20%
 
 ---
@@ -54,7 +54,7 @@ Utilice Agent Orchestrator para crear e implementar agentes con tecnología de I
 
 | Función | Descripción |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] es su agente incrustado que incorpora el conocimiento de marketing de Adobe directamente en herramientas cotidianas como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] y otras aplicaciones de [!DNL Microsoft 365]. Puede utilizar este agente para extraer información de campañas de confianza de las aplicaciones de Adobe mientras planea campañas, revisa audiencias y colabora con compañeros para responder preguntas de clientes y tomar decisiones basadas en datos sin abandonar el flujo de trabajo de [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] es su agente incrustado que incorpora el conocimiento de marketing de Adobe directamente en herramientas cotidianas como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] y otras aplicaciones de [!DNL Microsoft 365]. Puede utilizar este agente para extraer información de campañas de confianza de las aplicaciones de Adobe mientras planea campañas, revisa audiencias y colabora con compañeros para responder preguntas de clientes y tomar decisiones basadas en datos sin abandonar el flujo de trabajo de [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,6 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Fuente | Descripción |
 | --- | --- |
-| [!DNL Talon.One] | Ahora puede conectar Experience Platform a [!DNL Talon.One] con las nuevas fuentes [!DNL Talon.One] [batch](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) y [streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md). Utilice las nuevas fuentes para introducir datos del perfil de lealtad, así como eventos de transacciones y actividades de lealtad en Experience Platform. |
 | Nuevas direcciones IP para la lista de permitidos | Nuevas direcciones IP para GBR9: Reino Unido se han añadido a la lista de direcciones que debe lista de permitidos para garantizar conexiones de origen por lotes correctas a Experience Platform en Azure. Vea la lista en la [guía de lista de permitidos de direcciones IP](../../sources/ip-address-allow-list.md#gbr9-united-kingdom) para obtener más información. |
 | Compatibilidad mejorada con la captura de datos modificados | Ahora puede usar Cambiar captura de datos con los orígenes [!DNL Marketo Engage], [!DNL Microsoft Dynamics] y [!DNL Salesforce CRM]. |
 | Guía de autenticación mejorada para [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md) | La guía de autenticación para el origen [!DNL Google BigQuery] se ha expandido con la siguiente información: <ul><li>Los ámbitos necesarios para el token de actualización.</li><li>Los roles de IAM necesarios para la identidad [!DNL Google].</li><li>Instrucciones adicionales sobre el uso de `largeResultsDataSetId`.</li></ul> |

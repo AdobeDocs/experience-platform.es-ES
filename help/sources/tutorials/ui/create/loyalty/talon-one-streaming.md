@@ -2,8 +2,10 @@
 title: Transmita Datos De Talon.One A Experience Platform Mediante La Interfaz De Usuario
 description: Aprenda a transmitir datos de Talon.One a Adobe Experience Platform mediante la interfaz de usuario. Esta guía cubre la configuración, la selección de datos y la configuración del flujo de datos.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
-source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
