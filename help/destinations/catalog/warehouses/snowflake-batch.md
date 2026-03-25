@@ -4,10 +4,10 @@ description: Cree un recurso compartido de datos de Snowflake activo para recibi
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: f6565f7820d6d6394d26b88fdde3d42a90dedd63
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 4%
+source-wordcount: '1804'
+ht-degree: 3%
 
 ---
 
@@ -171,7 +171,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -194,12 +194,19 @@ Los datos se almacenan en zona intermedia en la cuenta de Snowflake a través de
 
 La tabla dinámica contiene las siguientes columnas:
 
-* **TS**: una columna de marca de tiempo que indica la última vez que se actualizó cada fila de la tabla compartida
-* **ID de política de combinación**: El ID de [política de combinación](../../../profile/merge-policies/overview.md) al que pertenece la audiencia que se está activando
-* **Atributos de asignación**: cada atributo de asignación que seleccione durante el flujo de trabajo de activación se representa como un encabezado de columna en Snowflake
-* **Pertenencia a audiencias**: La pertenencia a cualquier audiencia asignada al flujo de datos se indica mediante una entrada de `active` en la celda correspondiente
+* **TS**: Una marca de tiempo que indica cuándo se actualizó cada fila por última vez
+* **MERGE_POLICY_ID**: El identificador de la [política de combinación](../../../profile/merge-policies/overview.md) a la que pertenece la audiencia activada
+* **AUDIENCE_ID**: El ID de la audiencia
+* **AUDIENCE_NAME**: El nombre de la audiencia tal como se configuró en Experience Platform
+* **AUDIENCE_ORIGIN**: El [origen](../../../segmentation/ui/audience-portal.md) de la audiencia (por ejemplo, `Segmentation Service` o `Custom upload`)
+* **AUDIENCE_STATUS**: El estado de pertenencia del perfil en la audiencia (por ejemplo, `active` o `realized`)
+* **Atributos de asignación**: cada atributo de asignación seleccionado durante el flujo de trabajo de activación se representa como una columna
 
 ![Captura de pantalla que muestra la interfaz de Snowflake con datos de tabla dinámica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>La estructura de tabla descrita anteriormente se aplica a las conexiones de destino creadas después de la versión de Experience Platform de marzo de 2026. Durante el período de transición, los nuevos conectores utilizan ambas estructuras de tabla, con la nueva estructura con el prefijo `V2` (por ejemplo, `V2_<table-name>`). Las conexiones existentes siguen utilizando la estructura anterior, donde cada audiencia se representa como una columna independiente (por ejemplo, `ups_<audience-id>` = `active`). La estructura anterior quedará obsoleta a finales de junio de 2026.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
