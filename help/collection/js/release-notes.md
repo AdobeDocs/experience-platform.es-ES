@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
+source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2751'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.32.0: 23 de marzo de 2026
+
+- Las utilidades principales compartidas ahora se publican como un paquete npm independiente ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) para su uso por extensiones e integraciones.
+- Ahora incluye la zona horaria IANA en el campo XDM `xdm.placeContext.ianaTimezone` cuando `placeContext` se incluye en la variable de configuración [`context`](/help/collection/js/commands/configure/context.md).
+- Conserje de marca: se corrigió un problema con el ID de sesión cuando [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) está deshabilitado.
 
 ## Versión 2.31.1: 11 de febrero de 2026
 
@@ -34,8 +40,6 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Los atributos `aria-label` y `name` ahora se consideran en [recopilación automática de vínculos](commands/configure/clickcollectionenabled.md).
-- Se ha corregido una posible condición de carrera con integraciones de mapa de identidad.
-- Se corrigió un problema en el cual la marca de tiempo no se incluía en `streamingMedia`.
 - Se ha corregido un problema en el cual las acciones de código personalizado solo se ejecutaban una vez.
 
 ## Versión 2.30.0: 24 de septiembre de 2025
@@ -72,7 +76,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../use-cases/identity/id-overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 

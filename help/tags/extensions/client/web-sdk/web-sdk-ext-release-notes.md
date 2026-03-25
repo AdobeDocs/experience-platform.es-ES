@@ -2,17 +2,22 @@
 title: Notas de la versión de la extensión Adobe Experience Platform Web SDK
 description: Extensión de etiqueta de Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '3165'
+source-wordcount: '3230'
 ht-degree: 24%
 
 ---
 
 
-# Notas de la versión de Web SDK
+# Notas de la versión de la extensión Web SDK
 
-Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Experience Platform Web SDK](/help/collection/js/release-notes.md).
+Este documento describe las notas de la versión de la extensión de etiquetas Adobe Experience Platform Web SDK. Para obtener las últimas notas de la versión de SDK, consulte las [notas de la versión de Adobe Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versión 2.34.2: 23 de marzo de 2026
+
+- Contiene [versión 2.32.0](/help/collection/js/release-notes.md) de Adobe Experience Platform Web SDK.
+- Se ha corregido un problema específico de copiar una propiedad Etiquetas en el que las acciones Actualizar variable podían conservar referencias a elementos de datos de la propiedad original. Para reparar las propiedades copiadas existentes, abra y vuelva a guardar cada acción de actualización de variable afectada y su regla. Evite cambiar el nombre de los elementos de datos copiados hasta después de volver a guardarlos.
 
 ## Versión 2.34.1: 11 de febrero de 2026
 

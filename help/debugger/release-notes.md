@@ -4,24 +4,24 @@ description: Las notas de la versión más recientes de Adobe Experience Platfor
 keywords: depurador;extensión de Experience Platform Debugger;chrome;extensión;notas de la versión
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 92%
+source-wordcount: '846'
+ht-degree: 90%
 
 ---
 
 # Notas de la versión de Adobe Experience Platform Debugger
 
-## Versión 1.6.4: miércoles, 06 de mayo de 2025
+## Versión 1.6.5: 24 de marzo de 2026
 
-### Correcciones y mejoras
+* Se ha corregido un problema que impedía que se enviaran eventos de AppMeasurement en sesiones activas de Assurance.
+
+## Versión 1.6.4: miércoles, 06 de mayo de 2025
 
 * Se ha corregido un problema por el cual el inicio de sesión no estaba disponible.
 
 ## Versión 1.6.3: 30 de abril de 2025
-
-### Correcciones y mejoras
 
 * Se ha corregido un problema en el cual Debugger impedía que las funciones de DTM y Etiquetas funcionaran.
 * Se ha corregido un problema en el cual las visitas posteriores al procesamiento de Analytics no aparecían en los registros.
@@ -29,24 +29,15 @@ ht-degree: 92%
 
 ## Versión 1.6.2: miércoles, 01 de octubre de 2024
 
-### Correcciones y mejoras
-
 * Se ha corregido un problema en el cual Debugger era demasiado sensible a todos los errores de CSP
 
 ## Versión 1.6.1: 25 de julio de 2024
-
-### Correcciones y mejoras
 
 * Se ha corregido un problema que impedía a los usuarios añadir nuevos códigos incrustados de etiquetas a las páginas sin ellos.
 
 ## Versión 1.6.0: 11 de julio de 2024
 
-### Nuevas funciones
-
 * Permitir que los usuarios acepten la inclusión/exclusión de la recopilación de datos personales y técnicos.
-
-### Correcciones y mejoras
-
 * Corregir la inyección de scripts de Firefox y el vínculo de la política de privacidad.
 * Capturar las solicitudes de Analytics que faltan.
 * Corregir los bloqueos en páginas con muchos mensajes de consola complejos.
@@ -54,19 +45,12 @@ ht-degree: 92%
 
 ## Versión 1.5.4: 19 de diciembre de 2023
 
-### Correcciones y mejoras
-
 * Se ha corregido un problema que impedía conservar la configuración.
 * Se ha corregido un problema que hacía que Debugger se bloqueara al ver las visitas posteriores al procesamiento de Analytics.
 
 ## Versión 1.5.3: 6 de diciembre de 2023
 
-### Nuevas funciones
-
 * Se ha añadido la opción “Bloquear la pestaña activa al abrir Debugger”.
-
-### Correcciones y mejoras
-
 * Se ha corregido un problema por el que faltaban solicitudes de Analytics en dominios privados.
 * Se ha corregido un problema por el que faltaban datos de Activity Map en la tabla de solicitudes de Analytics.
 * Se ha corregido un problema por el que la visualización de TRACE de destino provocaba un bloqueo.
@@ -76,13 +60,9 @@ ht-degree: 92%
 
 (Solo Firefox)
 
-### Correcciones y mejoras
-
 * Se ha actualizado la organización de archivos.
 
 ## Versión 1.5.1: 2 de noviembre de 2023
-
-### Correcciones y mejoras
 
 * Se han corregido problemas por los que los eventos de Analytics se ignoraban o duplicaban.
 * Se ha corregido un problema por el que se superaba el tamaño máximo de almacenamiento de estado.
@@ -90,12 +70,7 @@ ht-degree: 92%
 
 ## Versión 1.5.0: 19 de octubre de 2023
 
-### Nuevas funciones
-
 * Mostrar vínculos a propiedad, entorno y reglas en resumen de etiquetas y registros.
-
-### Correcciones y mejoras
-
 * Se ha corregido un problema por el que los datos de resumen de etiquetas no se enviaban.
 * Se ha corregido un problema por el que las sesiones de Assurance generaban un error CORS
 * Se ha corregido un problema que impedía que apareciera TRACE de destino.

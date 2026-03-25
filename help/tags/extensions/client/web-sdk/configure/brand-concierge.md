@@ -2,10 +2,10 @@
 title: Ajustes de configuración de Brand Concierge
 description: Configure la persistencia de la sesión y los tiempos de espera del flujo para el chat de Brand Concierge.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '190'
+ht-degree: 4%
 
 ---
 
@@ -37,3 +37,7 @@ Casilla de verificación que mantiene las sesiones de Brand Concierge en todas l
 ## [!UICONTROL Stream timeout (seconds)]
 
 Cantidad máxima de tiempo, en segundos, que se debe esperar a los fragmentos del flujo de conversación antes de activar un error de tiempo de espera. El valor predeterminado es `10` segundos.
+
+## [!UICONTROL Collect sources]
+
+Casilla de verificación que recopila orígenes si un usuario ha navegado a la página desde un vínculo en una conversación de Brand Concierge. Desactivado de forma predeterminada. Si está habilitada, la biblioteca comprueba el parámetro de cadena de consulta `adobe_brand_concierge_source` y rellena su valor en `xdm.channel.referringSource`.
