@@ -4,10 +4,10 @@ user-guide-title: Guía de flujos de datos
 user-guide-description: Obtenga información sobre los flujos de datos y cómo configurarlos en distintos servicios.
 feature: Dataflows
 role: Developer
-source-git-commit: 13fc8603cb490ff59e76c18cbb03b68488ebd005
+source-git-commit: ba32ad207654709e4af6ed1ea0dd4d0cf3748486
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 22%
+source-wordcount: '75'
+ht-degree: 21%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 22%
    - [Monitorización de flujos de datos en destinos](./ui/monitor-destinations.md)
    - [Monitorización de flujos de datos para la transmisión de ingesta de perfiles](./ui/monitor-streaming-profile.md)
    - [Monitorización de flujos de datos para la segmentación de streaming](./ui/monitor-streaming-audiences.md)
+   - [Monitorización de flujos de datos en Edge](./ui/monitor-edge.md)
    - Monitorización B2B {#b2b}
       - [Supervisión de trabajos de enriquecimiento de perfil](./ui/b2b/monitor-profile-enrichment.md)
 - [API de servicio de flujo](https://www.adobe.io/experience-platform-apis/references/flow-service/)

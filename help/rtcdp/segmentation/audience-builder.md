@@ -2,9 +2,9 @@
 title: Generador de audiencias en Real-Time Customer Data Platform
 description: Aprenda a utilizar el Generador de audiencias en Real-Time Customer Data Platform para crear audiencias.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 7%
@@ -64,7 +64,7 @@ La sección **[!UICONTROL Top values]** muestra los valores más frecuentes del 
 
 También puede ver la distribución de los datos con los valores mínimo, medio (promedio) y máximo mostrados.
 
-![Una ventana emergente que muestra las estadísticas de un atributo, incluidos los valores mínimo, medio y máximo.](../assets/segmentation/audience-builder/statistics.png)
+![Una ventana emergente que muestra las estadísticas de un atributo, incluidos los valores mínimo, medio y máximo.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 Si menos del 25% de las cuentas rellenan un atributo, se mostrará el ![icono de aviso de datos](../../images/icons/data-notice.png). Independientemente, se muestran los mismos datos de resumen para el atributo.
 
@@ -78,7 +78,7 @@ Si menos del 25% de las cuentas rellenan un atributo, se mostrará el ![icono de
 
 Además, el atributo tiene un **[!UICONTROL Ingestion Type]**. El tipo de ingesta le permite conocer el origen de los datos y puede ser uno de los siguientes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
 
-![Se muestra el tipo de ingesta del atributo.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![Se muestra el tipo de ingesta del atributo.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Para obtener una guía más detallada sobre los atributos de Audience Builder, lea la [guía del usuario de Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 

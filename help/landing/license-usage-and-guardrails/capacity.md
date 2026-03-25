@@ -2,10 +2,10 @@
 title: Uso de licencias y capacidad
 description: Obtenga información sobre el uso de licencias y los límites de capacidad en Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
+source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 5%
+source-wordcount: '2072'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Para obtener más información sobre las protecciones en Experience Platform, le
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Rendimiento de streaming"
->abstract="El valor de rendimiento de streaming mide los eventos de entrada máximos combinados por segundo para la ingesta de streaming al servicio Perfil, en sus zonas protegidas de producción y desarrollo."
+>abstract="El valor de rendimiento de flujo mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al perfil en los entornos limitados de producción y desarrollo."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -51,14 +51,16 @@ Actualmente, Capacity admite los siguientes servicios:
 
 - Segmentación de streaming
 - Ingesta por streaming
+- Segmentación de Edge
 
 Dentro de estos servicios, se rastrean las siguientes barreras:
 
 - El número máximo de audiencias de streaming es de 500
-   - De estas 500 audiencias de streaming, el número máximo de audiencias de Edge es de 150
+- El número máximo de audiencias de Edge es de 150
 - El rendimiento inicial combinado para la ingesta de transmisión es de 1500 registros por segundo (rps)
    - Este rendimiento de flujo combinado mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al Perfil del cliente en tiempo real en los entornos limitados de producción y desarrollo.
-   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Puede adquirir compatibilidad adicional con la segmentación de flujo continuo de hasta 13 500 registros por segundo. Encontrará más información sobre la compra de derechos adicionales en la [descripción del producto de Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- El rendimiento combinado de la segmentación de Edge es de 1500 registros por segundo (rps)
 
 La capacidad de audiencia está en el nivel de **espacio aislado**. Esto significa que, para cada zona protegida que tenga en su organización, puede tener 500 audiencias de streaming, de las cuales 150 pueden ser audiencias de Edge.
 
@@ -88,7 +90,7 @@ Para acceder al resumen de Capacity, seleccione **[!UICONTROL License usage]** s
 
 Se muestra la página de información general de capacidad, con información que incluye un historial de alertas y detalles de las capacidades de su organización.
 
-![La página de descripción general de capacidad se muestra en su totalidad, con el historial de alertas y las secciones de detalles de capacidad.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![Se muestra la página de descripción general de la capacidad, que muestra el historial de alertas y las secciones de detalles de capacidad.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### Historial de alertas {#alert-history}
 
@@ -106,17 +108,15 @@ Para ver un historial completo de las alertas de su organización, seleccione el
 
 ![Se muestra el historial completo de alertas de una organización.](/help/landing/images/capacity/full-alert-history.png)
 
-### Detalles de capacidad {#capacity-details}
+### Capacidades de streaming {#streaming-capacities}
 
-La sección Detalles de capacidad describe la información sobre las capacidades de su organización. En esta sección, puede filtrar por zona protegida y cambiar el periodo de retrospectiva.
+La sección Capacidades de flujo continuo describe la información sobre las capacidades de flujo de su organización. En concreto, esta sección muestra información de capacidad sobre el rendimiento de flujo continuo y las audiencias de flujo continuo. Puede filtrar esta información por zona protegida y cambiar el periodo de retrospectiva.
 
 ![Se resaltan el selector de zona protegida y el selector de fechas para el período retroactivo.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-Actualmente, muestra información de capacidad sobre el rendimiento de flujo continuo, las audiencias de flujo continuo y las audiencias de Edge.
-
 #### Rendimiento de streaming {#streaming-throughput}
 
-La sección rendimiento de flujo continuo muestra información sobre el rendimiento de flujo continuo dentro de los entornos limitados de la organización. El valor de rendimiento de flujo continuo mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al servicio de perfil.
+La sección **[!UICONTROL Streaming throughput]** muestra información sobre el rendimiento de flujo continuo dentro de las zonas protegidas de su organización. El valor de rendimiento de flujo continuo mide los eventos de entrada máximos combinados por segundo para la transmisión de la ingesta al perfil.
 
 ![Se muestra la sección de rendimiento de flujo continuo dentro de la página de detalles de capacidad.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -153,11 +153,52 @@ Aparecerá la página de asignación. En esta página, puede establecer las capa
 
 Después de actualizar las asignaciones de capacidad, seleccione **[!UICONTROL Save]** para finalizar las actualizaciones. Tenga en cuenta que los cambios pueden tardar hasta 10 minutos en reflejarse en su organización.
 
-#### Recuento de público {#audience-count}
+#### Recuento de público de streaming {#streaming-audience-count}
 
-Las secciones **[!UICONTROL Streaming audience count]** y **[!UICONTROL Edge audience count]** muestran el número de audiencias de streaming y de Edge dentro de la zona protegida, así como la cantidad máxima de audiencias de streaming y Edge permitidas dentro de la zona protegida.
+La sección **[!UICONTROL Streaming audience count]** muestra la cantidad de audiencias de streaming dentro de la zona protegida, así como la cantidad máxima de audiencias de streaming permitidas dentro de la zona protegida.
 
-![Se muestran las secciones Recuentos de audiencias.](/help/landing/images/capacity/audience-count.png)
+![Se muestran las secciones de Recuentos de público.](/help/landing/images/capacity/audience-count.png)
+
+| Nombre de columna | Descripción |
+| ----------- | ----------- |
+| Zona protegida | Nombre de la zona protegida. |
+| Servicios | El servicio que se está utilizando para la zona protegida. |
+| Uso | El número de audiencias de streaming que se encuentran en la zona protegida. |
+| Capacidad | Número máximo de audiencias de flujo continuo permitidas en la zona protegida. |
+
+### Capacidades perimetrales {#edge-capacities}
+
+La sección **[!UICONTROL Edge capacities]** describe información sobre las capacidades de Edge de su organización. En concreto, esta sección muestra información de capacidad sobre el rendimiento de la segmentación de Edge y las audiencias de Edge. Puede cambiar el período retroactivo de las capacidades de Edge de la organización.
+
+![Se muestra la sección de capacidades de Edge. Se describe la información, incluido el rendimiento de la segmentación de Edge y el recuento de público de Edge.](/help/landing/images/capacity/edge-capacities.png)
+
+#### Rendimiento de segmentación perimetral {#edge-streaming-throughput}
+
+La sección **[!UICONTROL Edge segmentation throughput]** muestra información sobre el rendimiento de la segmentación de Edge dentro de las zonas protegidas de su organización y su organización. El valor de rendimiento de la segmentación de Edge mide los eventos de entrada máximos combinados por segundo para la ingesta de Edge en el perfil.
+
+![Se muestra la sección de rendimiento de segmentación de Edge. Muestra información sobre el rendimiento de la segmentación de Edge dentro de su organización y sus zonas protegidas.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| Nombre de columna | Descripción |
+| ----------- | ----------- |
+| Organización | Nombre de la organización. Los entornos limitados disponibles para la organización se enumeran con el nombre de la organización. |
+| Uso de RPS (pico) | El rendimiento máximo de los datos en la zona protegida dentro del período retrospectivo seleccionado. |
+| RPS de capacidad | El rendimiento máximo máximo de la organización. |
+| Infracción | Si se ha producido una infracción, el tipo de infracción para el rendimiento de la segmentación de Edge. |
+| Acciones recomendadas | Una columna que describe la acción recomendada para mitigar la infracción. |
+
+Puede seleccionar la organización para ver una vista más detallada del rendimiento de la segmentación de Edge de la organización.
+
+![La organización está resaltada.](/help/landing/images/capacity/select-organization.png)
+
+Se muestra la página **[!UICONTROL Edge Segmentation Throughput]**. Puede ver un gráfico que muestra el rendimiento de la solicitud en comparación con el límite de capacidad. En esta página, puede ajustar el período retroactivo del gráfico mostrado.
+
+![Se muestra la página Rendimiento Global de Segmentación de Edge. Muestra un gráfico que detalla el rendimiento comparado con el límite de capacidad.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### Recuento de públicos del perímetro {#edge-audience-count}
+
+La sección **[!UICONTROL Edge audience count]** muestra la cantidad de audiencias de Edge dentro de cada zona protegida, así como la cantidad máxima de audiencias de Edge permitidas dentro de la zona protegida.
+
+![Se muestra la sección recuento de público de Edge. Muestra información relacionada con el recuento de público de Edge.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Nombre de columna | Descripción |
 | ----------- | ----------- |
@@ -166,9 +207,9 @@ Las secciones **[!UICONTROL Streaming audience count]** y **[!UICONTROL Edge aud
 | Uso | El número de audiencias del tipo enumerado que se encuentran en la zona protegida. |
 | Capacidad | Número máximo de audiencias del tipo enumerado que se permiten en la zona protegida. |
 
-## Prácticas recomendadas de rendimiento de streaming {#suggestions}
+## Prácticas recomendadas de rendimiento de streaming {#streaming-throughput-suggestions}
 
-Puede resolver las violaciones del rendimiento del flujo continuo adoptando una de las siguientes recomendaciones:
+Puede resolver las infracciones de rendimiento adoptando una de las siguientes recomendaciones:
 
 1. Aumente la capacidad asignada para la zona protegida.
 2. Identifique los flujos de datos de alto rendimiento en el [panel de supervisión](/help/dataflows/ui/monitor-streaming-profile.md) y aplique restricciones o filtros en relación con estos flujos de datos si es necesario.
@@ -181,11 +222,19 @@ Además, puede consultar los flujos de datos y ver si puede optimizar su estrate
 | Conversión de lote a flujo continuo | Las cargas de trabajo por lotes convertidas en flujo continuo pueden aumentar significativamente el rendimiento, lo que afecta al rendimiento y a la asignación de recursos. Por ejemplo, realizar una actualización de perfil masiva después de un evento sin límites de velocidad. | Las estrategias de streaming no son necesarias para los casos de uso por lotes cuando no se requiere un procesamiento de baja latencia. | Evaluar los requisitos de casos de uso. Para el marketing saliente por lotes, considere la posibilidad de usar [ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) en lugar de la transmisión para administrar la ingesta de datos de manera más eficiente. |
 | Ingesta de datos innecesaria | La ingesta de datos no necesarios para la personalización aumenta el rendimiento sin añadir valor y desperdiciar recursos. Por ejemplo, la ingesta de todo el tráfico de análisis en perfiles independientemente de la relevancia. | El exceso de datos no relevantes crea ruido, lo que dificulta la identificación de puntos de datos impactantes. También puede causar fricción al definir y administrar audiencias y perfiles. | Introduzca solo los datos necesarios para sus casos de uso. Asegúrese de filtrar los datos innecesarios.<ul><li>**Adobe Analytics**: Use [filtrado de nivel de fila](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) para optimizar la ingesta de datos.</li><li>**Fuentes**: use la [[!DNL Flow Service] API para filtrar datos de nivel de fila](/help/sources/tutorials/api/filter.md) para fuentes compatibles como [!DNL Snowflake] y [!DNL Google BigQuery].</li></li>**Flujo de datos de Edge**: configure [flujos de datos dinámicos](/help/datastreams/configure-dynamic-datastream.md) para realizar el filtrado de nivel de fila del tráfico proveniente del SDK web.</li></ul> |
 
+## Prácticas recomendadas de rendimiento de segmentación de Edge {#edge-best-practices}
+
+Puede resolver sus infracciones de rendimiento de segmentación de Edge adoptando una de las siguientes recomendaciones:
+
+1. Identifique flujos de datos de alto rendimiento en el [panel de supervisión](/help/dataflows/ui/monitor-edge.md) y aplique restricciones o filtros en relación con estos flujos de datos si es necesario.
+2. Optimice la ingesta utilizando la ingesta por lotes para casos de uso de menor latencia.
+3. Póngase en contacto con su representante del Servicio de atención al cliente de Adobe si los problemas persisten.
+
 ## Vídeo introductorio {#video}
 
 El siguiente vídeo proporciona información general sobre Capacity.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475276/?captions=spa&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Preguntas frecuentes {#faq}
 
