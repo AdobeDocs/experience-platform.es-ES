@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '6311'
-ht-degree: 11%
+source-wordcount: '6574'
+ht-degree: 10%
 
 ---
 
@@ -55,6 +55,16 @@ Los componentes básicos de las definiciones de segmentos son los atributos y lo
 Puede ver estos componentes básicos en la sección **[!UICONTROL Fields]** a la izquierda del área de trabajo [!DNL Segment Builder]. **[!UICONTROL Fields]** contiene una ficha para cada uno de los componentes principales: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; y &quot;[!UICONTROL Audiences]&quot;.
 
 ![Se resalta la sección de campos del Generador de segmentos.](../images/ui/segment-builder/segment-fields.png)
+
+Puede seleccionar el ![icono de configuración](/help/images/icons/settings.png) para ajustar la configuración de los campos mostrados.
+
+Para **[!UICONTROL Available fields]**, puede mostrar solo los campos que contienen datos o el esquema XDM completo.
+
+Para **[!UICONTROL Data sources]**, puede filtrar para mostrar los atributos que provienen de los tipos de ingesta especificados. Los valores admitidos son **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]** y **[!UICONTROL Show fields with no ingested data]**.
+
+Para **[!UICONTROL Merge policy]**, puede elegir a qué política de combinación pertenecen los campos.
+
+![El área de configuración se muestra en el Generador de segmentos.](../images/ui/segment-builder/settings.png)
 
 ### Atributos
 
@@ -146,6 +156,22 @@ Puede utilizar los siguientes operadores para los tipos de datos respectivos:
 Para obtener información más detallada sobre las funciones de fecha y hora, lea la [sección de restricciones de tiempo](#time-constraints).
 
 +++
+
+Cuando seleccione un atributo, podrá ver los datos de resumen seleccionando el [icono de información](../../images/icons/info.png). Los datos de resumen incluyen información como una explicación de qué es el campo, el recuento de registros de los valores y el porcentaje de cuentas que contienen valores para este atributo.
+
+La sección **[!UICONTROL Top values]** muestra los valores más frecuentes del atributo e incluye detalles como el valor, el número de registros que tienen el valor y el porcentaje de registros totales que representa el valor.
+
+![Una ventana emergente que muestra los datos de resumen de un atributo](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+Si menos del 25% de los perfiles rellena un atributo, se mostrará el ![icono de aviso de datos](../../images/icons/data-notice.png). Independientemente, se muestran los mismos datos de resumen para el atributo.
+
+>[!NOTE]
+>
+>Los valores superiores solo se muestran si el campo **no** contiene demasiados valores diferentes y si los valores de esos campos se repiten con frecuencia. Además, los datos de este resumen se actualizan **diariamente**.
+
+Además, el atributo tiene un **[!UICONTROL Ingestion Type]**. El tipo de ingesta le permite conocer el origen de los datos y puede ser uno de los siguientes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
+
+![Se muestra el tipo de ingesta del atributo.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
 
 #### Atributos calculados {#computed-attributes}
 
@@ -323,7 +349,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
