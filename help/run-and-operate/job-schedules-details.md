@@ -3,25 +3,24 @@ description: Obtenga información sobre cómo ver información detallada sobre c
 solution: Experience Platform
 title: Ver detalles de programación del trabajo
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1778'
 ht-degree: 1%
 
 ---
 
-
 # Ver detalles de programación del trabajo
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] están disponibles actualmente como una versión limitada y solo para los siguientes trabajos de Real-Time CDP:
+>[!UICONTROL Job schedules] actualmente solo están disponibles para los siguientes trabajos de Real-Time CDP:
 >
 > * Ingesta de lago de datos por lotes
 > * Ingesta de perfil por lotes
 > * Segmentación por lotes
-> * Activación de destino del lote.
+> * Activación de destino del lote
 
 Al solucionar errores de trabajos o investigar problemas de rendimiento, necesita información detallada sobre conjuntos de datos específicos y sus ejecuciones de trabajos. La interfaz [Programaciones de trabajos](job-schedules.md) le permite explorar en profundidad desde la vista de cronología los conjuntos de datos y trabajos individuales para comprender el historial de ejecución, el tiempo y el estado.
 
@@ -37,7 +36,7 @@ Utilice esta vista detallada para:
 
 Antes de ver los detalles del trabajo, debe:
 
-* Tener acceso a [!UICONTROL Job Schedules] con los **[!UICONTROL View Job Schedules]** y **[!UICONTROL View Profile Management]** [permisos de control de acceso](/help/access-control/home.md#permissions).
+* Tener acceso a **[!UICONTROL Job Schedules]** con los **[!UICONTROL View Job Schedules]** y **[!UICONTROL View Profile Management]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 * Familiarícese con la [interfaz de horarios de trabajo](job-schedules.md#understanding-interface) y la vista de escala de tiempo.
 * Comprenda los diferentes [tipos de trabajos](job-schedules.md#job-schedules-details) (ingesta de lago, ingesta de perfiles, segmentación, activación).
 

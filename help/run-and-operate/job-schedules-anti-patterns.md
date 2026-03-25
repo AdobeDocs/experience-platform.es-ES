@@ -3,25 +3,24 @@ description: Obtenga información sobre cómo identificar y resolver los antipat
 solution: Experience Platform
 title: Identificar antipatrones de programación de trabajo
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Identificación de antipatrones de programación de trabajo
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] están disponibles actualmente como una versión limitada y solo para los siguientes trabajos de Real-Time CDP:
+>[!UICONTROL Job schedules] actualmente solo están disponibles para los siguientes trabajos de Real-Time CDP:
 >
 > * Ingesta de lago de datos por lotes
 > * Ingesta de perfil por lotes
 > * Segmentación por lotes
-> * Activación de destino del lote.
+> * Activación de destino del lote
 
 La vista de la cronología de [Programaciones de trabajos](job-schedules.md) le ayuda a identificar problemas comunes de configuración que pueden afectar negativamente el rendimiento y la confiabilidad de su canalización de datos. Estos antipatrones suelen provocar errores en los trabajos, incoherencias en los datos o un rendimiento del sistema degradado. Si detecta estos patrones antes de tiempo, puede reconfigurar sus trabajos para evitar problemas antes de que afecten a sus operaciones comerciales.
 
@@ -47,7 +46,7 @@ Antes de identificar los antipatrones, debe:
 
 **Qué buscar**: hay varios trabajos programados para ejecutarse al mismo tiempo o en sucesión, especialmente cuando se superponen trabajos que requieren muchos recursos.
 
-En este ejemplo, puede ver los trabajos de ingesta por lotes que se ejecutan al mismo tiempo que un trabajo de segmentación programado. Esto crea contención de recursos porque ambas operaciones requieren una potencia de procesamiento y una memoria significativas.
+Un ejemplo común son los trabajos de ingesta por lotes que se ejecutan al mismo tiempo que un trabajo de segmentación programado. Esto crea contención de recursos porque ambas operaciones requieren una potencia de procesamiento y una memoria significativas.
 
 **Por qué esto es problemático**:
 
@@ -68,7 +67,7 @@ En este ejemplo, puede ver los trabajos de ingesta por lotes que se ejecutan al 
 
 **Qué buscar**: Demasiados conjuntos de datos con varios lotes programados dentro de la misma hora, especialmente cuando estos lotes se apilan y se programan cerca de ventanas de procesamiento críticas, como las horas de inicio de la segmentación.
 
-En este patrón, verá lo siguiente:
+Este patrón suele incluir:
 
 * Varios conjuntos de datos, cada uno con varios lotes al día
 * Trabajos de ETL (ingesta de lago de datos e ingesta de perfiles) agrupados dentro de la misma hora
@@ -80,14 +79,14 @@ En este patrón, verá lo siguiente:
 * **Disponibilidad de perfiles retrasada**: Es posible que los trabajos de ingesta de perfiles que se ejecutan demasiado cerca de los tiempos de inicio de la segmentación no se completen a tiempo, lo que da como resultado evaluaciones de audiencia incompletas o antiguas.
 * **Segmentación impredecible**: Si los trabajos de ingesta ascendente siguen ejecutándose cuando comienza la segmentación, se arriesga a evaluar las audiencias con datos incompletos, lo que provoca la pertenencia a audiencias incorrectas.
 * **Errores en cascada**: Un solo lote retrasado en una programación apilada densamente puede causar un efecto dominó, retrasando todos los lotes subsiguientes y los procesos descendentes.
-* **Extracción de recursos**: Es posible que el sistema tenga problemas para asignar recursos suficientes al procesar demasiados trabajos de ingesta simultánea, lo que ralentiza los tiempos de procesamiento o produce errores.
+* **Deformación de recursos**: Es posible que el sistema tenga problemas para asignar recursos suficientes al procesar demasiados trabajos de ingesta simultánea, lo que ralentiza los tiempos de procesamiento o produce errores.
 
 **Cómo solucionarlo**:
 
 * **Consolidar lotes**: Reduzca la frecuencia de los lotes combinando varios lotes pequeños en menos lotes más grandes por conjunto de datos.
 * **Distribuir de forma uniforme**: Difunda los trabajos de ingesta durante todo el día en lugar de agruparlos en horarios específicos.
 * **Agregar tiempo de búfer**: Asegure un búfer mínimo de 1 a 2 horas entre la finalización de la ingesta de perfiles y el inicio de la segmentación.
-* **Requisitos de revisión**: evalúe si todos los conjuntos de datos realmente necesitan varios lotes diarios; muchos casos de uso funcionan con actualizaciones menos frecuentes.
+* **Requisitos de revisión**: Compruebe si todos los conjuntos de datos realmente necesitan varios lotes diarios. Muchos casos de uso funcionan con menos actualizaciones frecuentes.
 
 ## Lotes excesivos por conjunto de datos {#excessive-batches-per-dataset}
 
@@ -95,7 +94,7 @@ En este patrón, verá lo siguiente:
 
 **Qué buscar**: Un solo conjunto de datos con un número excesivo de trabajos por lotes individuales programados a lo largo del día, que crea una larga pila vertical de trabajos en la cronología.
 
-En este patrón, verá una fila del conjunto de datos con muchos trabajos de ingesta por lotes individuales programados a intervalos frecuentes, a veces decenas de lotes por día para un único conjunto de datos.
+Este patrón implica un único conjunto de datos con muchos trabajos de ingesta por lotes individuales programados a intervalos frecuentes, a veces decenas de lotes por día.
 
 **Por qué esto es problemático**:
 

@@ -4,8 +4,8 @@ description: Aprenda a utilizar las comprobaciones de estado en Adobe Experience
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Comprobaciones de estado
 
-Las comprobaciones de estado analizan los esquemas y las identidades utilizados en su zona protegida y proporcionan un resumen de los problemas que puede utilizar para explorar y solucionar problemas con [!UICONTROL AI Assistant]. En el futuro, se podrán analizar más objetos para obtener un informe más completo.
+Las comprobaciones de estado analizan los esquemas y las identidades utilizados en la zona protegida y proporcionan un resumen de los problemas que puede utilizar para explorar y solucionar problemas con el asistente de IA. En el futuro, se podrán analizar más objetos para obtener un informe más completo.
 
 Las configuraciones de esquema e identidad deficientes derivan en problemas descendentes significativos, como la creación incorrecta de perfiles, la calificación fallida de segmentos y la activación inexacta. Estos problemas son difíciles de detectar y a menudo requieren conocimientos especializados para diagnosticarlos. Las comprobaciones de estado cambian su enfoque de la solución de problemas reactiva al mantenimiento preventivo y proactivo.
 
@@ -22,7 +22,7 @@ Con las comprobaciones de estado, puede:
 
 * **Detectar problemas de configuración al principio**: identifique las prácticas recomendadas, las configuraciones incorrectas y los patrones que faltan y que conducen a ineficiencias en la personalización, la activación y mucho más.
 * **Recibir corrección guiada**: obtenga instrucciones claras sobre qué es cada problema y qué hacer al respecto.
-* **Supervisar continuamente**: En este momento, las comprobaciones de estado ejecutan análisis automáticos diarios para detectar los problemas antes de que se conviertan en errores críticos. La programación puede cambiar en futuras versiones.
+* **Supervisar continuamente**: Actualmente, las comprobaciones de estado ejecutan análisis automáticos diarios para detectar los problemas antes de que se conviertan en errores críticos. La programación puede cambiar en futuras versiones.
 
 ## Requisitos previos {#prerequisites}
 
@@ -72,14 +72,14 @@ Analiza para garantizar que los campos de identidad tengan restricciones de long
 | Detalles | Descripción |
 | --- | --- |
 | **Problema** | A los campos marcados como identidades les falta una longitud mínima/máxima o una validación de patrón. |
-| **Impacto** | Sin validación, los valores no utilizados pueden escribir [!UICONTROL Identity Service]. Los valores como &quot;0&quot;, &quot;Invitado&quot; o mayúsculas y minúsculas que no coinciden (por ejemplo, &quot;xyz123&quot; frente a &quot;XYZ123&quot;) comprometen la integridad del perfil que se monta durante la segmentación y la activación. |
+| **Impacto** | Sin validación, los valores no utilizados pueden escribir [!DNL Identity Service]. Los valores como &quot;0&quot;, &quot;Invitado&quot; o mayúsculas y minúsculas que no coinciden (por ejemplo, &quot;xyz123&quot; frente a &quot;XYZ123&quot;) comprometen la integridad del perfil que se monta durante la segmentación y la activación. |
 | **Corrección** | Establezca restricciones de longitud y patrón mínimas/máximas en campos personalizados marcados como identidades. Utilice expresiones regulares para aplicar reglas como solo dígitos, mayúsculas o minúsculas, o combinaciones de caracteres específicas. |
 
 Al seleccionar la tarjeta **[!UICONTROL Identity Field Validation]**, se abre un panel de detalles a la derecha. El panel muestra:
 
 * **[!UICONTROL Description]**: explora para garantizar que los campos de identidad tengan longitudes mín./máx. y reglas de patrón regex para la integridad de los datos. Muestra los esquemas y campos afectados.
 * **[!UICONTROL Impact]**: si los campos de identidad de los esquemas no tienen establecidas longitudes mín./máx. y validaciones de patrones, puede generar datos incoherentes, lo que puede comprometer la integridad y la calidad de los datos.
-* **[!UICONTROL General areas of impact]**: identificadores de baja calidad en [!UICONTROL Identity Service]; vinculación no confiable.
+* **[!UICONTROL General areas of impact]**: identificadores de baja calidad en [!DNL Identity Service]; vinculación no confiable.
 * **[!UICONTROL Experience League Documentation]**: un vínculo a las prácticas recomendadas para el modelado de datos.
 * **[!UICONTROL Affected Schemas]**: una lista de esquemas afectados, cada uno con un expansor para ver más detalles y un vínculo para abrir el esquema.
 
@@ -117,12 +117,12 @@ Valida el uso correcto de los tipos de identidad people y non-people en todas la
 | --- | --- |
 | **Problema** | Los identificadores que no son personas se utilizan en esquemas de clase de perfil individual o de evento de experiencia, o los identificadores de personas se utilizan en esquemas de búsqueda. |
 | **Impacto** | Los identificadores de no personas en esquemas de perfil no participan en el gráfico de identidad, lo que conduce a una resolución de identidad incompleta. Los identificadores de personas en los esquemas de búsqueda inflan el recuento de perfiles y hacen que los datos no sean aptos para los casos de uso de búsqueda. En ambos casos, existe el riesgo de que futuras mejoras del producto rompan la implementación. |
-| **Corrección** | Revise los esquemas marcados y corrija las asignaciones de tipo de identidad. Elimine los identificadores que no sean de persona de los esquemas de Perfil individual siempre que sea posible. Para los esquemas que ya usan los conjuntos de datos, consulte las [reglas de evolución de esquema](/help/xdm/schema/composition.md#evolution). |
+| **Corrección** | Revise los esquemas marcados y corrija las asignaciones de tipo de identidad. Elimine los identificadores que no sean personas de los esquemas de Perfil individual siempre que sea posible. Para los esquemas que ya usan los conjuntos de datos, consulte las [reglas de evolución de esquema](/help/xdm/schema/composition.md#evolution). |
 
 Al seleccionar la tarjeta **[!UICONTROL People & Non-People Identity Config]**, se abre un panel de detalles a la derecha. El panel muestra:
 
 * **[!UICONTROL Description]**: valida el uso correcto de los tipos de identidad entre clases de esquema. Enumera los esquemas mal configurados y resalta las asignaciones incorrectas.
-* **[!UICONTROL Impact]**: si a una entidad que no es una persona se le proporciona una identidad de persona, esto inflará el recuento de perfiles y hará que estos datos no sean aptos como búsqueda. Si a una entidad de persona se le proporciona una identidad que no sea de persona, los datos no están disponibles para la transmisión o segmentación de Edge.
+* **[!UICONTROL Impact]**: si a una entidad que no es de personas se le asigna una identidad de persona, esto inflará el recuento de perfiles y hará que estos datos no sean aptos como búsqueda. Si a una entidad de persona se le asigna una identidad que no sea de personas, los datos no están disponibles para la transmisión por secuencias o la segmentación de Edge.
 * **[!UICONTROL General areas of impact]**: gráficos de identidad incompletos; recuentos de perfiles inflados; uso incorrecto de la búsqueda.
 * **[!UICONTROL Affected Schemas]**: una lista de esquemas con problemas. Expanda una fila de esquema para ver la ruta, el nombre de identidad y el tipo de esquema de cada configuración incorrecta. Utilice el icono de vínculo para abrir el esquema.
 
@@ -172,7 +172,7 @@ Al seleccionar la tarjeta **[!UICONTROL Deprecated Identity Namespace]**, se abr
 
 ![Panel de detalles del área de nombres de identidad obsoleta que muestra descripción, impacto y lista de áreas de nombres afectadas](assets/health-checks/deprecated-namespace-detail.png)
 
-Para obtener más información, consulte el artículo de [Experience Cloud Knowledge Base sobre áreas de nombres obsoletas](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Para obtener más información, consulte el artículo de [Experience Cloud Knowledge Base sobre áreas de nombres obsoletas](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Próximos pasos {#next-steps}
 

@@ -3,25 +3,24 @@ description: Obtenga información sobre cómo inspeccionar y solucionar problema
 solution: Experience Platform
 title: Inspeccionar horarios de trabajo
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # Inspeccionar horarios de trabajos
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] están disponibles actualmente como una versión limitada y solo para los siguientes trabajos de Real-Time CDP:
+>[!UICONTROL Job schedules] actualmente solo están disponibles para los siguientes trabajos de Real-Time CDP:
 >
 > * Ingesta de lago de datos por lotes
 > * Ingesta de perfil por lotes
 > * Segmentación por lotes
-> * Activación de destino del lote.
+> * Activación de destino del lote
 
 [!UICONTROL Job Schedules] proporciona una vista unificada de todos los trabajos de procesamiento por lotes programados en toda la canalización de datos, desde la ingesta hasta la activación de destino. Inspeccione el estado de ejecución, identifique los conflictos de programación y diagnostique los problemas de configuración antes de que afecten a las operaciones empresariales.
 
@@ -107,7 +106,6 @@ A medida que revise las programaciones de trabajos, puede observar patrones que 
 Estos patrones pueden provocar errores en los trabajos, un procesamiento de datos incompleto y un rendimiento del sistema deficiente. Para aprender a identificar y resolver estos problemas, consulte la documentación sobre [identificación de antipatrones de programación de trabajos](job-schedules-anti-patterns.md).
 
 Cuando necesite investigar conjuntos de datos específicos o ejecuciones de trabajos, puede explorar en profundidad las vistas detalladas para ver el historial de ejecución, los mensajes de error, las métricas de rendimiento y las dependencias. Para obtener información sobre cómo ver estos datos detallados, consulte la documentación sobre [ver detalles del trabajo](job-schedules-details.md).
-
 
 ## Próximos pasos {#next-steps}
 

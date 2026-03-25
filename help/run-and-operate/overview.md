@@ -1,20 +1,18 @@
 ---
 title: Información general sobre Ejecutar y operar
 description: Inspeccione, solucione problemas y optimice las implementaciones de Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
-hide: true
+solution: Experience Platform
+type: Documentation
+role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
-source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 1%
+source-wordcount: '636'
+ht-degree: 2%
 
 ---
 
 # Información general sobre Ejecutar y operar
-
->[!AVAILABILITY]
->
->Actualmente, las funciones Ejecutar y Operar están disponibles como una versión limitada.
 
 Cuando los trabajos por lotes fallan o entregan datos incompletos, debe comprender rápidamente qué causó el problema. La causa raíz podrían ser problemas de disponibilidad de datos, tiempos incorrectos, problemas de configuración o restricciones de capacidad del sistema. Sin una visibilidad clara, puede pasar horas investigando varios sistemas antes de encontrar la respuesta.
 
@@ -30,13 +28,11 @@ Con las herramientas de [!UICONTROL Run and Operate], puede:
 
 * **Equipos de datos y TI**: Administradores de sistemas e ingenieros de datos que mantienen canalizaciones de datos confiables y solucionan problemas técnicos.
 * **Operaciones de marketing**: Los tecnólogos de marketing que inspeccionan la entrega de datos a las plataformas de marketing y resuelven los problemas de activación.
-* **Implementadores**: Profesionales que validan la eficacia, confiabilidad y solución de problemas técnicos de la implementación.
+* **Implementadores**: Profesionales que validan la eficiencia y confiabilidad de la implementación y que solucionan problemas técnicos.
 
 ## Requisitos previos {#prerequisites}
 
-Para acceder a las herramientas Ejecutar y operar, necesita los **[!UICONTROL View Job Schedules]** y **[!UICONTROL View Profile Management]** [permisos de control de acceso](/help/access-control/home.md#permissions).
-La página [!UICONTROL Job Schedules] proporciona una descripción general de todos sus trabajos de procesamiento por lotes programados.
-Póngase en contacto con el administrador del sistema para asegurarse de que tiene los permisos adecuados.
+Para acceder a las herramientas Ejecutar y operar, necesita los **[!UICONTROL View Job Schedules]** y **[!UICONTROL View Profile Management]** [permisos de control de acceso](/help/access-control/home.md#permissions). Póngase en contacto con el administrador del sistema para asegurarse de que tiene los permisos adecuados.
 
 ## Introducción {#getting-started}
 
@@ -44,10 +40,6 @@ Para acceder a las herramientas Ejecutar y Operar desde la interfaz de usuario d
 
 1. Inicie sesión en su cuenta de Experience Platform y seleccione **[!UICONTROL Run and Operate]** en el panel de navegación izquierdo.
 2. Seleccione la herramienta que coincida con sus necesidades de inspección o solución de problemas.
-
-   >[!NOTE]
-   >
-   >Actualmente, las capacidades disponibles son [Programaciones de trabajos](job-schedules.md) y [Comprobaciones de estado](health-checks.md).
 
 ![Interfaz de usuario de Experience Platform que muestra la navegación izquierda Ejecutar y operar.](assets/overview/run-and-operate.png)
 
@@ -64,7 +56,7 @@ Las siguientes herramientas le ayudan a inspeccionar y optimizar sus operaciones
 > * Ingesta de lago de datos por lotes
 > * Ingesta de perfil por lotes
 > * Segmentación por lotes
-> * Activación de destino del lote.
+> * Activación de destino del lote
 
 Con [Programas de trabajos](job-schedules.md), puede inspeccionar todas las operaciones por lotes programadas en su organización, por zona protegida, incluida la ingesta del lago de datos, la ingesta de perfiles, la segmentación y la activación de destino. Vea el estado de ejecución del trabajo, las métricas de rendimiento y el historial de ejecución para identificar patrones y diagnosticar problemas de configuración que afectan a la fiabilidad.
 
@@ -80,18 +72,14 @@ También puede comprender las dependencias entre las fases de procesamiento de d
 
 ### Comprobaciones de estado {#health-checks}
 
->[!IMPORTANT]
->
->[!UICONTROL Health checks] están disponibles actualmente como una versión limitada.
-
-Con las [comprobaciones de estado](health-checks.md), puede detectar de forma proactiva los problemas de configuración de identidades y esquemas antes de que afecten a las operaciones empresariales. En este momento, las comprobaciones de estado ejecutan análisis estáticos diarios en los esquemas y áreas de nombres de identidad, mostrando las prácticas recomendadas, las configuraciones incorrectas y los patrones que faltan y que conducen a errores descendentes.
+Con las [comprobaciones de estado](health-checks.md), puede detectar de forma proactiva los problemas de configuración de identidades y esquemas antes de que afecten a las operaciones empresariales. Actualmente, las comprobaciones de estado ejecutan análisis estáticos diarios en los esquemas y áreas de nombres de identidad, mostrando las prácticas recomendadas, las configuraciones incorrectas y los patrones que faltan y que conducen a errores descendentes.
 
 Actualmente se evalúan cinco áreas fundacionales:
 
 * **[Validación de campo de identidad](health-checks.md#identity-field-validation)**: compruebe que los campos de identidad tengan las restricciones de longitud y patrón adecuadas.
 * **[Reglas de vinculación de gráficos de identidad](health-checks.md#identity-graph-linking-rules)**: confirme que las reglas de vinculación están configuradas para evitar el colapso del perfil.
 * **[Configuración de identidad de personas y no personas](health-checks.md#people-non-people-identity)**: valide el uso correcto del tipo de identidad en todas las clases de esquema.
-* **[Descripciones del área de nombres de identidad personalizada](health-checks.md#namespace-missing-description)**: Asegúrese de que los metadatos del área de nombres estén completos.
+* **[Descripción del área de nombres de identidad personalizada](health-checks.md#namespace-missing-description)**: Asegúrese de que los metadatos del área de nombres estén completos.
 * **[Áreas de nombres de identidad obsoletas](health-checks.md#deprecated-namespace)**: detecte áreas de nombres obsoletas para la limpieza.
 
 ## Próximos pasos {#next-steps}
