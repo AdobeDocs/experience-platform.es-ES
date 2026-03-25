@@ -49,4 +49,4 @@ Para comprender la diferencia entre las conexiones y las extensiones, vea [Conex
 
 Utilice la función de uso compartido de audiencias de Experience Platform para compartir sus audiencias de Experience Platform con destinos de Adobe adicionales. Consulte la página siguiente para obtener más información (se abre en el portal de documentación de Audience Manager):
 
-* [Uso compartido de la audiencia de Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Uso compartido de la audiencia de Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es)

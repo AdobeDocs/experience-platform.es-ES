@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
-   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
+   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=es#use-cases)
 * Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 6%
       * [(Heredado) (V2) Conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Conexión de sincronización de personas de Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es)
       * [Conexión de composición de audiencia federada](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
       * [(Beta) Conexión de Audiencia de Acxiom](./catalog/advertising/acxiom-audience-connection.md)
