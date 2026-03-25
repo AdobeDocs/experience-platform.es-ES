@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para probar si el destino de flujo continuo está configurado correctamente y verificar la integridad de los flujos de datos a su destino configurado.
 title: Prueba del destino de flujo continuo con perfiles de muestra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '602'
 ht-degree: 2%
 
 ---
@@ -26,9 +26,9 @@ Puede usar la [API de generación de perfiles de muestra](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=es) para obtener más información.
->* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=es).
->![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino &#x200B;](../../assets/testing-api/get-destination-instance-id.png)
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+>* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>![Imagen de interfaz de usuario cómo obtener el identificador de instancia de destino ](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introducción a las operaciones de API de prueba de destino {#get-started}
 

@@ -1,11 +1,11 @@
 ---
 keywords: correo electrónico;Correo electrónico;correo electrónico;destinos de correo electrónico;sendgrid;destino de sendgrid
 title: Conexión de SendGrid
-description: El destino SendGrid le permite exportar los datos de origen y activarlos dentro de SendGrid para sus necesidades comerciales.
+description: Utilice el destino SendGrid para exportar los datos de origen y activarlos en SendGrid para sus necesidades comerciales.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1928'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 [SendGrid](https://www.sendgrid.com) es una plataforma de comunicación popular entre los clientes para correos electrónicos transaccionales y de marketing.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts), lo que le permite exportar los perfiles de correo electrónico de origen y activarlos dentro de una nueva audiencia de SendGrid para sus necesidades comerciales.
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha [[!DNL SendGrid Marketing Contacts API]](https://api.sendgrid.com/v3/marketing/contacts) para exportar los perfiles de correo electrónico de origen y activarlos en una nueva audiencia de SendGrid para las necesidades de su empresa.
 
 SendGrid utiliza tokens de portador de API como mecanismo de autenticación para comunicarse con la API SendGrid.
 
@@ -27,14 +27,14 @@ Se requieren los siguientes elementos antes de comenzar a configurar el destino.
 1. Necesita tener una cuenta de SendGrid.
    * Vaya a la página SendGrid [signup](https://signup.sendgrid.com/) para registrarse y crear una cuenta de SendGrid, si todavía no la tiene.
 1. Después de iniciar sesión en el portal SendGrid, también debe generar un token de API.
-1. Vaya al sitio web de SendGrid y acceda a la página **[!DNL Settings]** > **[!DNL API Keys]**. También puede consultar la [documentación de SendGrid](https://app.sendgrid.com/settings/api_keys) para acceder a la sección apropiada en la aplicación SendGrid.
+1. Vaya al sitio web de SendGrid y acceda a la página **[!DNL Settings]** > **[!DNL API Keys]**. También puede consultar la [documentación de SendGrid](https://app.sendgrid.com/settings/api_keys) para acceder a la sección adecuada en la aplicación SendGrid.
 1. Finalmente, seleccione el botón **[!DNL Create API Key]**.
    * Consulte la [documentación de SendGrid](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key) si necesita instrucciones sobre qué acciones realizar.
    * Si desea generar su clave de API mediante programación, consulte la [documentación de SendGrid](https://docs.sendgrid.com/api-reference/api-keys/create-api-keys).
 
 ![Página de configuración de claves API SendGrid que muestra el botón Crear clave API.](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform]. Consulte también la sección [límites](#limits) más abajo en esta página.
+Antes de activar datos en el destino SendGrid, debe tener un [esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform]. Consulte también la sección [límites](#limits) más abajo en esta página.
 
 >[!IMPORTANT]
 >
@@ -123,7 +123,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 ### Rellenar detalles de destino {#destination-details}
 
-Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) este destino, debe proporcionar la siguiente información:
+Mientras [configura](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Name]**: nombre con el que reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción opcional que le ayudará a identificar este destino en el futuro.
@@ -140,7 +140,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

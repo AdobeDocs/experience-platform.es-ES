@@ -3,9 +3,9 @@ title: Conexión de audiencia de Acxiom Real ID
 description: Use el destino  [!DNL Acxiom Real ID Audience Connection] para mejorar audiencias con la tecnología [!DNL Acxiom's Real ID] y activar audiencias en varias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] y más.
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '999'
 ht-degree: 6%
 
 ---
@@ -35,7 +35,7 @@ Por ejemplo, el departamento Operaciones de marketing de una marca de servicios 
 
 * **Confirmar condiciones de uso:** Para poder configurar un nuevo destino de [!DNL Acxiom Real ID Audience Connection], debe leer y firmar el Contrato de condiciones de uso de [!DNL Acxiom's]. Recibirá el vínculo al acuerdo una vez que se haya completado el pedido de ventas ejecutado.
 * **Conozca su ID de organización de Adobe:** Se necesita su ID de organización [!DNL Adobe] para completar las condiciones del contrato de usuario. Consulte el tema [!DNL Adobe's] *Organizaciones en Experience Cloud* para obtener detalles sobre cómo [ver su ID de organización](https://experienceleague.adobe.com/es/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que el Real ID de Acxiom esté disponible en [!DNL Real-Time CDP]. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
+* **Obtener licencia para [!DNL Acxiom's Real ID] producto:** Una vez obtenida la licencia, haga que el Real ID de Acxiom esté disponible en [!DNL Real-Time CDP]. Consulte [Mejora de datos de Acxiom](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obtener más información.
 
 
 ## Identidades admitidas {#supported-identities}
@@ -102,12 +102,12 @@ Para configurar los detalles del destino, rellene los campos siguientes.
 
 >[!IMPORTANT]
 > 
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 
 
-Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
+Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
 >[!NOTE]
 >
@@ -144,7 +144,7 @@ Si está satisfecho con los resultados, seleccione **[!UICONTROL Finish]** para 
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 
-Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/es/docs/experience-platform/data-governance/home).
+Todos los destinos de [!DNL Adobe Experience Platform] cumplen con las políticas de uso de datos al administrar los datos. Para obtener información detallada sobre cómo [!DNL Adobe Experience Platform] aplica el control de datos, lea la [Información general sobre el control de datos](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Resolución de problemas {#troubleshooting}
 
@@ -159,4 +159,4 @@ Deberá proporcionar la siguiente información a su representante de [!DNL Adobe
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha activado correctamente una audiencia en la plataforma de destino seleccionada. A continuación, póngase en contacto con el representante de la plataforma de destino para comenzar a configurar la campaña.
+Se ha activado correctamente una audiencia en la plataforma de destino seleccionada. A continuación, póngase en contacto con el representante de la plataforma de destino para comenzar a configurar la campaña.

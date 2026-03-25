@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Obtenga más información acerca del uso predeterminado y los límites de velocidad de activación de datos.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c550186c9cb3bc580a227633e0d7c0b574ecc2e8
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1741'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/es/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
+>Compruebe sus derechos de licencia en su pedido de ventas y la [descripción del producto](https://helpx.adobe.com/legal/product-descriptions.html?lang=es) correspondiente sobre los límites de uso reales, además de esta página de protecciones.
 
 Esta página proporciona límites predeterminados de uso y velocidad con respecto al comportamiento de activación. Al revisar las siguientes protecciones, se supone que se ha [conectado correctamente a los destinos](/help/destinations/ui/connect-destination.md).
 
@@ -171,7 +171,7 @@ Obtenga más información sobre la [exportación de conjuntos de datos](/help/de
 
 ### protecciones de Destination SDK {#destination-sdk-guardrails}
 
-[Destination SDK](/help/destinations/destination-sdk/overview.md) es un conjunto de API de configuración que le permiten configurar patrones de integración de destino para que Experience Platform envíe datos de audiencia y perfil a su extremo en función de los datos y los formatos de autenticación que elija. Las siguientes protecciones se aplican a los destinos configurados con Destination SDK.
+[Destination SDK](/help/destinations/destination-sdk/overview.md) es un conjunto de API de configuración para configurar patrones de integración de destino para Experience Platform a fin de que entregue datos de audiencia y perfil a su extremo, según los datos y formatos de autenticación que elija. Las siguientes protecciones se aplican a los destinos configurados con Destination SDK.
 
 | Barrera | Límite | Tipo de límite | Descripción |
 | --- | --- | --- | --- |
@@ -196,7 +196,7 @@ Detalles sobre los umbrales de restricción o las limitaciones para determinados
 Consulte la siguiente documentación para obtener más información sobre otras protecciones de servicios de Experience Platform, información de latencia de extremo a extremo e información de licencias de [!DNL Real-Time CDP] documentos de descripción del producto:
 
 * [protecciones de Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=es#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latencia de extremo a extremo](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para varios servicios de Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Paquetes Prime y Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

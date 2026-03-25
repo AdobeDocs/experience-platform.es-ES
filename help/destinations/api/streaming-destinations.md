@@ -5,9 +5,9 @@ title: Conéctese a destinos de flujo continuo y active los datos mediante la AP
 description: Este documento cubre la creación de destinos de flujo continuo mediante la API de Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >Para conectarse a un destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;.](/help/access-control/home.md#permissions)
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}.](/help/access-control/home.md#permissions)
 >
 >Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
@@ -565,7 +565,7 @@ La respuesta devuelta debe incluir en el parámetro `transformations` las audien
 
 >[!IMPORTANT]
 >
-> Además de los atributos de perfil y las audiencias en el paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=es), ID móvil, ID de Google, dirección de correo electrónico, etc.). Vea un ejemplo a continuación.
+> Además de los atributos de perfil y las audiencias en el paso [Activar datos en el nuevo destino](#activate-data), los datos exportados en [!DNL AWS Kinesis] y [!DNL Azure Event Hubs] también incluirán información sobre el mapa de identidad. Representa las identidades de los perfiles exportados (por ejemplo [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID móvil, ID de Google, dirección de correo electrónico, etc.). Vea un ejemplo a continuación.
 
 ```json
 {
@@ -636,7 +636,7 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de sus destinos de flujo continuo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden utilizar en el destino para el análisis de clientes o cualquier otra operación de datos que desee realizar. Consulte las siguientes páginas para obtener más información:
+Ha conectado Experience Platform correctamente a uno de sus destinos de flujo continuo preferidos y ha configurado un flujo de datos en el destino correspondiente. Los datos salientes ahora se pueden utilizar en el destino para el análisis de clientes o cualquier otra operación de datos que desee realizar. Consulte las siguientes páginas para obtener más información:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)

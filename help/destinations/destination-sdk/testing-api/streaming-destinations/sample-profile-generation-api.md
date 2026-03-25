@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para generar perfiles de muestra para su destino de flujo continuo, que puede utilizar en las pruebas de destino.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '974'
 ht-degree: 2%
 
 ---
@@ -47,8 +47,8 @@ Para obtener el ID de una instancia de destino, primero debe crear una conexión
 
 >[!IMPORTANT]
 >
->* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=es) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=es) para obtener más información.
->* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=es).
+>* Para utilizar esta API, debe tener una conexión existente con el destino en la interfaz de usuario de Experience Platform. Lea [conectar con destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) y [activar perfiles y audiencias en un destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obtener más información.
+>* Después de establecer la conexión con su destino, obtenga el identificador de instancia de destino que debería usar en las llamadas API a este extremo al [explorar una conexión con su destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
 >![Imagen de interfaz de usuario sobre cómo obtener el identificador de instancia de destino](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ Una respuesta correcta devuelve el estado HTTP 200 con el número especificado d
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencias](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=es). |
+| `segmentMembership` | Un objeto map que describe las pertenencias de audiencia del individuo. Para obtener más información sobre `segmentMembership`, lea [Detalles de pertenencia a audiencias](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Una marca de tiempo de la última vez que este perfil se clasificó para el segmento. |
 | `xdm:status` | Campo de cadena que indica si el abono a audiencia se ha realizado como parte de la solicitud actual. Se aceptan los siguientes valores: <ul><li>`realized`: el perfil forma parte del segmento.</li><li>`exited`: el perfil está saliendo de la audiencia como parte de la solicitud actual.</li></ul> |
-| `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, lea [Base de la composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=es#identityMap). |
+| `identityMap` | Campo de tipo mapa que describe los distintos valores de identidad de un individuo, junto con sus áreas de nombres asociadas. Para obtener más información sobre `identityMap`, lea [Base de la composición del esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 

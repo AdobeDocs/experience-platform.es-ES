@@ -2,9 +2,9 @@
 description: Esta página explica cómo utilizar el extremo de la API /testing/destinationInstance para ver los detalles completos de los resultados de las pruebas. Este extremo de API devuelve el mismo resultado que obtendría al utilizar la API de Flow Service para monitorizar flujos de datos.
 title: Ver resultados detallados de la activación
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '544'
 ht-degree: 2%
 
 ---

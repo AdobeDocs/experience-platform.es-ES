@@ -2,7 +2,7 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Este artículo describe todos los tipos de configuración de campos de datos del
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -342,7 +342,7 @@ Establezca el parámetro `destinationServerId` en el identificador del servidor 
 
 ## Crear campos de datos de clientes anidados {#nested-fields}
 
-Puede crear campos de datos de clientes anidados para patrones de integración complejos. Esto permite encadenar una serie de selecciones para el cliente.
+Puede crear campos de datos de clientes anidados para patrones de integración complejos. Utilícelos para encadenar una serie de selecciones para el cliente.
 
 Por ejemplo, puede agregar campos de datos de clientes anidados para requerir que los clientes seleccionen un tipo de integración con el destino, seguido inmediatamente de otra selección. La segunda selección es un campo anidado dentro del tipo de integración.
 

@@ -1,10 +1,10 @@
 ---
 title: (API) Conexión de Salesforce Marketing Cloud
-description: El destino de Salesforce Marketing Cloud (anteriormente conocido como ExactTarget) le permite exportar los datos de su cuenta y activarlos dentro de Salesforce Marketing Cloud para sus necesidades comerciales.
+description: Utilice el destino de Salesforce Marketing Cloud (anteriormente conocido como ExactTarget) para exportar los datos de su cuenta y activarlos en Salesforce Marketing Cloud para sus necesidades comerciales.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2936'
+source-wordcount: '2931'
 ht-degree: 2%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (anteriormente conocido como [!DNL ExactTarget]) es un grupo de marketing digital que le permite crear y personalizar recorridos para que visitantes y clientes personalicen su experiencia.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (anteriormente conocido como [!DNL ExactTarget]) es un grupo de marketing digital que puede usar para crear y personalizar recorridos para que visitantes y clientes personalicen su experiencia.
 
 >[!IMPORTANT]
 >
-> Observe la diferencia entre esta conexión y la otra [[!DNL Salesforce Marketing Cloud] conexión](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) que existe dentro de la sección Catálogo de marketing de correo electrónico. La otra conexión de Salesforce Marketing Cloud le permite exportar archivos a una ubicación de almacenamiento especificada, mientras que esta es una conexión de flujo continuo basada en API.
+> Observe la diferencia entre esta conexión y la otra [[!DNL Salesforce Marketing Cloud] conexión](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) que existe dentro de la sección Catálogo de marketing de correo electrónico. La otra conexión de Salesforce Marketing Cloud exporta archivos a una ubicación de almacenamiento especificada, mientras que esta es una conexión de flujo continuo basada en API.
 
 En comparación con [!DNL Salesforce Marketing Cloud Account Engagement], que está más orientado al marketing **B2B**, el destino [!DNL (API) Salesforce Marketing Cloud] es ideal para los casos de uso **B2C** con ciclos de toma de decisiones transaccionales más cortos. Puede consolidar conjuntos de datos más grandes que representen el comportamiento de su audiencia objetivo para ajustar y mejorar las campañas de marketing priorizando y segmentando contactos, especialmente de conjuntos de datos fuera de [!DNL Salesforce]. *Tenga en cuenta que Experience Platform también tiene una conexión para [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa la API [!DNL Salesforce Marketing Cloud] [actualizar contactos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), que te permite **agregar contactos y actualizar datos de contacto** para tus necesidades comerciales después de activarlos en un nuevo segmento [!DNL Salesforce Marketing Cloud].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa la API [!DNL Salesforce Marketing Cloud] [actualizar contactos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) para **agregar contactos y actualizar datos de contacto** para tus necesidades comerciales después de activarlos en un nuevo segmento [!DNL Salesforce Marketing Cloud].
 
 [!DNL Salesforce Marketing Cloud] utiliza OAuth 2 con credenciales de cliente como mecanismo de autenticación para comunicarse con la API [!DNL Salesforce Marketing Cloud]. Las instrucciones para autenticarse en su instancia de [!DNL Salesforce Marketing Cloud] se encuentran más abajo, en la sección [Autenticar en destino](#authenticate).
 
@@ -37,7 +37,7 @@ El departamento de ventas de una plataforma de alquiler de viviendas desea difun
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL (API) Salesforce Marketing Cloud], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL (API) Salesforce Marketing Cloud], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -213,7 +213,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
-> * Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+> * Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 > * Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -292,7 +292,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
    ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra el segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Inicie sesión en el sitio web [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/). A continuación, vaya a la página **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** y compruebe si se han agregado los perfiles de la audiencia.
+1. Ir al sitio web [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/). A continuación, vaya a la página **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** y compruebe si se han agregado los perfiles de la audiencia.
    ![Captura de pantalla de la interfaz de usuario de Salesforce Marketing Cloud que muestra la página Contactos con los perfiles utilizados en el segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. Para comprobar si se han actualizado los perfiles, vaya a la página **[!UICONTROL Email]** y compruebe si se han actualizado los valores de atributo del perfil de la audiencia. Si lo consigue, puede ver que cada estado de audiencia de [!DNL Salesforce Marketing Cloud] se actualizó con el estado de audiencia correspondiente de Experience Platform, en función del valor **[!UICONTROL Mapping ID]** proporcionado en el paso [programación de audiencias](#schedule-segment-export-example).

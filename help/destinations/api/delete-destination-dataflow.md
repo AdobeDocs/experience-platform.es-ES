@@ -5,9 +5,9 @@ title: Eliminar un flujo de datos de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo eliminar flujos de datos en destinos de lote y flujo continuo mediante la API de Flow Service.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '552'
 ht-degree: 19%
 
 ---
@@ -90,7 +90,7 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente la API [!DNL Flow Service] para eliminar un flujo de datos existente en un destino.
+Ha utilizado correctamente la API [!DNL Flow Service] para eliminar un flujo de datos existente en un destino.
 
 Para obtener información sobre cómo realizar estas operaciones mediante la interfaz de usuario, consulte el tutorial sobre [eliminación de flujos de datos en la interfaz de usuario](../ui/delete-destinations.md).
 

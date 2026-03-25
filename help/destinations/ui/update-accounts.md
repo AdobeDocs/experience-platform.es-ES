@@ -4,9 +4,9 @@ title: Actualizar cuentas de destino
 type: Tutorial
 description: Este tutorial enumera los pasos para actualizar las cuentas de destino en la IU de Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-La ficha **[!UICONTROL Accounts]** muestra detalles acerca de las conexiones que ha establecido con varios destinos. Consulta la [descripción general de cuentas](../ui/destinations-workspace.md#accounts) para obtener toda la información que puedes obtener sobre cada cuenta de destino.
+La ficha **[!UICONTROL Accounts]** muestra detalles acerca de las conexiones que ha establecido con varios destinos. Consulte [Resumen de cuentas](../ui/destinations-workspace.md#accounts) para obtener toda la información disponible para cada cuenta de destino.
 
 Este tutorial cubre los pasos para actualizar los detalles de la cuenta de destino mediante la interfaz de usuario de Experience Platform.
 
@@ -29,7 +29,7 @@ Para los destinos por lotes, puede actualizar el acceso o la clave secreta, si a
 
 Siga los pasos a continuación para actualizar los detalles de conexión a destinos existentes.
 
-1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Accounts]** en el encabezado superior para ver sus cuentas existentes.
+1. Vaya a la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Accounts]** en el encabezado superior para ver sus cuentas existentes.
 
    ![Pestaña Cuentas](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -63,6 +63,6 @@ Siga los pasos a continuación para actualizar los detalles de conexión a desti
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente el área de trabajo **[!UICONTROL destinations]** para actualizar las cuentas existentes.
+Ha actualizado correctamente las cuentas existentes usando el área de trabajo **[!UICONTROL destinations]**.
 
-Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).
+Para obtener más información sobre los destinos, consulte [descripción general de los destinos](../catalog/overview.md).

@@ -1,10 +1,10 @@
 ---
 title: Conexión de Marketo Engage
-description: Marketo Engage es la única solución de administración de la experiencia del cliente (CXM) integral para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
+description: Marketo Engage es la única solución de administración de la experiencia del cliente (CXM) integral para marketing, publicidad, análisis y comercio. Utilícelo para automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-[!DNL Marketo Engage] es la única solución de administración de la experiencia del cliente (CXM) de extremo a extremo para marketing, publicidad, análisis y comercio. Le permite automatizar y administrar las actividades desde la administración de clientes potenciales y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
+[!DNL Marketo Engage] es la única solución de administración de la experiencia del cliente (CXM) de extremo a extremo para marketing, publicidad, análisis y comercio. Utilícelo para automatizar y administrar actividades desde la administración de posibles clientes de CRM y la participación de los clientes hasta el marketing basado en cuentas y la atribución de ingresos.
 
 Utilice este destino para la sincronización en tiempo real de datos de audiencia y atributos de perfil entre [!DNL Adobe Experience Platform] y Marketo Engage.
 
@@ -45,7 +45,7 @@ Pueden activar sus audiencias en Marketo Engage y usar el tipo de sincronizació
 
 ## Requisitos previos {#prerequisites}
 
-* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
+* El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en su instancia y partición de Marketo.
 * Solo las instancias de Marketo Engage en la misma organización de Adobe [!DNL Real-Time CDP] estarán disponibles al configurar este destino.
 * Solo las instancias de Marketo Engage que tienen sus usuarios administrados en Adobe Admin Console pueden utilizar este destino.
 
@@ -121,7 +121,7 @@ Marketo usa los **[!UICONTROL Marketo deduplication field]** que seleccionó par
 >
 >* Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -145,8 +145,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
    * **[!UICONTROL Audience and profile]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo y mantener actualizada la información de su perfil.
    * **[!UICONTROL Profile only]**: seleccione esta opción cuando desee mantener los perfiles de posibles clientes de Marketo actualizados con la información más reciente de Experience Platform.
    * **[!UICONTROL Audience only]**: seleccione esta opción cuando desee agregar miembros de audiencia a listas de Marketo sin actualizar su información de perfil.
-* **[!UICONTROL Partition]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Profile only]**&#x200B;o **[!UICONTROL Audience and profile]**&#x200B;tipos de sincronización*. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto permite especificar qué partición de posible cliente de Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** en Marketo.
-* **[!UICONTROL Marketo deduplication field]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/es/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
+* **[!UICONTROL Partition]**: *La selección de particiones solo está disponible al elegir **[!UICONTROL Profile only]**o **[!UICONTROL Audience and profile]**tipos de sincronización*. Seleccione un ID de partición de Marketo asociado al espacio de trabajo elegido. Esto especifica qué partición de posible cliente de Marketo recibirá los datos exportados. Si no elige una partición específica, los datos se enviarán a la partición **[!UICONTROL Default]** en Marketo.
+* **[!UICONTROL Marketo deduplication field]**: seleccione el campo de anulación de duplicación de Marketo que desee utilizar al actualizar posibles clientes de Marketo existentes. Este selector muestra los campos que ha marcado como campos de anulación de duplicación en Marketo. Si desea que un campo específico de Marketo se muestre como un campo de anulación de duplicación, debe marcar el campo como [campo en el que se puede buscar](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) en Marketo.
 
   >[!NOTE]
   >
@@ -166,7 +166,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

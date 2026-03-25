@@ -2,9 +2,9 @@
 description: Aprenda a configurar las especificaciones del servidor de destino en Adobe Experience Platform Destination SDK mediante el punto final /authoring/destination-servers.
 title: Especificaciones del servidor para destinos creados con Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2748'
+source-wordcount: '2745'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Esta página muestra todos los tipos de servidor de destino admitidos por Destin
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -46,7 +46,7 @@ Al [crear](../../authoring-api/destination-server/create-destination-server.md) 
 
 ## Campos no codificados frente a campos con plantillas {#templatized-fields}
 
-Al crear un servidor de destino a través de Destination SDK, puede definir los valores de los parámetros de configuración mediante su codificación en la configuración o utilizando campos con plantilla. Los campos con plantilla permiten leer los valores proporcionados por el usuario desde la interfaz de usuario de Experience Platform.
+Al crear un servidor de destino a través de Destination SDK, puede definir los valores de los parámetros de configuración mediante su codificación en la configuración o utilizando campos con plantilla. Los campos con plantilla leen los valores proporcionados por el usuario desde la IU de Experience Platform.
 
 Los parámetros del servidor de destino tienen dos campos configurables. Estas opciones dictan si está utilizando valores codificados o con plantillas.
 
@@ -160,7 +160,7 @@ El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino
 
 ## [!DNL Amazon S3] servidor de destino {#s3-example}
 
-Este servidor de destino le permite exportar archivos que contienen datos de [!DNL Adobe Experience Platform] a su almacenamiento de Amazon S3.
+Utilice este servidor de destino para exportar archivos que contengan datos de [!DNL Adobe Experience Platform] a su almacenamiento de Amazon S3.
 
 El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino para un destino de Amazon S3.
 
@@ -194,7 +194,7 @@ El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino
 
 ## [!DNL SFTP] servidor de destino {#sftp-example}
 
-Este servidor de destino le permite exportar archivos que contienen datos de [!DNL Adobe Experience Platform] a su servidor de almacenamiento [!DNL SFTP].
+Use este servidor de destino para exportar los archivos que contienen datos de [!DNL Adobe Experience Platform] a su servidor de almacenamiento [!DNL SFTP].
 
 El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino para un destino SFTP.
 
@@ -232,7 +232,7 @@ El siguiente ejemplo muestra un ejemplo de configuración de servidor de destino
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS]) servidor de destino {#adls-example}
 
-Este servidor de destino le permite exportar archivos que contienen datos de [!DNL Adobe Experience Platform] a su cuenta de [!DNL Azure Data Lake Storage].
+Use este servidor de destino para exportar los archivos que contienen [!DNL Adobe Experience Platform] datos a su cuenta de [!DNL Azure Data Lake Storage].
 
 El ejemplo siguiente muestra un ejemplo de una configuración de servidor de destino para un destino [!DNL Azure Data Lake Storage].
 
@@ -260,7 +260,7 @@ El ejemplo siguiente muestra un ejemplo de una configuración de servidor de des
 
 ## [!DNL Azure Blob Storage] servidor de destino {#blob-example}
 
-Este servidor de destino le permite exportar archivos que contienen datos de [!DNL Adobe Experience Platform] a su contenedor de [!DNL Azure Blob Storage].
+Use este servidor de destino para exportar los archivos que contienen [!DNL Adobe Experience Platform] datos a su contenedor de [!DNL Azure Blob Storage].
 
 El ejemplo siguiente muestra un ejemplo de una configuración de servidor de destino para un destino [!DNL Azure Blob Storage].
 
@@ -294,7 +294,7 @@ El ejemplo siguiente muestra un ejemplo de una configuración de servidor de des
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) servidor de destino {#dlz-example}
 
-Este servidor de destino le permite exportar archivos que contienen datos de Experience Platform a un almacenamiento de [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
+Utilice este servidor de destino para exportar archivos que contengan datos de Experience Platform a un almacenamiento de [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md).
 
 El ejemplo siguiente muestra un ejemplo de una configuración de servidor de destino para un destino [!DNL Data Landing Zone] ([!DNL DLZ]).
 
@@ -324,7 +324,7 @@ El ejemplo siguiente muestra un ejemplo de una configuración de servidor de des
 
 ## [!DNL Google Cloud Storage] servidor de destino {#gcs-example}
 
-Este servidor de destino le permite exportar archivos que contengan datos de Experience Platform a su cuenta de [!DNL Google Cloud Storage].
+Utilice este servidor de destino para exportar archivos que contengan datos de Experience Platform a su cuenta de [!DNL Google Cloud Storage].
 
 El ejemplo siguiente muestra un ejemplo de una configuración de servidor de destino para un destino [!DNL Google Cloud Storage].
 

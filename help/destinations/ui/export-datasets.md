@@ -3,9 +3,9 @@ title: Exportar conjuntos de datos a destinos de almacenamiento en la nube
 type: Tutorial
 description: Obtenga información sobre cómo exportar conjuntos de datos de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2968'
+source-wordcount: '2966'
 ht-degree: 7%
 
 ---
@@ -50,16 +50,16 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=es#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de datos de perfil y evento de experiencia creados en la interfaz de usuario de Experience Platform después de ingerir o recopilar datos a través de fuentes, Web SDK, Mobile SDK, Analytics Data Connector y Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de datos de instantánea de perfil generado por el sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=es#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
+    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=es#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
+    <td>Consulte la documentación de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Utilice la siguiente tabla para comprender qué tipos de conjuntos de datos pued
 
 Vea el siguiente vídeo para obtener una explicación completa del flujo de trabajo descrito en esta página, los beneficios de utilizar la funcionalidad de exportar conjunto de datos y algunos casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448821?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinos admitidos {#supported-destinations}
 
@@ -285,7 +285,7 @@ Solo se admiten las exportaciones a archivos JSON *en modo comprimido*. Las expo
 
 Para eliminar conjuntos de datos de un flujo de datos existente, siga los pasos a continuación:
 
-1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://experience.adobe.com/platform/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los flujos de datos de destino existentes.
+1. Vaya a la [interfaz de usuario de Experience Platform](https://experience.adobe.com/platform/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
    ![Vista de exploración de destino con una conexión de destino mostrada y el resto borroso.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -307,7 +307,7 @@ Para eliminar conjuntos de datos de un flujo de datos existente, siga los pasos 
 
 ## Derechos de exportación de conjuntos de datos {#licensing-entitlement}
 
-Consulte los documentos de descripción del producto para comprender cuántos datos puede exportar por año para cada aplicación de Experience Platform. Por ejemplo, puede ver la descripción del producto [!DNL Real-Time CDP] [aquí](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte los documentos de descripción del producto para comprender cuántos datos puede exportar por año para cada aplicación de Experience Platform. Por ejemplo, puede ver la descripción del producto [!DNL Real-Time CDP] [aquí](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Tenga en cuenta que los derechos de exportación de datos para diferentes aplicaciones no son aditivos. Por ejemplo, esto significa que si adquiere [!DNL Real-Time CDP] Ultimate y [!DNL Adobe Journey Optimizer] Ultimate, el derecho de exportación de perfil será el mayor de los dos, según las descripciones del producto. Las asignaciones por volumen se calculan tomando el número total de perfiles con licencia y multiplicando por 500 KB para [!DNL Real-Time CDP] Prime o 700 KB para [!DNL Real-Time CDP] Ultimate para determinar el volumen de datos al que tiene derecho.
 

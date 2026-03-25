@@ -1,11 +1,11 @@
 ---
 title: Etiquetas de Mailchimp
-description: El destino de Etiquetas de Mailchimp te permite exportar los datos de tu cuenta y activarlos dentro de Mailchimp para interactuar con tus contactos.
+description: Utiliza el destino de Etiquetas de Mailchimp para exportar los datos de tu cuenta y activarlos dentro de Mailchimp para interactuar con los contactos.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Consulte las secciones siguientes para conocer los requisitos previos que debe c
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Mailchimp Tags], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Mailchimp Tags], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos para el destino [!DNL Mailchimp Tags] {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Para poder crear un destino de [!DNL Mailchimp Tags], primero debe asegurarse de
 
 Necesita su [!DNL Mailchimp] **clave de API** para autenticar el destino [!DNL Mailchimp Interest Categories] con su cuenta de [!DNL Mailchimp]. La **clave API** sirve como **contraseña** al [autenticar el destino](#authenticate).
 
-Si no tiene su **clave de API**, inicie sesión en su cuenta de [!DNL Mailchimp] y consulte la documentación de [!DNL Mailchimp] sobre [cómo generar su clave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Si no tienes tu **clave de API**, inicia sesión en tu cuenta de [!DNL Mailchimp] y ve la documentación de [!DNL Mailchimp] en [cómo generar tu clave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 Un ejemplo de clave de API es `0123456789abcdef0123456789abcde-us14`.
 
@@ -66,7 +66,7 @@ La ID del centro de datos también se anexa a la clave de API con el formato *ke
 
 Anote el valor del centro de datos *(`us14` en este ejemplo)*. Necesitará este valor cuando [rellene los detalles de destino](#destination-details).
 
-Si necesita más orientación, consulte la [[!DNL Mailchimp] documentación de aspectos básicos](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+Si necesita más instrucciones, consulte la [[!DNL Mailchimp] documentación de aspectos básicos](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Mecanismos de protección {#guardrails}
 
@@ -168,7 +168,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -203,7 +203,7 @@ Cuando termine de proporcionar las asignaciones para la conexión de destino, se
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-1. Inicie sesión en su cuenta de [[!DNL Mailchimp]](https://login.mailchimp.com/). A continuación, vaya a la página **[!DNL Audience]** > **[!DNL All Contacts]** y compruebe si los contactos de la audiencia se han agregado y si los contactos de la audiencia se han actualizado con el nombre de la audiencia.
+1. Vaya a su cuenta de [[!DNL Mailchimp]](https://login.mailchimp.com/). A continuación, vaya a la página **[!DNL Audience]** > **[!DNL All Contacts]** y compruebe si los contactos de la audiencia se han agregado y si los contactos de la audiencia se han actualizado con el nombre de la audiencia.
    ![Captura de pantalla de IU de Mailchimp que muestra la página Audiencia.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}

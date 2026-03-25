@@ -4,9 +4,9 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '5178'
+source-wordcount: '5137'
 ht-degree: 3%
 
 ---
@@ -129,7 +129,7 @@ Antes de iniciar el flujo de trabajo para exportar un conjunto de datos, identif
 
 {style="table-layout:auto"}
 
-Necesita estos identificadores para construir varias entidades [!DNL Flow Service]. También debe hacer referencia a partes del propio [!DNL Connection Spec] para configurar ciertas entidades y poder recuperar el [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consulte los ejemplos siguientes de recuperación de especificaciones de conexión para todos los destinos de la tabla:
+Necesita estos identificadores para construir varias entidades [!DNL Flow Service]. También necesita hacer referencia a partes del propio [!DNL Connection Spec] para configurar ciertas entidades y poder recuperar el [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consulte los ejemplos siguientes de recuperación de especificaciones de conexión para todos los destinos de la tabla:
 
 >[!BEGINTABS]
 
@@ -1738,7 +1738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la página de documentación de destino de Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Para obtener información sobre cómo obtener los parámetros de destino necesarios, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la página de documentación de destino de Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 >Para otros valores compatibles de `datasetFileType`, consulte la documentación de referencia de la API.
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
@@ -1994,7 +1994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2063,7 +2063,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2133,7 +2133,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2203,7 +2203,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2272,7 +2272,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2342,7 +2342,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams`, lo que le permite personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
+La tabla siguiente proporciona descripciones de todos los parámetros de la sección `scheduleParams` para personalizar los tiempos de exportación, la frecuencia, la ubicación y mucho más para las exportaciones de conjuntos de datos.
 
 | Parámetro | Descripción |
 |---------|----------|
@@ -2489,7 +2489,7 @@ Vea una [lista de preguntas frecuentes](/help/destinations/ui/export-datasets.md
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de sus destinos preferidos de almacenamiento en la nube por lotes y ha configurado un flujo de datos en el destino correspondiente para exportar conjuntos de datos. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
+Se ha conectado correctamente Experience Platform a uno de los destinos de almacenamiento en la nube por lotes preferidos y ha configurado un flujo de datos en el destino respectivo para exportar conjuntos de datos. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo de destinos](../catalog/overview.md)

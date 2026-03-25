@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear un servidor de destino a través de Adobe Experience Platform Destination SDK.
 title: Crear una configuración de servidor de destino
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2029'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Para obtener una descripción detallada de las capacidades que puede configurar 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Cadena | *Requerido.* Rellene la dirección del extremo de API al que Experience Platform debe conectarse. |
 | `httpTemplate.httpMethod` | Cadena | *Requerido.* El método que Adobe usará en las llamadas a su servidor. Las opciones son `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Cadena | *Requerido.*: use `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Experience Platform al formato que espera el servicio. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, consulte la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Experience Platform al formato que espera el servicio. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información acerca del escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, vea la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Cadena | *Requerido.* El tipo de contenido que acepta su servidor. Este valor es probablemente `application/json`. |
 
 {style="table-layout:auto"}
@@ -782,7 +782,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la configurac
 
 ### Crear servidores de destino de esquema dinámico {#dynamic-schema-servers}
 
-Los esquemas dinámicos le permiten recuperar dinámicamente los atributos de destino admitidos y generar esquemas basados en su propia API. Debe configurar un servidor de destino para esquemas dinámicos antes de poder configurar el esquema.
+Los esquemas dinámicos recuperan dinámicamente los atributos de destino admitidos y generan esquemas basados en su propia API. Debe configurar un servidor de destino para esquemas dinámicos antes de poder configurar el esquema.
 
 Vea en la pestaña siguiente un ejemplo de un servidor de destino para destinos que utilizan [esquemas dinámicos](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
@@ -836,7 +836,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `urlBasedDestination.url.value` | Cadena | *Requerido.* Rellene la dirección del extremo de la API al que Experience Platform debe conectarse y recupere los campos de esquema para rellenar como campos de destino en el paso de asignación del flujo de trabajo de activación. |
 | `httpTemplate.httpMethod` | Cadena | *Requerido.* El método que Adobe usará en las llamadas a su servidor. Para servidores de esquema dinámico, use `GET`. |
 | `responseFields.templatingStrategy` | Cadena | *Requerido.*: use `PEBBLE_V1`. |
-| `responseFields.value` | Cadena | *Requerido.* Esta cadena es la plantilla de transformación sin caracteres que transforma la respuesta recibida de la API del socio en el esquema del socio que se mostrará en la interfaz de usuario de Experience Platform. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, consulte la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | Cadena | *Requerido.* Esta cadena es la plantilla de transformación sin caracteres que transforma la respuesta recibida de la API del socio en el esquema del socio que se mostrará en la interfaz de usuario de Experience Platform. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información acerca del escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, vea la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -934,7 +934,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.httpMethod` | Cadena | *Requerido.* El método que Adobe usará en las llamadas a su servidor. Para servidores desplegables dinámicos, use `GET`. |
 | `httpTemplate.headers` | Objeto | *Opcional.l* Incluya los encabezados necesarios para conectarse al servidor desplegable dinámico. |
 | `responseFields.templatingStrategy` | Cadena | *Requerido.*: use `PEBBLE_V1`. |
-| `responseFields.value` | Cadena | *Requerido.* Esta cadena es la plantilla de transformación sin caracteres que transforma la respuesta recibida de su API en los valores que se mostrarán en la interfaz de usuario de Experience Platform. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | Cadena | *Requerido.* Esta cadena es la plantilla de transformación sin caracteres que transforma la respuesta recibida de su API en los valores que se mostrarán en la interfaz de usuario de Experience Platform. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información acerca del escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 

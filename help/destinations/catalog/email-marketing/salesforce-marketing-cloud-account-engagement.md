@@ -3,9 +3,9 @@ title: Compromiso de cuenta de Salesforce Marketing Cloud
 description: Aprenda a utilizar el destino Salesforce Marketing Cloud Account Engagement (anteriormente conocido como Pardot) para exportar los datos de su cuenta y activarlos en Salesforce Marketing Cloud Account Engagement para sus necesidades comerciales.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1630'
 ht-degree: 3%
 
 ---
@@ -30,11 +30,11 @@ El departamento de marketing de una plataforma en línea desea difundir una camp
 
 ## Requisitos previos {#prerequisites}
 
-Consulte las secciones siguientes para conocer los requisitos previos que debe configurar en Experience Platform y [!DNL Salesforce] y para obtener la información que necesita recopilar antes de trabajar con el destino [!DNL Marketing Cloud Account Engagement].
+Vea las secciones siguientes para conocer todos los requisitos previos que necesita configurar en Experience Platform y [!DNL Salesforce] y para obtener la información que necesita recopilar antes de trabajar con el destino [!DNL Marketing Cloud Account Engagement].
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Marketing Cloud Account Engagement], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Marketing Cloud Account Engagement], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
@@ -58,7 +58,7 @@ Observe los elementos siguientes antes de autenticarse en el destino [!DNL Marke
 | --- | --- |
 | `Username` | Su nombre de usuario de la cuenta [!DNL Marketing Cloud Account Engagement]. |
 | `Password` | Contraseña de su cuenta de [!DNL Marketing Cloud Account Engagement]. |
-| `Account Engagement Business Unit ID` | Para encontrar el Id. de unidad de negocio de participación de cuenta, use la instalación en [!DNL Salesforce]. En Configuración, escriba *Configuración de unidad de negocio* en el cuadro Búsqueda rápida. El identificador de unidad de negocio de participación de cuenta comienza con `0Uv` y tiene 18 caracteres de longitud. Si no puede obtener acceso a la información de configuración de la unidad de negocio, pídale al administrador de cuentas de [!DNL Salesforce] que le proporcione el `Account Engagement Business Unit ID`. Si necesita instrucciones adicionales, consulte la página de directrices [[!DNL Salesforce] Autenticación](https://developer.salesforce.com/docs/marketing/pardot/guide/authentication). |
+| `Account Engagement Business Unit ID` | Para encontrar el Id. de unidad de negocio de participación de cuenta, use la instalación en [!DNL Salesforce]. En Configuración, escriba *Configuración de unidad de negocio* en el cuadro Búsqueda rápida. El identificador de unidad de negocio de participación de cuenta comienza con `0Uv` y tiene 18 caracteres de longitud. Si no puede obtener acceso a la información de configuración de la unidad de negocio, pídale al administrador de cuentas de [!DNL Salesforce] que le proporcione el `Account Engagement Business Unit ID`. Si necesita instrucciones adicionales, consulte la página de guía [[!DNL Salesforce] Autenticación](https://developer.salesforce.com/docs/marketing/pardot/guide/authentication). |
 
 {style="table-layout:auto"}
 
@@ -162,7 +162,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -197,7 +197,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Vaya a una de las audiencias que haya seleccionado. Seleccione la pestaña **[!DNL Activation data]** La columna **[!UICONTROL Mapping ID]** muestra el nombre del campo personalizado generado en la página [!DNL Marketing Cloud Account Engagement Prospects].
    ![Ejemplo de captura de pantalla de la interfaz de usuario de Experience Platform que muestra el ID de asignación de un segmento seleccionado.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. Inicie sesión en el sitio web [[!DNL Salesforce]](https://login.salesforce.com/). A continuación, vaya a la página **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** y compruebe si los posibles clientes de la audiencia se han agregado o actualizado. También puede tener acceso a [[!DNL Salesforce Pardot]](https://pi.pardot.com/) y a la página **[!DNL Prospects]**.
+1. Ir al sitio web [[!DNL Salesforce]](https://login.salesforce.com/). A continuación, vaya a la página **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** y compruebe si los posibles clientes de la audiencia se han agregado o actualizado. También puede tener acceso a [[!DNL Salesforce Pardot]](https://pi.pardot.com/) y a la página **[!DNL Prospects]**.
    ![Captura de pantalla de la interfaz de usuario de Salesforce que muestra la página de clientes potenciales.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
 1. Para comprobar si se han actualizado los posibles clientes, seleccione un cliente y verifique si el campo de cliente potencial personalizado se ha actualizado con el estado de audiencia de Experience Platform.

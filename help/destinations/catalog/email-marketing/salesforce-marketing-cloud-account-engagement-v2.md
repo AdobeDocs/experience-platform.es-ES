@@ -5,16 +5,16 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1875'
 ht-degree: 3%
 
 ---
 
 # [!DNL (V2) Salesforce Marketing Cloud Account Engagement] conexión
 
-El destino [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (anteriormente conocido como [!DNL Pardot]) le permite exportar los datos de perfil [!DNL Adobe Experience Platform] a la plataforma de automatización de marketing B2B de Salesforce.
+El destino [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) (anteriormente conocido como [!DNL Pardot]) exporta los datos del perfil [!DNL Adobe Experience Platform] a la plataforma de automatización de marketing B2B de Salesforce.
 
 Esta integración habilita la sincronización de datos sin problemas entre los perfiles de sus clientes en [!DNL Adobe Experience Platform] y sus campañas de marketing en [!DNL Salesforce Marketing Cloud Account Engagement].
 
@@ -164,7 +164,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -219,7 +219,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Vaya a una de las audiencias que haya seleccionado. Seleccione la pestaña **[!DNL Activation data]** La columna **[!UICONTROL Mapping ID]** muestra el nombre del campo personalizado generado en la página [!DNL Marketing Cloud Account Engagement Prospects].
    ![Ejemplo de captura de pantalla de la interfaz de usuario de Experience Platform que muestra el ID de asignación de un segmento seleccionado.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/selected-segment-mapping-id.png)
 
-1. Inicie sesión en el sitio web [[!DNL Salesforce]](https://login.salesforce.com/). A continuación, vaya a la página **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** y compruebe si se han agregado o actualizado los posibles clientes de la audiencia. También puede tener acceso a [[!DNL Account Engagement]](https://pi.pardot.com/) y a la página **[!DNL Prospects]**.
+1. Ir al sitio web [[!DNL Salesforce]](https://login.salesforce.com/). A continuación, vaya a la página **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** y compruebe si se han agregado o actualizado los posibles clientes de la audiencia. También puede tener acceso a [[!DNL Account Engagement]](https://pi.pardot.com/) y a la página **[!DNL Prospects]**.
    ![Captura de pantalla de la interfaz de usuario de Salesforce que muestra la página de clientes potenciales.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement-v2/prospects.png)
 
 1. Para comprobar si se han actualizado los posibles clientes, seleccione un cliente y verifique si el campo de cliente potencial personalizado se ha actualizado con el estado de audiencia de Experience Platform.

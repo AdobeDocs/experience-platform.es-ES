@@ -3,9 +3,9 @@ keywords: plataforma;destinos;espacio de trabajo de destinos;espacio de trabajo;
 title: Espacio de trabajo Destinos
 description: El espacio de trabajo Destinos consta de cinco secciones, Información general, Catálogo, Examinar, Cuentas y Vista de sistema. Se describen en las secciones siguientes.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -46,10 +46,10 @@ Las tarjetas de destino contienen opciones de control principales y secundarias.
 
 | Control | Descripción |
 |---------|----------|
-| [!UICONTROL Set up] | Permite crear una conexión con el destino. |
-| [!UICONTROL Activate] | Una vez establecida una conexión con el destino, puede activar audiencias o exportar conjuntos de datos a este destino. |
-| [!UICONTROL Activate audiences] | Una vez establecida una conexión con el destino, puede activar audiencias en este destino. |
-| [!UICONTROL Export datasets] | Una vez establecida una conexión con el destino, puede exportar conjuntos de datos a este destino. |
+| [!UICONTROL Set up] | Cree una conexión con el destino. |
+| [!UICONTROL Activate] | Después de establecer una conexión con el destino, active audiencias o exporte conjuntos de datos a este destino. |
+| [!UICONTROL Activate audiences] | Después de establecer una conexión con el destino, active las audiencias en este destino. |
+| [!UICONTROL Export datasets] | Después de establecer una conexión con el destino, exporte los conjuntos de datos a este destino. |
 | [!UICONTROL View account] | Ver las cuentas que ha conectado para un destino. |
 | [!UICONTROL View dataflows] | Vea los flujos de activación de datos que existen para un destino. |
 | [!UICONTROL View documentation] | Abre un vínculo a la página de documentación de ese destino específico, para obtener más información y para ayudarle a configurarlo. |
@@ -83,7 +83,7 @@ Los destinos con la opción **[!UICONTROL Enabled/Disabled]** activada establece
 > ![Ficha Examinar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Activar control de audiencias](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar las conexiones de destino existentes. Lea el tutorial sobre [editar destinos](/help/destinations/ui/edit-destination.md) para obtener más información.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de acciones de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** para [cambiar las acciones de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para el destino seleccionado.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Eliminar control](/help/images/icons/delete.png) **[!UICONTROL Delete]** para [quitar](delete-destinations.md) una conexión existente a un destino.
 > * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Ver en el control de supervisión](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** para ver la información de activación de este destino en el [panel de supervisión](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -110,11 +110,11 @@ Consulte la tabla siguiente para obtener toda la información proporcionada para
 
 {style="table-layout:auto"}
 
-Haga clic en una fila de destino para que aparezca más información sobre el destino en el carril derecho, como el ID de destino, la descripción, el número de audiencias activadas, etc.
+Seleccione una fila de destino para ver más información sobre el destino en el carril derecho, como el ID de destino, la descripción, el número de audiencias activadas, etc.
 
 ![Haga clic en la fila de destino](../assets/ui/workspace/click-destination-row.png)
 
-Seleccione el nombre del destino para ver información sobre las audiencias activadas en este destino. Haga clic en **[!UICONTROL Edit destination]** para [modificar la configuración de destino](/help/destinations/ui/edit-destination.md) o **[!UICONTROL Activate audiences]** para agregar nuevas audiencias al flujo de datos.
+Seleccione el nombre del destino para ver información sobre las audiencias activadas en este destino. Seleccione **[!UICONTROL Edit destination]** para [modificar la configuración de destino](/help/destinations/ui/edit-destination.md) o **[!UICONTROL Activate audiences]** para agregar nuevas audiencias al flujo de datos.
 
 ### Filtrado de flujos de datos en la pestaña Browse {#filter-browse}
 
@@ -181,13 +181,13 @@ Asegúrese de que los flujos de datos de destino permanezcan organizados, fácil
 
 ## [!UICONTROL Accounts] {#accounts}
 
-La ficha **[!UICONTROL Accounts]** muestra detalles acerca de las conexiones que ha establecido con varios destinos y le permite actualizar o eliminar detalles de cuenta existentes. Consulte la tabla siguiente para obtener toda la información que puede obtener sobre cada cuenta de destino.
+La ficha **[!UICONTROL Accounts]** muestra detalles acerca de las conexiones que ha establecido con varios destinos. Puede actualizar o eliminar los detalles de una cuenta existente en esta pestaña. Consulte la tabla siguiente para obtener toda la información disponible sobre cada cuenta de destino.
 
 >[!TIP]
 >
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y utilice el control ![Activate control &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;para exportar audiencias o conjuntos de datos a ese destino.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y use el control ![Editar detalles &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
-> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y use el control ![Eliminar control &#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;para [eliminar](delete-destination-account.md) una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y utilice el control ![Activate control ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**para exportar audiencias o conjuntos de datos a ese destino.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y use el control ![Editar detalles ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**para [actualizar](update-accounts.md) los detalles de una cuenta de destino existente.
+> * Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Platform] y use el control ![Eliminar control ](/help/images/icons/delete.png)**[!UICONTROL Delete]**para [eliminar](delete-destination-account.md) una cuenta de destino existente.
 
 ![Pestaña Cuentas](../assets/ui/workspace/accounts-tab.png)
 

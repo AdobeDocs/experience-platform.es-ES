@@ -2,9 +2,9 @@
 description: En esta página se describen los distintos flujos de autorización de OAuth 2 admitidos por Destination SDK y se proporcionan instrucciones para configurar la autorización de OAuth 2 para su destino.
 title: Autorización de OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2234'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ En esta página se describen los distintos flujos de autorización de OAuth 2 ad
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -124,7 +124,7 @@ Para configurar este método de autorización para su destino, agregue las sigui
 | `authType` | Cadena | Utilice &quot;OAUTH2&quot;. |
 | `grant` | Cadena | Utilice &quot;OAUTH2_AUTHORIZATION_CODE&quot;. |
 | `accessTokenUrl` | Cadena | La dirección URL del sitio, que emite tokens de acceso y, opcionalmente, tokens de actualización. |
-| `authorizationUrl` | Cadena | La URL del servidor de autorización, donde redirige al usuario para que inicie sesión en la aplicación. |
+| `authorizationUrl` | Cadena | Dirección URL del servidor de autorización, donde se redirige al usuario para que vaya a la aplicación. |
 | `refreshTokenUrl` | Cadena | *Opcional.*: la dirección URL de su lado que emite tokens de actualización. A menudo, `refreshTokenUrl` es el mismo que `accessTokenUrl`. |
 | `clientId` | Cadena | Identificador de cliente que el sistema asigna a [!DNL Adobe Experience Platform]. |
 | `clientSecret` | Cadena | Secreto de cliente que el sistema asigna a [!DNL Adobe Experience Platform]. |
@@ -491,4 +491,4 @@ Según la personalización de la autorización, es posible que deba acceder a lo
 
 ## Próximos pasos {#next-steps}
 
-Al leer este artículo, ahora comprende los patrones de autorización de OAuth 2 admitidos por [!DNL Adobe Experience Platform] y sabe cómo configurar su destino con la compatibilidad de autorización de OAuth 2. A continuación, puede configurar el destino compatible con OAuth 2 mediante Destination SDK. Lee [Usar Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para los siguientes pasos.
+Ahora tiene conocimientos de los patrones de autorización de OAuth 2 admitidos por [!DNL Adobe Experience Platform] y sabe cómo configurar su destino con compatibilidad con autorización de OAuth 2. A continuación, puede configurar el destino compatible con OAuth 2 mediante Destination SDK. Lee [Usar Destination SDK para configurar tu destino](../../guides/configure-destination-instructions.md) para los siguientes pasos.

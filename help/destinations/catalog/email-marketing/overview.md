@@ -2,11 +2,11 @@
 keywords: correo electrónico;Correo electrónico;correo electrónico;destinos de correo electrónico
 title: Resumen de destinos de marketing de correo electrónico
 type: Tutorial
-description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como para enviar campañas de correo electrónico promocionales. Descubra qué ESP son compatibles como destinos de Experience Platform.
+description: Los proveedores de servicios de correo electrónico (ESP) permiten administrar las actividades de marketing por correo electrónico, como para enviar campañas de correo electrónico promocionales. Descubra qué ESP son compatibles como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '370'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Para enviar audiencias a destinos de marketing por correo electrónico para sus 
 
 ### Selección de identidad {#identity}
 
-Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Este es el campo desde el que se desactivan las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la tabla siguiente para conocer los identificadores únicos más comunes y su campo XDM en el esquema.
+Adobe recomienda seleccionar un identificador único de su [esquema de unión](../../../profile/home.md#profile-fragments-and-union-schemas). Este es el campo desde el que se desactivan las identidades de los usuarios. Normalmente, este campo es la dirección de correo electrónico, pero también puede ser un ID de programa de fidelidad o un número de teléfono. Consulte la siguiente tabla para conocer los identificadores únicos más comunes y su campo XDM en el esquema.
 
 | Identificador único | Campo XDM en el esquema unificado |
 |----------------- | ---------------------------|

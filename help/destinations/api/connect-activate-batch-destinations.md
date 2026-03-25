@@ -5,9 +5,9 @@ title: Conéctese a destinos por lotes y active los datos mediante la API de Flo
 description: Instrucciones paso a paso para utilizar la API de Flow Service para crear un almacenamiento en la nube por lotes o un destino de marketing por correo electrónico en Experience Platform y activar los datos
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '3423'
+source-wordcount: '3413'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 >
 >* Para conectarse a un destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;.](/help/access-control/home.md#permissions)
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}.](/help/access-control/home.md#permissions)
 >
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 >
@@ -41,7 +41,7 @@ Si prefiere usar la interfaz de usuario de Experience Platform para conectarse a
 Esta guía requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de los datos de [!DNL Real-Time Customer Profile].
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] crea audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para activar datos en destinos por lotes en Experience Platform.
@@ -1049,7 +1049,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | El nuevo valor con el que desea actualizar el parámetro. |
 | `id` | Especifique el ID de la audiencia que está agregando al flujo de datos de destino. |
 | `name` | *Opcional*. Especifique el nombre de la audiencia que está agregando al flujo de datos de destino. Tenga en cuenta que este campo no es obligatorio y puede añadir correctamente una audiencia al flujo de datos de destino sin proporcionar su nombre. |
-| `filenameTemplate` | Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las siguientes opciones están disponibles: <br> <ul><li>`%DESTINATION_NAME%`: obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: Opcional. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: Opcional. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que Experience Platform los genera.</li><li>`custom-text`: Opcional. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre cómo configurar nombres de archivo, consulte la sección [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) en el tutorial de activación de destinos por lotes. |
+| `filenameTemplate` | Este campo determina el formato del nombre de archivo de los archivos que se exportan al destino. <br> Las siguientes opciones están disponibles: <br> <ul><li>`%DESTINATION_NAME%`: obligatorio. Los archivos exportados contienen el nombre de destino.</li><li>`%SEGMENT_ID%`: obligatorio. Los archivos exportados contienen el ID de la audiencia exportada.</li><li>`%SEGMENT_NAME%`: Opcional. Los archivos exportados contienen el nombre de la audiencia exportada.</li><li>`DATETIME(YYYYMMdd_HHmmss)` o `%TIMESTAMP%`: Opcional. Seleccione una de estas dos opciones para que los archivos incluyan el momento en que Experience Platform los genera.</li><li>`custom-text`: Opcional. Reemplace este marcador de posición por cualquier texto personalizado que desee anexar al final de los nombres de archivo.</li></ul> <br> Para obtener más información sobre cómo configurar los nombres de archivo, consulte la sección [configurar nombres de archivo](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) en el tutorial de activación de destinos por lotes. |
 | `exportMode` | Obligatorio. Seleccione `"DAILY_FULL_EXPORT"` o `"FIRST_FULL_THEN_INCREMENTAL"`. Para obtener más información sobre las dos opciones, consulte [exportar archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [exportar archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) en el tutorial de activación de destinos por lotes. |
 | `startDate` | Seleccione la fecha en la que la audiencia debe comenzar a exportar perfiles a su destino. |
 | `frequency` | Obligatorio. <br> <ul><li>Para el modo de exportación `"DAILY_FULL_EXPORT"`, puede seleccionar `ONCE`, `DAILY`, `WEEKLY` o `MONTHLY`.</li><li>Para el modo de exportación `"FIRST_FULL_THEN_INCREMENTAL"`, puede seleccionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
@@ -1257,7 +1257,7 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de sus destinos de marketing por correo electrónico basados en archivos preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar archivos de datos. Los datos salientes ahora se pueden utilizar en el destino para campañas de correo electrónico, publicidad segmentada y muchos otros casos de uso. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
+Ha conectado correctamente Experience Platform a uno de sus destinos de marketing por correo electrónico basados en archivos preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar archivos de datos. Los datos salientes ahora se pueden utilizar en el destino para campañas de correo electrónico, publicidad segmentada y muchos otros casos de uso. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)

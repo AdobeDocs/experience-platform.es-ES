@@ -4,9 +4,9 @@ description: Utilice el conector de sincronización de personas de Marketo Engag
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1196'
 ht-degree: 6%
 
 ---
@@ -87,11 +87,11 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 >
 >* Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 
-Si su compañía tiene acceso a varias organizaciones, asegúrese de utilizar la misma organización tanto en Marketo Engage como en [!DNL Real-Time CDP], donde está configurando el conector de destino en Marketo.  Si ya ha configurado un destino, puede seleccionar una cuenta existente de Marketo para usarla con la nueva configuración.  Si no es así, haga clic en el indicador Connector to Destination, que le permitirá establecer el nombre, la descripción y el ID de Marketo Munchkin del destino deseado.  El Munchkin ID de su instancia de Marketo se encuentra en el menú Administración->Munchkin.
+Si su compañía tiene acceso a varias organizaciones, asegúrese de utilizar la misma organización tanto en Marketo Engage como en [!DNL Real-Time CDP], donde está configurando el conector de destino en Marketo.  Si ya ha configurado un destino, puede seleccionar una cuenta existente de Marketo para usarla con la nueva configuración.  Si no es así, haga clic en el indicador Connector to Destination para establecer el nombre, la descripción y el ID de Marketo Munchkin del destino deseado.  El Munchkin ID de su instancia de Marketo se encuentra en el menú Administración->Munchkin.
 
 >[!IMPORTANT]
 >
->El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
+>El usuario que configura el destino debe tener el permiso [Editar persona](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) en la instancia y partición de Marketo.
 
 ![Conectar con destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Si su compañía tiene acceso a varias organizaciones, asegúrese de utilizar la
 * **[!UICONTROL First searchable field]**: campo en el que se deduplicará. El campo debe estar presente en cada registro de posibles clientes de la entrada. El valor predeterminado es correo electrónico
 * **[!UICONTROL First searchable field]**: campo secundario en el que se va a deduplicar. El campo debe estar presente en cada registro de posibles clientes de la entrada. Opcional
 
-Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/es/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
+Una vez seleccionada la instancia, también debe seleccionar la partición de posible cliente con la que desea integrar la configuración. Una [partición de posibles clientes](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) es un concepto de Marketo Engage que se usa para separar los registros de posibles clientes por motivo de negocio, como una marca o una región de ventas. Si su suscripción a Marketo no tiene la función Espacios de trabajo y particiones, o si no se han creado particiones adicionales en su suscripción, solo estará disponible la partición predeterminada. Una sola configuración solo puede actualizar los registros de posibles clientes que existan en su partición configurada.
 
 >[!IMPORTANT]
 >
@@ -124,7 +124,7 @@ Si no se encuentra ningún registro de posible cliente coincidente, se creará u
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 

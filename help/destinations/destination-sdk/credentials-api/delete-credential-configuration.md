@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una Adobe Experience Platform Destination SDK de configuración de credenciales.
 title: Eliminar una configuración de credenciales
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Cuando use un sistema de autenticación global, debe establecer `"authentication
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 

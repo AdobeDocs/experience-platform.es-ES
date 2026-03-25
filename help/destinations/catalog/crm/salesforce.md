@@ -1,11 +1,11 @@
 ---
 keywords: crm;CRM;destinos de crm;salesforce crm;destino de crm de salesforce
 title: Conexión de Salesforce CRM
-description: El destino de Salesforce CRM le permite exportar los datos de su cuenta y activarlos dentro de Salesforce CRM para sus necesidades comerciales.
+description: Utilice el destino de Salesforce CRM para exportar los datos de su cuenta y activarlos en Salesforce CRM para sus necesidades comerciales.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2885'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a los usuar
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino de Salesforce CRM, debe tener [schema](/help/xdm/schema/composition.md), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino de Salesforce CRM, debe tener [schema](/help/xdm/schema/composition.md), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL Salesforce CRM] {#prerequisites-destination}
 
@@ -214,7 +214,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -310,7 +310,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro del segmento.
    ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra el segmento.](../../assets/catalog/crm/salesforce/segment.png)
 
-1. Finalmente, inicie sesión en el sitio web de Salesforce y valide si se han actualizado los perfiles de la audiencia.
+1. Finalmente, vaya al sitio web de Salesforce y compruebe si los perfiles de la audiencia se han actualizado.
 
    **Trabajando con contactos**
 

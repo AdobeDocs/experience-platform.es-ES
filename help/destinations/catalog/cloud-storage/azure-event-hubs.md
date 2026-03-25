@@ -4,9 +4,9 @@ title: Conexión de Azure Event Hubs
 description: Cree una conexión saliente en tiempo real a su  [!DNL Azure Event Hubs] almacenamiento para transmitir datos desde Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2146'
+source-wordcount: '2142'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 [!DNL Azure Event Hubs] es una plataforma de transmisión de datos y un servicio de ingesta de eventos. Puede recibir y procesar millones de eventos por segundo. Los datos enviados a un centro de eventos se pueden transformar y almacenar mediante cualquier proveedor de análisis en tiempo real o adaptador de almacenamiento/agrupamiento.
 
@@ -73,7 +73,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
 
-Para cumplir los requisitos de seguridad y conformidad de los clientes, Experience Platform proporciona una lista de direcciones IP estáticas que puede lista de permitidos para el destino [!DNL Azure Event Hubs]. Consulte la [lista de permitidos de direcciones IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de direcciones IP para lista de permitidos.
+Para cumplir los requisitos de seguridad y conformidad de los clientes, Experience Platform proporciona una lista de direcciones IP estáticas que puede lista de permitidos para el destino [!DNL Azure Event Hubs]. Consulte la [lista de permitidos de direcciones IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de direcciones IP que se enviarán a la lista de permitidos.
 
 ## Conectar con el destino {#connect}
 
@@ -125,8 +125,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Name]**: escriba un nombre para la conexión con [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: proporcione una descripción de la conexión. Ejemplos: &quot;Clientes de nivel Premium&quot;, &quot;Clientes interesados en el kitesurf&quot;.
 * **[!UICONTROL eventHubName]**: proporcione un nombre para la secuencia a su destino [!DNL Azure Event Hubs].
-* **[!UICONTROL Include Segment Names]**: cambie esta opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
-* **[!UICONTROL Include Segment Timestamps]**: cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Include Segment Names]**: cambie esta opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. Para ver un ejemplo de una exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Include Segment Timestamps]**: cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de una exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -138,7 +138,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de la directiva de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de Azure Event Hubs. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

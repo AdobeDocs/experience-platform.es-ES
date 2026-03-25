@@ -4,9 +4,9 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '4966'
+source-wordcount: '4933'
 ht-degree: 4%
 
 ---
@@ -50,14 +50,14 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 Esta guía requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] crea audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para activar datos en destinos basados en archivos en Experience Platform.
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
@@ -87,7 +87,7 @@ Todas las solicitudes que contienen una carga útil (`POST`, `PUT`, `PATCH`) req
 
 ### Documentación de referencia del API {#api-reference-documentation}
 
-Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte [Servicio de flujo: documentación de la API de destinos en el sitio web de Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Le recomendamos que utilice este tutorial y la documentación de referencia de la API en paralelo.
+Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte [Flow Service: documentación de la API de destinos en el sitio web de Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Le recomendamos que utilice este tutorial y la documentación de referencia de la API en paralelo.
 
 ### Glosario {#glossary}
 
@@ -2438,7 +2438,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2532,7 +2532,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información sobre cómo obtener los parámetros de destino requeridos, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la página de documentación de destino de Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Para obtener información sobre cómo obtener los parámetros de destino necesarios, consulte la sección [rellenar detalles de destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la página de documentación de destino de Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 
 Observe las líneas resaltadas con comentarios en línea en el ejemplo de la solicitud, que proporcionan información adicional. Elimine los comentarios en línea de la solicitud al copiar y pegar la solicitud en el terminal que desee.
 
@@ -2625,7 +2625,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2718,7 +2718,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2812,7 +2812,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2905,7 +2905,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obtener información detallada sobre las opciones de CSV disponibles para exportar archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
+>Para obtener información detallada sobre las opciones de CSV disponibles para la exportación de archivos, consulte la [página de configuraciones de formato de archivo](/help/destinations/ui/batch-destinations-file-formatting-options.md) .
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -4879,7 +4879,7 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha conectado correctamente Experience Platform a uno de los destinos de almacenamiento en la nube preferidos y ha configurado un flujo de datos en el destino correspondiente para exportar audiencias. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
+Se ha conectado correctamente Experience Platform a uno de los destinos de almacenamiento en la nube preferidos y se ha configurado un flujo de datos en el destino respectivo para exportar audiencias. Consulte las siguientes páginas para obtener más información, como cómo editar flujos de datos existentes mediante la API de Flow Service:
 
 * [Información general sobre los destinos](../home.md)
 * [Resumen del catálogo Destinos](../catalog/overview.md)

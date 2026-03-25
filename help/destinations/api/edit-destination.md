@@ -4,9 +4,9 @@ title: Editar conexiones de destino mediante la API de Flow Service
 type: Tutorial
 description: Obtenga información sobre cómo editar varios componentes de una conexión de destino mediante la API de Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1599'
 ht-degree: 5%
 
 ---
@@ -467,4 +467,4 @@ Los extremos de la API en este tutorial siguen los principios generales del mens
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha aprendido a actualizar varios componentes de una conexión de destino mediante la API [!DNL Flow Service]. Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../home.md).
+Ha aprendido a actualizar varios componentes de una conexión de destino mediante la API [!DNL Flow Service]. Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../home.md).

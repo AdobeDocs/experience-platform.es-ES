@@ -3,16 +3,16 @@ solution: Experience Platform
 title: Glosario de Adobe Experience Platform Destination SDK
 description: Comprender la terminología importante al crear un destino con Experience Platform Destination SDK.
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '669'
 ht-degree: 2%
 
 ---
 
 # Glosario de Destination SDK [!DNL Adobe Experience Platform]
 
-Consulte este glosario para ver las definiciones de los términos utilizados en Destination SDK. Para otros términos de [!DNL Adobe Experience Platform], consulte el [glosario de Experience Platform](/help/landing/glossary.md).
+Consulte este glosario para ver las definiciones de los términos utilizados en Destination SDK. Para ver otros términos de [!DNL Adobe Experience Platform], consulte el [glosario de Experience Platform](/help/landing/glossary.md).
 
 ## A {#a}
 
@@ -44,6 +44,6 @@ Consulte este glosario para ver las definiciones de los términos utilizados en 
 
 **Especificaciones de plantilla y estrategias de creación de plantillas**: Las especificaciones de plantilla son configuraciones utilizadas para dar formato a las solicitudes HTTP enviadas desde [!DNL Adobe Experience Platform] a un destino. Transforman los campos de atributos de perfil del esquema XDM en un formato compatible con la plataforma de destino. Usando un lenguaje de plantilla similar a [!DNL Jinja], estas especificaciones permiten transformaciones de datos dinámicas basadas en reglas específicas y datos de entrada. [Más información](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 
-**API de prueba**: la API de prueba le permite validar las configuraciones de destino antes de enviar una solicitud de publicación. Proporciona herramientas para generar perfiles de muestra y probar el flujo de datos, asegurándose de que la configuración coincida con los requisitos del destino. La API admite destinos de flujo continuo y basados en archivos (por lotes), lo que ofrece una forma de simular datos y solucionar posibles problemas en el proceso de configuración. Obtenga más información acerca de la API de prueba para [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) y [destinos basados en archivos](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
+**API de prueba**: use la API de prueba para validar las configuraciones de destino antes de enviar una solicitud de publicación. Proporciona herramientas para generar perfiles de muestra y probar el flujo de datos, asegurándose de que la configuración coincida con los requisitos del destino. La API admite destinos de flujo continuo y basados en archivos (por lotes), lo que ofrece una forma de simular datos y solucionar posibles problemas en el proceso de configuración. Obtenga más información acerca de la API de prueba para [streaming](/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md) y [destinos basados en archivos](/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md).
 
 **Plantilla de transformación**: Una plantilla de transformación personaliza el formato de datos del esquema XDM de Adobe al formato esperado del destino. [Más información](/help/destinations/destination-sdk/functionality/destination-server/message-format.md).

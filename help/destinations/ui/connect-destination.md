@@ -3,9 +3,9 @@ title: Crear una nueva conexión de destino
 type: Tutorial
 description: Obtenga información sobre cómo conectarse a un destino en Adobe Experience Platform, activar alertas y configurar acciones de marketing para el destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ Para poder enviar datos de audiencia a un destino, debe configurar una conexión
    * **[!UICONTROL Activate]**. Ya se ha configurado una conexión con este destino. Este destino admite la activación de audiencias y exportaciones de conjuntos de datos.
    * **[!UICONTROL Activate audiences]**. Ya se ha configurado una conexión con este destino. Este destino solo admite la activación de audiencias.
 
-   Para obtener más información sobre la diferencia entre estos controles, también puede consultar la sección [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación del área de trabajo de destino.
+   Para obtener más información acerca de la diferencia entre estos controles, vea la sección [Catálogo](../ui/destinations-workspace.md#catalog) de la documentación del área de trabajo de destino.
 
    Seleccione **[!UICONTROL Set up]**, **[!UICONTROL Activate]** o **[!UICONTROL Activate audiences]**, según el control que esté disponible.
 
@@ -109,7 +109,7 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
 ### Habilitar alertas de destino {#enable-alerts}
 
-1. (Opcional) Seleccione las alertas de flujo de datos de destino a las que desee suscribirse. Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo. Las alertas disponibles difieren según el tipo de destino (basado en archivos o de flujo continuo) al que se conecte. Lea [Suscribirse a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
+1. (Opcional) Seleccione las alertas de flujo de datos de destino a las que desee suscribirse. Suscríbase a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo. Las alertas disponibles difieren según el tipo de destino (basado en archivos o de flujo continuo) al que se conecte. Lea [Suscribirse a alertas de destino en contexto](alerts.md) para obtener información detallada sobre las alertas de flujo de datos de destino.
 
    ![Se resaltó el cuadro de diálogo Configurar nuevo destino con las opciones de suscripción de alertas de destino en contexto.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -127,6 +127,6 @@ Algunos destinos basados en archivos admiten la activación de audiencias a clie
 
 ## Próximos pasos {#next-steps}
 
-Al leer este documento, ha aprendido a utilizar la interfaz de usuario de Experience Platform para establecer una conexión con un destino. Como recordatorio, los parámetros de conexión disponibles y requeridos varían de un destino a otro. También debería consultar la página de documentación de destino en el [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica acerca de las entradas requeridas y las opciones disponibles por tipo de destino.
+Ahora sabe cómo utilizar la interfaz de usuario de Experience Platform para establecer una conexión con un destino. Los parámetros de conexión disponibles y requeridos varían de un destino a otro. Consulte la página de documentación de destino en el [catálogo de destinos](/help/destinations/catalog/overview.md) para obtener información específica acerca de las entradas requeridas y las opciones disponibles por tipo de destino.
 
-A continuación, puede [activar audiencias](/help/destinations/ui/activation-overview.md) o [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) a su destino.
+A continuación, proceda a [activar audiencias](/help/destinations/ui/activation-overview.md) o a [exportar conjuntos de datos](/help/destinations/ui/export-datasets.md) a su destino.

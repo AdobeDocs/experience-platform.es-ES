@@ -2,9 +2,9 @@
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, Adobe la utilizará para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1270'
 ht-degree: 2%
 
 ---
@@ -546,20 +546,20 @@ Para pasar información como ID de audiencia, tokens de acceso, mensajes de erro
 
 | Macro | Descripción |
 |--- |--- |
-| `{{segment.alias}}` | Permite acceder al alias de audiencia en Experience Platform. |
-| `{{segment.name}}` | Permite acceder al nombre de la audiencia en Experience Platform. |
-| `{{segment.id}}` | Permite acceder al ID de audiencia en Experience Platform. |
-| `{{customerData.accountId}}` | Permite acceder al campo ID de cuenta que configuró en la configuración de destino. |
-| `{{oauth2ServiceAccessToken}}` | Permite generar dinámicamente un token de acceso basado en la configuración de OAuth 2. |
-| `{{authData.accessToken}}` | Permite pasar el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
+| `{{segment.alias}}` | Accede al alias de audiencia en Experience Platform. |
+| `{{segment.name}}` | Accede al nombre de la audiencia en Experience Platform. |
+| `{{segment.id}}` | Accede al ID de audiencia en Experience Platform. |
+| `{{customerData.accountId}}` | Accede al campo ID de cuenta que configuró en la configuración de destino. |
+| `{{oauth2ServiceAccessToken}}` | Genera dinámicamente un token de acceso basado en la configuración de OAuth 2. |
+| `{{authData.accessToken}}` | Pasa el token de acceso a su extremo de API. Use `{{authData.accessToken}}` si Experience Platform debe usar tokens que no caduquen para conectarse a su destino; de lo contrario, use `{{oauth2ServiceAccessToken}}` para generar un token de acceso. |
 | `{{body.segments[0].segment.id}}` | Devuelve el identificador único de la audiencia creada, como el valor de la clave `externalAudienceId`. |
 | `{{error.message}}` | Devuelve un mensaje de error que se mostrará a los usuarios en la interfaz de usuario de Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Permite acceder a todos los atributos de enriquecimiento de una audiencia específica.  Los eventos `create`, `update` y `delete` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{{segmentEnrichmentAttributes}}}` | Accede a todos los atributos de enriquecimiento de una audiencia específica.  Los eventos `create`, `update` y `delete` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
 | `{{destination.name}}` | Devuelve el nombre del destino. |
 | `{{destination.sandboxName}}` | Devuelve el nombre de la zona protegida de Experience Platform donde está configurado el destino. |
 | `{{destination.id}}` | Devuelve el ID de la configuración de destino. |
 | `{{destination.imsOrgId}}` | Devuelve el ID de organización de IMS donde está configurado el destino. |
-| `{{destination.enrichmentAttributes}}` | Permite acceder a todos los atributos de enriquecimiento de todas las audiencias asignadas a un destino. Los eventos `createDestination`, `updateDestination` y `deleteDestination` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acceder a atributos de enriquecimiento para audiencias externas específicas asignadas a un destino. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.enrichmentAttributes}}` | Accede a todos los atributos de enriquecimiento de todas las audiencias asignadas a un destino. Los eventos `createDestination`, `updateDestination` y `deleteDestination` admiten esta macro. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Accede a los atributos de enriquecimiento para audiencias externas específicas asignadas a un destino. Los atributos de enriquecimiento solo están disponibles para [públicos de carga personalizados](destination-configuration/schema-configuration.md#external-audiences). Consulte la [guía de activación de audiencia por lotes](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver cómo funciona la selección de atributos de enriquecimiento. |
 
 {style="table-layout:auto"}

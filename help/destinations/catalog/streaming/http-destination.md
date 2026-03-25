@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3017'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -25,7 +25,7 @@ Para enviar datos de perfil a los extremos HTTP, primero debe [conectarse al des
 
 ## Casos de uso {#use-cases}
 
-El destino de la API HTTP permite exportar datos de perfil XDM y audiencias a extremos HTTP genéricos. Aquí puede ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
+Utilice el destino de la API HTTP para exportar datos de perfil XDM y audiencias a extremos HTTP genéricos. Aquí puede ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 
 Los extremos HTTP pueden ser sistemas propios de los clientes o soluciones de terceros.
 
@@ -103,7 +103,7 @@ Consulte la [documentación de extremo de certificado público](../../../data-go
 
 ## LISTA DE PERMITIDOS de direcciones IP {#ip-address-allowlist}
 
-Para cumplir los requisitos de seguridad y cumplimiento de normas de los clientes, Experience Platform proporciona una lista de direcciones IP estáticas que puede lista de permitidos para el destino de la API HTTP. Consulte la [lista de permitidos de direcciones IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de direcciones IP para lista de permitidos.
+Para cumplir los requisitos de seguridad y cumplimiento de normas de los clientes, Experience Platform proporciona una lista de direcciones IP estáticas que puede lista de permitidos para el destino de la API HTTP. Consulte la [lista de permitidos de direcciones IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obtener la lista completa de direcciones IP que se enviarán a la lista de permitidos.
 
 ## Tipos de autenticación admitidos {#supported-authentication-types}
 
@@ -236,8 +236,8 @@ Para configurar los detalles del destino, rellene los campos obligatorios y opci
 * **[!UICONTROL Headers]**: escriba los encabezados personalizados que desee incluir en las llamadas de destino, con este formato: `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP Endpoint]**: la dirección URL del extremo HTTP al que desea enviar los datos de perfil. Este es el punto final de recepción de datos. Si utiliza mTLS, este extremo debe tener TLS deshabilitado y solo mTLS habilitado.
 * **[!UICONTROL Query parameters]**: de forma opcional, puede agregar parámetros de consulta a la dirección URL del extremo HTTP. Aplique este formato a los parámetros de consulta que utilice: `parameter1=value&parameter2=value`.
-* **[!UICONTROL Include Segment Names]**: cambie esta opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. **Nota**: Los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
-* **[!UICONTROL Include Segment Timestamps]**: cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Include Segment Names]**: cambie esta opción si desea que la exportación de datos incluya los nombres de las audiencias que está exportando. **Nota**: Los nombres de segmento solo se incluyen para los segmentos asignados al destino. Los segmentos no asignados que aparecen en la exportación no incluirán el campo `name`. Para ver un ejemplo de una exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
+* **[!UICONTROL Include Segment Timestamps]**: cambie si desea que la exportación de datos incluya la marca de tiempo UNIX cuando se crearon y actualizaron las audiencias, así como la marca de tiempo UNIX cuando las audiencias se asignaron al destino para la activación. Para ver un ejemplo de una exportación de datos con esta opción seleccionada, consulte la sección [Datos exportados](#exported-data) más abajo.
 
 ### Habilitar alertas {#enable-alerts}
 
@@ -249,7 +249,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

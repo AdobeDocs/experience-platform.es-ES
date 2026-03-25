@@ -2,9 +2,9 @@
 description: El servicio de destinos de Adobe Experience Platform utiliza puntos finales de configuración para varios componentes que crean la funcionalidad de destinos. Descubra cómo estos componentes combinados permiten a Experience Platform conectarse a socios de destino, enviar mensajes personalizados y activar datos de perfil en todo el ecosistema digital.
 title: Opciones de configuración en Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -56,8 +56,8 @@ Consulte la documentación siguiente para obtener detalles sobre cada uno de los
 
 ## Configuración de metadatos de audiencia {#audience-metadata-configuration}
 
-Este componente le permite configurar cómo se crean, actualizan o eliminan las audiencias en el destino mediante programación. En el caso de los destinos basados en archivos, permite configurar una notificación cada vez que los archivos se envían correctamente al destino. Puede configurar esta funcionalidad a través del extremo [audience-templates](../metadata-api/create-audience-template.md).
+Utilice este componente para configurar cómo se crean, actualizan o eliminan las audiencias en el destino mediante programación. En el caso de los destinos basados en archivos, utilícelo para configurar una notificación cada vez que los archivos se envíen correctamente al destino. Puede configurar esta funcionalidad a través del extremo [audience-templates](../metadata-api/create-audience-template.md).
 
 ## Próximos pasos {#next-steps}
 
-Al leer este artículo, ahora tiene una visión general de la funcionalidad proporcionada por Destination SDK y de las páginas que se deben leer para obtener más información acerca de configuraciones específicas. A continuación, puedes leer las guías que incluyen todos los pasos para [configurar una transmisión por secuencias](../guides/configure-destination-instructions.md) o un [destino basado en archivos](../guides/configure-file-based-destination-instructions.md) mediante Destination SDK.
+Ahora tiene una descripción general de la funcionalidad proporcionada por Destination SDK y de las páginas que se deben leer para obtener más información sobre configuraciones específicas. A continuación, puedes leer las guías que incluyen todos los pasos para [configurar una transmisión por secuencias](../guides/configure-destination-instructions.md) o un [destino basado en archivos](../guides/configure-file-based-destination-instructions.md) mediante Destination SDK.

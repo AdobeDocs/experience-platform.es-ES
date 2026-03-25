@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para crear una Adobe Experience Platform Destination SDK de configuración de credenciales.
 title: Crear una configuración de credenciales
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '583'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Cuando use un sistema de autenticación global, debe establecer `"authentication
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de credenciales {#get-started}
 

@@ -2,9 +2,9 @@
 description: En esta página se explica cómo utilizar el extremo de API /sample-profiles de Destination SDK para generar perfiles de muestra basados en un esquema de origen. Puede utilizar estos perfiles de muestra para probar la configuración de destino basada en archivos.
 title: Generar perfiles de muestra basados en un esquema de origen
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 2%
 
 ---

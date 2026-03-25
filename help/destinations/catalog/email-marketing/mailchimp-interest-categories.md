@@ -3,9 +3,9 @@ title: Categorías de interés en Mailchimp
 description: Mailchimp (también conocido como Intuit Mailchimp) es una popular plataforma de automatización de marketing y servicio de marketing por correo electrónico que utilizan las empresas para administrar y hablar con contactos (clientes, clientes u otras partes interesadas) mediante listas de correo y campañas de marketing por correo electrónico. Utilice este conector para ordenar contactos según sus intereses y preferencias.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2395'
+source-wordcount: '2390'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Consulte las secciones siguientes para conocer todos los requisitos previos que 
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Mailchimp Interest Categories], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Mailchimp Interest Categories], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 ### Requisitos previos para el destino [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -50,7 +50,7 @@ Para poder crear un destino de [!DNL Mailchimp Interest Categories], primero deb
 
 Necesita su [!DNL Mailchimp] **clave de API** para autenticar el destino [!DNL Mailchimp Interest Categories] con su cuenta de [!DNL Mailchimp]. La **clave API** sirve como **contraseña** al [autenticar el destino](#authenticate).
 
-Si no tienes tu **clave API**, inicia sesión en tu cuenta y consulta la documentación de [[!DNL Mailchimp] Generar tu clave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) para crear una.
+Si no tienes tu **clave API**, inicia sesión en tu cuenta y ve la documentación de [[!DNL Mailchimp] Generar tu clave API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key) para crear una.
 
 Un ejemplo de clave de API es `0123456789abcdef0123456789abcde-us14`.
 
@@ -68,13 +68,13 @@ También se anexa a su clave de API con el formato *key-dc*; si su clave de API 
 
 Anote el valor del centro de datos *(`us14` en este ejemplo)*, necesita este valor cuando [rellene los detalles de destino](#destination-details).
 
-Si necesita más orientación, consulte la [[!DNL Mailchimp] documentación de aspectos básicos](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
+Si necesita más instrucciones, consulte la [[!DNL Mailchimp] documentación de aspectos básicos](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-structure).
 
 ### Mecanismos de protección {#guardrails}
 
 Cada una de las audiencias de [!DNL Mailchimp] puede contener hasta 60 nombres de grupo (o categorías de interés) en un solo grupo o en varios grupos dentro de la misma audiencia. Consulte [!DNL Mailchimp] [grupos](https://mailchimp.com/help/getting-started-with-groups/) para cualquier aclaración necesaria. Cuando llegue a este límite, recibirá un mensaje de `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` como respuesta de error de la API [!DNL Mailchimp].
 
-Además, consulte [!DNL Mailchimp] [límites de tarifa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) para obtener información detallada sobre los límites impuestos por la API [!DNL Mailchimp].
+Además, vea los [!DNL Mailchimp] [límites de tarifa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) para obtener información detallada sobre los límites impuestos por la API [!DNL Mailchimp].
 
 ## Identidades admitidas {#supported-identities}
 
@@ -174,7 +174,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -222,7 +222,7 @@ Cuando termine de proporcionar las asignaciones para la conexión de destino, se
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-* Inicie sesión en su cuenta de [[!DNL Mailchimp]](https://login.mailchimp.com/). A continuación, vaya a la página **[!DNL Audience]**. A continuación, expanda el menú **[!DNL Manage Contacts]** y seleccione **[!DNL Groups]**.
+* Vaya a su cuenta de [[!DNL Mailchimp]](https://login.mailchimp.com/). A continuación, vaya a la página **[!DNL Audience]**. A continuación, expanda el menú **[!DNL Manage Contacts]** y seleccione **[!DNL Groups]**.
 
 ![Captura de pantalla de la IU de Mailchimp que muestra la página del grupo Audience.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

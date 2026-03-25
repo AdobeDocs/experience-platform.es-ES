@@ -2,9 +2,9 @@
 description: En esta página se muestran y describen los pasos para configurar un destino basado en archivos mediante Destination SDK.
 title: Usar Destination SDK para configurar un destino basado en archivos
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ En esta página se describe cómo usar la información de [Opciones de configura
 
 ## Requisitos previos {#prerequisites}
 
-Antes de avanzar a los pasos que se ilustran a continuación, lea la página de [Introducción a Destination SDK](../getting-started.md) para obtener información sobre cómo obtener las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
+Antes de avanzar a los pasos que se ilustran a continuación, lea la página de introducción a [Destination SDK](../getting-started.md) para obtener información sobre cómo obtener las credenciales de autenticación de Adobe I/O necesarias y otros requisitos previos para trabajar con las API de Destination SDK.
 
 ## Pasos para utilizar las opciones de configuración de Destination SDK para configurar el destino {#steps}
 
@@ -255,7 +255,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Paso 3: Crear la configuración de metadatos de audiencia {#create-audience-metadata-configuration}
 
-Para algunos destinos, Destination SDK requiere que establezca una configuración de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Consulte [Administración de metadatos de audiencia](../functionality/audience-metadata-management.md) para obtener información sobre cuándo debe configurar esta configuración y cómo hacerlo.
+Para algunos destinos, Destination SDK requiere que establezca una configuración de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Consulte [Administración de metadatos de audiencia](../functionality/audience-metadata-management.md) para obtener información sobre cuándo es necesario configurar esta configuración y cómo hacerlo.
 
 Si utiliza una configuración de metadatos de audiencia, debe conectarla a la configuración de destino creada en el paso 2. Agregue el ID de instancia de la configuración de metadatos de audiencia a la configuración de destino como `audienceTemplateId`.
 
@@ -422,7 +422,7 @@ Después de configurar el destino mediante los extremos de configuración de los
 Como parte del proceso para probar el destino, debe utilizar la interfaz de usuario de Experience Platform para crear audiencias que activar en el destino. Consulte los dos recursos siguientes para obtener instrucciones sobre cómo crear audiencias en Experience Platform:
 
 * [Creación de una audiencia: página de documentación](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es)
+* [Crear una audiencia: tutorial en vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Paso 6: Publicación del destino {#publish-destination}
 

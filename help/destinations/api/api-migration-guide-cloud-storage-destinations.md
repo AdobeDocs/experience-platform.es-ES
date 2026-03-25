@@ -4,9 +4,9 @@ title: Guía de migración de API para destinos de almacenamiento en la nube
 description: Obtenga información acerca de los cambios en el flujo de trabajo para activar los destinos de almacenamiento en la nube como parte de la migración a las nuevas tarjetas de destino de almacenamiento en la nube con funcionalidad adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1322'
 ht-degree: 1%
 
 ---
@@ -661,7 +661,7 @@ Vea los ejemplos completos de conexión base y de destino heredados y nuevos par
 
 ### Cambios incompatibles con versiones anteriores comunes a los destinos [!DNL Amazon S3], [!DNL Azure Blob] y SFTP {#changes-all-destinations}
 
-El paso del selector de perfil en los tres destinos se reemplaza por un paso de asignación que le permite cambiar el nombre de los encabezados de columna en los archivos exportados, si lo desea. Consulte la siguiente imagen en paralelo con el paso del selector de atributos antiguo a la izquierda y el nuevo paso de asignación a la derecha.
+El paso del selector de perfil en los tres destinos se reemplaza por un paso de asignación para cambiar el nombre de los encabezados de columna en los archivos exportados, si lo desea. Consulte la siguiente imagen en paralelo con el paso del selector de atributos antiguo a la izquierda y el nuevo paso de asignación a la derecha.
 
 ![Imagen de información general de guía de migración](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -795,4 +795,4 @@ Tenga en cuenta que la programación de exportaciones existente no se ve afectad
 
 ## Próximos pasos {#next-steps}
 
-Al leer esta página, ahora sabe si necesita tomar alguna acción como preparación para la migración de los destinos de almacenamiento en la nube. También sabe a qué páginas de documentación hacer referencia al configurar flujos de trabajo basados en API para exportar archivos desde Experience Platform a sus destinos de almacenamiento en la nube preferidos. A continuación, puede ver el tutorial de la API para [exportar datos a destinos de almacenamiento en la nube](/help/destinations/api/activate-segments-file-based-destinations.md).
+Ahora sabe si necesita realizar alguna acción como preparación para la migración de los destinos de almacenamiento en la nube. También sabe a qué páginas de documentación hacer referencia al configurar flujos de trabajo basados en API para exportar archivos desde Experience Platform a sus destinos de almacenamiento en la nube preferidos. A continuación, puede ver el tutorial de la API para [exportar datos a destinos de almacenamiento en la nube](/help/destinations/api/activate-segments-file-based-destinations.md).

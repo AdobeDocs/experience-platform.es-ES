@@ -3,9 +3,9 @@ title: Realizar transformaciones en los datos exportados a destinos de almacenam
 type: Tutorial
 description: Aprenda a utilizar la funcionalidad de campos calculados para realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1603'
 ht-degree: 8%
 
 ---
@@ -31,7 +31,7 @@ Para realizar varias transformaciones en los datos exportados a destinos de alma
 
 Para utilizar campos calculados para transformaciones de datos:
 
-1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectarse al destino de nube deseado, desactive la opción **[!UICONTROL Export arrays, maps, objects]** [2&rbrace;.](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)
+1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectarse al destino de nube deseado, desactive la opción **[!UICONTROL Export arrays, maps, objects]** [2}.](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)
 2. Siga los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Trabajar con campos calculados {#how-to-export-calculated-fields}
@@ -101,7 +101,7 @@ Las funciones siguientes, específicas para gestionar exportaciones de matrices 
 
 ## Ejemplos de funciones utilizadas para realizar transformaciones de datos {#examples}
 
-Consulte los ejemplos y la información adicional en las secciones siguientes para ver algunas de las funciones enumeradas anteriormente. Para el resto de las funciones enumeradas, consulte la [documentación de funciones generales en la sección Preparación de datos](/help/data-prep/functions.md).
+Consulte los ejemplos y la información adicional en las secciones siguientes para ver algunas de las funciones enumeradas anteriormente. Para las demás funciones enumeradas, consulte la [documentación de funciones generales en la sección Preparación de datos](/help/data-prep/functions.md).
 
 ### Función `array_to_string` para exportar matrices {#array-to-string-function-export-arrays}
 

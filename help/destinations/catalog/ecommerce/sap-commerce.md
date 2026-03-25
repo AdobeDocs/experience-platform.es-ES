@@ -3,9 +3,9 @@ title: Conexión de SAP Commerce
 description: Utilice el conector de destino de SAP Commerce para actualizar los registros de clientes en su cuenta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2289'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Consulte las secciones siguientes para conocer los requisitos previos que debe c
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL SAP Commerce], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL SAP Commerce], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -44,7 +44,7 @@ Para exportar datos de Experience Platform a su cuenta de [!DNL SAP Commerce], n
 
 #### Generación de una clave de servicio {#prerequisites-service-key}
 
-* La clave de servicio [!DNL SAP Commerce] le permite acceder a la API [!DNL SAP Subscription Billing] a través de Experience Platform. Consulte [!DNL SAP Commerce] [crear una clave de servicio con el identificador de cliente y el secreto de cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para crear una clave de servicio. [!DNL SAP Commerce] requiere lo siguiente:
+* La clave de servicio [!DNL SAP Commerce] proporciona acceso a la API [!DNL SAP Subscription Billing] a través de Experience Platform. Consulte [!DNL SAP Commerce] [crear una clave de servicio con el identificador de cliente y el secreto de cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para crear una clave de servicio. [!DNL SAP Commerce] requiere lo siguiente:
    * ID de cliente
    * Secreto del cliente
    * URL. El patrón de la dirección URL es el siguiente: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Este valor se utilizará más adelante para obtener los valores de `Region` y `Endpoint`.
@@ -196,7 +196,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -306,7 +306,7 @@ Al realizar el paso [Programar exportación de audiencias](/help/destinations/ui
 A continuación, se muestra un ejemplo del paso Programar exportación de audiencia con la ubicación de [!DNL SAP Commerce] **[!UICONTROL Mapping ID]** resaltada:
 ![Imagen de Experience Platform que muestra la exportación de audiencia programada con identificadores de asignación rellenados.](../../assets/catalog/ecommerce/sap-commerce/schedule-segment-export.png)
 
-Para ello, seleccione cada segmento y, a continuación, introduzca el nombre de la referencia personalizada de [!DNL SAP Subscription Billing] en el campo del conector de destino [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**. Para obtener instrucciones sobre cómo crear referencias personalizadas, consulte la sección [Crear referencias personalizadas en [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
+Para ello, seleccione cada segmento y, a continuación, introduzca el nombre de la referencia personalizada de [!DNL SAP Subscription Billing] en el campo del conector de destino [!DNL SAP Commerce] **[!UICONTROL Mapping ID]**. Para obtener instrucciones sobre cómo crear referencias personalizadas, vea la sección [Crear referencias personalizadas en [!DNL SAP Subscription Billing]](#prerequisites-custom-reference).
 
 >[!IMPORTANT]
 >
@@ -336,7 +336,7 @@ En función de la imagen que se muestra arriba, donde ha seleccionado dos audien
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-Inicie sesión en la cuenta de [!DNL SAP Subscription Billing] y luego vaya a la página de **[!UICONTROL Contacts]** para comprobar los estados de audiencia. La lista se puede configurar para mostrar columnas para las referencias personalizadas y mostrar los estados de audiencia correspondientes.
+Vaya a la cuenta de [!DNL SAP Subscription Billing] y luego a la página de **[!UICONTROL Contacts]** para comprobar los estados de audiencia. La lista se puede configurar para mostrar columnas para las referencias personalizadas y mostrar los estados de audiencia correspondientes.
 ![Imagen de facturación de suscripción a SAP que muestra la página de información general del cliente con encabezados de columna que muestran el nombre de la audiencia y las celdas y los estados de audiencia](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}

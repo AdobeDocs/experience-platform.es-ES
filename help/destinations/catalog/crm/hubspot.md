@@ -1,18 +1,18 @@
 ---
 title: Conexión HubSpot
-description: El destino de HubSpot le permite administrar los registros de contacto en su cuenta de HubSpot.
+description: Utilice el destino de HubSpot para administrar los registros de contacto en su cuenta de HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1619'
 ht-degree: 3%
 
 ---
 
 # [!DNL HubSpot] conexión
 
-[[!DNL HubSpot]](https://www.hubspot.com) es una plataforma CRM con todo el software, las integraciones y los recursos que necesita para conectar el marketing, las ventas, la administración de contenido y el servicio al cliente. Permite conectar los datos, los equipos y los clientes en una plataforma CRM.
+[[!DNL HubSpot]](https://www.hubspot.com) es una plataforma CRM con todo el software, las integraciones y los recursos que necesita para conectar el marketing, las ventas, la administración de contenido y el servicio al cliente. Úselo para conectar sus datos, equipos y clientes en una plataforma CRM.
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha la API [[!DNL HubSpot] Contactos](https://developers.hubspot.com/docs/api/crm/contacts) para actualizar los contactos de [!DNL HubSpot] de una audiencia de Experience Platform existente después de la activación.
 
@@ -26,11 +26,11 @@ Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL 
 
 ## Requisitos previos {#prerequisites}
 
-Consulte las secciones siguientes para conocer todos los requisitos previos que debe configurar en Experience Platform y [!DNL HubSpot] y para obtener información que debe recopilar antes de trabajar con el destino [!DNL HubSpot].
+Vea las secciones siguientes para conocer todos los requisitos previos que necesita configurar en Experience Platform y [!DNL HubSpot], así como la información que debe recopilar antes de trabajar con el destino [!DNL HubSpot].
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL HubSpot], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL HubSpot], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -60,7 +60,7 @@ Si no tiene una aplicación privada, siga la documentación para [Crear una apli
 
 ## Mecanismos de protección {#guardrails}
 
-[!DNL HubSpot] aplicaciones privadas están sujetas a [límites de tarifas](https://developers.hubspot.com/docs/api/usage-details). El número de llamadas que puede realizar su aplicación privada depende de la suscripción a la cuenta de [!DNL HubSpot] y de si ha adquirido el complemento de la API. Además, consulte [Otros límites](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] aplicaciones privadas están sujetas a [límites de tarifas](https://developers.hubspot.com/docs/api/usage-details). El número de llamadas que puede realizar su aplicación privada depende de la suscripción a la cuenta de [!DNL HubSpot] y de si ha adquirido el complemento de la API. Además, vea [Otros límites](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identidades admitidas {#supported-identities}
 
@@ -149,7 +149,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -207,7 +207,7 @@ Cuando termine de proporcionar las asignaciones para la conexión de destino, se
 
 Para comprobar que ha configurado correctamente el destino, siga los pasos a continuación:
 
-1. Inicie sesión en el sitio web de [!DNL HubSpot] y luego vaya a la página de **[!UICONTROL Contacts]** para comprobar los estados de audiencia. Esta lista se puede configurar para que muestre columnas para las propiedades personalizadas creadas con el nombre de la audiencia cuyo valor sean los estados de audiencia.
+1. Vaya al sitio web [!DNL HubSpot] y luego a la página **[!UICONTROL Contacts]** para comprobar los estados de audiencia. Esta lista se puede configurar para que muestre columnas para las propiedades personalizadas creadas con el nombre de la audiencia cuyo valor sean los estados de audiencia.
    ![Captura de pantalla de la interfaz de usuario HubSpot que muestra la página Contactos con encabezados de columna que muestran el nombre de la audiencia y las celdas y los estados de audiencia](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. También puede explorar en profundidad una página individual de **[!UICONTROL Person]** y navegar a las propiedades que muestran el nombre y los estados de audiencia.

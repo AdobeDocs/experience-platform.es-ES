@@ -1,12 +1,12 @@
 ---
 keywords: crm;CRM;destinos de crm;Microsoft Dynamics 365;destino de crm de Microsoft Dynamics 365
 title: Conexión de Microsoft Dynamics 365
-description: El destino de Microsoft Dynamics 365 le permite exportar los datos de su cuenta y activarlos dentro de Microsoft Dynamics 365 para satisfacer sus necesidades comerciales.
+description: Utilice el destino de Microsoft Dynamics 365 para exportar los datos de su cuenta y activarlos en Microsoft Dynamics 365 para sus necesidades comerciales.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2076'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL Microsoft Dynamics 365]](https://dynamics.microsoft.com/en-us/) es una plataforma de aplicaciones empresariales basada en la nube que combina Planificación de recursos empresariales (ERP) y Administración de relaciones con el cliente (CRM) junto con aplicaciones de productividad y herramientas de IA, para ofrecer operaciones de extremo a extremo más suaves y controladas, un mejor potencial de crecimiento y costes reducidos.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1), lo que le permite actualizar identidades dentro de una audiencia en [!DNL Dynamics 365].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha [[!DNL Contact Entity Reference API]](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) para actualizar identidades dentro de una audiencia en [!DNL Dynamics 365].
 
 [!DNL Dynamics 365] utiliza OAuth 2 con concesión de autorización como mecanismo de autenticación para comunicarse con [!DNL Contact Entity Reference API]. Las instrucciones para autenticarse en su instancia de [!DNL Dynamics 365] se encuentran más abajo, en la sección [Autenticar en destino](#authenticate).
 
@@ -29,7 +29,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a los usuar
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Dynamics 365], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Dynamics 365], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [audiencias](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Adobe para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -171,7 +171,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -245,7 +245,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento creado dentro de la audiencia.
    ![Ejemplo de captura de pantalla de IU de Experience Platform que muestra la audiencia.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
-1. Inicie sesión en el sitio web de [!DNL Dynamics 365], luego vaya a la página [!DNL Customers] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia de [!DNL Dynamics 365] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de **[!UICONTROL Mapping ID]** proporcionado durante el paso de [programación de audiencias](#schedule-audience-export-example).
+1. Vaya al sitio web de [!DNL Dynamics 365], luego vaya a la página [!DNL Customers] > [!DNL Contacts] y compruebe si se han agregado los perfiles de la audiencia. Puede ver que cada estado de audiencia de [!DNL Dynamics 365] se actualizó con el estado de audiencia correspondiente de Experience Platform, según el valor de **[!UICONTROL Mapping ID]** proporcionado durante el paso de [programación de audiencias](#schedule-audience-export-example).
    ![Captura de pantalla de la interfaz de usuario de Dynamics 365 que muestra la página Contactos con estados de audiencia actualizados.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Uso de datos y gobernanza {#data-usage-governance}

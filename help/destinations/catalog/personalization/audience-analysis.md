@@ -5,16 +5,16 @@ badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '867'
 ht-degree: 4%
 
 ---
 
 # Destino de Audience Analysis
 
-El destino [!UICONTROL Audience Analysis] le permite enriquecer los datos de audiencia [!DNL Adobe Experience Platform] en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=es).
+Use el destino [!UICONTROL Audience Analysis] para enriquecer los datos de la audiencia [!DNL Adobe Experience Platform] en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=es). Puede seleccionar qué audiencias desea incluir en los datos enriquecidos resultantes. Las cualificaciones de audiencia están disponibles como dimensiones en los informes de [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
@@ -83,7 +83,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para crear un destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para crear un destino, necesita los permisos de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para crear este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md).
 
@@ -114,7 +114,7 @@ Cuando termine de seleccionar las acciones de marketing deseadas para el destino
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Una vez creado el destino, puede activar las audiencias que desee para el destino.
 

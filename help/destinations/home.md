@@ -2,9 +2,9 @@
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Una de las funcionalidades principales de Experience Platform es la ingesta de d
 
 ## Controles {#controls}
 
-Los controles del área de trabajo [destinos](./ui/destinations-workspace.md) le permiten:
+Use los controles del área de trabajo [destinos](./ui/destinations-workspace.md) para lo siguiente:
 
 * Examine el catálogo de plataformas de destino donde puede activar sus datos;
 * Crear, editar, activar y desactivar flujos de datos a los destinos del catálogo;

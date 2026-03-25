@@ -5,9 +5,9 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---

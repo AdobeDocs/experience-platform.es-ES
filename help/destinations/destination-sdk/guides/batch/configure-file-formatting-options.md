@@ -2,9 +2,9 @@
 description: Configurar las opciones de formato de archivo para los destinos basados en archivos
 title: Aprenda a utilizar Destination SDK para configurar las opciones de formato de archivo de los destinos basados en archivos.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-Destination SDK permite ajustar exhaustivamente las opciones de formato y compresión de los archivos exportados para que coincidan con los requisitos de flujo descendente de la ubicación de almacenamiento.
+Utilice Destination SDK para ajustar exhaustivamente las opciones de formato y compresión de los archivos exportados para que coincidan con los requisitos de flujo descendente de su ubicación de almacenamiento.
 
 En esta página se describe cómo utilizar Destination SDK para configurar las opciones de formato de archivo para los destinos basados en archivos.
 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Próximos pasos {#next-steps}
 
-Al leer este artículo, ahora sabe cómo configurar las opciones de formato de archivo personalizadas para los archivos exportados mediante Destination SDK. A continuación, su equipo puede usar el flujo de trabajo de [activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.
+Ahora sabe cómo configurar opciones de formato de archivo personalizadas para los archivos exportados mediante Destination SDK. A continuación, su equipo puede usar el flujo de trabajo de [activación para destinos basados en archivos](../../../ui/activate-batch-profile-destinations.md) para exportar datos al destino.

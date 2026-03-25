@@ -2,9 +2,9 @@
 description: Aprenda a utilizar la API de prueba de destino para probar la plantilla de transformación de mensajes de destino de flujo continuo antes de publicar el destino.
 title: Creación y prueba de una plantilla de transformación de mensajes
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Uno de los primeros pasos para crear su destino en Destination SDK es pensar en 
 
 Para que la transformación tenga éxito, debe proporcionar una plantilla de transformación, similar a este ejemplo: [Cree una plantilla que envíe segmentos, identidades y atributos de perfil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
-Adobe proporciona una herramienta de plantilla que le permite crear y probar la plantilla de mensaje que transforma los datos del formato XDM de Adobe al formato admitido por el destino. La herramienta tiene dos extremos de API que puede utilizar:
+Adobe proporciona una herramienta de plantilla para crear y probar la plantilla de mensaje que transforma los datos del formato XDM de Adobe al formato admitido por el destino. La herramienta tiene dos extremos de API que puede utilizar:
 
 * Use la *API de plantilla de ejemplo* para obtener una plantilla de ejemplo.
 * Utilice la *API de plantilla de procesamiento* para procesar la plantilla de ejemplo y poder comparar el resultado con el formato de datos esperado del destino. Después de comparar los datos exportados con el formato de datos esperado por el destino, puede editar la plantilla. De este modo, los datos exportados que genere coincidirán con el formato de datos esperado por su destino.
@@ -158,7 +158,7 @@ Puede utilizar una herramienta de escape de caracteres en línea. La demostraci�
 
 ## Procesar API de plantilla {#render-template-api}
 
-Después de crear una plantilla de transformación de mensajes usando la [API de plantilla de ejemplo](create-template.md#sample-template-api), puede [procesar la plantilla](render-template-api.md) para generar datos exportados basados en ella. Esto le permite verificar si los perfiles que [!DNL Adobe Experience Platform] exportaría a su destino coinciden con el formato esperado del destino.
+Después de crear una plantilla de transformación de mensajes usando la [API de plantilla de ejemplo](create-template.md#sample-template-api), puede [procesar la plantilla](render-template-api.md) para generar datos exportados basados en ella. Use esto para comprobar si los perfiles que [!DNL Adobe Experience Platform] exportaría a su destino coinciden con el formato esperado del destino.
 
 Consulte la referencia de la API para ver ejemplos de llamadas que puede realizar:
 

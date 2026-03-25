@@ -4,9 +4,9 @@ title: Editar flujos de datos de activación
 type: Tutorial
 description: Siga los pasos de este artículo para editar un flujo de datos de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ En [!DNL Adobe Experience Platform], puede configurar varios componentes de fluj
 
 Siga los pasos a continuación para examinar los flujos de datos de activación existentes e identificar el que desea editar.
 
-1. Inicie sesión en la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los flujos de datos de destino existentes.
+1. Vaya a la [interfaz de usuario de Experience Platform](https://platform.adobe.com/) y seleccione **[!UICONTROL Destinations]** en la barra de navegación izquierda. Seleccione **[!UICONTROL Browse]** en el encabezado superior para ver los flujos de datos de destino existentes.
 
    ![Destinos de exploración](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ Seleccione **[!UICONTROL Activate audiences]** en el carril derecho. Esta acció
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
-Seleccione el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación para editar la programación de activación y la frecuencia de exportación del flujo de datos. Este paso le permite configurar la frecuencia con la que se exportan los datos al destino.
+Seleccione el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación para editar la programación de activación y la frecuencia de exportación del flujo de datos. Utilice este paso para configurar la frecuencia con la que se exportan los datos al destino.
 
 En el paso **[!UICONTROL Scheduling]** del flujo de trabajo de activación, puede:
 
@@ -87,7 +87,7 @@ Seleccione **[!UICONTROL Activate audiences]** en el carril derecho. Esta acció
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
-Seleccione el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación para editar los atributos e identidades asignados al flujo de datos de activación. Esto permite ajustar qué atributos e identidades de perfil se deben exportar al destino.
+Seleccione el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación para editar los atributos e identidades asignados al flujo de datos de activación. Utilice este paso para ajustar qué atributos e identidades de perfil se exportan al destino.
 
 En el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación, puede:
 
@@ -142,6 +142,6 @@ Para editar el nombre y la descripción del flujo de datos de activación, utili
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinations]** para actualizar los flujos de datos de destino existentes.
+Ha actualizado correctamente sus flujos de datos de destino mediante el área de trabajo **[!UICONTROL destinations]**.
 
-Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).
+Para obtener más información sobre los destinos, consulte [descripción general de los destinos](../catalog/overview.md).

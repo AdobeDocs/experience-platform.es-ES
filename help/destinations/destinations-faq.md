@@ -3,9 +3,9 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1632'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Este documento proporciona respuestas a las preguntas más frecuentes acerca de [!DNL Adobe Experience Platform] destinos. Para preguntas y solucionar problemas relacionados con otros servicios de [!DNL Experience Platform], incluidos los que se encuentran en todas las API de [!DNL Experience Platform], consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes acerca de [!DNL Adobe Experience Platform] destinos. Para obtener información y resolver problemas relacionados con otros servicios de [!DNL Experience Platform], incluidos los que se encuentran en todas las API de [!DNL Experience Platform], consulte la [Guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas sobre destinos generales {#general}
 
@@ -229,7 +229,7 @@ Las definiciones de audiencia se propagan a Edge Network en un máximo de una ho
 ### ¿Dónde puedo ver los atributos activados en [!DNL Adobe Target]? {#target-activated-attributes-location}
 
 +++Respuesta
-Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=es) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=es).
+Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### ¿Puedo crear un destino sin una secuencia de datos y luego agregar una secuencia de datos al mismo destino en un momento posterior? {#destination-without-datastream}
@@ -265,7 +265,7 @@ Sí. Las [Políticas de consentimiento y control de datos](../data-governance/ho
 ### ¿Son compatibles los destinos [!DNL Adobe Target] y [!DNL Custom Personalization] [!DNL HIPAA]? {#hipaa-compliance}
 
 +++Respuesta
-[!DNL Adobe Target] no es compatible con [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/es/solutions/industries/healthcare.html). Los clientes deben consultar con sus propios equipos legales la preparación de [!DNL HIPPA] para los canales de optimización personalizados antes de usar la personalización de Edge a través de [!DNL Adobe Target] o los destinos de [!DNL Custom Personalization].
+[!DNL Adobe Target] no es compatible con [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Los clientes deben consultar con sus propios equipos legales la preparación de [!DNL HIPPA] para los canales de optimización personalizados antes de usar la personalización de Edge a través de [!DNL Adobe Target] o los destinos de [!DNL Custom Personalization].
 
 Para los casos de uso en los que la administración de directivas de consentimiento debe aplicarse a escala, los clientes deben adquirir [!DNL Adobe Privacy & Security Shield]. Las características de [!DNL Adobe Privacy & Security Shield] se venden como un conjunto de funciones avanzadas y no se pueden comprar por separado.
 

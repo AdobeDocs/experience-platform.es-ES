@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo dar formato a las solicitudes HTTP enviadas al extremo. Utilice el extremo /authoring/destination-servers para configurar las especificaciones de creación de plantillas del servidor de destino en Adobe Experience Platform Destination SDK.
 title: Plantillas de especificaciones para destinos creados con Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '510'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Puede configurar las especificaciones de la plantilla para su destino a través 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -71,7 +71,7 @@ Consulte a continuación un ejemplo de una plantilla de solicitud HTTP, junto co
 |---|---|---|
 | `httpMethod` | Cadena | *Requerido.* El método que Adobe usará en las llamadas a su servidor. Métodos admitidos: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Cadena | *Requerido.*: use `PEBBLE_V1`. |
-| `value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape de la plantilla que da formato a las solicitudes HTTP enviadas por Experience Platform al formato esperado por el destino. <br> Para obtener información sobre cómo escribir la plantilla, lea la sección de [uso de la creación de plantillas](message-format.md#using-templating). <br> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para ver un ejemplo de transformación simple, consulte la transformación [atributos de perfil](message-format.md#attributes). |
+| `value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape de la plantilla que da formato a las solicitudes HTTP enviadas por Experience Platform al formato esperado por el destino. <br> Para obtener información sobre cómo escribir la plantilla, lea la sección de [uso de la creación de plantillas](message-format.md#using-templating). <br> Para obtener más información acerca del escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para ver un ejemplo de transformación simple, vea la transformación [atributos de perfil](message-format.md#attributes). |
 | `contentType` | Cadena | *Requerido.* El tipo de contenido que acepta su servidor. Según el tipo de salida que produzca la plantilla de transformación, puede ser cualquiera de los [tipos de contenido de aplicación HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application) admitidos. En la mayoría de los casos, este valor debe establecerse en `application/json`. |
 
 {style="table-layout:auto"}

@@ -3,7 +3,7 @@ keywords: Seguimiento de conversión de texto;Yext;yext;yext;seguimiento de conv
 title: Extensión de seguimiento de conversión de texto
 description: La extensión de seguimiento de conversión de texto es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-La extensión [!DNL Yext Conversion Tracking] le permite medir las conversiones que se pueden atribuir a su uso de productos Yext.
+Utilice la extensión [!DNL Yext Conversion Tracking] para medir las conversiones que se pueden atribuir a su uso de productos Yext.
 
 [!DNL Yext Conversion Tracking] es una extensión de analytics en [!DNL Adobe Experience Platform]. Para obtener más información acerca de la funcionalidad de la extensión, consulte la página de extensión en [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 

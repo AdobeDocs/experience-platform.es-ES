@@ -3,7 +3,7 @@ title: Exportar archivos bajo demanda a destinos por lotes mediante la interfaz 
 type: Tutorial
 description: Obtenga información sobre cómo exportar archivos bajo demanda a destinos por lotes mediante la interfaz de usuario de Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
 source-wordcount: '804'
 ht-degree: 5%
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 ## Información general de [!UICONTROL Export file now] {#overview}
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 En este artículo se explica cómo usar la interfaz de usuario de Experience Platform para exportar archivos bajo demanda a destinos por lotes como [almacenamiento en la nube](/help/destinations/catalog/cloud-storage/overview.md) y [marketing por correo electrónico](/help/destinations/catalog/email-marketing/overview.md).
 
-El control **[!UICONTROL Export file now]** le permite exportar un archivo completo sin interrumpir la programación de exportación actual de una audiencia programada anteriormente. Esta exportación se realiza además de las exportaciones programadas anteriormente y no cambia la frecuencia de exportación de la audiencia.
+Utilice el control **[!UICONTROL Export file now]** para exportar un archivo completo sin interrumpir la programación de exportación actual de una audiencia programada anteriormente. Esta exportación se realiza además de las exportaciones programadas anteriormente y no cambia la frecuencia de exportación de la audiencia.
 
 La exportación de archivos se activa inmediatamente y solo utiliza datos de la instantánea de evaluación de audiencia más reciente. No incluye los cambios de perfil o identidad que se producen después de la creación de la instantánea. Por el contrario, las exportaciones programadas incluyen datos de instantánea y cambios incrementales que se producen entre la creación de la instantánea y el momento de la exportación.
 

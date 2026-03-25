@@ -1,11 +1,11 @@
 ---
 title: (API) Conexión de Oracle Eloqua
-description: El destino Oracle Eloqua (API) le permite exportar los datos de su cuenta y activarlos dentro de Oracle Eloqua para sus necesidades comerciales.
+description: Utilice el destino Oracle Eloqua (API) para exportar los datos de su cuenta y activarlos en Oracle Eloqua para sus necesidades comerciales.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2118'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite a los especialistas en marketing planificar y ejecutar campañas a la vez que ofrecen una experiencia de cliente personalizada para sus posibles clientes. Con una administración de posibles clientes integrada y una creación de campañas sencilla, ayuda a los especialistas en marketing a atraer a la audiencia adecuada en el momento adecuado en el recorrido del comprador y se escala de forma elegante para llegar a audiencias de varios canales, incluidos correo electrónico, búsqueda en pantalla, vídeo y móvil. Los equipos de ventas pueden cerrar más acuerdos a una velocidad más rápida, lo que aumenta el retorno de la inversión de marketing a través de insight en tiempo real.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha la operación [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) de la API de REST [!DNL Oracle Eloqua], que permite **actualizar identidades** dentro de una audiencia en [!DNL Oracle Eloqua].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aprovecha la operación [Actualizar un contacto](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) de la API de REST [!DNL Oracle Eloqua] a **actualizar identidades** dentro de una audiencia en [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] usa [autenticación básica](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) para comunicarse con la API de REST [!DNL Oracle Eloqua]. Las instrucciones para autenticarse en su instancia de [!DNL Oracle Eloqua] se encuentran más abajo, en la sección [Autenticar en destino](#authenticate).
 
@@ -27,7 +27,7 @@ El departamento de marketing de una plataforma en línea desea difundir una camp
 
 ### Requisitos previos de Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino [!DNL Oracle Eloqua], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino [!DNL Oracle Eloqua], debe tener un [esquema](/help/xdm/schema/composition.md), un [conjunto de datos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
 
 Consulte la documentación de Experience Platform para el [grupo de campos de esquema Detalles de pertenencia a audiencias](/help/xdm/field-groups/profile/segmentation.md) si necesita instrucciones sobre los estados de audiencia.
 
@@ -161,7 +161,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -233,7 +233,7 @@ Para comprobar que ha configurado correctamente el destino, siga los pasos a con
 1. Monitorice el resumen de audiencia y asegúrese de que el recuento de perfiles corresponde al recuento dentro del segmento.
    ![Ejemplo de captura de pantalla de la IU de Experience Platform que muestra el segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Inicie sesión en el sitio web de [!DNL Oracle Eloqua] y luego vaya a la página de **[!UICONTROL Contacts Overview]** para comprobar si se han agregado los perfiles de la audiencia. Para ver el estado de la audiencia, explore en profundidad una página de **[!UICONTROL Contact Detail]** y compruebe si se ha creado el campo de contacto con el nombre de audiencia seleccionado como prefijo.
+1. Vaya al sitio web de [!DNL Oracle Eloqua] y luego a la página de **[!UICONTROL Contacts Overview]** para comprobar si se han agregado los perfiles de la audiencia. Para ver el estado de la audiencia, explore en profundidad una página de **[!UICONTROL Contact Detail]** y compruebe si se ha creado el campo de contacto con el nombre de audiencia seleccionado como prefijo.
 
 ![Captura de pantalla de la interfaz de usuario de Oracle Eloqua que muestra la página Detalles de contacto con el campo de contacto personalizado creado con el nombre de la audiencia.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 

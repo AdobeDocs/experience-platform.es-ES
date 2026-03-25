@@ -3,9 +3,9 @@ keywords: extensiones de etiquetas;extensión de etiquetas;destinos de launch; e
 title: Extensiones de etiquetas en Adobe Experience Platform
 description: Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Ventajas de utilizar extensiones de etiquetas {#extensions-benefits}
 
-Las funciones de etiquetas de Experience Platform son gratuitas para los clientes de Experience Cloud existentes. El sistema simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que se pueden instalar, configurar, actualizar y eliminar. Las etiquetas dejan un pequeño espacio en el sitio web y le permiten mantener las páginas cargadas rápidamente.
+Las funciones de etiquetas de Experience Platform son gratuitas para los clientes de Experience Cloud existentes. El sistema simplifica la implementación de etiquetas en el sitio web mediante extensiones fáciles de usar que se pueden instalar, configurar, actualizar y eliminar. Las etiquetas dejan un pequeño espacio en el sitio web y hacen que las páginas se carguen rápidamente.
 
 Aunque no puede activar audiencias para etiquetar extensiones, puede configurar reglas para reenviar solo datos de evento en determinadas situaciones. Esta potente funcionalidad le permite reenviar datos de evento solo en determinadas situaciones, en lugar de enviar datos de evento en cada interacción. Para obtener más información, lea acerca de las reglas en la [documentación de etiquetas](../../../tags/ui/managing-resources/rules.md).
 

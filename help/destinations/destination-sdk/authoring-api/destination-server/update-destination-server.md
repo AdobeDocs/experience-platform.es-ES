@@ -2,9 +2,9 @@
 description: Esta página ejemplifica la llamada de API utilizada para actualizar una configuración de servidor de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Actualizar la configuración de un servidor de destino
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1098'
 ht-degree: 9%
 
 ---
@@ -26,7 +26,7 @@ Para obtener una descripción detallada de las capacidades que puede configurar 
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -98,7 +98,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 | `urlBasedDestination.url.value` | Cadena | *Requerido.* Rellene la dirección del extremo de API al que Experience Platform debe conectarse. |
 | `httpTemplate.httpMethod` | Cadena | *Requerido.* El método que Adobe usará en las llamadas a su servidor. Las opciones son `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Cadena | *Requerido.*: use `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Experience Platform al formato que espera el servicio. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información sobre el escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, consulte la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | Cadena | *Requerido.* Esta cadena es la versión con caracteres de escape que transforma los datos de los clientes de Experience Platform al formato que espera el servicio. <br> <ul><li> Para obtener información sobre cómo escribir la plantilla, lea la sección [Uso de la plantilla](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obtener más información acerca del escape de caracteres, consulte el [estándar RFC JSON, sección siete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para ver un ejemplo de transformación simple, vea la transformación [Atributos de perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | Cadena | *Requerido.* El tipo de contenido que acepta su servidor. Este valor es probablemente `application/json`. |
 
 {style="table-layout:auto"}

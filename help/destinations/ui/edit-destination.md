@@ -3,9 +3,9 @@ title: Editar destinos
 type: Tutorial
 description: Obtenga información sobre cómo editar y actualizar cuentas de destinos existentes en la IU de Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Para editar varios componentes de una conexión de destino existente:
 
 1. Vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Seleccione el destino que desee editar.
-3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;para editar las conexiones de destino existentes.
+3. Seleccione los puntos suspensivos (`...`) en la columna [!UICONTROL Name] y use el control ![Editar control de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar las conexiones de destino existentes.
 4. En la ventana modal, edite la configuración que desee. Seleccione **[!UICONTROL Save]** cuando haya terminado.
 
 En la ventana de edición de destino, puede actualizar cualquier configuración que haya configurado al conectarse inicialmente al destino. Esta configuración es diferente en función de la plataforma de destino que esté actualizando.
@@ -61,6 +61,6 @@ Mediante la interfaz de usuario de Experience Platform o la API de Flow Service,
 
 ## Próximos pasos {#next-steps}
 
-Al seguir este tutorial, ha utilizado correctamente el espacio de trabajo **[!UICONTROL destinations]** para actualizar las conexiones de destino existentes.
+Ha actualizado correctamente las conexiones de destino existentes mediante el área de trabajo **[!UICONTROL destinations]**.
 
-Para obtener más información sobre los destinos, consulte la [descripción general de los destinos](../catalog/overview.md).
+Para obtener más información sobre los destinos, consulte [descripción general de los destinos](../catalog/overview.md).
