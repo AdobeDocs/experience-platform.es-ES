@@ -79,7 +79,7 @@ A continuación, continúe con [definir claves principales](../fields/identity.m
 
 >[!NOTE]
 >
->Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL  Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
+>Una vez guardado, el campo [!UICONTROL Type] en la barra lateral [!UICONTROL &#x200B; Schema properties] indica que se trata de un esquema [!UICONTROL Relational]. Esto también se indica en la barra lateral de detalles de la vista de inventario de esquema.
 >![El lienzo del Editor de esquemas que muestra una estructura de esquema relacional vacía con el tipo relacional resaltado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Cargar un archivo DDL {#upload-ddl-file}
