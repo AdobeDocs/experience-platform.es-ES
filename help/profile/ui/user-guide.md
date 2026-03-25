@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Guía de la IU del perfil del cliente en tiempo real
 description: El Perfil del cliente en tiempo real crea una vista integral de cada uno de sus clientes individuales, combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. Este documento sirve como guía para interactuar con el perfil del cliente en tiempo real en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
+source-git-commit: faeb53bfc4eba815eb1d9d00c464da4dc1a3b016
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2177'
 ht-degree: 4%
 
 ---
@@ -169,7 +169,7 @@ En la vista de gráfico, puede arrastrar y soltar los nodos para reorganizar el 
 
 #### Eventos de experiencia {#experience-events}
 
-La sección **[!UICONTROL Experience events]** muestra una cronología de los eventos de experiencia que contienen el perfil.
+La sección **[!UICONTROL Experience events]** muestra una cronología de los eventos de experiencia que contienen el perfil. De forma predeterminada, esta sección muestra los eventos de experiencia de las últimas 48 horas. Sin embargo, puede establecer el intervalo de fecha hasta un máximo de 30 días.
 
 ![Se muestra la sección Eventos de experiencia, que muestra una cronología de los eventos de experiencia que contienen el perfil.](/help/profile/images/user-guide/experience-event-graph.png)
 
@@ -193,7 +193,11 @@ Para obtener más información sobre los perfiles de Edge, lea la [documentació
 
 ### Pestaña Eventos {#events}
 
-La pestaña **[!UICONTROL Events]** contiene datos de los 100 ExperienceEvents más recientes asociados con el cliente. Estos datos pueden incluir aperturas de correo electrónico, actividades del carro de compras y vistas de páginas. Si se selecciona **[!UICONTROL View all]** para cualquier evento individual, se obtienen campos y valores adicionales como parte del evento.
+>[!NOTE]
+>
+>La visualización de los eventos se puede retrasar hasta 15 minutos.
+
+De manera predeterminada, la pestaña **[!UICONTROL Events]** contiene datos de las últimas 48 horas con los 100 ExperienceEvents más recientes asociados con el cliente. Estos datos pueden incluir aperturas de correo electrónico, actividades del carro de compras y vistas de páginas. También puede establecer el intervalo de fecha para un máximo de 30 días. Si se selecciona **[!UICONTROL View all]** para cualquier evento individual, se obtienen campos y valores adicionales como parte del evento.
 
 Los eventos también se pueden ver como un objeto JSON al seleccionar hasta **[!UICONTROL View JSON]**. Esto resulta útil para comprender cómo se capturan los eventos en Experience Platform.
 

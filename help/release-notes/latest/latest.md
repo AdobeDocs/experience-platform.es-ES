@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2026'
 description: Las notas de la versión de marzo de 2026 de Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 8c8b3b223c67dd6e9a00f9cf297f51fd09f3227f
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 36%
+source-wordcount: '1266'
+ht-degree: 34%
 
 ---
 
@@ -29,6 +29,7 @@ Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinos](#destinations)
 - [Modelo de datos de experiencia (XDM)](#xdm)
+- [Perfil del cliente en tiempo real](#real-time-customer-profile)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
 
@@ -52,7 +53,7 @@ Agent Orchestrator le permite crear e implementar agentes con tecnología de IA 
 
 | Función | Descripción |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] es su agente incrustado que incorpora el conocimiento de marketing de Adobe directamente en herramientas cotidianas como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] y otras aplicaciones de [!DNL Microsoft 365]. Puede utilizar este agente para extraer información de campañas de confianza de las aplicaciones de Adobe mientras planea campañas, revisa audiencias y colabora con compañeros para responder preguntas de clientes y tomar decisiones basadas en datos sin abandonar el flujo de trabajo de [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] es su agente incrustado que incorpora el conocimiento de marketing de Adobe directamente en herramientas cotidianas como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] y otras aplicaciones de [!DNL Microsoft 365]. Puede utilizar este agente para extraer información de campañas de confianza de las aplicaciones de Adobe mientras planea campañas, revisa audiencias y colabora con compañeros para responder preguntas de clientes y tomar decisiones basadas en datos sin abandonar el flujo de trabajo de [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +94,20 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 | Acciones de entidad XDM y compatibilidad de eliminación | Acceda a acciones para esquemas, clases, grupos de campos y tipos de datos directamente desde menús de tablas en línea y menús de encabezados de páginas de detalles. Si tiene los permisos necesarios, también puede eliminar las entidades de su organización cuando no las utilicen los conjuntos de datos y no estén habilitadas para el perfil. Consulte la [guía de la interfaz de usuario de XDM](../../xdm/ui/explore.md) para obtener más información. |
 
 Para obtener más información, lea la [información general sobre XDM](../../xdm/home.md).
+
+## Perfil del cliente en tiempo real {#real-time-customer-profile}
+
+El perfil del cliente en tiempo real permite ver una vista integral de cada cliente individual combinando datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros. El perfil le permite consolidar los datos de sus clientes en una vista unificada, lo que ofrece una cuenta procesable con marca de tiempo de cada interacción con los clientes.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| ------- | ----------- |
+| Eventos | Ahora puede establecer el período retroactivo de eventos al examinar los perfiles. Esto le permite ver los eventos a los que está asociado el perfil para el período de tiempo especificado. Para obtener más información, lea la [guía de la interfaz de usuario del perfil](/help/profile/ui/user-guide.md#events). |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea la [[!DNL Real-Time Customer Profile] información general](../../profile/home.md).
 
 <!-- 
 ## Run and Operate {#run-and-operate}
