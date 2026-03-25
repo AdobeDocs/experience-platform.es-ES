@@ -85,7 +85,7 @@ Los requisitos previos dependen de los tipos de identidad que planee utilizar pa
 
 **Para el direccionamiento basado en cookies en[!DNL The Trade Desk]**, asegúrese de que se ha establecido una asignación entre ECID y [!DNL Trade Desk ID]. Complete los pasos siguientes para hacerlo:
 
-1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL The Trade Desk ID] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
+1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL The Trade Desk ID] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/es/docs/id-service/using/id-service-api/methods/idsync) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
    * Si ya configuró [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID existentes se transferirán automáticamente a Experience Platform.
 
 2. **Instrumente sus páginas web**: Implemente código en sus páginas web para crear asignaciones entre [!DNL The Trade Desk ID] y Adobe ECID. Esto permite a Experience Platform asociar los ID de la oficina de comercio con los perfiles de sus clientes.
