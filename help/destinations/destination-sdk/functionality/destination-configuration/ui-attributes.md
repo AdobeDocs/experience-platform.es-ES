@@ -2,16 +2,16 @@
 description: Obtenga información sobre cómo configurar los atributos de la interfaz de usuario, como el vínculo de documentación, la categoría de la tarjeta de destino, el tipo de conexión de destino y la frecuencia, para los destinos creados con Destination SDK.
 title: Atributos de IU
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
 
 # Atributos de IU
 
-Los atributos de la interfaz de usuario definen los elementos visuales que Adobe debe mostrar para su tarjeta de destino en la interfaz de usuario de Adobe Experience Platform, como un logotipo, un vínculo a la página de documentación, una descripción del destino y su categoría y tipo.
+Los atributos de la interfaz de usuario definen los elementos visuales que Adobe debe mostrar para la tarjeta de destino en la interfaz de usuario de [!DNL Adobe Experience Platform], como un logotipo, un vínculo a la página de documentación, una descripción del destino y su categoría y tipo.
 
 Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o consulte las siguientes páginas de información general sobre la configuración de destino:
 
@@ -37,7 +37,7 @@ Este artículo describe todos los atributos de interfaz de usuario admitidos que
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -64,7 +64,7 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` es un parámetro de cadena que hace referencia a la página de documentación en el [Catálogo de destinos](../../../catalog/overview.md) de su destino. Todos los destinos de producción de Adobe Experience Platform deben tener una página de documentación correspondiente. [Aprenda a crear una página de documentación de destino](../../docs-framework/documentation-instructions.md) para su destino. Tenga en cuenta que esto no es necesario para destinos privados o personalizados.
+`documentationLink` es un parámetro de cadena que hace referencia a la página de documentación en el [Catálogo de destinos](../../../catalog/overview.md) de su destino. Todos los destinos de producción de [!DNL Adobe Experience Platform] deben tener una página de documentación correspondiente. [Aprenda a crear una página de documentación de destino](../../docs-framework/documentation-instructions.md) para su destino. Tenga en cuenta que esto no es necesario para destinos privados o personalizados.
 
 Use el siguiente formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, donde `YOURDESTINATION` es el nombre del destino. Para un destino llamado Moviestar, utilizaría `http://www.adobe.com/go/destinations-moviestar-en`.
 
@@ -78,7 +78,7 @@ Los usuarios pueden ver y visitar el vínculo de documentación desde la página
 
 ### `category` {#category}
 
-`category` es un parámetro de cadena que hace referencia a la categoría asignada a su destino en Adobe Experience Platform. Para obtener más información, lea [Categorías de destino](../../../destination-types.md). Use uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category` es un parámetro de cadena que hace referencia a la categoría asignada a su destino en [!DNL Adobe Experience Platform]. Para obtener más información, lea [Categorías de destino](../../../destination-types.md). Use uno de los siguientes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
 
 Los usuarios pueden ver la lista de categorías de destino en la parte izquierda de la pantalla del catálogo de destino, como se muestra en la siguiente imagen.
 

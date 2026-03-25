@@ -4,16 +4,16 @@ title: Editar flujos de datos de activación
 type: Tutorial
 description: Siga los pasos de este artículo para editar un flujo de datos de activación existente en Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
 
 # Editar flujos de datos de activación {#edit-activation-flows}
 
-En Adobe Experience Platform, puede configurar varios componentes de flujos de datos de activación existentes en destinos como, por ejemplo:
+En [!DNL Adobe Experience Platform], puede configurar varios componentes de flujos de datos de activación existentes en destinos como:
 
 * [Habilitar o deshabilitar](#enable-disable-dataflows) flujos de datos de activación
 * [Agregar audiencias adicionales](#add-audiences) a flujos de datos de activación
@@ -87,7 +87,7 @@ Seleccione **[!UICONTROL Activate audiences]** en el carril derecho. Esta acció
 
 ![Imagen de la interfaz de usuario de Experience Platform que muestra la opción Activar ejecución del flujo de datos de audiencias.](../assets/ui/edit-activation/activate-audiences.png)
 
-Seleccione el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación para editar los atributos e identidades asignados al flujo de datos de activación. Esto le permite ajustar qué atributos e identidades de perfil se deben exportar al destino.
+Seleccione el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación para editar los atributos e identidades asignados al flujo de datos de activación. Esto permite ajustar qué atributos e identidades de perfil se deben exportar al destino.
 
 En el paso **[!UICONTROL Mapping]** del flujo de trabajo de activación, puede:
 

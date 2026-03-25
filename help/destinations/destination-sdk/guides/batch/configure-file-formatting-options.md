@@ -2,9 +2,9 @@
 description: Configurar las opciones de formato de archivo para los destinos basados en archivos
 title: Aprenda a utilizar Destination SDK para configurar las opciones de formato de archivo de los destinos basados en archivos.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Información general {#overview}
 
-Destination SDK le permite ajustar ampliamente las opciones de formato y compresión de los archivos exportados para que coincidan con los requisitos de flujo descendente de su ubicación de almacenamiento.
+Destination SDK permite ajustar exhaustivamente las opciones de formato y compresión de los archivos exportados para que coincidan con los requisitos de flujo descendente de la ubicación de almacenamiento.
 
 En esta página se describe cómo utilizar Destination SDK para configurar las opciones de formato de archivo para los destinos basados en archivos.
 
@@ -718,7 +718,7 @@ Una respuesta correcta devuelve la configuración de destino, incluido el identi
 Una cierta combinación de opciones de formato de archivo puede provocar resultados no deseados en la exportación de archivos.
 Adobe recomienda no seleccionar la siguiente combinación de opciones de CSV:
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""

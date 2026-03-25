@@ -2,9 +2,9 @@
 description: Aprenda a configurar el tipo de audiencia para los destinos creados con Destination SDK.
 title: Configurar tipo de datos de audiencia
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ Revise los tipos de datos de audiencia siguientes para conocer las diferencias e
 | [Audiencias de personas](../../../../segmentation/types/people-audiences.md) | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](../../../../segmentation/types/account-audiences.md) | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](../../../../segmentation/types/prospect-audiences.md) | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](../../../../catalog/datasets/overview.md) | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](../../../../catalog/datasets/overview.md) | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 El tipo de datos de audiencia admitido depende del tipo de destino que cree.
 Consulte la tabla siguiente para comprender qué tipos de destino admiten qué tipos de datos de audiencia.
 
-| Tipo de destino | Audiencias de personas | Públicos de la cuenta | Públicos de clientes potenciales | Conjuntos de datos |
+| Tipo de destino | Audiencias de personas | Públicos de cuenta | Públicos de clientes potenciales | Conjuntos de datos |
 |---------|----------|---------|---------|---------|
 | Streaming | ✓ | ✓ | X | X |
 | Basado en archivos | ✓ | ✓ | ✓ | ✓ |
@@ -567,7 +567,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo configurar el tipo de datos de audiencia para su destino.
 

@@ -2,16 +2,16 @@
 description: Obtenga información sobre cómo configurar las opciones de entrega de destino para los destinos creados con Destination SDK para indicar a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación a la que llegan los datos.
 title: Envío de destino
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '640'
 ht-degree: 2%
 
 ---
 
 # Envío de destino
 
-Para ofrecer más control sobre dónde aterrizan los datos exportados a su destino, Destination SDK le permite especificar la configuración de envío de destino.
+Para ofrecer más control sobre dónde llegan los datos exportados a su destino, Destination SDK le permite especificar la configuración de envío de destino.
 
 La sección de entrega de destino indica a dónde van los datos exportados y qué regla de autenticación se utiliza en la ubicación donde aterrizarán los datos.
 
@@ -31,7 +31,7 @@ Este artículo describe todas las opciones de envío de destino admitidas que pu
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 

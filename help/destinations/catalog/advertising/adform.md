@@ -3,9 +3,9 @@ title: Adform
 description: Adform es un proveedor líder de soluciones programáticas de compra y venta de medios. Al conectar Adform a Adobe Experience Platform, puede activar las audiencias de origen mediante Adform en función del Experience Cloud ID (ECID).
 last-substantial-update: 2025-10-23T00:00:00Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1077'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-Adform es un proveedor líder de soluciones programáticas de compra y venta de medios. Al conectar Adform a Adobe Experience Platform, puede activar las audiencias de origen a través de Adform en función del Experience Cloud ID (ECID).
+Adform es un proveedor líder de soluciones programáticas de compra y venta de medios. Al conectar Adform a [!DNL Adobe Experience Platform], puede activar las audiencias de origen mediante Adform en función del Experience Cloud ID (ECID).
 
 >[!IMPORTANT]
 >
@@ -22,22 +22,22 @@ Adform es un proveedor líder de soluciones programáticas de compra y venta de 
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Adobe, aquí hay ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de Adobe, aquí hay casos de uso de ejemplo que los clientes de [!DNL Adobe Experience Platform] pueden resolver mediante este destino.
 
-### Activación de audiencia de Adobe Real-Time CDP {#use-case-1}
+### Activación de audiencia de Adobe [!DNL Real-Time CDP] {#use-case-1}
 
-Utilice este destino para enviar audiencias de Adobe Real-Time CDP a Adobe para su activación en función del Experience Cloud ID (ECID) y del ID de Fusion de Adobe. ID Fusion de Adobe es el servicio de resolución de ID de Adobe que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID).
+Use este destino para enviar audiencias de Adobe [!DNL Real-Time CDP] a Adobe para su activación en función del Experience Cloud ID (ECID) y el ID Fusion de Adobe. ID Fusion de Adobe es el servicio de resolución de ID de Adobe que le permite activar audiencias de origen basadas en el Experience Cloud ID (ECID).
 
-Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
+Un caso común es el redireccionamiento de los visitantes del sitio web a su sitio web o aplicación en función del Experience Cloud ID (ECID). Todo lo que debe hacer es enviar el Experience Cloud ID (ECID) a Adobe a través de las extensiones de [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) de Adobe disponibles. Después, puede compartir audiencias con Adobe Forms a través del destino de Adobe para la activación, únicamente en función del Experience Cloud ID (ECID).
 
 ## Requisitos previos {#prerequisites}
 
 * Debe ser cliente de Adform existente para utilizar este destino.
 * Debe tener sus credenciales de conexión de datos de Adform Audience Base.
    * Si no tiene credenciales de conexión de datos de Adform Audience Base, póngase en contacto con su representante de Adform.
-* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
+* Para realizar la sincronización correctamente, necesita tener una conexión de [Flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) o [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) desde sus entidades al Seguimiento de sitios de Adobe.
    * Si no tiene una conexión de flujo de eventos o del lado del cliente desde sus entidades a Seguimiento de sitios de Adobe, póngase en contacto con su representante de Adform.
-   * Adform proporciona extensiones Adobe Experience Cloud para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/catalog/analytics/adform).
+   * Adform proporciona extensiones [!DNL Adobe Experience Cloud] para [flujo de eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) y [del lado del cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identidades admitidas {#supported-identities}
@@ -46,7 +46,7 @@ Adform admite la activación de las identidades descritas en la siguiente tabla.
 
 | Identidad de destino | Descripción | Consideraciones |
 |---|---|---|
-| ECID | Experience Cloud ID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
+| ECID | Experience Cloud ID | Un área de nombres que representa ECID. También se puede hacer referencia a este área de nombres mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;[!DNL Adobe Experience Cloud] ID&quot;, &quot;[!DNL Adobe Experience Platform] ID&quot;. Consulte el siguiente documento sobre [ECID](/help/identity-service/features/ecid.md) para obtener más información. |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ Esta sección describe qué tipo de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -70,7 +70,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 
 >[!IMPORTANT]
 >
->Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para conectarse al destino, necesita el permiso de control de acceso **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [3}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para conectarse a este destino, siga los pasos descritos en el [tutorial de configuración de destino](../../ui/connect-destination.md). En el flujo de trabajo de configuración de destino, rellene los campos enumerados en las dos secciones siguientes.
 
@@ -124,7 +124,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.

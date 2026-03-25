@@ -1,11 +1,11 @@
 ---
 keywords: destino de almacenamiento en nube;almacenamiento en nube
 title: Información general sobre destinos de Cloud Storage
-description: Adobe Experience Platform puede entregar las audiencias como archivos de datos en las ubicaciones de almacenamiento en la nube de Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
+description: Adobe Experience Platform puede enviar audiencias como archivos de datos a sus ubicaciones de Amazon S3, AWS Kinesis, Azure Event Hubs o almacenamiento en la nube SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '457'
 ht-degree: 6%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 ## Información general {#overview}
 
-Adobe Experience Platform puede enviar sus audiencias como archivos de datos a sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos mediante archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs], los datos se transmiten fuera de Experience Platform en formato [!DNL JSON].
+[!DNL Adobe Experience Platform] puede entregar sus audiencias como archivos de datos en sus ubicaciones de almacenamiento en la nube. Esto le permite enviar audiencias y sus atributos de perfil a sus sistemas internos mediante archivos CSV para [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] y SFTP. Para los destinos [!DNL Amazon Kinesis] y [!DNL Azure Event Hubs], los datos se transmiten fuera de Experience Platform en formato [!DNL JSON].
 
 ![destinos de almacenamiento en la nube de Adobe](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Destinos de almacenamiento en la nube compatibles {#supported-destinations}
 
-Adobe Experience Platform admite exportaciones de datos a los siguientes destinos de almacenamiento en la nube:
+[!DNL Adobe Experience Platform] admite exportaciones de datos a los siguientes destinos de almacenamiento en la nube:
 
 * [Conexión de Amazon Kinesis](amazon-kinesis.md)
 * [Conexión de Amazon S3](amazon-s3.md)
@@ -75,7 +75,7 @@ De forma similar a los ejemplos anteriores, puede utilizar más macros para crea
 Los destinos de almacenamiento en la nube admiten los siguientes tipos de exportación:
 
 * **Exportación basada en perfiles**. Esto significa que está exportando detalles sobre las personas en la audiencia. Estos detalles son necesarios para la personalización y pueden incluir atributos, eventos, suscripciones a audiencias, etc.
-* **Exportación de conjuntos de datos**. Esta funcionalidad le permite exportar conjuntos de datos completos a destinos de almacenamiento en la nube. [Más información](/help/destinations/ui/export-datasets.md) sobre la nueva funcionalidad.
+* **Exportación de conjuntos de datos**. Esta funcionalidad permite exportar conjuntos de datos completos a destinos de almacenamiento en la nube. [Más información](/help/destinations/ui/export-datasets.md) sobre la nueva funcionalidad.
 
 ## Próximos pasos {#next-steps}
 

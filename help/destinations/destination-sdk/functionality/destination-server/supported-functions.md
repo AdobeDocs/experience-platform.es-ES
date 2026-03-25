@@ -2,10 +2,10 @@
 description: Experience Platform Destination SDK utiliza plantillas de guijarros, lo que le permite transformar los datos exportados desde Experience Platform en el formato requerido por el destino.
 title: Funciones de transformación compatibles con Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ La implementación de Experience Platform [!DNL Pebble] tiene algunos cambios, e
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Dónde se usa {#where-to-use}
 
@@ -45,7 +45,7 @@ Desde la sección de etiquetas [!DNL Pebble], Destination SDK solo admite:
 >El uso de `for` es diferente al iterar a través de *matriz* o *mapa* elementos en una plantilla. Al iterar a través de una matriz, puede obtener el elemento directamente. Al iterar a través de un mapa, se obtiene cada entrada del mapa, que tiene un par clave-valor.
 >
 > * Para ver un ejemplo de un elemento de matriz, piense en las identidades de un área de nombres [identityMap](message-format.md#identities), donde podría iterar a través de elementos como `identityMap.gaid`, `identityMap.email` o similares.
-> * Para ver un ejemplo de un elemento de asignación, vea [segmentMembership](message-format.md#segment-membership).
+> * Para ver un ejemplo de un elemento de asignación, vea [segmentMembership](message-format.md#audience-membership).
 
 Desde la sección de filtros [!DNL Pebble], Destination SDK admite todas las funciones. Un ejemplo más abajo muestra cómo se puede usar la función `date` en Destination SDK.
 
@@ -53,7 +53,7 @@ Desde la sección de funciones [!DNL Pebble], Adobe *no* admite la función [ran
 
 ## Ejemplo de cómo se utiliza la función `date` {#date-function}
 
-Para ejemplificar cómo se usan las funciones [!DNL Pebble] en Destination SDK, vea a continuación cómo se usa la función de fecha ([link en la documentación de Pebble](https://pebbletemplates.io/wiki/filter/date/)) para transformar el formato de una marca de tiempo.
+Para ejemplificar cómo se usan las funciones [!DNL Pebble] en Destination SDK, vea a continuación cómo la función de fecha ([link en la documentación de Pebble](https://pebbletemplates.io/wiki/filter/date/)) transforma el formato de una marca de tiempo.
 
 ### Ejemplo de uso {#date-use-case}
 

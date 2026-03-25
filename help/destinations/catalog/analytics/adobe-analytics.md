@@ -3,20 +3,20 @@ keywords: Extensión de Analytics;extensión de analytics;análisis de destino
 title: Extensión de Adobe Analytics
 description: La extensión de Adobe Analytics es un destino de análisis en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
-# Extensión de Adobe Analytics
+# Extensión [!DNL Adobe Analytics]
 
 ## Información general {#overview}
 
-Adobe Analytics es una solución líder del sector que le permite comprender a sus clientes como personas y dirigir su negocio con inteligencia de clientes.
+[!DNL Adobe Analytics] es una solución líder del sector que le permite comprender a sus clientes como personas y dirigir su negocio con inteligencia de clientes.
 
-Adobe Analytics es una extensión de análisis en Adobe Experience Platform. Para obtener más información acerca de la funcionalidad de la extensión, consulte la [descripción general de la extensión de Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) en la documentación sobre etiquetas.
+[!DNL Adobe Analytics] es una extensión de analytics en [!DNL Adobe Experience Platform]. Para obtener más información acerca de la funcionalidad de la extensión, consulte la [descripción general de la extensión de Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) en la documentación sobre etiquetas.
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -26,11 +26,11 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo de destinos para todos los clientes que han adquirido Experience Platform.
 
-Para utilizar esta extensión, debe tener acceso a las etiquetas en Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a la interfaz de usuario de recopilación de datos y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
+Para utilizar esta extensión, debe tener acceso a las etiquetas en Experience Platform. Las etiquetas se ofrecen a [!DNL Adobe Experience Cloud] clientes como una característica incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a la interfaz de usuario de recopilación de datos y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
-Para instalar la extensión de Adobe Analytics:
+Para instalar la extensión [!DNL Adobe Analytics]:
 
 En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
@@ -42,7 +42,7 @@ Seleccione la propiedad de etiqueta en la que desea instalar la extensión. Tamb
 
 El flujo de trabajo le lleva a la IU de recopilación de datos para completar la instalación.
 
-Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=es) en la documentación de etiquetas.
+Para obtener información sobre las opciones de configuración de la extensión, consulte la [página de extensión de Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) en la documentación de etiquetas.
 
 También puede instalar la extensión directamente en la [IU de recopilación de datos](https://experience.adobe.com/#/data-collection/). Consulte la guía de [adición de una nueva extensión](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obtener más información.
 

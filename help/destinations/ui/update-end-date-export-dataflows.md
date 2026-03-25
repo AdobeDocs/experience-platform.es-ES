@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Obtenga información sobre cómo actualizar la fecha de finalización de los flujos de datos de exportación del conjunto de datos con una fecha de finalización actual del 1 de mayo de 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Para actualizar la fecha de finalización de los flujos de datos:
    ![Seleccione el control de fecha de finalización resaltado en el paso Programación.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Continúe al final del flujo de trabajo y guarde las actualizaciones.
 
-Para obtener información detallada sobre el paso de programación, lea el tutorial de la interfaz de usuario [exportar conjuntos de datos](/help/destinations/api/export-datasets.md#scheduling).
+Para obtener información detallada sobre el paso de programación, lea el tutorial de la interfaz de usuario [exportar conjuntos de datos](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## Utilice la API para actualizar la fecha de finalización {#use-api}
 

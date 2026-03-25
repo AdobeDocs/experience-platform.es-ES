@@ -3,9 +3,9 @@ keywords: destinos; preguntas; preguntas más frecuentes; faq; destinos faq
 title: Preguntas frecuentes
 description: Respuestas a las preguntas más frecuentes sobre destinos de Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1633'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Información general {#overview}
 
-Este documento proporciona respuestas a las preguntas frecuentes acerca de los destinos de Adobe Experience Platform. Para preguntas y solucionar problemas relacionados con otros servicios de [!DNL Experience Platform], incluidos los que se encuentran en todas las API de [!DNL Experience Platform], consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
+Este documento proporciona respuestas a las preguntas más frecuentes acerca de [!DNL Adobe Experience Platform] destinos. Para preguntas y solucionar problemas relacionados con otros servicios de [!DNL Experience Platform], incluidos los que se encuentran en todas las API de [!DNL Experience Platform], consulte la [guía de solución de problemas de Experience Platform](../landing/troubleshooting.md).
 
 ## Preguntas sobre destinos generales {#general}
 
@@ -69,7 +69,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ||Experience Cloud Audiences|Adobe Target|
 |---|---|---|
-| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, [!DNL Adobe Target], [!DNL Adobe Analytics], Advertising Cloud, Marketo, [!DNL Adobe Campaign] | Supports audience activation only to [!DNL Adobe Target] |
 | **Supports audience activation** | ✓ | ✓ |
 | **Supports attribute activation** | X | ✓ |
 | **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
@@ -93,11 +93,11 @@ See the table below for a feature comparison between the Experience Cloud Audien
 Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los siguientes requisitos:
 
 * La cuenta de usuario [!DNL Facebook] debe tener habilitado el permiso **[!DNL Manage campaigns]** para la cuenta de publicidad que planea usar.
-* La cuenta empresarial **Adobe Experience Cloud** debe agregarse como socio de publicidad en [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Agregar socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+* La cuenta comercial **[!DNL Adobe Experience Cloud]** debe agregarse como socio de publicidad en su [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Agregar socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
 
   >[!IMPORTANT]
   >
-  > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. Esto es necesario para la integración de [!DNL Adobe Experience Platform].
+  > Al configurar los permisos de [!DNL Adobe Experience Cloud], debe habilitar el permiso **Administrar campañas**. Esto es necesario para la integración de [!DNL Adobe Experience Platform].
 * Lea y firme los términos de servicio de [!DNL Facebook Custom Audiences]. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, donde `accountID` es su [!DNL Facebook Ad Account ID].
 +++
 
@@ -107,7 +107,7 @@ Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los 
 No. Como no se trata de una integración basada en píxeles, no es necesario añadir píxeles a la cuenta del anunciante.
 +++
 
-### ¿Cuánto tiempo tarda Facebook en procesar la información de Adobe Experience Platform? {#facebook-processing-time}
+### ¿Cuánto tiempo tarda Facebook en procesar la información de [!DNL Adobe Experience Platform]? {#facebook-processing-time}
 
 +++Respuesta
 En marzo de 2021, [!DNL Facebook Custom Audiences] necesita hasta una hora para procesar la información recibida de [!DNL Experience Platform].
@@ -127,7 +127,7 @@ La conexión [!DNL Facebook Custom Audiences] usa [!DNL Experience Platform] ide
 Estas dos integraciones son complementarias; pueden utilizarse las dos para garantizar una mejor cobertura de audiencia. Por ejemplo, puede usar la extensión [!DNL Facebook Pixel] para la prospección de visitantes del sitio web que no hayan creado una cuenta, mientras que [!DNL Facebook Custom Audiences] puede ayudarle a dirigirse a los clientes existentes, según las identidades de [!DNL Experience Platform].
 +++
 
-### ¿Admite la integración de Adobe Experience Platform con [!DNL Facebook Custom Audiences] la descalificación de usuarios de una audiencia cuando ya no cumplen los requisitos para ella? {#facebook-disqualify-users}
+### ¿Admite la integración de [!DNL Adobe Experience Platform] con [!DNL Facebook Custom Audiences] la descalificación de usuarios de una audiencia cuando ya no cumplen los requisitos para ella? {#facebook-disqualify-users}
 
 +++Respuesta
 Sí, la integración admite la eliminación de usuarios de [!DNL Facebook Custom Audiences] cuando ya no cumplen los requisitos.
@@ -192,22 +192,22 @@ Para obtener explicaciones detalladas sobre los requisitos de coincidencia de ID
 
 +++
 
-## Personalización de la misma página y de la siguiente página mediante destinos Adobe Target y Personalization personalizados {#same-next-page-personalization}
+## Personalización de la misma página y de la página siguiente mediante [!DNL Adobe Target] y destinos personalizados de Personalization {#same-next-page-personalization}
 
-### ¿Debo usar Experience Platform Web SDK para enviar audiencias y atributos a Adobe Target? {#target-web-sdk}
+### ¿Necesito usar Experience Platform Web SDK para enviar audiencias y atributos a [!DNL Adobe Target]? {#target-web-sdk}
 
 +++Respuesta
-No, Web SDK no es necesario para activar audiencias en [Adobe Target](catalog/personalization/adobe-target-connection.md).
+No, Web SDK no es necesario para activar audiencias en [[!DNL Adobe Target]](catalog/personalization/adobe-target-connection.md).
 
 Sin embargo, si se usa [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=es) en lugar de Web SDK, solo se admite la personalización de la sesión siguiente.
 
 Para los casos de uso de [personalización de la misma página y de la siguiente](ui/activate-edge-personalization-destinations.md), debe usar Web SDK o la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte la documentación sobre [activación de audiencias en destinos Edge](ui/activate-edge-personalization-destinations.md) para obtener más información sobre la implementación.
 +++
 
-### ¿Hay un límite en el número de atributos que puedo enviar desde Real-time Customer Data Platform a Adobe Target o a un destino personalizado de Personalization? {#target-attributes-limit}
+### ¿Hay un límite en el número de atributos que puedo enviar desde Real-time Customer Data Platform a [!DNL Adobe Target] o a un destino de Personalization personalizado? {#target-attributes-limit}
 
 +++Respuesta
-Sí, los casos de uso de personalización de la misma página y de la página siguiente admiten un máximo de 30 atributos por zona protegida al activar audiencias en destinos de Adobe Target o Personalization personalizados. Vea más información acerca de las protecciones de activación en la [documentación sobre las protecciones](guardrails.md#edge-destinations-activation).
+Sí, los casos de uso de personalización de la misma página y de la página siguiente admiten un máximo de 30 atributos por zona protegida al activar audiencias en [!DNL Adobe Target] o destinos personalizados de Personalization. Vea más información acerca de las protecciones de activación en la [documentación sobre las protecciones](guardrails.md#edge-destinations-activation).
 +++
 
 ### ¿Qué tipos de atributos se admiten para la activación (por ejemplo, matrices, mapas, etc.)? {#target-supported-attribute-types}
@@ -226,10 +226,10 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 Las definiciones de audiencia se propagan a Edge Network en un máximo de una hora. Sin embargo, si se activa una audiencia en esta primera hora, se podrían perder algunos visitantes que habrían cumplido los requisitos para la audiencia.
 +++
 
-### ¿Dónde puedo ver los atributos activados en Adobe Target? {#target-activated-attributes-location}
+### ¿Dónde puedo ver los atributos activados en [!DNL Adobe Target]? {#target-activated-attributes-location}
 
 +++Respuesta
-Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=es) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=es).
+Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) y [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### ¿Puedo crear un destino sin una secuencia de datos y luego agregar una secuencia de datos al mismo destino en un momento posterior? {#destination-without-datastream}
@@ -238,10 +238,10 @@ Los atributos estarán disponibles para usarlos en Target en las ofertas [JSON](
 Actualmente, esto no se admite en la IU de destinos. Si necesita ayuda en este caso, póngase en contacto con su representante de Adobe.
 +++
 
-### ¿Qué sucede si elimino un destino de Adobe Target? {#delete-target-destination}
+### ¿Qué sucede si elimino un destino [!DNL Adobe Target]? {#delete-target-destination}
 
 +++Respuesta
-Al eliminar un destino, todas las audiencias y atributos asignados en dicho destino se eliminan de Adobe Target y también se eliminan de Edge Network.
+Al eliminar un destino, todas las audiencias y atributos asignados bajo el destino se eliminan de [!DNL Adobe Target] y también se eliminan de Edge Network.
 +++
 
 ### ¿Funciona la integración con la API de Edge Network? {#edge-network-api-integration}
@@ -250,10 +250,10 @@ Al eliminar un destino, todas las audiencias y atributos asignados en dicho dest
 Sí, la API de Edge Network funciona con el destino de Personalization personalizado. Dado que los atributos de perfil pueden contener datos confidenciales, para protegerlos, el destino de Personalization personalizado requiere que utilice la API de Edge Network para la recopilación de datos. Además, todas las llamadas de API deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
-### Solo puedo tener una política de combinación activa en Edge. ¿Puedo crear audiencias que utilicen una política de combinación diferente y seguir enviándolas a Adobe Target como audiencias de streaming? {#edge-merge-policy}
+### Solo puedo tener una política de combinación activa en Edge. ¿Puedo generar audiencias que usen una política de combinación diferente y luego enviarlas a [!DNL Adobe Target] como audiencias de streaming? {#edge-merge-policy}
 
 +++Respuesta
-No. Todas las audiencias que desee activar en Adobe Target deben usar una [política de combinación](../profile/merge-policies/ui-guide.md) activa en el perímetro.
+No. Todas las audiencias que desee activar en [!DNL Adobe Target] deben usar una [política de combinación](../profile/merge-policies/ui-guide.md) activa en el perímetro.
 +++
 
 ### ¿Se aplican las políticas de etiquetado y aplicación del uso de datos (Data Usage Labeling and Enforcement, DULE) y de consentimiento? {#dule-consent-enforcement}
@@ -265,7 +265,7 @@ Sí. Las [Políticas de consentimiento y control de datos](../data-governance/ho
 ### ¿Son compatibles los destinos [!DNL Adobe Target] y [!DNL Custom Personalization] [!DNL HIPAA]? {#hipaa-compliance}
 
 +++Respuesta
-[!DNL Adobe Target] no es compatible con [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/es/solutions/industries/healthcare.html). Los clientes deben consultar con sus propios equipos legales la preparación de [!DNL HIPPA] para los canales de optimización personalizados antes de usar la personalización de Edge a través de [!DNL Adobe Target] o los destinos de [!DNL Custom Personalization].
+[!DNL Adobe Target] no es compatible con [!DNL HIPPA] con [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Los clientes deben consultar con sus propios equipos legales la preparación de [!DNL HIPPA] para los canales de optimización personalizados antes de usar la personalización de Edge a través de [!DNL Adobe Target] o los destinos de [!DNL Custom Personalization].
 
 Para los casos de uso en los que la administración de directivas de consentimiento debe aplicarse a escala, los clientes deben adquirir [!DNL Adobe Privacy & Security Shield]. Las características de [!DNL Adobe Privacy & Security Shield] se venden como un conjunto de funciones avanzadas y no se pueden comprar por separado.
 

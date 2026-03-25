@@ -3,7 +3,7 @@ title: Realizar transformaciones en los datos exportados a destinos de almacenam
 type: Tutorial
 description: Aprenda a utilizar la funcionalidad de campos calculados para realizar transformaciones en los datos exportados a destinos de almacenamiento en la nube
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Para realizar varias transformaciones en los datos exportados a destinos de alma
 
 Para utilizar campos calculados para transformaciones de datos:
 
-1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectarse al destino de nube deseado, desactive la opción **[!UICONTROL Export arrays, maps, objects]** [2&rbrace;.](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)
+1. [Conectar](/help/destinations/ui/connect-destination.md) a un destino de almacenamiento en la nube deseado. Al conectarse al destino de nube deseado, desactive la opción **[!UICONTROL Export arrays, maps, objects]** [2}.](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle)
 2. Siga los [pasos de activación para los destinos de almacenamiento en la nube](/help/destinations/ui/activate-batch-profile-destinations.md) y vaya al paso [asignación](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Trabajar con campos calculados {#how-to-export-calculated-fields}
@@ -118,7 +118,7 @@ Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se m
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los elementos de la matriz se concatenan en una sola cadena utilizando el carácter `_`.
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ Continuando con el objeto de matriz `organizations` desde arriba, puede escribir
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los dos elementos de la matriz que cumplen el criterio se concatenan en una sola cadena utilizando el carácter `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ Continuando con el objeto de matriz `organizations` desde arriba, puede escribir
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los tres elementos de la matriz se transforman y concatenan en una sola cadena utilizando el carácter `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ Utilice la función `iif` para exportar elementos de una matriz en ciertas condi
 
 En este caso, el archivo de salida tiene el siguiente aspecto. En este caso, el primer elemento de la matriz es Marketing, por lo que la persona es miembro del departamento de marketing.
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ Continuando con el objeto de matriz `organizations` desde arriba, puede escribir
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo los tres elementos de la matriz se concatenan en una sola cadena utilizando el carácter `_` y 2023 también se anexa al final de la cadena.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se m
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo se exporta en el archivo el primer valor `true` no nulo de la matriz.
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ Por ejemplo, puede combinar los siguientes campos XDM a continuación, como se m
 
 En este caso, el archivo de salida tiene el siguiente aspecto. Observe cómo la segunda columna indica el número de elementos de la matriz, correspondiente al número de compras independientes realizadas por el cliente.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -237,7 +237,7 @@ Puede acceder al índice de una matriz para exportar un solo elemento de la matr
 
 En este caso, el archivo de salida tiene el siguiente aspecto, al exportar la primera vez que el cliente ha realizado una compra:
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ Utilice las funciones `first` y `last` para exportar el primer o último element
 
 En este caso, el archivo de salida tiene el siguiente aspecto, al exportar la primera y la última vez que el cliente ha realizado una compra:
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

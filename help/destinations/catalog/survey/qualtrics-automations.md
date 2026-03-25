@@ -4,9 +4,9 @@ title: Automatizaciones de Qualtrics
 description: Sincronice la experiencia y los datos operativos del cliente para desbloquear la personalización a escala. Utilice la agregación de varias fuentes de datos operativos en Adobe Experience Platform como entrada en Qualtrics Experience ID para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1259'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Sincronice la experiencia y los datos operativos del cliente para desbloquear la personalización a escala.
 
-Utilice la agregación de varias fuentes de datos operativos en Adobe Experience Platform como entrada en Qualtrics Experience ID para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia.
+Utilice la agregación de múltiples fuentes de datos operativos en [!DNL Adobe Experience Platform] como entrada en Qualtrics Experience Id para comprender mejor a sus clientes y permitir que el alcance dirigido cierre la brecha cuando se trata de comprender los impulsores de la intención, la emoción y la experiencia.
 
 >[!IMPORTANT]
 >
@@ -25,23 +25,23 @@ Utilice la agregación de varias fuentes de datos operativos en Adobe Experience
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino de *Qualtrics Automations*, aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe usar el destino de *Qualtrics Automations*, aquí hay casos de uso de ejemplo que los clientes de [!DNL Adobe Experience Platform] pueden resolver con este destino.
 
 ### Caso de uso #1 {#use-case-1}
 
-**Escenario**: una empresa quiere medir la satisfacción del cliente en varios puntos de contacto digitales, como su sitio web y su aplicación móvil. Utilizan Adobe Experience Platform para almacenar en déclencheur las encuestas de Qualtrics basadas en las interacciones de los usuarios, como completar una compra o visitar una página web específica.
+**Escenario**: una empresa quiere medir la satisfacción del cliente en varios puntos de contacto digitales, como su sitio web y su aplicación móvil. Utilizan [!DNL Adobe Experience Platform] para almacenar en déclencheur las encuestas de Qualtrics basadas en las interacciones de los usuarios, como completar una compra o visitar una página web específica.
 
 **Resultado**: al recopilar comentarios en tiempo real, la compañía puede realizar mejoras en la experiencia del cliente basadas en datos, lo que aumenta la satisfacción y la lealtad.
 
 ### Caso de uso #2 {#use-case-2}
 
-**Escenario**: una organización pretende mejorar su proceso de incorporación de los empleados. Utilizan Adobe Experience Platform para recopilar comentarios de las nuevas contrataciones a través de encuestas de Qualtrics. Las encuestas se activan automáticamente después de un período de incorporación predefinido.
+**Escenario**: una organización pretende mejorar su proceso de incorporación de los empleados. Utilizan [!DNL Adobe Experience Platform] para recopilar comentarios de las nuevas contrataciones a través de encuestas de Qualtrics. Las encuestas se activan automáticamente después de un período de incorporación predefinido.
 
 **Resultado**: La retroalimentación continua permite a la organización adaptarse y mejorar el proceso de incorporación, lo que se traduce en una mejor participación y productividad entre los nuevos empleados.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de configurar el destino de Qualtrics en Adobe Experience Platform, asegúrese de que se hayan cumplido los siguientes requisitos previos:
+Antes de configurar el destino de Qualtrics en [!DNL Adobe Experience Platform], asegúrese de que se hayan cumplido los siguientes requisitos previos:
 
 * Tiene una cuenta de Qualtrics.
 * Ha obtenido el token de API necesario de Qualtrics.
@@ -73,7 +73,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Lea [Activar audiencias en destinos de flujo continuo](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
 
@@ -205,7 +205,7 @@ Como se ha mencionado anteriormente, este destino utiliza un esquema abierto, po
 
 Para verificar que los datos se han ingerido en Qualtrics, diríjase al flujo de trabajo que contiene su **evento JSON**, desde allí, vaya a **Ejecutar historial** donde debería ver las ejecuciones del flujo de trabajo. Cada flujo de trabajo tiene un estado de **Correcto** o **Error**. Si se selecciona una ejecución determinada, se muestra más información al respecto, lo que le permite solucionar problemas si encuentra algún problema.
 
-Si no hay ejecuciones visibles en **Ejecutar historial**, significa que el flujo de trabajo aún no se ha activado, lo que indica que puede haber un problema. Asegúrese de que el flujo de trabajo esté habilitado y de que la **URL** del destino de Adobe Experience Platform sea correcta. Las ejecuciones del flujo de trabajo no son instantáneas, por lo que es posible que tenga que esperar un poco antes de que se complete.
+Si no hay ejecuciones visibles en **Ejecutar historial**, significa que el flujo de trabajo aún no se ha activado, lo que indica que puede haber un problema. Asegúrese de que el flujo de trabajo esté habilitado y de que la **URL** del destino de [!DNL Adobe Experience Platform] sea correcta. Las ejecuciones del flujo de trabajo no son instantáneas, por lo que es posible que tenga que esperar un poco antes de que se complete.
 
 ## Uso de datos y gobernanza {#data-usage-governance}
 

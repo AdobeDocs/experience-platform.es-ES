@@ -3,9 +3,9 @@ keywords: conexión de facebook;conexión de facebook;destinos de facebook;faceb
 title: Conexión de Facebook
 description: Active perfiles para sus campañas de Facebook para la segmentación, personalización y supresión de público en función de los correos electrónicos con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2734'
 ht-degree: 5%
 
 ---
@@ -22,17 +22,17 @@ Puede usar este destino para segmentar audiencias en [!DNL Facebook's] familia d
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Facebook], aquí hay dos casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante esta función.
+Para ayudarle a comprender mejor cómo y cuándo utilizar el destino [!DNL Facebook], hay dos casos de uso de ejemplo que los clientes de [!DNL Adobe Experience Platform] pueden resolver mediante esta característica.
 
 ### Caso de uso #1 {#use-case-1}
 
-Un retailer en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. Retailer en línea puede ingerir direcciones de correo electrónico desde su propio CRM a Adobe Experience Platform, crear audiencias a partir de sus propios datos sin conexión y enviar estas audiencias a la plataforma social [!DNL Facebook], lo que optimiza el gasto en publicidad.
+Un retailer en línea quiere llegar a los clientes existentes a través de plataformas sociales y mostrarles ofertas personalizadas basadas en sus pedidos anteriores. El retailer en línea puede ingerir direcciones de correo electrónico desde su propio CRM a [!DNL Adobe Experience Platform], crear audiencias a partir de sus propios datos sin conexión y enviar estas audiencias a la plataforma social [!DNL Facebook], lo que optimiza el gasto en publicidad.
 
 ### Caso de uso #2 {#use-case-2}
 
 Una aerolínea tiene diferentes niveles de clientes (Bronce, Plata y Oro) y desea proporcionar a cada uno de los niveles ofertas personalizadas a través de plataformas sociales. Sin embargo, no todos los clientes utilizan la aplicación móvil de la aerolínea y algunos de ellos no han iniciado sesión en el sitio web de la compañía. Los únicos identificadores que la compañía tiene sobre estos clientes son ID de miembros y direcciones de correo electrónico.
 
-Para dirigirlos a todos los medios sociales, pueden incorporar los datos de clientes de su CRM a Adobe Experience Platform, utilizando las direcciones de correo electrónico como identificadores.
+Para dirigirlos a través de los medios sociales, pueden incorporar los datos del cliente desde su CRM a [!DNL Adobe Experience Platform], utilizando las direcciones de correo electrónico como identificadores.
 
 A continuación, puede utilizar sus datos sin conexión, incluidos los ID de pertenencia asociados y los niveles de clientes, para crear nuevas audiencias a las que dirigirse a través del destino [!DNL Facebook].
 
@@ -44,8 +44,8 @@ A continuación, puede utilizar sus datos sin conexión, incluidos los ID de per
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Seleccione la identidad de destino GAID cuando su identidad de origen sea un área de nombres GAID. |
 | `IDFA` | Apple ID para anunciantes | Seleccione la identidad de destino IDFA cuando la identidad de origen sea un área de nombres IDFA. |
-| `phone_sha256` | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con Adobe Experience Platform. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
-| `email_lc_sha256` | Direcciones de correo electrónico con el algoritmo SHA256 | Adobe Experience Platform admite direcciones de correo electrónico con hash SHA256 y de texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
+| `phone_sha256` | Números de teléfono con hash con el algoritmo SHA256 | Los números de teléfono con hash SHA256 y texto sin formato son compatibles con [!DNL Adobe Experience Platform]. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para números de teléfono con hash y texto sin formato, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
+| `email_lc_sha256` | Direcciones de correo electrónico con el algoritmo SHA256 | [!DNL Adobe Experience Platform] admite direcciones de correo electrónico con hash SHA256 y texto sin formato. Siga las instrucciones de la sección [Requisitos de coincidencia de ID](#id-matching-requirements-id-matching-requirements) y utilice los espacios de nombres adecuados para direcciones de correo electrónico de texto sin formato y con hash, respectivamente. Si el campo de origen contiene atributos sin hash, marque la opción **[!UICONTROL Apply transformation]** para que [!DNL Experience Platform] ponga en hash automáticamente los datos durante la activación. |
 | `extern_id` | ID de usuario personalizados | Seleccione esta identidad de destino cuando la identidad de origen sea un área de nombres personalizada. |
 | `gender` | Género | Valores aceptados: <ul><li>`m` para hombres</li><li>`f` para mujeres</li></ul> Experience Platform **crea automáticamente un hash** para este valor antes de enviarlo a Facebook. Este hash automático es necesario para cumplir con los requisitos de seguridad y privacidad de Facebook. **not** proporciona valores prehash para este campo, ya que esto provocará que el proceso de coincidencia falle. |
 | `date_of_birth` | Fecha de nacimiento | Formato aceptado: `yyyy-MM-DD`. <br>Experience Platform **crea automáticamente un hash** de este valor antes de enviarlo a Facebook. Este hash automático es necesario para cumplir con los requisitos de seguridad y privacidad de Facebook. **not** proporciona valores prehash para este campo, ya que esto provocará que el proceso de coincidencia falle. |
@@ -64,7 +64,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -99,11 +99,11 @@ Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los 
 
 * La cuenta de usuario [!DNL Facebook] debe tener acceso completo a [!DNL Facebook Business Account], que posee la cuenta de publicidad que está utilizando.
 * La cuenta de usuario [!DNL Facebook] debe tener habilitado el permiso **[!DNL Manage campaigns]** para la cuenta de publicidad que planea usar.
-* La cuenta empresarial **Adobe Experience Cloud** debe agregarse como socio de publicidad en [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Agregar socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
+* La cuenta comercial **[!DNL Adobe Experience Cloud]** debe agregarse como socio de publicidad en su [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Agregar socios a su administrador comercial](https://www.facebook.com/business/help/1717412048538897) en la documentación de Facebook para obtener más información.
 
   >[!IMPORTANT]
   >
-  > Al configurar los permisos para Adobe Experience Cloud, debe habilitar el permiso **Administrar campañas**. Se requiere el permiso para la integración de [!DNL Adobe Experience Platform].
+  > Al configurar los permisos de [!DNL Adobe Experience Cloud], debe habilitar el permiso **Administrar campañas**. Se requiere el permiso para la integración de [!DNL Adobe Experience Platform].
 
 * Lea y firme los términos de servicio de [!DNL Facebook Custom Audiences]. Para ello, vaya a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, donde `accountID` es su [!DNL Facebook Ad Account ID]. Asegúrese de que la sección `business_id=206617933627973` esté presente en la dirección URL al firmar los Términos de servicio.
 
@@ -115,7 +115,7 @@ Antes de enviar las audiencias a [!DNL Facebook], asegúrese de cumplir con los 
 
 [!DNL Facebook] requiere que no se envíe información de identificación personal (PII) de forma clara. Por lo tanto, las audiencias activadas en [!DNL Facebook] pueden tener claves de *identificadores hash*, como direcciones de correo electrónico o números de teléfono.
 
-Según el tipo de ID que introduzca en Adobe Experience Platform, debe cumplir con sus requisitos correspondientes.
+Según el tipo de ID que ingrese en [!DNL Adobe Experience Platform], debe cumplir con los requisitos correspondientes.
 
 ## Maximización de las tasas de coincidencia de audiencia {#match-rates}
 
@@ -136,7 +136,7 @@ Hay dos métodos para activar números de teléfono en [!DNL Facebook]:
 
 ## Requisitos de hash de correo electrónico {#email-hashing-requirements}
 
-Puede hash las direcciones de correo electrónico antes de ingerirlas en Adobe Experience Platform, o puede usar las direcciones de correo electrónico en borrar en Experience Platform y hacer que [!DNL Experience Platform] las hash en la activación.
+Puede hash las direcciones de correo electrónico antes de ingerirlas en [!DNL Adobe Experience Platform], o usar direcciones de correo electrónico en borrar en Experience Platform, y hacer que [!DNL Experience Platform] las hash en la activación.
 
 Para obtener más información sobre la ingesta de direcciones de correo electrónico en Experience Platform, consulte la [descripción general de la ingesta por lotes](/help/ingestion/batch-ingestion/overview.md) y la [descripción general de la ingesta por transmisión](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -171,7 +171,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 El siguiente vídeo también muestra los pasos para configurar un destino [!DNL Facebook] y activar audiencias.
 
->[!VIDEO](https://video.tv.adobe.com/v/3411784/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -251,7 +251,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -295,7 +295,7 @@ Para [!DNL Facebook], una activación correcta significa que se crearía una aud
 
 >[!TIP]
 >
->La integración entre Adobe Experience Platform y [!DNL Facebook] admite rellenos históricos de audiencias. Todas las clasificaciones de audiencia históricas se envían a [!DNL Facebook] cuando activa las audiencias en el destino.
+>La integración entre [!DNL Adobe Experience Platform] y [!DNL Facebook] admite rellenos de audiencia históricos. Todas las clasificaciones de audiencia históricas se envían a [!DNL Facebook] cuando activa las audiencias en el destino.
 
 ## Solución de problemas {#troubleshooting}
 

@@ -3,9 +3,9 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4783'
+source-wordcount: '4769'
 ht-degree: 11%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 11%
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias en Adobe Experience Platform en destinos basados en archivos de perfil por lotes, como el almacenamiento en la nube y los destinos de marketing por correo electrónico.
+Este artículo explica el flujo de trabajo necesario para activar audiencias en [!DNL Adobe Experience Platform] en destinos basados en archivos de perfil por lotes, como el almacenamiento en la nube y los destinos de marketing por correo electrónico.
 
 ## Requisitos previos {#prerequisites}
 
@@ -496,7 +496,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave {#key-considerations}
 
@@ -573,7 +573,7 @@ Como solución temporal si necesita agregar áreas de nombres de identidad a los
 >
 >Todos los destinos de almacenamiento en la nube del catálogo pueden ver un paso [[!UICONTROL Mapping] mejorado](#mapping) que reemplaza el paso **[!UICONTROL Select attributes]** descrito en esta sección.
 >
->Este paso de **[!UICONTROL Select attributes]** sigue mostrándose para los destinos de marketing por correo electrónico de Adobe Campaign, Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
+>Este paso de **[!UICONTROL Select attributes]** se sigue mostrando para los destinos de marketing por correo electrónico de [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua y Salesforce Marketing Cloud.
 
 Para los destinos basados en perfiles, debe seleccionar los atributos de perfil que desea enviar al destino de destino.
 
@@ -593,7 +593,7 @@ Para los destinos basados en perfiles, debe seleccionar los atributos de perfil 
 
 >[!NOTE]
 >
-> Adobe Experience Platform rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia en su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> [!DNL Adobe Experience Platform] rellena previamente su selección con cuatro atributos recomendados y utilizados con frecuencia en su esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagen que muestra atributos recomendados rellenados previamente en el paso de asignación del flujo de trabajo de activación de audiencia.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
@@ -649,7 +649,7 @@ Seleccione **[!UICONTROL Next]** para pasar al paso [Revisar](#review).
 >* Los campos se utilizan en la definición de audiencia.
 >* Los campos se configuran como atributos proyectados para el destino final.
 >
-> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Administración de datos en Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por ejemplo, si el campo `person.name.firstName` tiene ciertas etiquetas de uso de datos que entran en conflicto con la acción de marketing del destino, se le mostrará una infracción de directiva de uso de datos en el paso de revisión. Para obtener más información, consulte [Control de datos en [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 En la página **[!UICONTROL Review]**, puede ver un resumen de su selección. Seleccione **[!UICONTROL Cancel]** para dividir el flujo, **[!UICONTROL Back]** para modificar la configuración o **[!UICONTROL Finish]** para confirmar la selección y comenzar a enviar datos al destino.
 
@@ -680,7 +680,7 @@ Si está satisfecho con su selección y no se han detectado infracciones de dire
 
 ## Verificar activación de audiencia {#verify}
 
-Al exportar audiencias a destinos de almacenamiento en la nube, Adobe Experience Platform crea un archivo de `.csv`, `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. El formato de archivo predeterminado se muestra a continuación, pero puede [editar los componentes del nombre de archivo](#configure-file-names):
+Al exportar audiencias a destinos de almacenamiento en la nube, [!DNL Adobe Experience Platform] crea un archivo de `.csv`, `.json` o `.parquet` en la ubicación de almacenamiento proporcionada. Es de esperar que se cree un nuevo archivo en su ubicación de almacenamiento según la programación establecida en el flujo de trabajo. El formato de archivo predeterminado se muestra a continuación, pero puede [editar los componentes del nombre de archivo](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por ejemplo, si seleccionara una frecuencia de exportación diaria, los archivos que recibiría en tres días consecutivos podrían tener este aspecto:

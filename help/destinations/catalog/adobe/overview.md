@@ -3,9 +3,9 @@ keywords: destinos;soluciones de experience cloud; target; destino de target; ad
 title: Información general sobre destinos Adobe
 description: Administre su experiencia de cliente conectando sus datos en Experience Platform a otras soluciones de Adobe Experience Cloud para la segmentación de anuncios, personalización, automatización de marketing y mucho más
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '225'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## Información general {#overview}
 
-Administre su experiencia de cliente conectando sus datos en Adobe Experience Platform a otras soluciones de Adobe Experience Cloud para la segmentación de anuncios, personalización, automatización de marketing y mucho más.
+Administre su experiencia como cliente conectando sus datos de [!DNL Adobe Experience Platform] con otras [!DNL Adobe Experience Cloud] soluciones para la segmentación de anuncios, personalización, automatización de marketing y mucho más.
 
 ## Destinos de Adobe compatibles {#supported-destinations}
 
@@ -49,4 +49,4 @@ Para comprender la diferencia entre las conexiones y las extensiones, vea [Conex
 
 Utilice la función de uso compartido de audiencias de Experience Platform para compartir sus audiencias de Experience Platform con destinos de Adobe adicionales. Consulte la página siguiente para obtener más información (se abre en el portal de documentación de Audience Manager):
 
-* [Uso compartido de la audiencia de Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es)
+* [Uso compartido de la audiencia de Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud y Adobe Target mediante la integración de servicios principales](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

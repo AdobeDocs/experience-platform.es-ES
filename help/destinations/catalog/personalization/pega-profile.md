@@ -3,9 +3,9 @@ title: Conector De Perfil Pega
 description: Utilice el conector de perfil Pega para Amazon S3 en Adobe Experience Platform para exportar datos de perfil completos o incrementales, o ambos, al almacenamiento en la nube de Amazon S3. En el centro de decisiones del cliente de Pega, los trabajos de datos se pueden programar en el perfil del cliente de Designer para importar datos de perfil periódicamente desde el almacenamiento de Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1225'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Información general {#overview}
 
-Use [!DNL Pega Profile Connector] en Adobe Experience Platform para crear una conexión saliente activa con su almacenamiento de [!DNL Amazon Web Services] (AWS) S3 y exportar periódicamente datos de perfil a archivos CSV desde Adobe Experience Platform en sus propios contenedores de S3. En [!DNL Pega Customer Decision Hub], puede programar trabajos de datos para importar estos datos de perfil desde el almacenamiento de S3 y actualizar el perfil [!DNL Pega Customer Decision Hub].
+Use [!DNL Pega Profile Connector] en [!DNL Adobe Experience Platform] para crear una conexión saliente activa con su almacenamiento de [!DNL Amazon Web Services] (AWS) S3 y exportar periódicamente datos de perfil a archivos CSV desde [!DNL Adobe Experience Platform] a sus propios contenedores de S3. En [!DNL Pega Customer Decision Hub], puede programar trabajos de datos para importar estos datos de perfil desde el almacenamiento de S3 y actualizar el perfil [!DNL Pega Customer Decision Hub].
 
 Este conector ayuda a configurar la exportación inicial de datos de perfil y también ayuda a sincronizar nuevos perfiles periódicamente en [!DNL Pega Customer Decision Hub].  Tener datos actualizados en Customer Decision Hub proporciona una vista mejor y actualizada de su base de clientes para la toma de decisiones de la siguiente mejor acción.
 
@@ -24,19 +24,19 @@ Este conector ayuda a configurar la exportación inicial de datos de perfil y ta
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL Pega Profile Connector], aquí hay casos de uso de ejemplo que los clientes de Adobe Experience Platform pueden solucionar mediante este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino [!DNL Pega Profile Connector], aquí hay ejemplos de casos de uso que los clientes de [!DNL Adobe Experience Platform] pueden resolver mediante este destino.
 
 ### Caso de uso 1 {#use-case-1}
 
-Un especialista en mercadotecnia desea configurar inicialmente [!DNL Pega Customer Decision Hub] con datos de perfil cargados desde Adobe Experience Platform. Se trata de una carga completa inicial seguida de cargas delta programadas.
+Un especialista en mercadotecnia desea configurar inicialmente [!DNL Pega Customer Decision Hub] con datos de perfil cargados desde [!DNL Adobe Experience Platform]. Se trata de una carga completa inicial seguida de cargas delta programadas.
 
 ### Caso de uso 2 {#use-case-2}
 
-Un especialista en marketing desea que los datos de perfil actualizados de Adobe Experience Platform estén disponibles en [!DNL Pega Customer Decision Hub], lo cual mejora la información de Pega en torno a los perfiles de los clientes de forma continua.
+Un especialista en mercadotecnia desea tener disponibles en [!DNL Adobe Experience Platform] los datos de perfil actualizados de [!DNL Pega Customer Decision Hub] que mejoren de manera continua la información de Pega sobre los perfiles de los clientes.
 
 ## Requisitos previos {#prerequisites}
 
-Antes de poder usar este destino para exportar datos desde Adobe Experience Platform e importar perfiles en [!DNL Pega Customer Decision Hub], asegúrese de completar los siguientes requisitos previos:
+Antes de usar este destino para exportar datos de [!DNL Adobe Experience Platform] e importar perfiles en [!DNL Pega Customer Decision Hub], asegúrese de completar los siguientes requisitos previos:
 
 * Configure el bloque [!DNL Amazon S3] y la ruta de carpeta que se utilizarán para exportar e importar archivos de datos.
 * Configure la clave de acceso [!DNL Amazon S3] y la clave secreta [!DNL Amazon S3]: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder acceso a Experience Platform a su cuenta de [!DNL Amazon S3].
@@ -49,7 +49,7 @@ Antes de poder usar este destino para exportar datos desde Adobe Experience Plat
 
 | Identidad de destino | Descripción |
 |---|---|
-| *CustomerID* | Identificador de usuario común que identifica de manera única un perfil en [!DNL Pega Customer Decision Hub] y Adobe Experience Platform |
+| *CustomerID* | Identificador de usuario común que identifica de manera única un perfil en [!DNL Pega Customer Decision Hub] y [!DNL Adobe Experience Platform] |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 
 Para autenticarse en el destino, rellene los campos obligatorios y seleccione **[!UICONTROL Connect to destination]**.
 
-* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder acceso a Adobe Experience Platform a su cuenta de [!DNL Amazon S3]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]clave de acceso** y **[!DNL Amazon S3]clave secreta**: en [!DNL Amazon S3], genere un par de `access key - secret access key` para conceder a [!DNL Adobe Experience Platform] acceso a su cuenta de [!DNL Amazon S3]. Obtenga más información en la [documentación de Amazon Web Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Rellenar detalles de destino {#destination-details}
 
@@ -131,7 +131,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles por lotes](../../ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

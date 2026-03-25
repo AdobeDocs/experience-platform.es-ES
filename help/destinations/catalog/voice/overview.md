@@ -3,9 +3,9 @@ keywords: destinos de voz;destinos de voz
 title: Información general sobre la voz de los destinos del cliente
 description: Las plataformas de voz recopilan y recopilan datos de varias fuentes, incluidos mensajes de voz, datos de llamadas y conversaciones de chat. La información recopilada puede filtrarse y analizarse para permitir a las empresas optimizar su sitio web para satisfacer sus necesidades.
 exl-id: f4e9ffea-5429-42ca-9075-562686ba3179
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Las plataformas de voz recopilan y recopilan datos de varias fuentes, incluidos 
 
 ## Destinos compatibles de Voice of the Customer {#supported-destinations}
 
-Actualmente, Adobe Experience Platform admite la voz de los destinos del cliente que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, [!DNL Adobe Experience Platform] admite la voz de los destinos del cliente que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 ### Conexiones {#connections}
 

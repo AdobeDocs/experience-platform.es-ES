@@ -3,9 +3,9 @@ keywords: destinos;destino;página de detalles de destinos;página de detalles d
 title: Ver detalles de destino
 description: La página de detalles de un destino individual proporciona información general sobre los detalles del destino. Los detalles del destino incluyen el nombre del destino, el ID, las audiencias asignadas al destino y los controles para editar la activación y para habilitar y deshabilitar el flujo de datos.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-En la interfaz de usuario de Adobe Experience Platform, puede ver y monitorizar los atributos y las actividades de sus destinos. Estos detalles incluyen el nombre y el ID del destino, controles para activar o desactivar los destinos, etc. Los detalles también incluyen métricas para registros de perfil activados, identidades activadas, fallidas y excluidas, y un historial de ejecuciones de flujo de datos.
+En la interfaz de usuario [!DNL Adobe Experience Platform], puede ver y supervisar los atributos y las actividades de sus destinos. Estos detalles incluyen el nombre y el ID del destino, controles para activar o desactivar los destinos, etc. Los detalles también incluyen métricas para registros de perfil activados, identidades activadas, fallidas y excluidas, y un historial de ejecuciones de flujo de datos.
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ Para editar la programación de activación existente de varias audiencias al mi
 
 >[!NOTE]
 >
->Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+>Para obtener más información sobre cómo explorar la página de detalles de una audiencia, consulte la [descripción general de Audience Portal](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Editar nombres de archivo para varias audiencias exportadas a destinos por lotes {#bulk-edit-file-names}
 

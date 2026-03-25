@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo configurar los ajustes de exportación de archivos para destinos creados con Destination SDK.
 title: Configuración por lotes
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Este artículo describe todas las opciones de configuración por lotes admitidas
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -106,7 +106,7 @@ Los valores que configuró aquí aparecen en el paso [Programar exportación de 
 
 ## Configuración del nombre de archivo {#file-name-configuration}
 
-Utilice macros de configuración de nombres de archivo para definir qué nombres de archivo exportados deben incluir. Las macros de la tabla siguiente describen los elementos que se encuentran en la interfaz de usuario de la pantalla [configuración de nombre de archivo](../../../ui/activate-batch-profile-destinations.md#file-names).
+Utilice macros de configuración de nombres de archivo para definir qué nombres de archivo exportados deben incluir. Las macros de la tabla siguiente describen los elementos que se encuentran en la interfaz de usuario de la pantalla [configuración de nombre de archivo](../../../ui/activate-batch-profile-destinations.md#configure-file-names).
 
 >[!TIP]
 >
@@ -119,7 +119,7 @@ Utilice macros de configuración de nombres de archivo para definir qué nombres
 | `SEGMENT_NAME` | [!UICONTROL Segment Name] | Nombre de audiencia definido por el usuario | suscriptor de VIP |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | ID único de la instancia de destino generado por Experience Platform | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Nombre definido por el usuario de la instancia de destino. | Mi destino de Advertising 2022 |
-| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Nombre de la organización del cliente en Adobe Experience Platform. | Nombre de mi organización |
+| `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Nombre de la organización del cliente en [!DNL Adobe Experience Platform]. | Nombre de mi organización |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Nombre de la zona protegida utilizada por el cliente. | picar |
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL Date and time] | `DATETIME` y `TIMESTAMP` definen cuándo se generó el archivo, pero en formatos diferentes. <br><br><ul><li>`DATETIME` usa el siguiente formato: AAAAMMDD_HHMMSS.</li><li>`TIMESTAMP` usa el formato Unix de 10 dígitos. </li></ul> `DATETIME` y `TIMESTAMP` se excluyen mutuamente y no se pueden usar simultáneamente. | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL Custom text] | Texto personalizado definido por el usuario que se incluirá en el nombre del archivo. No se puede usar en `defaultFilename`. | My_Custom_Text |

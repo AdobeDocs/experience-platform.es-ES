@@ -3,16 +3,16 @@ title: Búsqueda de atributos de perfil de Edge en tiempo real
 description: Aprenda a buscar atributos de perfil de Edge en tiempo real, mediante el destino de Personalization personalizado y la API de Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1833'
 ht-degree: 1%
 
 ---
 
 # Búsqueda de atributos de perfil en Edge en tiempo real
 
-Adobe Experience Platform usa el [perfil del cliente en tiempo real](../../profile/home.md) como única fuente fiable para todos los datos de perfil. Para recuperar datos de forma rápida y en tiempo real, utiliza [perfiles Edge](../../profile/edge-profiles.md), que son perfiles ligeros distribuidos en [Edge Network](../../collection/home.md#edge). Esto permite casos de uso de personalización rápidos en tiempo real.
+[!DNL Adobe Experience Platform] usa [Perfil del cliente en tiempo real](../../profile/home.md) como única fuente fiable para todos los datos de perfil. Para recuperar datos de forma rápida y en tiempo real, utiliza [perfiles Edge](../../profile/edge-profiles.md), que son perfiles ligeros distribuidos en [Edge Network](../../collection/home.md). Esto permite casos de uso de personalización rápidos en tiempo real.
 
 ## Casos de uso {#use-cases}
 
@@ -112,7 +112,7 @@ Después de crear una conexión de **[!UICONTROL Custom Personalization With Att
    Puede seleccionar entre varios tipos de audiencias, según su origen:
 
    * **[!UICONTROL Segmentation Service]**: audiencias generadas en Experience Platform por el servicio de segmentación. Consulte la [documentación de segmentación](../../segmentation/ui/overview.md) para obtener más información.
-   * **[!UICONTROL Custom upload]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Custom upload]**: audiencias generadas fuera de Experience Platform y cargadas en Experience Platform como archivos CSV. Para obtener más información sobre audiencias externas, consulte la documentación sobre [importación de una audiencia](../../segmentation/ui/audience-portal.md#import-audience).
    * Otros tipos de audiencias, originadas en otras soluciones de Adobe, como [!DNL Audience Manager].
 
      ![Seleccione el paso de audiencias del flujo de trabajo de activación con varias audiencias resaltadas.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

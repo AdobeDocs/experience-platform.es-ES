@@ -2,9 +2,9 @@
 description: Utilice plantillas de metadatos de audiencia para crear, actualizar o eliminar audiencias en el destino mediante programación. Adobe proporciona una plantilla de metadatos de audiencia ampliable que puede configurar en función de las especificaciones de su API de marketing. Después de definir, probar y enviar la plantilla, Adobe la utilizará para estructurar las llamadas de API a su destino.
 title: Gestión de metadatos de audiencia
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
@@ -60,13 +60,13 @@ En la tabla siguiente se describen los eventos admitidos por las plantillas de m
 
 | Sección de plantilla | Descripción |
 |--- |--- |
-| `create` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, crear mediante programación segmentos/audiencias en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
-| `update` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, para actualizar mediante programación segmentos/audiencias en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
+| `create` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, crear mediante programación segmentos/audiencias en la plataforma y sincronizar la información de nuevo con [!DNL Adobe Experience Platform]. |
+| `update` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, actualizar mediante programación segmentos/audiencias en la plataforma y sincronizar la información de nuevo con [!DNL Adobe Experience Platform]. |
 | `delete` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y eliminar segmentos/audiencias en la plataforma mediante programación. |
 | `validate` | Ejecuta las validaciones de cualquier campo en la configuración de la plantilla antes de realizar una llamada a la API del socio. Por ejemplo, puede validar que el ID de cuenta del usuario se introduzca correctamente. |
 | `notify` | Solo se aplica a destinos basados en archivos. Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y notificarle las exportaciones de archivos correctas. |
-| `createDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, crear mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
-| `updateDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, para actualizar mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con Adobe Experience Platform. |
+| `createDestination` | Incluye todos los componentes necesarios (dirección URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, crear mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con [!DNL Adobe Experience Platform]. |
+| `updateDestination` | Incluye todos los componentes necesarios (dirección URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API, actualizar mediante programación un flujo de datos en la plataforma y sincronizar la información de nuevo con [!DNL Adobe Experience Platform]. |
 | `deleteDestination` | Incluye todos los componentes necesarios (URL, método HTTP, encabezados, cuerpo de solicitud y respuesta) para realizar una llamada HTTP a la API y eliminar mediante programación un flujo de datos de la plataforma. |
 
 {style="table-layout:auto"}

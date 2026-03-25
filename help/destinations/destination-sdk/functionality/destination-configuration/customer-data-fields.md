@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo crear campos de entrada en la interfaz de usuario de Experience Platform que permitan a los usuarios especificar información diversa relevante para conectarse y exportar datos a su destino.
 title: Campos de datos del cliente
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Este artículo describe todos los tipos de configuración de campos de datos del
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -62,7 +62,7 @@ Al crear sus propios campos de datos de cliente, puede utilizar los parámetros 
 | `enum` | Cadena | Opcional | Procesa el campo personalizado como un menú desplegable y enumera las opciones disponibles para el usuario. |
 | `default` | Cadena | Opcional | Define el valor predeterminado de una lista `enum`. |
 | `hidden` | Booleano | Opcional | Indica si el campo de datos del cliente se muestra o no en la interfaz de usuario. |
-| `unique` | Booleano | Opcional | Utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor deba ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, el campo **[!UICONTROL Alias de integración]** en el destino [Personalization personalizado](../../../catalog/personalization/custom-personalization.md) debe ser único, lo que significa que dos flujos de datos independientes para este destino no pueden tener el mismo valor para este campo. |
+| `unique` | Booleano | Opcional | Utilice este parámetro cuando necesite crear un campo de datos de cliente cuyo valor deba ser único en todos los flujos de datos de destino configurados por la organización de un usuario. Por ejemplo, el campo **[!UICONTROL Integration alias]** en el destino [Personalization personalizado](../../../catalog/personalization/custom-personalization.md) debe ser único, lo que significa que dos flujos de datos independientes para este destino no pueden tener el mismo valor para este campo. |
 | `readOnly` | Booleano | Opcional | Indica si el cliente puede cambiar el valor del campo o no. |
 
 {style="table-layout:auto"}
@@ -103,17 +103,17 @@ La experiencia de IU resultante se muestra en la siguiente imagen.
 
 ## Nombres y descripciones de las conexiones de destino {#names-description}
 
-Al crear un nuevo destino, Destination SDK agrega automáticamente los campos **[!UICONTROL Nombre]** y **[!UICONTROL Descripción]** a la pantalla de conexión de destino en la interfaz de usuario de Experience Platform. Como puede ver en el ejemplo anterior, los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** se representan en la interfaz de usuario sin que se incluyan en la configuración de los campos de datos del cliente.
+Al crear un nuevo destino, Destination SDK agrega automáticamente los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** a la pantalla de conexión de destino en la interfaz de usuario de Experience Platform. Como puede ver en el ejemplo anterior, los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** se representan en la interfaz de usuario sin incluirse en la configuración de los campos de datos del cliente.
 
 >[!IMPORTANT]
 >
->Si agrega los campos **[!UICONTROL Nombre]** y **[!UICONTROL Descripción]** a la configuración de los campos de datos del cliente, los usuarios los verán duplicados en la interfaz de usuario.
+>Si agrega los campos **[!UICONTROL Name]** y **[!UICONTROL Description]** en la configuración de los campos de datos del cliente, los usuarios los verán duplicados en la interfaz de usuario.
 
 ## Ordenar campos de datos de clientes {#ordering}
 
 El orden en que se agregan los campos de datos del cliente en la configuración de destino se refleja en la interfaz de usuario de Experience Platform.
 
-Por ejemplo, la configuración siguiente se refleja en consecuencia en la interfaz de usuario, y las opciones aparecen en el orden **[!UICONTROL Nombre]**, **[!UICONTROL Descripción]**, **[!UICONTROL Nombre del contenedor]**, **[!UICONTROL Ruta de acceso a la carpeta]**, **[!UICONTROL Tipo de archivo]**, **[!UICONTROL Formato de compresión]**.
+Por ejemplo, la configuración que se muestra a continuación se refleja en consecuencia en la interfaz de usuario, y las opciones aparecen en el orden **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]**, **[!UICONTROL Compression format]**.
 
 ```json
 "customerDataFields":[
@@ -175,7 +175,7 @@ Por ejemplo, la configuración siguiente se refleja en consecuencia en la interf
 
 Puede agrupar varios campos de datos de clientes en una sección. Al configurar la conexión con el destino en la interfaz de usuario de, los usuarios pueden ver y beneficiarse de una agrupación visual de campos similares.
 
-Para ello, use `"type": "object"` para crear el grupo y recopile los campos de datos de cliente deseados dentro de un objeto `properties`, como se muestra en la imagen siguiente, donde se resalta la agrupación **[!UICONTROL Opciones de CSV]**.
+Para ello, use `"type": "object"` para crear el grupo y recopilar los campos de datos del cliente deseados dentro de un objeto `properties`, como se muestra en la imagen siguiente, donde se resalta la agrupación **[!UICONTROL CSV Options]**.
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -342,7 +342,7 @@ Establezca el parámetro `destinationServerId` en el identificador del servidor 
 
 ## Crear campos de datos de clientes anidados {#nested-fields}
 
-Puede crear campos de datos de clientes anidados para patrones de integración complejos. Esto le permite encadenar una serie de selecciones para el cliente.
+Puede crear campos de datos de clientes anidados para patrones de integración complejos. Esto permite encadenar una serie de selecciones para el cliente.
 
 Por ejemplo, puede agregar campos de datos de clientes anidados para requerir que los clientes seleccionen un tipo de integración con el destino, seguido inmediatamente de otra selección. La segunda selección es un campo anidado dentro del tipo de integración.
 
@@ -611,7 +611,7 @@ Los valores con plantilla `{{customerData.bucketName}}` y `{{customerData.path}}
 
 Para obtener más información acerca de cómo configurar el servidor de destino para que lea campos con plantillas, consulte la documentación sobre [campos con código y con plantilla](../destination-server/server-specs.md#templatized-fields).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debería comprender mejor cómo puede permitir a los usuarios introducir información en la interfaz de usuario de Experience Platform a través de los campos de datos de los clientes. Ahora también sabe cómo seleccionar el campo de datos del cliente adecuado para su caso de uso y configurar, ordenar y agrupar campos de datos de cliente en la IU de Experience Platform.
 

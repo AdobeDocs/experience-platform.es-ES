@@ -2,14 +2,14 @@
 title: Documente su destino en Adobe Experience Platform
 description: Instrucciones paso a paso para crear una página de documentación para su destino en Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 0%
+source-wordcount: '481'
+ht-degree: 1%
 
 ---
 
-# Documente su destino en Adobe Experience Platform
+# Documentar el destino en [!DNL Adobe Experience Platform]
 
 >[!IMPORTANT]
 >
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Bienvenido a Adobe Experience Platform. ¡Encantado de tenerle aquí!
-Documentar el destino es el paso final antes de poder configurarlo en Adobe Experience Platform.
+Bienvenido a [!DNL Adobe Experience Platform], encantado de tenerle aquí.
+Documentar el destino es el último paso antes de poder configurarlo en [!DNL Adobe Experience Platform].
 
 Esta sección de documentación incluye:
 
 * Instrucciones paso a paso para crear una página de documentación para el nuevo destino;
 * Una plantilla para que la rellene en su destino;
-* [Instrucciones generales sobre el uso de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es);
-* [Instrucciones específicas para el sabor del Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es#custom-markdown-extensions) (el sabor del Adobe Markdown es muy similar al Markdown normal).
-* Una [página de prácticas recomendadas](./authoring-best-practices.md) que le ayudará a crear una página de documentación para su página de destino que cumpla los estándares de calidad de Experience Platform.
+* [Instrucciones generales sobre el uso de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instrucciones específicas para el sabor de Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (el sabor de Adobe Markdown es muy similar al de Markdown normal).
+* Una [página de prácticas recomendadas](./authoring-best-practices.md) que le ayudará a crear una página de documentación para su página de destino que cumpla los estándares de calidad de la documentación de Experience Platform.
 
 ## Requisitos previos {#prerequisites}
 
@@ -34,16 +34,16 @@ Para crear documentación para el destino según las instrucciones de este artí
 
 * **Una cuenta de GitHub**. Regístrate en [GitHub](https://github.com/) si aún no tienes una cuenta.
 * **Escritorio de GitHub**. Si decide [crear la documentación en su entorno local](./work-in-local-environment.md), debe usar [GitHub Desktop](https://desktop.github.com/).
-* La integración con Adobe debe estar en una fase de prueba con el destino implementado en un entorno de ensayo en Adobe Experience Platform.
+* Su integración con Adobe debe estar en una fase de prueba con el destino implementado en un entorno de ensayo en [!DNL Adobe Experience Platform].
 
-## Instrucciones generales para crear documentación para su destino en Adobe Experience Platform {#high-level-instructions}
+## Instrucciones de alto nivel para crear documentación para su destino en [!DNL Adobe Experience Platform] {#high-level-instructions}
 
-En un nivel superior, para crear documentación para tu destino, necesitas [crear una ramificación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es#fork-the-repository) del repositorio de documentación de Adobe Experience Platform y editar la [plantilla de documentación proporcionada](./self-service-template.md) en una nueva rama. Utilice la plantilla proporcionada por el Adobe para crear una nueva página de destino. Abra una solicitud de extracción (PR) cuando esté listo. Las instrucciones para hacerlo se encuentran más abajo, en [Pasos para crear la nueva página de destino](./documentation-instructions.md#steps-to-create-docs-page).
+En un nivel superior, para crear documentación para tu destino, necesitas [crear una ramificación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) del repositorio de documentación de [!DNL Adobe Experience Platform] y editar la [plantilla de documentación proporcionada](./self-service-template.md) en una nueva rama. Utilice la plantilla proporcionada por Adobe para crear una nueva página de destino. Abra una solicitud de extracción (PR) cuando esté listo. Las instrucciones para hacerlo se encuentran más abajo, en [Pasos para crear la nueva página de destino](./documentation-instructions.md#steps-to-create-docs-page).
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/es-ES/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -57,11 +57,11 @@ A continuación, se proporcionan instrucciones sobre el uso de la plantilla para
 
 ## Pasos para crear la nueva página de destino {#steps-to-create-docs-page}
 
-Puede utilizar la interfaz web de GitHub o el entorno local para crear documentación para el nuevo destino en Adobe Experience Platform. Encuentre instrucciones para ambas opciones en los siguientes vínculos:
+Puede usar la interfaz web de GitHub o el entorno local para crear documentación para el nuevo destino en [!DNL Adobe Experience Platform]. Encuentre instrucciones para ambas opciones en los siguientes vínculos:
 
 * [Utilice la interfaz web de GitHub para crear una página de documentación de destino](./use-github-interface-to-create-documentation.md)
 * [Utilice un editor de texto en el entorno local para crear una página de documentación de destino](./work-in-local-environment.md)
 
 ## Prácticas recomendadas {#best-practices}
 
-Revise las [prácticas recomendadas de creación](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) antes y durante la creación de la página de documentación de destino. Asegúrese de leer también las [instrucciones de escritura para la documentación de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=es) para obtener más sugerencias de escritura que el equipo de documentación de Adobe usa al crear la documentación.
+Revise las [prácticas recomendadas de creación](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) antes y durante la creación de la página de documentación de destino. Asegúrese de leer también las [instrucciones de escritura para la documentación de Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) para obtener más sugerencias de escritura que el equipo de documentación de Adobe usa al crear la documentación.

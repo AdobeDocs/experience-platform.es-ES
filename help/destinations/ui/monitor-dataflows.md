@@ -5,16 +5,16 @@ solution: Experience Platform
 title: Monitorización de flujos de datos
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '128'
 ht-degree: 18%
 
 ---
 
 # Monitorización de flujos de datos
 
-[!UICONTROL Destinos] le permiten activar sus datos de Adobe Experience Platform a innumerables socios externos.
+[!UICONTROL Destinations] le permite activar sus datos de [!DNL Adobe Experience Platform] a innumerables socios externos.
 
 Los flujos de datos son una representación de los trabajos de datos que mueven datos entre [!DNL Experience Platform]. Estos flujos de datos se configuran en diferentes servicios, lo que ayuda a mover los datos de los conectores de origen a los conjuntos de datos de destino, donde [!DNL Identity Service] y [!DNL Real-Time Customer Profile] los utilizan antes de activarse finalmente en los destinos.
 

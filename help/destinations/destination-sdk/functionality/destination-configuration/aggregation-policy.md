@@ -2,16 +2,16 @@
 description: Obtenga información sobre cómo configurar una directiva de agregación para determinar cómo se deben agrupar y agrupar las solicitudes HTTP al destino.
 title: Política de agregación
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1233'
 ht-degree: 2%
 
 ---
 
 # Política de agregación
 
-Para garantizar la máxima eficacia al exportar datos al extremo de la API, puede utilizar varias configuraciones para acumular perfiles exportados en lotes más grandes o más pequeños, agruparlos por identidad y otros casos de uso. Esto también le permite adaptar las exportaciones de datos a cualquier limitación descendente de su punto final de API (limitación de velocidad, número de identidades por llamada de API, etc.).
+Para garantizar la máxima eficacia al exportar datos al extremo de la API, puede utilizar varias configuraciones para acumular perfiles exportados en lotes más grandes o más pequeños, agruparlos por identidad y otros casos de uso. Esto también le permite adaptar las exportaciones de datos a cualquier limitación descendente de su extremo de API (limitación de velocidad, número de identidades por llamada de API, etc.).
 
 Utilice la agregación configurable para profundizar en la configuración proporcionada por Destination SDK o utilice la agregación de mejor esfuerzo para indicar a Destination SDK que agrupe las llamadas de API lo mejor que pueda.
 
@@ -30,7 +30,7 @@ Después de leer este documento, consulte la documentación de [usando la creaci
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -96,7 +96,7 @@ La configuración de ejemplo siguiente muestra una configuración de agregación
 
 ## Agregación configurable {#configurable-aggregation}
 
-La agregación configurable funciona mejor si prefiere utilizar lotes grandes, con miles de perfiles en la misma llamada. Esta opción también le permite agregar los perfiles exportados en función de reglas de agregación complejas.
+La agregación configurable funciona mejor si prefiere utilizar lotes grandes, con miles de perfiles en la misma llamada. Esta opción también permite agregar los perfiles exportados en función de reglas de agregación complejas.
 
 La configuración de ejemplo siguiente muestra una configuración de agregación configurable. Para ver un ejemplo de agregación de esfuerzo recomendado, vea la sección [agregación de esfuerzo recomendado](#best-effort-aggregation). Los parámetros aplicables a la agregación configurable se documentan en la siguiente tabla.
 

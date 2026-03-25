@@ -2,10 +2,10 @@
 description: Obtenga información sobre cómo configurar las identidades de destino admitidas para los destinos creados con Destination SDK.
 title: Configuración del área de nombres de identidad
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Al configurar áreas de nombres de identidad para su destino, puede ajustar la a
 
 * Permite a los usuarios asignar atributos XDM a áreas de nombres de identidad.
 * Permite a los usuarios asignar [áreas de nombres de identidad estándar](../../../../identity-service/features/namespaces.md#standard) a sus propias áreas de nombres de identidad.
-* Permite que los usuarios asignen [áreas de nombres de identidad personalizadas](../../../../identity-service/features/namespaces.md#manage-namespaces) a sus propias áreas de nombres de identidad.
+* Permite que los usuarios asignen [áreas de nombres de identidad personalizadas](../../../../identity-service/features/namespaces.md#create-namespaces) a sus propias áreas de nombres de identidad.
 
 Para saber dónde encaja este componente en una integración creada con Destination SDK, consulte el diagrama en la documentación de [opciones de configuración](../configuration-options.md) o vea la guía sobre cómo [usar Destination SDK para configurar un destino basado en archivos](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -42,7 +42,7 @@ Este artículo describe todas las opciones de configuración de áreas de nombre
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Tipos de integración admitidos {#supported-integration-types}
 
@@ -118,9 +118,9 @@ La configuración siguiente habilita la opción [Aplicar transformación](../../
    }
 ```
 
-Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform aplique un algoritmo hash en ellos automáticamente en la activación.
+Marque esta opción cuando use campos de origen sin hash, para que [!DNL Adobe Experience Platform] los agregue automáticamente al activarlos.
 
-Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la opción **Aplicar transformación** para que Adobe Experience Platform aplique automáticamente hash a los atributos de origen al activarlos.
+Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la opción **Aplicar transformación** para que [!DNL Adobe Experience Platform] aplique hash automáticamente a los atributos de origen durante la activación.
 
 ## Configuración del hashing obligatorio de campos de origen {#configure-mandatory-hashing}
 

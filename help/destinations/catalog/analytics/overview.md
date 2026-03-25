@@ -3,9 +3,9 @@ keywords: destinos de análisis;destino de análisis
 title: Resumen de destinos de Analytics
 description: Los destinos de Analytics hacen un seguimiento de cómo los visitantes interactúan con el contenido del sitio y recopilan datos para comprender el comportamiento de la audiencia. Estas plataformas ofrecen perspectivas únicas sobre la participación y la conversión de los visitantes más valiosos.
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 8b29e4c06300244a72addc7ae4807425a405b56f
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Los destinos de Analytics hacen un seguimiento de cómo los visitantes interact�
 
 ## Destinos de análisis admitidos {#supported-destinations}
 
-Actualmente, Adobe Experience Platform admite los destinos de análisis que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
+Actualmente, [!DNL Adobe Experience Platform] admite los destinos de Analytics que se enumeran a continuación. Para obtener información sobre cómo conectarse a estos destinos, consulte los vínculos individuales:
 
 * [Extensión de seguimiento de sitio web de Adobe](adform.md)
 * [Extensión de Adobe Analytics](adobe-analytics.md)

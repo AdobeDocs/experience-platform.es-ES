@@ -3,10 +3,10 @@ title: Activar audiencias de clientes potenciales en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de clientes potenciales en destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 14%
+source-wordcount: '583'
+ht-degree: 8%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->Esta funcionalidad está disponible para los clientes que han adquirido el paquete Real-Time CDP Prime y Ultimate. Póngase en contacto con su representante de Adobe para obtener más información.
+>Esta funcionalidad está disponible para los clientes que han adquirido el paquete de Prime y Ultimate [!DNL Real-Time CDP]. Póngase en contacto con su representante de Adobe para obtener más información.
 
-En este artículo se explica el flujo de trabajo necesario para exportar [audiencias de clientes potenciales](/help/segmentation/types/prospect-audiences.md) de Adobe Experience Platform a su destino preferido.
+Este artículo explica el flujo de trabajo necesario para exportar [audiencias de clientes potenciales](/help/segmentation/types/prospect-audiences.md) de [!DNL Adobe Experience Platform] a su destino preferido.
 
 ## Destinos admitidos {#supported-destinations}
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Otros casos de uso obtenidos mediante la compatibilidad con datos de socios {#other-use-cases}
 
-Explore más casos de uso habilitados a través de la compatibilidad con datos de socios en Real-Time CDP:
+Explorar más casos de uso habilitados mediante la compatibilidad con datos de socio en [!DNL Real-Time CDP]:
 
 * [Complemente perfiles de origen con atributos de socios de datos de confianza para mejorar la base de datos, obtener nueva información sobre la base de clientes y optimizar mejor los públicos.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Utilice la compatibilidad con datos de terceros en Real-Time CDP para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participe con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Use la compatibilidad con datos de terceros en [!DNL Real-Time CDP] para [ampliar su base de perfiles con perfiles potenciales de socios de datos y participar con ellos para adquirir o llegar a nuevos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveche el reconocimiento ayudado por los socios para personalizar las experiencias en el sitio](/help/rtcdp/partner-data/onsite-personalization.md) durante la visita sin que el usuario se autentique ni tenga un historial previo con su marca.

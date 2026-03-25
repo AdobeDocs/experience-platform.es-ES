@@ -4,10 +4,10 @@ title: Exportación de conjuntos de datos mediante la API de Flow Service
 description: Aprenda a utilizar la API de Flow Service para exportar conjuntos de datos a destinos seleccionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '5203'
-ht-degree: 4%
+source-wordcount: '5178'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* Esta funcionalidad está disponible para los clientes que hayan adquirido el paquete Real-Time CDP Prime and Ultimate, Adobe Journey Optimizer o Customer Journey Analytics. Póngase en contacto con su representante de Adobe para obtener más información.
+>* Esta funcionalidad está disponible para los clientes que han adquirido el paquete de [!DNL Real-Time CDP] Prime y Ultimate, [!DNL Adobe Journey Optimizer] o Customer Journey Analytics. Póngase en contacto con su representante de Adobe para obtener más información.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 -->
 
-En este artículo se explica el flujo de trabajo necesario para usar [!DNL Flow Service API] con el fin de exportar [conjuntos de datos](/help/catalog/datasets/overview.md) de Adobe Experience Platform a su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage].
+Este artículo explica el flujo de trabajo necesario para usar [!DNL Flow Service API] con el fin de exportar [conjuntos de datos](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] a su ubicación de almacenamiento en la nube preferida, como [!DNL Amazon S3], ubicaciones SFTP o [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ En este artículo se explica el flujo de trabajo necesario para usar [!DNL Flow 
 
 ## Conjuntos de datos disponibles para exportar {#datasets-to-export}
 
-Los conjuntos de datos que puede exportar dependen de la aplicación de Experience Platform (Real-Time CDP, Adobe Journey Optimizer), del nivel (Prime o Ultimate) y de cualquier complemento que haya adquirido (por ejemplo: Data Distiller).
+Los conjuntos de datos que puede exportar dependen de la aplicación de Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), el nivel (Prime o Ultimate) y cualquier complemento que haya adquirido (por ejemplo: Data Distiller).
 
 Consulte la tabla [en la página de tutorial de la interfaz de usuario](/help/destinations/ui/export-datasets.md#datasets-to-export) para comprender qué conjuntos de datos puede exportar.
 
@@ -68,9 +68,9 @@ Tenga en cuenta los siguientes requisitos previos para exportar conjuntos de dat
 
 ![Información general: Pasos para crear un destino y exportar conjuntos de datos](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): todos los datos que se han ingerido correctamente en Adobe Experience Platform se mantienen dentro de [!DNL Data Lake] como conjuntos de datos. Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los conjuntos de datos también contienen metadatos que describen varios aspectos de los datos que almacenan.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): todos los datos que se han ingerido correctamente en [!DNL Adobe Experience Platform] persisten dentro de [!DNL Data Lake] como conjuntos de datos. Un conjunto de datos es una construcción de almacenamiento y administración para una colección de datos, normalmente una tabla, que contiene un esquema (columnas) y campos (filas). Los conjuntos de datos también contienen metadatos que describen varios aspectos de los datos que almacenan.
    * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] proporciona zonas protegidas virtuales que dividen una sola instancia de [!DNL Experience Platform] en entornos virtuales independientes para ayudar a desarrollar y evolucionar aplicaciones de experiencia digital.
 
 Las secciones siguientes proporcionan información adicional que debe conocer para exportar conjuntos de datos a destinos de almacenamiento en la nube en Experience Platform.

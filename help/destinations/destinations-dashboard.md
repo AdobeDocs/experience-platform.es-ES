@@ -3,9 +3,9 @@ keywords: Experience Platform;interfaz de usuario;IU;personalización;tablero de
 title: Tablero de destinos
 description: La interfaz de usuario de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización.
 type: Documentation
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL Destinations] panel {#destinations-dashboard}
 
-La interfaz de usuario (IU) de Adobe Experience Platform proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización, tal como se capturan durante una instantánea diaria.
+La interfaz de usuario (IU) [!DNL Adobe Experience Platform] proporciona un panel a través del cual puede ver información importante acerca de los destinos activos de su organización, tal como se captura durante una instantánea diaria.
 
 <!--
 Broken links; this article is not in TOC

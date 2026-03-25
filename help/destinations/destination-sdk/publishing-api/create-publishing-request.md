@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo dar formato a una llamada de API para enviar una solicitud de publicación de destino a través de Adobe Experience Platform Destination SDK.
 title: Crear una solicitud de publicación de destino
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Utilice el punto final de la API de destinos de publicación para enviar una sol
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API de publicación de destino {#get-started}
 
@@ -83,4 +83,4 @@ Los extremos de la API de Destination SDK siguen los principios generales del me
 
 ## Próximos pasos {#next-steps}
 
-Después de leer este documento, ahora sabe cómo enviar una solicitud de publicación para su destino. El equipo de Adobe Experience Platform revisará su solicitud de publicación y se pondrá en contacto con usted en un plazo de cinco días laborables.
+Después de leer este documento, ahora sabe cómo enviar una solicitud de publicación para su destino. El equipo [!DNL Adobe Experience Platform] revisará su solicitud de publicación y se pondrá en contacto con usted dentro de cinco días hábiles.

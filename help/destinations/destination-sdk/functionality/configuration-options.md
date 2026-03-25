@@ -2,16 +2,16 @@
 description: El servicio de destinos de Adobe Experience Platform utiliza puntos finales de configuración para varios componentes que crean la funcionalidad de destinos. Descubra cómo estos componentes combinados permiten a Experience Platform conectarse a socios de destino, enviar mensajes personalizados y activar datos de perfil en todo el ecosistema digital.
 title: Opciones de configuración en Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
 # Opciones de configuración en Destination SDK
 
-El servicio de destinos de Adobe Experience Platform utiliza puntos finales de configuración para varios componentes que crean la funcionalidad de destinos.
+El servicio de destinos de [!DNL Adobe Experience Platform] usa extremos de configuración para varios componentes que crean la funcionalidad de destinos.
 
 Combinados, estos componentes permiten a Experience Platform conectarse a plataformas de destino, enviar mensajes personalizados, exportar archivos personalizados y activar datos de perfil en todo el ecosistema digital.
 
@@ -38,7 +38,7 @@ En el caso de los destinos basados en archivos, esta configuración también inc
 
 ## Configuración de destino {#destination-configuration}
 
-Este punto de conexión de configuración contiene información básica y avanzada sobre el destino. Por ejemplo, aquí es donde se especifican los tipos de identidad que puede admitir el destino, el formato deseado de los archivos exportados (para destinos basados en archivos) y varios atributos de interfaz de usuario para la tarjeta de destino en la interfaz de usuario de Adobe Experience Platform.
+Este punto de conexión de configuración contiene información básica y avanzada sobre el destino. Por ejemplo, aquí es donde especifica los tipos de identidad que puede admitir el destino, el formato deseado de los archivos exportados (para destinos basados en archivos) y varios atributos de interfaz de usuario para la tarjeta de destino en la interfaz de usuario de [!DNL Adobe Experience Platform].
 
 Consulte la documentación siguiente para obtener detalles sobre cada uno de los componentes de configuración de destino. Puede configurar las funcionalidades descritas a continuación a través del [extremo de destinos](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -58,6 +58,6 @@ Consulte la documentación siguiente para obtener detalles sobre cada uno de los
 
 Este componente le permite configurar cómo se crean, actualizan o eliminan las audiencias en el destino mediante programación. En el caso de los destinos basados en archivos, permite configurar una notificación cada vez que los archivos se envían correctamente al destino. Puede configurar esta funcionalidad a través del extremo [audience-templates](../metadata-api/create-audience-template.md).
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este artículo, ahora tiene una visión general de la funcionalidad proporcionada por Destination SDK y de las páginas que se deben leer para obtener más información acerca de configuraciones específicas. A continuación, puedes leer las guías que incluyen todos los pasos para [configurar una transmisión por secuencias](../guides/configure-destination-instructions.md) o un [destino basado en archivos](../guides/configure-file-based-destination-instructions.md) mediante Destination SDK.

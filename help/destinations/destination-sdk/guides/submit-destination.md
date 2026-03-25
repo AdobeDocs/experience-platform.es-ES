@@ -2,9 +2,9 @@
 description: Esta página proporciona toda la información necesaria para enviar un destino de producción para su revisión cuando se crea con Destination SDK.
 title: Enviar un destino de productos para su revisión
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Para poder publicar su destino en el [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), debe proporcionar a Adobe cierta información sobre el destino y las pruebas que ha realizado para garantizar que los usuarios disfruten de la mejor experiencia posible al activar datos en su plataforma.
 
-En esta página se muestra toda la información que debe proporcionar al enviar o actualizar un destino creado con Adobe Experience Platform Destination SDK. Para enviar correctamente un destino en Adobe Experience Platform, envíe un correo electrónico a <aepdestsdk@adobe.com> que incluya lo siguiente:
+Esta página lista toda la información que debe proporcionar al enviar o actualizar un destino creado con [!DNL Adobe Experience Platform] Destination SDK. Para enviar correctamente un destino en [!DNL Adobe Experience Platform], envíe un correo electrónico a <aepdestsdk@adobe.com> que incluya:
 
 * Una descripción de los casos de uso que resuelve su destino. Esto solo es necesario si envía una nueva configuración de destino.
 * Una descripción del motivo del envío de destino. Esto solo es necesario si está actualizando una configuración de destino existente.
@@ -60,7 +60,7 @@ Proporcione una breve descripción del problema que su envío resuelve para el d
 
 ## Resultados de la prueba después de usar la API de destino de prueba {#testing-api-response}
 
-Proporcione los resultados de la prueba después de usar el extremo [API de destino de prueba](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para realizar una llamada HTTP a su destino. Esto incluye lo siguiente:
+Proporcione los resultados de la prueba después de usar el extremo [API de destino de prueba](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para realizar una llamada HTTP a su destino. Esto incluye:
 
 * La solicitud de API completa (encabezados y cuerpo) realizada al extremo de destino mediante la API de prueba.
 * La respuesta de API recibida desde su extremo de destino.

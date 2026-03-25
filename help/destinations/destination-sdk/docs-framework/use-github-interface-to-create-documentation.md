@@ -2,9 +2,9 @@
 title: Utilice la interfaz web de GitHub para crear una página de documentación de destino
 description: Las instrucciones de esta página muestran cómo utilizar la interfaz web de GitHub para crear una página de documentación para el destino de Experience Platform y enviarla para su revisión.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: ff094c0c2c75e097140626d77478b8da9a7edf04
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,14 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 >
 >Consulte también la documentación de soporte en la Guía del colaborador de Adobe:
 >
->* [Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=es)
->* [Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es)
->* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=es).
+>* [Instalar las herramientas de creación de Git y Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configurar el repositorio Git localmente para la documentación](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Flujo de trabajo de contribución en GitHub para cambios importantes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configuración del entorno de creación de GitHub {#set-up-environment}
 
-1. En su explorador, vaya a `https://github.com/AdobeDocs/experience-platform.es-ES`.
-1. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=es#fork-the-repository) el repositorio, haga clic en **Ramificar** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su cuenta de GitHub.
+1. En su explorador, vaya a `https://github.com/AdobeDocs/experience-platform.en`.
+1. Para [ramificar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) el repositorio, haga clic en **Ramificar** como se muestra a continuación. Esto crea una copia del repositorio de Experience Platform en su cuenta de GitHub.
 
    ![Repositorio de documentación de Fork Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -36,7 +36,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
    ![Agregar nuevo archivo](../assets/docs-framework/github-navigate-and-create-file.gif)
 
-1. Asigne un nombre a su destino `YOURDESTINATION.md`, donde YOURDESTINATION es el nombre de su destino en Adobe Experience Platform. Por ejemplo, si su compañía se llama Moviestar, debe asignar un nombre al archivo `moviestar.md`.
+1. Asigne un nombre al destino `YOURDESTINATION.md`, donde YOURDESTINATION es el nombre del destino en [!DNL Adobe Experience Platform]. Por ejemplo, si su compañía se llama Moviestar, debe asignar un nombre al archivo `moviestar.md`.
 
 ## Crear la página de documentación de su destino {#author-documentation}
 
@@ -47,7 +47,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
    >
    >Puede cerrar la ventana del explorador en cualquier momento y volver a abrirla más tarde. Su trabajo se guarda automáticamente y le estará esperando cuando vuelva a abrir el explorador.
 1. Copie el contenido del editor de markdown en el nuevo archivo en GitHub.
-1. Para cualquier captura de pantalla o imagen que planee usar, use la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si agrega un destino de personalización a Experience Platform, seleccione la categoría `personalization`. Debe vincular a las imágenes de la página que está creando. Vea [instrucciones sobre cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=es#link-to-images).
+1. Para cualquier captura de pantalla o imagen que planee usar, use la interfaz de GitHub para cargar los archivos en `experience-platform.en/help/destinations/assets/catalog/[...]`, donde `[...]` es la categoría deseada para el destino. Por ejemplo, si agrega un destino de personalización a Experience Platform, seleccione la categoría `personalization`. Debe vincular a las imágenes de la página que está creando. Vea [instrucciones sobre cómo vincular a imágenes](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Cargar imagen en GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -59,13 +59,13 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 >[!TIP]
 >
->Tenga en cuenta que no hay nada que pueda romper aquí. Al seguir las instrucciones de esta sección, simplemente sugiere una actualización de la documentación. El equipo de documentación de Adobe Experience Platform aprobará o editará la actualización sugerida.
+>Tenga en cuenta que no hay nada que pueda romper aquí. Al seguir las instrucciones de esta sección, simplemente sugiere una actualización de la documentación. El equipo de documentación de [!DNL Adobe Experience Platform] aprobará o editará la actualización sugerida.
 
-1. Una vez guardado el archivo y cargado las imágenes deseadas, puede abrir una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama maestra del repositorio de documentación de Adobe. Asegúrese de que la rama en la que trabajó esté seleccionada y seleccione **Contribute > Abrir solicitud de extracción**.
+1. Una vez guardado el archivo y cargado las imágenes deseadas, puede abrir una solicitud de extracción (PR) para fusionar la rama de trabajo en la rama principal del repositorio de documentación de Adobe. Asegúrese de que la rama en la que trabajó esté seleccionada y seleccione **Contribute > Abrir solicitud de extracción**.
 
    ![Crear solicitud de extracción](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Asegúrese de que las ramas base y de comparación son correctas. Agregue una nota al PR, describiendo su actualización, y seleccione **Crear solicitud de extracción**. Esto abre una PR para fusionar la rama de trabajo de la ramificación en la rama maestra del repositorio de Adobe.
+1. Asegúrese de que las ramas base y de comparación son correctas. Agregue una nota al PR, describiendo su actualización, y seleccione **Crear solicitud de extracción**. Esto abre una PR para fusionar la rama de trabajo de la ramificación en la rama principal del repositorio de Adobe.
 
    >[!TIP]
    >
@@ -75,7 +75,7 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 1. En este punto, aparece una notificación que le solicita que firme el Acuerdo de licencia para colaboradores (CLA) de Adobe. Este es un paso obligatorio. Después de firmar el CLA, actualice la página PR y envíe la solicitud de extracción.
 
-1. Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la ficha **Solicitudes de extracción** en `https://github.com/AdobeDocs/experience-platform.es-ES`.
+1. Puede confirmar que la solicitud de extracción se ha enviado inspeccionando la ficha **Solicitudes de extracción** en `https://github.com/AdobeDocs/experience-platform.en`.
 
    ![PR correcta](../assets/docs-framework/ssd-pr-successful.png)
 
@@ -83,4 +83,4 @@ Las instrucciones siguientes muestran cómo utilizar la interfaz web de GitHub p
 
 >[!TIP]
 >
->Para agregar imágenes y vínculos a tu documentación y para cualquier otra pregunta sobre Markdown, lee [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=es) en la guía de escritura colaborativa de Adobe.
+>Para agregar imágenes y vínculos a tu documentación y para cualquier otra pregunta sobre Markdown, lee [Using Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) en la guía de escritura colaborativa de Adobe.

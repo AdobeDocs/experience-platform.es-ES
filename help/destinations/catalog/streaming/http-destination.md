@@ -4,9 +4,9 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil al extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3020'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo [!DNL Adobe Experience Platform] que le ayuda a enviar datos de perfil a extremos HTTP de terceros.
 
@@ -36,7 +36,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -174,8 +174,8 @@ Si selecciona el tipo de autenticación **[!UICONTROL OAuth 2 Password]** para c
 >**Limitación mTLS:** mTLS no es compatible con la autenticación de contraseña de OAuth 2. Consulte la sección [Consideraciones sobre mTLS](#mtls-considerations) para obtener más información.
 
 * **[!UICONTROL Access Token URL]**: dirección URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
-* **[!UICONTROL Client ID]**: el [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Client Secret]**: el [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Client ID]**: El [!DNL client ID] que su sistema asigna a [!DNL Adobe Experience Platform].
+* **[!UICONTROL Client Secret]**: El [!DNL client secret] que su sistema asigna a [!DNL Adobe Experience Platform].
 * **[!UICONTROL Username]**: el nombre de usuario para acceder al extremo HTTP.
 * **[!UICONTROL Password]**: contraseña para acceder al extremo HTTP.
 
@@ -194,8 +194,8 @@ Si selecciona el tipo de autenticación **[!UICONTROL OAuth 2 Client Credentials
 >**Limitación mTLS:** mTLS no es compatible con la autenticación de credenciales de cliente de OAuth 2. Consulte la sección [Consideraciones sobre mTLS](#mtls-considerations) para obtener más información.
 
 * **[!UICONTROL Access Token URL]**: dirección URL del lado que emite tokens de acceso y, opcionalmente, tokens de actualización.
-* **[!UICONTROL Client ID]**: el [!DNL client ID] que su sistema asigna a Adobe Experience Platform.
-* **[!UICONTROL Client Secret]**: el [!DNL client secret] que su sistema asigna a Adobe Experience Platform.
+* **[!UICONTROL Client ID]**: El [!DNL client ID] que su sistema asigna a [!DNL Adobe Experience Platform].
+* **[!UICONTROL Client Secret]**: El [!DNL client secret] que su sistema asigna a [!DNL Adobe Experience Platform].
 * **[!UICONTROL Client Credentials Type]**: seleccione el tipo de concesión de credenciales de cliente OAuth2 admitida por el extremo:
    * **[!UICONTROL Body Form Encoded]**: en este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en el cuerpo de la solicitud* enviada a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
    * **[!UICONTROL Basic Authorization]**: en este caso, [!DNL client ID] y [!DNL client secret] se incluyen *en un encabezado `Authorization`* después de ser codificados en base64 y enviados a su destino. Para ver un ejemplo, consulte la sección [Tipos de autenticación admitidos](#supported-authentication-types).
@@ -249,7 +249,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

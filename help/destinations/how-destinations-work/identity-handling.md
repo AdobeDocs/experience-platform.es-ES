@@ -2,9 +2,9 @@
 title: Administración de identidades en el flujo de trabajo de activación de destinos
 description: Descubra cómo se gestiona la exportación de identidad en el flujo de trabajo de activación, según el tipo de destino
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ La conclusión es que el número de registros exportados depende de las polític
 
 ## Destinos de streaming basados en API {#streaming-destinations}
 
-Los [destinos de streaming basados en API](/help/destinations/destination-types.md#streaming-destination) creados con [Destination SDK](/help/destinations/destination-sdk/overview.md) (por ejemplo, [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] y otros) solo admiten identificadores específicos para la exportación. Para obtener información detallada sobre las identidades específicas que se pueden exportar a cada destino, lea la sección *identidades admitidas* en cada página de documentación de destino (por ejemplo, vea la sección [identidades admitidas](/help/destinations/catalog/advertising/pinterest.md) en la página de destino [!DNL Pinterest]).
+Los [destinos de streaming basados en API](/help/destinations/destination-types.md#streaming-audience-export-destinations) creados con [Destination SDK](/help/destinations/destination-sdk/overview.md) (por ejemplo, [!DNL Facebook], [!DNL Google Customer Match], [!DNL Pinterest], [!DNL Braze] y otros) solo admiten identificadores específicos para la exportación. Para obtener información detallada sobre las identidades específicas que se pueden exportar a cada destino, lea la sección *identidades admitidas* en cada página de documentación de destino (por ejemplo, vea la sección [identidades admitidas](/help/destinations/catalog/advertising/pinterest.md) en la página de destino [!DNL Pinterest]).
 
 Sin embargo, tenga en cuenta que tiene la flexibilidad de usar datos de [gráficos privados](/help/profile/merge-policies/overview.md#id-stitching) o de atributos como identidades. Esto significa que se pueden asignar atributos XDM al campo de identidad requerido por el destino. Vea a continuación un ejemplo para el destino [!DNL Pinterest], donde el atributo XDM `personalEmail.address` está asignado a la identidad [!DNL Pinterest] requerida `pinterest_audience`.
 
@@ -93,7 +93,7 @@ Al configurar una secuencia de datos como se describe en la documentación vincu
 
 >[!NOTE]
 >
->La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Ver una [lista de todos los destinos basados en dispositivos compatibles en Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html?lang=es)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre Experience Platform y Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
+>La mayoría de estos destinos publicitarios son compatibles con Audience Manager (estos tipos de destinos se conocen en Audience Manager como destinos basados en dispositivos). Ver una [lista de todos los destinos basados en dispositivos compatibles en Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/device-based/device-based-destinations-list.html)). Solo unas pocas aparecen en Experience Platform. Para obtener información sobre cómo compartir datos entre Experience Platform y Audience Manager, lea la sección sobre [habilitar el uso compartido de datos de Experience Platform a Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#enable-aep-to-aam-data). Actualmente, no hay ningún plan para admitir más destinos de cookies de terceros.
 
 ## Destinos empresariales {#enterprise-destinations}
 
@@ -101,7 +101,7 @@ Al configurar una secuencia de datos como se describe en la documentación vincu
 
 ## Destinos de Personalization {#personalization-destinations}
 
-[Los destinos de Personalization (o Edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (por ejemplo: Adobe Target, [!DNL Custom Personalization]) no requieren ninguna selección de identidad en el flujo de trabajo de activación, ya que la integración es una búsqueda de perfil. El cliente ([!DNL Target], [!DNL Web SDK] u otros) consulta [[!UICONTROL Edge]](/help/collection/home.md#edge) y extrae la información de perfil que necesita para la personalización en el sitio.
+[Los destinos de Personalization (o Edge)](/help/destinations/destination-types.md#edge-personalization-destinations) (por ejemplo: [!DNL Adobe Target], [!DNL Custom Personalization]) no requieren ninguna selección de identidad en el flujo de trabajo de activación, ya que la integración es una búsqueda de perfil. El cliente ([!DNL Target], [!DNL Web SDK] u otros) consulta [[!UICONTROL Edge]](/help/collection/home.md) y extrae la información de perfil que necesita para la personalización en el sitio.
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

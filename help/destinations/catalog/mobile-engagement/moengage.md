@@ -3,9 +3,9 @@ title: Conexión de Moengage
 description: Moengage es una plataforma de participación del cliente que potencia las interacciones centradas en el cliente entre consumidores y marcas en tiempo real.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1132'
 ht-degree: 3%
 
 ---
@@ -24,13 +24,13 @@ Con Adobe, la integración es muy sencilla e intuitiva. Tome cualquier perfil de
 
 ## Casos de uso {#use-cases}
 
-Un especialista en marketing desea segmentar un segmento de usuario (integrado en Adobe Experience Platform) mediante [!DNL Moengage] campañas. Además, desean personalizar el contenido de la campaña en función de los atributos de los perfiles de Adobe Experience Platform. Con esta integración, los usuarios y atributos se actualizan en MoEngage en cuanto los segmentos y perfiles se actualizan en Adobe Experience Platform.
+Un especialista en marketing desea segmentar un segmento de usuario (integrado en [!DNL Adobe Experience Platform]) mediante [!DNL Moengage] campañas. Además, desean personalizar el contenido de la campaña en función de los atributos de [!DNL Adobe Experience Platform] perfiles. Con esta integración, los usuarios y atributos se actualizan en MoEngage en cuanto los segmentos y perfiles se actualizan en [!DNL Adobe Experience Platform].
 
 ## Requisitos previos {#prerequisites}
 
-Para poder enviar los datos de Adobe Experience Platform a [!DNL Moengage], tenga en cuenta los siguientes requisitos previos:
+Antes de poder enviar los datos de [!DNL Adobe Experience Platform] a [!DNL Moengage], tenga en cuenta los siguientes requisitos previos:
 
-* Para usar el destino MoEngage con Adobe Experience Platform, los usuarios deben tener acceso primero a su cuenta de [!DNL Moengage]. Visite la siguiente página para registrarse o iniciar sesión en su cuenta de MoEngage: https://app.moengage.com
+* Para usar el destino MoEngage con [!DNL Adobe Experience Platform], los usuarios deben tener acceso primero a su cuenta de [!DNL Moengage]. Visite la siguiente página para registrarse o iniciar sesión en su cuenta de MoEngage: https://app.moengage.com
 
 
 ## Identidades admitidas {#supported-identities}
@@ -51,7 +51,7 @@ Esta sección describe qué tipos de audiencias puede exportar a este destino.
 | Origen de audiencia | Admitido | Descripción |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | No | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -118,7 +118,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Consulte [Activar datos de audiencia en destinos de exportación de segmentos de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
 
@@ -171,7 +171,7 @@ Para agregar más asignaciones, repita los pasos anteriores.
 
 ## Datos exportados / Validar exportación de datos {#exported-data}
 
-Para comprobar si los datos se han exportado correctamente al destino [!DNL Moengage], vaya al perfil de usuario de la cuenta de [!DNL Moengage]. Aquí encontrará un atributo de usuario denominado `AEPSegments`, creado automáticamente y los demás atributos personalizados que se han asignado en los pasos anteriores de Adobe Experience Platform.
+Para comprobar si los datos se han exportado correctamente al destino [!DNL Moengage], vaya al perfil de usuario de la cuenta de [!DNL Moengage]. Aquí encontrará un atributo de usuario denominado `AEPSegments`, creado automáticamente y los demás atributos personalizados asignados en los pasos anteriores de [!DNL Adobe Experience Platform].
 
 `AEPSegments` es un atributo de tipo matriz en [!DNL Moengage]. Enumera todos los nombres de audiencia de Adobe a los que está asociado el usuario en Experience Platform.
 

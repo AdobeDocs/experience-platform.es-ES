@@ -4,9 +4,9 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4966'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Utilice las funciones mejoradas de exportación de archivos para acceder a la funcionalidad de personalización mejorada al exportar archivos desde Experience Platform:
 
-* [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionales.
+* [Opciones de nomenclatura de archivos](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) adicionales.
 * Posibilidad de establecer encabezados de archivo personalizados en los archivos exportados a través del [paso de asignación mejorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Capacidad para seleccionar [tipo de archivo](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) del archivo exportado.
 * [Capacidad para personalizar el formato de los archivos de datos CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -29,7 +29,7 @@ Esta funcionalidad es compatible con las seis tarjetas de almacenamiento en la n
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-En este artículo se explica el flujo de trabajo necesario para usar la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfiles calificados de Adobe Experience Platform a una de las ubicaciones de almacenamiento en la nube vinculadas anteriormente.
+Este artículo explica el flujo de trabajo necesario para usar la [API de Flow Service](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfiles calificados de [!DNL Adobe Experience Platform] a una de las ubicaciones de almacenamiento en la nube vinculadas anteriormente.
 
 >[!TIP]
 >
@@ -47,7 +47,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Pasos para activar audiencias que resalten el paso actual en el que se encuentra el usuario](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
+Esta guía requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): El marco estandarizado mediante el cual [!DNL Experience Platform] organiza los datos de experiencia del cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] le permite generar audiencias en [!DNL Adobe Experience Platform] a partir de sus datos de [!DNL Real-Time Customer Profile].
@@ -57,7 +57,7 @@ Las secciones siguientes proporcionan información adicional que debe conocer pa
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Ver las identidades disponibles para usar en el esquema de entrada
 
-La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve las áreas de nombres de identidad [standard](/help/identity-service/features/namespaces.md#standard) y [custom](/help/identity-service/features/namespaces.md#manage-namespaces) que configuró en Experience Platform.
+La respuesta devuelve las identidades que puede utilizar al crear el esquema de entrada. Tenga en cuenta que esta respuesta devuelve las áreas de nombres de identidad [standard](/help/identity-service/features/namespaces.md#standard) y [custom](/help/identity-service/features/namespaces.md#create-namespaces) que configuró en Experience Platform.
 
 ```json
 [

@@ -3,16 +3,16 @@ keywords: extensiones de etiquetas;extensión de etiquetas;destinos de launch; e
 title: Extensiones de etiquetas en Adobe Experience Platform
 description: Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '480'
 ht-degree: 2%
 
 ---
 
-# Extensiones de etiquetas en Adobe Experience Platform
+# Extensiones de etiquetas en [!DNL Adobe Experience Platform]
 
-Adobe Experience Platform proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor.
+[!DNL Adobe Experience Platform] proporciona la siguiente generación de funcionalidades de administración de etiquetas de Adobe. Experience Platform ofrece una alternativa sencilla para implementar y gestionar todas las integraciones de análisis, marketing y publicidad necesarias para potenciar las importantes experiencias del cliente. Las etiquetas se ofrecen a [!DNL Adobe Experience Cloud] clientes como una característica incluida que añade valor.
 
 Para ver una introducción a las etiquetas, consulte los recursos siguientes:
 
@@ -21,7 +21,7 @@ Para ver una introducción a las etiquetas, consulte los recursos siguientes:
 
 ## Búsqueda de extensiones de etiquetas en la interfaz de Experience Platform {#how-to-find-extensions-in-interface}
 
-Para encontrar las extensiones en la interfaz de Experience Platform, vaya a **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** y seleccione **[!UICONTROL Extensiones]** en el filtro **[!UICONTROL Tipos]**.
+Para encontrar las extensiones en la interfaz de Experience Platform, vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** y seleccione **[!UICONTROL Extensions]** en el filtro **[!UICONTROL Types]**.
 
 ![Filtro de extensiones en la interfaz](../../assets/catalog/launch-extensions/filter.png)
 

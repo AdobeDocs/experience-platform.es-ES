@@ -4,10 +4,10 @@ title: Resumen de destinos de marketing de correo electrónico
 type: Tutorial
 description: Los proveedores de servicios de correo electrónico (ESP) le permiten administrar sus actividades de marketing por correo electrónico, como para enviar campañas de correo electrónico promocionales. Descubra qué ESP son compatibles como destinos de Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 5%
+source-wordcount: '371'
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 ## Información general {#overview}
 
-Los proveedores de servicios de correo electrónico (ESP) permiten administrar las actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. Adobe Experience Platform se integra con los ESP, lo que le permite activar audiencias en destinos de marketing por correo electrónico.
+Los proveedores de servicios de correo electrónico (ESP) permiten administrar las actividades de marketing por correo electrónico, como el envío de campañas de correo electrónico promocionales. [!DNL Adobe Experience Platform] se integra con los ESPs al permitirle activar audiencias en destinos de marketing por correo electrónico.
 
 ## Destinos de marketing por correo electrónico admitidos {#supported-destinations}
 
-Adobe Experience Platform admite los siguientes destinos de marketing por correo electrónico:
+[!DNL Adobe Experience Platform] admite los siguientes destinos de marketing por correo electrónico:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

@@ -3,9 +3,9 @@ title: Activar audiencias de cuenta en destinos
 type: Tutorial
 description: Obtenga información sobre cómo activar audiencias de cuenta en destinos
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compren las ediciones de Real-Time Customer Data Platform [De empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [De empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p).
+>La funcionalidad para activar audiencias de cuenta en destinos está disponible para compañías que compran las ediciones de [empresa a empresa](/help/rtcdp/overview.md#rtcdp-b2b) y [empresa a persona](/help/rtcdp/overview.md#rtcdp-b2p) de [!DNL Real-Time Customer Data Platform].
 
-En este artículo se explica el flujo de trabajo necesario para exportar [audiencias de cuenta](/help/segmentation/types/account-audiences.md) de Adobe Experience Platform a su destino preferido.
+Este artículo explica el flujo de trabajo necesario para exportar [audiencias de cuenta](/help/segmentation/types/account-audiences.md) desde [!DNL Adobe Experience Platform] a su destino preferido.
 
 ## Destinos admitidos {#supported-destinations}
 
@@ -83,7 +83,7 @@ Para el resto del flujo de trabajo de activación para exportar audiencias de cu
 
 >[!NOTE]
 >
->En el paso de programación al exportar audiencias de cuenta a destinos de almacenamiento en la nube, el flujo de trabajo para activar audiencias de cuenta solo le permite exportar [archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una programación diaria_. No se admiten exportaciones por hora. **[!UICONTROL After audience evaluation]** es el único tipo de evaluación admitido.
+>En el paso de programación al exportar audiencias de cuenta a destinos de almacenamiento en la nube, el flujo de trabajo para activar audiencias de cuenta solo permite exportar [archivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) y [archivos incrementales](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) _con una programación diaria_. No se admiten exportaciones por hora. **[!UICONTROL After audience evaluation]** es el único tipo de evaluación admitido.
 
 ## Llamadas importantes y limitaciones conocidas {#important-callouts-known-limitations}
 
@@ -108,4 +108,4 @@ El consentimiento se aplica en el nivel de persona o perfil para *clientes y cli
 
 ![Revise el paso del flujo de trabajo para activar audiencias de cuenta con el control de aplicación de consentimiento atenuado.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Se admiten otros mecanismos de control de datos en Real-Time CDP, como [comprobaciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) y [control de acceso basado en atributos](/help/destinations/home.md#attribute-based-access).
+Se admiten otros mecanismos de control de datos en [!DNL Real-Time CDP], como [comprobaciones de directivas de uso de datos](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) y [control de acceso basado en atributos](/help/destinations/home.md#attribute-based-access).

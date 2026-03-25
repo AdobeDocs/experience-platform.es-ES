@@ -3,9 +3,9 @@ keywords: twitter;Twitter;etiqueta universal de sitio web de twitter;etiqueta un
 title: Extensión de etiqueta de sitio web universal de Twitter
 description: La extensión de etiquetas de sitios web universales de Twitter es un destino publicitario en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '421'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [!DNL Twitter Universal Website Tag] proporciona acciones para enviar señalizaciones a la etiqueta UWT de Twitter.
 
-[!DNL Twitter Universal Website Tag] es una extensión publicitaria en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte [Seguimiento de conversión](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) en la documentación de Twitter.
+[!DNL Twitter Universal Website Tag] es una extensión publicitaria en [!DNL Adobe Experience Platform]. Para obtener más información sobre la funcionalidad de la extensión, consulte [Seguimiento de conversión](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) en la documentación de Twitter.
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
-Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
+Para usar esta extensión, necesita tener acceso a las etiquetas de [!DNL Adobe Experience Platform]. Las etiquetas se ofrecen a [!DNL Adobe Experience Cloud] clientes como una característica incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 

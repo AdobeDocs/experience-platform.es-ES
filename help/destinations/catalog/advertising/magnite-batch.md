@@ -3,9 +3,9 @@ title: Destino del lote Magnite
 description: Utilice este destino para enviar audiencias de Adobe CDP a la plataforma de streaming Magnite por lotes.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1756'
 ht-degree: 2%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 2%
 
 Este documento describe el destino Magnite: Batch y proporciona casos de uso de muestra para ayudarle a comprender mejor cómo activar y exportar audiencias a él.
 
-Las audiencias de Adobe Real-Time CDP se pueden enviar a la plataforma Magnite Streaming de dos formas: una al día o en tiempo real:
+Las audiencias de Adobe [!DNL Real-Time CDP] se pueden entregar a la plataforma Magnite Streaming de dos maneras: se pueden entregar una vez al día o en tiempo real:
 
 1. Si solo desea o necesita enviar audiencias una vez al día, puede utilizar el destino Magnite: Batch, que envía audiencias al flujo Magnite mediante una entrega diaria de archivos por lotes S3. Estas audiencias por lotes se almacenan indefinidamente en la plataforma Magnite, a diferencia de las audiencias en tiempo real, que solo se almacenan durante un par de días.
 
 2. Sin embargo, si desea o necesita enviar audiencias con más frecuencia, deberá utilizar el destino [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Al utilizar el destino en tiempo real, Magnite Streaming recibirá audiencias en tiempo real, pero Magnite solo puede almacenar audiencias en tiempo real temporalmente en su plataforma y se eliminarán del sistema en un par de días. Por este motivo, si desea usar el destino Magnite Real-Time, *también* necesitará usar el destino Magnite: Batch: cada audiencia que active en el destino Real-Time, también deberá activarlo en el destino Batch.
 
-Para recapitular: si solo desea enviar audiencias de Adobe Real-Time CDP una vez al día, solo utilizará Magnite: Batch destination y las audiencias se enviarán una vez al día. Si desea enviar audiencias de Adobe Real-Time CDP en tiempo real, usará *tanto* Magnite: Batch destination como Magnite Real-Time destination. Para obtener más información, consulte Magnite: Streaming.
+Para recapitular: si solo desea enviar audiencias de Adobe [!DNL Real-Time CDP] una vez al día, solo utilizará Magnite: Batch destination y las audiencias se enviarán una vez al día. Si desea enviar audiencias de Adobe [!DNL Real-Time CDP] en tiempo real, utilizará *tanto* el destino Magnite: Batch como el destino Magnite Real-Time. Para obtener más información, consulte Magnite: Streaming.
 
 
-Siga leyendo a continuación para obtener más información sobre Magnite: Destino por lotes, cómo conectarse a él y cómo activar audiencias de Adobe Real-Time CDP en él.
+Continúe leyendo a continuación para obtener más información sobre Magnite: destino del lote, cómo conectarse a él y cómo activar las audiencias de Adobe [!DNL Real-Time CDP] en él.
 Para obtener más información sobre el destino en tiempo real, consulte [esta página de documentación](magnite-streaming.md).
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Para obtener más información sobre el destino en tiempo real, consulte [esta p
 
 ## Casos de uso {#use-cases}
 
-Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino Magnite: Batch, estos son ejemplos de casos de uso que los clientes de Adobe Experience Platform pueden solucionar con este destino.
+Para ayudarle a comprender mejor cómo y cuándo debe utilizar el destino Magnite: Batch, aquí hay casos de uso de muestra que [!DNL Adobe Experience Platform] clientes pueden resolver mediante este destino.
 
 ### Caso de uso #1 {#use-case-1}
 
@@ -50,7 +50,7 @@ Cualquier audiencia activada a través del destino Magnite: Batch se entregará 
 
 ## Requisitos previos {#prerequisites}
 
-Para usar los destinos [!DNL Magnite] en Adobe Experience Platform, primero debe tener una cuenta de Magnite Streaming. Si tiene una cuenta de [!DNL Magnite Streaming], póngase en contacto con el administrador de cuentas de [!DNL Magnite] para que se le proporcionen credenciales para acceder a los destinos de [!DNL Magnite's]. Si no tiene una cuenta de [!DNL Magnite Streaming], comuníquese con adobe-tech@magnite.com
+Para usar los destinos [!DNL Magnite] en [!DNL Adobe Experience Platform], primero debe tener una cuenta de Magnite Streaming. Si tiene una cuenta de [!DNL Magnite Streaming], póngase en contacto con el administrador de cuentas de [!DNL Magnite] para que se le proporcionen credenciales para acceder a los destinos de [!DNL Magnite's]. Si no tiene una cuenta de [!DNL Magnite Streaming], comuníquese con adobe-tech@magnite.com
 
 ## Identidades admitidas {#supported-identities}
 
@@ -73,7 +73,7 @@ Magnite: el destino por lotes puede recibir *cualquier* origen de identidad de A
 | Origen de audiencia | Admitido | Descripción |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Sí | Audiencias generadas a través del [servicio de segmentación](../../../segmentation/home.md) de Experience Platform. |
-| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como Adobe Journey Optimizer, </li><li> y más. </li></ul> |
+| Todos los demás orígenes de audiencia | Sí | Esta categoría incluye todos los orígenes de audiencia fuera de las audiencias generadas a través de [!DNL Segmentation Service]. Obtenga información acerca de [varios orígenes de audiencia](/help/segmentation/ui/audience-portal.md#customize). Algunos ejemplos son: <ul><li> audiencias de carga personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) a Experience Platform desde archivos CSV,</li><li> audiencias de similitud, </li><li> audiencias federadas, </li><li> audiencias generadas en otras aplicaciones de Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> y más. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Audiencias compatibles por tipo de datos de audiencia:
 | [Audiencias de personas](/help/segmentation/types/people-audiences.md) | Sí | Basado en perfiles de clientes, lo que le permite dirigirse a grupos específicos de personas para campañas de marketing. | Compradores frecuentes, abandonadores del carro de compras |
 | [Audiencias de la cuenta](/help/segmentation/types/account-audiences.md) | No | Segmente a individuos dentro de organizaciones específicas para estrategias de marketing basadas en cuentas. | Marketing B2B |
 | [Audiencias potenciales](/help/segmentation/types/prospect-audiences.md) | No | Dirija la actividad a personas que aún no sean clientes, pero que compartan características con la audiencia a la que va dirigida. | Prospección con datos de terceros |
-| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Recopilaciones de datos estructurados almacenados en el lago de datos de Adobe Experience Platform. | Informes, flujos de trabajo de ciencia de datos |
+| [Exportaciones de conjuntos de datos](/help/catalog/datasets/overview.md) | No | Colecciones de datos estructurados almacenados en el lago de datos [!DNL Adobe Experience Platform]. | Informes, flujos de trabajo de ciencia de datos |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar datos de audiencia en destinos de exportación de perfiles por lotes](/help/destinations/ui/activate-batch-profile-destinations.md) para obtener instrucciones sobre cómo activar segmentos de audiencia en este destino.
@@ -189,7 +189,7 @@ En la pantalla &quot;Configure a filename and export schedule for each audience&
 
 Una vez que las audiencias se hayan cargado, puede validar que se hayan creado y cargado correctamente.
 
-* El destino Magnite: Batch entrega archivos S3 a Magnite Streaming en una cadencia diaria. Después de la entrega y la ingesta, se espera que las audiencias y los segmentos aparezcan en Magnite Streaming y se puedan aplicar a una oferta. Puede confirmarlo consultando el ID de segmento o el nombre de segmento compartido durante los pasos de activación en Adobe Experience Platform.
+* El destino Magnite: Batch entrega archivos S3 a Magnite Streaming en una cadencia diaria. Después de la entrega y la ingesta, se espera que las audiencias y los segmentos aparezcan en Magnite Streaming y se puedan aplicar a una oferta. Para confirmarlo, busque el ID de segmento o el nombre de segmento compartido durante los pasos de activación en [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >

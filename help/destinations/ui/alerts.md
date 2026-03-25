@@ -3,16 +3,16 @@ keywords: Experience Platform;inicio;temas populares; alertas;destinos
 description: Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 title: Suscribirse a alertas de destino en contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 10%
+source-wordcount: '917'
+ht-degree: 9%
 
 ---
 
 # Suscribirse a alertas de destino en contexto
 
-Adobe Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Adobe Experience Platform. Las alertas reducen o eliminan la necesidad de sondear la [[!DNL Observability Insights] API](../../observability/api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
+[!DNL Adobe Experience Platform] le permite suscribirse a alertas basadas en eventos con respecto a [!DNL Adobe Experience Platform] actividades. Las alertas reducen o eliminan la necesidad de sondear la [[!DNL Observability Insights] API](../../observability/api/overview.md) para comprobar si un trabajo se ha completado, si se ha alcanzado un hito determinado dentro de un flujo de trabajo o si se ha producido algún error.
 
 Puede suscribirse a alertas al crear un flujo de datos para recibir mensajes de alerta sobre el estado, el éxito o el error de la ejecución del flujo.
 
@@ -20,9 +20,9 @@ Este documento proporciona pasos sobre cómo suscribirse y recibir mensajes de a
 
 ## Introducción {#getting-started}
 
-Este documento requiere un entendimiento práctico de los siguientes componentes de Adobe Experience Platform:
+Este documento requiere una comprensión práctica de los siguientes componentes de [!DNL Adobe Experience Platform]:
 
-* [Destinos](../home.md): integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
+* [Destinos](../home.md): integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de [!DNL Adobe Experience Platform]. Puede utilizar los destinos para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 * [Observabilidad](../../observability/home.md): [!DNL Observability Insights] le permite supervisar las actividades de Experience Platform mediante el uso de métricas estadísticas y notificaciones de eventos.
    * [Alertas](../../observability/alerts/overview.md): Cuando se alcanza un conjunto determinado de condiciones en las operaciones de Experience Platform (como un problema potencial cuando el sistema incumple un umbral), Experience Platform puede enviar mensajes de alerta a cualquier usuario de su organización que se haya suscrito a ellos.
 

@@ -3,9 +3,9 @@ title: Activación de audiencias en destinos de personalización de Edge
 description: Obtenga información sobre cómo activar audiencias de Adobe Experience Platform en destinos de personalización Edge para casos de uso de personalización de la misma página y de la siguiente.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1881'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Adobe Experience Platform usa [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) junto con [destinos Edge](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que los clientes creen y segmenten audiencias a gran escala en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
+[!DNL Adobe Experience Platform] usa [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) junto con [destinos Edge](/help/destinations/destination-types.md#edge-personalization-destinations) para permitir que los clientes creen y segmenten audiencias a gran escala en tiempo real. Esta capacidad le ayuda a configurar casos de uso de personalización de la misma página y de la siguiente.
 
-Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md).
+Algunos ejemplos de destinos Edge son las conexiones [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](../../destinations/catalog/personalization/custom-personalization.md).
 
 >[!NOTE]
 >
->Al [configurar la conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md) *sin* mediante un ID de secuencia de datos, no se admiten los casos de uso descritos en este artículo. En ausencia de un conjunto de datos, solo se admiten los casos de uso de personalización de la sesión siguiente.
+>Al [configurar la  [!DNL Adobe Target] conexión](../catalog/personalization/adobe-target-connection.md) *sin* mediante un ID de secuencia de datos, no se admiten los casos de uso descritos en este artículo. En ausencia de un conjunto de datos, solo se admiten los casos de uso de personalización de la sesión siguiente.
 
 >[!IMPORTANT]
 >
@@ -31,27 +31,27 @@ Algunos ejemplos de destinos Edge son las conexiones [Adobe Target](../../destin
 > 
 > Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias en destinos Edge de Adobe Experience Platform. Cuando se usan junto con [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) y la asignación de atributos de perfil [opcional](#mapping), estos destinos habilitan casos de uso de personalización de la misma página y de la siguiente página en las propiedades web y móviles.
+Este artículo explica el flujo de trabajo necesario para activar audiencias en [!DNL Adobe Experience Platform] destinos de Edge. Cuando se usan junto con [segmentación de Edge](../../segmentation/methods/edge-segmentation.md) y la asignación de atributos de perfil [opcional](#mapping), estos destinos habilitan casos de uso de personalización de la misma página y de la siguiente página en las propiedades web y móviles.
 
-Para obtener una breve descripción general sobre cómo configurar la conexión de Adobe Target para la personalización de Edge, vea el siguiente vídeo.
+Vea el siguiente vídeo para obtener una breve descripción general sobre cómo configurar la conexión de [!DNL Adobe Target] para la personalización de Edge.
 
 >[!NOTE]
 >
 >La interfaz de usuario de Experience Platform se actualiza con frecuencia y puede haber cambiado desde que se grabó este vídeo. Para obtener la información más actualizada, consulte los pasos de configuración descritos en las secciones siguientes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
-Vea el siguiente vídeo para obtener una breve descripción general de cómo compartir audiencias y atributos de perfil en Adobe Target y destinos de personalización personalizados.
+Vea el siguiente vídeo para obtener información general sobre cómo compartir audiencias y atributos de perfil para [!DNL Adobe Target] y destinos de personalización personalizados.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447358/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 
-Utilice soluciones de personalización de Adobe, como Adobe Target, o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante el destino de [Personalization personalizado](../catalog/personalization/custom-personalization.md). Todo esto mientras también aprovecha las funcionalidades de segmentación y recopilación de datos de Experience Platform Edge Network.
+Utilice soluciones de personalización de Adobe, como [!DNL Adobe Target], o sus propias plataformas de socios de personalización (por ejemplo, [!DNL Optimizely], [!DNL Pega]), así como sistemas propietarios (por ejemplo, CMS interno) para impulsar una experiencia de personalización del cliente más profunda mediante el destino [Personalization personalizado](../catalog/personalization/custom-personalization.md). Todo esto mientras también aprovecha las funcionalidades de segmentación y recopilación de datos de Experience Platform Edge Network.
 
 Los casos de uso que se describen a continuación incluyen personalización del sitio y publicidad en el sitio segmentada.
 
-Para habilitar estos casos de uso, los clientes necesitan una forma rápida y sencilla de recuperar información de audiencias y atributos de perfil de Experience Platform y de enviar esta información a las conexiones de [Adobe Target](../catalog/personalization/adobe-target-connection.md) o [Personalization personalizado](../catalog/personalization/custom-personalization.md) en la interfaz de usuario de Experience Platform.
+Para habilitar estos casos de uso, los clientes necesitan una forma rápida y sencilla de recuperar información de audiencias y atributos de perfil de Experience Platform y de enviar esta información a las conexiones de [[!DNL Adobe Target]](../catalog/personalization/adobe-target-connection.md) o [Personalization personalizado](../catalog/personalization/custom-personalization.md) en la interfaz de usuario de Experience Platform.
 
 ### Personalización de la misma página {#same-page}
 
@@ -69,7 +69,7 @@ Al día siguiente, el usuario vuelve al mismo sitio web del cliente. Las audienc
 
 ### Personalizar un titular de página de inicio {#home-page-banner}
 
-Una empresa de venta y alquiler de viviendas quiere personalizar su página de inicio con un banner, según las cualificaciones de audiencia en Adobe Experience Platform. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviarlas a Adobe Target como criterios de segmentación para su oferta de Target.
+Una compañía de ventas y alquiler de viviendas desea personalizar su página de inicio con un banner, según las calificaciones de audiencia en [!DNL Adobe Experience Platform]. La empresa puede seleccionar qué audiencias deben obtener una experiencia personalizada y enviar esas audiencias a [!DNL Adobe Target] como criterios de segmentación para su oferta de Target.
 
 ## Requisitos previos {#prerequisites}
 
@@ -81,7 +81,7 @@ Al configurar la secuencia de datos, en **[!UICONTROL Adobe Experience Platform]
 
 >[!TIP]
 >
->A partir de la versión de abril de 2024, no es necesario que active la casilla Segmentación de Edge al [configurar la conexión con Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). En este caso, la [personalización de la próxima sesión](#next-session) es el único caso de uso de personalización disponible.
+>A partir de la versión de abril de 2024, no es necesario que active la casilla Segmentación de Edge al [configurar la conexión a [!DNL Adobe Target]](/help/destinations/catalog/personalization/adobe-target-connection.md). En este caso, la [personalización de la próxima sesión](#next-session) es el único caso de uso de personalización disponible.
 
 ![Configuración de flujo de datos con segmentación Edge y destinos Personalization resaltados.](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -111,7 +111,7 @@ Siga el [tutorial de creación de conexión de destino](../ui/connect-destinatio
 
 Según el destino que esté configurando, consulte los siguientes artículos para conocer los requisitos previos específicos del destino y la información relacionada:
 
-* [Conexión de Adobe Target](../catalog/personalization/adobe-target-connection.md#parameters)
+* [[!DNL Adobe Target] conexión](../catalog/personalization/adobe-target-connection.md#parameters)
 * [Conexión de personalización personalizada](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Seleccione su destino {#select-destination}

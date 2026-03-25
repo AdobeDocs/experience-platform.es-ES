@@ -3,22 +3,22 @@ title: Activar audiencias en destinos depurados según identificadores de LiveRa
 type: Tutorial
 description: Aprenda a activar audiencias de Adobe Experience Platform en destinos de audio y TV conectados, y otras integraciones mediante LiveRamp RampID.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
 
 # Activar audiencias en destinos depurados según identificadores de LiveRamp
 
-Use la integración de Adobe Real-Time CDP con [!DNL LiveRamp] para activar audiencias en una lista revisada de destinos que usan [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para la activación, incluidos destinos de audio y TV conectados, como los que se enumeran a continuación.
+Use la integración de Adobe [!DNL Real-Time CDP] con [!DNL LiveRamp] para activar audiencias en una lista revisada de destinos que usan [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para la activación, incluidos destinos de audio y TV conectados, como los que se enumeran a continuación.
 
 >[!IMPORTANT]
 >
 >No es necesario ingerir ni trabajar de ninguna manera con LiveRamp RampIDs en la interfaz de Experience Platform.
 >
-> Puede exportar identidades desde Real-Time CDP, como identificadores basados en PII, identificadores conocidos e ID personalizados, tal como se describe en la [documentación oficial de LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Estas identidades coinciden con [!DNL LiveRamp RampIDs] más abajo en el proceso de activación.
+> Puede exportar identidades de [!DNL Real-Time CDP], como identificadores basados en PII, identificadores conocidos e ID personalizados, tal como se describe en la [documentación oficial de LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Estas identidades coinciden con [!DNL LiveRamp RampIDs] más abajo en el proceso de activación.
 
 
 * [[!DNL 4C Insights]](#insights)
@@ -42,7 +42,7 @@ Use la integración de Adobe Real-Time CDP con [!DNL LiveRamp] para activar audi
 * [[!DNL Teads]](#teads)
 * [[!DNL WB Discovery]](#wb-discovery)
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias desde Real-Time CDP a los destinos enumerados anteriormente, directamente desde la interfaz de usuario de Real-Time CDP.
+Este artículo explica el flujo de trabajo necesario para activar audiencias de [!DNL Real-Time CDP] a los destinos enumerados arriba, directamente desde la interfaz de usuario de [!DNL Real-Time CDP].
 
 ## Flujo de trabajo de activación {#workflow}
 
@@ -50,19 +50,19 @@ Para activar audiencias en destinos de audio y TV conectados, siga un proceso de
 
 ![Diagrama que muestra el flujo de trabajo para activar audiencias desde Real-Time CDP a destinos seleccionados, a través de LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
-En primer lugar, exporte las audiencias de Real-Time CDP al destino [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) como archivos CSV.
+En primer lugar, exporte las audiencias de [!DNL Real-Time CDP] al destino [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) como archivos CSV.
 
 Después de exportar las audiencias, las activa usando el destino [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md).
 
 >[!TIP]
 >
->Este proceso le permite activar audiencias en destinos como [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) y más, directamente desde la interfaz de usuario de Real-Time CDP, sin necesidad de iniciar sesión en su cuenta de [!DNL LiveRamp] para la activación.
+>Este proceso le permite activar audiencias en destinos como [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney) y más, directamente desde la interfaz de usuario de [!DNL Real-Time CDP], sin necesidad de iniciar sesión en su cuenta de [!DNL LiveRamp] para la activación.
 
 ### Tutorial de vídeo {#video}
 
 Vea el siguiente vídeo para obtener una explicación completa del flujo de trabajo descrito en esta página.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452659?captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Paso 1: Envío de audiencias de Experience Platform a LiveRamp, a través del destino [!DNL LiveRamp - Onboarding] {#onboarding}
 

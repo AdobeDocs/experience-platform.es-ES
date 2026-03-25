@@ -3,9 +3,9 @@ keywords: Marketo Munchkin;marketo munchkin;extensión Marketo Munchkin;extensi�
 title: Extensión de Marketo Munchkin
 description: La extensión de Marketo Munchkin es un destino de personalización en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '442'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ Desde la administración de clientes potenciales hasta el marketing basado en cu
 
 [!DNL Marketo’s Munchkin] JavaScript permite rastrear las visitas y los clics de la página del usuario final en sus [!DNL Marketo] páginas de aterrizaje y páginas web externas.
 
-[!DNL Marketo Munchkin] es una extensión de correo electrónico en Adobe Experience Platform. Para obtener más información sobre Marketo Munchkin, lea [Seguimiento de posibles clientes](https://developers.marketo.com/javascript-api/lead-tracking/) en la documentación de Marketo.
+[!DNL Marketo Munchkin] es una extensión de correo electrónico en [!DNL Adobe Experience Platform]. Para obtener más información sobre Marketo Munchkin, lea [Seguimiento de posibles clientes](https://developers.marketo.com/javascript-api/lead-tracking/) en la documentación de Marketo.
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Este destino es una extensión de etiqueta. Para obtener más información sobre
 
 Esta extensión está disponible en el catálogo [!DNL Destinations] para todos los clientes que hayan adquirido Experience Platform.
 
-Para utilizar esta extensión, debe tener acceso a las etiquetas en Adobe Experience Platform. Las etiquetas se ofrecen a los clientes de Adobe Experience Cloud como una función incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
+Para usar esta extensión, necesita tener acceso a las etiquetas de [!DNL Adobe Experience Platform]. Las etiquetas se ofrecen a [!DNL Adobe Experience Cloud] clientes como una característica incluida que añade valor. Póngase en contacto con el administrador de su organización para obtener acceso a las etiquetas y pídale que le conceda el permiso **[!UICONTROL manage_properties]** para que pueda instalar extensiones.
 
 ## Instalar extensión {#install-extension}
 
