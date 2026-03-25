@@ -3,10 +3,10 @@ title: Activar datos de audiencia en destinos de flujo continuo
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform asignándolas a destinos de flujo continuo.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 3%
+source-wordcount: '1115'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## Información general {#overview}
 
-En este artículo se explica el flujo de trabajo necesario para activar audiencias en los destinos de flujo de Adobe Experience Platform.
+Este artículo explica el flujo de trabajo necesario para activar audiencias en [!DNL Adobe Experience Platform] destinos de flujo continuo.
 
 ## Requisitos previos {#prerequisites}
 
@@ -102,9 +102,9 @@ Algunos destinos de flujo de audiencia requieren que seleccione atributos de ori
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformación"
->abstract="Marque esta opción cuando utilice campos de origen sin hash, para que Adobe Experience Platform aplique un algoritmo hash en ellos automáticamente en la activación."
+>abstract="Marque esta opción cuando use campos de origen sin hash, para que [!DNL Adobe Experience Platform] los agregue automáticamente al activarlos."
 
-Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la opción **Aplicar transformación** para que Adobe Experience Platform aplique automáticamente hash a los atributos de origen al activarlos.
+Cuando asigne atributos de origen sin hash a atributos de destino que el destino espera que tengan hash (por ejemplo: `email_lc_sha256` o `phone_sha256`), marque la opción **Aplicar transformación** para que [!DNL Adobe Experience Platform] aplique hash automáticamente a los atributos de origen durante la activación.
 
 ![Aplicar control de transformación resaltado en el paso de asignación de identidad.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -172,5 +172,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->
