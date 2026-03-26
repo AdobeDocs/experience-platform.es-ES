@@ -58,9 +58,9 @@ Los anunciantes tienen la opción de compartir segmentos con identificadores de 
 
 * El ID de organización de Experience Cloud de la cuenta de Experience Platform. Puede encontrar su ID en la página de perfil de usuario de Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Un origen de [[!DNL Real-Time CDP] en DSP](https://experienceleague.adobe.com/es/docs/advertising/dsp/audiences/sources/source-manage) para recibir audiencias para la activación de la campaña. El equipo de cuenta de Adobe creará el origen con el ID de organización de Experience Cloud.
+* Un origen de [[!DNL Real-Time CDP] en DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) para recibir audiencias para la activación de la campaña. El equipo de cuenta de Adobe creará el origen con el ID de organización de Experience Cloud.
 
-* Clave de origen de la cuenta o anunciante [!DNL DSP], que se genera cuando se crea un origen de [[!DNL Real-Time CDP] en [!DNL DSP]](https://experienceleague.adobe.com/es/docs/advertising/dsp/audiences/sources/source-manage). El equipo de cuenta de [!DNL DSP] compartirá esta clave con usted. Lo utilizará dentro de Experience Platform para crear una conexión de destino al destino de Advertising DSP, como se explica a continuación.
+* Clave de origen de la cuenta o anunciante [!DNL DSP], que se genera cuando se crea un origen de [[!DNL Real-Time CDP] en [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). El equipo de cuenta de [!DNL DSP] compartirá esta clave con usted. Lo utilizará dentro de Experience Platform para crear una conexión de destino al destino de Advertising DSP, como se explica a continuación.
 
 ### Configurar la sincronización de ID para compartir cookies {#cookie-sync}
 
@@ -133,7 +133,7 @@ Para conectarse al destino, siga las instrucciones para [crear una conexión de 
 
 Para conectarse al destino, proporcione el siguiente parámetro en la sección [!UICONTROL Connection type] y, a continuación, seleccione **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Account or Advertiser Key]**: este [!UICONTROL Source Key] se genera cuando se crea un [[!DNL Real-Time CDP] origen en la interfaz de usuario de DSP](https://experienceleague.adobe.com/es/docs/advertising/dsp/audiences/sources/source-manage). El equipo de cuenta de Adobe compartirá esta clave con usted después de crear el origen.
+* **[!UICONTROL Account or Advertiser Key]**: este [!UICONTROL Source Key] se genera cuando se crea un [[!DNL Real-Time CDP] origen en la interfaz de usuario de DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). El equipo de cuenta de Adobe compartirá esta clave con usted después de crear el origen.
 
 ![Captura de pantalla de la sección Tipo de conexión que muestra el campo Cuenta o Clave del anunciante.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -162,7 +162,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar identidades, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
