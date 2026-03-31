@@ -1,9 +1,10 @@
 ---
 title: Conecte Oracle Eloqua (V2) a Experience Platform en la interfaz de usuario de
 description: Aprenda a conectar su cuenta de Oracle Eloqua a Experience Platform en la interfaz de usuario de.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -124,7 +125,6 @@ Una vez que termine de actualizar los campos calculados, seleccione **[!UICONTRO
 >* **Contactos:** `C_DateModified`
 >* **Cuentas:** `M_DateModified`
 >* **Actividad:** `CreatedAt`
->* **Objetos personalizados:** `UpdatedAt`
 >* **Campaña:** `updatedAt`
 
 Una vez finalizada la asignación, ahora puede configurar una programación de ingesta para el flujo de datos. Establezca su [!UICONTROL Frequency] en `Once` para configurar una ejecución de ingesta única. Para la ingesta incremental, puede establecer su [!UICONTROL Frequency] en `Hour`, `Day` o `Week`. Al utilizar la ingesta incremental, también debe configurar [!UICONTROL Interval] para definir la cantidad de tiempo que transcurre entre las ejecuciones de ingesta. Por ejemplo, una frecuencia de ingesta establecida en `Day` y un intervalo establecido en `15` significa que el flujo de datos está programado para ingerir datos cada 15 días.
@@ -139,7 +139,7 @@ Con la programación de ingesta configurada, utilice la interfaz [!UICONTROL Rev
 
 ![La interfaz de revisión muestra un resumen de la configuración del flujo de datos antes de la finalización.](../../../../images/tutorials/create/eloqua/review.png)
 
-## Supervisar
+## Monitorizar
 
 Una vez seleccionado el flujo de datos, se realizará un relleno único de datos y una sincronización incremental posterior de la programación especificada. El estado de sincronización se puede monitorizar navegando hasta el flujo de datos. Para obtener más información, lea la guía sobre [supervisión de orígenes y flujos de datos en la interfaz de usuario](../../../../../dataflows/ui/monitor-sources.md).
 

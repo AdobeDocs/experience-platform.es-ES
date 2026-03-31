@@ -2,9 +2,10 @@
 title: Información general sobre Oracle Eloqua (V2) Source
 description: Aprenda a conectar Oracle Eloqua a Adobe Experience Platform.
 last-substantial-update: 2025-02-02T00:00:00Z
-source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
+exl-id: f63beebd-920c-41dd-a924-61511135a234
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1824'
+source-wordcount: '1822'
 ht-degree: 1%
 
 ---
@@ -102,7 +103,6 @@ Debe proporcionar valores para las siguientes credenciales a fin de conectar [!D
 >- **Contactos:** `C_DateModified`
 >- **Cuentas:** `M_DateModified`
 >- **Actividad:** `CreatedAt`
->- **Objetos personalizados:** `UpdatedAt`
 >- **Campaña:** `updatedAt`
 
 En las tablas siguientes se proporcionan asignaciones detalladas entre [!DNL Eloqua] campos de origen y sus campos de destino correspondientes del modelo de datos de experiencia (XDM) en Experience Platform. Cada fila describe la lógica de transformación, ya sea que el campo sea inmutable, y proporciona notas adicionales para ayudarle a comprender cómo se incorporarán y estructurarán los datos de [!DNL Eloqua] en Experience Platform.
@@ -244,4 +244,3 @@ Las plantillas de asignación utilizan los siguientes marcadores de posición de
 ## Conectar [!DNL Eloqua] a Experience Platform
 
 Continúe configurando la conexión de origen de [!DNL Eloqua] en Experience Platform. Para obtener una guía paso a paso sobre cómo configurar la conexión a través de la interfaz de usuario, consulte el [tutorial aquí](../../tutorials/ui/create/marketing-automation/eloqua.md). Lea este tutorial para obtener información sobre cómo conectar su cuenta de [!DNL Eloqua], seleccionar datos, asignar campos, programar ingestas y supervisar flujos de datos.
-
