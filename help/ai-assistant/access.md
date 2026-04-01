@@ -76,7 +76,7 @@ Una vez que tenga los permisos necesarios, podrá acceder al Asistente de IA (he
 
 Vea el siguiente vídeo para aprender a configurar el acceso al asistente de IA (heredado) para sus organizaciones y usuarios.
 
->[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475922/?captions=spa&learn=on)
 
 ## Próximos pasos
 
