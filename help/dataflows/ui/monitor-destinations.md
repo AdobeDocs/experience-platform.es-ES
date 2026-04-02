@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorización de flujos de datos para destinos en la IU
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
+source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
-source-wordcount: '3580'
+source-wordcount: '3577'
 ht-degree: 9%
 
 ---
@@ -212,7 +212,7 @@ También puede seleccionar ver información enriquecida sobre un flujo de datos 
 
 >[!NOTE]
 >
->Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos de Experience Platform *excepto* los destinos de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) y [Personalización personalizada](/help/destinations/catalog/personalization/custom-personalization.md).
+>Actualmente, la funcionalidad de supervisión de destinos es compatible con todos los destinos de Experience Platform *excepto* y el destino de [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
