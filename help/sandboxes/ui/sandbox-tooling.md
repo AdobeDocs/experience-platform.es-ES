@@ -2,10 +2,10 @@
 title: Herramientas de zona protegida
 description: Exporte e importe sin problemas configuraciones de espacio aislado entre espacios aislados.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fad8cc977ec6928420abab4fd3dafca7475c33c4
+source-git-commit: f5c32c5687b5931ed59fa6a379ed5e5927e3a9ac
 workflow-type: tm+mt
-source-wordcount: '3448'
-ht-degree: 6%
+source-wordcount: '3641'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ Los objetos siguientes se importan, pero están en estado de borrador o desactiv
 
 ### Objetos Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualmente son compatibles con las herramientas y limitaciones de la zona protegida. Para obtener una lista completa de las prácticas recomendadas, consulte la guía de [prácticas recomendadas generales de Journey Optimizer](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
+La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualmente son compatibles con las herramientas y limitaciones de la zona protegida. Para obtener una lista completa de las prácticas recomendadas, consulte la guía de [prácticas recomendadas generales de Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/connect-systems/sandbox/copy-objects-to-sandbox?#global).
 
 | Plataforma | Objeto | Objetos dependientes admitidos | Detalles |
 | --- | --- | --- | --- |
@@ -70,8 +70,8 @@ La tabla siguiente enumera [!DNL Adobe Journey Optimizer] objetos que actualment
 | [!DNL Adobe Journey Optimizer] | Acciones personalizadas |  | Las acciones personalizadas se pueden añadir a un paquete de forma independiente. Una vez asignada una acción personalizada a un recorrido, ya no se puede editar. Para realizar actualizaciones en las acciones personalizadas, debe: <ul><li>mover acciones personalizadas antes de migrar un recorrido</li><li>actualizar configuraciones (como encabezados de solicitud, parámetros de consulta y autenticación) para acciones personalizadas después de la migración</li><li>migrar objetos de recorrido con las acciones personalizadas agregadas durante el primer paso</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Plantilla de contenido | | Una plantilla de contenido se puede copiar como un objeto dependiente del objeto de recorrido. Las plantillas independientes le permiten reutilizar fácilmente contenido personalizado en todas las campañas y recorridos de Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos los fragmentos anidados. | Un fragmento se puede copiar como un objeto dependiente del objeto de recorrido. Los fragmentos son componentes reutilizables a los que se puede hacer referencia en uno o varios correos electrónicos en campañas y recorridos de Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
-| [!DNL Adobe Journey Optimizer] | Toma de decisiones | Los objetos siguientes deben estar presentes en la zona protegida de destino antes de copiar los objetos de Decisioning: <ul><li>Atributos de perfil utilizados en objetos de Decisioning</li><li>El grupo de campos de atributos de oferta personalizados</li><li>Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.</li></ul> | <ul><li>Actualmente no se admite la copia de fórmulas de clasificación que utilicen modelos de IA.</li><li>Los elementos de decisión (artículos de oferta) no se incluyen automáticamente. Para asegurarse de que se transfieran, agréguelos manualmente con la opción **Agregar al paquete**.</li><li>Las directivas que utilizan una estrategia de selección requieren que los elementos de decisión asociados se agreguen manualmente durante el proceso de copia. Las directivas que utilizan elementos de decisión manuales o de reserva tendrán esos elementos incluidos automáticamente como dependencias directas.</li><li>Los elementos de decisión se deben copiar primero, antes que cualquier otro objeto relacionado.</li><li>Para obtener una lista completa de los objetos admitidos, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campañas | Los siguientes objetos utilizados en la campaña se copian como objetos dependientes: <ul><li>Campañas</li><li>Públicos</li><li>Esquemas</li><li>Plantillas de contenido</li><li>Fragmentos</li><li>Mensaje/Contenido</li><li>Configuración de canal</li><li>Objetos de decisión unificados</li><li>Configuración/variantes del experimento</li></ul> | <ul><li>Las campañas se pueden copiar junto con todos los elementos relacionados con el perfil, la audiencia, el esquema, los mensajes en línea y los objetos dependientes. Algunos elementos no se copian, como las etiquetas de uso de datos y la configuración de idioma. Para obtener una lista completa de los objetos que no se pueden copiar, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>El sistema detectará y reutilizará automáticamente un objeto de configuración de canal existente en la zona protegida de destino si existe una configuración idéntica. Si no se encuentra ninguna configuración que coincida, la configuración del canal se omite durante la importación y los usuarios deben actualizar manualmente la configuración del canal en la zona protegida de destino para este recorrido.</li><li>Los usuarios pueden reutilizar los experimentos y las audiencias existentes en la zona protegida de Target como objetos dependientes de las campañas seleccionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Toma de decisiones | Los objetos siguientes deben estar presentes en la zona protegida de destino antes de copiar los objetos de Decisioning: <ul><li>Atributos de perfil utilizados en objetos de Decisioning</li><li>El grupo de campos de atributos de oferta personalizados</li><li>Los esquemas de flujos de datos utilizados para atributos de contexto en reglas, clasificación o límite.</li></ul> | <ul><li>Actualmente no se admite la copia de fórmulas de clasificación que utilicen modelos de IA.</li><li>Los elementos de decisión (artículos de oferta) no se incluyen automáticamente. Para asegurarse de que se transfieran, agréguelos manualmente con la opción **Agregar al paquete**.</li><li>Las directivas que utilizan una estrategia de selección requieren que los elementos de decisión asociados se agreguen manualmente durante el proceso de copia. Las directivas que utilizan elementos de decisión manuales o de reserva tendrán esos elementos incluidos automáticamente como dependencias directas.</li><li>Los elementos de decisión se deben copiar primero, antes que cualquier otro objeto relacionado.</li><li>Para obtener una lista completa de los objetos admitidos, consulte la guía [exportar objetos a otra zona protegida](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li></ul> |
 
 ## Exportación de objetos a un paquete {#export-objects}
 
@@ -229,13 +229,36 @@ Se le dirigirá a la página [!UICONTROL Package object and dependencies], donde
 
 Espere un poco para que se complete la importación. El tiempo para finalizar puede variar según el número de objetos del paquete. Puede supervisar el trabajo de importación desde la ficha [!UICONTROL Sandboxes] **[!UICONTROL Jobs]**.
 
+### Copia rápida de un objeto en una zona protegida {#express-copy}
+
+>[!IMPORTANT]
+>
+>La función de copia rápida está actualmente en versión beta y solo está disponible para clientes seleccionados. En la actualidad, Express Copy (Beta) solo admite flujos de datos de origen y esquema.
+
+Puede acceder a Express Copy desde la página de inventario de objetos. Por ejemplo, para ver una lista de esquemas disponibles, seleccione **[!UICONTROL Schemas]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Browse]**. A continuación, seleccione los puntos suspensivos (`...`) junto al esquema seleccionado para ver las opciones de control en un menú desplegable. Seleccione **[!UICONTROL Add to package]** de la lista desplegable.
+
+![Lista de esquemas que muestran el menú desplegable que resalta el control [!UICONTROL Add to package].](../images/ui/sandbox-tooling/add-to-package-express.png)
+
+Aparecerá el cuadro de diálogo **[!UICONTROL Add to package]**. Seleccione la opción **[!UICONTROL Express copy]** y luego seleccione **[!UICONTROL Target sandbox]** en el menú desplegable. Finalmente, seleccione **[!UICONTROL Add]** para confirmar sus opciones.
+
+Cuadro de diálogo ![[!UICONTROL Add to package], que muestra un paquete seleccionado de la lista desplegable.](../images/ui/sandbox-tooling/express-copy.png)
+
+>[!NOTE]
+>
+> Express Copy empaqueta automáticamente los objetos seleccionados junto con sus dependencias necesarias y los implementa en la zona protegida de destino. Si ya existe un objeto dependiente en la zona protegida de destino, se vuelve a utilizar; de lo contrario, se crea un nuevo objeto.
+
+Para comprobar el estado de su solicitud de copia rápida, seleccione **[!UICONTROL Sandboxes]** en el panel de navegación izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Jobs]**. Se muestra una lista de todos los trabajos y el estado de procesamiento actual.
+
+![La ficha trabajos muestra una lista de trabajos.](../images/ui/sandbox-tooling/sandboxes-jobs.png)
+
 ## Monitorización de detalles de importación {#view-import-details}
 
 Para ver los detalles importados, vaya a la pestaña [!UICONTROL Sandboxes] **[!UICONTROL Jobs]** y seleccione el paquete en la lista. También puede utilizar la barra de búsqueda para buscar el paquete.
 
 ![La pestaña [!UICONTROL Jobs] de las zonas protegidas resalta la selección del paquete de importación.](../images/ui/sandbox-tooling/imports-tab.png)
 
-<!--### View imported objects {#view-imported-objects}
+<!--
+### View imported objects {#view-imported-objects}
 
 On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
@@ -245,7 +268,8 @@ Select **[!UICONTROL View imported objects]** from the right details pane on the
 
 Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+-->
 
 Seleccione **[!UICONTROL View import summary]** en el panel de detalles derecho de la pestaña **[!UICONTROL Jobs]** del entorno de entornos limitados.
 
@@ -353,7 +377,7 @@ Una vez identificados los objetos de destino que desea actualizar, seleccione **
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender las herramientas de la zona protegida, y describe cómo crear un nuevo paquete, publicarlo e importarlo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446086/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximos pasos
 
