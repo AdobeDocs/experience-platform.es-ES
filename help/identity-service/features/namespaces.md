@@ -2,10 +2,10 @@
 title: Información general de área de nombres
 description: Obtenga información sobre áreas de nombres de identidad en Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 17%
+source-wordcount: '1897'
+ht-degree: 19%
 
 ---
 
@@ -96,23 +96,25 @@ Experience Platform proporciona varias áreas de nombres de identidad disponible
 
 Se proporcionan las siguientes áreas de nombres estándar para su uso por todas las organizaciones dentro de Experience Platform:
 
-| Nombre para mostrar | Descripción |
-| ------------ | ----------- |
-| Adcloud | Un área de nombres que representa Adobe AdCloud. |
-| Adobe Analytics (ID heredado) | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=es#namespaces) para obtener más información. |
-| Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
-| Servicio de notificaciones push de Apple | Un área de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento en [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
-| ECID | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](./ecid.md) para obtener más información. |
-| Correo electrónico | Un área de nombres que representa una dirección de correo electrónico. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Consulte el siguiente documento sobre la compatibilidad con hash [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=es#hashing-support) para obtener más información. |
-| Firebase Cloud Messaging | Un área de nombres que representa las identidades recopiladas mediante Google Firebase Cloud Messaging para las notificaciones push. Consulte el siguiente documento sobre [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) para obtener más información. |
-| ID de anuncio de Google (GAID) | Un área de nombres que representa un Google Advertising ID. Consulte el siguiente documento sobre [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
-| Teléfono | Área de nombres que representa un número de teléfono. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
-| Teléfono (E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código de llamada de país internacional, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
-| Teléfono (SHA256) | Un área de nombres que representa los números de teléfono que deben tener un cifrado hash con SHA256. Debe quitar los símbolos, las letras y los ceros a la izquierda. También debe agregar el código de llamada de país como prefijo. |
-| Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
-| TNTID | Un área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para obtener más información. |
-| Windows AID | Área de nombres que representa un Advertising ID de Windows. Consulte el siguiente documento en [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
+| Nombre para mostrar | Símbolo de identidad (código) | Tipo de identidad | Descripción |
+| ------------ | ---------------------- | ------------- | ----------- |
+| Adcloud | Adcloud | ID de cookies | Un área de nombres que representa Adobe AdCloud. |
+| Adobe Analytics (ID heredado) | AAID | ID de cookies | Un área de nombres que representa Adobe Analytics. Consulte el siguiente documento sobre [Áreas de nombres de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obtener más información. |
+| Apple IDFA (ID para anunciantes) | IDFA | ID de dispositivo | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
+| Servicio de notificaciones push de Apple | APNS | ID de dispositivo | Un área de nombres que representa las identidades recopiladas mediante el servicio de notificaciones push de Apple. Consulte el siguiente documento en [Servicio de notificaciones push de Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obtener más información. |
+| ECID | ECID | ID de cookies | Un área de nombres que representa ECID. Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte el siguiente documento sobre [ECID](./ecid.md) para obtener más información. |
+| Correo electrónico | Correo electrónico | Correo electrónico | Un área de nombres que representa una dirección de correo electrónico. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
+| Correos electrónicos (SHA256, en minúsculas) | Email_LC_SHA256 | Correo electrónico | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Consulte el siguiente documento sobre la compatibilidad con hash [SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obtener más información. |
+| Firebase Cloud Messaging | FCM | ID de dispositivo | Un área de nombres que representa las identidades recopiladas mediante Google Firebase Cloud Messaging para las notificaciones push. Consulte el siguiente documento sobre [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) para obtener más información. |
+| ID de anuncio de Google (GAID) | GAID | ID de dispositivo | Un área de nombres que representa un Google Advertising ID. Consulte el siguiente documento sobre [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obtener más información. |
+| Teléfono | Teléfono | Número de teléfono | Área de nombres que representa un número de teléfono. Este tipo de área de nombres suele estar asociado a una sola persona y, por lo tanto, se puede utilizar para identificarla en diferentes canales. |
+| Teléfono (E.164) | Phone_E.164 | Número de teléfono | Un espacio de nombres que representa los números de teléfono sin procesar que deben tener un cifrado hash en formato E.164. El formato E.164 incluye un signo más (`+`), un código de llamada de país internacional, un código de área local y un número de teléfono. Por ejemplo: `(+)(country code)(area code)(phone number)`. |
+| Teléfono (SHA256) | Phone_SHA256 | Número de teléfono | Un área de nombres que representa los números de teléfono que deben tener un cifrado hash con SHA256. Debe quitar los símbolos, las letras y los ceros a la izquierda. También debe agregar el código de llamada de país como prefijo. |
+| Teléfono (SHA256_E.164) | Phone_SHA256_E.164 | Número de teléfono | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
+| TNTID | TNTID | ID de cookies | Un área de nombres que representa Adobe Target. Consulte el siguiente documento sobre [Target](https://docs.adobe.com/content/help/es-ES/experience-cloud/user-guides/home.translate.html) para obtener más información. |
+| Windows AID | WAID | ID de dispositivo | Área de nombres que representa un Advertising ID de Windows. Consulte el siguiente documento en [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) para obtener más información. |
+
+{style="table-layout:auto"}
 
 ### Ver espacios de nombres de identidad {#view-identity-namespaces}
 
@@ -127,7 +129,7 @@ Aparece un directorio de áreas de nombres en su organización, que muestra info
 
 ![Directorio de áreas de nombres de identidad personalizadas de su organización.](../images/namespace/browse.png)
 
-## Crear áreas de nombres personalizadas {#create-namespaces}
+## Crear espacios de nombres personalizados {#create-namespaces}
 
 Según los datos de organización y los casos de uso, puede requerir áreas de nombres personalizadas. Se pueden crear áreas de nombres personalizadas mediante la API [[!DNL Identity Service]](../api/create-custom-namespace.md) o mediante la interfaz de usuario.
 
