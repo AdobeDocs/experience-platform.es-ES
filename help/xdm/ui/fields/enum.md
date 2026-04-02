@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definición de campos de enumeración y valores sugeridos en la IU
 description: Obtenga información sobre cómo definir enumeraciones y valores sugeridos para campos de cadena en la interfaz de usuario de Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 8%
@@ -30,7 +30,7 @@ Al [definir un nuevo campo](./overview.md#define) en la interfaz de usuario de A
 
 Este documento explica cómo definir enumeraciones y valores sugeridos en el área de trabajo de la interfaz de usuario de [!UICONTROL Schemas]. Para obtener información general rápida sobre las enumeraciones y los valores sugeridos, incluido cómo configurarlos en la interfaz de usuario y sus efectos descendentes, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3413676/?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## Definir una enumeración {#enum}
 
@@ -72,7 +72,8 @@ Para agregar nuevos valores sugeridos para un campo estándar, seleccione **[!UI
 
 ![Imagen que muestra los valores de enumeración y los nombres para mostrar rellenados para el campo de cadena en la interfaz de usuario](../../images/ui/fields/enum/suggested-standard-add.png)
 
-<!-- ### Removing suggested values for standard fields
+<!-- 
+### Removing suggested values for standard fields
 
 Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
@@ -82,7 +83,8 @@ For example, consider a profile schema where the a suggested value for the stand
 
 In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. 
+-->
 
 ## Reglas de evolución para enumeraciones y valores sugeridos {#evolution}
 

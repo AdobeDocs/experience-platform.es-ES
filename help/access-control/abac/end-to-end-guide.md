@@ -4,7 +4,7 @@ title: Guía completa de control de acceso basado en atributos
 description: Este documento proporciona una guía completa sobre el control de acceso basado en atributos en Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 7%
@@ -140,7 +140,7 @@ Repita los pasos anteriores con **[!UICONTROL Insulin <50]**.
 
 >[!NOTE]
 >
-> Asigne las etiquetas creadas en el área de trabajo [!UICONTROL Permissions] (como las etiquetas de segmento anteriores) a varios objetos de Adobe Journey Optimizer mediante [Control de acceso de nivel de objeto](https://experienceleague.adobe.com/es/docs/journey-optimizer/using/access-control/object-based-access)&quot;.
+> Asigne las etiquetas creadas en el área de trabajo [!UICONTROL Permissions] (como las etiquetas de segmento anteriores) a varios objetos de Adobe Journey Optimizer mediante [Control de acceso de nivel de objeto](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)&quot;.
 
 ## Activación de la directiva de control de acceso {#policy}
 
@@ -162,25 +162,26 @@ Se recibe la confirmación de la activación de la directiva y se le devuelve a 
 
 ![Activar confirmación de directiva](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
-<!-- ## Create an access control policy {#policy}
+<!-- 
+## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=es" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=es#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=es#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
@@ -237,7 +238,8 @@ Select **[!UICONTROL The following being false]** and then select **[!UICONTROL 
 
 Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
+![Image showing the Policy being activated](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) 
+-->
 
 ## Próximos pasos
 
@@ -247,4 +249,4 @@ Para obtener más información sobre el control de acceso basado en atributos, v
 
 El siguiente vídeo tiene como objetivo facilitar la comprensión del control de acceso basado en atributos y describe cómo configurar funciones, recursos y directivas.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451831?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
