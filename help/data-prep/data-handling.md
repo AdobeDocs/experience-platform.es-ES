@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Administrar formatos de datos con preparación de datos
 description: Este documento ofrece información general sobre cómo se administran los distintos tipos de datos en la preparación de datos.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '624'
 ht-degree: 11%
 
 ---
