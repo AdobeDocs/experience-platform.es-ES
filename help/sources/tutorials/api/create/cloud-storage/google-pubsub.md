@@ -3,10 +3,10 @@ title: Creación de una conexión de Google PubSub Source mediante la API de Flo
 description: Aprenda a conectar Adobe Experience Platform a una cuenta PubSub de Google mediante la API de Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Este tutorial lo guiará para conectar [!DNL Google PubSub] (denominado en adelante &quot;[!DNL PubSub]&quot;) a Experience Platform mediante la [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -90,7 +90,7 @@ POST /connections
 
 Para crear una conexión base con la autenticación basada en proyectos, realice una petición POST al extremo `/connections` y proporcione sus `projectId` y `credentials` en el cuerpo de la solicitud.
 
-+++Solicitud
++++ Solicitud
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | La credencial o clave necesaria para autenticar [!DNL PubSub]. |
 | `connectionSpec.id` | Id. de especificación de conexión [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Respuesta
++++ Respuesta
 
 Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este identificador de conexión base es necesario en el siguiente paso para crear una conexión de origen.
 
@@ -136,13 +136,13 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 }
 ```
 
-++++
++++
 
 >[!TAB Autenticación basada en temas y suscripciones]
 
 Para crear una conexión base con tema y autenticación basada en suscripción, realice una petición POST al extremo `/connections` y proporcione sus `credentials`, `topicName` y `subscriptionName` en el cuerpo de la solicitud.
 
-+++Solicitud
++++ Solicitud
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++
 
-+++Respuesta
++++ Respuesta
 
 Una respuesta correcta devuelve detalles de la conexión recién creada, incluido su identificador único (`id`). Este identificador de conexión base es necesario en el siguiente paso para crear una conexión de origen.
 
@@ -190,7 +190,7 @@ Una respuesta correcta devuelve detalles de la conexión recién creada, incluid
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 
@@ -262,6 +262,6 @@ Una respuesta correcta devuelve el identificador único (`id`) de la conexión d
 >
 >Después de crear o actualizar un flujo de datos de flujo continuo, se requiere una breve pausa de 5 minutos en la ingesta de datos para evitar cualquier posible instancia de pérdida o caída de datos.
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha creado una conexión de origen [!DNL PubSub] mediante la API [!DNL Flow Service]. Puede usar este identificador de conexión de origen en el siguiente tutorial para [crear un flujo de datos de flujo continuo usando la [!DNL Flow Service] API](../../collect/streaming.md).
