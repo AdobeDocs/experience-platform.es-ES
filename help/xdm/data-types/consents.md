@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil de cliente en tiempo real;solución 
 title: Tipo de datos de consentimientos y preferencias
 description: El tipo de datos Consentimiento para preferencias de privacidad, Personalization y marketing está diseñado para admitir la recopilación de permisos y preferencias de clientes que generan las plataformas de administración de consentimiento (CMP) y otras fuentes a partir de las operaciones de datos.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2305'
 ht-degree: 1%
@@ -257,7 +257,7 @@ El siguiente JSON muestra un ejemplo del tipo de datos que el tipo de datos [!UI
 
 Para usar el tipo de datos [!UICONTROL Consents and Preferences] con el fin de introducir datos de consentimiento de sus clientes, debe crear un conjunto de datos basado en un esquema que contenga ese tipo de datos.
 
-Consulte el tutorial de [creación de un esquema en la interfaz de usuario](https://www.adobe.com/go/xdm-schema-editor-tutorial-en_es) para ver los pasos sobre cómo asignar tipos de datos a los campos. Una vez que haya creado un esquema que contiene un campo con el tipo de datos [!UICONTROL Consents and Preferences], consulte la sección sobre [creación de un conjunto de datos](../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
+Consulte el tutorial de [creación de un esquema en la interfaz de usuario](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) para ver los pasos sobre cómo asignar tipos de datos a los campos. Una vez que haya creado un esquema que contiene un campo con el tipo de datos [!UICONTROL Consents and Preferences], consulte la sección sobre [creación de un conjunto de datos](../../catalog/datasets/user-guide.md#create) en la guía del usuario del conjunto de datos, siguiendo los pasos para crear un conjunto de datos con un esquema existente.
 
 >[!IMPORTANT]
 >
