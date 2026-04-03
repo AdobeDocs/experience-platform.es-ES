@@ -2,10 +2,10 @@
 title: Información general sobre el conector Salesforce Source
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >La autenticación básica para el origen [!DNL Salesforce] quedará obsoleta en enero de 2026. Debe pasar a la autenticación de credencial de cliente de OAuth 2 para seguir usando el origen e ingiriendo datos de su cuenta de [!DNL Salesforce] a Experience Platform.
 
-Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que le ofrece la capacidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
+Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
 Experience Platform es compatible con la ingesta de datos desde un sistema CRM de terceros. La compatibilidad con proveedores CRM incluye [!DNL Salesforce].
 
@@ -27,9 +27,9 @@ Experience Platform es compatible con la ingesta de datos desde un sistema CRM d
 
 Siga los pasos a continuación para aprender a configurar su cuenta de [!DNL Salesforce] para Experience Platform en Azure.
 
-### LISTA DE PERMITIDOS de direcciones IP para la conexión con Azure
+### LISTA DE PERMITIDOS de direcciones IP para la conexión a Azure
 
-Debe agregar direcciones IP específicas de la región a la lista de permitidos antes de conectar las fuentes a Experience Platform en Azure. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Lea la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
+Debe añadir direcciones IP específicas de la región a la lista de permitidos antes de conectar las fuentes a Experience Platform en Azure. Si no se agregan las direcciones IP específicas de la región a la lista de permitidos, pueden producirse errores o no rendimiento al utilizar fuentes. Lea la página [lista de permitidos de direcciones IP](../../ip-address-allow-list.md) para obtener más información.
 
 >[!BEGINTABS]
 
@@ -445,7 +445,7 @@ public class Main {
 | `keystorepassword` | Reemplace `keystorepassword` por su contraseña de almacén de claves de destino. |
 | `privatekeypassword` | Reemplace `privatekeypassword` por su contraseña de almacén de claves de origen. |
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez que haya completado la configuración de los requisitos previos de su cuenta de [!DNL Salesforce], puede continuar con la conexión de su cuenta de [!DNL Salesforce] a Experience Platform e introducir los datos de CRM. Lea la documentación siguiente para obtener más información:
 
