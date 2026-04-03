@@ -2,7 +2,7 @@
 title: Análisis de datos exploratorio
 description: Aprenda a utilizar Data Distiller para explorar y analizar datos de un portátil Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 13%
@@ -103,9 +103,9 @@ print(f"Approximate count: {approx_count} using {sampling_rate *10}% sample")
 Approximate count: 1284600.0 using 5.0% sample
 ```
 
-## Análisis de canal de correo electrónico {#email-funnel-analysis}
+## Análisis de funnel de correo electrónico {#email-funnel-analysis}
 
-Un análisis de canal es un método para comprender los pasos necesarios para alcanzar un resultado objetivo y cuántos usuarios pasan por cada uno de esos pasos. El ejemplo siguiente ilustra un análisis de canal sencillo de los pasos que llevan a que un usuario se suscriba a un boletín informativo. El resultado de la suscripción está representado por un tipo de evento de `web.formFilledOut`.
+Un análisis de funnel es un método para comprender los pasos necesarios para llegar a un resultado determinado y cuántos usuarios pasan por cada uno de esos pasos. El ejemplo siguiente ilustra un análisis sencillo de funnel de los pasos que llevan a que un usuario se suscriba a un boletín informativo. El resultado de la suscripción está representado por un tipo de evento de `web.formFilledOut`.
 
 En primer lugar, ejecute una consulta para obtener el número de usuarios en cada paso.
 
@@ -152,7 +152,7 @@ fig.show()
 
 **Salida de ejemplo**
 
-![Infografía del canal de correo electrónico eventType.](../../images/data-distiller/email-funnel.png)
+![Infografía del correo electrónico de eventType funnel.](../../images/data-distiller/email-funnel.png)
 
 ## Correlaciones de eventos {#event-correlations}
 
@@ -234,7 +234,7 @@ corrdf.fillna(0)
 
 **Salida de ejemplo**:
 
-|    | variable | valor | característica | pearsonCorrelation |
+|    | variable | value | característica | pearsonCorrelation |
 | --- | ---  |  ---  |  ---  | --- |
 | 0 | `webForms_EmailOpens` | 0,218874 | EmailOpens | 0,218874 |
 | 1 | `webForms_advertisingClicks` | 0,026805 | advertisingClicks | 0,026805 |
