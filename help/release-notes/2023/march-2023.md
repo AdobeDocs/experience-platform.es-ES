@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: marzo de 2023'
 description: Las notas de la versión de marzo de 2023 de Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2081'
-ht-degree: 97%
+source-wordcount: '2020'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 97%
 
 Actualizaciones de las funciones existentes en Adobe Experience Platform:
 
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Preparación de los datos](#data-prep)
 - [Destinos](#destinations)
@@ -25,19 +25,19 @@ Actualizaciones de las funciones existentes en Adobe Experience Platform:
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas** {#dashboards-new-updated-features}
 
 | Función | Descripción |
 | --- | --- |
-| Paneles definidos por el usuario | Ahora puede **muestrear valores de atributos** antes de añadir un atributo a un widget en el compositor de widgets de paneles definidos por el usuario. Hay algunos valores de muestra de esa columna de atributos disponibles para atributos individuales al crear un widget.<br>Ahora puede **intercambiar los ejes X e Y** en su widget con el botón de intercambiar eje. Esto ahorra tiempo y proporciona una experiencia más ergonómica al añadir atributos a los widgets. También evita la necesidad de volver a buscar ambos atributos desde el panel de atributos.<br> Ahora puede **cambiar la ubicación y el título de la leyenda** dentro de los widgets. Una vez que una leyenda está presente en un widget, puede reubicarla en cualquier lugar alrededor del gráfico y también cambiar el nombre del título de la leyenda, como puede hacer con las etiquetas de eje y el título del widget. |
+| Paneles de control definidos por el usuario | Ahora puede **muestrear valores de atributos** antes de añadir un atributo a un widget en el compositor de widgets de paneles de control definidos por el usuario. Hay algunos valores de muestra de esa columna de atributos disponibles para atributos individuales al crear un widget.<br>Ahora puede **intercambiar los ejes X e Y** en su widget con el botón de intercambiar eje. Esto ahorra tiempo y proporciona una experiencia más ergonómica al añadir atributos a los widgets. También evita la necesidad de volver a buscar ambos atributos desde el panel de atributos.<br> Ahora puede **cambiar la ubicación y el título de la leyenda** dentro de los widgets. Una vez que una leyenda está presente en un widget, puede reubicarla en cualquier lugar alrededor del gráfico y también cambiar el nombre del título de la leyenda, como puede hacer con las etiquetas de eje y el título del widget. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
+Para obtener más información sobre los paneles de control, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles de control](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
@@ -76,11 +76,11 @@ Para obtener más información sobre la preparación de datos, lea [Información
 
 | Destino | Descripción |
 | ----------- | ----------- |
-| Disponibilidad general de conexión de [[!DNL Adobe Commerce] &#x200B;](../../destinations/catalog/personalization/adobe-commerce.md) | El conector de destino de [!DNL Adobe Commerce] (ahora disponible de forma general) le permite seleccionar uno o más públicos de Real-Time CDP para activarlos en su cuenta de [!DNL Adobe Commerce] y ofrecer una experiencia dinámica personalizada a sus compradores. |
-| Disponibilidad general de conexión de [[!DNL Snap Inc] &#x200B;](../../destinations/catalog/advertising/snap-inc.md) | El conector de destino de [!DNL Snap Inc] (ya disponible de forma general) permite a los profesionales del marketing importar segmentos de usuarios creados en Experience Platform a [!DNL Snapchat Ads] y utilizarlos para orientar sus anuncios. |
+| Disponibilidad general de conexión de [[!DNL Adobe Commerce] ](../../destinations/catalog/personalization/adobe-commerce.md) | El conector de destino de [!DNL Adobe Commerce] (ahora disponible de forma general) le permite seleccionar uno o más públicos de Real-Time CDP para activarlos en su cuenta de [!DNL Adobe Commerce] y ofrecer una experiencia dinámica personalizada a sus compradores. |
+| Disponibilidad general de conexión de [[!DNL Snap Inc] ](../../destinations/catalog/advertising/snap-inc.md) | El conector de destino de [!DNL Snap Inc] (ya disponible de forma general) permite a los profesionales del marketing importar segmentos de usuarios creados en Experience Platform a [!DNL Snapchat Ads] y utilizarlos para orientar sus anuncios. |
 | [(API) Conexión de Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Utilice la conexión basada en API a [!DNL Oracle Eloqua] para planificar y ejecutar campañas al tiempo que ofrece una experiencia del cliente personalizada para sus clientes potenciales en [!DNL Oracle Eloqua]. |
-| [(Beta) Conexión de  [!DNL Amazon Ads] &#x200B;](../../destinations/catalog/advertising/amazon-ads.md) | La integración de [!DNL Amazon Ads] con Adobe Experience Platform proporciona una integración llave en mano para productos de [!DNL Amazon Ads], incluido [!DNL Amazon DSP (ADSP)]. Con el destino de [!DNL Amazon Ads] en Adobe Experience Platform, los usuarios pueden definir públicos de anunciante para la segmentación y activación en [!DNL Amazon DSP]. |
-| Conexión de [[!DNL Marketo Measure Ultimate] &#x200B;](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anteriormente Bizible) ofrece a los especialistas en marketing una perspectiva detallada de las medidas de marketing más eficaces para generar ingresos y maximizar el retorno de la inversión para su compañía. El destino habilita los flujos de datos de empresa a empresa (B2B) de Adobe Experience Platform a [!DNL Marketo Measure]. La tarjeta solo está disponible para clientes de [!DNL Marketo Measure Ultimate]. |
+| [(Beta) Conexión de  [!DNL Amazon Ads] ](../../destinations/catalog/advertising/amazon-ads.md) | La integración de [!DNL Amazon Ads] con Adobe Experience Platform proporciona una integración llave en mano para productos de [!DNL Amazon Ads], incluido [!DNL Amazon DSP (ADSP)]. Con el destino de [!DNL Amazon Ads] en Adobe Experience Platform, los usuarios pueden definir públicos de anunciante para la segmentación y activación en [!DNL Amazon DSP]. |
+| Conexión de [[!DNL Marketo Measure Ultimate] ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (anteriormente Bizible) ofrece a los especialistas en marketing una perspectiva detallada de las medidas de marketing más eficaces para generar ingresos y maximizar el retorno de la inversión para su compañía. El destino habilita los flujos de datos de empresa a empresa (B2B) de Adobe Experience Platform a [!DNL Marketo Measure]. La tarjeta solo está disponible para clientes de [!DNL Marketo Measure Ultimate]. |
 | [Conexión de TikTok](../../destinations/catalog/social/tiktok.md) | Cree públicos personalizados en TikTok con sus datos para segmentar con sus campañas de anuncios. |
 | [Conexión de Zendesk](../../destinations/catalog/crm/zendesk.md) | Utilice este destino para crear y actualizar identidades dentro de un segmento como contactos dentro de [!DNL Zendesk]. |
 
@@ -111,7 +111,7 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Función | Descripción |
 | --- | --- |
-| CSV a recomendación de esquema | Ahora puede cargar los archivos locales para crear esquemas generados por aprendizaje automático que eliminen la necesidad de elaborarlos manualmente. Desde el espacio de trabajo [!UICONTROL Fuentes], cargue un archivo CSV de muestra y los algoritmos de aprendizaje automático de Adobe le sugerirán un esquema basado en los campos del público destinatario. Consulte la [Documentación](../../ingestion/tutorials/map-csv/recommendations.md) para obtener más información.&quot; |
+| CSV a recomendación de esquema | Ahora puede cargar los archivos locales para crear esquemas generados por aprendizaje automático que eliminen la necesidad de elaborarlos manualmente. Desde el espacio de trabajo [!UICONTROL Sources], cargue un archivo CSV de ejemplo y los algoritmos de aprendizaje automático de Adobe le sugerirán un esquema basado en los campos de destino. Consulte la [Documentación](../../ingestion/tutorials/map-csv/recommendations.md) para obtener más información.&quot; |
 
 {style="table-layout:auto"}
 
@@ -119,13 +119,13 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Clase | [[!UICONTROL Artículo de oferta]](https://github.com/adobe/xdm/pull/1678/files) | Clase que representa una oferta. |
-| Clase | [[!UICONTROL Elemento de decisión]](https://github.com/adobe/xdm/pull/1678/files) | Un elemento que puede estar sujeto a decisiones. El resultado de un proceso de toma de decisiones es uno o más elementos de decisión. |
-| Clase | [[!UICONTROL Tiempo de espera del servidor de sesión de medios]](https://github.com/adobe/xdm/pull/1676/files) | Indica la cantidad de tiempo en segundos que transcurrió entre la última interacción conocida del usuario y el momento en que se cerró la sesión. |
-| Grupo de campos | [[!UICONTROL Atributos calculados de perfil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Esto añade atributos calculados de los servicios internos de Adobe a los datos de clientes entrantes. Los clientes no deben utilizarlo para introducir datos. |
-| Tipo de datos | [[!UICONTROL Elemento de devolución]](https://github.com/adobe/xdm/pull/1685/files) | Indica si una devolución está asociada a un pedido y define el tipo de devolución, el importe y la divisa asociada. |
-| Tipo de datos | [[!UICONTROL Datos de categoría]](https://github.com/adobe/xdm/pull/1677/files) | Este nuevo tipo de datos representa la categoría de un producto. |
-| Esquema | [[!UICONTROL Campos de clasificación de Adobe Target]](https://github.com/adobe/xdm/pull/1682/files) | Se ha creado un nuevo esquema XDM para los conjuntos de datos de clasificación de Target. Contiene un conjunto de campos de metadatos que clasifican las actividades y experiencias de Target. |
+| Clase | [[!UICONTROL Offer Item]](https://github.com/adobe/xdm/pull/1678/files) | Clase que representa una oferta. |
+| Clase | [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1678/files) | Un elemento que puede estar sujeto a decisiones. El resultado de un proceso de toma de decisiones es uno o más elementos de decisión. |
+| Clase | [[!UICONTROL Media Session Server Timeout]](https://github.com/adobe/xdm/pull/1676/files) | Indica la cantidad de tiempo en segundos que transcurrió entre la última interacción conocida del usuario y el momento en que se cerró la sesión. |
+| Grupo de campos | [[!UICONTROL XDM Profile Computed Attributes]](https://github.com/adobe/xdm/pull/1686/files) | Esto añade atributos calculados de los servicios internos de Adobe a los datos de clientes entrantes. Los clientes no deben utilizarlo para introducir datos. |
+| Tipo de datos | [[!UICONTROL Refund Item]](https://github.com/adobe/xdm/pull/1685/files) | Indica si una devolución está asociada a un pedido y define el tipo de devolución, el importe y la divisa asociada. |
+| Tipo de datos | [[!UICONTROL Category data]](https://github.com/adobe/xdm/pull/1677/files) | Este nuevo tipo de datos representa la categoría de un producto. |
+| Esquema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1682/files) | Se ha creado un nuevo esquema XDM para los conjuntos de datos de clasificación de Target. Contiene un conjunto de campos de metadatos que clasifican las actividades y experiencias de Target. |
 
 {style="table-layout:auto"}
 
@@ -133,16 +133,16 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Detalles del componente de contenido]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` se ha eliminado de [!UICONTROL Detalles del componente de contenido] |
-| Grupo de campos | [[!UICONTROL Etiquetas de entidad de AJO]](https://github.com/adobe/xdm/pull/1672/files) | Se han añadido etiquetas de entidad de AJO a [!UICONTROL Campos de entidad de AJO], que corresponden a un recorrido o a una campaña |
-| Grupo de campos | (Múltiple) | Se han añadido varios campos para [[!UICONTROL Campos comunes de eventos de pasos de Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
-| Grupo de campos | (Múltiple) | [Se han añadido varios tipos de eventos XDM para [!UICONTROL Creación de informes de medios]](https://github.com/adobe/xdm/pull/1670/files). |
-| Grupo de campos | [!UICONTROL Evento de cambio de Workfront] | Se han añadido los grupos de campos `Full Record` y `Accessor Employee Ids`. |
-| Tipo de datos | [[!UICONTROL Elemento de lista de productos]](https://github.com/adobe/xdm/pull/1685/files) | El [!UICONTROL Importe de devolución] se ha añadido para indicar la cantidad reembolsada por el artículo, si la hubiera. |
-| Tipo de datos | [[!UICONTROL Pedido &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Lista de devoluciones] se ha añadido a la lista de las devoluciones de este pedido. |
-| Tipo de datos | [[!UICONTROL Elemento de lista de productos &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Se han añadido categorías de productos a los datos de categoría de este producto. |
-| Tipo de datos | [!UICONTROL Información de detalles de sesión] | Se ha añadido el campo de cadena `pev3`que [indica el tipo de flujo de medios utilizado para la creación de informes](https://github.com/adobe/xdm/pull/1676/files). También se ha añadido la propiedad `pccr`, que indica si se ha producido una redirección. |
-| Tipo de datos | [!UICONTROL Lista de solicitudes] | Proporciona las [propiedades de la lista de solicitudes](https://github.com/adobe/xdm/pull/1675/files). Incluyen nombre, ID y descripción. |
+| Grupo de campo | [[!UICONTROL Content Component Details]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` se eliminó de [!UICONTROL Content Component Details] |
+| Grupo de campo | [[!UICONTROL AJO Entity tags]](https://github.com/adobe/xdm/pull/1672/files) | Se agregaron etiquetas de entidad de AJO a [!UICONTROL AJO Entity Fields], que corresponden a un Recorrido o a una campaña |
+| Grupo de campo | (Múltiple) | Se agregaron varios campos para [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/pull/1671/files) |
+| Grupo de campo | (Múltiple) | [Se agregaron varios tipos de eventos XDM para [!UICONTROL Media Reporting]](https://github.com/adobe/xdm/pull/1670/files). |
+| Grupo de campo | [!UICONTROL Workfront Change Event] | Se han añadido los grupos de campos `Full Record` y `Accessor Employee Ids`. |
+| Tipo de datos | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | Se agregó [!UICONTROL Refund Amount] para indicar la cantidad reembolsada por el artículo, de haber. |
+| Tipo de datos | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] se agregó a la lista de reembolsos de este pedido. |
+| Tipo de datos | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Se han añadido categorías de productos a los datos de categoría de este producto. |
+| Tipo de datos | [!UICONTROL Session details information] | Se ha añadido el campo de cadena `pev3`que [indica el tipo de flujo de medios utilizado para la creación de informes](https://github.com/adobe/xdm/pull/1676/files). También se ha añadido la propiedad `pccr`, que indica si se ha producido una redirección. |
+| Tipo de datos | [!UICONTROL Requisition List] | Proporciona las [propiedades de la lista de solicitudes](https://github.com/adobe/xdm/pull/1675/files). Incluyen nombre, ID y descripción. |
 | Tipo de datos | [!UICONTROL Commerce] | [Se ha actualizado el tipo de datos de Commerce](https://github.com/adobe/xdm/pull/1675/files) para incluir `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` y `requisitionList`. |
 
 {style="table-layout:auto"}
@@ -151,17 +151,17 @@ Para obtener más información sobre XDM en Experience Platform, lea la [descrip
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su inserción en el Perfil del cliente en tiempo real.
+El Servicio de consultas le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del lago de datos y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Control de acceso basado en atributos en el almacén acelerado | Utilice el control de acceso basado en atributos con Data Distiller para definir el control de acceso en todos los conjuntos de datos del almacén acelerado. Controla el acceso a los modelos de datos personalizados creados por los usuarios y almacenados en un almacén acelerado para activar los paneles personalizados. |
+| Control de acceso basado en atributos en el almacén acelerado | Utilice el control de acceso basado en atributos con Data Distiller para definir el control de acceso en todos los conjuntos de datos del almacén acelerado. Controla el acceso a los modelos de datos personalizados creados por los usuarios y almacenados en un almacén acelerado para activar los paneles de control personalizados. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los servicios de consulta, vea la [Información general del servicio de consulta](../../query-service/home.md).
+Para obtener más información sobre los Servicios de consultas, vea la [Información general del Servicio de consultas](../../query-service/home.md).
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
@@ -179,7 +179,7 @@ Para obtener más información sobre Real-Time CDP edición B2B, lea la [Informa
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 **Funciones nuevas o actualizadas**
 
@@ -201,9 +201,9 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Función | Descripción |
 | --- | --- |
-| Disponibilidad beta de [!DNL Chatlio] | La fuente [!DNL Chatlio] ya está disponible en versión beta. Use la fuente [!DNL Chatlio] para transmitir sus datos de eventos de [!DNL Chatlio] a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Chatlio] &#x200B;](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
-| Disponibilidad beta de [!DNL Customer.io] | La fuente [!DNL Customer.io] ya está disponible en versión beta. Use la fuente [!DNL Customer.io] para transmitir sus datos de eventos de cliente a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Customer.io] &#x200B;](../../sources/connectors/marketing-automation/customerio-webhook.md). |
-| Disponibilidad beta de [!DNL Pendo] | La fuente [!DNL Pendo] ya está disponible en versión beta. Use la fuente [!DNL Pendo] para transmitir sus datos de eventos de Product Analytics a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Pendo] &#x200B;](../../sources/connectors/analytics/pendo-webhook.md). |
+| Disponibilidad beta de [!DNL Chatlio] | La fuente [!DNL Chatlio] ya está disponible en versión beta. Use la fuente [!DNL Chatlio] para transmitir sus datos de eventos de [!DNL Chatlio] a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Chatlio] ](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
+| Disponibilidad beta de [!DNL Customer.io] | La fuente [!DNL Customer.io] ya está disponible en versión beta. Use la fuente [!DNL Customer.io] para transmitir sus datos de eventos de cliente a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Customer.io] ](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| Disponibilidad beta de [!DNL Pendo] | La fuente [!DNL Pendo] ya está disponible en versión beta. Use la fuente [!DNL Pendo] para transmitir sus datos de eventos de Product Analytics a Experience Platform. Para obtener más información, lea la Información general de [[!DNL Pendo] ](../../sources/connectors/analytics/pendo-webhook.md). |
 | Compatibilidad con flujos de datos en borrador | Ahora puede utilizar la API del servicio de flujo para establecer sus flujos de datos en estado de borrador. Los flujos de datos en borrador se pueden actualizar y publicar posteriormente con nueva información. Para obtener más información, lea la guía de [configuración de los flujos de datos de fuentes como borradores](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
