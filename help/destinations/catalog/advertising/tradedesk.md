@@ -3,7 +3,7 @@ keywords: publicidad; mostrador comercial; mostrador comercial de publicidad
 title: La conexión con la Oficina de Comercio
 description: Trade Desk es una plataforma de autoservicio para que los compradores de anuncios puedan ejecutar campañas digitales de retargeting y segmentación de audiencia en fuentes de inventario de pantallas, vídeos y móviles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 4%
@@ -85,7 +85,7 @@ Los requisitos previos dependen de los tipos de identidad que planee utilizar pa
 
 **Para el direccionamiento basado en cookies en[!DNL The Trade Desk]**, asegúrese de que se ha establecido una asignación entre ECID y [!DNL Trade Desk ID]. Complete los pasos siguientes para hacerlo:
 
-1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL The Trade Desk ID] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/es/docs/id-service/using/id-service-api/methods/idsync) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
+1. **Habilitar la funcionalidad de sincronización de ID**: Si esta es la primera vez que configura la activación de [!DNL The Trade Desk ID] y no ha habilitado la [funcionalidad de sincronización de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) en el servicio de Experience Cloud ID anteriormente (con Adobe Audience Manager u otras aplicaciones), póngase en contacto con Adobe Consulting o con el Servicio de atención al cliente para habilitar la sincronización de ID.
    * Si ya configuró [!DNL The Trade Desk] integraciones en Audience Manager, las sincronizaciones de ID existentes se transferirán automáticamente a Experience Platform.
 
 2. **Instrumente sus páginas web**: Implemente código en sus páginas web para crear asignaciones entre [!DNL The Trade Desk ID] y Adobe ECID. Esto permite a Experience Platform asociar los ID de la oficina de comercio con los perfiles de sus clientes.
@@ -124,7 +124,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
