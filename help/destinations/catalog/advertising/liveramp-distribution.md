@@ -2,7 +2,7 @@
 title: LiveRamp - Conexión de distribución
 description: Aprenda a utilizar el conector LiveRamp - Distribution para orquestar y activar audiencias previamente integradas en LiveRamp, para destinos de publicidad descendentes.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2807'
 ht-degree: 37%
@@ -456,7 +456,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 La conexión [!DNL LiveRamp - Distribution] activa audiencias que ya se han incorporado a su cuenta de LiveRamp a través de la conexión [LiveRamp - Onboarding](liveramp-onboarding.md).
 
