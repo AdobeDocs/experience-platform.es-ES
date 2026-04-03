@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funciones de asignación de preparación de datos
 description: Este documento presenta las funciones de asignación utilizadas con la preparación de datos.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '6009'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -63,8 +63,8 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | ltrim | Elimina el espacio en blanco del principio de la cadena. | <ul><li>CADENA: **Requerida** La cadena de la que desea quitar el espacio en blanco.</li></ul> | ltrim(CADENA) | ltrim(&quot; hello&quot;) | &quot;hola&quot; |
 | rtrim | Elimina el espacio en blanco del final de la cadena. | <ul><li>CADENA: **Requerida** La cadena de la que desea quitar el espacio en blanco.</li></ul> | rtrim(CADENA) | rtrim(&quot;hello &quot;) | &quot;hola&quot; |
 | trim | Elimina el espacio en blanco del principio y del final de la cadena. | <ul><li>CADENA: **Requerida** La cadena de la que desea quitar el espacio en blanco.</li></ul> | trim(CADENA) | trim(&quot; hello &quot;) | &quot;hola&quot; |
-| igual a | Compara dos cadenas para confirmar si son iguales. Esta función distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;es igual a( CADENA2) | &quot;cadena1&quot;.&#x200B;igual a&#x200B;(&quot;STRING1&quot;) | false |
-| igual a IgnoreCase | Compara dos cadenas para confirmar si son iguales. Esta función **no** distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;igual a IgnoreCase&#x200B;(STRING2) | &quot;cadena1&quot;.&#x200B;igual a IgnoreCase&#x200B;(&quot;STRING1) | true |
+| igual a | Compara dos cadenas para confirmar si son iguales. Esta función distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;es igual a( CADENA2) | &quot;cadena1&quot;.&#x200B;igual a&#x200B;(&quot;STRING1&quot;) | falso |
+| igual a IgnoreCase | Compara dos cadenas para confirmar si son iguales. Esta función **no** distingue entre mayúsculas y minúsculas. | <ul><li>CADENA1: **Requerida** La primera cadena que desea comparar.</li><li>CADENA2: **Requerida** La segunda cadena que desea comparar.</li></ul> | CADENA1.&#x200B;igual a IgnoreCase&#x200B;(STRING2) | &quot;cadena1&quot;.&#x200B;igual a IgnoreCase&#x200B;(&quot;STRING1) | verdadero |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Extrae grupos de la cadena de entrada en función de una expresión regular. | <ul><li>CADENA: **Requerida** La cadena de la que está extrayendo los grupos.</li><li>REGEX: **Requerido** Expresión regular que desea que coincida el grupo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
-| matches_regex | Comprueba si la cadena coincide con la expresión regular introducida. | <ul><li>CADENA: **Requerida** La cadena que está comprobando coincide con la expresión regular.</li><li>REGEX: **Requerido** Expresión regular con la que está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
+| matches_regex | Comprueba si la cadena coincide con la expresión regular introducida. | <ul><li>CADENA: **Requerida** La cadena que está comprobando coincide con la expresión regular.</li><li>REGEX: **Requerido** Expresión regular con la que está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | verdadero |
 
 {style="table-layout:auto"}
 
@@ -142,11 +142,11 @@ En las tablas siguientes se enumeran todas las funciones de asignación admitida
 
 | Función | Descripción | Parámetros | Sintaxis | Expresión | Salida de ejemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Comprueba si un objeto está o no vacío. | <ul><li>ENTRADA: **Requerida** El objeto que intenta comprobar está vacío.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| is_empty | Comprueba si un objeto está o no vacío. | <ul><li>ENTRADA: **Requerida** El objeto que intenta comprobar está vacío.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | falso |
 | array_to_object | Crea una lista de objetos. | <ul><li>ENTRADA: **Requerida** Una agrupación de pares de claves y matrices.</li></ul> | array_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Crea un objeto basado en los pares de clave/valor plano dados. | <ul><li>ENTRADA: **Requerida** Una lista plana de pares clave/valor.</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crea un objeto de la cadena de entrada. | <ul><li>STRING: **Requerido** La cadena que se está analizando para crear un objeto.</li><li>VALUE_DELIMITER: *Opcional* El delimitador que separa un campo del valor. El delimitador predeterminado es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de valor de campo. El delimitador predeterminado es `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Nota**: Puede utilizar la función `get()` junto con `str_to_object()` para recuperar los valores de las claves de la cadena. | <ul><li>Ejemplo #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Ejemplo #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Ejemplo #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Ejemplo #2: &quot;John&quot;</li></ul> |
-| contains_key | Comprueba si el objeto existe en los datos de origen. **Nota:** Esta función reemplaza la función obsoleta `is_set()`. | <ul><li>ENTRADA: **Requerida** Ruta de acceso que se debe comprobar si existe dentro de los datos de origen.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
+| contains_key | Comprueba si el objeto existe en los datos de origen. **Nota:** Esta función reemplaza la función obsoleta `is_set()`. | <ul><li>ENTRADA: **Requerida** Ruta de acceso que se debe comprobar si existe dentro de los datos de origen.</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | verdadero |
 | anular | Establece el valor del atributo en `null`. Debe utilizarse cuando no desee copiar el campo en el esquema de destino. | | nullify() | nullify() | `null` |
 | get_keys | Analiza los pares clave/valor y devuelve todas las claves. | <ul><li>OBJETO: **Requerido** El objeto del cual se extraerán las claves.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Pride and Prejudice&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analiza los pares clave/valor y devuelve el valor de la cadena, en función de la clave dada. | <ul><li>CADENA: **Requerida** La cadena que desea analizar.</li><li>CLAVE: **Requerida** Clave para la que se debe extraer el valor.</li><li>VALUE_DELIMITER: **Requerido** El delimitador que separa el campo y el valor. Si se proporciona `null` o una cadena vacía, este valor es `:`.</li><li>FIELD_DELIMITER: *Opcional* El delimitador que separa los pares de campo y valor. Si se proporciona `null` o una cadena vacía, este valor es `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
@@ -310,8 +310,10 @@ Para obtener más información sobre los valores de los campos de dispositivos, 
 
 {style="table-layout:auto"}
 
-<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
-| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
+<!-- 
+| aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | 
+-->
 
 ### Copia de objeto {#object-copy}
 
@@ -368,7 +370,7 @@ La siguiente tabla describe una lista de caracteres reservados y sus caracteres 
 | --- | --- |
 | espacio | %20 |
 | ! | %21 |
-| ” | %22 |
+| &quot; | %22 |
 | # | %23 |
 | $ | %24 |
 | % | %25 |
@@ -387,11 +389,11 @@ La siguiente tabla describe una lista de caracteres reservados y sus caracteres 
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
@@ -427,7 +429,7 @@ La tabla siguiente describe una lista de valores de campos de dispositivo y sus 
 
 {style="table-layout:auto"}
 
-### Muestras de código {#code-samples}
+### Ejemplos de código {#code-samples}
 
 #### map_get_values {#map-get-values}
 
