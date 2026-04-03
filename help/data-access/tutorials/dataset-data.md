@@ -5,7 +5,7 @@ title: Ver datos del conjunto de datos mediante la API de acceso a datos
 type: Tutorial
 description: Obtenga información sobre cómo localizar, acceder y descargar datos almacenados en un conjunto de datos mediante la API de acceso a datos en Adobe Experience Platform. Este documento presenta algunas de las características únicas de la API de acceso a datos, como la paginación y las descargas parciales.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 10%
@@ -348,7 +348,7 @@ Dependiendo de si el ID de archivo apunta a un archivo individual o a un directo
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `data._links.self.href` | Dirección URL para descargar el archivo asociado. |
 
 Esta respuesta devuelve un directorio que contiene dos archivos independientes, con los identificadores `{FILE_ID_2}` y `{FILE_ID_3}`. En este caso, debe seguir la dirección URL de cada archivo para acceder al archivo.
@@ -443,7 +443,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `Range: bytes=0-99` | Especifica el intervalo de bytes que se va a descargar. Si no se especifica, la API descarga todo el archivo. En este ejemplo, se descargan los primeros 100 bytes. |
 
 **Respuesta**
