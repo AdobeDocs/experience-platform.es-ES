@@ -4,7 +4,7 @@ description: Aprenda a conectar Didomi a Adobe Experience Platform mediante la i
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 1%
@@ -80,7 +80,7 @@ Para crear un conjunto de datos, seleccione [!UICONTROL Datasets] en la navegaci
 Para garantizar la compatibilidad con Experience Platform, su webhook debe cumplir los siguientes requisitos.
 
 | Campo | Descripción | Ejemplo |
-| --- | --- | --- | 
+| --- | --- | --- |
 | Secreto del cliente | La clave secreta asociada a las credenciales de la API de Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
 | Clave de API | Clave de API pública utilizada para autenticar solicitudes en los servicios de Adobe. |  |
 | Tipo de concesión | Método mediante el cual una aplicación obtiene un token de acceso del servidor de autorización. Establezca este valor en `client_credentials`. | `client_credentials` |
@@ -94,7 +94,7 @@ Para garantizar la compatibilidad con Experience Platform, su webhook debe cumpl
 A continuación, configure las siguientes opciones para su [!DNL webhook].
 
 | Campo | Descripción | Valor |
-| ---| --- | --- | 
+| ---| --- | --- |
 | Encabezados de solicitud | Encabezados personalizados para [!DNL webhook]. Asegúrese de incluir `x-adobe-flow-id`. Puede recuperar este valor después de crear su [flujo de datos](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url). | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten | Esta propiedad debe comprobarse, ya que garantiza que los datos de [!DNL webhook] se envíen como un objeto plano. | Habilitado |
 | Tipos de eventos | Seleccione el grupo específico de [!DNL Didomi] eventos (`event.*` o `user.*`) que deben almacenar en déclencheur [!DNL webhook]. Use `event.*` para hacer un seguimiento de los cambios de preferencias o consentimiento, y use `user.*` para hacer un seguimiento de las actualizaciones del perfil de usuario. Esta selección es necesaria para asegurarse de que solo se envían eventos compatibles a Adobe. Adobe solo admite un esquema por flujo de datos, por lo que la selección de ambos tipos de evento puede provocar errores de ingesta. | La lista de tipos de eventos admitidos es la siguiente: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
