@@ -2,7 +2,7 @@
 title: Mensajes de error de origen
 description: Obtenga información acerca de los mensajes de error que pueden surgir al utilizar Flow Service para las fuentes.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 48%
@@ -114,7 +114,7 @@ Este documento proporciona un catálogo de mensajes de error, descripciones y re
 | `1350-400` | Solicitud incorrecta | No se ha proporcionado ningún operador para el filtro en origen. Proporcione una solicitud de filtro válida con el operador adecuado e inténtelo de nuevo. |
 | `1351-400` | Solicitud incorrecta | El operador proporcionado {operator} no es compatible con el filtro en el origen para este conector. Proporcione un operador válido e inténtelo de nuevo. |
 | `1352-400` | Solicitud incorrecta | El operador proporcionado {operator} no se puede asignar a ningún operador nativo admitido para {ql}. Proporcione un operador válido e inténtelo de nuevo. |
-| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=es. |
+| `1353-400` | Solicitud incorrecta | El filtro en origen aún no es compatible con el conector {connectorType}. Compruebe los conectores admitidos en la documentación: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Solicitud incorrecta | El idioma de consulta {ql} todavía no es compatible con el filtro en origen. Proporcione un idioma de consulta válido e inténtelo de nuevo. |
 | `1355-400` | Solicitud incorrecta | El tipo de filtro proporcionado no es válido. El tipo de filtro admitido es: PQL. Indique uno válido e inténtelo de nuevo. |
 | `1356-400` | Solicitud incorrecta | El formato de filtro proporcionado no es válido. El admitido es: pql/json. Indique uno válido e inténtelo de nuevo. |
