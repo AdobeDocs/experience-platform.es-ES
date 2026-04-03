@@ -3,7 +3,7 @@ title: Punto final de consultas aceleradas
 description: Obtenga información sobre cómo acceder al almacén acelerado de consultas de forma independiente para devolver rápidamente resultados basados en datos agregados. Este documento proporciona una solicitud y una respuesta HTTP de ejemplo para el extremo de consultas aceleradas del servicio de consultas.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Las siguientes secciones detallan las llamadas de API necesarias para acceder al
 
 ## Ejecutar una consulta acelerada {#run-accelerated-query}
 
-Realice una solicitud de POST al extremo `/accelerated-queries` para ejecutar una consulta acelerada. La consulta está contenida directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
+Realice una petición POST al extremo `/accelerated-queries` para ejecutar una consulta acelerada. La consulta está contenida directamente en la carga útil de la solicitud o se hace referencia a ella con un ID de plantilla.
 
 **Formato de API**
 
@@ -82,7 +82,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 |---|---|
 | `dbName` | El nombre de la base de datos a la que está realizando una consulta acelerada. El valor de `dbName` debe tener el formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. La base de datos proporcionada debe existir dentro del almacén acelerado o la solicitud producirá un error. También debe asegurarse de que el encabezado `x-sandbox-name` y el nombre de la zona protegida en `dbName` hagan referencia a la misma zona protegida. |
 | `sql` | Una cadena de instrucción SQL. El tamaño máximo permitido es de 1000000 caracteres. |
-| `templateId` | Identificador único de una consulta creada y guardada como plantilla cuando se realiza una solicitud de POST al extremo `/templates`. |
+| `templateId` | El identificador único de una consulta creada y guardada como plantilla cuando se realiza una petición POST al extremo `/templates`. |
 | `name` | Un nombre descriptivo y sencillo opcional para la consulta acelerada. |
 | `description` | Un comentario opcional sobre la intención de la consulta para ayudar a otros usuarios a comprender su propósito. El tamaño máximo permitido es de 1000 bytes. |
 
