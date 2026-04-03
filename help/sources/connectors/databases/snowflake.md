@@ -3,7 +3,7 @@ title: Información general sobre el conector Snowflake Source
 description: Obtenga información sobre cómo conectar Snowflake a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 2%
@@ -38,7 +38,7 @@ Debe proporcionar valores para las siguientes propiedades de credenciales para a
 
 >[!TAB Autenticación de clave de cuenta (Azure)]
 
-Proporcione valores para las siguientes credenciales para conectar [!DNL Snowflake] a Experience Platform en Azure mediante la autenticación de clave de cuenta.
+Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Snowflake] a Experience Platform en Azure mediante la autenticación de clave de cuenta.
 
 | Credencial | Descripción |
 | ---------- | ----------- |
