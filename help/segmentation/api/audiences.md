@@ -3,7 +3,7 @@ title: Extremo de API de audiencias
 description: Utilice el extremo de audiencias en la API del servicio de segmentación de Adobe Experience Platform para crear, administrar y actualizar audiencias de su organización mediante programación.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -183,7 +183,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 ```
 
 | Propiedad | Tipo de público | Descripción |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Ambos | Un identificador de solo lectura generado por el sistema para la audiencia. |
 | `audienceId` | Ambos | Si la audiencia es una audiencia generada por Platform, este es el mismo valor que `id`. Si la audiencia se genera externamente, el cliente proporciona este valor. |
 | `schema` | Ambos | El esquema Experience Data Model (XDM) de la audiencia. |
@@ -205,7 +205,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de audiencias c
 
 +++
 
-## Crear una audiencia nueva {#create}
+## Creación de un nuevo público {#create}
 
 Puede crear una audiencia nueva realizando una petición POST al extremo `/audiences`.
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | Nombre de la audiencia. |
 | `description` | Una descripción de la audiencia. |
 | `type` | Campo que muestra si la audiencia es una audiencia generada por Platform o por un generador externo. Los valores posibles incluyen `SegmentDefinition` y `ExternalSegment`. Un `SegmentDefinition` hace referencia a una audiencia que se generó en Platform, mientras que un `ExternalSegment` hace referencia a una audiencia que no se generó en Platform. |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parámetro | Descripción |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | El ID de la audiencia que intenta recuperar. Tenga en cuenta que este es el campo `id` y es **no** el campo `audienceId`. |
 
 **Solicitud**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | El ID de la audiencia. Para audiencias generadas externamente, este valor lo puede proporcionar el usuario. |
 | `name` | Nombre de la audiencia. |
 | `namespace` | El área de nombres de la audiencia. |
