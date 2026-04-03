@@ -2,9 +2,9 @@
 title: Compatibilidad Con Vínculos Privados Para Fuentes En La Interfaz De Usuario
 description: Aprenda a utilizar vínculos privados de Azure para las fuentes en la interfaz de usuario de Experience Platform.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Las métricas de asignación de derechos de uso de licencias para la compatibili
 
 ## Crear un extremo privado
 
-Para empezar a usar los vínculos privados, vaya al catálogo *[!UICONTROL Sources]* de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Puntos finales privados]** en el menú de pestañas del área de trabajo de orígenes.
+Para empezar a usar los vínculos privados, vaya al catálogo *[!UICONTROL Sources]* de la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Private endpoints]** en el menú de pestañas del área de trabajo de orígenes.
 
 ![El catálogo de orígenes con &quot;extremos privados&quot;.](../../images/tutorials/private-links/catalog.png)
 
-Utilice la interfaz para ver información sobre los extremos privados existentes, como su ID, el origen asociado y el estado actual. Para crear un nuevo extremo privado, seleccione **[!UICONTROL Crear extremo privado]**.
+Utilice la interfaz para ver información sobre los extremos privados existentes, como su ID, el origen asociado y el estado actual. Para crear un nuevo extremo privado, seleccione **[!UICONTROL Create private endpoint]**.
 
 ![Interfaz de extremos privados con la opción &quot;Crear extremo privado&quot; seleccionada.](../../images/tutorials/private-links/private-endpoints.png)
 
@@ -58,7 +58,7 @@ A continuación, elija el origen deseado y, a continuación, introduzca los valo
 
 {style="table-layout:auto"}
 
-Cuando termine, seleccione **[!UICONTROL Enviar]**.
+Cuando termine, seleccione **[!UICONTROL Submit]**.
 
 ![Ventana de autenticación para crear un nuevo extremo privado en el área de trabajo de la interfaz de usuario de orígenes.](../../images/tutorials/private-links/create-private-endpoint.png)
 
@@ -72,21 +72,21 @@ Para aprobar una solicitud de extremo privado para los orígenes [!DNL Azure Blo
 
 ## Crear una cuenta con un extremo privado
 
-Vaya al catálogo de fuentes y seleccione un origen que admita extremos privados. A continuación, cree una nueva cuenta con el origen y, durante la autenticación de la cuenta, seleccione la opción **[!UICONTROL Extremo privado]**. Proporcione las credenciales de autenticación de su origen y seleccione **[!UICONTROL Conectarse al origen]** Espere unos minutos para que se establezca la conexión.
+Vaya al catálogo de fuentes y seleccione un origen que admita extremos privados. A continuación, cree una nueva cuenta con el origen y, durante la autenticación de la cuenta, seleccione la opción **[!UICONTROL Private endpoint]**. Proporcione las credenciales de autenticación de su origen y seleccione **[!UICONTROL Connect to source]**. Espere unos minutos para que se establezca la conexión.
 
 >[!NOTE]
 >
->Si la opción [!UICONTROL Extremo privado] está habilitada, Experience Platform comprueba si existe un extremo privado aprobado para el origen seleccionado. Si no se encuentra ningún extremo aprobado, no podrá establecer una conexión.
+>Si la opción [!UICONTROL Private endpoint] está habilitada, Experience Platform comprueba si existe un extremo privado aprobado para el origen seleccionado. Si no se encuentra ningún extremo aprobado, no podrá establecer una conexión.
 
 ![El nuevo paso de autenticación de cuenta con extremos privados habilitados.](../../images/tutorials/private-links/new-account.png)
 
-A continuación, vaya a la interfaz de [!UICONTROL cuenta existente] de su origen. Utilice esta interfaz para ver una lista de las cuentas existentes y sus estados correspondientes. Puede seleccionar el icono de filtro ![icono de filtro](../../../images/icons/filter.png) para mostrar solamente las cuentas que se han habilitado para conectarse con un extremo privado.
+A continuación, vaya a la interfaz [!UICONTROL Existing account] de su origen. Utilice esta interfaz para ver una lista de las cuentas existentes y sus estados correspondientes. Puede seleccionar el icono de filtro ![icono de filtro](../../../images/icons/filter.png) para mostrar solamente las cuentas que se han habilitado para conectarse con un extremo privado.
 
 ![La interfaz de cuentas existente en el flujo de trabajo de orígenes muestra solamente las cuentas filtradas que están habilitadas para conexiones de extremos privadas.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-Seleccione la cuenta que desee usar y después habilite **[!UICONTROL Creación interactiva]**. Esta opción activa [!UICONTROL Interactive Authoring], una característica de [!DNL Azure] que le permite probar conexiones, examinar listas de carpetas y obtener una vista previa de los datos. Se requiere la activación de [!UICONTROL creación interactiva] para las conexiones de extremo privado. Tenga en cuenta que no puede desactivar manualmente esta opción; se desactiva automáticamente pasados 60 minutos.
+Seleccione la cuenta que desee usar y después habilite **[!UICONTROL Interactive Authoring]**. Esta opción activa [!UICONTROL Interactive Authoring], una característica de [!DNL Azure] que le permite probar conexiones, examinar listas de carpetas y obtener una vista previa de los datos. Se requiere la activación de [!UICONTROL Interactive Authoring] para las conexiones de extremo privado. Tenga en cuenta que no puede desactivar manualmente esta opción; se desactiva automáticamente pasados 60 minutos.
 
-[!UICONTROL La creación interactiva] tarda unos minutos en habilitarse. Una vez habilitada la configuración, seleccione **[!UICONTROL Siguiente]** para continuar con el siguiente paso y seleccione los datos que desee introducir.
+[!UICONTROL Interactive Authoring] tarda unos minutos en habilitarse. Una vez habilitada la configuración, seleccione **[!UICONTROL Next]** para continuar con el siguiente paso y seleccione los datos que desea introducir.
 
 ![Se ha seleccionado una cuenta existente y se ha habilitado la creación interactiva.](../../images/tutorials/private-links/interactive-authoring.png)
 
