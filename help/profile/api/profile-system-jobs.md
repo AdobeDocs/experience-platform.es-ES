@@ -5,9 +5,9 @@ type: Documentation
 description: Adobe Experience Platform permite eliminar un conjunto de datos o un lote del almacén de perfiles para eliminar los datos del perfil del cliente en tiempo real que ya no se necesitan o que se añadieron por error. Para ello, es necesario utilizar la API de perfil para crear un trabajo del sistema de perfiles o eliminar una solicitud.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Los siguientes extremos pueden diferir entre las implementaciones de Adobe Experience Platform que se ejecutan en Microsoft Azure y Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/landing/multi-cloud).
+>Los siguientes extremos pueden diferir entre las implementaciones de Adobe Experience Platform que se ejecutan en Microsoft Azure y Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Adobe Experience Platform le permite introducir datos de varias fuentes y crear perfiles sólidos para clientes individuales. Los datos ingeridos en [!DNL Experience Platform] se almacenan en [!DNL Data Lake], y si los conjuntos de datos se han habilitado para el perfil, esos datos también se almacenan en el almacén de datos [!DNL Real-Time Customer Profile]. En ocasiones, puede ser necesario eliminar datos de perfil asociados con un conjunto de datos del almacén de perfiles para eliminar datos que ya no son necesarios o que se añadieron por error. Esto requiere usar la API [!DNL Real-Time Customer Profile] para crear un trabajo del sistema de [!DNL Profile] o una &quot;solicitud de eliminación&quot;.
 
@@ -654,7 +654,7 @@ Una vez que el estado de la solicitud de eliminación sea `"COMPLETED"`, puede c
 
 >[!AVAILABILITY]
 >
->Este extremo **solo** es compatible con la instancia de Azure de Adobe Experience Platform y **no** es compatible con la instancia de AWS.
+>Este extremo **solo** es compatible con la instancia Azure de Adobe Experience Platform y **no** es compatible con la instancia AWS.
 
 [!DNL Experience Platform] le permite eliminar una solicitud anterior, lo que puede resultar útil por varios motivos, incluso si el trabajo de eliminación no se completó o se quedó atascado en la fase de procesamiento. Para quitar una solicitud de eliminación, puede realizar una solicitud DELETE al extremo `/system/jobs` e incluir el identificador de la solicitud de eliminación que desea quitar en la ruta de acceso de la solicitud.
 
@@ -682,6 +682,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
 
 Una solicitud de eliminación correcta devuelve el estado HTTP 200 (OK) y un cuerpo de respuesta vacío. Puede confirmar que la solicitud se eliminó realizando una petición GET para ver la solicitud de eliminación por su ID. Esto debería devolver un estado HTTP 404 (no encontrado), que indica que se eliminó la solicitud de eliminación.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que conoce los pasos involucrados en la eliminación de conjuntos de datos y lotes de [!DNL Profile store] dentro de [!DNL Experience Platform], puede eliminar de manera segura los datos que se agregaron erróneamente o que su organización ya no necesita. Tenga en cuenta que una solicitud de eliminación no se puede deshacer, por lo tanto, solo debe eliminar datos que esté seguro de que no necesita ahora y que no necesitará en el futuro.
