@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;servicio de flujo;
 title: Creación de una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 description: Obtenga información sobre cómo crear una ejecución de flujo para la ingesta bajo demanda mediante la API de Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 2%
@@ -125,7 +125,8 @@ Una respuesta correcta devuelve los detalles de la ejecución de flujo recién c
 | `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
 | `params.deltaColumn.name` | The name of the delta column. |
 | `etag` | The resource version of the flow run. |
-| `metrics` | This property displays a status summary for the flow run. | -->
+| `metrics` | This property displays a status summary for the flow run. | 
+-->
 
 ## Crear una ejecución de flujo para un origen basado en archivos
 
