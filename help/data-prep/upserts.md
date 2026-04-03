@@ -3,7 +3,7 @@ keywords: Experience Platform;inicio;temas populares;preparación de datos;prepa
 title: Envío De Actualizaciones Parciales De Fila Al Perfil Del Cliente En Tiempo Real Mediante La Preparación De Datos
 description: Obtenga información sobre cómo enviar actualizaciones parciales de fila al perfil del cliente en tiempo real mediante la preparación de datos.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -133,7 +133,7 @@ A continuación se muestra un ejemplo de una estructura de carga útil entrante 
 [!DNL Real-Time Customer Profile] admite las siguientes operaciones:
 
 | Operaciones | Descripción |
-| --- | --- | 
+| --- | --- |
 | `create` | La operación predeterminada. Esto genera un método de creación de entidad XDM para [!DNL Real-Time Customer Profile]. |
 | `merge` | Esto genera un método de actualización de entidad XDM para [!DNL Real-Time Customer Profile]. |
 | `delete` | Esto genera un método de eliminación de entidad XDM para [!DNL Real-Time Customer Profile] y elimina permanentemente los datos de [!DNL Profile store]. |
