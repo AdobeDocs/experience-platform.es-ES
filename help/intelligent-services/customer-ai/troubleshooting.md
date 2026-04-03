@@ -6,20 +6,20 @@ title: Solución de errores de Customer AI
 description: Encuentre respuestas a errores comunes en Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
 
 # Solución de errores de Customer AI
 
-La inteligencia artificial aplicada al cliente muestra errores cuando falla la formación, la puntuación y la configuración del modelo. En la sección **[!UICONTROL Instancias de servicio]**, una columna para **[!UICONTROL ÚLTIMO ESTADO DE EJECUCIÓN]** muestra uno de los siguientes mensajes: **[!UICONTROL Éxito]**, **[!UICONTROL Problema de formación]** y **[!UICONTROL Error]**.
+La inteligencia artificial aplicada al cliente muestra errores cuando falla la formación, la puntuación y la configuración del modelo. En la sección **[!UICONTROL Service instances]**, una columna para **[!UICONTROL LAST RUN STATUS]** muestra uno de los siguientes mensajes: **[!UICONTROL Success]**, **[!UICONTROL Training issue]** y **[!UICONTROL Failed]**.
 
 ![Último estado de ejecución que muestra éxito, problema de formación o error.](./images/errors/last-run-status.png)
 
-En caso de que se muestre **[!UICONTROL Error]** o **[!UICONTROL Problema de formación]**, puede seleccionar el estado de ejecución para abrir un panel lateral. El panel lateral contiene **[!UICONTROL Último estado de ejecución]** y **[!UICONTROL Detalles de la última ejecución]**. **[!UICONTROL Detalles de la última ejecución]** contiene información sobre el motivo del error de la ejecución. En caso de que la inteligencia artificial aplicada al cliente no pueda proporcionar detalles sobre el error, póngase en contacto con el servicio de asistencia técnica e incluya el código de error proporcionado.
+En el caso de que se muestre **[!UICONTROL Failed]** o **[!UICONTROL Training issue]**, puede seleccionar el estado de ejecución para abrir un panel lateral. El panel lateral contiene sus **[!UICONTROL Last run status]** y **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contiene información sobre el motivo del error de ejecución. En caso de que la inteligencia artificial aplicada al cliente no pueda proporcionar detalles sobre el error, póngase en contacto con el servicio de asistencia técnica e incluya el código de error proporcionado.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -37,7 +37,7 @@ Para solucionar este problema, debe agregar experience.adobe.com como sitio que 
 
 ## La calidad del modelo es mala
 
-Si recibe el error &quot;[!UICONTROL La calidad del modelo es deficiente. Se recomienda crear una aplicación nueva con la configuración modificada &quot;]&quot;. Siga los pasos recomendados a continuación para solucionar los problemas.
+Si recibe el error &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot;. Siga los pasos recomendados a continuación para solucionar los problemas.
 
 ![](./images/errors/model-quality.png){width=300}
 
@@ -73,4 +73,4 @@ Si la restricción de la población elegible no ha funcionado o no es posible, c
 | 411 | NO HAY DATOS DE ENTRADA DESPUÉS DE ETL | No hay datos de perfil o comportamiento de usuario disponibles para que el modelo los use entre `{{etl_start_date}}` y `{{etl_end_date}}`. Asegúrese de que el conjunto de datos tenga datos suficientes. (Código de error: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) | No hay datos de perfil o comportamiento de usuario disponibles para que el modelo los utilice entre los meses de abril y abril de 2020. Asegúrese de que el conjunto de datos tenga datos suficientes. (Código de error: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) |
 | 412 | SIN EVENTO DESPUÉS DE ETL | No hay datos de comportamiento de usuario disponibles para que el modelo los use entre `{{etl_start_date}}` y `{{etl_end_date}}`. Asegúrese de que el conjunto de datos tenga datos suficientes. | No hay datos de comportamiento del usuario disponibles para que el modelo los utilice entre los meses de abril y abril de 2021. Asegúrese de que el conjunto de datos tenga datos suficientes. (Código de error: VALIDATION-412 NO_EVENT_DATA_AFTER_ETL) |
 | 413 | VALOR ÚNICO EN EL OBJETIVO | La inteligencia artificial aplicada al cliente requiere que el conjunto de datos tenga eventos calificadores y no calificadores para la definición del objetivo de predicción. El conjunto de datos de entrada contiene solamente eventos que cumplen los requisitos entre `{{etl_window_start}}` y `{{etl_window_end}}`. <br><br>Soluciones sugeridas: <br>1. Modifique la definición de objetivo de predicción <br>2. Compruebe la integridad de los datos o utilice un diferente que incluya ejemplos de eventos no calificadores para el objetivo de predicción (Código de error: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) | La inteligencia artificial aplicada al cliente requiere que el conjunto de datos tenga eventos calificadores y no calificadores para la definición del objetivo de predicción. El conjunto de datos de entrada solo contiene eventos clasificatorios entre 2020-04-01 y 2021-04-01.<br><br>Soluciones sugeridas:<br>1. Modifique la definición del objetivo de predicción.<br>2. Compruebe la integridad de los datos o utilice un diferente que incluya ejemplos de eventos no calificadores para el objetivo de predicción. (Código de error: VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE) |
-| 414 | NO HAY FACTORES INFLUYENTES | El modelo de factores influyentes generó un resultado inesperado. Se recomienda crear una aplicación nueva con una configuración modificada. (Código de error: VALIDATION-414 NO_INFLUENTIAL_FACTORS) | El modelo de factores influyentes generó un resultado inesperado. Se recomienda crear una aplicación nueva con una configuración modificada. (Código de error: VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
+| 414  | NO HAY FACTORES INFLUYENTES | El modelo de factores influyentes generó un resultado inesperado. Se recomienda crear una aplicación nueva con una configuración modificada. (Código de error: VALIDATION-414 NO_INFLUENTIAL_FACTORS) | El modelo de factores influyentes generó un resultado inesperado. Se recomienda crear una aplicación nueva con una configuración modificada. (Código de error: VALIDATION-414 NO_INFLUENTIAL_FACTORS) |
