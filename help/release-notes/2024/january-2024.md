@@ -2,10 +2,10 @@
 title: Notas de la versión de Adobe Experience Platform, enero de 2024
 description: Las notas de la versión de enero de 2024 de Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: ht
-source-wordcount: '1658'
-ht-degree: 100%
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+workflow-type: tm+mt
+source-wordcount: '1649'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Actualizaciones de funciones existentes en Experience Platform:
 
 - [Control de acceso basado en atributos](#abac)
 - [Preparación de los datos](#data-prep)
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Destinos](#destinations)
 - [Servicio de identidad](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
@@ -31,9 +31,9 @@ Actualizaciones de funciones existentes en Experience Platform:
 
 ## Manuales de tácticas de casos de uso {#use-case-playbooks}
 
-La funcionalidad [!UICONTROL Manuales de tácticas de casos de uso] ya está disponible de forma general para todos los clientes de Real-Time CDP y Adobe Journey Optimizer. Los [!UICONTROL manuales de tácticas de casos de uso] están diseñados para ayudar a los usuarios a superar los desafíos al comenzar con Real-time Customer Data Platform o Adobe Journey Optimizer. Cuando no está seguro de por dónde empezar o cómo crear los recursos adecuados para los casos de uso deseados, los manuales de tácticas de casos de uso proporcionan inspiración y crean diferentes recursos para probarlos e importarlos en entornos de producción cuando estén listos.
+La funcionalidad [!UICONTROL Use Case Playbooks] ahora está disponible de forma general para todos los clientes de Real-Time CDP y Adobe Journey Optimizer. [!UICONTROL Use Case Playbooks] están diseñadas para ayudar a los usuarios a superar los desafíos al comenzar con Real-Time Customer Data Platform o Adobe Journey Optimizer. Cuando no está seguro de por dónde empezar o cómo crear los recursos adecuados para los casos de uso deseados, los manuales de tácticas de casos de uso proporcionan inspiración y crean diferentes recursos para probarlos e importarlos en entornos de producción cuando estén listos.
 
-Para empezar a usar [!UICONTROL Manuales de tácticas de casos de uso], lea las siguientes páginas de documentación:
+Para comenzar con [!UICONTROL Use Case Playbooks], lea las siguientes páginas de documentación:
 
 - Lea la [página de información general](/help/use-case-playbooks/playbooks/overview.md) para comprender el propósito, la información de disponibilidad y obtener una demostración completa de cómo funcionan los manuales de tácticas, desde la detección hasta la creación de instancias y la importación de recursos generados en otros entornos de zona protegida.
 - Obtenga una lista de [manuales de tácticas disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), agrupados por producto (Real-Time CDP o Journey Optimizer)
@@ -71,19 +71,19 @@ La preparación de datos permite a los ingenieros de datos asignar, transformar 
 
 Para obtener más información sobre la preparación de datos, lea [Información general de preparación de datos](../../data-prep/home.md).
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, audiencias, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese en el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Experience Platform en función de sus necesidades comerciales. El SQL también está disponible para las perspectivas de [Perfiles](../../dashboards/insights/profiles.md), [Públicos](../../dashboards/insights/audiences.md) y [Destinos](../../dashboards/insights/destinations.md) de la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de SQL de datos](../../dashboards/view-sql.md). |
+| Ver SQL | Ahora puede ver el SQL subyacente a sus perfiles, públicos, destinos y perspectivas personalizadas con la opción Ver SQL y, a continuación, ejecutar la consulta bajo demanda mediante el Editor de consultas. El acceso al SQL que alimenta las perspectivas de Real-time Customer Data Platform le ayuda a comprender la lógica detrás del análisis del modelo de datos. Esta transparencia hace que los datos de Real-time CDP de su Adobe sean más accesibles, comprensibles e impactantes para la toma de decisiones.<br>Inspírese en el SQL de más de 40 perspectivas existentes para crear nuevas consultas que obtengan perspectivas únicas de los datos de Experience Platform en función de sus necesidades empresariales. El SQL también está disponible para las perspectivas de [Perfiles](../../dashboards/insights/profiles.md), [Públicos](../../dashboards/insights/audiences.md) y [Destinos](../../dashboards/insights/destinations.md) de la documentación de Experience League. Estos documentos destacan los casos de uso empresarial que se pueden responder con las perspectivas estándar. Para obtener más información, lea la guía de [visualización de SQL de datos](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
+Para obtener más información sobre los paneles de control, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles de control](../../dashboards/home.md).
 
 ## Destinos {#destinations}
 
@@ -129,7 +129,7 @@ El compilado en Experience Platform, Real-time Customer Data Platform ([!DNL Rea
 
 | Función | Descripción |
 | --- | --- |
-| Actualizaciones a la [página principal de Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de perfiles**: ahora puede usar el widget de perfiles para ir a la página de información general de perfiles y ver las métricas de perfil de su organización.</li><li>**Tarjeta de Métricas de perfil**: la tarjeta de Métricas de perfil del panel de la página de inicio ahora muestra el recuento total de perfiles de su organización, en función de su política de combinación respectiva.</li><li>**Widget de esquemas**: ahora puede usar el widget de esquemas para ir al flujo de trabajo de creación de esquemas en la interfaz de usuario.</li></ul> |
+| Actualizaciones a la [página principal de Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de perfiles**: ahora puede usar el widget de perfiles para ir a la página de información general de perfiles y ver las métricas de perfil de su organización.</li><li>**Tarjeta de Métricas de perfil**: la tarjeta de Métricas de perfil del panel de control de la página de inicio ahora muestra el recuento total de perfiles de su organización, en función de su política de combinación respectiva.</li><li>**Widget de esquemas**: ahora puede usar el widget de esquemas para ir al flujo de trabajo de creación de esquemas en la interfaz de usuario.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -152,7 +152,7 @@ Adobe Experience Platform le permite impulsar experiencias coordinadas, coherent
 
 | Función | Descripción |
 | --- | --- |
-| Mejoras en la localización de las tarjetas de panel predeterminadas del visualizador de perfiles | Las tarjetas de perfil predeterminadas ahora tendrán nombres localizados dinámicamente. Las tarjetas de perfil personalizadas pueden seguir teniendo nombres personalizados que se pueden editar. |
+| Mejoras en la localización de las tarjetas de panel de control predeterminadas del visualizador de perfiles | Las tarjetas de perfil predeterminadas ahora tendrán nombres localizados dinámicamente. Las tarjetas de perfil personalizadas pueden seguir teniendo nombres personalizados que se pueden editar. |
 
 {style="table-layout:auto"}
 
@@ -160,7 +160,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, lea l
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 **Funciones nuevas o actualizadas**
 
