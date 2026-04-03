@@ -2,7 +2,7 @@
 title: Información general sobre la extensión Algolia Tags
 description: Obtenga información acerca de la extensión de etiquetas Algolia en Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Información general sobre la extensión de etiquetas [!DNL Algolia]
 
-La extensión de etiquetas [!DNL Algolia] permite a los especialistas en marketing configurar fácilmente reglas que envían datos de interacción del usuario a [!DNL Algolia], lo que permite ofrecer experiencias de búsqueda y descubrimiento de IA más personalizadas.
+La extensión de etiquetas [!DNL Algolia] permite a los especialistas en marketing configurar fácilmente reglas que envían datos de interacción del usuario a [!DNL Algolia], lo que les ayuda a ofrecer experiencias de Búsqueda por IA y descubrimiento más personalizadas.
 
 Esta extensión cuenta con una función clave:
 
