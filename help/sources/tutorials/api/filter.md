@@ -2,10 +2,10 @@
 title: Filtrado de datos de nivel de fila para una Source mediante la API de Flow Service
 description: Este tutorial trata los pasos sobre cómo filtrar datos en el nivel de origen mediante la API de Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 5%
+source-wordcount: '1820'
+ht-degree: 4%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 5%
 
 Lea esta guía para ver los pasos sobre cómo filtrar los datos de nivel de fila para un origen mediante la [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Introducción 
+## Introducción
 
 Este tutorial requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -457,7 +457,7 @@ En primer lugar, cree un [[!DNL Marketo] flujo de datos](../ui/create/adobe-appl
 
 Una vez que tenga un flujo de datos borrador, debe recuperar su ID correspondiente.
 
-En la interfaz de usuario, vaya al catálogo de fuentes y luego seleccione **[!UICONTROL Flujos de datos]** en el encabezado superior. Utilice la columna de estado para identificar todos los flujos de datos guardados en modo de borrador y, a continuación, seleccione el nombre del flujo de datos. A continuación, utilice el panel **[!UICONTROL Propiedades]** de la derecha para localizar el ID de flujo de datos.
+En la interfaz de usuario, vaya al catálogo de fuentes y seleccione **[!UICONTROL Dataflows]** en el encabezado superior. Utilice la columna de estado para identificar todos los flujos de datos guardados en modo de borrador y, a continuación, seleccione el nombre del flujo de datos. A continuación, utilice el panel **[!UICONTROL Properties]** de la derecha para localizar el ID de flujo de datos.
 
 ### Recuperación de detalles del flujo de datos
 
@@ -881,7 +881,7 @@ Una respuesta correcta devuelve el ID y el `etag` correspondiente del flujo de d
 
 +++
 
-Puede utilizar la interfaz de usuario de Experience Platform para comprobar que se ha publicado el flujo de datos de borrador. Vaya a la página de flujos de datos en el catálogo de fuentes y haga referencia al **[!UICONTROL estado]** del flujo de datos. Si se ejecuta correctamente, el estado debería establecerse en **Enabled**.
+Puede utilizar la interfaz de usuario de Experience Platform para comprobar que se ha publicado el flujo de datos de borrador. Vaya a la página de flujos de datos en el catálogo de fuentes y haga referencia a **[!UICONTROL Status]** del flujo de datos. Si se ejecuta correctamente, el estado debería establecerse en **Enabled**.
 
 >[!TIP]
 >
@@ -898,7 +898,7 @@ Esta sección proporciona más ejemplos de diferentes cargas útiles para el fil
 
 Puede omitir el `fnApply` inicial en escenarios que solo requieran una condición.
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 ```json
 {
@@ -927,7 +927,7 @@ Puede omitir el `fnApply` inicial en escenarios que solo requieran una condició
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `in`.
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 ```json
 {
@@ -963,7 +963,7 @@ Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `i
 
 ### Uso del operador `isNull`
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `isNull`.
 
@@ -991,7 +991,7 @@ Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `i
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `NOT`.
 
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 ```json
 {
@@ -1022,7 +1022,7 @@ Consulte la carga útil de ejemplo siguiente para ver un ejemplo del operador `N
 
 Consulte la carga útil de ejemplo siguiente para ver un ejemplo de condiciones anidadas complejas.
 
-+++Seleccione para ver el ejemplo
++++Seleccione esta opción para ver el ejemplo
 
 ```json
 {
