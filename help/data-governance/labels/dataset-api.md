@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Administrar etiquetas de uso de datos para conjuntos de datos mediante API
 description: La API del servicio de conjuntos de datos permite aplicar y editar etiquetas de uso para conjuntos de datos. Forma parte de las funciones del catálogo de datos de Adobe Experience Platform, pero es independiente de la API del servicio de catálogo que administra los metadatos del conjunto de datos.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 2%
@@ -264,7 +264,7 @@ Una respuesta correcta devuelve el conjunto actualizado de etiquetas para el con
 } 
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha aprendido a administrar las etiquetas de uso de datos para conjuntos de datos y campos mediante la API [!DNL Dataset Service]. Ahora puede definir [políticas de uso de datos](../policies/overview.md) y [políticas de control de acceso](../../access-control/abac/ui/policies.md) en función de las etiquetas que haya aplicado.
 
