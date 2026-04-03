@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Restricciones de tipo de campo XDM
 description: Una referencia para las restricciones de tipo de campo en el Experience Data Model (XDM), incluidos los otros formatos de serialización a los que se pueden asignar y cómo definir sus propios tipos de campo en la API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 1%
@@ -60,11 +60,11 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "maximum": 9007199254740991,
   "mínimo": -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "maximum": 2147483648,
   "mínimo": -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "maximum": 32767,
   "mínimo": -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "tipo": "entero",
   "máximo": 128,
   mínimo: -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ En la siguiente tabla se describe cómo se representa cada tipo XDM en el esquem
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date-time"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
