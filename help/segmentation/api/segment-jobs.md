@@ -4,7 +4,7 @@ title: Extremo de API de trabajos de segmento
 description: El extremo de trabajos de segmento de la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmento de su organización.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 3%
@@ -358,7 +358,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | El valor `id` del trabajo de segmentación que desea recuperar. |
 
 **Solicitud**
@@ -583,7 +583,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{SEGMENT_JOB_ID}` | El valor `id` del trabajo de segmentación que desea eliminar. |
 
 **Solicitud**
