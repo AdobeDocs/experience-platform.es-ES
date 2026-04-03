@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;spark sql;spark sql;spark sql funciones;funciones;
+keywords: Experience Platform;inicio;temas populares;servicio de consultas;servicio de consultas;spark sql;spark sql;spark sql, funciones;funciones;
 solution: Experience Platform
 title: Funciones SQL de Spark en el servicio de consultas
 description: Obtenga información acerca de las funciones compatibles de Spark SQL que amplían la funcionalidad de SQL.
 exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
-source-git-commit: 7ac1521adb916313c8b53fe2a095821d756480be
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1903'
 ht-degree: 1%
