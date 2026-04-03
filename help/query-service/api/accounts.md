@@ -5,7 +5,7 @@ title: Extremo de API de cuentas
 description: Puede crear una cuenta de servicio de consultas para persistentes
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 5%
@@ -22,7 +22,7 @@ Los extremos utilizados en esta guía forman parte de la API del servicio de con
 
 ## Crear una cuenta
 
-Puede crear una cuenta de integración del servicio de consultas realizando una solicitud de POST al extremo `/accounts`.
+Puede crear una cuenta de integración del servicio de consultas realizando una petición POST al extremo `/accounts`.
 
 **Formato de API**
 
@@ -77,7 +77,7 @@ Una respuesta correcta devuelve el estado HTTP 200, con detalles de la cuenta de
 
 ## Actualizar una cuenta
 
-Puede actualizar su cuenta de integración del servicio de consultas realizando una solicitud de PUT al extremo `/accounts`.
+Puede actualizar su cuenta de integración del servicio de consultas realizando una petición PUT al extremo `/accounts`.
 
 **Formato de API**
 
@@ -135,7 +135,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la cue
 
 ## Enumerar todas las cuentas
 
-Puede recuperar una lista de todas las cuentas de integración de Query Service realizando una solicitud de GET al extremo `/accounts`.
+Puede recuperar una lista de todas las cuentas de integración de Query Service realizando una petición GET al extremo `/accounts`.
 
 **Formato de API**
 
@@ -206,7 +206,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las cu
 
 ## Eliminación de una cuenta
 
-Puede eliminar su cuenta de integración del servicio de consultas realizando una solicitud de DELETE al extremo `/accounts`.
+Puede eliminar su cuenta de integración del servicio de consultas realizando una petición DELETE al extremo `/accounts`.
 
 **Formato de API**
 
