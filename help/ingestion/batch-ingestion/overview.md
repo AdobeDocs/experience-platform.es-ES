@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general de API de ingesta por lotes
 description: La API de ingesta por lotes de Adobe Experience Platform le permite introducir datos en Experience Platform como archivos por lotes. Los datos que se están ingiriendo pueden ser los datos de perfil de un archivo plano de un sistema CRM (como un archivo Parquet) o los datos que se ajustan a un esquema conocido en el registro del Modelo de datos de experiencia (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 7%
@@ -60,12 +60,12 @@ Por ejemplo, ni JSON ni CSV tienen un tipo `date` o `date-time`. Como resultado,
 
 La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 
-| Entrante (fila) frente a destino (col) | Cadena | Byte | Corto | Entero | Largo | Duplicada | Fecha | Fecha-hora | Objeto | Mapa |
+| Entrante (fila) frente a destino (col) | Cadena | Byte | Corto | Número entero | Largo | Duplicada | Fecha | Fecha-hora | Objeto | Mapa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Cadena | X | X | X | X | X | X | X | X |   |   |
 | Byte | X | X | X | X | X | X |   |   |   |   |
 | Corto | X | X | X | X | X | X |   |   |   |   |
-| Entero | X | X | X | X | X | X |   |   |   |   |
+| Número entero | X | X | X | X | X | X |   |   |   |   |
 | Largo | X | X | X | X | X | X | X | X |   |   |
 | Duplicada | X | X | X | X | X | X |   |   |   |   |
 | Fecha |   |   |   |   |   |   | X |   |   |   |
@@ -77,7 +77,7 @@ La tabla siguiente muestra las conversiones admitidas al ingerir datos.
 >
 >Los booleanos y matrices no se pueden convertir en otros tipos.
 
-## Uso de la API
+## Utilización de la API
 
 La API [!DNL Data Ingestion] le permite ingerir datos por lotes (una unidad de datos que consta de uno o más archivos que se van a ingerir como una sola unidad) en [!DNL Experience Platform] en tres pasos básicos:
 
