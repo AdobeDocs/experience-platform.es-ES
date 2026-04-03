@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Información general sobre políticas de uso de datos
 description: Las políticas de uso de datos son reglas que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 18%
@@ -52,12 +52,13 @@ Cuando el uso de datos se produce en el servicio de su organización, se deben i
 
 Consulte el apéndice de este documento para obtener una lista de [acciones de marketing definidas por Adobe disponibles](#core-actions). También puede definir sus propias acciones de marketing personalizadas mediante la API [!DNL Policy Service] o la interfaz de usuario [!DNL Experience Platform]. En la siguiente sección se proporciona más información sobre cómo trabajar con acciones y políticas de marketing.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=es).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Administración de políticas de uso de datos {#manage}
@@ -90,7 +91,7 @@ En la tabla siguiente se describen las acciones de marketing principales que pro
 
 | Acción de marketing | Descripción |
 | --- | --- |
-| Analytics  | Una acción que utiliza datos con fines de análisis, como medir, analizar y crear informes sobre el uso que hacen los clientes de los sitios o las aplicaciones de su organización. |
+| Analytics | Una acción que utiliza datos con fines de análisis, como medir, analizar y crear informes sobre el uso que hacen los clientes de los sitios o las aplicaciones de su organización. |
 | Combinación con datos directamente identificables | Una acción que combina cualquier información de identificación personal (PII) con datos anónimos. Los contratos para datos procedentes de redes de publicidad, servidores de publicidad y proveedores de datos de terceros suelen incluir prohibiciones contractuales específicas sobre el uso de dichos datos con datos directamente identificables. |
 | Segmentación entre sitios | Una acción que utiliza datos para la segmentación de anuncios entre sitios. La combinación de datos de varios sitios, incluida una combinación de datos in situ y datos externos o una combinación de datos de varias fuentes externas, se denomina datos entre sitios. Los datos entre sitios generalmente se recopilan y procesan para hacer deducciones sobre los intereses de los usuarios. |
 | Ciencia de datos | Una acción que utiliza datos para flujos de trabajo de ciencia de datos. Algunos contratos incluyen prohibiciones explícitas sobre el uso de datos para la ciencia de datos. A veces se formulan en términos que prohíben el empleo de datos para inteligencia artificial (IA), aprendizaje automático (ML) o modelado. |
