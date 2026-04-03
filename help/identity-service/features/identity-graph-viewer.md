@@ -2,9 +2,9 @@
 title: Visor de gráficos de identidad
 description: Un gráfico de identidad es un mapa de relaciones entre distintas identidades de un cliente en particular, que le proporciona una representación visual de cómo el cliente interactúa con la marca en diferentes canales.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1379'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ El siguiente documento proporciona pasos sobre cómo acceder y utilizar el visua
 
 El siguiente vídeo tiene como objetivo ayudarle a comprender el visualizador de gráficos de identidad.
 
->[!VIDEO](https://video.tv.adobe.com/v/345653/?quality=12&learn=on&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Introducción
 
@@ -38,11 +38,11 @@ Trabajar con el visualizador de gráficos de identidad requiere comprender los d
 
 ## Acceso al visor de gráficos de identidad {#access-identity-graph-viewer}
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Identidades]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Gráfico de identidades]** de la lista de pestañas en el encabezado.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Identities]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Identity Graph]** de la lista de pestañas del encabezado.
 
 ![Área de trabajo de identidades en la interfaz de usuario de Experience Platform, con la ficha Gráfico de identidades seleccionada.](../images/graph-viewer/identity-graph.png)
 
-Para ver un gráfico de identidad, proporcione un área de nombres de identidad y su valor correspondiente y, a continuación, seleccione **[!UICONTROL Ver]**.
+Para ver un gráfico de identidad, proporcione un área de nombres de identidad y su valor correspondiente y luego seleccione **[!UICONTROL View]**.
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ La interfaz del visualizador de gráficos de identidad está formada por varios 
 
 ![Interfaz del visor de gráficos de identidad.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-El gráfico de identidad muestra todas las identidades vinculadas a la combinación de área de nombres de identidad y valor que ha introducido. Cada nodo consta de un área de nombres de identidad y su valor correspondiente. Puede seleccionar, mantener pulsado y arrastrar cualquier nodo para interactuar con el gráfico. También puede pasar el ratón sobre un nodo para ver información acerca de su valor de identidad correspondiente. Seleccione **[!UICONTROL Ver gráfico]** para ocultar o mostrar el gráfico.
+El gráfico de identidad muestra todas las identidades vinculadas a la combinación de área de nombres de identidad y valor que ha introducido. Cada nodo consta de un área de nombres de identidad y su valor correspondiente. Puede seleccionar, mantener pulsado y arrastrar cualquier nodo para interactuar con el gráfico. También puede pasar el ratón sobre un nodo para ver información acerca de su valor de identidad correspondiente. Seleccione **[!UICONTROL View graph]** para ocultar o mostrar el gráfico.
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ Seleccione un vínculo dentro del gráfico para ver el conjunto de datos y el ID
 
 ![Vínculo de identidad entre el correo electrónico y los nodos GAID seleccionados.](../images/graph-viewer/identity-link.png)
 
-La tabla [!UICONTROL Identidades] proporciona una vista diferente de los datos de identidad, e incluye el área de nombres de identidad y la combinación de valores de identidad en formato tabular. Si se selecciona un nodo en el gráfico, se actualizará el elemento de línea resaltado en la tabla [!UICONTROL Identidades].
+La tabla [!UICONTROL Identities] proporciona una vista diferente de los datos de identidad, que enumera el área de nombres de identidad y la combinación de valores de identidad en formato de tabla. Si se selecciona un nodo en el gráfico, se actualizará el elemento de línea resaltado en la tabla [!UICONTROL Identities].
 
 ![La tabla Identidades con la lista de identidades vinculadas en el gráfico.](../images/graph-viewer/identities-table.png)
 
-Utilice el menú desplegable para ordenar los datos del gráfico y resaltar la información de un área de nombres de identidad específica. Por ejemplo, seleccione **[!UICONTROL Correo electrónico]** del menú para ver datos específicos del área de nombres de identidad del correo electrónico.
+Utilice el menú desplegable para ordenar los datos del gráfico y resaltar la información de un área de nombres de identidad específica. Por ejemplo, seleccione **[!UICONTROL Email]** del menú para ver datos específicos del área de nombres de identidad del correo electrónico.
 
 ![La tabla Identidades se ordenó para mostrar solo los datos de correo electrónico.](../images/graph-viewer/sort-email.png)
 
@@ -81,7 +81,7 @@ El carril derecho muestra información sobre una identidad seleccionada, incluid
 La siguiente tabla proporciona información adicional sobre las propiedades de la fuente de datos que se muestran en el carril derecho:
 
 | Fuente de datos | Descripción |
-| --- | --- | 
+| --- | --- |
 | ID de lote | El identificador generado automáticamente que corresponde a los datos por lotes. |
 | ID de conjunto de datos | El identificador generado automáticamente que corresponde con su conjunto de datos. |
 | Nombre del conjunto de datos | Nombre del conjunto de datos que contiene los datos por lotes. |
@@ -89,19 +89,19 @@ La siguiente tabla proporciona información adicional sobre las propiedades de l
 
 ![El carril derecho, que muestra los datos de identidad, así como la fuente de datos de información.](../images/graph-viewer/right-rail.png)
 
-También puede usar *[!UICONTROL Fuente de datos]* para ver una lista de fuentes de datos que contribuyen a sus identidades. Seleccione [!UICONTROL Fuente de datos] para obtener una vista tabular de sus conjuntos de datos e ID de lote.
+También puede usar *[!UICONTROL Data source]* para ver una lista de orígenes de datos que contribuyen a sus identidades. Seleccione [!UICONTROL Data source] para obtener una vista tabular de sus conjuntos de datos e ID de lote.
 
 ![Ficha de origen de datos seleccionada.](../images/graph-viewer/data-source-table.png)
 
-Utilice el control deslizante para filtrar los datos de gráficos por el momento en el que se establecieron las identidades por primera vez. De forma predeterminada, el visor de gráficos de identidades muestra todas las identidades vinculadas dentro del gráfico. Mantenga pulsado y arrastre el control deslizante para ajustar la hora a la última marca de tiempo a la que se vinculó una nueva identidad al gráfico. En el siguiente ejemplo, el gráfico muestra que el vínculo de identidad (GAID) más reciente se estableció el **[!UICONTROL 19/08/2020 a las 4:29:29 p.m.]**.
+Utilice el control deslizante para filtrar los datos de gráficos por el momento en el que se establecieron las identidades por primera vez. De forma predeterminada, el visor de gráficos de identidades muestra todas las identidades vinculadas dentro del gráfico. Mantenga pulsado y arrastre el control deslizante para ajustar la hora a la última marca de tiempo a la que se vinculó una nueva identidad al gráfico. En el ejemplo siguiente, el gráfico muestra que el vínculo de identidad más reciente (GAID) se estableció el **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![Se seleccionó el regulador de marca de tiempo del visor de gráficos.](../images/graph-viewer/slider-one.png)
 
-Ajuste el control deslizante para ver que se ha establecido otro vínculo de identidad (correo electrónico) el **[!UICONTROL 19/08/2020 a las 4:25:30 p.m.]**.
+Ajuste el control deslizante para ver que se ha establecido otro vínculo de identidad (correo electrónico) en **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
 ![El control deslizante de la marca de tiempo del visor de gráficos se ajustó al último vínculo nuevo establecido.](../images/graph-viewer/slider-two.png)
 
-También puede ajustar el control deslizante para ver la iteración más temprana del gráfico. En el ejemplo siguiente, el visor de gráficos de identidad muestra que el gráfico se creó por primera vez el **[!UICONTROL 19/08/2020 a las 4:11:49 p.m.]**, y que sus primeros vínculos fueron ECID, Correo electrónico y Teléfono.
+También puede ajustar el control deslizante para ver la iteración más temprana del gráfico. En el ejemplo siguiente, el visor de gráficos de identidad muestra que el gráfico se creó por primera vez el **[!UICONTROL 08/19/2020, 4:11:49 PM]**, con sus primeros vínculos ECID, Correo electrónico y Teléfono.
 
 ![El control deslizante de la marca de tiempo del visor de gráficos se ajustó al primer vínculo nuevo establecido.](../images/graph-viewer/slider-three.png)
 
@@ -121,7 +121,7 @@ Pueden producirse errores al acceder al visor del gráfico de identidades. A con
 
 ### Acceso al visor de gráficos de identidad desde conjuntos de datos
 
-También puede acceder al visor de gráficos de identidad mediante la interfaz de conjuntos de datos. En la página de conjuntos de datos [!UICONTROL Examinar], seleccione un conjunto de datos con el que desee interactuar y, a continuación, seleccione **[!UICONTROL Previsualizar conjunto de datos]**
+También puede acceder al visor de gráficos de identidad mediante la interfaz de conjuntos de datos. En la página de conjuntos de datos [!UICONTROL Browse], seleccione un conjunto de datos con el que desee interactuar y, a continuación, seleccione **[!UICONTROL Preview dataset]**
 
 ![previsualización-conjunto de datos](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -133,7 +133,7 @@ En la ventana de vista previa, seleccione un icono de huella digital para ver la
 
 ![huella digital](../images/identity-graph-viewer/fingerprint.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ha aprendido a explorar los gráficos de identidad de sus clientes en la interfaz de usuario de Experience Platform. Para obtener más información sobre identidades en Experience Platform, consulte [descripción general del servicio de identidad](../home.md)
 
