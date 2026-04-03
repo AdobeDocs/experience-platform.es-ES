@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2023'
 description: Las notas de la versión de septiembre de 2023 de Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2269'
-ht-degree: 28%
+source-wordcount: '2242'
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ Nuevas funciones de Adobe Experience Platform:
 Actualizaciones de funciones existentes en Experience Platform:
 
 - [Alertas](#alerts)
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Gobernanza de datos](#data-governance)
 - [Higiene de los datos](#hygiene)
@@ -37,19 +37,19 @@ Los atributos calculados permiten resumir fácilmente los datos de evento en atr
 
 ## Alertas {#alerts}
 
-Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alertas] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
+Experience Platform le permite suscribirse a alertas basadas en eventos para diversas actividades de Experience Platform. Puede suscribirse a distintas reglas de alerta a través de la ficha [!UICONTROL Alerts] de la interfaz de usuario de Experience Platform y puede elegir recibir mensajes de alerta dentro de la propia interfaz de usuario o mediante notificaciones por correo electrónico.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Pestaña Historial de alertas | La ficha Alertas [!UICONTROL Historial] ahora incluirá todos los eventos, incluidos retrasos, inicios, aciertos y errores. Lea la [documentación de la interfaz de usuario de alertas](../../observability/alerts/ui.md) para obtener más información sobre la ficha historial. |
+| Pestaña Historial de alertas | La ficha Alertas [!UICONTROL History] ahora incluirá todos los eventos, incluidos retrasos, inicios, aciertos y errores. Lea la [documentación de la interfaz de usuario de alertas](../../observability/alerts/ui.md) para obtener más información sobre la ficha historial. |
 
 {style="table-layout:auto"}
 
 Para obtener más información acerca de las alertas, lea la [[!DNL Observability Insights] descripción general](../../observability/home.md).
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
 Adobe Experience Platform proporciona varios(as) [!DNL dashboards] a través de los cuales puede ver información importante acerca de los datos de su organización, según se capturan durante las instantáneas diarias.
 
@@ -70,13 +70,13 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 | Tipo | Función | Descripción |
 | --- | --- | --- |
 | Secuencias de datos | Compatibilidad con la búsqueda de dispositivos | Al configurar una secuencia de datos, ahora puede seleccionar el nivel de información de búsqueda de dispositivos que desea recopilar. La información de búsqueda de dispositivos incluye datos sobre el dispositivo, el hardware, el sistema operativo y el explorador utilizados para interactuar con la página. No se puede recopilar la información de búsqueda del dispositivo <br> junto con las sugerencias del agente de usuario y del cliente. Si elige recopilar información del dispositivo, se deshabilita la recopilación de sugerencias del agente de usuario y del cliente, y viceversa. Toda la información de búsqueda del dispositivo se almacena en el grupo de campos `xdm:device`. Obtenga más información en la documentación sobre [configuración de flujos de datos](../../datastreams/configure.md#geolocation-device-lookup). |
-| Extensiones | Extensión de la API de eventos web [!DNL TikTok] | La extensión de la API [[!DNL TikTok] Web Events](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) le permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL TikTok] en forma de eventos del lado del servidor mediante la API de eventos web [!DNL TikTok]. |
+| Extensiones | Extensión de API de eventos web de [!DNL TikTok] | La extensión de la API [[!DNL TikTok] Web Events](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) le permite aprovechar los datos capturados en Adobe Experience Platform Edge Network y enviarlos a [!DNL TikTok] en forma de eventos del lado del servidor mediante la API de eventos web [!DNL TikTok]. |
 
 {style="table-layout:auto"}
 
 Para obtener más información acerca de la recopilación de datos, lea la [información general de recopilación de datos](../../tags/home.md).
 
-## Control de datos {#data-governance}
+## Gobernanza de datos {#data-governance}
 
 La gobernanza de datos de Adobe Experience Platform es una serie de estrategias y tecnologías que se utilizan para administrar los datos de los clientes y garantizar el cumplimiento de las regulaciones, restricciones y políticas aplicables al uso de datos. Desempeña una función clave dentro de Experience Platform en varios niveles, incluida la catalogación, el linaje de datos, el etiquetado del uso de los datos, las políticas de acceso a los datos y el control de acceso de los datos para las acciones de marketing.
 
@@ -92,13 +92,13 @@ Para obtener más información acerca de la gobernanza de datos, lea la [informa
 
 ## Higiene de datos {#hygiene}
 
-Experience Platform proporciona un conjunto de funciones de higiene de los datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con el área de trabajo [!UICONTROL Data Lifecycle] en la interfaz de usuario o a través de llamadas a la API de higiene de datos, puede administrar de manera eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas organizativas lo consideran necesario.
+Experience Platform proporciona un conjunto de funciones de higiene de los datos que le permiten administrar los datos almacenados mediante la eliminación mediante programación de registros de consumidores y conjuntos de datos. Con el espacio de trabajo [!UICONTROL Data Lifecycle] en la interfaz de usuario o a través de llamadas a la API de higiene de datos, puede administrar de manera eficaz sus almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas organizativas lo consideran necesario.
 
 **Nuevas funciones**
 
 | Función | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Eliminación de registro (versión limitada) | Administre el ciclo vital de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones de administración avanzada del ciclo vital de los datos en Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada del conjunto de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.La eliminación de registro <br>le permite eliminar perfiles de consumidores individuales mediante la segmentación de sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
+| [!BADGE Eliminación de registro de Beta]{type=Informative} (versión limitada) | Administre el ciclo vital de los datos en todos los almacenes de datos para cumplir los compromisos de los clientes y los acuerdos de licencia con las funciones de administración avanzada del ciclo vital de los datos en Adobe Experience Platform: caducidad automatizada del conjunto de datos y eliminación de registros.<br>Con la caducidad automatizada del conjunto de datos, puede eliminar conjuntos de datos completos y establecer una fecha y una hora para que se eliminen.La eliminación de registro <br>le permite eliminar perfiles de consumidores individuales mediante la segmentación de sus identidades principales. Puede proporcionar las identidades principales individualmente a través de la interfaz de usuario o a través de la carga del archivo CSV/JSON. Consulte la [documentación de eliminación de registros](../../hygiene/ui/record-delete.md) para obtener más información |
 | Caducidades de los conjuntos de datos | Minimice los datos y mantenga el control de los acuerdos de licencia con Caducidad automatizada del conjunto de datos. Reduzca los volúmenes de datos eliminando conjuntos de datos completos y establezca una fecha y una hora para eliminar el conjunto de datos. Consulte la [documentación sobre la caducidad de los conjuntos de datos](../../hygiene/ui/dataset-expiration.md) para obtener más información. |
 
 {style="table-layout:auto"}
@@ -115,8 +115,8 @@ Para obtener más información sobre las capacidades de higiene de datos de Expe
 | ----------- |----------------|----------- |
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | Nuevo | Active las audiencias previamente incorporadas a [!DNL LiveRamp] para editores Premium en medios móviles, web, de visualización y de TV conectados. <br> Después de incorporar audiencias a su cuenta de [!DNL LiveRamp] a través de la conexión de [LiveRamp - Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md), use la nueva conexión de [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) para activar las audiencias en destinos de flujo descendente. |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | Nuevo | [[!DNL HubSpot]](https://www.hubspot.com) es una plataforma CRM con todo el software, las integraciones y los recursos que necesita para conectar el marketing, las ventas, la administración de contenido y el servicio al cliente. Permite conectar los datos, los equipos y los clientes en una plataforma CRM. |
-| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Actualizado   | Se agregó compatibilidad con [!DNL Dynamics 365] prefijos de campo personalizados para campos personalizados que no se crearon dentro de la solución predeterminada en [!DNL Dynamics 365]. Se ha agregado un nuevo campo de entrada **[!UICONTROL Prefijo de personalización]** en el paso [Rellenar detalles de destino](#destination-details). |
-| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Actualizado   | El destino de Audiencias de Experience Cloud ya está disponible de forma general. Utilice este destino para activar audiencias de Real-Time CDP a Audience Manager y Adobe Analytics. Necesita una licencia de Audience Manager para enviar audiencias a Adobe Analytics. |
+| [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Actualizado | Se agregó compatibilidad con [!DNL Dynamics 365] prefijos de campo personalizados para campos personalizados que no se crearon dentro de la solución predeterminada en [!DNL Dynamics 365]. Se ha agregado un nuevo campo de entrada, **[!UICONTROL Customization Prefix]**, en el paso [Rellenar detalles de destino](#destination-details). |
+| [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md) | Actualizado | El destino de Audiencias de Experience Cloud ya está disponible de forma general. Utilice este destino para activar audiencias de Real-Time CDP a Audience Manager y Adobe Analytics. Necesita una licencia de Audience Manager para enviar audiencias a Adobe Analytics. |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ Para obtener más información sobre las capacidades de higiene de datos de Expe
 
 Add these to release notes as they go out
 
-| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. | 
+| [[!DNL Qualtrics]] | New | Use the aggregation of multiple sources of operational data in Adobe Experience Platform as an input in Qualtrics Experience ID to better understand your customers and enable targeted outreach to close the gap when it comes to understanding intent, emotion and experience drivers. |
 
 -->
 
@@ -165,8 +165,8 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Tipo de datos | [[!UICONTROL Devolver]](https://github.com/adobe/xdm/pull/1773/files) | La RMA (Autorización de Devolución de Mercancía) emitida. |
-| Tipo de datos | [[!UICONTROL Devolver elemento]](https://github.com/adobe/xdm/pull/1773/files) | La información del artículo devuelto dentro de la RMA (Autorización de Devolución de Mercancías). |
+| Tipo de datos | [[!UICONTROL Return]](https://github.com/adobe/xdm/pull/1773/files) | La RMA (Autorización de Devolución de Mercancía) emitida. |
+| Tipo de datos | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) | La información del artículo devuelto dentro de la RMA (Autorización de Devolución de Mercancías). |
 
 {style="table-layout:auto"}
 
@@ -174,9 +174,9 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Actualizar descripción |
 | --- | --- | --- |
-| Extensión | [!UICONTROL Campos de entidad de AJO] | El indicador [[!UICONTROL para múltiples variantes]](https://github.com/adobe/xdm/pull/1774/files) se agregó a [!UICONTROL Campos de entidad de AJO] para identificar si la variante es multivariante o no. |
-| Tipo de datos | [!UICONTROL Elemento de lista de productos] | Se agregó [[!UICONTROL artículo de devolución]](https://github.com/adobe/xdm/pull/1773/files) para incluir la información de autorización de devolución de mercancía. |
-| Tipo de datos | Pedido | [[!UICONTROL Se agregó la información de devolución]](https://github.com/adobe/xdm/pull/1773/files) para incluir la autorización de devolución de material (RMA) emitida. |
+| Extensión | [!UICONTROL AJO Entity Fields] | Se agregó [[!UICONTROL flag for multi-variant]](https://github.com/adobe/xdm/pull/1774/files) a [!UICONTROL AJO Entity Fields] para identificar si la variante es una variante múltiple o no. |
+| Tipo de datos | [!UICONTROL Product list item] | [[!UICONTROL Return Item]](https://github.com/adobe/xdm/pull/1773/files) se agregó para incluir la información de autorización de devolución de mercancía. |
+| Tipo de datos | Pedido | [[!UICONTROL Return Info]](https://github.com/adobe/xdm/pull/1773/files) se agregó para incluir la autorización de devolución de material (RMA) emitida. |
 
 {style="table-layout:auto"}
 
@@ -199,7 +199,7 @@ Para obtener más información acerca del Servicio de identidad, lea la [Informa
 
 ## Servicio de consultas {#query-service}
 
-El servicio de consulta le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
+El Servicio de consultas le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
 
 **Funciones actualizadas**
 
@@ -210,7 +210,7 @@ El servicio de consulta le permite utilizar SQL estándar para consultar datos e
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los servicios de consulta, vea la [Información general del servicio de consulta](../../query-service/home.md).
+Para obtener más información sobre los Servicios de consultas, vea la [Información general del Servicio de consultas](../../query-service/home.md).
 
 ## Servicio de segmentación {#segmentation}
 
