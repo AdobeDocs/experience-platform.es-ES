@@ -2,9 +2,9 @@
 title: Principales consejos para maximizar el valor con Adobe Experience Platform Data Distiller - OS656
 description: Aprenda a maximizar el valor con Adobe Experience Platform Data Distiller enriqueciendo los datos del perfil del cliente en tiempo real y utilizando perspectivas de comportamiento para crear audiencias segmentadas. Este recurso incluye un conjunto de datos de muestra y un caso práctico que muestra cómo aplicar el modelo de actualización, frecuencia y monetario (RFM) para la segmentación de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
+source-wordcount: '3664'
 ht-degree: 0%
 
 ---
@@ -65,22 +65,22 @@ Siga estos pasos para cargar un archivo CSV en Adobe Experience Platform.
 
 #### Creación de un conjunto de datos a partir de un archivo CSV {#create-a-dataset}
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el carril de navegación izquierdo, seguido de **[!UICONTROL Crear conjunto de datos]**. A continuación, seleccione **[!UICONTROL Crear conjunto de datos a partir del archivo CSV]** entre las opciones disponibles.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Datasets]** en el carril izquierdo de navegación, seguido de **[!UICONTROL Create dataset]**. Luego seleccione **[!UICONTROL Create dataset from CSV file]** de las opciones disponibles.
 
-Aparecerá el panel [!UICONTROL Configurar conjunto de datos]. En el campo **[!UICONTROL Nombre]**, escriba el nombre del conjunto de datos como &quot;luma_web_data&quot; y seleccione **[!UICONTROL Siguiente]**.
+Aparecerá el panel [!UICONTROL Configure Dataset]. En el campo **[!UICONTROL Name]**, escriba el nombre del conjunto de datos como &quot;luma_web_data&quot; y seleccione **[!UICONTROL Next]**.
 
-Aparecerá el panel [!UICONTROL Agregar datos]. Arrastre y suelte el archivo CSV en el cuadro **[!UICONTROL Agregar datos]** o seleccione **[!UICONTROL Elegir archivo]** para examinar y cargar el archivo.
+Aparecerá el panel [!UICONTROL Add data]. Arrastre y suelte el archivo CSV en el cuadro **[!UICONTROL Add data]**, o bien seleccione **[!UICONTROL Choose File]** para examinar y cargar el archivo.
 
 Para obtener más información sobre este proceso, consulte el [tutorial de ingesta por lotes](../../ingestion/tutorials/ingest-batch-data.md) y el [flujo de trabajo de creación de conjuntos de datos](../../catalog/datasets/user-guide.md#create) en la guía de la interfaz de usuario del conjunto de datos.
 
 #### Revisión y finalización de la carga {#review-and-complete-upload}
 
-Una vez cargado el archivo, aparecerá una vista previa de datos en la parte inferior de la interfaz de usuario. Seleccione **[!UICONTROL Finalizar]** para completar la carga.
+Una vez cargado el archivo, aparecerá una vista previa de datos en la parte inferior de la interfaz de usuario. Seleccione **[!UICONTROL Finish]** para completar la carga.
 
 ![La sección &quot;Agregar datos&quot; del flujo de trabajo &quot;Crear conjunto de datos a partir de archivo CSV&quot; con una vista previa de datos y &quot;Finalizar&quot; resaltados.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 Aparece la vista de actividades del conjunto de datos para el conjunto de datos &quot;luma_web_data&quot;. La carga manual del archivo CSV
-se ingiere como un lote y se identifica con un [!UICONTROL ID de lote]. Un panel del lado derecho muestra el nombre de la tabla como `luma_web_data`.
+se ingiere como un lote y se identifica mediante un [!UICONTROL Batch ID]. Un panel del lado derecho muestra el nombre de la tabla como `luma_web_data`.
 
 >[!TIP]
 >
@@ -88,11 +88,12 @@ se ingiere como un lote y se identifica con un [!UICONTROL ID de lote]. Un panel
 
 ![La pestaña &quot;Actividad del conjunto de datos&quot; para el conjunto de datos &quot;luma_web_data&quot; recién creado con el nombre de tabla, el ID de lote y &quot;Previsualizar conjunto de datos&quot; resaltados.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Una vez que los datos hayan terminado de procesarse, seleccione [!UICONTROL Previsualizar conjunto de datos] en la esquina superior derecha para previsualizar el conjunto de datos. Así es como aparece la vista previa del conjunto de datos:
+Una vez que los datos hayan terminado de procesarse, seleccione [!UICONTROL Preview dataset] en la esquina superior derecha para previsualizar el conjunto de datos. Así es como aparece la vista previa del conjunto de datos:
 
 ![Vista previa del conjunto de datos del conjunto de datos &quot;luma_web_data&quot;.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ Utilice Data Distiller para verificar la calidad y la integridad del conjunto de
 
 #### Realizar una consulta de exploración básica {#basic-exploration-queries}
 
-En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Consultas]** en el carril de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Crear consulta]**. Aparecerá el Editor de consultas.
+En la interfaz de usuario de Adobe Experience Platform, seleccione **[!UICONTROL Queries]** en el carril de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Create Query]**. Aparecerá el Editor de consultas.
 
 Pegue la siguiente consulta en el editor y ejecútela:
 
@@ -126,7 +127,7 @@ Pegue la siguiente consulta en el editor y ejecútela:
 SELECT * FROM luma_web_data; 
 ```
 
-Los resultados de la consulta se muestran debajo del Editor de consultas en la ficha **[!UICONTROL Resultados]**. Para expandir los resultados en un cuadro de diálogo nuevo, seleccione **[!UICONTROL Ver resultados]**. Los resultados son similares a la imagen siguiente.
+Los resultados de la consulta se muestran debajo del Editor de consultas en la ficha **[!UICONTROL Results]**. Para expandir los resultados en un nuevo cuadro de diálogo, seleccione **[!UICONTROL View results]**. Los resultados son similares a la imagen siguiente.
 
 ![Cuadro de diálogo de resultados de consulta para los resultados básicos de exploración de consultas.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -438,7 +439,7 @@ En esta instrucción SQL:
 
 >[!NOTE]
 >
->El área de nombres &quot;Correo electrónico&quot; es un [área de nombres de identidad estándar](../../identity-service/features/namespaces.md#standard) en Adobe Experience Platform. Al definir campos de identidad, asegúrese de que el área de nombres adecuada se especifica para facilitar una resolución de identidad precisa. palo de golf
+>El área de nombres &quot;Correo electrónico&quot; es un [área de nombres de identidad estándar](../../identity-service/features/namespaces.md#standard) en Adobe Experience Platform. Al definir los campos de identidad, asegúrese de que se especifica el área de nombres adecuada para facilitar una resolución precisa de la identidad.
 >
 >Para obtener más información sobre la definición de campos de identidad y el trabajo con áreas de nombres de identidad, consulte la [documentación del servicio de identidad](../../identity-service/home.md) o la guía sobre la [definición de un campo de identidad en la interfaz de usuario de Adobe Experience Platform](../../xdm/ui/fields/identity.md).
 
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 El resultado de esta consulta se parece a las creaciones de conjuntos de datos anteriores en este manual, pero con un ID diferente.
 
-Después de crear el conjunto de datos, vaya a **[!UICONTROL Conjuntos de datos]** > **[!UICONTROL Examinar]** > `adls_rfm_profile` para comprobar que el conjunto de datos está vacío.
+Después de crear el conjunto de datos, vaya a **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` para comprobar que el conjunto de datos está vacío.
 
 ![Espacio de trabajo de conjuntos de datos con los detalles del conjunto de datos &#39;adls_rfm_profile&#39; mostrados y la opción habilitada para el perfil resaltada.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-También puede navegar a **[!UICONTROL Esquemas]** > **[!UICONTROL Examinar]** > `adls_rfm_profile` para ver el diagrama de esquema de perfil individual XDM del conjunto de datos recién creado y sus grupos de campos personalizados.
+También puede navegar a **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` para ver el diagrama de esquema de perfil individual XDM del conjunto de datos recién creado y sus grupos de campos personalizados.
 
 ![Espacio de trabajo XDM con el diagrama &#39;adls_rfm_profile&#39; mostrado en el lienzo del esquema.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -503,30 +504,30 @@ Ahora que el código SQL genera un conjunto de datos derivado y lo habilita para
 
 #### Programar la ejecución de la consulta
 
-Después de guardar el SQL, vaya a la ficha **[!UICONTROL Plantillas]** para ver la consulta guardada e iniciar el proceso de programación. Existen dos formas de programar una consulta:
+Después de guardar el SQL, vaya a la pestaña **[!UICONTROL Templates]** para ver la consulta guardada e iniciar el proceso de programación. Existen dos formas de programar una consulta:
 
-Seleccione **[!UICONTROL Agregar horario]** en la barra lateral derecha.
+Seleccione **[!UICONTROL Add Schedule]** en la barra lateral derecha.
 
 ![Pestaña Edición del área de trabajo de consultas con la opción Agregar programación resaltada.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-También puede seleccionar la pestaña **[!UICONTROL Horarios]** debajo del nombre de la plantilla y seleccionar **[!UICONTROL Agregar horario]**.
+También puede seleccionar la ficha **[!UICONTROL Schedules]** debajo del nombre de la plantilla y seleccionar **[!UICONTROL Add Schedule]**.
 
 ![La ficha Programaciones de Queries Workspace está resaltada con la opción Agregar programación.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 Para obtener más información sobre consultas de programación, consulte la [documentación de programaciones de consultas](../ui/query-schedules.md).
 
-Aparece la vista [!UICONTROL Detalles de programación]. Desde aquí, introduzca los siguientes detalles para configurar la programación:
+Aparecerá la vista [!UICONTROL Schedule details]. Desde aquí, introduzca los siguientes detalles para configurar la programación:
 
-- **[!UICONTROL Frecuencia De Ejecución]**: **Semanal**
-- **[!UICONTROL Día de ejecución]**: **lunes y martes**
-- **[!UICONTROL Tiempo de ejecución de horario]**: **10:10 AM UTC**
-- **[!UICONTROL Período De Programación]**: **Del 17 De Marzo Al 30 De Abril De 2025**
+- **[!UICONTROL Execution Frequency]**: **Semanalmente**
+- **[!UICONTROL Day of Execution]**: **lunes y martes**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 AM UTC**
+- **[!UICONTROL Schedule Period]**: **17 de marzo - 30 de abril de 2025**
 
-Seleccione **[!UICONTROL Guardar]** para confirmar la programación.
+Seleccione **[!UICONTROL Save]** para confirmar la programación.
 
 ![Los detalles de la programación con la configuración configurada y el guardado resaltado.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Una vez guardada la programación, puede ir a la ficha **[!UICONTROL Consultas programadas]** en cualquier momento para supervisar los trabajos programados de Data Distiller. Para obtener más información sobre [ver el estado de ejecución de la consulta, los mensajes de error y las alertas](../ui/monitor-queries.md), consulte el documento Supervisión de consultas programadas.
+Una vez guardada la programación, puede ir a la pestaña **[!UICONTROL Scheduled Queries]** en cualquier momento para supervisar los trabajos programados de Data Distiller. Para obtener más información sobre [ver el estado de ejecución de la consulta, los mensajes de error y las alertas](../ui/monitor-queries.md), consulte el documento Supervisión de consultas programadas.
 
 Una vez configurada, la consulta SQL se ejecuta automáticamente a los intervalos definidos, lo que garantiza que los datos permanezcan actualizados sin necesidad de intervención manual.
 
@@ -543,9 +544,9 @@ Elija el método que mejor se adapte a su flujo de trabajo.
 
 #### Solución 1: audiencia SQL a través de Data Distiller {#data-distiller-sql-audience}
 
-Utilice el comando `CREATE AUDIENCE AS SELECT` para definir una audiencia nueva. La audiencia creada se guardará en un conjunto de datos y se registrará en el espacio de trabajo de **[!UICONTROL Audiencias]** en **[!UICONTROL Data Distiller]**.
+Utilice el comando `CREATE AUDIENCE AS SELECT` para definir una audiencia nueva. La audiencia creada se guardó en un conjunto de datos y se registró en el espacio de trabajo **[!UICONTROL Audiences]** en **[!UICONTROL Data Distiller]**.
 
-Las audiencias creadas con la extensión SQL se registran automáticamente con el origen [!UICONTROL Data Distiller] en el espacio de trabajo [!UICONTROL Audiencias]. Desde [Audience Portal](../../segmentation/ui/audience-portal.md), puede ver, administrar y activar sus audiencias según sea necesario.
+Las audiencias creadas con la extensión SQL se registran automáticamente con el origen [!UICONTROL Data Distiller] en el espacio de trabajo [!UICONTROL Audiences]. Desde [Audience Portal](../../segmentation/ui/audience-portal.md), puede ver, administrar y activar sus audiencias según sea necesario.
 
 ![El portal de audiencias muestra las audiencias disponibles.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Use atributos de RFM para segmentar a los usuarios según su comportamiento y características. Esta sección le guía a través de la interfaz de usuario de Adobe Experience Platform para definir una audiencia mediante puntuaciones de RFM.
 
-Para comprobar que los datos se han cargado en el perfil del cliente en tiempo real, vaya a **[!UICONTROL Clientes] > [!UICONTROL Perfiles] > [!UICONTROL Examinar]**. Seleccione **[!UICONTROL Área de nombres de identidad]** como `Email` e introduzca `user0076@example.com`. Compruebe los detalles del perfil para confirmar que contiene los atributos RFM esperados.
+Para comprobar que los datos se han cargado en el perfil del cliente en tiempo real, vaya a **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**. Seleccione **[!UICONTROL Identity Namespace]** como `Email` e introduzca `user0076@example.com`. Compruebe los detalles del perfil para confirmar que contiene los atributos RFM esperados.
 
 ![El área de trabajo Perfiles muestra los perfiles disponibles con un filtro de identidad principal de correo electrónico y valor de correo electrónico aplicado.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![La vista Atributos de perfiles muestra los atributos de un perfil específico.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-Para examinar las audiencias existentes, selecciona **[!UICONTROL Audiencias]** en el panel de navegación izquierdo y asegúrate de que la pestaña **[!UICONTROL Examinar]** esté seleccionada. Aparecerá la lista de audiencias disponibles en la zona protegida. Al seleccionar una audiencia, se muestra su descripción, las reglas de calificación y el número de perfiles incluidos.
+Para examinar las audiencias existentes, seleccione **[!UICONTROL Audiences]** en el panel de navegación izquierdo y asegúrese de que la pestaña **[!UICONTROL Browse]** esté seleccionada. Aparecerá la lista de audiencias disponibles en la zona protegida. Al seleccionar una audiencia, se muestra su descripción, las reglas de calificación y el número de perfiles incluidos.
 
-Para crear una audiencia nueva, selecciona **[!UICONTROL Crear audiencia]** en la esquina superior derecha. Aparece un cuadro de diálogo con dos opciones. Seleccione **[!UICONTROL Generar regla]** seguida de **[!UICONTROL Crear]**.
+Para crear una audiencia nueva, seleccione **[!UICONTROL Create Audience]** en la esquina superior derecha. Aparece un cuadro de diálogo con dos opciones. Seleccione **[!UICONTROL Build Rule]** seguido de **[!UICONTROL Create]**.
 
 ![Cuadro de diálogo Crear audiencia con la regla de compilación seleccionada y la opción Crear resaltada.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-La interfaz de usuario de Composición de audiencia proporciona acceso a atributos de perfil. Vaya a **[!UICONTROL Atributos] > [!UICONTROL Perfil individual de XDM]** para ver los atributos disponibles.
+La interfaz de usuario de Composición de audiencia proporciona acceso a atributos de perfil. Vaya a **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** para ver los atributos disponibles.
 
 Para obtener más información sobre cómo usar la Composición de audiencias, consulte la [guía de la interfaz de usuario de la Composición de audiencias](../../segmentation/ui/audience-composition.md). Para obtener más información sobre cómo usar el Generador de segmentos, consulte la [guía de la interfaz de usuario del Generador de segmentos](../../segmentation/ui/segment-builder.md).
 
@@ -672,6 +673,6 @@ Para crear una audiencia con atributos de RFM, arrastre y suelte el atributo `Rf
 
 ![Creación de una audiencia en la interfaz de usuario de composición de audiencias.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-Para finalizar la audiencia, selecciona **[!UICONTROL Guardar y publicar]** en la esquina superior derecha. Después de guardar, la audiencia recién creada aparece en el área de trabajo de [!UICONTROL Audiencias], donde puede revisar su resumen y los criterios de calificación.
+Para finalizar la audiencia, seleccione **[!UICONTROL Save and Publish]** en la esquina superior derecha. Después de guardar, la audiencia recién creada aparece en el área de trabajo [!UICONTROL Audiences], donde puede revisar su resumen y los criterios de calificación.
 
 Utilice el Generador de segmentos para acceder a los atributos RFM derivados y diseñar audiencias adicionales. Active la audiencia de SQL recién creada en función de las puntuaciones de RFM y envíela a cualquier destino preferido, incluido Adobe Journey Optimizer.
