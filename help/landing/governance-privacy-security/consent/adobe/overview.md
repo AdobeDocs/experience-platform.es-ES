@@ -6,7 +6,7 @@ description: Obtenga información sobre cómo procesar las señales de consentim
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 0%
@@ -117,7 +117,8 @@ Consulte la sección sobre [explorar perfiles por identidad](../../../../profile
 
 Los nuevos atributos de consentimiento no aparecerán en el panel de un perfil de forma predeterminada. Por lo tanto, debe navegar a la pestaña **[!UICONTROL Attributes]** en la página de detalles de un perfil para confirmar que se han introducido según lo esperado. Consulte la guía en el [tablero de perfiles](../../../../profile/ui/profile-dashboard.md) para obtener información sobre cómo personalizar el tablero para adaptarlo a sus necesidades.
 
-<!-- (To be included once CJM is GA)
+<!-- 
+(To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
 If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Experience Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
