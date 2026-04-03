@@ -2,9 +2,9 @@
 title: Recopilar información de comercio, productos y pedidos mediante Adobe Experience Platform Web SDK
 description: Obtenga información sobre cómo agregar datos relacionados con productos o un carro de compras mediante Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Esta sección describe los campos disponibles en el objeto `commerce`.
 
 Expanda la sección siguiente para ver un ejemplo de un comando de Web SDK con un campo del objeto `commerce`.
 
-+++`productViews`
++++ productViews
 
 Una llamada básica de Web SDK `sendEvent` que establece el campo `productViews` en `1`:
 
@@ -91,7 +91,7 @@ En esta sección se describen todos los campos admitidos por el objeto `order`.
 
 Expanda la sección siguiente para ver un ejemplo de un comando de Web SDK que utiliza el objeto `commerce`.
 
-+++Ejemplo de objeto `Order`
++++ Ejemplo de objeto `Order`
 
 Una llamada de Web SDK `sendEvent` que establece el objeto `order` que se aplica a varios productos de la matriz `productListItems`:
 
@@ -151,7 +151,7 @@ La lista de productos indica qué productos están relacionados con la acción c
 
 Expanda las secciones siguientes para ver ejemplos de comandos de Web SDK que utilizan el objeto `productListItems`.
 
-+++Ejemplo de `productListItems`
++++ Ejemplo de `productListItems`
 
 Una llamada de Web SDK `sendEvent` que configura `productViews` para varios productos en la matriz `productListItems`:
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++Ejemplo de `productListAdds`
++++ Ejemplo de `productListAdds`
 
 Una llamada de Web SDK `sendEvent` que configura el evento `productListAdds` para varios productos en la matriz `productListItems`:
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++Ejemplo de `checkouts`
++++ Ejemplo de `checkouts`
 
 Una llamada de Web SDK `sendEvent` que configura el evento `checkouts` para varios productos en la matriz `productListItems`:
 
