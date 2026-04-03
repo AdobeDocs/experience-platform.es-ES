@@ -2,10 +2,10 @@
 title: Mensajes de error de Flow Service
 description: Obtenga información acerca de los mensajes de error que pueden surgir al utilizar Flow Service para las fuentes.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 35%
+source-wordcount: '1666'
+ht-degree: 37%
 
 ---
 
@@ -23,10 +23,10 @@ La siguiente tabla describe los errores relacionados con la validación interna 
 | --- | --- | --- |
 | `1100-400` | Solicitud no válida | No se ha podido procesar la solicitud. Error del proveedor de flujo: no tiene derecho a esta operación. |
 | `1101-404` | Recurso no encontrado | No se ha encontrado el recurso solicitado. Error del proveedor de flujo: El recurso con el ID proporcionado no existe. |
-| `1102-500` | Error interno | Se ha producido un error interno. Inténtelo de nuevo. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
+| `1102-500` | Error interno | Se ha producido un error interno desconocido. Inténtelo nuevamente más tarde. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
 | `1103-503` | Servicio no disponible | El servicio no está disponible temporalmente. Inténtelo nuevamente más tarde. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
 | `1104-504` | Se ha agotado el tiempo de espera de la puerta de enlace | Se ha producido un tiempo de espera de la puerta de enlace. Inténtelo nuevamente más tarde. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
-| `1400-500` | Error interno | Se ha producido un error interno. Inténtelo de nuevo. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
+| `1400-500` | Error interno | Se ha producido un error interno desconocido. Inténtelo nuevamente más tarde. Si el problema persiste, póngase en contacto con el servicio de atención al cliente. |
 | `1401-400` | Solicitud no válida | Los parámetros limit y count no se pueden combinar en la misma solicitud. Proporcione únicamente uno e inténtelo de nuevo. |
 | `1402-400` | Solicitud no válida | La acción &quot;finalizar&quot; solo se admite para solicitudes de proveedor. |
 | `1403-400` | Falta el encabezado | Falta el encabezado &quot;If-Match&quot; en la solicitud. Proporcione el encabezado e inténtelo de nuevo. |
