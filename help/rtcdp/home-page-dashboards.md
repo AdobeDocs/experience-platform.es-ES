@@ -4,7 +4,7 @@ title: Página de inicio y paneles de Real-Time Customer Data Platform
 description: Conozca varios paneles de control, la página de inicio y la experiencia del primer usuario de Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 10%
@@ -76,7 +76,8 @@ Por último, el widget de recursos le proporciona recursos de documentación adi
 * [Conexión de destinos](../destinations/home.md)
 * [Administrar acceso](../access-control/abac/overview.md)
 
-<!-- ### Successful profile records
+<!-- 
+### Successful profile records
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
@@ -108,4 +109,5 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly. -->
+The number of failed profile records is updated hourly. 
+-->
