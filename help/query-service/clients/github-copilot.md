@@ -2,7 +2,7 @@
 title: Conectar el copiloto de GitHub y el código de Visual Studio al servicio de consultas
 description: Obtenga información sobre cómo conectar el copiloto de GitHub y el código de Visual Studio con el servicio de consultas de Adobe Experience Platform.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Antes de utilizar esta herramienta integrada, debe comprender qué datos se comparten con GitHub. Los datos compartidos incluyen información contextual sobre el código y los archivos que se están editando (&quot;indicadores&quot;) y detalles sobre las acciones del usuario (&quot;datos de participación del usuario&quot;).  Revise la declaración de privacidad de [[!DNL GitHub Copilot]](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) para obtener más información sobre los datos que recopilan. También debe tener en cuenta las implicaciones de seguridad de la participación en servicios de terceros, ya que es responsable de garantizar el cumplimiento de las políticas de gobernanza de datos de su organización. Adobe no se responsabiliza por cualquier preocupación o problema relacionado con los datos que pueda surgir del uso de esta herramienta. Consulte la documentación de GitHub para obtener más información.
 
-[!DNL GitHub Copilot], con tecnología OpenAI Codex, es una herramienta impulsada por IA que mejora su experiencia de codificación al sugerir fragmentos de código y funciones completas directamente dentro de su editor. Integrado con [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] puede acelerar significativamente el flujo de trabajo, especialmente cuando se trabaja con consultas complejas. Siga esta guía para aprender a conectar [!DNL GitHub Copilot] y [!DNL VS Code] al servicio de consultas para escribir y administrar las consultas con mayor eficacia. Para obtener más información sobre [!DNL Copilot], visite la [página de productos Copilot de GitHub](https://github.com/pricing) y la [documentación oficial [!DNL Copilot] 5&rbrace;.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+[!DNL GitHub Copilot], con tecnología OpenAI Codex, es una herramienta impulsada por IA que mejora su experiencia de codificación al sugerir fragmentos de código y funciones completas directamente dentro de su editor. Integrado con [!DNL Visual Studio Code] ([!DNL VS Code]), [!DNL Copilot] puede acelerar significativamente el flujo de trabajo, especialmente cuando se trabaja con consultas complejas. Siga esta guía para aprender a conectar [!DNL GitHub Copilot] y [!DNL VS Code] al servicio de consultas para escribir y administrar las consultas con mayor eficacia. Para obtener más información sobre [!DNL Copilot], visite la [página de productos Copilot de GitHub](https://github.com/pricing) y la [documentación oficial [!DNL Copilot] 5}.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 Este documento describe los pasos necesarios para conectar [!DNL GitHub Copilot] y [!DNL VS Code] con Adobe Experience Platform Query Service.
 
@@ -136,10 +136,11 @@ También puede chatear con [!DNL Copilot] directamente acerca de su código. Use
 
 ![La ventana de chat en línea con vista de diferencia](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Vista de chat dedicada {#dedicated-chat}
 
