@@ -2,7 +2,7 @@
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de servidor de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Eliminar una configuración de servidor de destino
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 2%
@@ -22,7 +22,7 @@ Para obtener una descripción detallada de las funciones que puede eliminar a tr
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de API del servidor de destino {#get-started}
 
@@ -50,7 +50,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Solicitud
++++ Solicitud
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -60,9 +60,13 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Respuesta
++++
+
++++ Respuesta
 
 Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP vacía.
+
++++
 
 ## Administración de errores de API {#error-handling}
 
