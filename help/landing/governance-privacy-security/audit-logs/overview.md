@@ -4,7 +4,7 @@ description: Descubra cómo los registros de auditoría le permiten ver quién r
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 29%
@@ -169,7 +169,7 @@ Todas las acciones que puede realizar en la interfaz de usuario también se pued
 
 ## Administración de registros de auditoría para Adobe Admin Console
 
-Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/es/enterprise/using/audit-logs.html).
+Para obtener información sobre cómo administrar los registros de auditoría para las actividades en Adobe Admin Console, consulte el siguiente [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Pasos siguientes y recursos adicionales
 
@@ -177,4 +177,4 @@ En esta guía se explica cómo administrar los registros de auditoría en Experi
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344645?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
