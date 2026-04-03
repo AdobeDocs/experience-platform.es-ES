@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de resolución de problemas del servicio de identidad
 description: Este documento proporciona respuestas a las preguntas frecuentes sobre el servicio de identidad de Adobe Experience Platform, así como una guía de solución de problemas para errores comunes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 0%
@@ -96,7 +96,8 @@ El servicio de identidad tiene áreas de nombres estándar para admitir la inges
 Si está enviando valores PII con hash al servicio de identidad, debe utilizar el mismo método de cifrado en todos los conjuntos de datos. Esto garantiza que el mismo valor de identidad en todos los conjuntos de datos genere los mismos valores hash y que puedan coincidir y vincularse correctamente en el gráfico de identidad.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,13 +112,14 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## ¿Por qué no puedo acceder a la página o las API del gráfico de identidad?
 
 El administrador de Experience Platform debe proporcionarle el permiso `view-identity-graph` para que pueda ver los datos del gráfico de identidades. Sin este permiso, recibirá un mensaje de permiso denegado en la página del visor de gráficos de identidades y al llamar a las API de Experience Platform. Consulte la [descripción general del control de acceso](../access-control/home.md) para obtener más información sobre los permisos.
 
-## Resolución de problemas
+## Solución de problemas
 
 En la siguiente sección se proporcionan sugerencias para la resolución de problemas de códigos de error específicos y comportamiento inesperado que puede encontrar al trabajar con la API [!DNL Identity Service].
 
