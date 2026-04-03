@@ -3,7 +3,7 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4769'
 ht-degree: 11%
@@ -496,7 +496,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave {#key-considerations}
 
@@ -507,7 +507,7 @@ Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza
 Considere los siguientes datos, donde la clave de anulación de duplicación es la columna `Email`:
 
 | Correo electrónico* | first_name | last_name | timestamp |
-|---|---|---|---|  
+|---|---|---|---|
 | `test1@test.com` | John | Morris | 12-10-2024 :50 |
 | `test1@test.com` | John | Doe | 12-10-2024 :50 |
 | `test2@test.com` | Frank | Smith | 12-10-2024 :50 |
@@ -517,7 +517,7 @@ Considere los siguientes datos, donde la clave de anulación de duplicación es 
 Después de la deduplicación, el archivo de exportación contiene:
 
 | Correo electrónico* | first_name | last_name | timestamp |
-|---|---|---|---|  
+|---|---|---|---|
 | `test1@test.com` | John | Doe | 12-10-2024 :50 |
 | `test2@test.com` | Frank | Smith | 12-10-2024 :50 |
 
