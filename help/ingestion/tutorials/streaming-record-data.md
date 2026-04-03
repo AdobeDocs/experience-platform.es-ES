@@ -5,7 +5,7 @@ title: Transmitir datos de registro mediante las API de ingesta de transmisión
 type: Tutorial
 description: Este tutorial le ayudará a empezar a utilizar las API de ingesta de transmisión, parte de las API del servicio de ingesta de datos de Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 3%
@@ -433,7 +433,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las entidades
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende cómo ingerir datos de registro en [!DNL Experience Platform] mediante conexiones de flujo continuo. Puede intentar realizar más llamadas con diferentes valores y recuperar los valores actualizados. Además, puede empezar a monitorizar los datos ingeridos a través de la interfaz de usuario de [!DNL Experience Platform]. Para obtener más información, lea la guía [supervisión de la ingesta de datos](../quality/monitor-data-ingestion.md).
 
