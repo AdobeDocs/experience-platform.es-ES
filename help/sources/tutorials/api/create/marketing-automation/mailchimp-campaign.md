@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Cree un flujo de datos para Mailchimp Campaign mediante la API de Flow Service
 description: Aprenda a conectar Adobe Experience Platform a MailChimp Campaign mediante la API de Flow Service.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 2%
@@ -467,7 +467,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## Creación de un flujo {#flow}
 
