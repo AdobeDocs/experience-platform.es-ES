@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Preguntas frecuentes sobre el servicio de consultas y Data Distiller
 description: Este documento contiene preguntas frecuentes y respuestas relacionadas con el servicio de consultas y Data Distiller. Los temas incluyen exportación de datos, herramientas de terceros y errores de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '5441'
-ht-degree: 1%
+source-wordcount: '5423'
+ht-degree: 2%
 
 ---
 
@@ -65,7 +65,7 @@ Una causa potencial es la función de autocompletar. La función procesa ciertos
 ### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
 +++Respuesta
-Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/31627?captions=spa) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?
@@ -115,12 +115,12 @@ Hay ciertas palabras clave reservadas que no se pueden usar como nombre de colum
 +++Respuesta
 Los siguientes pasos describen cómo mostrar una vista tabular de un conjunto de datos a través de la interfaz de usuario, incluidos todos los campos y columnas anidados en un formulario aplanado.
 
-- Después de iniciar sesión en Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en la navegación izquierda de la interfaz de usuario para navegar hasta el panel [!UICONTROL Conjuntos de datos].
-- Se abre la pestaña [!UICONTROL Examinar] de conjuntos de datos. Puede utilizar la barra de búsqueda para restringir las opciones disponibles. Seleccione un conjunto de datos de la lista mostrada.
+- Después de iniciar sesión en Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo de la interfaz de usuario para navegar hasta [!UICONTROL Datasets].
+- Se abre la pestaña Conjuntos de datos [!UICONTROL Browse]. Puede utilizar la barra de búsqueda para restringir las opciones disponibles. Seleccione un conjunto de datos de la lista mostrada.
 
 ![Panel de conjuntos de datos en la interfaz de usuario de Experience Platform con la barra de búsqueda y un conjunto de datos resaltados.](./images/troubleshooting/dataset-selection.png)
 
-- Aparece la pantalla [!UICONTROL Actividad de conjuntos de datos]. Seleccione **[!UICONTROL Previsualizar conjunto de datos]** para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos aplanados del conjunto de datos seleccionado. Encontrará más detalles en la [documentación de vista previa de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Aparecerá la pantalla [!UICONTROL Datasets activity]. Seleccione **[!UICONTROL Preview dataset]** para abrir un cuadro de diálogo del esquema XDM y la vista tabular de los datos aplanados del conjunto de datos seleccionado. Encontrará más detalles en la [documentación de vista previa de un conjunto de datos](../catalog/datasets/user-guide.md#preview-a-dataset)
 
 ![Pestaña de actividad Conjunto de datos del panel Conjuntos de datos con conjunto de datos de vista previa resaltado.](./images/troubleshooting/dataset-preview.png)
 
@@ -151,16 +151,16 @@ Puede haber varias razones para que una consulta se bloquee durante el procesami
 [Encontrará una lista completa de los números de teléfono de asistencia al cliente de Adobe](https://helpx.adobe.com/ca/contact/phone.html) en la página de ayuda de Adobe. También puede encontrar ayuda en línea si completa los siguientes pasos:
 
 - Vaya a [https://www.adobe.com/](https://www.adobe.com/) en su explorador web.
-- En el lado derecho de la barra de navegación superior, selecciona **[!UICONTROL Iniciar sesión]**.
+- En el lado derecho de la barra de navegación superior, seleccione **[!UICONTROL Sign In]**.
 
 ![El sitio web de Adobe con el inicio de sesión resaltado.](./images/troubleshooting/adobe-sign-in.png)
 
 - Utilice su Adobe ID y contraseña que estén registrados con su licencia de Adobe.
-- Seleccione **[!UICONTROL Ayuda y asistencia]** en la barra de navegación superior.
+- Seleccione **[!UICONTROL Help & Support]** de la barra de navegación superior.
 
 ![Menú desplegable de la barra de navegación superior con Ayuda y soporte técnico, Soporte técnico para empresas y Contáctenos resaltados.](./images/troubleshooting/help-and-support.png)
 
-Aparece un banner desplegable que contiene la sección [!UICONTROL Ayuda y soporte técnico]. Seleccione **[!UICONTROL Póngase en contacto con nosotros]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe o seleccione **[!UICONTROL Soporte empresarial]** para obtener ayuda especializada para organizaciones grandes.
+Aparece un banner desplegable que contiene una sección [!UICONTROL Help and support]. Seleccione **[!UICONTROL Contact us]** para abrir el Asistente virtual del Servicio de atención al cliente de Adobe o seleccione **[!UICONTROL Enterprise support]** para obtener ayuda específica para organizaciones grandes.
 +++
 
 ### ¿Cómo implemento una serie secuencial de trabajos, sin ejecutar trabajos subsiguientes si el trabajo anterior no se completa correctamente?
@@ -372,7 +372,7 @@ LIMIT 100;
 
 ### ¿Cómo cambio la zona horaria a y desde una marca de tiempo UTC?
 
-+++Respuesta
++++ Respuesta
 Adobe Experience Platform conserva los datos en formato UTC (hora universal coordinada). Un ejemplo del formato UTC es `2021-12-22T19:52:05Z`
 
 El servicio de consultas admite funciones SQL integradas para convertir una marca de tiempo determinada al formato UTC y desde este. Los métodos `to_utc_timestamp()` y `from_utc_timestamp()` toman dos parámetros: timestamp y timezone.
@@ -381,6 +381,8 @@ El servicio de consultas admite funciones SQL integradas para convertir una marc
 |-----------|---------------|
 | Marca de tiempo | La marca de tiempo se puede escribir en formato UTC o en formato `{year-month-day}` simple. Si no se proporciona ninguna hora, el valor predeterminado es medianoche en la mañana del día determinado. |
 | Zona horaria | La zona horaria se escribe en formato `{continent/city})`. Debe ser uno de los códigos de zona horaria reconocidos tal como se encuentran en la [base de datos TZ de dominio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
++++
 
 #### Convertir a la marca de tiempo UTC
 
@@ -420,7 +422,7 @@ La consulta devuelve una marca de tiempo en formato UTC para la zona horaria pas
 
 ### ¿Cómo debo filtrar los datos de las series temporales?
 
-+++Respuesta
++++ Respuesta
 Cuando consulte con datos de series temporales, debe utilizar el filtro de marca de tiempo siempre que sea posible para realizar un análisis más preciso.
 
 >[!NOTE]
@@ -828,7 +830,7 @@ La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 
 | Código de error | Estado de conexión | Descripción | Posible causa |
 |------------|---------------------------|-------------|----------------|
-| **08P01** | N/A | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
+| **08P01** | N/D | Tipo de mensaje no compatible | Tipo de mensaje no compatible |
 | **28P01** | Inicio: autenticación | Contraseña no válida | Token de autenticación no válido |
 | **28000** | Inicio: autenticación | Tipo de autorización no válido | Tipo de autorización no válido. Debe ser `AuthenticationCleartextPassword`. |
 | **42P12** | Inicio: autenticación | No se han encontrado tablas | No se han encontrado tablas para su uso |
@@ -847,7 +849,7 @@ La siguiente tabla proporciona códigos de error PSQL y sus posibles causas.
 ### ¿Por qué recibí un código de error 58000 al usar el método history_meta() en mi tabla?
 
 +++Respuesta
-El método `history_meta()` se usa para obtener acceso a una instantánea de un conjunto de datos. Anteriormente, si ejecutaba una consulta en un conjunto de datos vacío en Azure Data Lake Storage (ADLS), recibía un código de error 58000 que indicaba que el conjunto de datos no existe. A continuación se muestra un ejemplo del error del sistema antiguo.
+El método `history_meta()` se usa para obtener acceso a una instantánea de un conjunto de datos. Anteriormente, si se ejecutaba una consulta en un conjunto de datos vacío en Azure Data Lake Storage (ADLS), se mostraba un código de error 58000 que indicaba que el conjunto de datos no existe. A continuación se muestra un ejemplo del error del sistema antiguo.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
