@@ -2,7 +2,7 @@
 title: Funciones de ingeniero para el aprendizaje automático
 description: Aprenda a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas con su entorno de aprendizaje automático.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 12%
@@ -57,7 +57,7 @@ df_labels.head()
 Número de clases: 50000
 
 |   | eventType | userId | subscriptionOccurred | random_row_number_for_user |
-| ---  |   ---  |   ---  |   ---  |   --- | 
+| ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | directMarketing.emailClicked | 01027994177972439148069092698714414382 | 0 | 1 |
 | 1 | directMarketing.emailOpened | 01054714817856066632264746967668888198 | 0 | 1 |
 | 2 | web.formFilledOut | 01117296890525140996735553609305695042 | 1 | 15 |
@@ -87,7 +87,7 @@ Con una consulta adecuada, puede reunir los eventos del conjunto de datos en fun
 
 La siguiente consulta agrega estos eventos:
 
-+++Seleccionar para ver consulta de ejemplo
++++Seleccione esta opción para ver la consulta de ejemplo
 
 ```python
 query_features = f"""
@@ -147,7 +147,7 @@ df_features.head()
 **Salida de ejemplo**
 
 |   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissing | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
-| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
+| --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
 | 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN |
@@ -160,7 +160,7 @@ df_features.head()
 
 Por último, la consulta de etiquetas y la consulta de características se pueden combinar en una sola consulta que devuelve un conjunto de datos de formación de etiquetas y características:
 
-+++Seleccionar para ver consulta de ejemplo
++++Seleccione esta opción para ver la consulta de ejemplo
 
 ```python
 query_training_set = f"""
@@ -230,10 +230,10 @@ df_training_set.head()
 **Salida de ejemplo**
 
 |  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissing | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
-| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
+| ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17-06-2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 06/06/2023:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Ninguna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/18/06/2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1,0 | NaN | NaN | Ninguna | NaN | 7 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/18/06/2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | Ninguna | NaN | 7 |
 | 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21-06-2023 19:17:12,535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
 | 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21-06-2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
 
@@ -252,7 +252,7 @@ Para ello, es necesario realizar algunas modificaciones en la consulta del conju
 
 La aplicación de estos cambios resulta en la siguiente consulta:
 
-+++Seleccionar para ver consulta de ejemplo
++++Seleccione esta opción para ver la consulta de ejemplo
 
 ```python
 ctas_table_name = "propensity_training_set"
