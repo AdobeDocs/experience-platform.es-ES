@@ -5,14 +5,14 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '520'
 ht-degree: 3%
 
 ---
 
-# Modelo de datos V2 de [!UICONTROL Healthcare]
+# [!UICONTROL Healthcare] modelo de datos V2
 
 ## Grupos de campos y clases {#field-groups}
 
@@ -34,27 +34,27 @@ En la tabla siguiente se describen los tipos de datos creados según las especif
 
 | Nombre | Descripción |
 | --- | --- |
-| [[!UICONTROL Dirección]](./data-types/address.md) | Describe una dirección expresada mediante convenciones postales (a diferencia de GPS u otros formatos de definición de ubicación). |
-| [[!UICONTROL Anotación]](./data-types/annotation.md) | Un nodo de texto con atribución al autor. |
-| [[!UICONTROL Disponibilidad]](./data-types/availability.md) | Datos de disponibilidad de un artículo. |
-| [[!UICONTROL Concepto codificable]](./data-types/codeable-concept.md) | Una referencia de un recurso a otro. |
-| [[!UICONTROL Referencia codificable]](./data-types/codeable-reference.md) | Una referencia a un recurso o a un concepto. |
-| [[!UICONTROL Codificación]](./data-types/coding.md) | Una referencia a un código definido por un sistema terminológico. |
-| [[!UICONTROL Punto de contacto]](./data-types/contact-point.md) | Datos de contacto de una persona. |
-| [[!UICONTROL Dosis]](./data-types/dosage.md) | Cómo se toma o se debe tomar el medicamento. |
-| [[!UICONTROL Duración]](./data-types/duration.md) | Un largo periodo de tiempo. |
-| [[!UICONTROL Detalles de contacto extendidos]](./data-types/extended-contact-detail.md) | Información de un contacto extendido. |
-| [[!UICONTROL Nombre humano]](./data-types/human-name.md) | Información sobre el nombre de un ser humano u otra entidad viviente. |
-| [[!UICONTROL Identificador]](./data-types/identifier.md) | Un identificador pensado para el cálculo. |
-| [[!UICONTROL Dinero]](./data-types/money.md) | Una cantidad de utilidad económica en alguna moneda reconocida. |
-| [[!UICONTROL Período]](./data-types/period.md) | Un período de tiempo definido por una fecha/hora de inicio y de finalización. |
-| [[!UICONTROL Persona]](./data-types/person.md) | Información sobre un registro de persona genérico. |
-| [[!UICONTROL Cantidad]](./data-types/quantity.md) | Una cantidad medida o medible. |
-| [[!UICONTROL Intervalo]](./data-types/range.md) | Conjunto de valores enlazados por valores bajos y altos. |
-| [[!UICONTROL Proporción]](./data-types/ratio.md) | Una proporción de dos valores [[!UICONTROL Quantity]](./data-types/quantity.md) mediante un numerador y un denominador. |
-| [[!UICONTROL Referencia]](./data-types/reference.md) | Una referencia de un recurso a otro. |
-| [[!UICONTROL Repetir]](./data-types/repeat.md) | Un conjunto de reglas que describen cuándo se programa un evento. |
-| [[!UICONTROL Cantidad simple]](./data-types/simple-quantity.md) | Una cantidad medida o medible. |
-| [[!UICONTROL Tiempo]](./data-types/timing.md) | Información sobre un evento que puede producirse varias veces. |
-| [[!UICONTROL Detalle del servicio virtual]](./data-types/virtual-service-detail.md) | Detalles de contacto del servicio virtual. |
+| [[!UICONTROL Address]](./data-types/address.md) | Describe una dirección expresada mediante convenciones postales (a diferencia de GPS u otros formatos de definición de ubicación). |
+| [[!UICONTROL Annotation]](./data-types/annotation.md) | Un nodo de texto con atribución al autor. |
+| [[!UICONTROL Availability]](./data-types/availability.md) | Datos de disponibilidad de un artículo. |
+| [[!UICONTROL Codeable Concept]](./data-types/codeable-concept.md) | Una referencia de un recurso a otro. |
+| [[!UICONTROL Codeable Reference]](./data-types/codeable-reference.md) | Una referencia a un recurso o a un concepto. |
+| [[!UICONTROL Coding]](./data-types/coding.md) | Una referencia a un código definido por un sistema terminológico. |
+| [[!UICONTROL Contact Point]](./data-types/contact-point.md) | Datos de contacto de una persona. |
+| [[!UICONTROL Dosage]](./data-types/dosage.md) | Cómo se toma o se debe tomar el medicamento. |
+| [[!UICONTROL Duration]](./data-types/duration.md) | Un largo periodo de tiempo. |
+| [[!UICONTROL Extended Contact Details]](./data-types/extended-contact-detail.md) | Información de un contacto extendido. |
+| [[!UICONTROL Human Name]](./data-types/human-name.md) | Información sobre el nombre de un ser humano u otra entidad viviente. |
+| [[!UICONTROL Identifier]](./data-types/identifier.md) | Un identificador pensado para el cálculo. |
+| [[!UICONTROL Money]](./data-types/money.md) | Una cantidad de utilidad económica en alguna moneda reconocida. |
+| [[!UICONTROL Period]](./data-types/period.md) | Un período de tiempo definido por una fecha/hora de inicio y de finalización. |
+| [[!UICONTROL Person]](./data-types/person.md) | Información sobre un registro de persona genérico. |
+| [[!UICONTROL Quantity]](./data-types/quantity.md) | Una cantidad medida o medible. |
+| [[!UICONTROL Range]](./data-types/range.md) | Conjunto de valores enlazados por valores bajos y altos. |
+| [[!UICONTROL Ratio]](./data-types/ratio.md) | Una proporción de dos valores [[!UICONTROL Quantity]](./data-types/quantity.md) mediante un numerador y un denominador. |
+| [[!UICONTROL Reference]](./data-types/reference.md) | Una referencia de un recurso a otro. |
+| [[!UICONTROL Repeat]](./data-types/repeat.md) | Un conjunto de reglas que describen cuándo se programa un evento. |
+| [[!UICONTROL Simple Quantity]](./data-types/simple-quantity.md) | Una cantidad medida o medible. |
+| [[!UICONTROL Timing]](./data-types/timing.md) | Información sobre un evento que puede producirse varias veces. |
+| [[!UICONTROL Virtual Service Detail]](./data-types/virtual-service-detail.md) | Detalles de contacto del servicio virtual. |
 
