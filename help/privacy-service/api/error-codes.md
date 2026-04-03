@@ -3,7 +3,8 @@ title: Códigos de error de Privacy Service en Adobe Experience Platform
 description: Comprenda los códigos de error de Privacy Service para poder diagnosticar errores, gestionar los resultados de los trabajos mediante programación y determinar los pasos siguientes al enviar o supervisar trabajos de privacidad.
 keywords: privacy service, códigos de error, trabajos de privacidad, errores de api
 solution: Experience Platform
-source-git-commit: a312dabf5b8c3b52af31e2e127cd4bbeb8dd0021
+exl-id: 49b79093-4d4c-4b92-bd38-86879452dbfb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 4%
@@ -55,7 +56,7 @@ Los dominios utilizados en este documento incluyen:
 La siguiente tabla enumera todos los códigos de error públicos de Privacy Service.
 
 | Código de error | Estado HTTP | Título | Descripción |
-| ---------- | ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| ---------- | ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1000-400 | 400 | Error de formato | Uno o varios valores de datos de la aplicación especificada tienen problemas de formato. Consulte los detalles del trabajo para obtener más información. |
 | 1001-400 | 400 | No autorizado | Su organización no está aprovisionada. Póngase en contacto con el administrador para obtener más información. |
 | 1010-400 | 400 | Permisos faltantes | No tiene los permisos necesarios para realizar esta acción. Póngase en contacto con el administrador para solicitar el acceso. |
