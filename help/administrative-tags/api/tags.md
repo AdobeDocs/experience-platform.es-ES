@@ -3,7 +3,7 @@ title: Extremo de etiquetas unificadas
 description: Obtenga información sobre cómo crear, actualizar, administrar y eliminar etiquetas y categorías de etiquetas mediante las API de Adobe Experience Platform.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
@@ -34,7 +34,7 @@ El siguiente glosario resalta la diferencia entre una **etiqueta** y una **categ
 
 ## Recuperación de una lista de categorías de etiquetas {#get-tag-categories}
 
-Puede recuperar una lista de categorías de etiquetas que pertenezcan a su organización realizando una solicitud de GET al extremo `/tagCategory`.
+Puede recuperar una lista de categorías de etiquetas que pertenezcan a su organización realizando una petición GET al extremo `/tagCategory`.
 
 **Formato de API**
 
@@ -45,7 +45,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 Se pueden utilizar los siguientes parámetros de consulta opcionales al recuperar las categorías de etiquetas.
 
-| Parámetro de consulta | Descripción | Ejemplo |
+| Parámetros de consulta | Descripción | Ejemplo |
 | --------------- | ----------- | ------- |
 | `start` | Ubicación desde la que comienza la lista de resultados. Puede utilizarlo para indicar el índice inicial para la paginación de los resultados. | `start=a` |
 | `limit` | Número máximo de categorías de etiquetas que desea recuperar por página. | `limit=20` |
@@ -104,7 +104,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las ca
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede crear una nueva categoría de etiqueta realizando una solicitud de POST al extremo `/tagCategory`.
+Puede crear una nueva categoría de etiqueta realizando una petición POST al extremo `/tagCategory`.
 
 **Formato de API**
 
@@ -114,7 +114,7 @@ POST /tagCategory
 
 **Solicitud**
 
-+++Solicitud de ejemplo para crear una nueva categoría de etiqueta.
++++Una solicitud de ejemplo para crear una nueva categoría de etiqueta.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
@@ -159,7 +159,7 @@ Una respuesta de ejemplo devuelve el estado HTTP 200 con detalles de la categor�
 
 ## Recuperar una categoría de etiqueta específica {#get-tag-category}
 
-Puede recuperar una categoría de etiqueta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
+Puede recuperar una categoría de etiqueta específica que pertenezca a su organización realizando una petición GET al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
 
 **Formato de API**
 
@@ -173,7 +173,7 @@ GET /tagCategory/{TAG_CATEGORY_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para recuperar una categoría de etiqueta específica.
++++Una solicitud de ejemplo para recuperar una categoría de etiqueta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -189,7 +189,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la categoría de etiqueta especificada.
 
-+++Respuesta de ejemplo que contiene detalles de la categoría de etiqueta especificada.
++++Una respuesta de ejemplo que contiene detalles de la categoría de etiqueta especificada.
 
 ```json
 {
@@ -224,7 +224,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la categoría
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede actualizar los detalles de una categoría de etiquetas específica que pertenezca a su organización realizando una solicitud de PATCH al extremo `/tagCategory` y especificando el ID de la categoría de etiquetas.
+Puede actualizar los detalles de una categoría de etiquetas específica que pertenezca a su organización realizando una petición PATCH al extremo `/tagCategory` y especificando el ID de la categoría de etiquetas.
 
 **Formato de API**
 
@@ -238,7 +238,7 @@ PATCH /tagCategory/{TAG_CATEGORY_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para actualizar una categoría de etiqueta específica.
++++Una solicitud de ejemplo para actualizar una categoría de etiqueta específica
 
 ```shell
 curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -291,7 +291,7 @@ Un estado HTTP de respuesta 200 correcto con información sobre la categoría de
 >
 >Solo el administrador del sistema y el administrador del producto pueden utilizar esta llamada de API.
 
-Puede eliminar una categoría de etiqueta específica que pertenezca a su organización realizando una solicitud de DELETE al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
+Puede eliminar una categoría de etiqueta específica que pertenezca a su organización realizando una petición DELETE al extremo `/tagCategory` y especificando el ID de la categoría de etiqueta.
 
 **Formato de API**
 
@@ -305,7 +305,7 @@ DELETE /tagCategory/{TAG_CATEGORY_ID}
 
 **Solicitud**
 
-+++Solicitud de ejemplo para eliminar una categoría de etiqueta específica.
++++Una solicitud de ejemplo para eliminar una categoría de etiqueta específica
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -323,7 +323,7 @@ Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta vací
 
 ## Recuperación de una lista de etiquetas {#get-tags}
 
-Puede recuperar una lista de etiquetas que pertenezcan a su organización realizando una solicitud de GET al extremo `/tags` y al ID de la categoría de etiqueta.
+Puede recuperar una lista de etiquetas que pertenezcan a su organización realizando una petición GET al extremo `/tags` y al ID de la categoría de etiquetas.
 
 **Formato de API**
 
@@ -334,7 +334,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 Los siguientes parámetros de consulta opcionales se pueden utilizar al recuperar etiquetas.
 
-| Parámetro de consulta | Descripción | Ejemplo |
+| Parámetros de consulta | Descripción | Ejemplo |
 | --------------- | ----------- | ------- |
 | `start` | Ubicación desde la que comienza la lista de resultados. Puede utilizarlo para indicar el índice inicial para la paginación de los resultados. | `start=a` |
 | `limit` | Número máximo de etiquetas que desea recuperar por página. | `limit=20` |
@@ -345,7 +345,7 @@ Los siguientes parámetros de consulta opcionales se pueden utilizar al recupera
 
 **Solicitud**
 
-+++Solicitud de ejemplo para recuperar todas las etiquetas que pertenecen a una categoría de etiqueta específica.
++++Una solicitud de ejemplo para recuperar todas las etiquetas que pertenecen a una categoría de etiqueta específica.
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=e2b7c656-067b-4413-a366-adde0401df50
@@ -508,7 +508,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de las etiquetas
 >
 >Si está creando una etiqueta sin clasificar, **no** necesita permisos de administrador.
 
-Puede crear una etiqueta nueva realizando una solicitud de POST al extremo `/tags`.
+Puede crear una etiqueta nueva realizando una petición POST al extremo `/tags`.
 
 **Formato de API**
 
@@ -518,7 +518,7 @@ POST /tags
 
 **Solicitud**
 
-+++Solicitud de ejemplo para crear una etiqueta nueva.
++++Una solicitud de ejemplo para crear una etiqueta nueva.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags
@@ -575,7 +575,7 @@ Una respuesta correcta devuelve el estado HTTP 201 con detalles de la etiqueta r
 
 ## Recuperación de una etiqueta específica {#get-tag}
 
-Puede recuperar una etiqueta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/tags` y especificando el ID de la etiqueta que desea recuperar.
+Puede recuperar una etiqueta específica que pertenezca a su organización realizando una petición GET al extremo `/tags` y especificando el ID de la etiqueta que desea recuperar.
 
 **Formato de API**
 
@@ -589,7 +589,7 @@ GET /tags/{TAG_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para recuperar una etiqueta específica.
++++Una solicitud de ejemplo para recuperar una etiqueta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la etiqueta especificada.
 
-+++Respuesta de ejemplo que contiene detalles de la etiqueta especificada.
++++Una respuesta de ejemplo que contiene detalles de la etiqueta especificada. 
 
 ```json
 {
@@ -639,7 +639,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la etiqueta e
 
 ## Validar etiquetas {#validate-tags}
 
-Puede validar si existen POST realizando una solicitud al extremo `/tags/validate`.
+Puede validar si existen etiquetas realizando una petición POST al extremo `/tags/validate`.
 
 **Formato de API**
 
@@ -649,7 +649,7 @@ POST /tags/validate
 
 **Solicitud**
 
-+++Solicitud de ejemplo para validar los ID de etiqueta proporcionados.
++++Una solicitud de ejemplo para validar los ID de etiqueta proporcionados.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
@@ -676,7 +676,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 Una respuesta correcta devuelve el estado HTTP 200 con información sobre las etiquetas válidas y las no válidas.
 
-+++Respuesta de ejemplo que muestra qué etiquetas son válidas y no válidas.
++++Una respuesta de ejemplo que muestra qué etiquetas son válidas y no válidas.
 
 ```json
 {
@@ -705,7 +705,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre las et
 
 ## Actualizar una etiqueta específica {#update-tag}
 
-Puede actualizar una etiqueta especificada realizando una solicitud de PATCH al extremo `/tags` y proporcionando el ID de la etiqueta que desea actualizar.
+Puede actualizar una etiqueta especificada realizando una petición PATCH al extremo `/tags` y proporcionando el ID de la etiqueta que desea actualizar.
 
 **Formato de API**
 
@@ -719,7 +719,7 @@ PATCH /tags/{TAG_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para actualizar una etiqueta específica.
++++Una solicitud de ejemplo para actualizar una etiqueta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
@@ -775,7 +775,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la etiqueta r
 >
 >Además, la etiqueta **no se puede** asociar con ningún objeto comercial y **debe** archivarse antes de poder eliminar la etiqueta. Puede archivar la etiqueta usando el [extremo de la etiqueta de actualización](#update-tag).
 
-Para eliminar una etiqueta específica, cree una etiqueta de DELETE al extremo `/tags` y especifique el identificador de la etiqueta que desea eliminar.
+Puede eliminar una etiqueta específica agregando una etiqueta DELETE al extremo `/tags` y especificando el identificador de la etiqueta que desea eliminar.
 
 **Formato de API**
 
@@ -789,7 +789,7 @@ DELETE /tags/{TAG_ID}
 
 **Solicitud**
 
-+++Solicitud de ejemplo para eliminar una etiqueta específica
++++Una solicitud de ejemplo para eliminar una etiqueta específica
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
@@ -805,6 +805,6 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
 
 Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta vacía.
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, tiene una mejor comprensión de cómo crear, administrar y eliminar etiquetas y categorías de etiquetas mediante las API de Adobe Experience Platform. Para obtener más información sobre la administración de etiquetas mediante la interfaz de usuario, lea la [guía de administración de etiquetas](../ui/managing-tags.md). Para obtener más información sobre la administración de categorías de etiquetas mediante la interfaz de usuario, lea la [guía de categorías de etiquetas](../ui/tags-categories.md).
