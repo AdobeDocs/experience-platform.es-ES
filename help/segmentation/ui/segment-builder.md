@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 10%
@@ -144,7 +144,7 @@ Puede utilizar los siguientes operadores para los tipos de datos respectivos:
 | Este mes | El valor se produjo en este mes natural. | El mes de nacimiento **es** este mes |
 | Este año | El valor se produjo este año natural. | La fecha de registro **es** este año |
 | Fecha personalizada | El valor se produjo en la fecha determinada. | La fecha de compra **es el** Fecha personalizada |
-| En los últimos | El valor se produjo en el último período de tiempo seleccionado. Cumpleaños **is** en el último mes |
+| En los últimos | El valor se produjo en el último período de tiempo seleccionado. Cumpleaños **is** en el último mes | |
 | Desde (hasta) | El valor se produjo dentro de las dos fechas de calendario seleccionadas. Este período de tiempo es **inclusive** de ambas fechas. | La fecha de creación de la cuenta **es** del 20 de abril al 13 de julio |
 | Durante | El valor ocurrió dentro del mes o año seleccionado. | Venta **es** durante marzo |
 | Dentro (+/-) | El valor se produjo en los días, semanas, meses o años posteriores a la fecha seleccionada. Este período de tiempo es **inclusive** de ambas fechas. | El abandono del carro de compras está **en** 3 días |
@@ -349,7 +349,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
