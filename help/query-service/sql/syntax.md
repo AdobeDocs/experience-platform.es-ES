@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 1%
@@ -224,7 +224,7 @@ AS (select_query)
 | `rowvalidation` | (Opcional) Habilita la validación de nivel de fila para cada lote ingerido en el conjunto de datos. El valor predeterminado es True. |
 | `label` | (Opcional) Use el valor `PROFILE` para etiquetar el conjunto de datos como habilitado para la ingesta de perfiles. |
 | `transform` | (Opcional) Aplica transformaciones de ingeniería de funciones (como la indexación de cadenas, la codificación de un solo toque o TF-IDF) antes de materializar el conjunto de datos. Esta cláusula se utiliza para previsualizar funciones transformadas. Consulte la documentación de la cláusula [`TRANSFORM`](#transform) para obtener más información. |
-| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas &#x200B;](#select-queries) para obtener más información. |
+| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas ](#select-queries) para obtener más información. |
 
 >[!NOTE]
 >
@@ -892,7 +892,7 @@ El comando `FILTER CONTEXT` calcula las estadísticas de un subconjunto del conj
 La salida de la consola aparece como se ve a continuación.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)
