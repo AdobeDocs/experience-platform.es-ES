@@ -3,7 +3,7 @@ title: Extremo de carpetas
 description: Obtenga información sobre cómo crear, actualizar, administrar y eliminar carpetas mediante las API de Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -26,7 +26,7 @@ Antes de continuar, revisa la [guía de introducción](./getting-started.md) par
 
 ## Recuperación de una lista de carpetas {#list}
 
-Puede recuperar una lista de carpetas que pertenecen a su organización realizando una solicitud de GET al extremo `/folder` y especificando el tipo de carpeta y el ID de carpeta principal.
+Puede recuperar una lista de carpetas que pertenecen a su organización realizando una petición GET al extremo `/folder` y especificando el tipo de carpeta y el ID de carpeta principal.
 
 **Formato de API**
 
@@ -113,7 +113,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de todas las ca
 
 ## Creación de una nueva carpeta {#create}
 
-Puede crear una carpeta nueva realizando una solicitud de POST al extremo `/folder` y especificando el tipo de carpeta.
+Puede crear una carpeta nueva realizando una petición POST al extremo `/folder` y especificando el tipo de carpeta.
 
 **Formato de API**
 
@@ -127,7 +127,7 @@ POST /folders/{FOLDER_TYPE}
 
 **Solicitud**
 
-+++Solicitud de ejemplo para crear una carpeta nueva.
++++Una solicitud de ejemplo para crear una carpeta nueva.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
@@ -185,7 +185,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la carpeta re
 
 ## Recuperar una carpeta específica {#get}
 
-Puede recuperar una carpeta específica que pertenezca a su organización realizando una solicitud de GET al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
+Puede recuperar una carpeta específica que pertenezca a su organización realizando una petición GET al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
 
 **Formato de API**
 
@@ -200,7 +200,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Solicitud**
 
-+++Una solicitud de ejemplo para recuperar una carpeta específica.
++++Una solicitud de ejemplo para recuperar una carpeta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -217,7 +217,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Una respuesta correcta devuelve el estado HTTP 200 con detalles de la carpeta solicitada.
 
-+++Respuesta de ejemplo que contiene detalles de la carpeta solicitada.
++++Una respuesta de ejemplo que contiene detalles de la carpeta solicitada.
 
 ```json
 {
@@ -256,7 +256,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la carpeta so
 
 ## Validar una carpeta especificada {#validate}
 
-Puede validar si una carpeta cumple los requisitos para tener objetos en ella realizando una solicitud de GET al extremo `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` y proporcionando el tipo de carpeta y el identificador.
+Puede validar si una carpeta cumple los requisitos para tener objetos en ella realizando una petición GET al extremo `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` y proporcionando el tipo de carpeta y el identificador.
 
 **Formato de API**
 
@@ -271,7 +271,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **Solicitud**
 
-+++Solicitud de ejemplo para validar una carpeta específica
++++Una solicitud de ejemplo para validar una carpeta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -316,7 +316,7 @@ Un estado correcto devuelve el estado HTTP 200 con detalles de la carpeta que es
 
 ## Actualizar una carpeta específica {#update}
 
-Puede actualizar los detalles de una carpeta específica que pertenezca a su organización realizando una solicitud de PATCH al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
+Puede actualizar los detalles de una carpeta específica que pertenezca a su organización realizando una petición PATCH al extremo `/folder` y especificando el tipo de carpeta y el ID de la carpeta.
 
 **Formato de API**
 
@@ -331,7 +331,7 @@ PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Solicitud**
 
-+++Solicitud de ejemplo para actualizar una carpeta específica.
++++Una solicitud de ejemplo para actualizar una carpeta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -378,7 +378,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con información sobre la car
 
 ## Eliminar una carpeta específica {#delete}
 
-Puede eliminar una carpeta específica que pertenezca a su organización realizando una solicitud de DELETE a `/folder` y especificando el tipo de carpeta y el identificador de la carpeta.
+Puede eliminar una carpeta específica que pertenezca a su organización realizando una petición DELETE a `/folder` y especificando el tipo de carpeta y el identificador de la carpeta.
 
 ***Formato de API**
 
@@ -416,6 +416,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con un cuerpo de mensaje que 
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Después de leer esta guía, ahora comprende mejor cómo crear, administrar y eliminar carpetas mediante la API de Adobe Experience Platform.
