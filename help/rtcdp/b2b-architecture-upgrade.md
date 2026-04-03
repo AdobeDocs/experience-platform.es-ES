@@ -1,9 +1,9 @@
 ---
 title: Actualizaciones de arquitectura en Real-Time CDP B2B edition
 description: Lea este documento para obtener más información sobre las completas actualizaciones de la arquitectura en Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -138,7 +138,8 @@ En la nueva arquitectura, el punto final &quot;crear un trabajo de segmentación
 
 Ahora puede recuperar esquemas de cuenta y oportunidad como entidades de dimensión de consulta solo después de haber completado el proceso diario de resolución de entidades. Los registros recién introducidos no estarán disponibles para las definiciones de segmento o enriquecimiento de perfil hasta que se complete el siguiente ciclo de resolución de entidad (normalmente cada 24 horas).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -151,7 +152,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Cambios en las importaciones de audiencias de varias entidades en las herramientas de zonas protegidas
 
