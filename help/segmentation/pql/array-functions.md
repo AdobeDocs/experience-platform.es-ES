@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funciones de matriz, lista y conjunto de PQL
 description: Profile Query Language (PQL) ofrece funciones para facilitar la interacción con matrices, listas y cadenas.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 [!DNL Profile Query Language] (PQL) ofrece funciones para facilitar la interacción con matrices, listas y cadenas. Encontrará más información sobre otras funciones de PQL en la [[!DNL Profile Query Language] descripción general](./overview.md).
 
-## En
+## Entrada
 
 La función `in` se usa para determinar si un elemento es miembro de una matriz o lista como booleano.
 
@@ -38,7 +38,7 @@ La función `notIn` se usa para determinar si un elemento no es miembro de una m
 
 >[!NOTE]
 >
->La función *also* de `notIn` garantiza que ninguno de los valores es igual a nulo. Por lo tanto, los resultados no son una negación exacta de la función `in`.
+>La función `notIn`also *de* garantiza que ninguno de los valores es igual a nulo. Por lo tanto, los resultados no son una negación exacta de la función `in`.
 
 **Formato**
 
@@ -54,7 +54,7 @@ La siguiente consulta de PQL define a las personas con cumpleaños que no se cel
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Interseca
+## Intersecciones
 
 La función `intersects` se usa para determinar si dos matrices o listas tienen al menos un miembro común como booleano.
 
@@ -261,7 +261,7 @@ La función `bottomN` se usa para devolver los últimos `N` elementos de una mat
 ```
 
 | Argumento | Descripción |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | La matriz o lista que se va a ordenar. |
 | `{VALUE}` | Propiedad en la que se ordena la matriz o lista. |
 | `{AMOUNT}` | Número de elementos que se van a devolver. |
@@ -292,6 +292,6 @@ La siguiente consulta de PQL devuelve el primero de los cinco pedidos con el pre
 orders.topN(price, 5).head()
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que ha aprendido acerca de las funciones de matriz, lista y conjunto, puede utilizarlas en sus consultas de PQL. Para obtener más información acerca de otras funciones de PQL, lea la [descripción general de Profile Query Language](./overview.md).
