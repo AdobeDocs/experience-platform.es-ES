@@ -4,7 +4,7 @@ title: Activar audiencias en destinos basados en archivos mediante la API de Flo
 description: Aprenda a utilizar la API de Flow Service para exportar archivos con perfiles cualificados a destinos de almacenamiento en la nube.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4933'
 ht-degree: 4%
@@ -57,7 +57,7 @@ Las secciones siguientes proporcionan información adicional que debe conocer pa
 
 ### Permisos necesarios {#permissions}
 
-Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+Para exportar perfiles, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
 Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
@@ -4066,7 +4066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Respuesta**
 
-+++Crear esquema de salida: respuesta
++++ Crear esquema de salida: respuesta
 
 ```json
 {
@@ -4372,6 +4372,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 El ID de la respuesta representa el identificador único del esquema de entrada que ha creado. Copie el ID de la respuesta, ya que lo reutilizará en un paso posterior.
 
++++
+
 >[!ENDSHADEBOX]
 
 ### Crear conjunto de asignaciones {#create-mapping-set}
@@ -4382,7 +4384,7 @@ A continuación, utilice la [API de preparación de datos](https://developer.ado
 
 **Solicitud**
 
-+++Crear conjunto de asignaciones: Solicitud
++++ Crear conjunto de asignaciones: Solicitud
 
 >[!IMPORTANT]
 >
@@ -4775,7 +4777,7 @@ Para agregar la generación de manifiesto de archivo a un destino existente, deb
 
 **Solicitud**
 
-+++Agregar manifiesto de archivo a conexión de destino existente: solicitud
++++ Agregar manifiesto de archivo a conexión de destino existente: solicitud
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4795,6 +4797,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## Validar flujo de datos (obtener las ejecuciones del flujo de datos) {#get-dataflow-runs}
@@ -4807,7 +4811,7 @@ Para comprobar las ejecuciones de un flujo de datos, utilice la API de ejecució
 
 **Solicitud**
 
-+++Obtener ejecuciones de flujo de datos: Solicitar
++++ Obtener ejecuciones de flujo de datos: Solicitar
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4823,7 +4827,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Respuesta**
 
-+++Obtener ejecuciones de flujo de datos: respuesta
++++ Obtener ejecuciones de flujo de datos: respuesta
 
 ```json
 {
