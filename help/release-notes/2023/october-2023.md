@@ -2,10 +2,10 @@
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2023'
 description: Las notas de la versión de octubre de 2023 de Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 37%
+source-wordcount: '1051'
+ht-degree: 40%
 
 ---
 
@@ -15,26 +15,26 @@ ht-degree: 37%
 
 Actualizaciones de funciones existentes en Experience Platform:
 
-- [Paneles](#dashboards)
+- [Paneles de control](#dashboards)
 - [Recopilación de datos](#data-collection)
 - [Destinos](#destinations)
 - [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation)
 - [Fuentes](#sources)
 
-## Paneles {#dashboards}
+## Paneles de control {#dashboards}
 
-Adobe Experience Platform proporciona varios paneles a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
+Adobe Experience Platform proporciona varios paneles de control a través de los cuales puede ver información importante acerca de los datos de su organización, tal y como se captura durante las instantáneas diarias.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. Las métricas **[!UICONTROL Tamaño de Audience Activation]** y **[!UICONTROL Tamaño de exportación de datos]** proporcionan una forma cómoda de rastrear la cantidad de datos que ha exportado fuera de Experience Platform en relación con sus derechos de uso de licencias. Consulte la documentación de [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) para obtener descripciones de estas y otras métricas de uso de licencias. |
+| Métricas de uso de destinos | Se han añadido nuevas métricas de medición al panel de uso de licencias. Las métricas **[!UICONTROL Audience Activation Size]** y **[!UICONTROL Data Export Size]** proporcionan una forma cómoda de realizar un seguimiento de la cantidad de datos que ha exportado fuera de Experience Platform en relación con los derechos de uso de licencias. Consulte la documentación de [métricas disponibles](../../dashboards/guides/license-usage.md#available-metrics) para obtener descripciones de estas y otras métricas de uso de licencias. |
 
 {style="table-layout:auto"}
 
-Para obtener más información sobre los paneles, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles](../../dashboards/home.md).
+Para obtener más información sobre los paneles de control, incluido cómo conceder permisos de acceso y crear widgets personalizados, comience por leer la [información general sobre paneles de control](../../dashboards/home.md).
 
 ## Recopilación de datos {#data-collection}
 
@@ -44,11 +44,11 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 | Tipo | Función | Descripción |
 | --- | --- | --- |
-| Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [Meta Conversions API](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
+| Extensiones | Mejora de la API de conversiones [!DNL Meta] | Hay tres mejoras en la extensión [API de conversiones de Meta](/help/tags/extensions/server/meta/overview.md): <ul><li>Integración con [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crea una experiencia de inicio de sesión perfecta, ya que le permite compartir su pixelID y el token de acceso para la integración de la API de conversiones con Adobe.</li><li>Integración con [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): permite enviar publicidad a las personas que tienen más probabilidades de completar una acción deseada y vincular la acción de nuevo a los anuncios enviados.</li><li>Integración con [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permite pasar el RampID de LiveRamp en el campo Transferencia fácil, lo que elimina la necesidad de compartir PII directamente con socios o Meta. </li></ul> |
 | Extensiones | API de conversiones [!DNL LinkedIn] | La extensión de la API [[!DNL LinkedIn] Conversiones](../../tags/extensions/server/linkedin/overview.md) le permite evaluar la efectividad de sus campañas de marketing de LinkedIn reenviando datos de evento de Experience Platform a LinkedIn. |
 | Secreto | Secreto de OAuth 2 de [!DNL LinkedIn] | El [[!DNL LinkedIn] Secreto de OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) le permite enviar interacciones servidor-servidor a [!DNL LinkedIn] en el reenvío de eventos. |
-| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=es) en Experience Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
-| Extensiones | Elementos, reglas y extensiones | [Los elementos, las reglas y las extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=es) ahora se ordenan en el resultado de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
+| Reenvío de eventos | Actualización de Etiquetas y Reenvío de eventos | Para conservar el rendimiento de [Etiquetas](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y [Reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) en Experience Platform, solo se conservarán las compilaciones de desarrollo y fase más recientes, tanto las que se realizaron correctamente como las que no. Se eliminarán todas las compilaciones que ya no estén en uso. Además, se han implementado restricciones de limitación de velocidad y limitación de restricción para garantizar que algunos usos intensos de la API no degraden el rendimiento de la API para otros. |
+| Extensiones | Elementos, reglas y extensiones | [Los elementos, las reglas y las extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) ahora se ordenan en el resultado de la biblioteca para garantizar una mayor coherencia entre varias compilaciones e implementaciones de la misma biblioteca. |
 
 Para obtener más información sobre la recopilación de datos, lea la [Información general sobre recopilación de datos](../../tags/home.md).
 
@@ -80,7 +80,7 @@ Para obtener información más general sobre los destinos, consulte la [informac
 
 ## Zonas protegidas {#sandboxes}
 
-Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para satisfacer esta necesidad, Experience Platform proporciona entornos limitados que dividen una sola instancia de Experience Platform en entornos virtuales independientes para ayudar a desarrollar aplicaciones de experiencia digital y hacer que evolucionen.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y necesitan encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo. Para responder a esta necesidad, Experience Platform proporciona zonas protegidas que dividen una única instancia de Experience Platform en entornos virtuales separados para ayudar a que se desarrollan y evolucionen las aplicaciones de experiencia digital.
 
 **Nueva funcionalidad**
 
@@ -98,7 +98,7 @@ Para obtener más información sobre las zonas protegidas, consulte la [descripc
 
 | Función | Descripción |
 | ------- | ----------- |
-| Audiencias de cuenta (GA limitado) | En Real-Time Customer Data Platform B2B edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](../../segmentation/types/account-audiences.md). |
+| Audiencias de cuenta (GA limitado) | En Real-Time Customer Data Platform B2B edition, ahora puede utilizar la segmentación de cuentas para ofrecer la total facilidad y sofisticación de la experiencia de segmentación de marketing de audiencias basadas en personas a audiencias basadas en cuentas. Para obtener más información acerca de esta característica, lea la [información general de los públicos de cuenta](../../segmentation/types/account-audiences.md). |
 
 Para obtener más información sobre el servicio de segmentación, lea la [descripción general del servicio de segmentación](../../segmentation/home.md).
 
