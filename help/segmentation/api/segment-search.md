@@ -3,7 +3,7 @@ title: Extremo de API de búsqueda de segmentos
 description: En la API del servicio de segmentación de Adobe Experience Platform, la búsqueda de segmentos se utiliza para buscar campos contenidos en varias fuentes de datos y devolvérselos en tiempo casi real. Esta guía proporciona información para ayudarle a comprender mejor la búsqueda de segmentos e incluye llamadas de API de ejemplo para realizar acciones básicas mediante la API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 2%
@@ -36,7 +36,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
 | Parámetros | Descripción |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} representa el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
 | `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} representa una consulta que se ajusta a la implementación de Microsoft de [sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name`. Encontrará una explicación más detallada en el [apéndice](#appendix) de este documento. |
 
@@ -96,7 +96,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parámetros | Descripción |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en el que desea buscar. |
 | `s={SEARCH_TERM}` | *(Opcional)* Donde {SEARCH_TERM} contiene una consulta que se ajusta a la implementación de Microsoft de [sintaxis de búsqueda de Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Si no se especifica ningún término de búsqueda, se devolverán todos los registros asociados con `schema.name`. Encontrará una explicación más detallada en el [apéndice](#appendix) de este documento. |
@@ -167,7 +167,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 ```
 
 | Parámetros | Descripción |
-| ---------- | ----------- | 
+| ---------- | ----------- |
 | `schema.name={SCHEMA}` | **(Obligatorio)** Donde {SCHEMA} contiene el valor de clase de esquema asociado con los objetos de búsqueda. Actualmente, solo se admite `_xdm.context.segmentdefinition`. |
 | `namespace={NAMESPACE}` | **(Obligatorio)** Donde {NAMESPACE} contiene el área de nombres en el que desea buscar. |
 | `entityId={ENTITY_ID}` | **(obligatorio)** El identificador del objeto de búsqueda del que desea obtener la información estructural, especificado con {ENTITY_ID}. |
@@ -229,7 +229,7 @@ Las secciones siguientes proporcionan información adicional sobre cómo funcion
 >
 >Para prácticas recomendadas, la expresión de búsqueda debe estar codificada en HTML, como en el ejemplo anterior.
 
-### Campos de búsqueda {#search-fields}
+### Buscar campos {#search-fields}
 
 En la tabla siguiente se enumeran los campos en los que se puede buscar dentro del parámetro de consulta de búsqueda.
 
