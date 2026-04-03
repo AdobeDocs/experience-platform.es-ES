@@ -5,7 +5,7 @@ title: Punto final de API de plantillas de consulta
 description: Esta guía detalla las distintas llamadas a la API de plantilla de consulta que puede realizar mediante la API del servicio de consultas.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
@@ -18,11 +18,11 @@ ht-degree: 3%
 
 Las secciones siguientes describen las distintas llamadas de API que puede realizar mediante la API [!DNL Query Service]. Cada llamada a incluye el formato de API general, una solicitud de ejemplo que muestra los encabezados necesarios y una respuesta de ejemplo.
 
-Consulte la [documentación de plantillas de consulta de IU](../ui/query-templates.md) para obtener información sobre cómo crear plantillas a través de la interfaz de usuario del Experience Platform.
+Consulte la [documentación de plantillas de consulta de IU](../ui/query-templates.md) para obtener información sobre cómo crear plantillas a través de la interfaz de usuario de Experience Platform.
 
 ### Recuperación de una lista de plantillas de consulta
 
-Puede recuperar una lista de todas las plantillas de consultas de su organización realizando una solicitud de GET al extremo `/query-templates`.
+Puede recuperar una lista de todas las plantillas de consultas de su organización realizando una petición GET al extremo `/query-templates`.
 
 **Formato de API**
 
@@ -113,7 +113,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con una lista de plantillas d
 
 ### Creación de una plantilla de consulta
 
-Puede crear una plantilla de consulta realizando una solicitud de POST al extremo `/query-templates`.
+Puede crear una plantilla de consulta realizando una petición POST al extremo `/query-templates`.
 
 **Formato de API**
 
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para usar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key` y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en el campo `queryParameters`. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe hacerlo en la solicitud del POST. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para usar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key` y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en el campo `queryParameters`. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la petición POST. |
 | `name` | Nombre de la plantilla de consulta. |
 | `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es necesario **si** está usando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
 
@@ -180,7 +180,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (aceptado) con detalles de la
 
 ### Recuperar una plantilla de consulta especificada
 
-Puede recuperar una plantilla de consulta específica realizando una solicitud de GET al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el identificador de la plantilla en la ruta de solicitud.
+Puede recuperar una plantilla de consulta específica realizando una petición GET al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla en la ruta de solicitud.
 
 **Formato de API**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Propiedad | Descripción |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | El valor `id` de la plantilla de consulta que desea recuperar. |
 
 **Solicitud**
@@ -238,7 +238,7 @@ Una respuesta correcta devuelve el estado HTTP 200 con detalles de la plantilla 
 
 ### Actualizar una plantilla de consulta especificada
 
-Puede actualizar una plantilla de consulta específica realizando una solicitud de PUT al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el identificador de la plantilla en la ruta de solicitud.
+Puede actualizar una plantilla de consulta específica realizando una petición PUT al extremo `/query-templates/{TEMPLATE_ID}` y proporcionando el ID de la plantilla en la ruta de solicitud.
 
 **Formato de API**
 
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La solicitud del PUT requiere que se rellene el campo SQL y el campo de nombre, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
+>La solicitud de PUT requiere que se rellene el campo SQL y el campo de nombre, y **sobrescribirá** el contenido actual de esa plantilla de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,7 +273,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propiedad | Descripción |
 | -------- | ----------- |
-| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para usar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key` y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en el campo `queryParameters`. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe hacerlo en la solicitud del POST. |
+| `sql` | La consulta SQL que desea crear. Puede utilizar SQL estándar o un reemplazo de parámetros. Para usar un reemplazo de parámetro en SQL, debe anteponer la clave de parámetro con un `$`. Por ejemplo, `$key` y proporcione los parámetros utilizados en SQL como pares de valor clave JSON en el campo `queryParameters`. Los valores pasados aquí son los parámetros predeterminados utilizados en la plantilla. Si desea anular estos parámetros, debe anularlos en la petición POST. |
 | `name` | Nombre de la plantilla de consulta. |
 | `queryParameters` | Un emparejamiento de valor clave para reemplazar cualquier valor parametrizado en la instrucción SQL. Solo es necesario **si** está usando reemplazos de parámetros dentro del SQL proporcionado. No se realizará ninguna comprobación de tipo de valor en estos pares de valor clave. |
 
@@ -314,7 +314,7 @@ Una respuesta correcta devuelve el estado HTTP 202 (Aceptado) con la informació
 
 ### Eliminar una plantilla de consulta especificada
 
-Puede eliminar una plantilla de consulta específica realizando una solicitud de DELETE a `/query-templates/{TEMPLATE_ID}` y proporcionando el identificador de la plantilla en la ruta de solicitud.
+Puede eliminar una plantilla de consulta específica realizando una petición DELETE a `/query-templates/{TEMPLATE_ID}` y proporcionando el identificador de la plantilla en la ruta de solicitud.
 
 **Formato de API**
 
