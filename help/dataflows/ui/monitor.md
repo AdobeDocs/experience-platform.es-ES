@@ -2,9 +2,9 @@
 title: Información general del panel de monitorización
 description: Aprenda a utilizar el tablero de monitorización en la interfaz de usuario de Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ El panel de monitorización admite la vista de varios tipos de datos diferentes:
 
 Lea este documento para aprender a utilizar el panel de monitorización para monitorizar el recorrido de los datos en diferentes servicios de Experience Platform.
 
-## Introducción 
+## Introducción
 
 Este documento requiere un entendimiento práctico de los siguientes componentes de Experience Platform:
 
@@ -38,11 +38,11 @@ Este documento requiere un entendimiento práctico de los siguientes componentes
 
 ## Guía del panel de monitorización
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Supervisión]** en [!UICONTROL Administración de datos] en el panel de navegación izquierdo.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Monitoring]** en [!UICONTROL Data Management] en el panel de navegación izquierdo.
 
 ![Panel de supervisión en la interfaz de usuario de Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
 
-Seleccione **[!UICONTROL Tipo de datos]** y, a continuación, utilice el menú desplegable para seleccionar el tipo de datos que desea ver. Las clases de esquema del Modelo de datos de experiencia (XDM) definen los tipos de datos para garantizar que sus datos sigan un formato estándar cuando se incorporan en Experience Platform. Para obtener más información, consulte la siguiente documentación:
+Seleccione **[!UICONTROL Data Type]** y, a continuación, utilice el menú desplegable para seleccionar el tipo de datos que desea ver. Las clases de esquema del Modelo de datos de experiencia (XDM) definen los tipos de datos para garantizar que sus datos sigan un formato estándar cuando se incorporan en Experience Platform. Para obtener más información, consulte la siguiente documentación:
 
 * [Tipo de datos de cuenta B2B](../../rtcdp/b2b-tutorial.md)
 * [Tipo de datos del cliente potencial](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Puede filtrar la vista en función de los siguientes tipos de datos:
 
 >[!TAB Todos]
 
-Seleccione **[!UICONTROL Todos]** para actualizar su tablero y mostrar las métricas de todos los datos que se han introducido en Experience Platform durante un período determinado.
+Seleccione **[!UICONTROL All]** para actualizar el tablero y mostrar las métricas de todos los datos que se han introducido en Experience Platform durante un período determinado.
 
 ![El tipo de datos de supervisión establecido en &quot;Todos&quot;.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Cliente y cuenta]
 
-Seleccione **[!UICONTROL Cliente y cuenta]** para actualizar su tablero y mostrar métricas con los datos de cliente y cuenta que se han introducido en Experience Platform durante un período determinado.
+Seleccione **[!UICONTROL Customer & Account]** para actualizar su tablero y mostrar las métricas de los datos de cliente y cuenta que se han introducido en Experience Platform durante un período determinado.
 
 ![El tipo de datos de supervisión establecido en Cliente y cuenta.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Enriquecimiento del perfil de la cuenta]
 
-Seleccione **[!UICONTROL Enriquecimiento del perfil de cuenta]** para actualizar su tablero y mostrar métricas sobre los datos de enriquecimiento del perfil. **Nota**: solo puedes ver las métricas de enriquecimiento de perfil de cuenta si tienes derecho a [datos B2B](../../rtcdp/b2b-tutorial.md).
+Seleccione **[!UICONTROL Account profile enrichment]** para actualizar el tablero y mostrar las métricas de los datos de enriquecimiento del perfil. **Nota**: solo puedes ver las métricas de enriquecimiento de perfil de cuenta si tienes derecho a [datos B2B](../../rtcdp/b2b-tutorial.md).
 
 ![El tipo de datos de supervisión establecido en &quot;Enriquecimiento del perfil de cuenta&quot;.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ Utilice el encabezado superior del panel para una experiencia de monitorización
 
 >[!TAB lago de datos]
 
-Seleccione **[!UICONTROL lago de datos]** para ver las métricas de la tasa de ingesta de su lago de datos. Lea la guía sobre [supervisión de la ingesta del lago de datos](monitor-sources.md) para obtener más información.
+Seleccione **[!UICONTROL Data lake]** para ver las métricas sobre la tasa de ingesta del lago de datos. Lea la guía sobre [supervisión de la ingesta del lago de datos](monitor-sources.md) para obtener más información.
 
 ![Panel de monitorización en la interfaz de usuario con la tarjeta del lago de datos seleccionada.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identidades]
 
-Seleccione **[!UICONTROL Identidades]** para ver la tasa de éxito de procesamiento de sus datos de identidad. Lea la guía sobre [supervisión de datos de identidad](monitor-identities.md) para obtener más información.
+Seleccione **[!UICONTROL Identities]** para ver la tasa de éxito de procesamiento de sus datos de identidad. Lea la guía sobre [supervisión de datos de identidad](monitor-identities.md) para obtener más información.
 
 ![Panel de supervisión en la interfaz de usuario con la tarjeta de identidades seleccionada.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB Perfiles]
 
-Seleccione **[!UICONTROL Perfiles]** para ver la tasa de éxito de procesamiento de sus datos de perfil. Lea la guía sobre [supervisión de datos de perfil](monitor-profiles.md) para obtener más información.
+Seleccione **[!UICONTROL Profiles]** para ver la tasa de éxito de procesamiento de los datos de perfil. Lea la guía sobre [supervisión de datos de perfil](monitor-profiles.md) para obtener más información.
 
 ![Panel de supervisión en la interfaz de usuario con la tarjeta de perfiles seleccionada.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Públicos]
 
-Seleccione **[!UICONTROL Audiencias]** para ver las métricas de sus audiencias y trabajos de segmentación. Lea la guía de [supervisión de datos de audiencia](monitor-audiences.md) para obtener más información.
+Seleccione **[!UICONTROL Audiences]** para ver las métricas de sus audiencias y trabajos de segmentación. Lea la guía de [supervisión de datos de audiencia](monitor-audiences.md) para obtener más información.
 
 ![Panel de supervisión en la interfaz de usuario con la tarjeta de audiencias seleccionada.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Destinos]
 
-Seleccione **[!UICONTROL Destinos]** para ver las métricas de su [!UICONTROL tasa de activación de transmisión] y [!UICONTROL ejecuciones de flujo de datos con errores por lotes]. Lea la guía sobre [supervisión de datos de destinos](monitor-destinations.md) para obtener más información.
+Seleccione **[!UICONTROL Destinations]** para ver las métricas de [!UICONTROL Streaming activate rate] y [!UICONTROL Batch failed dataflow runs]. Lea la guía sobre [supervisión de datos de destinos](monitor-destinations.md) para obtener más información.
 
 ![Panel de supervisión en la interfaz de usuario con la tarjeta de destinos seleccionada.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,21 +109,21 @@ Seleccione **[!UICONTROL Destinos]** para ver las métricas de su [!UICONTROL ta
 
 ### Configurar intervalo de tiempo de monitorización {#configure-monitoring-time-frame}
 
-De forma predeterminada, el panel de monitorización muestra métricas de datos introducidos en las últimas 24 horas. Para actualizar el lapso de tiempo, seleccione **[!UICONTROL Últimas 24 horas]**.
+De forma predeterminada, el panel de monitorización muestra métricas de datos introducidos en las últimas 24 horas. Para actualizar el lapso de tiempo, seleccione **[!UICONTROL Last 24 hours]**.
 
 ![Panel de supervisión en la interfaz de usuario con la configuración de tiempo seleccionada.](../assets/ui/monitor-overview/select-time.png)
 
 Puede configurar un nuevo lapso de tiempo para la vista de monitorización de datos en el cuadro de diálogo que aparece. Tiene la opción de crear un lapso de tiempo personalizado o seleccionar en la lista de opciones preconfiguradas:
 
-* [!UICONTROL Últimas 24 horas]
-* [!UICONTROL Últimos 7 días]
-* [!UICONTROL Últimos 30 días]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-Cuando termine, seleccione **[!UICONTROL Aplicar]**.
+Cuando termine, seleccione **[!UICONTROL Apply]**.
 
 ![Ventana emergente de configuración del lapso de tiempo en el panel de supervisión.](../assets/ui/monitor-overview/update-time.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora puede navegar por el panel de monitorización de la interfaz de usuario. Para obtener información sobre cómo monitorizar los datos de un servicio Experience Platform específico, lea la siguiente documentación:
 
@@ -133,6 +133,8 @@ Al leer este documento, ahora puede navegar por el panel de monitorización de l
 * [Supervisar datos de audiencia](monitor-audiences.md).
 * [Supervisar datos de destinos](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->
