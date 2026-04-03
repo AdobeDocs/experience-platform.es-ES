@@ -1,7 +1,8 @@
 ---
 title: 'Notas de la versión de Adobe Experience Platform: octubre de 2025'
 description: Las notas de la versión de octubre de 2025 de Adobe Experience Platform.
-source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
+exl-id: 93feff2b-d998-41f1-8d93-332238a1d88d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 26%
