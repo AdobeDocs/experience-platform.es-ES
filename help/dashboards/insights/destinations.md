@@ -2,7 +2,7 @@
 title: Perspectivas de destinos
 description: Descubra el SQL que alimenta las perspectivas de sus destinos y utilice estas consultas para generar perspectivas personalizadas y explorar aún más la activación de datos de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -21,12 +21,12 @@ Las siguientes perspectivas están disponibles para que las uses como parte del 
 
 ## Públicos activados {#activated-audiences}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el recuento total de audiencias activadas filtradas por un destino particular?
-- ¿Cuál es el recuento de audiencias activadas por cada destino?
+- ¿Cuál es el recuento de público activado por cada destino?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT
@@ -48,16 +48,16 @@ WHERE
 
 +++
 
-Consulte la [documentación del widget de audiencias activadas](../guides/destinations.md#activated-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias activadas](../guides/destinations.md#activated-audiences) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Públicos activados en todos los destinos {#activated-audiences-across-all-destinations}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas audiencias se activan en todos los destinos?
 - ¿Cuál es el recuento total de audiencias activadas?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,17 +71,17 @@ WHERE
 
 +++
 
-Consulte la [documentación del widget de audiencias activadas en todos los destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias activadas en todos los destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Destinos activos por plataforma de destino {#active-destinations-by-destination-platform}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántos destinos hay activos?
 - ¿Cuál es el desglose de los destinos activos por plataforma de destino?
 - ¿Cuál es el recuento de destinos activos desglosados por cada plataforma de destino?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,17 +96,17 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Consulte la [documentación del widget de destinos activos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de destinos activos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
-## Tendencia de tamaño de audiencia {#audience-size-trend}
+## Tendencia de tamaño de público {#audience-size-trend}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cómo ha cambiado el tamaño de la audiencia con el paso del tiempo, incluidas las anomalías de una audiencia asignada a un destino?
 - ¿Cómo encuentro la tendencia general en el tamaño de la audiencia, por destino, durante los periodos especificados de 30 días, 90 días y 12 meses?
 - ¿Cuáles son las características clave de la audiencia que contribuyen al tamaño, por ejemplo, los picos en relación con cualquier campaña de marketing por correo electrónico?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT d.destination_name,
@@ -142,17 +142,17 @@ SELECT d.destination_name,
 
 +++
 
-Consulte la [documentación del widget de tendencia de tamaño de audiencia](../guides/destinations.md#audience-size-trend) para obtener información sobre la apariencia y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de tendencia de tamaño de audiencia](../guides/destinations.md#audience-size-trend) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
-## Audiencias comunes {#common-audiences}
+## Públicos comunes {#common-audiences}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son las audiencias comunes entre dos destinos diferentes?
 - ¿Cuántos perfiles tiene cada una de las audiencias comunes entre dos destinos diferentes?
 - ¿Cuál es la audiencia más grande a la que se asignan dos destinos?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT k.destination_name1,
@@ -214,17 +214,17 @@ SELECT k.destination_name1,
 
 +++
 
-Consulte la [documentación del widget de audiencias comunes](../guides/destinations.md#common-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias comunes](../guides/destinations.md#common-audiences) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Estado del destino {#destination-status}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuál es el número total de destinos habilitados para su uso?
 - ¿Cuál es el número total de destinos desactivados?
 - ¿Cuál es el porcentaje de división entre destinos habilitados y deshabilitados?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT COUNT(CASE
@@ -238,16 +238,16 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Consulte la [documentación del widget de estado de destino](../guides/destinations.md#destination-status) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de estado de destino](../guides/destinations.md#destination-status) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Recuento de destinos {#destinations-count}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántos destinos hay configurados actualmente?
 - ¿Cómo ha cambiado el recuento total de destinos a lo largo del tiempo?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -256,17 +256,17 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Consulte la [documentación del widget de recuento de destinos](../guides/destinations.md#destinations-count) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de recuento de destinos](../guides/destinations.md#destinations-count) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Estado de público asignado {#mapped-audience-health}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Qué audiencias asignadas a un destino tienen variaciones significativas en los últimos 30 días?
 - ¿Cuál es el tamaño más reciente de una audiencia asignada y si ha cambiado en el último mes?
 - ¿Cómo hago una lista de todas las audiencias asignadas a un destino según la gravedad de los cambios de tamaño que tuvieron en el último mes?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT destination_name,
@@ -325,17 +325,17 @@ SELECT destination_name,
 
 +++
 
-Consulte la [documentación del widget de estado de audiencia asignada](../guides/destinations.md#mapped-audience-health) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de estado de audiencia asignada](../guides/destinations.md#mapped-audience-health) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Públicos asignados {#mapped-audiences}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuántas audiencias se asignan a un destino determinado?
 - ¿Cómo ha cambiado el recuento de audiencias asignadas con el paso del tiempo?
 - ¿Dónde puedo comparar dos destinos para ver la superposición de audiencias asignada a cada destino?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulte la [documentación del widget de audiencias asignadas](../guides/destinations.md#mapped-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de audiencias asignadas](../guides/destinations.md#mapped-audiences) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -368,13 +369,13 @@ See the [Mapped audiences by identity widget documentation](../guides/destinatio
 
 ## Destinos más utilizados {#most-used-destinations}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son los destinos más utilizados?
 - ¿Cuántas audiencias se asignan a cada destino, ordenadas de la mayor a la menor?
 - ¿Cómo cambia la asignación de audiencias a destinos de una instantánea a otra?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -393,17 +394,17 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Consulte la [documentación del widget de destinos más usados](../guides/destinations.md#most-used-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación del widget de destinos más usados](../guides/destinations.md#most-used-destinations) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Públicos activados recientemente {#recently-activated-audiences}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿A qué destino se activó más recientemente una audiencia?
 - ¿Cómo encuentro una lista de todos los destinos ordenados por la última fecha de actualización?
 - ¿Cómo puedo comparar dos destinos en función de las activaciones más recientes?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT
@@ -424,17 +425,17 @@ LIMIT
 
 +++
 
-Consulte la [Documentación del widget de audiencias activadas recientemente](../guides/destinations.md#recently-activated-audiences) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [Documentación del widget de audiencias activadas recientemente](../guides/destinations.md#recently-activated-audiences) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Públicos activados recientemente por destino {#recently-activated-audiences-by-destination}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son las audiencias activadas en un destino particular?
 - ¿Cómo encuentro una lista de audiencias activadas por una audiencia en particular desde la más reciente hasta la menos reciente?
 - ¿Cómo encuentro una lista de audiencias en la fecha en que se activó para un destino específico?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT c.destination_name,
@@ -455,17 +456,17 @@ SELECT c.destination_name,
 
 +++
 
-Consulte la [documentación de audiencias activadas recientemente por el widget de destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [documentación de audiencias activadas recientemente por el widget de destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
 ## Destinos creados recientemente {#recently-created-destinations}
 
-Preguntas respondidas por esta perspectiva:
+Preguntas respondidas por este insight:
 
 - ¿Cuáles son los destinos creados más recientemente?
 - ¿Cómo encuentro una lista de destinos con la fecha de creación?
 - ¿Qué nuevo destino se ha creado recientemente?
 
-+++Seleccione para mostrar el SQL que genera esta perspectiva
++++Seleccione para mostrar el SQL que genera este insight
 
 ```sql
 SELECT DISTINCT
@@ -484,9 +485,10 @@ LIMIT
 
 +++
 
-Consulte la [Documentación del widget de destinos creados recientemente](../guides/destinations.md#recently-created-destinations) para obtener información sobre el aspecto y la funcionalidad de esta perspectiva.
+Consulte la [Documentación del widget de destinos creados recientemente](../guides/destinations.md#recently-created-destinations) para obtener información sobre el aspecto y la funcionalidad de este insight.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 
@@ -507,7 +509,7 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 -->
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, ahora comprende el SQL que genera perspectivas del panel y qué preguntas comunes resuelve este análisis. Ahora puede editar e iterar estas consultas SQL para generar sus propias perspectivas.
 
