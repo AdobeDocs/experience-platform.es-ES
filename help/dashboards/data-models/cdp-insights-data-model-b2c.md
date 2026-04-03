@@ -3,7 +3,7 @@ title: B2C Edition del modelo de datos de Real-Time Customer Data Platform Insig
 description: Aprenda a utilizar consultas SQL con los modelos de datos de perspectivas de Real-Time Customer Data Platform (B2C Edition) para personalizar sus propios informes de Real-Time CDP para los casos de uso de KPI y marketing.
 badgeB2C: null
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 2%
@@ -121,7 +121,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Perfiles de identidad únicos por caso de uso de identidad {#single-identity-profiles-by-identity}
 
-La lógica utilizada para el widget [!UICONTROL Single identity profiles by identity] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad &#x200B;](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
+La lógica utilizada para el widget [!UICONTROL Single identity profiles by identity] ilustra el número total de perfiles que se identifican con un solo identificador único. Consulte la [documentación del widget de identidad ](../guides/profiles.md#single-identity-profiles-by-identity) para obtener más información.
 
 El SQL que genera el widget [!UICONTROL Single identity profiles by identity] se ve en la sección contraíble a continuación.
 
@@ -448,7 +448,8 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
 
 The overlap namespace-audience model is comprised of the following datasets: 
@@ -463,11 +464,13 @@ The overlap namespace-audience model is comprised of the following datasets:
 - `adwh_dim_destination`
 - `adwh_dim_destination_platform`
 
-![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) -->
+![An ERD of the overlap namespace-audience model.](../images/cdp-insights/overlap-namespace-audience-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
-<!-- Commented out as Anil wanted to add something but did not provide information yet:
+<!-- 
+Commented out as Anil wanted to add something but did not provide information yet:
 ### AI model {#ai-model}
 
 The AI model is comprised of the following datasets: 
@@ -477,7 +480,8 @@ The AI model is comprised of the following datasets:
 - `adwh_dim_merge_policies`
 - `adwh_dim_ai_models`
 
-![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) 
+-->
 
 <!-- What insights are gathered from this particular data model? -->
 
