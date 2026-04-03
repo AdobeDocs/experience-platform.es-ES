@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guía de IU del Editor de consultas
 description: El Editor de consultas es una herramienta interactiva proporcionada por el Servicio de consultas de Adobe Experience Platform, que le permite escribir, validar y ejecutar consultas de datos de experiencia del cliente en la interfaz de usuario de Experience Platform. El Editor de consultas admite el desarrollo de consultas para análisis y exploración de datos, y permite ejecutar consultas interactivas con fines de desarrollo, así como consultas no interactivas para rellenar conjuntos de datos en Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '3341'
 ht-degree: 0%
@@ -123,11 +123,13 @@ La característica [!UICONTROL Format text] hace que la consulta sea más legibl
 
 ![El editor de consultas con [!UICONTROL Format text] y las instrucciones SQL resaltadas.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### Copiar SQL {#copy-sql}
 
@@ -312,7 +314,7 @@ El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Exp
 >
 >La interfaz de usuario que se muestra en el vídeo está obsoleta, pero la lógica utilizada en el flujo de trabajo sigue siendo la misma.
 
->[!VIDEO](https://video.tv.adobe.com/v/34045?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Monitorización y administración de sesiones simultáneas {#monitor-manage-sessions}
 
