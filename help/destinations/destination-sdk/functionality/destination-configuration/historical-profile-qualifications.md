@@ -2,7 +2,7 @@
 description: Obtenga información acerca de las cualificaciones de perfil históricas admitidas por los destinos creados con Destination SDK.
 title: Cualificaciones históricas del perfil
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -35,10 +35,11 @@ Consulte la tabla siguiente para obtener detalles sobre qué tipos de integracio
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"} 
+-->
 
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Después de leer este artículo, debe saber que Experience Platform exporta automáticamente una población histórica de todos los perfiles que alguna vez se han clasificado para una audiencia activada cuando la audiencia se exporta por primera vez al destino. Esta opción no se puede configurar en Destination SDK ni en la interfaz de usuario de Experience Platform.
 
