@@ -2,10 +2,10 @@
 title: Administrar la retención de conjuntos de datos de Experience Event en el lago de datos mediante TTL
 description: Obtenga información sobre cómo evaluar, establecer y administrar la retención de conjuntos de datos de evento de experiencia en el lago de datos mediante configuraciones de tiempo de vida (TTL) con API de Adobe Experience Platform. Esta guía explica cómo la caducidad a nivel de fila TTL admite políticas de retención de datos, optimiza la eficiencia del almacenamiento y garantiza una administración eficaz del ciclo de vida de los datos. También proporciona casos de uso y prácticas recomendadas para ayudarle a aplicar el TTL de forma eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 0%
+source-wordcount: '2471'
+ht-degree: 1%
 
 ---
 
@@ -318,7 +318,8 @@ La caducidad a nivel de fila requiere las siguientes condiciones técnicas:
 Los TTL de conjuntos de datos se evalúan y procesan cada 30 días, eliminando todos los registros caducados. Un evento se considera caducado si se ingirió en Experience Platform hace más de 30 días (fecha de ingesta > 30 días) y su fecha de evento supera el periodo de retención definido (TTL).
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -328,7 +329,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### ¿Puedo establecer diferentes políticas de retención para el lago de datos y los servicios de perfil?
 
@@ -345,7 +347,7 @@ Sí, puede establecer diferentes políticas de retención para el lago de datos 
 ### ¿Cómo puedo comprobar el uso actual de mi conjunto de datos?
 
 +++Respuesta
-Puede comprobar el tamaño de almacenamiento del conjunto de datos más reciente para el lago de datos y los almacenes de perfiles como métricas independientes en el área de trabajo de inventario [!UICONTROL Conjunto de datos]. Ordene las columnas para identificar los conjuntos de datos más grandes y comprobar que se aplican las políticas de retención.
+Puede comprobar el tamaño de almacenamiento del conjunto de datos más reciente para el lago de datos y los almacenes de perfiles como métricas independientes en el área de trabajo de inventario [!UICONTROL Dataset]. Ordene las columnas para identificar los conjuntos de datos más grandes y comprobar que se aplican las políticas de retención.
 
 Para el uso a nivel de zona protegida, consulte el Panel de uso de licencias. Consulte la [documentación de uso de licencias](../../dashboards/guides/license-usage.md) para obtener más detalles.
 +++
