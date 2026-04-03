@@ -4,7 +4,7 @@ description: Obtenga información acerca de los detalles del modelo en Adobe Exp
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Lea lo siguiente para obtener una guía sobre las diferentes secciones de los de
 
 La descripción general del modelo contiene información general sobre un modelo de IA. Utilice esta sección para proporcionar información como el nombre, el propósito y el tipo de su modelo de IA. Además, puede utilizar esta sección para identificar a los usuarios previstos y explicar cómo el modelo se integra con Experience Platform.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ La descripción general del modelo contiene información general sobre un modelo
 
 La sección de uso previsto contiene información sobre los casos de uso principales del modelo de IA. Puede utilizar esta sección para ampliar los problemas que su modelo pretende resolver, las industrias o dominios para los que su modelo es relevante y los casos de uso incorrecto que deben evitarse al utilizar su modelo de IA.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ La sección de uso previsto contiene información sobre los casos de uso princip
 
 La sección de entradas y salidas del modelo contiene información sobre los tipos de datos admitidos que el modelo toma como entrada y devuelve como salida. Puede utilizar esta sección para proporcionar ejemplos de las entradas y salidas de datos que son relevantes para su modelo de IA.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ La sección de entradas y salidas del modelo contiene información sobre los tip
 
 La sección de datos de formación contiene información sobre los conjuntos de datos que se utilizaron para entrenar un modelo de IA determinado. Puede utilizar esta sección para obtener más información sobre el tamaño y el origen de los datos de formación, los sesgos identificados en el conjunto de datos y cómo se han preprocesado los datos.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -98,13 +98,13 @@ La sección de datos de formación contiene información sobre los conjuntos de 
 
 La sección de arquitectura y formación del modelo describe el modelo del modelo de IA. Esta sección hace referencia a la estructura y el diseño del modelo de IA, incluidos detalles sobre el tipo de algoritmo y los métodos de evaluación utilizados. También puede utilizar esta sección para proporcionar información sobre los marcos de formación utilizados, así como los recursos de cálculo utilizados en la formación.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
 | ¿Qué arquitectura utiliza el modelo? | El tipo de red neuronal, método de ensamblado, etc. | El modelo aprovecha Gradient Boosting Decision Trees (GBDT) utilizando XGBoost, optimizado para datos estructurados. Se le enseña sobre las secuencias de eventos de clientes históricas para identificar patrones de comportamiento predictivos. |
 | ¿Qué algoritmos se aplicaron? | Las técnicas de aprendizaje automático utilizadas. | El modelo se construye utilizando un enfoque de aprendizaje supervisado, aprovechando Gradient Boosting Decision Trees (GBDT) con XGBoost como algoritmo de aprendizaje principal. Adicionalmente, se incorpora la regresión logística como un modelo de referencia para la evaluación de la precisión predictiva. |
-| ¿Qué marcos de formación se han utilizado? | Las bibliotecas o plataformas utilizadas para la formación. | El modelo fue desarrollado utilizando TensorFlow, XGBoost y scikit-learn. La formación se ejecuta en la infraestructura en la nube de Adobe AI utilizando GPU NVIDIA V100, compatibles con conjuntos de datos a gran escala. |
+| ¿Qué marcos de formación se han utilizado? | Las bibliotecas o plataformas utilizadas para la formación. | El modelo fue desarrollado utilizando TensorFlow, XGBoost y scikit-learn. La formación se ejecuta en la infraestructura de nube de Adobe AI utilizando GPU NVIDIA V100, que admiten conjuntos de datos a gran escala. |
 | ¿Qué recursos informáticos se utilizaron para la formación? | El hardware y los recursos de la nube utilizados para la formación. | GPU NVIDIA V100, formadas en la infraestructura de Google Cloud. |
 | ¿Qué métodos de evaluación se utilizaron? | Las métricas y los procedimientos de prueba utilizados para la evaluación. | AUC-ROC, recuperación de precisión y validación cruzada. |
 
@@ -116,7 +116,7 @@ La sección de arquitectura y formación del modelo describe el modelo del model
 
 La sección de rendimiento y evaluación contiene información sobre las métricas y los métodos utilizados para evaluar el rendimiento del modelo para las tareas previstas. Puede utilizar esta sección para proporcionar información sobre las métricas de evaluación que se utilizaron, así como sobre las debilidades o los casos de error identificados.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -133,7 +133,7 @@ La sección de rendimiento y evaluación contiene información sobre las métric
 
 La sección de equidad y sesgo contiene información sobre el rendimiento del modelo de IA con respecto a las métricas de imparcialidad y sesgo. La equidad se refiere a la capacidad del modelo para proporcionar resultados equitativos entre diferentes grupos demográficos y casos de uso, mientras que el sesgo se refiere a errores sistemáticos que resultan en resultados injustos. Utilice esta sección para obtener más información sobre las comprobaciones de equidad que se realizaron y para analizar cómo el modelo mitiga el sesgo.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ La sección de equidad y sesgo contiene información sobre el rendimiento del mo
 
 La sección de explicabilidad e interpretabilidad contiene información sobre la capacidad de un modelo de IA para proporcionar explicaciones claras y comprensibles, y la facilidad con la que un usuario humano puede comprender cómo las características de entrada afectan a las predicciones y respuestas. Utilice esta sección para explicar cómo los usuarios pueden comprender mejor por qué el modelo toma determinadas decisiones y qué herramientas o técnicas están disponibles para la interpretabilidad.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -168,7 +168,7 @@ La sección de solidez y generalización contiene información sobre el rendimie
 >
 >En IA, &quot;datos no vistos&quot; se refiere a datos que son diferentes de los datos en los que se formó un modelo determinado.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -183,7 +183,7 @@ La sección de solidez y generalización contiene información sobre el rendimie
 
 La sección Consideraciones de seguridad y privacidad contiene información sobre las medidas y prácticas implementadas para proteger los datos confidenciales y garantizar el uso seguro del modelo. Puede utilizar esta sección para responder a preguntas sobre cómo gestiona el modelo los datos confidenciales.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -198,7 +198,7 @@ La sección Consideraciones de seguridad y privacidad contiene información sobr
 
 La sección de supervisión y mantenimiento contiene información sobre cómo se supervisa el rendimiento del modelo a lo largo del tiempo y con qué frecuencia se vuelve a entrenar el modelo. Puede utilizar esta sección para proporcionar información sobre cómo se realiza el seguimiento de métricas como precisión, precisión, recuperación y latencia.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -213,7 +213,7 @@ La sección de supervisión y mantenimiento contiene información sobre cómo se
 
 La sección Consideraciones éticas y IA responsable contiene información sobre cualquier preocupación ética asociada con su modelo de IA. Esta sección también contiene la eficacia con la que el modelo se alinea con los principios de IA responsables. Utilice esta sección para proporcionar información sobre los posibles impactos éticos del uso de su modelo, incluido el reconocimiento de sesgos, la garantía de equidad y la prevención de daños a personas o grupos.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -228,7 +228,7 @@ La sección Consideraciones éticas y IA responsable contiene información sobre
 
 La sección Limitaciones conocidas contiene información sobre las limitaciones existentes identificadas para su modelo de IA. Utilice esta sección para subrayar las condiciones en las que el modelo de IA puede tener un mal rendimiento y para esbozar las limitaciones que los usuarios deben tener en cuenta.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
@@ -243,7 +243,7 @@ La sección Limitaciones conocidas contiene información sobre las limitaciones 
 
 La sección de futuras mejoras contiene información sobre las actualizaciones de funciones planificadas para su modelo de IA. Utilice esta sección para obtener más información sobre la hoja de ruta de mejoras.
 
-+++Ver preguntas y ejemplos de respuestas
++++Visualización de preguntas y ejemplos de respuestas
 
 | Pregunta | Información necesaria | Respuesta de ejemplo |
 | --- | --- | --- |
