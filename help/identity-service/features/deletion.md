@@ -2,9 +2,9 @@
 title: Eliminaciones en el servicio de identidad
 description: Este documento proporciona información general sobre los distintos mecanismos que puede utilizar para eliminar los datos de identidad en Experience Platform y para aclarar cómo pueden verse afectados los gráficos de identidad.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ Puede utilizar el servicio de catálogo para enviar solicitudes para la eliminac
 
 ### Caducidad de conjuntos de datos en higiene de datos
 
-El espacio de trabajo [[!UICONTROL Higiene de datos]](../../hygiene/ui/overview.md) de la interfaz de usuario de Adobe Experience Platform le permite programar la caducidad de los conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Para obtener más información, lea la guía sobre [administración de la caducidad de los conjuntos de datos mediante el espacio de trabajo [!UICONTROL Higiene de datos]](../../hygiene/ui/dataset-expiration.md).
+El espacio de trabajo [[!UICONTROL Data Hygiene]](../../hygiene/ui/overview.md) de la interfaz de usuario de Adobe Experience Platform le permite programar caducidades para conjuntos de datos. Cuando un conjunto de datos alcanza su fecha de caducidad, el lago de datos, el servicio de identidad y el perfil del cliente en tiempo real comienzan procesos independientes para eliminar el contenido del conjunto de datos de sus respectivos servicios. Para obtener más información, lea la guía sobre [administración de la caducidad de los conjuntos de datos mediante el espacio de trabajo [!UICONTROL Data Hygiene]](../../hygiene/ui/dataset-expiration.md).
 
 La siguiente tabla proporciona un desglose de las diferencias entre la eliminación de conjuntos de datos en el servicio de catálogo y la higiene de los datos:
 
@@ -87,7 +87,7 @@ A continuación se describe el impacto potencial que las eliminaciones pueden te
 
 {style="table-layout:auto"}
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento abarcaba los distintos mecanismos que puede utilizar para eliminar identidades y conjuntos de datos en Experience Platform. Este documento también describe cómo las eliminaciones de identidades y conjuntos de datos pueden afectar los gráficos de identidad. Para obtener más información sobre el Servicio de identidad, consulte la [Información general del Servicio de identidad](../home.md).
 
