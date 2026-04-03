@@ -6,9 +6,9 @@ title: Requisitos de datos en Customer AI
 topic-legacy: Getting started
 description: Obtenga más información acerca de los eventos, las entradas y los resultados necesarios que utiliza la inteligencia artificial aplicada al cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Estos son los pasos para crear modelos de tendencia e identificar audiencias obj
 
 Estas son algunas configuraciones de ejemplo para su primer modelo.  El modelo de ejemplo, creado en este documento, utiliza un modelo de inteligencia artificial aplicada al cliente para predecir quién tiene probabilidades de realizar la conversión para un negocio minorista en los próximos 30 días. El conjunto de datos de entrada es un conjunto de datos Adobe Analytics.
 
-| Paso | Definición | Ejemplo |
+| Paso   | Definición | Ejemplo |
 | ---- | ------ | ------- |
 | Configurar | Especifique información básica sobre el modelo. | **Nombre**: modelo de tendencia de compra en lápiz <br> **Tipo de modelo**: Conversión |
 | Seleccionar datos | Especifique los conjuntos de datos utilizados para crear el modelo. | **Conjunto de datos**: conjunto de datos de Adobe Analytics <br> **Identidad**: Asegúrese de que la columna de identidad de cada conjunto de datos esté configurada para ser una identidad común. |
@@ -49,8 +49,8 @@ La inteligencia artificial aplicada al cliente funciona analizando los siguiente
 
 - Datos de Adobe Analytics que usan el [conector de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Datos de Adobe Audience Manager que usan el [conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=es)
-- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=es#cee-schema)
+- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 Puede agregar varios conjuntos de datos de diferentes fuentes si cada uno de los conjuntos de datos comparte el mismo tipo de identidad (área de nombres), como un ECID. Para obtener más información sobre cómo agregar varios conjuntos de datos, visite la [Guía del usuario de inteligencia artificial aplicada al cliente](../customer-ai/user-guide/configure.md).
 
@@ -91,27 +91,27 @@ Los eventos de experiencia se utilizan para determinar varios comportamientos de
 
 La inteligencia artificial aplicada al cliente utiliza los eventos en estos cuatro grupos de campos estándar de forma predeterminada: Commerce, Web, Aplicación y Búsqueda. No es necesario tener datos para cada evento en los grupos de campos estándar enumerados a continuación, pero se requieren ciertos eventos para ciertos escenarios. Si tiene disponibles eventos en los grupos de campos estándar, se recomienda incluirlos en el esquema. Por ejemplo, si desea crear un modelo de inteligencia artificial aplicada al cliente para predecir eventos de compra, resulta útil tener datos de los grupos de campos Commerce y Detalles de página web.
 
-Para ver un grupo de campos en la interfaz de usuario de Experience Platform, seleccione la pestaña **[!UICONTROL Esquemas]** en el carril izquierdo, seguida de la pestaña **[!UICONTROL Grupos de campos]**.
+Para ver un grupo de campos en la interfaz de usuario de Experience Platform, seleccione la pestaña **[!UICONTROL Schemas]** en el carril izquierdo y, a continuación, seleccione la pestaña **[!UICONTROL Field groups]**.
 
 | Grupo de campo | Tipo de evento | Ruta de campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Detalles de Commerce] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | cierres | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | compras | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Detalles web] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Detalles de la aplicación] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpupgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Detalles de búsqueda] | buscar | `search.keywords` |
+| [!UICONTROL Search Details] | buscar | `search.keywords` |
 
 Además, la inteligencia artificial aplicada al cliente puede utilizar los datos de suscripción para crear mejores modelos de pérdida. Se necesitan datos de suscripción para cada perfil que use el formato de tipo de datos [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md). La mayoría de los campos son opcionales; sin embargo, para lograr un modelo de pérdida óptimo, se recomienda que proporcione datos para tantos campos como sea posible, como `startDate`, `endDate` y cualquier otro detalle relevante. Póngase en contacto con el equipo de su cuenta para obtener soporte adicional sobre esta función.
 
@@ -135,7 +135,7 @@ Los mejores candidatos para los eventos personalizados son los datos que contien
 
 - Registrarse para obtener cuenta
 
-- Suscribirse a la Newsletter
+- Suscribirse a la newsletter
 
 - Realizar una llamada al servicio de atención al cliente
 
@@ -219,13 +219,13 @@ La siguiente tabla describe los distintos atributos que se encuentran en la sali
 
 | Atributo | Descripción |
 | ----- | ----------- |
-| [!UICONTROL Puntuación] | La probabilidad relativa de que un cliente alcance el objetivo predicho dentro del lapso de tiempo definido. Este valor no debe tratarse como un porcentaje de probabilidad, sino más bien como la probabilidad de un individuo en comparación con la población general. Esta puntuación va del 0 al 100. |
+| [!UICONTROL Score] | La probabilidad relativa de que un cliente alcance el objetivo predicho dentro del lapso de tiempo definido. Este valor no debe tratarse como un porcentaje de probabilidad, sino más bien como la probabilidad de un individuo en comparación con la población general. Esta puntuación va del 0 al 100. |
 | Probabilidad | Este atributo es la verdadera probabilidad de un perfil para lograr el objetivo predicho dentro del lapso de tiempo definido. Cuando se comparan resultados entre diferentes objetivos, se recomienda considerar la probabilidad por encima del percentil o la puntuación. La probabilidad siempre se debe utilizar al determinar la probabilidad promedio en toda la población elegible, ya que la probabilidad tiende a estar en el lado inferior para los eventos que no ocurren con frecuencia. Los valores del rango de probabilidad están entre 0 y 1. |
 | Percentil | Este valor proporciona información sobre el rendimiento de un perfil en relación con otros perfiles con puntuaciones similares. Por ejemplo, un perfil con una clasificación de percentil de 99 para la pérdida indica que tiene un mayor riesgo de pérdida en comparación con el 99 % de todos los demás perfiles marcados. Los percentiles van del 1 al 100. |
 | Tipo de tendencia | El tipo de tendencia seleccionado. |
 | Fecha de puntuación | La fecha en la que se produjo la puntuación. |
 | Factores influyentes | Estas son las razones previstas por las que un perfil es probable que se convierta o se pierda. Estos factores están compuestos por los siguientes atributos:<ul><li>Código: el perfil o atributo de comportamiento que influye positivamente en la puntuación prevista de un perfil. </li><li>Valor: Valor del perfil o atributo de comportamiento.</li><li>Importancia: Indica el peso del perfil o atributo de comportamiento en la puntuación predicha (baja, media, alta)</li></ul> |
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Una vez que prepare los datos y se asegure de que todas sus credenciales y esquemas están en su lugar, consulte la guía [Configurar una instancia de inteligencia artificial aplicada al cliente](./user-guide/configure.md), que le guiará por un tutorial paso a paso para crear una instancia de inteligencia artificial aplicada al cliente.
