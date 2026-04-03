@@ -2,10 +2,10 @@
 title: Crear una conexión de Zendesk Source en la interfaz de usuario
 description: Aprenda a crear una conexión de origen de Zendesk mediante la interfaz de usuario de Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 8%
 
 ---
 
@@ -45,35 +45,35 @@ Para obtener instrucciones adicionales sobre el esquema [!DNL Zendesk] necesario
 
 ## Conectar su cuenta de [!DNL Zendesk]
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en la barra de navegación izquierda para acceder al área de trabajo de [!UICONTROL Fuentes]. La pantalla [!UICONTROL Catálogo] muestra una variedad de orígenes con los que puede crear una cuenta.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en la barra de navegación izquierda para acceder al área de trabajo [!UICONTROL Sources]. La pantalla [!UICONTROL Catalog] muestra una variedad de orígenes con los que puede crear una cuenta.
 
 Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-En la categoría *Éxito del cliente*, seleccione **[!UICONTROL Zendesk]** y después **[!UICONTROL Agregar datos]**.
+En la categoría *Éxito del cliente*, seleccione **[!UICONTROL Zendesk]** y luego seleccione **[!UICONTROL Add data]**.
 
 ![catálogo](../../../../images/tutorials/create/zendesk/catalog.png)
 
-Aparecerá la página **[!UICONTROL Conectar cuenta de Zendesk]**. En esta página, puede usar credenciales nuevas o existentes.
+Aparecerá la página **[!UICONTROL Connect Zendesk account]**. En esta página, puede usar credenciales nuevas o existentes.
 
 ### Cuenta existente
 
-Para usar una cuenta existente, selecciona la cuenta de *Zendesk* con la que deseas crear un nuevo flujo de datos y luego selecciona **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, selecciona la cuenta de *Zendesk* con la que deseas crear un nuevo flujo de datos y luego selecciona **[!UICONTROL Next]** para continuar.
 
 ![existente](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### Nueva cuenta
 
-Si va a crear una cuenta nueva, seleccione **[!UICONTROL Cuenta nueva]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Conectarse al origen]** y deje pasar un tiempo para que se establezca la nueva conexión.
+Si va a crear una cuenta nueva, seleccione **[!UICONTROL New account]** y, a continuación, proporcione un nombre, una descripción opcional y sus credenciales. Cuando termine, seleccione **[!UICONTROL Connect to source]** y deje pasar un tiempo para que se establezca la nueva conexión.
 
 ![nuevo](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Seleccionar datos
 
-Una vez autenticado el origen, la página se actualiza a un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccione **[!UICONTROL Siguiente]** para continuar.
+Una vez autenticado el origen, la página se actualiza a un árbol de esquema interactivo que le permite explorar e inspeccionar la jerarquía de los datos. Seleccione **[!UICONTROL Next]** para continuar.
 
 ![select-data](../../../../images/tutorials/create/zendesk/select-data.png)
 
-## Pasos siguientes
+## Próximos pasos
 
 Siguiendo este tutorial, ha autenticado y creado una conexión de origen entre su cuenta de [!DNL Zendesk] y Experience Platform. Ahora puede continuar con el siguiente tutorial y [crear un flujo de datos para llevar los datos de éxito de los clientes a Experience Platform](../../dataflow/customer-success.md).
 
@@ -85,7 +85,7 @@ Las secciones siguientes proporcionan recursos adicionales a los que puede hacer
 
 A continuación se describen los pasos que puede seguir para comprobar que ha conectado correctamente el origen de [!DNL Zendesk] y que los perfiles de [!DNL Zendesk] se están ingiriendo en Experience Platform.
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Conjuntos de datos]. La pantalla [!UICONTROL Actividad de conjunto de datos] muestra los detalles de las ejecuciones.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Datasets]. La pantalla [!UICONTROL Dataset Activity] muestra los detalles de las ejecuciones.
 
 ![Página de actividades](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -93,7 +93,7 @@ A continuación, seleccione el ID de ejecución del flujo de datos que desea ver
 
 ![Página de flujo de datos](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Finalmente, seleccione **[!UICONTROL Previsualizar conjunto de datos]** para mostrar los datos ingeridos.
+Finalmente, seleccione **[!UICONTROL Preview dataset]** para mostrar los datos ingeridos.
 
 ![Conjunto de datos de Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
@@ -114,28 +114,28 @@ La tabla siguiente enumera las asignaciones compatibles que deben configurarse p
 | `results.active` | Booleano |
 | `results.alias` | Cadena |
 | `results.created_at` | Cadena |
-| `results.custom_role_id` | Entero |
-| `results.default_group_id` | Entero |
+| `results.custom_role_id` | Número entero |
+| `results.default_group_id` | Número entero |
 | `results.details` | Cadena |
 | `results.email` | Cadena |
-| `results.external_id` | Entero |
+| `results.external_id` | Número entero |
 | `results.iana_time_zone` | Cadena |
-| `results.id` | Entero |
+| `results.id` | Número entero |
 | `results.last_login_at` | Cadena |
 | `results.locale` | Cadena |
-| `results.locale_id` | Entero |
+| `results.locale_id` | Número entero |
 | `results.moderator` | Booleano |
 | `results.name` | Cadena |
 | `results.notes` | Cadena |
 | `results.only_private_comments` | Booleano |
-| `results.organization_id` | Entero |
+| `results.organization_id` | Número entero |
 | `results.phone` | Cadena |
 | `results.photo` | Cadena |
 | `results.report_csv` | Booleano |
 | `results.restricted_agent` | Booleano |
 | `results.result_type` | Cadena |
 | `results.role` | Cadena |
-| `results.role_type` | Entero |
+| `results.role_type` | Número entero |
 | `results.shared` | Booleano |
 | `results.shared_agent` | Booleano |
 | `results.shared_phone_number` | Booleano |
