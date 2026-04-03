@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de IU de Audiences
 description: Composición de audiencia en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar audiencias para su organización.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 16%
@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Si es cliente de Adobe Journey Optimizer, lea la [guía de introducción a la composición de audiencias](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=es) en la documentación de Adobe Journey Optimizer para obtener más información sobre cómo trabajar con la composición de audiencias en ese contexto.
+Si es cliente de Adobe Journey Optimizer, lea la [guía de introducción a la composición de audiencias](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) en la documentación de Adobe Journey Optimizer para obtener más información sobre cómo trabajar con la composición de audiencias en ese contexto.
 
 >[!ENDSHADEBOX]
 
@@ -80,7 +80,7 @@ Para añadir audiencias al bloque Audiencia. seleccione **[!UICONTROL Add Audien
 
 >[!IMPORTANT]
 >
->Tenga en cuenta que solo aparecerán **1&rbrace; audiencias definidas mediante la política de combinación predeterminada.**
+>Tenga en cuenta que solo aparecerán **1} audiencias definidas mediante la política de combinación predeterminada.**
 >
 >Además, solo se pueden usar **audiencias publicadas** creadas con el Generador de segmentos. Las audiencias creadas con Composición de audiencias y audiencias generadas externamente están disponibles **no**.
 
@@ -244,7 +244,8 @@ Aparece la ventana emergente **[!UICONTROL Enrichment attributes]**. Puede selec
 
 ![Los atributos de enriquecimiento que desea agregar están resaltados.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
-<!-- ## [!UICONTROL Join] {#join-block}
+<!-- 
+## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
 
@@ -262,7 +263,8 @@ After selecting **[!UICONTROL Add Audience]**, a list of audiences appears. Sele
 
 Your selected audiences now appear within the right rail when the **[!UICONTROL Join]** block is selected. 
 
-![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) -->
+![The audiences that were added as part of the Join are shown.](../images/ui/audience-composition/selected-audiences.png) 
+-->
 
 ## [!UICONTROL Rank] {#rank-block}
 
