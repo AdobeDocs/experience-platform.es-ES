@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: septiembre de 2021'
 description: Las notas de la versión de septiembre de 2021 de Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 30%
