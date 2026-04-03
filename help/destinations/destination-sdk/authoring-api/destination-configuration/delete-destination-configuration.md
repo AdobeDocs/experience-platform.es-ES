@@ -2,7 +2,7 @@
 description: Esta página ejemplifica la llamada de API utilizada para eliminar una configuración de destino existente a través de Adobe Experience Platform Destination SDK.
 title: Eliminar una configuración de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 2%
@@ -15,7 +15,7 @@ Esta página ejemplifica la solicitud de API y la carga útil que puede utilizar
 
 >[!IMPORTANT]
 >
->Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1&rbrace;.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
+>Todos los nombres y valores de parámetro admitidos por Destination SDK distinguen entre mayúsculas y minúsculas **1}.** Para evitar errores de distinción entre mayúsculas y minúsculas, utilice los nombres y valores de los parámetros exactamente como se muestra en la documentación.
 
 ## Introducción a las operaciones de la API de configuración de destino {#get-started}
 
@@ -43,7 +43,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Solicitud
++++ Solicitud
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -53,7 +53,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Respuesta
++++
+
++++ Respuesta
 
 Una respuesta correcta devuelve el estado HTTP 200 junto con una respuesta HTTP vacía.
 
@@ -71,3 +73,5 @@ Para obtener más información acerca de lo que puede hacer con este extremo, co
 * [Crear una configuración de destino](create-destination-configuration.md)
 * [Recuperación de una configuración de destino](retrieve-destination-configuration.md)
 * [Actualizar una configuración de destino](update-destination-configuration.md)
+
++++
