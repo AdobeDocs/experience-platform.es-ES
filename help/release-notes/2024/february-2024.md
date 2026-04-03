@@ -2,7 +2,7 @@
 title: 'Notas de la versión de Adobe Experience Platform: febrero de 2024'
 description: Las notas de la versión de febrero de 2024 de Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 96%
@@ -50,7 +50,8 @@ Adobe Experience Platform proporciona un conjunto de tecnologías que le permite
 
 Para obtener más información acerca de las colecciones de datos, lea la [información general de colecciones de datos](/help/tags/home.md).
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -62,7 +63,8 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
 ## Destinos {#destinations}
 
@@ -115,7 +117,7 @@ Para obtener más información sobre las zonas protegidas, lea la [información 
 
 | Función | Descripción |
 | ------- | ----------- |
-| Públicos de la cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar facilidad y sofisticación totales de la experiencia de segmentación de marketing de públicos basados en personas a públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Experience Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de la cuenta](/help/segmentation/types/account-audiences.md). |
+| Públicos de cuenta | Los públicos de cuenta ya están disponibles de forma general. Ahora puede utilizar la segmentación de cuentas para proporcionar facilidad y sofisticación totales de la experiencia de segmentación de marketing de públicos basados en personas a públicos basados en cuentas en las ediciones B2B y B2P de Real-Time Customer Experience Platform. Esta versión permite utilizar públicos basados en personas como predicado para públicos basados en cuentas, añade funcionalidades de búsqueda, admite el uso de entidades personalizadas y cumple con la gobernanza de datos. Para obtener más información acerca de esta característica, lea la [información general de los públicos de cuenta](/help/segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
