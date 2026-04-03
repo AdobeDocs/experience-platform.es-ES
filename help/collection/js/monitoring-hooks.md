@@ -2,7 +2,7 @@
 title: Enlaces de monitorización para Adobe Experience Platform Web SDK
 description: Aprenda a utilizar los enlaces de monitorización que proporciona Adobe Experience Platform Web SDK para depurar la implementación y capturar los registros de SDK web.
 exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 6%
@@ -151,7 +151,7 @@ onNetworkResponse(data) {
 | `data.body` | Cadena | El cuerpo de respuesta en formato de cadena. |
 | `data.parsedBody` | Objeto | Objeto que contiene el cuerpo de respuesta analizado. Si se produce un error al analizar el cuerpo de respuesta, este parámetro es indefinido. |
 | `data.status` | Cadena | El código de respuesta en formato entero. |
-| `data.retriesAttempted` | Entero | El número de reintentos realizados al enviar la solicitud. Cero significa que la solicitud se realizó correctamente en el primer intento. |
+| `data.retriesAttempted` | Número entero | El número de reintentos realizados al enviar la solicitud. Cero significa que la solicitud se realizó correctamente en el primer intento. |
 
 ## `onNetworkError` {#onNetworkError}
 
