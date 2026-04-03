@@ -1,8 +1,8 @@
 ---
 title: Cálculo de estadísticas de conjuntos de datos
-description: Este documento describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
+description: En este documento se describe cómo calcular las estadísticas de nivel de columna en conjuntos de datos de Azure Data Lake Storage (ADLS) con comandos SQL.
 exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Para ver las estadísticas que se calcularon con el comando `ANALYZE TABLE COMPU
 
 >[!IMPORTANT]
 >
->Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección &#x200B;](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
+>Los comandos `COMPUTE STATISTICS`, `FILTERCONTEXT` y `FOR COLUMNS` no son compatibles con las tablas de almacenamiento acelerado. Actualmente, estas extensiones para el comando `ANALYZE TABLE` solo son compatibles con las tablas ADLS. Para obtener más información, consulte la [sección ](../sql/syntax.md#analyze-table) ANALYZE TABLE de la guía de sintaxis SQL.
 
 Esta guía le ayuda a estructurar las consultas para que pueda calcular las estadísticas de columna de un conjunto de datos de ADLS. Con estos comandos, puede ver las estadísticas generadas en la sesión a través de un cliente SQL mediante una consulta SQL.
 
@@ -62,7 +62,7 @@ Si no proporciona un nombre de alias por adelantado, el Servicio de consultas ge
 Un ejemplo de salida de una consulta `COMPUTE STATISTICS` es el siguiente:
 
 ```console
-| Statistics ID         | 
+| Statistics ID         |
 | --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
