@@ -2,7 +2,7 @@
 title: Guía de configuración de reglas de vinculación de Identity Graph
 description: Obtenga información sobre los distintos tipos de implementación que puede configurar mediante las reglas de vinculación de gráficos de identidad.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -65,7 +65,7 @@ Configure los siguientes ajustes en la interfaz de simulación de gráficos ante
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | ECID | ECID | COOKIE | | 2 |
-| IDFA | IDFA | DEVICE | | 3 |
+| IDFA | IDFA | DISPOSITIVO | | 3 |
 
 **Gráfico simulado**
 
@@ -240,7 +240,7 @@ Está ingiriendo un CRMID sin hash (sin conexión) y un CRMID con hash (en líne
 Configure los siguientes ajustes en la interfaz de simulación de gráficos antes de simular el gráfico.
 
 | Nombre para mostrar | Símbolo de identidad | Tipo de identidad | Único por gráfico | Prioridad del espacio de nombres |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -252,11 +252,11 @@ Simule las siguientes configuraciones en Simulación de gráficos. Puede crear s
 
 >[!BEGINTABS]
 
->[!TAB Shared device]
+>[!TAB Dispositivo compartido]
 
-John and Jane share a device.
+John y Jane comparten un dispositivo.
 
-**Text mode**
+**Modo de texto**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -269,18 +269,19 @@ CRMIDhash: Jane, ECID: 111
 
 >[!TAB Datos incorrectos]
 
-Due to errors in the hashing process, a non-unique hashed CRMID is generated and sent to Identity Service.
+Debido a errores en el proceso de hash, se genera un CRMID con hash no único que se envía al servicio de identidad.
 
-**Text mode**
+**Modo de texto**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
 CRMID: Jane, CRMIDhash: aaaa
 ```
 
-![A shared device graph with an error in the hashing process, leading to a non-unique hashed CRMID.](../images/configs/intermediate/hashing-error.png)
+![Gráfico de un dispositivo compartido con un error en el proceso de hash, que genera un CRMID con hash no único.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,13 +340,14 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
-### Use case: Your data includes three unique namespaces
+### Caso de uso: sus datos incluyen tres áreas de nombres únicas
 
 >[!NOTE]
 >
->To complete the implementations below, you must create a custom namespace with the identity symbol (case sensitive) of: `CRMID`.
+>Para completar las implementaciones siguientes, debe crear un área de nombres personalizada con el símbolo de identidad (distingue mayúsculas de minúsculas) de: `CRMID`.
 
 El cliente define una entidad de una sola persona de la siguiente manera:
 
@@ -402,16 +404,16 @@ La prioridad del área de nombres juega un papel crítico en escenarios de gráf
 
 Lea esta sección para ver las implementaciones avanzadas de [!DNL Identity Graph Linking Rules].
 
-### Use case: You need support for multiple lines of businesses
+### Caso de uso: necesita soporte para varias líneas de negocios
 
 >[!NOTE]
 >
->To complete the implementations below, you must create custom namespaces with the identity symbols (case sensitive) of:
+>Para completar las implementaciones siguientes, debe crear áreas de nombres personalizadas con los símbolos de identidad (con distinción de mayúsculas y minúsculas) de:
 >
 >* `CRMID`
 >* `loginID`
 
-Your end-users have two different accounts, a personal account and a business account. Each account is identified by a different ID. En esta situación, un gráfico típico tendría el siguiente aspecto:
+Los usuarios finales tienen dos cuentas diferentes, una cuenta personal y una cuenta empresarial. Cada cuenta se identifica con un ID diferente. En esta situación, un gráfico típico tendría el siguiente aspecto:
 
 **Modo de texto**
 
@@ -515,15 +517,15 @@ Configure los siguientes ajustes en la interfaz de simulación de gráficos ante
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
 
-**Exercise**
+**Ejercicio**
 
-Simulate the following configuration in Graph Simulation. You can either create your own events, or copy and paste using text mode.
+Simule la siguiente configuración en Simulación de gráficos. Puede crear sus propios eventos o copiar y pegar mediante el modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Shared device]
+>[!TAB Dispositivo compartido]
 
-**Text mode**
+**Modo de texto**
 
 ```json
 CRMID: John, loyaltyID: John, Email: john@g
@@ -534,7 +536,7 @@ CRMID: John, ECID: 111
 CRMID: Jane, ECID: 111
 ```
 
-![A complex graph example of shared device.](../images/configs/advanced/complex-shared-device.png)
+![Ejemplo de gráfico complejo del dispositivo compartido.](../images/configs/advanced/complex-shared-device.png)
 
 >[!TAB El usuario final cambia su dirección de correo electrónico]
 
