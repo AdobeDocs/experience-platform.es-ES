@@ -2,7 +2,7 @@
 title: Resumen del perfil del cliente en tiempo real
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -51,7 +51,7 @@ El almacén de perfiles utiliza una infraestructura de Microsoft Azure Cosmos DB
 
 Experience Platform proporciona una serie de protecciones que le ayudarán a evitar la creación de [esquemas XDM (Experience Data Model)](../xdm/home.md) que el perfil del cliente en tiempo real no admite. Esto incluye límites leves que resultarán en una degradación del rendimiento, así como límites duros que resultarán en errores y roturas del sistema. Para obtener más información, incluida una lista de directrices y ejemplos de casos de uso, lea la documentación de [protecciones de perfil](guardrails.md).
 
-### Tablero de perfil {#profile-dashboard}
+### Panel de control de perfil {#profile-dashboard}
 
 La interfaz de usuario de Experience Platform proporciona un tablero a través del cual puede ver información importante acerca de los datos del perfil del cliente en tiempo real, tal como se capturan durante una instantánea diaria. Para obtener información sobre cómo acceder al panel [!DNL Profile] y trabajar con él en la interfaz de usuario, así como información detallada sobre las métricas mostradas en el panel, consulte la [Guía de la interfaz de usuario del panel de perfil](ui/profile-dashboard.md).
 
@@ -89,13 +89,15 @@ Una de las características principales de [!DNL Real-Time Customer Profile] es 
 
 Para obtener más información sobre los esquemas de unión, incluido cómo acceder a los esquemas de unión en la interfaz de usuario, visite la [guía de la interfaz de usuario del esquema de unión](ui/union-schema.md).
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## Perfiles y públicos
 
