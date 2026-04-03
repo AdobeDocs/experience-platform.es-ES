@@ -5,7 +5,7 @@ title: Punto final de API de políticas de gobernanza de datos
 description: Las políticas de gobernanza de datos son reglas que su organización adopta y que describen los tipos de acciones de marketing que se le permite realizar, o que se le restringe, en los datos de Experience Platform. El extremo /policies se utiliza para todas las llamadas a la API relacionadas con la visualización, creación, actualización o eliminación de directivas de control de datos.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 3%
@@ -727,6 +727,6 @@ Una respuesta correcta devuelve la lista actualizada de directivas principales h
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Una vez que haya definido nuevas directivas o actualizado las existentes, puede utilizar la API [!DNL Policy Service] para probar acciones de marketing con etiquetas o conjuntos de datos específicos y ver si las directivas producen infracciones según lo esperado. Consulte la guía de los [extremos de evaluación de directivas](./evaluation.md) para obtener más información.
