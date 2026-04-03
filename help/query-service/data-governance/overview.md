@@ -2,9 +2,9 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3131'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Para ejecutar consultas en el servicio de consultas, se debe asignar a un usuari
 
 | Permiso | Descripción |
 |---|---|
-| [!UICONTROL Administrar consultas] | Este permiso permite a los usuarios ejecutar consultas de exploración de datos y consultas por lotes, que pueden leer un conjunto de datos existente o escribir datos en conjuntos de datos. Esto incluye consultas `CREATE TABLE AS SELECT` (`CTAS`) y `INSERT INTO AS SELECT` (`ITAS`). |
+| [!UICONTROL Manage Queries] | Este permiso permite a los usuarios ejecutar consultas de exploración de datos y consultas por lotes, que pueden leer un conjunto de datos existente o escribir datos en conjuntos de datos. Esto incluye consultas `CREATE TABLE AS SELECT` (`CTAS`) y `INSERT INTO AS SELECT` (`ITAS`). |
 
 **Permisos de conjuntos de datos**
 
@@ -63,8 +63,8 @@ A través de la interfaz Permisos, puede definir el control de acceso basado en 
 
 | Permiso | Descripción |
 |---|---|
-| [!UICONTROL Administrar conjuntos de datos] | Este permiso proporciona acceso de solo lectura a los esquemas y permite leer, crear, editar y eliminar conjuntos de datos para su uso con el servicio de consultas. |
-| [!UICONTROL Ver conjuntos de datos] | Este permiso permite el acceso de solo lectura para conjuntos de datos y esquemas para su uso con el servicio de consulta. |
+| [!UICONTROL Manage Datasets] | Este permiso proporciona acceso de solo lectura a los esquemas y permite leer, crear, editar y eliminar conjuntos de datos para su uso con el servicio de consultas. |
+| [!UICONTROL View Datasets] | Este permiso permite el acceso de solo lectura para conjuntos de datos y esquemas para su uso con el servicio de consulta. |
 
 #### Control de acceso para columnas/campos
 
@@ -95,9 +95,9 @@ La palabra clave `CREATE VIEW` define una vista de una consulta, pero la vista n
 
 Con la [capacidad de control de acceso basada en atributos](../../access-control/abac/overview.md), puede definir ámbitos organizativos o de uso de datos en conjuntos de datos de hechos y dimensiones en el [almacén acelerado](../data-distiller/sql-insights/send-accelerated-queries.md). Esto permite a los administradores administrar el acceso a segmentos específicos y administrar mejor el acceso dado a usuarios o grupos de usuarios.
 
-Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [agregar y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a sus esquemas desde el área de trabajo [!UICONTROL Etiquetas] en la interfaz de usuario de [!UICONTROL Esquemas].
+Para crear restricciones de acceso basadas en campos en conjuntos de datos acelerados, puede utilizar consultas CTAS del servicio de consulta para crear conjuntos de datos acelerados y estructurarlos en función de esquemas XDM o esquemas ad hoc existentes. Los administradores pueden [agregar y editar etiquetas de uso de datos para el esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) o [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Puede aplicar, crear y editar etiquetas a los esquemas desde el área de trabajo [!UICONTROL Labels] en la interfaz de usuario de [!UICONTROL Schemas].
 
-Las etiquetas de uso de datos también se pueden [aplicar o editar directamente en el conjunto de datos](../../data-governance/labels/user-guide.md#add-labels) a través de la interfaz de usuario de conjuntos de datos, o crear desde el área de trabajo de control de acceso [!UICONTROL Etiquetas]. Consulte la guía sobre cómo [crear una etiqueta nueva](../../access-control/abac/ui/labels.md) para obtener más información.
+Las etiquetas de uso de datos también se pueden [aplicar o editar directamente en el conjunto de datos](../../data-governance/labels/user-guide.md#add-labels) a través de la interfaz de usuario de conjuntos de datos, o crear desde el área de trabajo de Control de acceso [!UICONTROL Labels]. Consulte la guía sobre cómo [crear una etiqueta nueva](../../access-control/abac/ui/labels.md) para obtener más información.
 
 El acceso de los usuarios a columnas individuales se puede controlar mediante las etiquetas de uso de datos adjuntas y los conjuntos de permisos aplicados a las funciones asignadas a los usuarios.
 
@@ -115,7 +115,7 @@ El acceso al servicio de consultas mediante un cliente de terceros requiere cred
 
 ![Se ha resaltado la ficha de credenciales en el área de trabajo del servicio de consultas con credenciales que caducan.](../images/data-governance/overview/expiring-credentials.png)
 
-#### Credenciales que no caducan {#non-expiring-credentials}
+#### Credenciales sin caducidad {#non-expiring-credentials}
 
 [Las credenciales que no caducan](../ui/credentials.md#non-expiring-credentials) le permiten formar una conexión permanente con un cliente externo, lo que facilita la conexión al servicio de consultas sin necesidad de una contraseña manual.
 
@@ -135,7 +135,7 @@ Consulte la guía sobre las [opciones SSL disponibles para conexiones de cliente
 
 El cifrado es el uso de un proceso algorítmico para transformar datos en texto codificado e ilegible para garantizar que la información esté protegida e inaccesible sin una clave de descifrado.
 
-El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Azure Data Lake mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener detalles sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+El cumplimiento de los datos del servicio de consultas garantiza que los datos siempre estén cifrados. Los datos en tránsito siempre son compatibles con HTTPS y los datos en reposo se cifran en un almacén de Data Lake de Azure mediante claves de sistema. Consulte la documentación sobre [cómo se cifran los datos en Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obtener más información. Para obtener más información sobre cómo se cifran los datos en reposo en Azure Data Lake Storage, consulte la [documentación oficial de Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 Los datos en tránsito siempre son compatibles con HTTPS y, de manera similar, cuando los datos están en reposo en el lago de datos, el cifrado se realiza con la clave de administración del cliente (CMK), que ya es compatible con la administración de lago de datos. La versión admitida actualmente es TLS1.2. Consulte la [documentación de claves administradas por el cliente (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) para obtener información sobre cómo configurar sus propias claves de cifrado para los datos almacenados en Adobe Experience Platform.
 
@@ -150,7 +150,7 @@ Un usuario de Experience Platform puede solicitar cualquiera de las categorías 
 
 La interfaz de usuario de registros de consultas permite supervisar y revisar los detalles de ejecución de todas las consultas que se han ejecutado mediante el Editor de consultas o la API del servicio de consultas. Esto aporta transparencia a las actividades del Servicio de consultas, lo que le permite comprobar los metadatos de **todas** las consultas que se han ejecutado en el Servicio de consultas. Incluye todos los tipos de consultas, ya sean exploratorias, por lotes o programadas.
 
-Se puede acceder a los registros de consultas a través de la interfaz de usuario de Experience Platform en la pestaña [!UICONTROL Registros] del área de trabajo [!UICONTROL Consultas].
+Se puede acceder a los registros de consultas a través de la interfaz de usuario de Experience Platform en la pestaña [!UICONTROL Logs] del área de trabajo [!UICONTROL Queries].
 
 ![Pestaña Registro de consultas con el panel de detalles resaltado.](../images/data-governance/overview/queries-log.png)
 
@@ -170,7 +170,7 @@ La siguiente tabla indica las categorías de consultas capturadas por los regist
 
 A continuación se muestra una lista de tres registros de servidor extendidos que contienen más detalles que los que se encuentran dentro de los registros de consulta. Los registros extendidos se encuentran dentro de las categorías de consulta de registros de auditoría:
 
-1. **Registros de metaconsultas**: cuando se ejecuta una consulta, se ejecutan varias subconsultas de backend asociadas (como el análisis). Estos tipos de consultas se conocen como consultas de &quot;metadatos&quot;. Sus detalles relevantes se pueden encontrar en los registros de auditoría.
+1. **Registros de consultas de Meta**: cuando se ejecuta una consulta, se ejecutan varias subconsultas de back-end asociadas (como el análisis). Estos tipos de consultas se conocen como consultas de &quot;metadatos&quot;. Sus detalles relevantes se pueden encontrar en los registros de auditoría.
 1. **Registros de sesión**: el sistema crea un registro de entrada de sesión para un usuario cuando inicia sesión en el Servicio de consultas, independientemente de si ejecuta o no una consulta.
 1. **Registros de conexión de cliente de terceros**: se genera un registro de auditoría de conectividad cuando un usuario conecta correctamente el servicio de consultas a un cliente de terceros.
 
