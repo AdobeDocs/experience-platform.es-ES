@@ -34,7 +34,7 @@ En la tabla siguiente se muestra el efecto combinado de `defaultConsent` y `setC
 
 >[!NOTE]
 >
->Las cookies de identidad y consentimiento se establecen incluso cuando un visitante se excluye. Estas cookies son necesarias para cumplir con las preferencias de recopilación de datos del visitante. Consulte [Cookies de Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) para obtener una lista completa de las cookies que establece Web SDK.
+>Las cookies de identidad y consentimiento se establecen incluso cuando un visitante se excluye. Estas cookies son necesarias para cumplir con las preferencias de recopilación de datos del visitante. Consulte [Cookies de Web SDK](https://experienceleague.adobe.com/es/docs/core-services/interface/data-collection/cookies/web-sdk) para obtener una lista completa de las cookies que establece Web SDK.
 
 Cuando un visitante vuelve a conceder el consentimiento después de revocarlo anteriormente (llamando a `setConsent` con `"general": "in"` después de `"general": "out"`), Web SDK reanuda el envío de eventos y utiliza el ECID existente de la cookie si no ha caducado. Se conserva la identidad del visitante.
 
