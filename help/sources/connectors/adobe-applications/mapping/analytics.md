@@ -2,7 +2,7 @@
 title: Asignación de campos para el conector de Adobe Analytics Source
 description: Asigne campos de Adobe Analytics a campos XDM mediante el conector de Source de Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3832'
 ht-degree: 5%
@@ -297,41 +297,41 @@ Para obtener más información sobre cómo realizar estas transformaciones media
 
 +++Seleccione para ver una tabla de campos de asignación avanzados obsoletos
 
-| Fuente de datos | Campo XDM | Tipo de XDM | Descripción |
-| — | — | — | — ||
+| Fuente de datos | Campo XDM | Tipo XDM | Descripción |
+| — | — | — | — | — ||
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | cadena | eVars de Analytics personalizadas. Cada organización puede utilizar eVars de forma diferente. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | cadena | Propiedades personalizadas de Analytics. Cada organización puede utilizar props de forma diferente. |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | cadena | props personalizados de Analytics. Cada organización puede utilizar props de forma diferente. |
 | `post_browser_height` | `environment.browserDetails.viewportHeight` | entero | Altura del explorador, en píxeles. |
-| `post_browser_width` | `environment.browserDetails.viewportWidth` | entero | Anchura del explorador, en píxeles. |
+| `post_browser_width` | `environment.browserDetails.viewportWidth` | entero | Ancho del explorador, en píxeles. |
 | `post_campaign` | `marketing.trackingCode` | cadena | La variable utilizada en la dimensión Código de seguimiento. |
 | `post_channel` | `web.webPageDetails.siteSection` | cadena | La variable utilizada en la dimensión Secciones del sitio. |
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.id` | cadena | El ID de visitante personalizado, si está establecido. |
-| `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | cadena | La URL de la primera página a la que llega el visitante. |
+| `post_first_hit_page_url` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.URL` | cadena | La dirección URL de la primera página a la que llega el visitante. |
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | cadena | Variable utilizada en la dimensión Página de entrada original. El nombre de página de la página de entrada del visitante. |
-| `post_keywords` | `search.keywords` | cadena | Las palabras clave que se recopilaron para la visita. |
-| `post_page_url` | `web.webPageDetails.URL` | cadena | La URL de la visita individual a la página. |
-| `post_pagename` | `web.webPageDetails.pageViews.value` | cadena | Es igual a 1 en visitas que tienen un nombre de página. Esto es similar a la métrica Vistas de página de Adobe Analytics. |
+| `post_keywords` | `search.keywords` | cadena | Las palabras clave recopiladas para la visita. |
+| `post_page_url` | `web.webPageDetails.URL` | cadena | La dirección URL de la visita a la página. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | cadena | Igual a 1 en las visitas que tienen un nombre de página. Esto es similar a la métrica Vistas de página de Adobe Analytics. |
 | `post_purchaseid` | `commerce.order.purchaseID` | cadena | Variable que se utiliza para identificar compras de forma exclusiva. |
-| `post_referrer` | `web.webReferrer.URL` | cadena | Dirección URL de la página anterior. |
-| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | cadena |  Variable de estado. |
+| `post_referrer` | `web.webReferrer.URL` | cadena | La dirección URL de la página anterior. |
+| `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | cadena | variable de estado. |
 | `post_user_server` | `web.webPageDetails.server` | cadena | Variable utilizada en la dimensión Servidor. |
 | `post_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | cadena | Variable utilizada para rellenar la dimensión Código postal. |
-| `browser` | `_experience.analytics.environment.`<br/>`browserID` | entero | El ID numérico del explorador. |
+| `browser` | `_experience.analytics.environment.`<br/>`browserID` | entero | El identificador numérico del explorador. |
 | `domain` | `environment.domain` | cadena | La variable utilizada en la dimensión Dominio. Se basa en el proveedor de servicios de Internet (ISP) del usuario. |
-| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | cadena | La primera URL de referencia del visitante. |
-| `geo_city` | `placeContext.geo.city` | cadena | El nombre de la ciudad de la visita. Se basa en la dirección IP de la visita. |
-| `geo_dma` | `placeContext.geo.dmaID` | entero | El ID numérico del área demográfica de la visita. Se basa en la dirección IP de la visita. |
-| `geo_region` | `placeContext.geo.stateProvince` | cadena | El nombre del estado o la región de la visita. Se basa en la dirección IP de la visita. |
+| `first_hit_referrer` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.URL` | cadena | La primera dirección URL de referencia del visitante. |
+| `geo_city` | `placeContext.geo.city` | cadena | Nombre de la ciudad de la visita. Se basa en la dirección IP de la visita. |
+| `geo_dma` | `placeContext.geo.dmaID` | entero | El identificador numérico del área demográfica de la visita. Se basa en la dirección IP de la visita. |
+| `geo_region` | `placeContext.geo.stateProvince` | cadena | Nombre del estado o región de la visita. Se basa en la dirección IP de la visita. |
 | `geo_zip` | `placeContext.geo.postalCode` | cadena | El código postal de la visita. Se basa en la dirección IP de la visita. |
-| `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | entero | ID numérica que representa el sistema operativo del visitante. Se basa en la columna user_agent. |
-| `search_page_num` | `search.pageDepth` | entero | Esta variable la utiliza la dimensión Clasificación de todas las páginas de búsqueda e indica en qué página de resultados de búsqueda se encuentra el sitio | apareció en antes de que el usuario hiciera clic en el sitio. |
+| `os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | entero | El ID numérico que representa el sistema operativo del visitante. Se basa en la columna user_agent. |
+| `search_page_num` | `search.pageDepth` | entero | Esta variable la utiliza la dimensión Rango de todas las páginas de búsqueda, e indica en qué página de resultados de búsqueda apareció su sitio | antes de que el usuario hiciera clic en el sitio. |
 | `visit_keywords` | `_experience.analytics.session.`<br/>`search.keywords` | cadena | Variable utilizada en la dimensión Palabras clave de búsqueda. |
 | `visit_num` | `_experience.analytics.session.`<br/>`num` | entero | Variable utilizada en la dimensión Número de visita. Comienza en 1 y aumenta cada vez que se inicia una nueva visita (por usuario). |
 | `visit_page_num` | `_experience.analytics.session.`<br/>`depth` | entero | Variable utilizada en la dimensión Profundidad de visita. Este valor aumenta en 1 por cada visita que genera el usuario y se restablece después de cada visita. |
 | `visit_referrer` | `_experience.analytics.session.`<br/>`web.webReferrer.URL` | cadena | El primer referente de la visita. |
 | `visit_search_page_num` | `_experience.analytics.session.`<br/>`search.pageDepth` | entero | El primer nombre de página de la visita. |
-| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objeto | Propiedades personalizadas de Analytics, configuradas para ser props de lista. Contiene una lista delimitada de valores. |
-| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objeto | Lo utilizan las variables de jerarquía y contiene una lista delimitada de valores. | {values (array), delimiter (string)} |
+| `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | Objeto | propiedades personalizadas de Analytics, configuradas para ser props de lista. Contiene una lista delimitada de valores. |
+| `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | Objeto | Utilizado por variables de jerarquía y contiene una lista delimitada de valores. | {values (array), delimiter (string)} |
 | `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | matriz | Una lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. | {value (string), key (string)} |
 | `post_cookies` | `environment.browserDetails.cookiesEnabled` | booleano | Variable utilizada en la dimensión Compatibilidad con cookies. |
 | `post_event_list` | `commerce.purchases`,<br/>`commerce.productViews`,<br/>`commerce.productListOpens`,<br/>`commerce.checkouts`,<br/>`commerce.productListAdds`,<br/>`commerce.productListRemovals`,<br/>`commerce.productListViews` | Objeto | Eventos de comercio estándar activados en la visita. | {id (cadena), value (número)} |
@@ -340,27 +340,27 @@ Para obtener más información sobre cómo realizar estas transformaciones media
 | `post_latitude` | `placeContext.geo._schema.latitude` | número |   |
 | `post_longitude` | `placeContext.geo._schema.longitude` | número |   |
 | `post_page_event` | `web.webInteraction.type` | cadena | El tipo de visita que se envía en la solicitud de imagen (visita estándar, vínculo de descarga, vínculo de salida o vínculo personalizado en el que se hace clic). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | número | Es igual a 1 si la visita es un clic en vínculo. Esto es similar a la métrica Eventos de página de Adobe Analytics. |
-| `post_page_event_var1` | `web.webInteraction.URL` | cadena | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Es la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
-| `post_page_event_var2` | `web.webInteraction.name` | cadena | Esta variable solo se utiliza en solicitudes de imagen de seguimiento de vínculos. Es el nombre personalizado del vínculo. |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | número | Igual a 1 si la visita es un clic en vínculo. Esto es similar a la métrica Eventos de página de Adobe Analytics. |
+| `post_page_event_var1` | `web.webInteraction.URL` | cadena | Esta variable solo se usa en solicitudes de imagen de seguimiento de vínculos. Es la dirección URL del vínculo de descarga, de salida o personalizado en el que se hizo clic. |
+| `post_page_event_var2` | `web.webInteraction.name` | cadena | Esta variable solo se usa en solicitudes de imagen de seguimiento de vínculos. Es el nombre personalizado del vínculo. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | booleano | Se utiliza para rellenar la dimensión Páginas no encontradas. Esta variable debe estar vacía o debe contener &quot;ErrorPage&quot; |
-| `post_pagename_no_url` | `web.webPageDetails.name` | número | El nombre de la página (si está configurado). Si no se especifica ninguna página, este valor se deja vacío. |
-| `post_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se transmite mediante la variable products. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
-| `post_search_engine` | `search.searchEngine` | cadena | El ID numérico que representa el motor de búsqueda que refirió al visitante a su sitio. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | número | El nombre de la página (si está establecido). Si no se especifica ninguna página, este valor se deja vacío. |
+| `post_product_list` | `productListItems[].items` | matriz | La lista de productos, tal como se pasó a través de la variable de productos. | {SKU (cadena), cantidad (entero), priceTotal (número)} |
+| `post_search_engine` | `search.searchEngine` | cadena | El identificador numérico que representa el motor de búsqueda que refirió al visitante a su sitio. |
 | `mvvar1_instances` | `.list.items[]` | Objeto | Lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
 | `mvvar2_instances` | `.list.items[]` | Objeto | Lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
 | `mvvar3_instances` | `.list.items[]` | Objeto | Lista de valores de variables. Contiene una lista delimitada de valores personalizados, según la implementación. |
-| `color` | `device.colorDepth` | entero | ID de profundidad de color, basada en el valor de la columna c_color. |
+| `color` | `device.colorDepth` | entero | ID de profundidad de color, basado en el valor de la columna c_color. |
 | `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | cadena | El ID numérico, que representa el tipo de referente del primer referente del visitante. |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | entero | Marca de tiempo de la primera visita del visitante en tiempo UNIX®. |
 | `geo_country` | `placeContext.geo.countryCode` | cadena | Abreviatura del país del que provino la visita basada en la dirección IP. |
-| `geo_latitude` | `placeContext.geo._schema.latitude` | número |  |
-| `geo_longitude` | `placeContext.geo._schema.longitude` | número |  |
+| `geo_latitude` | `placeContext.geo._schema.latitude` | número | |
+| `geo_longitude` | `placeContext.geo._schema.longitude` | número | |
 | `paid_search` | `search.isPaid` | booleano | Un indicador que se establece si la visita coincide con la detección de búsquedas de pago. |
-| `ref_type` | `web.webReferrer.type` | cadena | ID numérica que representa el tipo de referente de la visita. |
-| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | booleano | Un indicador (1=de pago, 0=no pagado) que indica si la primera visita se produjo a partir de una visita de búsqueda de pago. |
+| `ref_type` | `web.webReferrer.type` | cadena | Un ID numérico que representa el tipo de referente de la visita. |
+| `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | booleano | Un indicador (1=de pago, 0=no pagado) que indica si la primera visita procede de una visita de búsqueda de pago. |
 | `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | cadena | ID numérica que representa el tipo de referente del primer referente de la visita. |
-| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | cadena | ID numérica del primer motor de búsqueda de la visita. |
-| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | entero | Marca de tiempo de la primera visita individual de la visita en tiempo UNIX®. |
+| `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | cadena | ID numérico del primer motor de búsqueda de la visita. |
+| `visit_start_time_gmt` | `_experience.analytics.session.`<br/>`timestamp` | entero | Marca de tiempo de la primera visita individual en tiempo UNIX®. |
 
 +++
