@@ -4,7 +4,7 @@ title: Extremo de API de trabajos de exportación de segmentos
 description: Los trabajos de exportación son procesos asincrónicos que se utilizan para mantener los miembros de segmentos de audiencia en conjuntos de datos. Puede utilizar el extremo /export/job en la API del servicio de segmentación de Adobe Experience Platform, que le permite recuperar, crear y cancelar mediante programación los trabajos de exportación.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
