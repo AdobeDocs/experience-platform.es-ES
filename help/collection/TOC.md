@@ -6,10 +6,10 @@ breadcrumb-title: Recopilación de datos
 user-guide-description: Aprenda a enviar datos a Adobe Experience Platform.
 feature: Data Collection
 role: Developer
-source-git-commit: c848f821ea911c82531c6784a17df0116572cd86
+source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 36%
+source-wordcount: '167'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,15 @@ ht-degree: 36%
 
 + [Información general](home.md)
 + [Permisos](permissions.md)
++ Identidad {#identity}
+   + [Información general](identity/overview.md)
+   + [Uso de identityMap](identity/identity-map.md)
+   + [ID de dispositivos propios](identity/fpid.md)
+   + [Uso compartido entre dominios](identity/cross-domain-sharing.md)
+   + [Aplicaciones móviles a web/WebViews móviles](identity/mobile-to-web.md)
+   + [Compatibilidad con identidad unificada](identity/unified-identity-support.md)
+   + [Consentimiento e identidad](identity/consent.md)
+   + [Solución de problemas](identity/troubleshooting.md)
 + BrightScript {#brightscript}
    + [Información general de BrightScript](brightscript/brs-overview.md)
 + JavaScript {#js}
@@ -99,10 +108,6 @@ ht-degree: 36%
    + [Configuración de un CSP](use-cases/configuring-a-csp.md)
    + [Depuración](use-cases/debugging.md)
    + [Deduplicación de eventos](use-cases/event-duplication.md)
-   + Identidad {#identity}
-      + [Información general](use-cases/identity/id-overview.md)
-      + [ID de dispositivos propios](use-cases/identity/first-party-device-ids.md)
-      + [Uso compartido de ID](use-cases/identity/id-sharing.md)
    + MCP {#mcp}
       + [Aplicaciones de ChatGPT](use-cases/mcp/chatgpt.md)
    + [Varias instancias de SDK](use-cases/multiple-instances.md)

@@ -2,9 +2,9 @@
 title: Ajustes de configuración de identidad
 description: Defina cómo la extensión de etiqueta identifica a los visitantes.
 exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '265'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,3 @@ Casilla de verificación que permite que Web SDK lea las cookies `AMCV` y `s_eci
 ## [!UICONTROL Use third-party cookies]
 
 Cuando esta opción está habilitada, Web SDK intenta almacenar un identificador de usuario en una cookie de terceros. Si se realiza correctamente, el usuario se identifica como un solo usuario a medida que navega por varios dominios, en lugar de identificarse como un usuario independiente en cada dominio. Si esta opción está habilitada, es posible que SDK aún no pueda almacenar el identificador de usuario en una cookie de terceros si el explorador no admite cookies de terceros o si el usuario lo ha configurado para no permitir cookies de terceros. En este caso, SDK solo almacena el identificador en el dominio de origen. La biblioteca JavaScript equivalente a esta casilla es [`thirdPartyCookiesEnabled`](/help/collection/js/commands/configure/thirdpartycookiesenabled.md).
-
->[!IMPORTANT]
->
->Las cookies de terceros no son compatibles con la funcionalidad [ID de dispositivo de origen](/help/collection/use-cases/identity/first-party-device-ids.md) en Web SDK. Puede usar ID de dispositivos de origen o cookies de terceros; no puede usar ambas funciones simultáneamente.
