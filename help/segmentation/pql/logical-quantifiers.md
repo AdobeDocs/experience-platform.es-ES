@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Cuantificadores lógicos de PQL
 description: Los cuantificadores lógicos se pueden utilizar para afirmar condiciones con matrices en Profile Query Language (PQL).
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 3%
@@ -64,6 +64,6 @@ La siguiente consulta de PQL obtiene todos los eventos con un precio superior a 
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que ha aprendido a usar cuantificadores lógicos, puede usarlos en sus consultas de PQL. Para obtener más información acerca de otras funciones de PQL, lea la [descripción general de Profile Query Language](./overview.md).
