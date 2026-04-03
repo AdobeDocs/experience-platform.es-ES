@@ -2,9 +2,9 @@
 title: Notas de la versión de Adobe Experience Platform, agosto de 2022
 description: Las notas de la versión de agosto de 2022 de Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2014'
+source-wordcount: '1967'
 ht-degree: 27%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform proporciona varios(as) [!DNL dashboards] a través de 
 
 | Función | Descripción |
 | --- | --- |
-| Widget de activaciones programadas | El widget [!UICONTROL Activaciones programadas] proporciona una vista tabularizada de los destinos activados más recientemente. Para cada segmento, incluye el nombre, la plataforma de destino y las fechas de inicio y finalización de la activación. Este widget le permite descubrir de un vistazo dónde y cuándo se está activando la audiencia, y hace que las activaciones duplicadas o innecesarias sean más transparentes. Esta información acumulada también resalta dónde se ha dejado de lado cualquier activación. |
+| Widget de activaciones programadas | El widget [!UICONTROL Scheduled activations] proporciona una vista tabulada de los destinos activados más recientemente. Para cada segmento, incluye el nombre, la plataforma de destino y las fechas de inicio y finalización de la activación. Este widget le permite descubrir de un vistazo dónde y cuándo se está activando la audiencia, y hace que las activaciones duplicadas o innecesarias sean más transparentes. Esta información acumulada también resalta dónde se ha dejado de lado cualquier activación. |
 
 Para obtener más información sobre [!DNL Dashboards], consulte la [[!DNL Dashboards] Información general](../../dashboards/home.md).
 
@@ -94,7 +94,7 @@ Para obtener más información acerca de [!DNL Data Prep], vea la [[!DNL Data Pr
 
 | Función | Descripción |
 | ----------- | ----------- |
-| (Beta) Compatibilidad de personalización basada en atributos para destinos de personalización | Con la versión beta de la personalización basada en atributos, verá dos nuevas tarjetas en el [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por la tarjeta de Adobe Target V1, el conector de Target V2 agrega un [paso de asignación](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.</li><li>**[!UICONTROL Personalization personalizado con atributos]**: este conector está actualmente en versión beta y solo está disponible para un número determinado de clientes. Además de la funcionalidad proporcionada por **[!UICONTROL Personalization personalizado]**, el conector **[!UICONTROL Personalization personalizado con atributos]** agrega un paso de asignación [opcional](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, lo que permite la personalización de la misma página y de la siguiente página basada en atributos.</li></ul> <br> Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Personalization personalizado con atributos]** requiere que use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para la recopilación de datos. Además, todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
+| (Beta) Compatibilidad de personalización basada en atributos para destinos de personalización | Con la versión beta de la personalización basada en atributos, verá dos nuevas tarjetas en el [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por la tarjeta de Adobe Target V1, el conector de Target V2 agrega un [paso de asignación](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a Adobe Target, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: este conector está actualmente en versión beta y solo está disponible para un número selecto de clientes. Además de la funcionalidad proporcionada por **[!UICONTROL Custom Personalization]**, el conector **[!UICONTROL Custom Personalization With Attributes]** agrega un paso de asignación [opcional](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) al flujo de trabajo de activación, que le permite asignar atributos de perfil a su destino de personalización personalizado, lo que permite la personalización de la misma página y de la página siguiente basada en atributos.</li></ul> <br> Los atributos de perfil pueden contener datos confidenciales. Para proteger estos datos, el destino **[!UICONTROL Custom Personalization With Attributes]** requiere que use la [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para la recopilación de datos. Además, todas las llamadas a la API de Edge Network deben realizarse en un [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,8 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Clase | [[!UICONTROL Clase de entidad de AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
-| Grupo de campo | [[!UICONTROL Objetos de trabajo de Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos envolvente que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
+| Clase | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Una clase basada en registros para crear esquemas de búsqueda para Adobe Journey Optimizer. |
+| Grupo de campo | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Grupo de campos envolvente que hace referencia a todos los grupos de campos específicos de objetos de nivel inferior para Adobe Workfront. |
 
 {style="table-layout:auto"}
 
@@ -125,13 +125,13 @@ XDM es una especificación de código abierto que proporciona estructuras y defi
 
 | Tipo de componente | Nombre | Descripción |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Campos comunes de eventos de pasos de Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Se agregaron dos propiedades nuevas: `origTimeStamp` y `experienceID`. |
-| Grupo de campo | [[!UICONTROL Detalles de abono de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Además de [!UICONTROL Perfil individual XDM], este grupo de campos ahora también se puede usar en esquemas basados en la clase de cuenta empresarial XDM. |
+| Grupo de campos | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Se agregaron dos propiedades nuevas: `origTimeStamp` y `experienceID`. |
+| Grupo de campo | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Además de [!UICONTROL XDM Individual Profile], este grupo de campos ahora también se puede utilizar en esquemas basados en la clase de cuenta empresarial de XDM. |
 | Grupo de campo | (Múltiple) | Se han actualizado varios grupos de campo relacionados con actividades B2B de Marketo a un estado estable. Consulte la siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1593/files) para obtener más información. |
 | Grupo de campo | (Múltiple) | Se han actualizado varios grupos de campos relacionados con el tiempo para corregir los errores que se estaban produciendo para `uvIndex` y `sunsetTime`. Consulte la siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1602/files) para obtener más información. |
-| Tipo de datos | [[!UICONTROL Elemento de lista de productos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Se ha agregado una nueva propiedad `productImageUrl`. |
-| Tipo de datos | [[!UICONTROL Información de detalles de datos de calidad de la experiencia (QoE)]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Se ha agregado una nueva propiedad `framesPerSecond`. |
-| Tipo de datos | [[!UICONTROL Información de detalles de sesión]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` se ha cambiado a `appVersion`. Los campos `meta:enum` y `description` también se han actualizado. |
+| Tipo de datos | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Se ha agregado una nueva propiedad `productImageUrl`. |
+| Tipo de datos | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Se ha agregado una nueva propiedad `framesPerSecond`. |
+| Tipo de datos | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` se ha cambiado a `appVersion`. Los campos `meta:enum` y `description` también se han actualizado. |
 | Tipos de datos y grupos de campos | (Múltiple) | Varios tipos de datos de medios y grupos de campos tienen campos nuevos y descripciones actualizadas. Consulte la siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1582/files) para obtener más información. |
 | (Todos) | (Múltiple) | Todos los objetos de esquema que contienen un campo `enum` ahora también contienen un campo `meta:enum` correspondiente para denotar los valores de visualización de cada restricción. Consulte la siguiente [solicitud de extracción](https://github.com/adobe/xdm/pull/1601/files) para obtener más información. |
 
@@ -154,7 +154,7 @@ Para obtener más información sobre el perfil del cliente en tiempo real, inclu
 
 ## Servicio de segmentación {#segmentation}
 
-[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de series temporales que representen las interacciones de los clientes con su marca.
+[!DNL Segmentation Service] define un subconjunto particular de perfiles mediante la descripción de los criterios que distinguen a un grupo comercializable de personas dentro de su base de clientes. Los segmentos pueden basarse en datos de registro (como información demográfica) o en eventos de serie temporal que representen las interacciones de los clientes con su marca.
 
 **Nuevas funciones**
 
