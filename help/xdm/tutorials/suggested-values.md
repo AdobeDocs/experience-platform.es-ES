@@ -2,7 +2,7 @@
 title: Administrar valores sugeridos en la API
 description: Aprenda a añadir valores sugeridos a un campo de cadena en la API del Registro de esquemas.
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -69,9 +69,11 @@ Como alternativa, puede definir un campo de cadena que no contenga una matriz `e
 
 Dado que la cadena no tiene una matriz `enum` para definir restricciones, su propiedad `meta:enum` se puede ampliar para incluir nuevos valores.
 
-<!-- ## Manage suggested values for standard fields
+<!-- 
+## Manage suggested values for standard fields
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). 
+-->
 
 ## Añadir valores sugeridos a un campo estándar {#add-suggested-standard}
 
@@ -150,7 +152,8 @@ Después de aplicar el descriptor, el Registro de esquemas responde con lo sigui
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+<!-- 
+### Remove suggested values {#remove-suggested-standard}
 
 If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
@@ -210,11 +213,12 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+``` 
+-->
 
 ## Administrar los valores sugeridos para un campo personalizado {#suggested-custom}
 
-Para administrar `meta:enum` de un campo personalizado, puede actualizar la clase primaria, el grupo de campos o el tipo de datos del campo mediante una solicitud de PATCH.
+Para administrar `meta:enum` de un campo personalizado, puede actualizar la clase primaria, el grupo de campos o el tipo de datos del campo mediante una solicitud PATCH.
 
 >[!WARNING]
 >
@@ -272,6 +276,6 @@ Después de aplicar el cambio, el Registro de esquemas responde con lo siguiente
 }
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 En esta guía se explica cómo administrar los valores sugeridos para campos de cadena en la API del Registro de esquemas. Consulte la guía [definición de campos personalizados en la API](./custom-fields-api.md) para obtener más información sobre cómo crear diferentes tipos de campos.
