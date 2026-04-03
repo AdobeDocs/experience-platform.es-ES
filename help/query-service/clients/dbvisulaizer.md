@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conectar DbVisualizer al servicio de consultas
 description: Este documento explica los pasos para conectar DbVisualizer con el servicio de consultas de Adobe Experience Platform.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 1%
+source-wordcount: '876'
+ht-degree: 0%
 
 ---
 
@@ -17,9 +17,9 @@ Este documento describe los pasos para conectar la herramienta de base de datos 
 
 ## Introducción
 
-Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL DbVisualizer] y que esté familiarizado con la forma de navegar por su interfaz. Para descargar la aplicación de escritorio [!DNL DbVisualizer] o para obtener más información, consulte la [documentación oficial [!DNL DbVisualizer] 3&rbrace;.](https://www.dbvis.com/download/)
+Esta guía requiere que ya tenga acceso a la aplicación de escritorio [!DNL DbVisualizer] y que esté familiarizado con la forma de navegar por su interfaz. Para descargar la aplicación de escritorio [!DNL DbVisualizer] o para obtener más información, consulte la [documentación oficial [!DNL DbVisualizer] 3}.](https://www.dbvis.com/download/)
 
-Para adquirir las credenciales necesarias para conectar [!DNL &#x200B; DbVisualizer] a Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Experience Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
+Para adquirir las credenciales necesarias para conectar [!DNL  DbVisualizer] a Experience Platform, debe tener acceso al área de trabajo Consultas en la interfaz de usuario de Experience Platform. Póngase en contacto con el administrador de su organización si actualmente no tiene acceso al área de trabajo Consultas.
 
 ## Crear una conexión de base de datos {#connect-database}
 
@@ -39,10 +39,10 @@ A continuación, introduzca las propiedades del controlador descritas en la tabl
 
 | Propiedad | Descripción |
 | ------ | ------ |
-| `PGHOST` | Nombre de host del servidor [!DNL PostgreSQL]. Este valor es su credencial **[!UICONTROL Host] de Experience Platform**. |
+| `PGHOST` | Nombre de host del servidor [!DNL PostgreSQL]. Este valor es su credencial **[!UICONTROL Host]de Experience Platform**. |
 | `ssl` | Defina el valor SSL `1` para habilitar el uso de SSL. |
 | `sslmode` | Controla el nivel de protección SSL. Se recomienda utilizar el modo SSL `require` al conectar clientes de terceros a Adobe Experience Platform. El modo `require` garantiza que se requiere cifrado en todas las comunicaciones y que se confía en la red para conectarse al servidor correcto. No se requiere la validación del certificado SSL del servidor. |
-| `user` | El nombre de usuario conectado a la base de datos es su ID de organización. Es una cadena alfanumérica que termina en `@Adobe.Org`. Este valor es su credencial **[!UICONTROL nombre de usuario] de Experience Platform**. |
+| `user` | El nombre de usuario conectado a la base de datos es su ID de organización. Es una cadena alfanumérica que termina en `@Adobe.Org`. Este valor es su credencial **[!UICONTROL Username]de Experience Platform**. |
 
 Utilice la barra de búsqueda para buscar cada propiedad y, a continuación, seleccione la celda correspondiente para el valor del parámetro. La celda se resaltará en azul. Escriba su credencial de Experience Platform en el campo de valor y seleccione **[!DNL Apply]** para agregar la propiedad del controlador.
 
@@ -54,7 +54,7 @@ La columna [!DNL Edited] muestra una marca de verificación para indicar que el 
 
 ### Credenciales del servicio de consulta de entrada {#query-service-credentials}
 
-Para encontrar las credenciales necesarias para conectar BBVisualizer con Query Service, inicie sesión en la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Consultas]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credenciales]**. Para obtener más información sobre cómo encontrar las credenciales de **host**, **puerto**, **base de datos**, **nombre de usuario** y **contraseña**, lea la [guía de credenciales](../ui/credentials.md).
+Para encontrar las credenciales necesarias para conectar BBVisualizer con Query Service, inicie sesión en la interfaz de usuario de Experience Platform y seleccione **[!UICONTROL Queries]** en el panel de navegación izquierdo, seguido de **[!UICONTROL Credentials]**. Para obtener más información sobre cómo encontrar las credenciales de **host**, **puerto**, **base de datos**, **nombre de usuario** y **contraseña**, lea la [guía de credenciales](../ui/credentials.md).
 
 ![Se ha resaltado la página Credenciales del área de trabajo de consultas de Experience Platform con las credenciales y las credenciales que caducan.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -78,17 +78,17 @@ Puede establecer una conexión con credenciales que caducan o no caducan. Para e
 
 | Parámetro de conexión | Descripción |
 |---|---|
-| **[!UICONTROL Nombre]** | Cree un nombre para la conexión. Se recomienda proporcionar un nombre descriptivo para reconocer la conexión. |
-| **[!UICONTROL Servidor de base de datos]** | Esta es su credencial **[!UICONTROL Host]** de Experience Platform. |
-| **[!UICONTROL Puerto de base de datos]** | El puerto de [!DNL Query Service]. Debe usar el puerto **80** o **5432** para conectarse con [!DNL Query Service]. |
+| **[!UICONTROL Name]** | Cree un nombre para la conexión. Se recomienda proporcionar un nombre descriptivo para reconocer la conexión. |
+| **[!UICONTROL Database Server]** | Esta es su credencial de Experience Platform **[!UICONTROL Host]**. |
+| **[!UICONTROL Database Port]** | El puerto de [!DNL Query Service]. Debe usar el puerto **80** o **5432** para conectarse con [!DNL Query Service]. |
 | **[!UICONTROL Database]** | Use su valor de credencial **[!UICONTROL Database]** de Experience Platform: `prod:all`. |
-| **[!UICONTROL Id. de usuario de base de datos]** | Este es su ID de organización de Experience Platform. Use su valor de credencial **[!UICONTROL Nombre de usuario]** de Experience Platform. El id. tendrá el formato `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Contraseña de base de datos]** | Esta cadena alfanumérica es su credencial **[!UICONTROL Password]** de Experience Platform. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados de `technicalAccountID` y `credential` descargados en el archivo JSON de configuración. El valor de contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante la inicialización de la que Adobe no conserva una copia. |
+| **[!UICONTROL Database Userid]** | Este es su ID de organización de Experience Platform. Use su valor de credencial **[!UICONTROL Username]** de Experience Platform. El id. tendrá el formato `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Database Password]** | Esta cadena alfanumérica es su credencial **[!UICONTROL Password]** de Experience Platform. Si desea utilizar credenciales que no caduquen, este valor son los argumentos concatenados de `technicalAccountID` y `credential` descargados en el archivo JSON de configuración. El valor de contraseña adopta la forma: {technicalAccountId}:{credential}. El archivo JSON de configuración para credenciales que no caducan es una descarga única durante la inicialización de la que Adobe no conserva una copia. |
 
 Una vez que haya escrito todas las credenciales relevantes, seleccione **[!DNL Connect]**.
 
 El cuadro de diálogo [!DNL Connect] aparece en la primera ocasión de la sesión. Escriba su Id. de usuario y contraseña y seleccione **[!DNL Connect]**. Aparece un mensaje en el registro para confirmar que la conexión se ha realizado correctamente.
 
-## Pasos siguientes
+## Próximos pasos
 
 Ahora que ha conectado [!DNL DbVisualizer] con [!DNL Query Service], puede usar [!DNL DbVisualizer] para escribir consultas. Para obtener más información sobre cómo escribir y ejecutar consultas, lea la [guía sobre la ejecución de consultas](../best-practices/writing-queries.md).
