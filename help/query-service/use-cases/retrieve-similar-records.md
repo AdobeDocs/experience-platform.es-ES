@@ -2,9 +2,9 @@
 title: Recuperar registros similares con funciones de orden superior
 description: Aprenda a identificar y recuperar registros similares o relacionados de uno o más conjuntos de datos en función de una métrica de similitud y un umbral de similitud. Este flujo de trabajo puede resaltar relaciones significativas o superposiciones entre conjuntos de datos dispares.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -146,7 +146,7 @@ En este ejemplo, se deben realizar varias acciones para comparar los conjuntos c
 
 Las siguientes secciones ilustran las transformaciones de datos previas, como la deduplicación, la eliminación de espacios en blanco y la conversión en minúsculas antes de iniciar el proceso de tokenización.
 
-### Anulación de duplicación {#deduplication}
+### Deduplicación {#deduplication}
 
 A continuación, utilice la cláusula `DISTINCT` para quitar duplicados. No hay duplicados en este ejemplo, pero es un paso importante para mejorar la precisión de cualquier comparación. A continuación se muestra el SQL necesario:
 
@@ -646,7 +646,7 @@ Los resultados se muestran en la tabla siguiente:
 | 1 | ipadmini | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 7 | 0,43 |
 | 2 | ipadmini | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 16 | 0,0 |
 | 3 | ipadmini | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 11 | 0,09 |
-| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1,0 |
+| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1.0 |
 | 5 | ipad | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 12 | 0,0 |
 | 6 | ipad | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 7 | 0,14 |
 | 7 | reloj | ipad | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 0 | 8 | 0,0 |
@@ -654,7 +654,7 @@ Los resultados se muestran en la tabla siguiente:
 | 9 | reloj | iphone | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 0 | 10 | 0,0 |
 | 10 | iphone | ipad | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 1 | 7 | 0,14 |
 | 11 | iphone | macbookpro | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 14 | 0,0 |
-| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1,0 |
+| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1.0 |
 
 {style="table-layout:auto"}
 
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 Los resultados de esta consulta dan las columnas para la unión de similitud, como se ve a continuación:
 
-+++Seleccionar para expandir
++++ Seleccionar para expandir
 
 |   | SetA_ProductNames | SetA_ProductNames |
 |---|--------------------------|------------------------|
@@ -707,9 +707,9 @@ Los resultados de esta consulta dan las columnas para la unión de similitud, co
 
 {style="table-layout:auto"}
 
-+++:
++++
 
-### Pasos siguientes {#next-steps}
+### Próximos pasos {#next-steps}
 
 Al leer este documento, ahora puede utilizar esta lógica para resaltar relaciones significativas o superposiciones entre conjuntos de datos dispares. La capacidad de identificar productos de diferentes conjuntos de datos que tienen una similitud significativa en sus características o atributos tiene numerosas aplicaciones reales. Esta lógica se puede utilizar para escenarios como:
 
