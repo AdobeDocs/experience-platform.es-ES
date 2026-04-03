@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Cree una nueva especificación de conexión mediante la API de Flow Service
 description: El siguiente documento proporciona pasos sobre cómo crear una especificación de conexión mediante la API de Flow Service e integrar una nueva fuente a través de fuentes de autoservicio.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 2%
