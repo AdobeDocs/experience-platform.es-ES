@@ -33,7 +33,7 @@ Como experto en marketing, puede ofrecer experiencias personalizadas a los usuar
 
 ### Requisitos previos en Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de activar datos en el destino de Salesforce CRM, debe tener [schema](/help/xdm/schema/composition.md), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) y [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) creados en [!DNL Experience Platform].
+Antes de activar datos en el destino de Salesforce CRM, debe tener [schema](/help/xdm/schema/composition.md), [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=es) y [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=es) creados en [!DNL Experience Platform].
 
 ### Requisitos previos en [!DNL Salesforce CRM] {#prerequisites-destination}
 
