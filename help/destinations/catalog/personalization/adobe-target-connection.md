@@ -33,7 +33,7 @@ ht-degree: 7%
 
 Vea el siguiente vídeo para obtener información general sobre cómo configurar la conexión de [!DNL Adobe Target] en Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449796/?captions=spa&quality=12&learn=on)
 
 ## Casos de uso admitidos basados en el tipo de implementación {#supported-use-cases}
 
