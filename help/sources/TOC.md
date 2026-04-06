@@ -5,9 +5,9 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
+source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1094'
 ht-degree: 34%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 34%
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Lealtad {#loyalty}
       - [Eventos de flujo capilar](connectors/loyalty/capillary.md)
+      - [Kobie](connectors/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatización de marketing {#marketing-automation}
       - [Corrientes de Braze](connectors/marketing-automation/braze.md)
@@ -322,6 +323,8 @@ ht-degree: 34%
          - [Carga de archivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Lealtad {#loyalty}
          - [Eventos de flujo capilar](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie (lote)](tutorials/ui/create/loyalty/kobie-batch.md)
+         - [Kobie (Transmisión)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Eventos de streaming de Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Conector Source de Talon.One Batch](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automatización de marketing {#marketing-automation}
