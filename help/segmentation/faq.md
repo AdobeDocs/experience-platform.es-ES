@@ -2,9 +2,9 @@
 title: Preguntas más frecuentes sobre audiencias
 description: Encuentre respuestas a las preguntas frecuentes acerca de audiencias y otros conceptos relacionados con la segmentación.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
 workflow-type: tm+mt
-source-wordcount: '4853'
+source-wordcount: '4809'
 ht-degree: 2%
 
 ---
@@ -120,7 +120,7 @@ Los atributos de enriquecimiento son atributos que provienen de un conjunto de d
 
 | Canal de activación | Audiencias de carga personalizada en CSV | Audiencias de la composición de audiencias |
 | --- | --- | --- |
-| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1&rbrace;.** |
+| Destinos de Real-Time CDP | Se pueden activar tanto los atributos de carga útil como las audiencias. | Solo se puede activar la audiencia. No se pueden activar los atributos de enriquecimiento **1}.** |
 | Adobe Journey Optimizer Campaigns | Ni los atributos de audiencia ni los de carga útil pueden activarse. | Se pueden activar tanto la audiencia como los atributos de ampliación. |
 
 ## Estados del ciclo vital {#lifecycle-states}
@@ -417,8 +417,6 @@ La segmentación por flujo funciona en todos los datos que se ingirieron con una
 ### ¿Cómo se definen los segmentos como segmentación por lotes o de flujo continuo?
 
 Una definición de segmento se define como segmentación por lotes, por secuencias o perimetral basada en una combinación de tipo de consulta y duración del historial de eventos. Se puede encontrar una lista de los segmentos que se evaluarán como una definición de segmento de flujo continuo en la [sección de tipos de consulta de segmentación de flujo continuo](#query-types).
-
-Tenga en cuenta que si una definición de segmento contiene **both** una expresión `inSegment` y una cadena de evento único directa, no puede calificar para la segmentación de flujo continuo. Si desea que esta definición de segmento cumpla los requisitos de la segmentación de flujo continuo, debe convertir la cadena de evento único directo en su propio segmento.
 
 ### ¿Por qué sigue aumentando el número de segmentos &quot;cualificados totales&quot; mientras que el número de &quot;últimos X días&quot; permanece en cero dentro de la sección de detalles de definición del segmento?
 

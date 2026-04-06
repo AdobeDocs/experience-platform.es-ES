@@ -3,100 +3,14 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2117'
 ht-degree: 4%
 
 ---
 
 # Guía de segmentación de streaming
-
->[!BEGINSHADEBOX]
-
->[!NOTE]
->
->Los criterios de idoneidad para la segmentación de streaming se han actualizado el 20 de mayo de 2025.
-
-+++Actualizaciones de idoneidad
-
->[!IMPORTANT]
->
->Todas las definiciones de segmentos existentes que se evalúan actualmente mediante streaming o segmentación de Edge seguirán funcionando tal cual, a menos que se editen o actualicen.
-
-## Conjunto de reglas {#ruleset}
-
-Cualquier definición de segmento **nueva o editada** que coincida con los siguientes conjuntos de reglas **ya no se evaluará** mediante la transmisión por secuencias o la segmentación de perímetros. En su lugar, se evaluarán mediante la segmentación por lotes.
-
-- Un solo evento con un intervalo de tiempo superior a 24 horas
-   - Active una audiencia con todos los perfiles que hayan visto una página web en los últimos tres días.
-- Un solo evento sin ventana de tiempo
-   - Active una audiencia con todos los perfiles que hayan visto una página web.
-
-## Periodo de tiempo {#time-window}
-
-Para evaluar una audiencia con segmentación por streaming, **debe** estar restringida en un período de tiempo de 24 horas.
-
-## Inclusión de datos por lotes en audiencias de streaming {#include-batch-data}
-
->[!NOTE]
->
->Para mantener la precisión de la segmentación de flujo continuo al usar datos por lotes, asegúrese de que los datos por lotes sean **solamente** y de que se mantenga dentro de la audiencia por lotes y de que se haga referencia a ellos dentro de la audiencia de flujo continuo.
-
-Antes de esta actualización, podía crear una definición de audiencia de flujo continuo que combinara fuentes de datos de flujo y por lotes. Sin embargo, con la última actualización, la creación de una audiencia con fuentes de datos por lotes y de flujo continuo se evaluará mediante la segmentación por lotes.
-
-Si necesita evaluar una definición de segmento mediante streaming o segmentación de Edge que coincida con el conjunto de reglas actualizado, debe crear explícitamente un lote y un conjunto de reglas de streaming y combinarlos con un segmento de segmentos. Este conjunto de reglas por lotes **debe** basarse en un esquema de perfil.
-
-Por ejemplo, supongamos que tiene dos audiencias, con un perfil de alojamiento de audiencia que contiene datos de esquema y el otro esquema de evento de experiencia de alojamiento:
-
-| Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Residentes de California | Perfil | Lote | La dirección postal está en el estado de California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-Si desea utilizar el componente por lotes en la audiencia de flujo continuo, deberá hacer referencia a la audiencia por lotes mediante un segmento de segmentos.
-
-Por lo tanto, un conjunto de reglas de ejemplo que combinara las dos audiencias tendría el siguiente aspecto:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
-CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
-WHEN(<= 24 hours before now)])
-```
-
-La audiencia resultante *se* evaluará usando la segmentación de flujo continuo, ya que aprovecha la pertenencia de la audiencia por lotes haciendo referencia al componente de audiencia por lotes.
-
-Sin embargo, si desea combinar dos audiencias con datos de evento, **no puede** combinar los dos eventos. Deberá crear ambas audiencias y luego crear otra audiencia que use `inSegment` para hacer referencia a ambas audiencias.
-
-Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergando datos de esquema de evento de experiencia:
-
-| Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
-| -------- | ------ | ----------- | ---------------- | ----------- |
-| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
-
-En este caso, debe crear una tercera audiencia de la siguiente manera:
-
-```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
-```
-
->[!IMPORTANT]
->
->Todas las definiciones de segmentos existentes que coincidan con los conjuntos de reglas permanecerán evaluadas mediante streaming o segmentación de Edge hasta que se editen.
->
->Además, todas las definiciones de segmentos existentes que actualmente cumplen los demás criterios de evaluación de segmentación de Edge o streaming se seguirán evaluando con la segmentación de Edge o streaming.
-
-## Política de combinación {#merge-policy}
-
-Cualquier definición de segmento **nueva o editada** que califique para la segmentación de Edge o streaming **debe** estar en la política de combinación &quot;Activa en Edge&quot;.
-
-Si no hay ninguna política de combinación activa establecida, tendrás que [configurar tu política de combinación](../../profile/merge-policies/ui-guide.md#configure) y establecerla para que esté activa en Edge.
-
-
-+++
-
->[!ENDSHADEBOX]
 
 La segmentación por streaming es la capacidad de evaluar audiencias en Adobe Experience Platform en tiempo casi real, al tiempo que se centra en la riqueza de datos.
 
@@ -128,6 +42,11 @@ Una definición de segmento **no** será elegible para la segmentación de strea
 - La definición del segmento incluye una combinación de un solo evento y un evento `inSegment`.
    - Por ejemplo, encadenar lo siguiente en un único conjunto de reglas: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
 - La definición del segmento utiliza &quot;Ignorar año&quot; como parte de sus restricciones de tiempo.
+- La definición del segmento coincide con los siguientes conjuntos de reglas:
+   - Un solo evento con un intervalo de tiempo superior a 24 horas
+      - Por ejemplo, &quot;Activar una audiencia con todos los perfiles que vieron una página web en los últimos 3 días&quot;.
+   - Un solo evento sin ventana de tiempo
+      - Por ejemplo, &quot;Activar una audiencia con todos los perfiles que vieron una página web&quot;.
 
 Tenga en cuenta las siguientes directrices que se aplican a las consultas de segmentación de streaming:
 
@@ -472,3 +391,90 @@ En esta guía se explica cómo funcionan las definiciones de segmentos habilitad
 Para obtener más información acerca del uso de la interfaz de usuario de Adobe Experience Platform, lea la [Guía del usuario de segmentación](./overview.md).
 
 Para las preguntas más frecuentes acerca de la segmentación por transmisión, lea la [sección de segmentación por transmisión de las preguntas frecuentes](../faq.md#streaming-segmentation).
+
+## Apéndice
+
+Esta sección proporciona información complementaria sobre la segmentación de flujo continuo.
+
+### Actualización de idoneidad del 20 de mayo de 2025 {#may-20-eligibility-update}
+
+En la siguiente sección se describen, para la posteridad, los detalles completos de la actualización de idoneidad para la segmentación de streaming que se produjo durante la versión de mayo de 2025 de Experience Platform.
+
++++Actualizaciones de idoneidad
+
+>[!IMPORTANT]
+>
+>Todas las definiciones de segmentos existentes que se evalúan actualmente mediante streaming o segmentación de Edge seguirán funcionando tal cual, a menos que se editen o actualicen.
+
+## Conjunto de reglas {#ruleset}
+
+Cualquier definición de segmento **nueva o editada** que coincida con los siguientes conjuntos de reglas **ya no se evaluará** mediante la transmisión por secuencias o la segmentación de perímetros. En su lugar, se evaluarán mediante la segmentación por lotes.
+
+- Un solo evento con un intervalo de tiempo superior a 24 horas
+   - Active una audiencia con todos los perfiles que hayan visto una página web en los últimos tres días.
+- Un solo evento sin ventana de tiempo
+   - Active una audiencia con todos los perfiles que hayan visto una página web.
+
+## Periodo de tiempo {#time-window}
+
+Para evaluar una audiencia con segmentación por streaming, **debe** estar restringida en un período de tiempo de 24 horas.
+
+## Inclusión de datos por lotes en audiencias de streaming {#include-batch-data}
+
+>[!NOTE]
+>
+>Para mantener la precisión de la segmentación de flujo continuo al usar datos por lotes, asegúrese de que los datos por lotes sean **solamente** y de que se mantenga dentro de la audiencia por lotes y de que se haga referencia a ellos dentro de la audiencia de flujo continuo.
+
+Antes de esta actualización, podía crear una definición de audiencia de flujo continuo que combinara fuentes de datos de flujo y por lotes. Sin embargo, con la última actualización, la creación de una audiencia con fuentes de datos por lotes y de flujo continuo se evaluará mediante la segmentación por lotes.
+
+Si necesita evaluar una definición de segmento mediante streaming o segmentación de Edge que coincida con el conjunto de reglas actualizado, debe crear explícitamente un lote y un conjunto de reglas de streaming y combinarlos con un segmento de segmentos. Este conjunto de reglas por lotes **debe** basarse en un esquema de perfil.
+
+Por ejemplo, supongamos que tiene dos audiencias, con un perfil de alojamiento de audiencia que contiene datos de esquema y el otro esquema de evento de experiencia de alojamiento:
+
+| Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Residentes de California | Perfil | Lote | La dirección postal está en el estado de California | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Si desea utilizar el componente por lotes en la audiencia de flujo continuo, deberá hacer referencia a la audiencia por lotes mediante un segmento de segmentos.
+
+Por lo tanto, un conjunto de reglas de ejemplo que combinara las dos audiencias tendría el siguiente aspecto:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+La audiencia resultante *se* evaluará usando la segmentación de flujo continuo, ya que aprovecha la pertenencia de la audiencia por lotes haciendo referencia al componente de audiencia por lotes.
+
+Sin embargo, si desea combinar dos audiencias con datos de evento, **no puede** combinar los dos eventos. Deberá crear ambas audiencias y luego crear otra audiencia que use `inSegment` para hacer referencia a ambas audiencias.
+
+Por ejemplo, supongamos que tiene dos audiencias, con ambas audiencias albergando datos de esquema de evento de experiencia:
+
+| Público | Esquema | Tipo de Source | Definición de consulta | ID de público |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Abandonos recientes | Evento de experiencia | Lote | Tiene al menos un evento de abandono en las últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Cierres de compra recientes | Evento de experiencia | Streaming | Tiene al menos un cierre de compra en las últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+En este caso, debe crear una tercera audiencia de la siguiente manera:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
+
+>[!IMPORTANT]
+>
+>Todas las definiciones de segmentos existentes que coincidan con los conjuntos de reglas permanecerán evaluadas mediante streaming o segmentación de Edge hasta que se editen.
+>
+>Además, todas las definiciones de segmentos existentes que actualmente cumplen los demás criterios de evaluación de segmentación de Edge o streaming se seguirán evaluando con la segmentación de Edge o streaming.
+
+## Política de combinación {#merge-policy}
+
+Cualquier definición de segmento **nueva o editada** que califique para la segmentación de Edge o streaming **debe** estar en la política de combinación &quot;Activa en Edge&quot;.
+
+Si no hay ninguna política de combinación activa establecida, tendrás que [configurar tu política de combinación](../../profile/merge-policies/ui-guide.md#configure) y establecerla para que esté activa en Edge.
+
++++
+
+>[!ENDSHADEBOX]
