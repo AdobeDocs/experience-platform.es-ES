@@ -100,7 +100,7 @@ Consulte la tabla siguiente para obtener información sobre el tipo y la frecuen
 >* Para conectarse al destino, necesita los **[!UICONTROL View Destinations]** y **[!UICONTROL Manage Destinations]** [permisos de control de acceso](/help/access-control/home.md#permissions).
 >* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 
-Para obtener instrucciones detalladas sobre cómo configurar el destino y activar audiencias, lee [Insertar una audiencia de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=es) en la documentación de Marketo.
+Para obtener instrucciones detalladas sobre cómo configurar el destino y activar audiencias, lee [Insertar una audiencia de Adobe Experience Platform en una lista estática de Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) en la documentación de Marketo.
 
 El siguiente vídeo también muestra los pasos para configurar un destino de Marketo y activar audiencias.
 
@@ -113,7 +113,7 @@ El siguiente vídeo también muestra los pasos para configurar un destino de Mar
 >* Las dos limitaciones indicadas en el vídeo ya no se aplican. Ahora puede asignar muchos otros campos de atributos de perfil además de la información de pertenencia a audiencias compatible en el momento de grabar el vídeo. También puede exportar a Marketo miembros de la audiencia que aún no existan en sus listas estáticas de Marketo y que se añadirán a las listas.
 >* En el **[!UICONTROL Schedule audience step]** del flujo de trabajo de activación, en Marketo V1, necesitaba agregar manualmente un **[!UICONTROL Mapping ID]** para exportar correctamente los datos a Marketo. Este paso manual ya no es necesario en Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440161?captions=spa&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Supervisar destino {#monitor-destination}
 

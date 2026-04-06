@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Funciones SQL definidas por Adobe en el servicio de consultas
 
-Las funciones definidas por Adobe, denominadas en este documento ADF, son funciones prediseñadas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=es) como las que se encuentran en Adobe Analytics.
+Las funciones definidas por Adobe, denominadas en este documento ADF, son funciones prediseñadas en Adobe Experience Platform Query Service que ayudan a realizar tareas comunes relacionadas con la empresa en datos de [!DNL Experience Event]. Estas incluyen funciones para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) y [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como las que se encuentran en Adobe Analytics.
 
 Este documento proporciona información para las funciones definidas por Adobe disponibles en [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Cuando trabaja con datos de [!DNL Experience Event] procedentes de un sitio web,
 
 Esta agrupación, o sesionización de datos, ayuda a asociar los eventos para descubrir más contexto sobre la experiencia del cliente.
 
-Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=es).
+Para obtener más información acerca de la creación de sesiones en Adobe Analytics, consulte la documentación de [sesiones según el contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Sintaxis de consulta**
 
@@ -487,4 +487,4 @@ Con las funciones descritas aquí, puede escribir consultas para acceder a sus p
 
 El siguiente vídeo muestra cómo ejecutar consultas en la interfaz de Adobe Experience Platform y en un cliente SQL. Además, el vídeo también utiliza ejemplos que implican propiedades individuales en un objeto XDM, utilizando funciones definidas por Adobe y utilizando CREATE TABLE AS SELECT (CTAS).
 
->[!VIDEO](https://video.tv.adobe.com/v/34045?captions=spa&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
