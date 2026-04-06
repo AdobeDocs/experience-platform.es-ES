@@ -65,7 +65,7 @@ Una causa potencial es la función de autocompletar. La función procesa ciertos
 ### ¿Puedo usar [!DNL Postman] para la API del servicio de consultas?
 
 +++Respuesta
-Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/28832) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sí, puede visualizar e interactuar con todos los servicios de API de Adobe mediante [!DNL Postman] (una aplicación gratuita de terceros). Vea la [[!DNL Postman] guía de configuración](https://video.tv.adobe.com/v/31627?captions=spa) para obtener instrucciones paso a paso sobre cómo configurar un proyecto en Adobe Developer Console y adquirir todas las credenciales necesarias para utilizarlo con [!DNL Postman]. Consulte la documentación oficial para obtener [instrucciones sobre cómo iniciar, ejecutar y compartir [!DNL Postman] colecciones](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### ¿Hay un límite en el número máximo de filas devueltas por una consulta a través de la interfaz de usuario?

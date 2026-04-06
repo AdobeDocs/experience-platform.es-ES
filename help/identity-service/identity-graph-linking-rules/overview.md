@@ -56,7 +56,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/es/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Información general sobre las reglas de vinculación de gráficos de identidad" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Información general sobre las reglas de vinculación de gráficos de identidad"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448275/?captions=spa&format=jpeg&nocache=1747851655227" alt="Información general sobre las reglas de vinculación de gráficos de identidad"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -79,7 +79,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/es/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Reglas de vinculación de gráficos de identidad: simulación de gráficos" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Reglas de vinculación de gráficos de identidad: simulación de gráficos"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444046/?captions=spa&format=jpeg&nocache=1747851655237" alt="Reglas de vinculación de gráficos de identidad: simulación de gráficos"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -102,7 +102,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/es/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Reglas de vinculación de gráficos de identidad: configuración de identidad" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Reglas de vinculación de gráficos de identidad: configuración de identidad"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475965/?captions=spa&format=jpeg&nocache=1747851655218" alt="Reglas de vinculación de gráficos de identidad: configuración de identidad"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

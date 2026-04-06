@@ -62,7 +62,7 @@ La nueva función se ha creado correctamente y se le redirigirá a la página **
 <!-- 
 The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
+>[!VIDEO](https://video.tv.adobe.com/v/3475976/?captions=spa&learn=on) 
 -->
 
 ## Duplicación de un rol

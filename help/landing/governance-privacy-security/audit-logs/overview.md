@@ -177,4 +177,4 @@ En esta guía se explica cómo administrar los registros de auditoría en Experi
 
 Para comprender mejor los registros de auditoría en Experience Platform, vea el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344645?captions=spa&quality=12&learn=on)
