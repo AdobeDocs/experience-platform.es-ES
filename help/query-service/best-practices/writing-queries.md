@@ -165,7 +165,7 @@ FROM
 
 >[!NOTE]
 >
->No se pueden usar comillas dobles **1} con el acceso al campo de notación de puntos.**
+>No se pueden usar comillas dobles **1&rbrace; con el acceso al campo de notación de puntos.**
 
 ### Comillas anteriores
 

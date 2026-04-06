@@ -37,7 +37,7 @@ Lea la documentación sobre [clase de evento de experiencia XDM](../../../../xdm
 | `leadId` |  | `personID` | `personKey.sourceID` |  |
 |  |  | `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Identidad principal. MUNCHKIN_ID se reemplazará como parte de la API de exploración |
 | `activityTypeId` |  | `eventType` | `eventType` |  |
-| <ul><li>Si <code>activityTypeId</code> es 1, 2, 3, 9, 10 u 11 → marca <code>productionBy</code> como <strong>self</strong>.</li><li>Si <code>activityTypeId</code> es la marca de → <code>producida por} 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114 o 115</code> como <strong>sistema</strong>.</li><li>Para todos los demás valores → marca <code>productionBy</code> como <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
+| <ul><li>Si <code>activityTypeId</code> es 1, 2, 3, 9, 10 u 11 → marca <code>productionBy</code> como <strong>self</strong>.</li><li>Si <code>activityTypeId</code> es la marca de → <code>producida por&rbrace; 6, 7, 8, 12, 21, 22, 24, 25, 27, 32, 34, 35, 36, 46, 101, 104, 110, 113, 114 o 115</code> como <strong>sistema</strong>.</li><li>Para todos los demás valores → marca <code>productionBy</code> como <strong>self</strong>.</li></ul> |  | `producedBy` | `producedBy` |  |
 | `activityDate` |  | `timestamp` | `timestamp` |  |
 | `attributes.Webpage URL` |  | `web.webPageDetails.URL` | `web.webPageDetails.URL` |  |
 | `attributes.User Agent` |  | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |  |

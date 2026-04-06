@@ -224,7 +224,7 @@ AS (select_query)
 | `rowvalidation` | (Opcional) Habilita la validación de nivel de fila para cada lote ingerido en el conjunto de datos. El valor predeterminado es True. |
 | `label` | (Opcional) Use el valor `PROFILE` para etiquetar el conjunto de datos como habilitado para la ingesta de perfiles. |
 | `transform` | (Opcional) Aplica transformaciones de ingeniería de funciones (como la indexación de cadenas, la codificación de un solo toque o TF-IDF) antes de materializar el conjunto de datos. Esta cláusula se utiliza para previsualizar funciones transformadas. Consulte la documentación de la cláusula [`TRANSFORM`](#transform) para obtener más información. |
-| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas ](#select-queries) para obtener más información. |
+| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas &#x200B;](#select-queries) para obtener más información. |
 
 >[!NOTE]
 >
