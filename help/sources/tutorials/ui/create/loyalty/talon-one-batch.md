@@ -2,10 +2,9 @@
 title: Ingesta De Datos Por Lotes De Talon.One En Experience Platform Mediante La IU
 description: Aprenda a ingerir datos por lotes de Talon.One en Adobe Experience Platform mediante la interfaz de usuario. Esta guía cubre la configuración, la selección de datos y la configuración del flujo de datos.
 badge: Beta
-hide: true
-hidefromtoc: true
+last-substantial-update: 2026-04-06T00:00:00Z
 exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
-source-git-commit: 9c4c4a3bce2329e65abf5e8cfcc2f20ec2799045
+source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 1%
@@ -67,7 +66,7 @@ Una vez que se haya autenticado, proporcione valores para **applicationId** y **
 
 >[!TIP]
 >
->Para capturar las transacciones completadas (incluidos los puntos de lealtad obtenidos o canjeados, los cupones canjeados y los descuentos concedidos), seleccione el tipo de evento `talon_session_closed`. Para obtener más información sobre el filtrado de eventos por tipo, consulte el parámetro de consulta &quot;type&quot; [&#x200B; en la  [!DNL Talon.One] documentación de la API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
+>Para capturar las transacciones completadas (incluidos los puntos de lealtad obtenidos o canjeados, los cupones canjeados y los descuentos concedidos), seleccione el tipo de evento `talon_session_closed`. Para obtener más información sobre el filtrado de eventos por tipo, consulte el parámetro de consulta &quot;type&quot; [ en la  [!DNL Talon.One] documentación de la API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![Los pasos para seleccionar datos y obtener una vista previa del flujo de trabajo de orígenes.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
