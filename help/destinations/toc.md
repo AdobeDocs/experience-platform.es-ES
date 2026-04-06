@@ -5,9 +5,9 @@ user-guide-description: Active los datos conocidos y desconocidos para campañas
 description: Este documento enumera la tabla de contenido de los destinos de Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5408dd8a442e6ad47f6c1e12326d04b2390bffaa
+source-git-commit: 79c277ea9e45c7cc9888e7d6c5edaf8d68904b03
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Eliminar cuentas de destino](./api/delete-destination-account.md)
    * [Eliminar flujos de datos de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de datos](/help/destinations/api/export-datasets.md)
-   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=es#use-cases)
+   * [Ordenar y filtrar respuestas API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guías de IU {#ui}
    * [Espacio de trabajo Destinos](./ui/destinations-workspace.md)
    * [Crear una nueva conexión de destino](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 6%
       * [(Heredado) (V2) Conexión de Marketo Engage](./catalog/adobe/marketo-engage.md)
       * [(Beta) Conexión de sincronización de personas de Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexión de Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=es)
+      * [Uso compartido de audiencias de Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexión de composición de audiencia federada](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos de Advertising{#advertising}
       * [(Beta) Conexión de Audiencia de Acxiom](./catalog/advertising/acxiom-audience-connection.md)
@@ -81,7 +81,8 @@ ht-degree: 6%
       * [Conexión heredada de Adobe Advertising Cloud DSP](./catalog/advertising/adobe-advertising-cloud-dsp-connection-legacy.md)
       * [Extensión de Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
       * [Adform connection](./catalog/advertising/adform.md)
-      * [Conexión de Amazon Ads](./catalog/advertising/amazon-ads.md)
+      * [Conexión de Amazon Ads (heredada)](./catalog/advertising/amazon-ads.md)
+      * [Conexión de Amazon Ads v2](./catalog/advertising/amazon-ads-v2.md)
       * [Extensión de etiqueta de conversión del anunciante Awin](./catalog/advertising/awin-conversiontag.md)
       * [Extensión Awin Advertiser Mastertag](./catalog/advertising/awin-mastertag.md)
       * [Extensión de seguimiento universal de eventos (UET) de Bing Ads](./catalog/advertising/bing-ads.md)
