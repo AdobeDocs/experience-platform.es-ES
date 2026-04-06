@@ -21,9 +21,9 @@ La colección [!UICONTROL Chapter Details] es un tipo de datos estándar del Mod
 
 | Nombre para mostrar | Propiedad | Tipo de datos | Requerido | Descripción |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | entero | Sí | La duración del capítulo en segundos. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | cadena | No | El nombre del capítulo y/o segmento. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | entero | Sí | El desplazamiento del capítulo dentro del contenido (en segundos) desde el inicio. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | entero | Sí | La posición (índice, entero) del capítulo dentro del contenido. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=es#chapter-length) | `length` | entero | Sí | La duración del capítulo en segundos. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=es#chapter-name) | `friendlyName` | cadena | No | El nombre del capítulo y/o segmento. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=es#chapter-offset) | `offset` | entero | Sí | El desplazamiento del capítulo dentro del contenido (en segundos) desde el inicio. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=es#chapter-position) | `index` | entero | Sí | La posición (índice, entero) del capítulo dentro del contenido. |
 
 {style="table-layout:auto"}

@@ -49,8 +49,8 @@ La inteligencia artificial aplicada al cliente funciona analizando los siguiente
 
 - Datos de Adobe Analytics que usan el [conector de origen de Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Datos de Adobe Audience Manager que usan el [conector de origen de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [Conjunto de datos de evento de experiencia](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=es)
+- [Conjunto de datos de evento de experiencia del consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=es#cee-schema)
 
 Puede agregar varios conjuntos de datos de diferentes fuentes si cada uno de los conjuntos de datos comparte el mismo tipo de identidad (área de nombres), como un ECID. Para obtener más información sobre cómo agregar varios conjuntos de datos, visite la [Guía del usuario de inteligencia artificial aplicada al cliente](../customer-ai/user-guide/configure.md).
 
