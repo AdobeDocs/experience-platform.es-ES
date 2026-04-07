@@ -2,11 +2,11 @@
 title: Generador de audiencias en Real-Time Customer Data Platform
 description: Aprenda a utilizar el Generador de audiencias en Real-Time Customer Data Platform para crear audiencias.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=es#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
@@ -54,13 +54,13 @@ La pestaña [!UICONTROL Attributes] le permite examinar los atributos de cuenta 
 
 ![La ficha Atributos se muestra en el Generador de audiencias](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->Los datos de resumen están en **disponibilidad limitada**.
+>Los datos de resumen están en **disponibilidad limitada** y se pueden usar en B2B edition y B2P Edition.
 
 Al seleccionar un atributo, puede ver los datos de resumen seleccionando el [icono de información](../../images/icons/info.png). Los datos de resumen incluyen información como valores principales, una explicación de qué es el campo, el recuento de registros de los valores, así como el porcentaje de cuentas que contienen valores para este atributo.
 
-La sección **[!UICONTROL Populated]** muestra el número de registros donde se rellena el atributo en comparación con el número total de registros disponibles, así como el porcentaje de cuentas que tienen un valor para este campo.
+La sección **[!UICONTROL Populated]** muestra el porcentaje de cuentas que tienen un valor para este campo.
 
 La sección **[!UICONTROL Top values]** muestra los valores más frecuentes del atributo e incluye detalles como el valor, el número de registros que tienen el valor y el porcentaje de registros totales que representa el valor. El número de registros de cada campo está determinado por la instantánea de perfil, que proporciona una vista consolidada de los registros después de combinar todos los datos del conjunto de datos de contribución.
 
@@ -74,11 +74,17 @@ Si menos del 25% de las cuentas rellenan un atributo, se mostrará el ![icono de
 
 ![Una ventana emergente que muestra una versión de los datos de resumen de un atributo cuando lo rellenan menos del 25% de las cuentas.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+Cuando se agrega un atributo con datos de resumen, también se pueden ver los datos de resumen en el lienzo de creación de reglas.
+
+![Se muestra el atributo con los datos de resumen.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Puede utilizar la lista desplegable para seleccionar entre los valores principales o introducir su valor, que puede resolverse automáticamente en uno de los valores principales.
+
+![Se resalta el menú desplegable donde puede agregar el valor del atributo.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Los datos de resumen solo están disponibles si el atributo pertenece al esquema de cuenta, persona u oportunidad. Además, los valores superiores solo se muestran si el campo **no** contiene demasiados valores diferentes y si los valores de esos campos se repiten con frecuencia.
->
->Estos datos de resumen se actualizan **diariamente**.
+>Los datos del resumen se actualizan **diariamente**. Además, los datos de resumen **no** son compatibles con atributos cuyos valores son matrices o pares clave/valor.
 
 Además, el atributo tiene un **[!UICONTROL Ingestion Type]**. El tipo de ingesta le permite conocer el origen de los datos y puede ser uno de los siguientes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** o **[!UICONTROL No Data Ingested]**.
 
