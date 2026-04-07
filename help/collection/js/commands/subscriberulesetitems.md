@@ -2,9 +2,9 @@
 title: subscribeRulesetItems
 description: Suscríbase a las tarjetas de contenido de una superficie específica mediante el comando subscribeRulesetItems.
 exl-id: bc932ba5-a810-4fa6-82cc-998af39fdd34
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: 3ecfc2258e63a34a739ab8b296437c357d1dd9d1
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '436'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 El comando `subscribeRulesetItems` le permite suscribirse a propuestas que son el resultado de conjuntos de reglas satisfechos. Para ello, especifique por qué superficies y esquemas filtrar y proporcione una función de llamada de retorno.
 
-Cada vez que se evalúan los conjuntos de reglas, la función de devolución de llamada recibe un objeto `result` con una matriz de propuestas.
+Los conjuntos de reglas se evalúan cada vez que se envía un comando [`sendEvent`](sendevent/overview.md). La función de devolución de llamada recibe un objeto `result` con una matriz de propuestas.
 
 >[!IMPORTANT]
 >
->El comando `subscribeRulesetItems` es la única manera de obtener propuestas que provienen de conjuntos de reglas, ya que no se devuelven junto con [`sendEvent`](sendevent/overview.md) resultados.
+>El comando `subscribeRulesetItems` es la única manera de obtener propuestas que provienen de conjuntos de reglas, ya que no se devuelven junto con [`sendEvent`](sendevent/overview.md) resultados. Debe configurar su suscripción antes de llamar a `sendEvent` para asegurarse de que se capturan las propuestas.
 
 
 ```js
@@ -42,7 +42,11 @@ Este comando toma un objeto `options` con las siguientes propiedades:
 | --- | --- | --- |
 | `surfaces` | Matriz de cadenas | Una lista de superficies. La función de llamada de retorno solo recibirá las propuestas que coincidan con una de las superficies proporcionadas aquí. |
 | `schemas` | Matriz de cadenas | Una lista de esquemas. La función de llamada de retorno solo recibirá las propuestas que coincidan con uno de los esquemas proporcionados aquí. |
-| `callback` | Función | Una función de llamada de retorno que se invocará cuando las propuestas sean el resultado de conjuntos de reglas satisfechos. La función de devolución de llamada recibe dos parámetros cuando se invoca: `result` y `collectEvent`. Consulte [parámetros de devolución de llamada](#callback-parameters) para obtener detalles. |
+| `callback` | Función | Una función de llamada de retorno que se invoca cuando las propuestas son el resultado de conjuntos de reglas satisfechos. La función de devolución de llamada recibe dos parámetros cuando se invoca: `result` y `collectEvent`. Consulte [parámetros de devolución de llamada](#callback-parameters) para obtener detalles. |
+
+>[!TIP]
+>
+>Puede suscribirse a varias superficies y esquemas en un único comando pasando valores adicionales a las matrices `surfaces` y `schemas`.
 
 ### Parámetros de devolución de llamada {#callback-parameters}
 
@@ -61,6 +65,13 @@ La función `collectEvent` es una función de conveniencia que puede utilizar pa
 | --- | --- | --- |
 | Tipo de evento | Cadena | Cadena que indica qué tipo de evento de propuesta se va a emitir. Los tipos de eventos admitidos son `display`, `interact` o `dismiss`. |
 | `propositions` | Matriz | Una matriz de propuestas correspondientes al evento. |
+
+
+Se puede llamar a la función `collectEvent` de forma independiente fuera de la llamada de retorno. Llamar a esta función es útil cuando se rastrea una interacción o se descarta en un momento posterior, como en respuesta a una acción del usuario.
+
+```js
+collectEvent("interact", propositions);
+```
 
 ## Suscripción a tarjetas de contenido mediante la extensión de etiquetas Web SDK
 
