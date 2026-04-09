@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guía de IU del Generador de segmentos
 description: El Generador de segmentos en la interfaz de usuario de Adobe Experience Platform proporciona un espacio de trabajo enriquecido que le permite interactuar con elementos de datos de perfil. El espacio de trabajo proporciona controles intuitivos para crear y editar reglas, como mosaicos de arrastrar y soltar utilizados para representar las propiedades de datos.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
+source-wordcount: '6708'
 ht-degree: 10%
 
 ---
@@ -349,7 +349,7 @@ También puede ver una versión basada en código de una regla creada en [!DNL S
 
 La vista de código proporciona un botón que le permite copiar el valor de la definición del segmento para utilizarlo en las llamadas de API. Para obtener la última versión de la definición del segmento, asegúrese de haber guardado los cambios más recientes en la definición del segmento.
 
-![El botón Copiar código está resaltado, lo que le permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![El botón Copiar código está resaltado, lo que le permite ](../images/ui/segment-builder/copy-code.png)
 
 ### Funciones de agregación
 
@@ -407,7 +407,7 @@ La lista de restricciones de tiempo disponibles es la siguiente:
 
 | Restricción de tiempo | Descripción | Puede habilitar el año ignorado | Ejemplo |
 | --------------- | ----------- | ------------------- | ------- |
-| Hoy | El atributo o evento que se está comparando **debe** producirse hoy. | Sí | ![Ejemplo de la restricción de tiempo &quot;Hoy&quot; en uso.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Hoy | El atributo o evento que se está comparando **debe** producirse hoy. Esta es la restricción de tiempo predeterminada seleccionada. | Sí | ![Ejemplo de la restricción de tiempo &quot;Hoy&quot; en uso.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Ayer | El atributo o evento que se está comparando **debe** producirse ayer. | Sí | ![Ejemplo de la restricción de tiempo &quot;Ayer&quot; en uso.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | Este mes | El atributo o evento que se está comparando **debe** producirse este mes del calendario. | Sí | ![Ejemplo de la restricción de tiempo &quot;Este mes&quot; que se está usando.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | Este año | El atributo o evento que se está comparando **debe** producirse este año natural. | No | ![Ejemplo de la restricción de tiempo &quot;Este año&quot; en uso.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ La lista de restricciones de tiempo disponibles es la siguiente:
 | En el siguiente | El atributo o evento que se compara debe producirse en el siguiente período de tiempo seleccionado. Los períodos de tiempo seleccionados incluyen minutos, horas, días, semanas, meses y años. | No | ![Ejemplo de la restricción de tiempo &quot;En el siguiente&quot; que se está usando.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Existe | El atributo existe. | No | ![Ejemplo de la restricción de tiempo &quot;Existe&quot; en uso.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | No existe | El atributo no existe. | No | ![Ejemplo de la restricción de tiempo &quot;No existe&quot; en uso.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Ahora | El atributo o evento que se compara **debe** producirse justo cuando se evalúa la audiencia. Esta restricción temporal solo se puede utilizar como opción de nivel secundario, dentro de restricciones temporales como &quot;Antes&quot; o &quot;Después&quot;. | Sí | ![Ejemplo de la restricción de tiempo &quot;Ahora&quot; en uso.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>La diferencia entre la restricción temporal &quot;Hoy&quot; y la restricción temporal &quot;Ahora&quot; es sutil, pero significativa.
+>
+>- Utilice la restricción de tiempo &quot;Hoy&quot; para comprobar si el atributo o el evento que se está comparando se produce a las **medianoche** del día actual.
+>- Utilice la restricción de tiempo &quot;Ahora&quot; para comprobar si el atributo o el evento que se está comparando está ocurriendo **en este momento**.
+>
+>Sin embargo, hay una excepción importante: si utiliza &quot;Hoy&quot; como restricción de tiempo de nivel superior, significa que está comprobando si el atributo o el evento se produjo en **cualquier** punto en la fecha actual.
 
 +++
 

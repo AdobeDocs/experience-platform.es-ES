@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guía de segmentación de streaming
 description: Obtenga información sobre la segmentación de flujo continuo, incluido qué es, cómo crear una audiencia evaluada mediante la segmentación de flujo y cómo ver las audiencias creadas mediante la segmentación de flujo.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 4%
@@ -476,5 +476,3 @@ Cualquier definición de segmento **nueva o editada** que califique para la segm
 Si no hay ninguna política de combinación activa establecida, tendrás que [configurar tu política de combinación](../../profile/merge-policies/ui-guide.md#configure) y establecerla para que esté activa en Edge.
 
 +++
-
->[!ENDSHADEBOX]
