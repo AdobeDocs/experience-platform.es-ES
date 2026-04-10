@@ -2,9 +2,9 @@
 title: Espacios de nombres y esquemas B2B
 description: Este documento proporciona información general sobre las áreas de nombres personalizadas necesarias al crear un conector de origen B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 87137090aec806b1568dab8cbe9ce785fbc959d2
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1595'
 ht-degree: 6%
 
 ---
@@ -47,12 +47,12 @@ La siguiente tabla contiene valores de ejemplo, así como información adicional
 | `ACCESS_TOKEN` | El token de autorización necesario para completar las llamadas a las API de Experience Platform. Consulte el tutorial sobre [autenticación y acceso a las API de Experience Platform](../../../../landing/api-authentication.md) para obtener información sobre cómo recuperar su `{ACCESS_TOKEN}`. | `Bearer {ACCESS_TOKEN}` |
 | `META_SCOPE` | Con respecto a [!DNL Marketo], este valor es fijo y siempre se establece en: `ent_dataservices_sdk`. | `ent_dataservices_sdk` |
 | `CONTAINER_ID` | El contenedor `global` contiene todas las clases, los grupos de campos de esquema, los tipos de datos y los esquemas proporcionados por los socios estándar de Adobe y Experience Platform. Con respecto a [!DNL Marketo], este valor es fijo y siempre se establece en `global`. | `global` |
-| `TECHNICAL_ACCOUNT_ID` | Credencial utilizada para integrarse en Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `TECHNICAL_ACCOUNT_ID` | Credencial utilizada para integrarse en [Adobe Developer Console](https://developer.adobe.com/). Siga los pasos a continuación para recuperar su ID de cuenta técnica:<ul><li>Vaya a [Adobe Developer Console](https://developer.adobe.com/) y abra el proyecto.</li><li>Abra la **credencial** que usa _cuenta de servicio (JWT)_. **Nota**: Esto puede conocerse como &quot;Empresa&quot; en la IU anterior.</li><li>Los detalles de las credenciales deben mostrar el ID de cliente, el ID de cuenta técnica, el ID de organización y otros metadatos de JWT.</li></ul>. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | El sistema de Identity Management (IMS) proporciona el marco para la autenticación en los servicios de Adobe. Con respecto a [!DNL Marketo], este valor es fijo y siempre se establece en: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | Una entidad corporativa que puede poseer o licenciar productos y servicios y permitir el acceso a sus miembros. Consulte el tutorial sobre [configuración de la consola para desarrolladores y [!DNL Postman]](../../../../landing/postman.md) para obtener instrucciones sobre cómo recuperar la información de `{ORG_ID}`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Nombre de la partición de zona protegida virtual que está utilizando. | `prod` |
 | `TENANT_ID` | ID que se utiliza para garantizar que los recursos que crea tengan un espacio de nombres correcto y estén contenidos en su organización. | `b2bcdpproductiontest` |
-| `PLATFORM_URL` | El extremo URL al que realiza llamadas de API. Este valor es fijo y siempre se establece en: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `PLATFORM_URL` | El extremo URL al que realiza llamadas de API. Este valor es fijo y siempre se establece en: `platform.adobe.io/`. | `platform.adobe.io/` |
 
 {style="table-layout:auto"}
 
