@@ -1,12 +1,10 @@
 ---
 title: Conectar Databricks a Experience Platform mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Databricks a Experience Platform mediante API.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '530'
 ht-degree: 3%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* El origen [!DNL Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
->
->* El origen [!DNL Databricks] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
+>El origen [!DNL Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 
 Lea esta guía para aprender a conectar su cuenta de [!DNL Databricks] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -126,4 +122,4 @@ Una respuesta correcta devuelve la conexión recién creada, incluido el ID de l
 Al seguir este tutorial, ha creado correctamente una conexión entre su cuenta de [!DNL Databricks] y Experience Platform. Puede utilizar el ID de conexión base recién generado en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Cree un flujo de datos para llevar los datos de la base de datos a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/database-nosql.md)

@@ -1,12 +1,10 @@
 ---
 title: Conectar Databricks A Experience Platform Mediante La IU
 description: Obtenga información sobre cómo conectar Databricks a Experience Platform mediante la interfaz de usuario.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '438'
 ht-degree: 4%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* El origen [!DNL Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
->
->* El origen [!DNL Databricks] está en la versión beta. Lea los [términos y condiciones](../../../../home.md#terms-and-conditions) en la descripción general de orígenes para obtener más información sobre el uso de orígenes etiquetados como beta.
+>El origen [!DNL Databricks] está disponible en el catálogo de orígenes para los usuarios que han adquirido Real-Time CDP Ultimate.
 
 Lea esta guía para obtener información sobre cómo conectar su cuenta de [!DNL Databricks] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
 
