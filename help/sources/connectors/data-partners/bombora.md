@@ -3,9 +3,9 @@ title: Bombora Intent
 description: Obtenga información sobre la fuente Bombora Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -79,13 +79,13 @@ El esquema [!DNL Bombora] se llama **Intención de cuenta Bombora B2B**. Es la i
 
 * Clase: XDM [!DNL Bombora Account Intent]
 * Área de nombres - B2B [!DNL Bombora Account Intent]
-* Identidad principal: `intentID`
+* Identidad principal: `intentID` (**Campo obligatorio**)
 * Relaciones: cuenta B2B
 
 | Nombre del campo | Tipo de datos | Descripción |
-|------------------------|-----------|----------------------------------------------------------------------------------------|
+| --- | --- | --- |
 | `extSourceSystemAudit` | OBJETO | El sistema utiliza este campo para la auditoría del sistema de origen. |
-| `_id` | CADENA | El sistema utiliza este campo como identificador único. |
+| `_id` | CADENA | Este campo lo genera el sistema. |
 | `accountDomain` | CADENA | Este campo contiene el dominio de la cuenta. |
 | `accountID` | CADENA | Este campo contiene el ID de cuenta B2B con el que está asociado este registro de intención. |
 | `bomboraAccountName` | CADENA | Este campo contiene el ID de la empresa en Bombora. |
