@@ -2,9 +2,9 @@
 title: Información general de la extensión Core
 description: Obtenga información acerca de la extensión de etiquetas de Core en Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
+source-wordcount: '5387'
 ht-degree: 82%
 
 ---
@@ -122,7 +122,7 @@ Se activa el evento si se produce un tipo de evento personalizado. Las funciones
 
 #### Data Element Changed
 
-Se activa el evento si cambia un elemento de datos especificado. Debe proporcionar un nombre para el elemento de datos. Puede seleccionar el elemento de datos escribiendo su nombre en el campo de texto o seleccionando el icono de elemento de datos a la derecha del campo de texto y eligiendo de una lista proporcionada dentro del cuadro de diálogo que aparece.
+Se activa el evento si cambia un elemento de datos especificado. Las encuestas de cambios se realizan una vez por segundo. Debe proporcionar un nombre para el elemento de datos. Puede seleccionar el elemento de datos escribiendo su nombre en el campo de texto o seleccionando el icono de elemento de datos a la derecha del campo de texto y eligiendo de una lista proporcionada dentro del cuadro de diálogo que aparece.
 
 #### Direct Call {#direct-call-event}
 
@@ -372,7 +372,7 @@ Especifique la fuente del tráfico del visitante que debe tener el valor “True
 
 ### Tecnología
 
-#### Browser
+#### Explorador
 
 Seleccione el explorador que el visitante debe utilizar para activar la acción.
 
@@ -440,7 +440,7 @@ Seleccione el tamaño de la ventana que deben utilizar los visitantes en sus dis
 
 ### URL
 
-#### Domain
+#### Dominio
 
 Especifique el dominio del visitante.
 
@@ -497,7 +497,7 @@ Especifique el URL Parameter utilizado en la URL.
 1. Especifique el valor utilizado para el URL Parameter.
 1. (Opcional) Habilite Regex si es una expresión regular.
 
-#### Subdomain
+#### Subdominio
 
 Especifique uno o varios subdominios que deben darse en la dirección URL.
 
@@ -652,7 +652,7 @@ Se puede hacer referencia a cualquier cookie de dominio disponible en el campo d
 
 Cualquier valor de cadena constante al que se pueda hacer referencia en acciones o condiciones.
 
-#### Ejemplo:
+#### Por ejemplo:
 
 `string`
 
@@ -690,7 +690,7 @@ Ejecute la regla en un explorador e inspeccione el objeto de evento registrado e
 
 Es posible recuperar cualquier elemento, como una etiqueta H1 o div.
 
-#### Ejemplo:
+#### Por ejemplo:
 
 Cadena de selector de CSS:
 
@@ -719,7 +719,7 @@ Cuando cree el elemento de datos, simplemente proporcione la ruta a esa variable
 
 Si utiliza un objeto de recopilación de datos como parte de la capa de datos, utilice la notación de puntos en la ruta para hacer referencia al objeto y la propiedad que desea capturar en el elemento de datos como `_myData.pageName` o `digitalData.pageName`, etc.
 
-#### Ejemplo:
+#### Por ejemplo:
 
 `window.document.title`
 
@@ -805,7 +805,7 @@ Especifique un único parámetro de URL en el campo URL Parameter.
 
 Solo es necesaria la sección de nombres y cualquier indicador especial como “?” o &quot;=&quot; debe omitirse.
 
-#### Ejemplo:
+#### Por ejemplo:
 
 `contentType`
 
