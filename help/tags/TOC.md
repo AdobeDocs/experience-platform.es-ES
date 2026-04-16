@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '828'
 ht-degree: 43%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 43%
 * Reenvío de eventos {#event-forwarding}
    * [Información general](./ui/event-forwarding/overview.md)
    * [Introducción](./ui/event-forwarding/getting-started.md)
+   * [Configuración guiada](./ui/event-forwarding/guided-setup.md)
    * [Configuración de secretos](./ui/event-forwarding/secrets.md)
    * [Monitorización (Beta)](./ui/event-forwarding/monitoring.md)
 * Administración {#admin}
