@@ -4,7 +4,7 @@ title: Conexión de API HTTP
 description: Utilice el destino de la API HTTP en Adobe Experience Platform para enviar datos de perfil a un extremo HTTP de terceros para ejecutar sus propios análisis o realizar cualquier otra operación que pueda necesitar en los datos de perfil exportados fuera de Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0fc433689ac351bff3fc6930f5e4781f9cde5ade
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
 source-wordcount: '2898'
 ht-degree: 7%
@@ -15,9 +15,9 @@ ht-degree: 7%
 
 ## Información general {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
-> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
+> Este destino solo está disponible para los clientes de [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=es).
 
 El destino de la API HTTP es un destino de flujo continuo de Experience Platform que le ayuda a enviar datos de perfil a puntos de conexión HTTP de terceros.
 
@@ -237,7 +237,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* [La evaluación de directivas de consentimiento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) no se admite actualmente en las exportaciones al destino de la API HTTP. [Más información](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Activar datos de audiencia en destinos de exportación de perfiles de flujo continuo](../../ui/activate-streaming-profile-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -394,6 +394,6 @@ El 95 por ciento de las veces, Experience Platform intenta ofrecer una latencia 
 
 Cuando las solicitudes al destino de la API HTTP fallan, Experience Platform las almacena y las reintenta dos veces.
 
-## Solución de problemas {#troubleshooting}
+## Resolución de problemas {#troubleshooting}
 
 Para garantizar una entrega de datos fiable y evitar problemas de tiempo de espera, asegúrese de que el extremo HTTP responda en 2 segundos a las solicitudes de Experience Platform, tal como se especifica en la sección [requisitos previos](#prerequisites). Las respuestas que tarden más tiempo producirán errores de tiempo de espera.
