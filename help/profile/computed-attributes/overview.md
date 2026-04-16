@@ -2,9 +2,9 @@
 title: Resumen de atributos calculados
 description: Los atributos calculados son funciones para agregar datos de nivel de evento en atributos de nivel de perfil. Estas funciones se calculan automáticamente para que se puedan utilizar en la segmentación, activación y personalización.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,9 @@ Los atributos calculados ayudan a convertir rápidamente los datos de comportami
 - Estandarización de los datos de comportamiento de perfil agregados para su uso en distintas plataformas y aplicaciones
 - Mejor administración de los datos con consolidación de datos de eventos de perfil antiguos en perspectivas de comportamiento significativas
 
-Estos acumulados se calculan en función de conjuntos de datos de evento de experiencia con perfil habilitado introducidos en Adobe Experience Platform. Cada atributo calculado es un atributo de perfil creado en el esquema de unión de perfiles y se agrupa en el grupo de campos &quot;SystemComputedAttribute&quot; del esquema de unión.
+Estos acumulados se calculan en función de los conjuntos de datos de evento de experiencia habilitados para perfiles creados por el usuario e ingeridos en Adobe Experience Platform. Esto significa que los conjuntos de datos generados por el sistema que se crean mediante tokens de servicio a través de SDK, como los conjuntos de datos del sistema de Adobe Journey Optimizer **no se pueden** usar.
+
+Cada atributo calculado es un atributo de perfil creado en el esquema de unión de perfiles y se agrupa en el grupo de campos &quot;SystemComputedAttribute&quot; del esquema de unión.
 
 Los casos de uso de ejemplo incluyen:
 
@@ -49,7 +51,7 @@ Los atributos calculados permiten definir acumulados de evento de forma automát
 | Función | Descripción | Tipos de datos admitidos | Ejemplo de uso |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Una función que **resume** el valor especificado para eventos calificados. | Enteros, Números, Largos | Suma de todas las compras de los últimos 7 días |
-| RECUENTO | Una función que **cuenta** el número de eventos que se han producido para la regla dada. | N/A | Recuento de compras en los últimos 3 meses |
+| RECUENTO | Una función que **cuenta** el número de eventos que se han producido para la regla dada. | N/D | Recuento de compras en los últimos 3 meses |
 | MIN | Una función que encuentra el valor **minimum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la primera compra en los últimos 7 días<br/>Cantidad mínima del pedido en las últimas 4 semanas |
 | MAX | Una función que encuentra el valor **maximum** para los eventos calificados. | Enteros, Números, Largos, Marcas De Tiempo | Datos de la última compra en los últimos 7 días<br/>Cantidad máxima del pedido en las últimas 4 semanas |
 | MÁS_RECIENTE | Una función que encuentra el valor de atributo especificado del evento cualificado más reciente. Esta función proporciona a **both** el valor y la marca de tiempo del atributo. | Todos los valores primitivos, Matrices de valores primitivos | Últimos productos vistos en los últimos 7 días |
@@ -89,6 +91,6 @@ La actualización rápida permite mantener los atributos actualizados. Al habili
 >
 >Por ejemplo, si hubo un período retrospectivo de dos semanas que comenzó el 15 de marzo (domingo) con la actualización rápida habilitada, con actualización diaria, el período retrospectivo seguirá ampliándose inclusive hasta el 22 de marzo, donde se restablecerá a dos semanas. En resumen, el atributo calculado es **actualizado** diariamente, con un período retroactivo que aumenta de **dos** semanas a **tres** semanas durante la semana, y que posteriormente vuelve a **dos** semanas.
 
-## Pasos siguientes
+## Próximos pasos
 
 Para obtener más información sobre cómo crear y administrar atributos calculados, lea [guía de API de atributos calculados](./api.md) o [guía de IU de atributos calculados](./ui.md).
