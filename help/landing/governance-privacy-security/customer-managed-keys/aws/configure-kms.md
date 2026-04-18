@@ -2,9 +2,9 @@
 title: Configuración de AWS KMS para claves administradas por el cliente
 description: Obtenga información sobre cómo configurar el servicio de administración de claves de Amazon Web Service (KMS) para utilizarlo con claves administradas por el cliente en Adobe Experience Platform.
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Este documento se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/es/docs/experience-platform/landing/multi-cloud).
->
->Las [claves gestionadas por el cliente](../overview.md) (CMK) en AWS son compatibles con Privacy Shield y Security Shield, pero no están disponibles para Healthcare Shield. CMK en Azure es compatible tanto con Privacy Shield como con Security Shield, así como con Healthcare Shield.
+>Este documento se aplica a las implementaciones de Experience Platform que se ejecutan en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Utilice esta guía para proteger los datos con el servicio de administración de claves (KMS) de Amazon Web Service (AWS) mediante la creación, administración y control de claves de cifrado para Adobe Experience Platform. Esta integración simplifica el cumplimiento normativo, optimiza las operaciones mediante la automatización y elimina la necesidad de mantener su propia infraestructura de administración de claves.
 
-Para obtener instrucciones específicas de Customer Journey Analytics, consulte la [documentación de Customer Journey Analytics CMK](https://experienceleague.adobe.com/es/docs/analytics-platform/using/cja-privacy/cmk)
+Para obtener instrucciones específicas de Customer Journey Analytics, consulte la [documentación de Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -40,7 +38,7 @@ Consulte la [documentación oficial de directivas de IAM para AWS KMS](https://d
 - **Seguridad de datos en Experience Platform**: Explore cómo Experience Platform garantiza la seguridad de los datos y se integra con servicios externos como AWS KMS para el cifrado. Experience Platform protege los datos con HTTPS TLS v1.2 para el tránsito, el cifrado del proveedor de la nube en reposo, el almacenamiento aislado y las opciones de autenticación y cifrado personalizables. Consulte [información general sobre administración, privacidad y seguridad](../overview.md) o el documento sobre el [cifrado de datos en Experience Platform](../../encryption.md) para obtener más información sobre cómo se mantienen seguros sus datos.
 - **Consola de administración de AWS**: Un concentrador central donde puede acceder y administrar todos los servicios de AWS desde una aplicación basada en web. Utilice la barra de búsqueda para buscar herramientas rápidamente, comprobar las notificaciones, administrar la cuenta y la facturación, y personalizar la configuración. Consulte la [documentación oficial de AWS management console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) para obtener más información.
 
-## Introducción  {#get-started}
+## Introducción {#get-started}
 
 Esta guía requiere que ya tenga acceso a una cuenta de Amazon Web Service y a la consola de administración. Siga los pasos a continuación para empezar:
 
@@ -150,6 +148,6 @@ Aparecerá la fase de revisión de la configuración de la clave. Compruebe los 
 
 Seleccione **[!DNL Confirm]** para completar el proceso. Volverá al espacio de trabajo Claves gestionadas por el cliente de KMS que enumera todas las claves disponibles.
 
-## Pasos siguientes
+## Próximos pasos
 
-Una vez configurado el KMS de AWS, proceda a configurar la integración mediante la interfaz de usuario de [!UICONTROL Configuración de cifrado de plataforma] o la API de Adobe Experience Platform. Para continuar con el proceso único de configuración de la función Claves administradas por el cliente, continúa con la [guía de configuración de la interfaz de usuario](./ui-set-up.md).
+Una vez configurado el KMS de AWS, continúe configurando la integración con la interfaz de usuario de [!UICONTROL Platform Encryption Configuration] o la API de Adobe Experience Platform. Para continuar con el proceso único de configuración de la función Claves administradas por el cliente, continúa con la [guía de configuración de la interfaz de usuario](./ui-set-up.md).
