@@ -5,9 +5,9 @@ title: Activar audiencias en destinos por lotes mediante la API de activación a
 description: Este artículo ilustra el flujo de trabajo completo para activar audiencias a través de la API de activación ad-hoc, incluidos los trabajos de segmentación que se realizan antes de la activación.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Los recursos de Experience Platform se pueden aislar para crear zonas protegidas
 Todas las solicitudes que contienen una carga útil (POST, PUT, PATCH) requieren un encabezado de tipo de medios adicional:
 
 * Tipo de contenido: `application/json`
+
+### Documentación de referencia del API {#api-reference-documentation}
+
+Puede encontrar la documentación de referencia adjunta para todas las operaciones de API en este tutorial. Consulte la [referencia de la API de Ad Hoc Activation](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
 
 ## Paso 3: Crear un flujo de activación en la interfaz de usuario de Experience Platform {#activation-flow}
 
