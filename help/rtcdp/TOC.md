@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guía de Real-time Customer Data Platform
 user-guide-description: Recopile datos conocidos y anónimos de varias fuentes empresariales para crear perfiles de clientes, crear públicos a partir de esos perfiles y activar esos públicos en destinos de terceros.
 role: Admin
-source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
+source-git-commit: b4f6fac2bdd0365130aada34e7e0932303c6300a
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '323'
 ht-degree: 59%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 59%
       * [Tutorial de extremo a extremo](./b2b-tutorial.md)
       * [Protección de seguridad de Real-time CDP edición B2B](b2b-guardrails.md)
       * [Actualizaciones de la arquitectura de Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
+   * [MCP de Real-Time CDP](rtcdp-mcp.md)
 * AUDIENCE MANAGER y REAL-TIME CDP {#evolution}
    * [Evolución desde Audience Manager](aam-to-rtcdp.md)
 * Perfiles de cuenta {#account}
@@ -47,12 +48,12 @@ ht-degree: 59%
    * [Destinos en Real-Time CDP edición B2B](destinations/b2b.md)
 * Mecanismos de protección {#guardrails}
    * [Introducción a las protecciones Real-Time CDP](guardrails/overview.md)
-   * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=es){target="_blank"}
+   * [Protecciones para la ingesta de datos](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Protecciones para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Protecciones para [!DNL Real-Time Customer Profile] datos y segmentación](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=es){target="_blank"}
-   * [Protecciones para [!DNL Identity Service] datos](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=es){target="_blank"}
-   * [Protecciones para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=es){target="_blank"}
-   * [Protecciones para la activación de datos mediante destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=es){target="_blank"}
+   * [Protecciones para [!DNL Identity Service] datos](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Protecciones para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Protecciones para la activación de datos mediante destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identidades {#identity}
    * [Identidades y espacios de nombres de identidad](profile/identities-overview.md)
 * Combinar políticas {#merge-policies}
