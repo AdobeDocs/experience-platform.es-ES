@@ -2,9 +2,9 @@
 title: Información general sobre la extensión API de conversiones Meta
 description: Obtenga información acerca de la extensión de la API de conversiones de Meta para el reenvío de eventos en Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: ee615de825e6c415c356b7933a661f0da2121f08
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -140,40 +140,9 @@ El siguiente vídeo proporciona una introducción a la función de inicio rápid
 
 >[!NOTE]
 >
->Esta función está diseñada para ayudarle a empezar con una implementación de reenvío de eventos. No proporcionará una implementación integral y completamente funcional que se ajuste a todos los casos de uso.
+>La función de configuración guiada le ayuda a configurarse de forma sencilla y eficaz. Esta herramienta automatiza varios pasos que se realizan en las etiquetas de Adobe y en el reenvío de eventos. No proporcionará una implementación integral y completamente funcional que se ajuste a todos los casos de uso.
 
-Este programa de instalación instala automáticamente la API de conversiones de Meta y las extensiones de píxeles de Meta. Meta recomienda esta implementación híbrida para recopilar y reenviar conversiones de eventos del lado del servidor.
-La función de configuración rápida está diseñada para ayudar a los clientes a empezar con una implementación de reenvío de eventos y no pretende ofrecer una implementación integral y funcional que se adapte a todos los casos de uso.
-
-Para instalar la característica, seleccione **[!UICONTROL Get Started]** para **[!DNL Send Conversions Data to Meta]** en la página Recopilación de datos de Adobe Experience Platform **[!UICONTROL Home]**.
-
-![Página de inicio de la recopilación de datos que muestra los datos de conversiones a meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-Escriba su **[!UICONTROL Domain]** y después seleccione **[!UICONTROL Next]**. Este dominio se utilizará como convención de nombres para las propiedades, reglas, elementos de datos, flujos de datos, etc. de etiquetas y reenvío de eventos generados automáticamente.
-
-![Pantalla de bienvenida solicitando nombre de dominio](../../../images/extensions/server/meta/welcome.png)
-
-En el cuadro de diálogo **[!UICONTROL Initial Setup]**, escriba sus **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]** y **[!UICONTROL Data Layer Path]** y, a continuación, seleccione **[!UICONTROL Next]**.
-
-![Cuadro de diálogo de configuración inicial](../../../images/extensions/server/meta/initial-setup.png)
-
-Espere unos minutos para que se complete el proceso de configuración inicial y, a continuación, seleccione **[!UICONTROL Next]**.
-
-![Pantalla de confirmación de configuración inicial completa](../../../images/extensions/server/meta/setup-complete.png)
-
-En el cuadro de diálogo **[!UICONTROL Add Code on Your Site]**, copie el código proporcionado mediante la función Copiar ![Copiar](/help/images/icons/copy.png) y péguelo en `<head>` del sitio web de origen. Una vez implementado, seleccione **[!UICONTROL Start Validation]**
-
-![Agregar código en el cuadro de diálogo del sitio](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-El cuadro de diálogo [!UICONTROL Validation Results] muestra los resultados de la implementación de la extensión Meta. Seleccione **[!UICONTROL Next]**. También puede ver resultados de validación adicionales seleccionando el vínculo **[!UICONTROL Assurance]**.
-
-![Cuadro de diálogo de resultados de pruebas que muestra resultados de implementación](../../../images/extensions/server/meta/test-results.png)
-
-La pantalla **[!UICONTROL Next Steps]** confirma la finalización de la instalación. Desde aquí tiene la opción de optimizar la implementación añadiendo nuevos eventos, que se muestran en la siguiente sección.
-
-Si no desea agregar más eventos, seleccione **[!UICONTROL Close]**.
-
-![Cuadro de diálogo de pasos siguientes](../../../images/extensions/server/meta/next-steps.png)
+Para comenzar con la configuración guiada, siga las instrucciones de la [configuración guiada del reenvío de eventos](../../../ui/event-forwarding/guided-setup.md).
 
 #### Adición de eventos adicionales
 

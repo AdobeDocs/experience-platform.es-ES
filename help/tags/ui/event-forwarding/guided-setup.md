@@ -1,9 +1,10 @@
 ---
 title: Configuración guiada del reenvío de eventos
 description: Obtenga información sobre cómo configurar el reenvío de eventos mediante la configuración guiada.
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+exl-id: c155dec0-9130-4452-834a-08d98a15b006
+source-git-commit: a2dd6b2a5ec8ccf4ca93e845c5b7b2b39d8d1599
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -30,6 +31,10 @@ Esta configuración puede instalar automáticamente las extensiones. [!DNL Meta]
 Para comenzar con la característica, seleccione **[!UICONTROL Get Started]** en la interfaz de usuario de **[!UICONTROL Event Forwarding]** colecciones de datos.
 
 ![Página de inicio del reenvío de eventos que muestra la tarjeta Introducción en la interfaz de usuario de las colecciones de datos](../../images/ui/guided-setup/get-started.png)
+
+>[!INFO]
+>
+>También puede acceder a la configuración guiada directamente desde la página de inicio de Recopilaciones de datos.
 
 ### Crear una nueva propiedad de etiquetas {#new-property}
 
