@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
+source-git-commit: 5d1825bad97d3ec4beece416dc3e0fc9f6ca636d
 workflow-type: tm+mt
-source-wordcount: '1322'
-ht-degree: 29%
+source-wordcount: '1136'
+ht-degree: 20%
 
 ---
 
@@ -25,46 +25,17 @@ ht-degree: 29%
 >- [Composición de público federado](https://experienceleague.adobe.com/es/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/latest)
 
-**Fecha de la versión: marzo de 2026**
+**Fecha de publicación: abril de 2026**
 
 Estas son las nuevas funciones y actualizaciones en Adobe Experience Platform:
 
-- [Administración avanzada del ciclo de vida de los datos](#advanced-data-lifecycle-management)
-- [Agent Orchestrator](#agent-orchestrator)
 - [Destinos](#destinations)
+- [Modelo de datos de experiencia (XDM)](#xdm)
 - [Servicio de consultas](#query-service)
-- [Perfil del cliente en tiempo real](#profile)
-- [Ejecutar y operar](#run-and-operate)
+- [Real-Time CDP](#rtcdp)
+- [Zonas protegidas](#sandboxes)
 - [Servicio de segmentación](#segmentation-service)
 - [Fuentes](#sources)
-
-## Administración avanzada del ciclo de vida de los datos {#advanced-data-lifecycle-management}
-
-Experience Platform proporciona un conjunto de funcionalidades de higiene de datos que le permiten administrar los datos almacenados mediante eliminaciones programáticas de registros de consumidores y conjuntos de datos. Con el espacio de trabajo de Data Lifecycle en la interfaz de usuario o a través de llamadas a la API de Data Hygiene, puede administrar de forma eficaz los almacenes de datos. Utilice estas funciones para asegurarse de que la información se utiliza según lo esperado, se actualiza cuando es necesario corregir datos incorrectos y se elimina cuando las políticas organizativas lo consideran necesario.
-
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| --- | --- |
-| Eliminación de registros solo de perfil y de conjuntos de datos múltiples (solo API) | Puede enviar un solo ID de conjunto de datos, una lista de ID de conjunto de datos separados por comas o el literal `ALL` en `datasetId` para eliminar identidades en uno, varios o todos los conjuntos de datos. También puede limitar la eliminación a los servicios de perfil estableciendo `targetServices` en `["identity","profile","ajo"]`, lo que no modifica el conjunto de datos. Consulte la [Guía de eliminación de registros de órdenes de trabajo](../hygiene/api/workorder.md) para obtener más información. |
-
-{style="table-layout:auto"}
-
-Para obtener más información, lea la [información general de la administración avanzada del ciclo de vida de los datos](../hygiene/home.md).
-
-## Agent Orchestrator {#agent-orchestrator}
-
-Agent Orchestrator le permite crear e implementar agentes con tecnología de IA que pueden automatizar flujos de trabajo e interactuar con los clientes en varios canales.
-
-**Funciones nuevas o actualizadas**
-
-| Función | Descripción |
-| --- | --- |
-| Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] | Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] es su agente incrustado que incorpora el conocimiento de marketing de Adobe directamente en herramientas cotidianas como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] y otras aplicaciones de [!DNL Microsoft 365]. Puede utilizar este agente para extraer información de campañas de confianza de aplicaciones de Adobe mientras planea campañas, revisa audiencias o colabora con compañeros, responde a preguntas de clientes y toma decisiones basadas en datos sin abandonar el flujo de trabajo de [!DNL Microsoft 365]. |
-
-{style="table-layout:auto"}
-
-Para obtener más información, consulte la [documentación de Agent Orchestrator](https://experienceleague.adobe.com/es/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 ## Destinos {#destinations}
 
@@ -74,14 +45,10 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| [Lote de Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) selector de región | Ahora puede encontrar su región más fácilmente con la nueva lista desplegable de búsqueda, que combina la búsqueda y la lista desplegable en un control. |
-| Exportar metadatos de audiencia a [destinos por lotes de Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Los archivos exportados a este destino ahora incluyen metadatos de audiencia. La nueva estructura de tabla se aplica a todas las conexiones de destino nuevas configuradas a partir de ahora. La estructura de tabla antigua se mantendrá durante otros tres meses antes de quedar obsoleta. |
-| [!DNL Adobe Advertising Cloud DSP] conexión | La nueva conexión de Adobe Advertising DSP ofrece la misma funcionalidad que la conexión heredada, además de compatibilidad con identidades adicionales. |
-| Compatibilidad con audiencias externas para [The Trade Desk CRM](../destinations/catalog/advertising/tradedesk-emails.md), [Criteo](../destinations/catalog/advertising/criteo.md) y [Pinterest](../destinations/catalog/advertising/pinterest.md) | Ahora puede activar audiencias que vayan más allá de los segmentos del servicio de segmentación en Trade Desk CRM, Criteo y Pinterest, incluidas las audiencias de carga personalizadas (importadas desde CSV), audiencias de similitud, audiencias federadas y audiencias creadas en otras aplicaciones de Experience Platform como Adobe Journey Optimizer. Consulte la sección [audiencias admitidas](../destinations/catalog/advertising/criteo.md#supported-audiences) en la página del catálogo de cada destino para obtener más información. |
-| Límite de audiencias de carga personalizada aumentado | Ahora puede activar hasta 20 audiencias de carga personalizadas por instancia de destino. Anteriormente, este límite era de 10. |
-| [Exportar archivo ahora](../destinations/ui/export-file-now.md) y [compatibilidad con la API de activación ad hoc](../destinations/api/ad-hoc-activation-api.md) para audiencias externas | Ahora puede utilizar la interfaz de usuario y la API de activación ad-hoc de Exportar archivo ahora con audiencias externas (como carga personalizada, similitud, federación y audiencias de otras aplicaciones de Experience Platform) al activar en destinos basados en archivos por lotes. |
-| Destinos de API HTTP con OAuth 2 y mTLS | Ahora puede crear y autenticar destinos de API HTTP que utilicen OAuth 2 cuando el extremo de autenticación requiera TLS mutuo (mTLS); la recuperación de tokens durante la configuración de destino ahora admite mTLS. |
-| Destino de cuenta de ZoomInfo | Ahora puede enviar audiencias de cuenta a ZoomInfo desde Real-Time Customer Data Platform (B2B). |
+| [!BADGE Beta]{type=Informative} [Coincidencia de clientes de Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Hacer coincidir clientes por dirección de correo electrónico y volver a interactuar con ellos en [!DNL Microsoft Advertising Network], incluidos los anuncios de búsqueda y de audiencia. Vincule su cuenta de [!DNL Microsoft Advertising] a Real-Time CDP para automatizar la creación y administración de listas de coincidencia de clientes directamente desde Experience Platform. |
+| [!BADGE Beta]{type=Informative} [Audiencia personalizada Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Enviar audiencias de Experience Platform a [!DNL Reddit Ads]. Conecte su cuenta de [!DNL Reddit], asigne identidades y active audiencias para llegar a las personas que exploran activamente sus intereses en [!DNL Reddit]. |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] es el destino actual de todas las nuevas conexiones de [!DNL Amazon Ads]. Si tiene una conexión [(heredada) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existente, seguirá funcionando sin los cambios necesarios. [!DNL Amazon Ads v2] se conecta a [!DNL Ads Data Manager], que proporciona compatibilidad con tipos de identidad expandidos, campos relacionados con direcciones y uso compartido de datos entre [!DNL Amazon Ads] productos, lo que mejora las tasas de coincidencia de audiencia y segmentación en comparación con [ (heredado) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [!DNL Rokt] | Utilice [!DNL Rokt] para conectar las audiencias de Experience Platform a la toma de decisiones en tiempo real impulsada por IA, lo que mejora el rendimiento de la campaña mediante una segmentación, supresión y personalización más precisas. |
 
 {style="table-layout:auto"}
 
@@ -89,66 +56,77 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Se ha corregido un problema que hacía que se mostrara | Descripción |
 | --- | --- |
-| Validación de ID de cuenta de [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) | Se ha agregado un validador de expresiones regulares al paso ID de cuenta. Al introducir su ID, ahora se valida para garantizar que el ID de organización y el ID de cuenta tengan el formato correcto (separados por un punto). |
-| hash del número de teléfono del conector [TikTok](../destinations/catalog/social/tiktok.md) | Se ha corregido un problema por el cual una configuración incorrecta en la tarjeta de destino significaba que las identidades marcadas desde números de teléfono no se activaban en TikTok. |
+| Compatibilidad de monitorización de Personalization personalizada | El panel de supervisión de destinos ahora admite [!DNL Custom Personalization] destinos. Se ha eliminado la nota de limitación que excluía a [!DNL Custom Personalization] de la supervisión. |
 
 {style="table-layout:auto"}
 
 Para obtener más información, consulte la [Información general sobre destinos](../destinations/home.md).
 
-## Perfil del cliente en tiempo real {#profile}
+## Modelo de datos de experiencia (XDM) {#xdm}
 
-Adobe Experience Platform le permite impulsar experiencias coordinadas, coherentes y relevantes para sus clientes, independientemente de dónde o cuándo interactúen con su marca. Con el Perfil del cliente en tiempo real, puede ver una vista integral de cada cliente individual que combina datos de varios canales, incluidos datos en línea, sin conexión, CRM y de terceros.
+XDM es una especificación de código abierto que proporciona estructuras y definiciones comunes (esquemas) para los datos introducidos en Experience Platform. Al adherirse a los estándares XDM, todos los datos de experiencia del cliente se pueden incorporar en una representación común para ofrecer perspectivas de una manera más rápida e integrada.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Selector de tiempo de eventos de perfil | Ahora puede establecer una ventana de tiempo en la pestaña de eventos de perfil para ver y analizar eventos dentro de ese intervalo. Puede establecer la ventana de tiempo en un máximo de 30 días. De forma predeterminada, muestra los eventos de las últimas 48 horas. |
+| Visibilidad del uso del esquema del grupo de campos | Vea qué esquemas utilizan un grupo de campos de la página de detalles y explórelos en un cuadro de diálogo ordenable con metadatos de esquema. Esto le ayuda a evaluar rápidamente las dependencias y el impacto sin salir. |
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [información general sobre el perfil del cliente en tiempo real](../profile/home.md).
+Para obtener más información, lea la [Descripción general del sistema XDM](../xdm/home.md).
 
 ## Servicio de consultas {#query-service}
 
-El Servicio de consultas le permite utilizar SQL estándar para consultar datos en el [!DNL Data Lake] de Adobe Experience Platform. Puede unir cualquier conjunto de datos del [!DNL Data Lake] y capturar los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, en Espacio de trabajo de ciencia de datos o para su ingesta en el Perfil del cliente en tiempo real.
+Use el servicio de consultas para consultar datos en Adobe Experience Platform [!DNL Data Lake] con SQL estándar. Únase a cualquier conjunto de datos de [!DNL Data Lake] y capture los resultados de la consulta como un nuevo conjunto de datos para usar en el sistema de informes, Data Science Workspace o la ingesta en el Perfil del cliente en tiempo real.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Data Distiller Accelerators | Ahora puede seleccionar un acelerador de la pestaña Aceleradores, introducir los parámetros necesarios y ejecutar o programar el SQL generado sin escribirlo usted mismo; clone cualquier acelerador en una plantilla personalizada para editarlo. |
+| Data Distiller Accelerators | Ejecute y programe plantillas SQL parametrizadas y administradas por Adobe en la interfaz de usuario del servicio de consultas para realizar análisis comunes sin escribir SQL. Esto le ayuda a estandarizar los flujos de trabajo de análisis y a reutilizar la lógica de consulta de confianza en toda la organización. |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea [Introducción al servicio de consultas](../query-service/home.md).
 
-## Ejecutar y operar {#run-and-operate}
+## Real-Time CDP {#rtcdp}
 
-Inspeccione, solucione problemas y optimice las implementaciones de Experience Platform con las herramientas Ejecutar y operar. Obtenga visibilidad sobre las activaciones por lotes programadas, identifique los problemas de configuración y mejore la fiabilidad del sistema.
+[!DNL Real-Time CDP] proporciona perfiles de cliente unificados y procesables mediante la ingesta, el procesamiento y la activación de datos en varios canales en tiempo real. Con Real-Time CDP, las organizaciones pueden conectar las fuentes de datos existentes, crear y activar audiencias enriquecidas y garantizar la activación compatible con la privacidad en todos los destinos, todo ello desde Experience Platform. Esto permite a los especialistas en marketing, analistas y equipos de TI ofrecer experiencias puntuales y altamente personalizadas para sus clientes a través de campañas de marketing multicanal sin problemas.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Disponibilidad general de [horarios de trabajo](../run-and-operate/job-schedules.md) | [!DNL Job Schedules] proporciona una vista unificada de todos los trabajos de procesamiento por lotes programados en toda la canalización de datos, desde la ingesta hasta la activación de destino. Inspeccione el estado de ejecución, identifique los conflictos de programación y diagnostique los problemas de configuración antes de que afecten a las operaciones empresariales. |
-| Comprobación de estado disponibilidad general | Las configuraciones de esquema e identidad deficientes derivan en problemas descendentes significativos, como la creación incorrecta de perfiles, la calificación fallida de segmentos y la activación inexacta. <br>Las comprobaciones de estado cambian su enfoque de la solución de problemas reactiva al mantenimiento preventivo y proactivo. Las comprobaciones de estado son análisis siempre activos de los esquemas e identidades utilizados en la zona protegida y proporcionan un resumen de los problemas que puede utilizar para explorar y solucionar problemas. |
+| Real-Time CDP MCP (Beta) | Utilice el MCP de Real-Time CDP para incorporar Real-Time CDP a los agentes de IA y a los clientes compatibles con MCP, lo que le permite interactuar con las herramientas de Real-Time CDP directamente a través de su experiencia LLM nativa. Al conectar un cliente compatible con MCP (como Claude, ChatGPT, Claude Code, Codex, Cursor o VS Code) a `https://rtcdp-mcp.adobe.io/mcp`, puede utilizar el lenguaje natural para inspeccionar audiencias, la configuración de destino y el historial de ejecución de activación, sin escribir llamadas a la API de REST de Experience Platform ni navegar por varios flujos de trabajo de interfaz de usuario. Después de completar un inicio de sesión de Adobe basado en explorador, tendrá acceso de solo lectura a las herramientas, que incluyen: <ul><li>Buscar audiencias existentes</li><li>Previsualizar pertenencia A Audiencia</li><li>Enumerar tipos de destino</li><li>Enumerar cuentas configuradas</li><li>Enumerar destinos configurados</li><li>Enumerar conexiones de Source</li><li>Enumerar conexiones de destino</li><li>Inspeccionar ejecuciones de activación</li></ul>. Cada solicitud requiere `imsOrgId` y `sandboxName` parámetros para garantizar que las acciones tengan ámbitos para su organización y zona protegida. Tenga en cuenta que las operaciones de escritura no son compatibles con esta versión de Beta. |
 
 {style="table-layout:auto"}
 
-Para obtener más información, lea la [Información general sobre la ejecución y el funcionamiento](../run-and-operate/overview.md), [Inspeccionar las programaciones de trabajos](../run-and-operate/job-schedules.md) y la [guía de la interfaz de usuario de la plataforma](../landing/ui-guide.md).
+Para obtener más información, lea la [descripción general de Real-Time CDP](../rtcdp/home.md).
 
-## Servicio de segmentación {#segmentation}
+## Zonas protegidas {#sandboxes}
 
-Experience Platform le permite crear segmentos de audiencia a partir de los datos de sus clientes y permite una administración completa del ciclo de vida de esas audiencias.
+Adobe Experience Platform está diseñado para enriquecer las aplicaciones de experiencia digital a escala global. Las empresas suelen ejecutar varias aplicaciones de experiencia digital en paralelo y deben encargarse del desarrollo, las pruebas y la implementación de estas aplicaciones, a la vez que garantizan el cumplimiento normativo.
 
 **Funciones nuevas o actualizadas**
 
 | Función | Descripción |
 | --- | --- |
-| Fuente de ingesta en el Generador de audiencias | Ahora puede ver si cada atributo proviene de un lote, una transmisión por secuencias o un origen perimetral dentro de Audience Builder para evitar la creación de audiencias de transmisión por secuencias no válidas o ineficientes. |
-| Mostrar solo campos con datos en el Generador de audiencias de cuenta | Ahora puede filtrar para mostrar solo los atributos que contienen datos al crear audiencias de cuenta. |
+| Express Copy | Use la copia rápida para copiar objetos en una zona protegida de destino en una sola acción desde la [IU de herramientas de zona protegida](/help/sandboxes/ui/sandbox-tooling.md#express-copy). Los objetos dependientes se detectan automáticamente y se crean en la zona protegida de destino o se reutilizan cuando ya existen. |
+
+{style="table-layout:auto"}
+
+Para obtener más información, lea la [descripción general de las zonas protegidas](../sandboxes/home.md).
+
+## Servicio de segmentación {#segmentation-service}
+
+Utilice el servicio de segmentación para crear audiencias a partir de los datos de sus clientes y administrar todo su ciclo de vida en Experience Platform.
+
+**Funciones nuevas o actualizadas**
+
+| Función | Descripción |
+| --- | --- |
+| Monitorización de segmentación de streaming | Monitorice la segmentación de streaming con visibilidad en tiempo real de la tasa de evaluación, la latencia de ingesta y las métricas de calidad de datos en el nivel de zona protegida, conjunto de datos y segmento. Ver métricas que incluyen tasa de evaluación, latencia de ingesta de P95, registros recibidos, registros evaluados, registros fallidos y registros omitidos. Vea también los nuevos perfiles netos clasificados y descalificados por segmento. Utilice estas perspectivas para identificar infracciones de capacidad y problemas de ingesta antes de que afecten a los datos. |
 
 {style="table-layout:auto"}
 
@@ -162,25 +140,11 @@ Experience Platform proporciona una API RESTful y una IU interactiva que le perm
 
 | Fuente | Descripción |
 | --- | --- |
-| Compatibilidad mejorada con la captura de datos modificados | Ahora puede usar Cambiar captura de datos con los orígenes [!DNL Marketo Engage], [!DNL Microsoft Dynamics] y [!DNL Salesforce CRM]. |
+| Desactivación automática de flujo de datos | Los flujos de datos de ingesta de fuentes que fallan continuamente durante 30 días se desactivan automáticamente, lo que ayuda a que aparezcan flujos de datos no en buen estado y a reducir las ejecuciones fallidas repetidas. |
+| [!DNL Delta Sharing] | Puede usar el origen [!DNL Delta Sharing] para llevar tablas Delta a Experience Platform a través de un protocolo seguro y abierto para compartir datos. Después de configurar una conexión de [!DNL Delta Sharing] y seleccionar los recursos compartidos y las tablas que desea introducir, Platform introduce automáticamente esos datos en los conjuntos de datos para que pueda utilizarlos en el análisis, la segmentación y la activación. |
+| [!DNL Meta Ads] (Beta) | Puede usar el conector de origen [!DNL Meta Ads] (Beta) en el área de trabajo de fuentes para autenticarse en [!DNL Meta], seleccionar las cuentas de publicidad y programar la ingesta de datos de rendimiento y campaña de [!DNL Meta Ads] en los conjuntos de datos de Experience Platform. |
+| [!DNL Talon.One] | Ahora puede conectar Experience Platform a [!DNL Talon.One] con los nuevos orígenes de flujo continuo y lote de [!DNL Talon.One]. Utilice las nuevas fuentes para introducir datos del perfil de lealtad, así como eventos de transacciones y actividades de lealtad en Experience Platform. |
 
 {style="table-layout:auto"}
 
 Para obtener más información, lea la [Información general de las fuentes](../sources/home.md).
-
-<!--
-
-| [!DNL Deltashare] | The new [!DNL Deltashare] source lets you securely bring live, shared datasets from your partners or internal lakehouse environments directly into Adobe's applications without copying or manually uploading files. You connect to a [!DNL Deltashare] endpoint, choose the tables you need, and you can then use that governed, up-to-date data alongside your existing profiles and insights, so you spend less time on data wrangling and more time activating and analyzing it in your marketing workflows. |
-| [!DNL Kobie] | The new [!DNL Kobie] source connector lets you directly ingest rich loyalty data from [!DNL Kobie] into Adobe's applications, so you can activate it alongside your existing customer profiles and insights. You connect your [!DNL Kobie] environment, configure the data objects you want to bring in (such as member status, transactions, and engagement), and then you can use that up-to-date loyalty information to build audiences, personalize experiences, and measure performance without juggling separate systems. |
-| [!DNL Talon.One] | The new Talon.One source lets you seamlessly bring promotion and incentive data from Talon.One into Adobe's applications, so you can use it alongside your existing customer profiles and behavioral data. You connect your Talon.One account, select the entities and events you want to ingest (such as campaigns, coupons, and redemptions), and then you can use that real-time promotion context to build smarter audiences, personalize offers, and better understand which incentives are driving performance—without managing separate, disconnected systems. |
-
--->
-
-<!--
-
-| Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
-
-| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
-| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
-
--->
