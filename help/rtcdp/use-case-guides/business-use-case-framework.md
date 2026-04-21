@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ No es necesario comenzar en &quot;ejecución&quot; para ofrecer valor, concéntr
 
 ## Introducción
 
-Descargue la plantilla del marco de trabajo y los recursos de apoyo para ejecutar un taller estructurado y producir una hoja de ruta priorizada y mensurable lista para su activación.
+Descargue [la plantilla del marco de trabajo y los recursos de apoyo](../assets/S651-use-case-framework-template.pdf) para ejecutar un taller estructurado y producir una hoja de ruta priorizada y mensurable lista para su activación.
+
