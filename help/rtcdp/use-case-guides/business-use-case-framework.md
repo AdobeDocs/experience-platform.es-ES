@@ -1,11 +1,9 @@
 ---
 title: Aproveche los casos prácticos de la experiencia del cliente para impulsar los objetivos empresariales
 description: Utilice un marco práctico y listo para el taller para definir, priorizar y activar casos prácticos de experiencias del cliente vinculados a resultados comerciales medibles. Aplique un modelo sencillo de Por qué → Quién/Qué/Dónde → Cómo para alinear equipos, guiar la ejecución y ofrecer impacto.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
