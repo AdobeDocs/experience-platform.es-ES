@@ -2,10 +2,10 @@
 title: Notas previas al lanzamiento de Experience Platform
 description: Una previsualización de las últimas notas de la versión para Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 20%
+source-wordcount: '1344'
+ht-degree: 17%
 
 ---
 
@@ -45,10 +45,13 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 
 | Destino | Descripción |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Coincidencia de clientes de Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Hacer coincidir clientes por dirección de correo electrónico y volver a interactuar con ellos en [!DNL Microsoft Advertising Network], incluidos los anuncios de búsqueda y de audiencia. Vincule su cuenta de [!DNL Microsoft Advertising] a Real-Time CDP para automatizar la creación y administración de listas de coincidencia de clientes directamente desde Experience Platform. |
+| [!BADGE Beta]{type=Informative} [Coincidencia de clientes de Microsoft Ads](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Hacer coincidir clientes por dirección de correo electrónico y volver a interactuar con ellos en [!DNL Microsoft Advertising Network], incluidos los anuncios de búsqueda y de audiencia. Vincule su cuenta de [!DNL Microsoft Advertising] a Real-Time CDP para automatizar la creación y administración de listas de coincidencia de clientes directamente desde Experience Platform. Para obtener acceso, póngase en contacto con el administrador de cuentas de Adobe. |
 | [!BADGE Beta]{type=Informative} [Audiencia personalizada Reddit](../destinations/catalog/advertising/reddit-custom-audience.md) | Enviar audiencias de Experience Platform a [!DNL Reddit Ads]. Conecte su cuenta de [!DNL Reddit], asigne identidades y active audiencias para llegar a las personas que exploran activamente sus intereses en [!DNL Reddit]. |
-| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] es el destino actual de todas las nuevas conexiones de [!DNL Amazon Ads]. Si tiene una conexión [(heredada) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existente, seguirá funcionando sin los cambios necesarios. [!DNL Amazon Ads v2] se conecta a [!DNL Ads Data Manager], que proporciona compatibilidad con tipos de identidad expandidos, campos relacionados con direcciones y uso compartido de datos entre [!DNL Amazon Ads] productos, lo que mejora las tasas de coincidencia de audiencia y segmentación en comparación con [&#x200B; (heredado) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
+| [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] es el destino actual de todas las nuevas conexiones de [!DNL Amazon Ads]. Si tiene una conexión [(heredada) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existente, seguirá funcionando sin los cambios necesarios. [!DNL Amazon Ads v2] se conecta a [!DNL Ads Data Manager], que proporciona compatibilidad con tipos de identidad expandidos, campos relacionados con direcciones y uso compartido de datos entre [!DNL Amazon Ads] productos, lo que mejora las tasas de coincidencia de audiencia y segmentación en comparación con [ (heredado) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Utilice [!DNL Rokt] para conectar las audiencias de Experience Platform a la toma de decisiones en tiempo real impulsada por IA, lo que mejora el rendimiento de la campaña mediante una segmentación, supresión y personalización más precisas. |
+| Compatibilidad con audiencia externa para [Criteo](../destinations/catalog/advertising/criteo.md) | Active audiencias desde orígenes que no sean del servicio de segmentación hasta [!DNL Criteo], incluidas las audiencias de carga personalizadas (importadas desde CSV), las audiencias de similitud, las audiencias federadas y las audiencias creadas en otras aplicaciones de Experience Platform como [!DNL Adobe Journey Optimizer]. Consulte la sección [audiencias admitidas](../destinations/catalog/advertising/criteo.md#supported-audiences) para obtener más información. |
+| [Conexión de audiencia Acxiom](../destinations/catalog/advertising/acxiom-audience-connection.md) | El destino [!DNL Acxiom Audience Connection] ya está disponible de forma general. Utilícelo para mejorar audiencias con tecnología [!DNL Acxiom's Real ID] y activarlas en plataformas adicionales, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] y [!DNL Viant]. |
+| [Conexión de audiencia de Real ID de Acxiom](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | El destino [!DNL Acxiom Real ID Audience Connection] ya está disponible de forma general. Utilícelo para activar audiencias usando [!DNL Acxiom's Real ID] como clave de coincidencia en el mismo conjunto de plataformas admitidas, incluidas [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] y [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Los [!DNL Destinations] son integraciones generadas previamente con plataformas 
 | Se ha corregido un problema que hacía que se mostrara | Descripción |
 | --- | --- |
 | Compatibilidad de monitorización de Personalization personalizada | El panel de supervisión de destinos ahora admite [!DNL Custom Personalization] destinos. Se ha eliminado la nota de limitación que excluía a [!DNL Custom Personalization] de la supervisión. |
+| Recuentos de perfiles en la revisión de activación | El paso de revisión de activación ahora muestra los recuentos de perfiles de las audiencias que ya están activadas. Los recuentos de perfiles también se muestran para destinos de flujo continuo, no solo para destinos por lotes. |
+| Visibilidad de caducidad de token [!DNL Pinterest] | El destino [!DNL Pinterest] muestra ahora el tiempo de caducidad del token devuelto directamente desde [!DNL Pinterest], para que pueda ver cuándo es necesaria la reautenticación. |
+| Archivo de exportación desactivado para programaciones no válidas | La acción **[!UICONTROL Export file now]** ahora está deshabilitada cuando la programación de audiencias no es válida o está obsoleta. La información sobre herramientas explica por qué la acción no está disponible. |
+| Corrección de visibilidad de columna en el flujo de trabajo de activación | Se corrigió un problema en el cual el cambio de columnas visibles en una tabla afectaba incorrectamente a otras tablas del flujo de trabajo de activación. |
 
 {style="table-layout:auto"}
 
