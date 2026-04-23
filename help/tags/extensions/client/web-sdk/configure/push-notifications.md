@@ -2,10 +2,10 @@
 title: Configuración de notificaciones push
 description: Configure las notificaciones push para la extensión de etiquetas Web SDK.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 1%
+source-wordcount: '178'
+ht-degree: 10%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 1%
 >id="platform_tags_websdk_pushnotifications"
 >title="Notificaciones push"
 >abstract="Establece una clave pública VAPID para la autenticación de notificaciones push."
-
->[!AVAILABILITY]
->
->Las notificaciones push para Web SDK se encuentran actualmente en **beta**. La funcionalidad y la documentación están sujetas a cambios.
 
 Esta sección de configuración le permite establecer una clave pública VAPID para la autenticación de notificaciones push.
 

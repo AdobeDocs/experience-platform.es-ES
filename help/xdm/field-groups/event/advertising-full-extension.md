@@ -1,23 +1,24 @@
 ---
-title: Grupo de campos de esquema de extensión completa de Adobe Advertising Cloud ExperienceEvent
-description: Obtenga información acerca del grupo de campos de esquema Extensión completa de ExperienceEvent de Adobe Advertising Cloud.
+title: Grupo de campos de esquema de extensión completa de Adobe Advertising ExperienceEvent
+description: Obtenga información acerca del grupo de campos de esquema Extensión completa de Adobe Advertising ExperienceEvent.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: adfd0220b8bc53c44abc76a711b148a7e03edb7a
+exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 7%
+source-wordcount: '1558'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Extensión completa de Adobe Advertising Cloud ExperienceEvent] grupo de campos de esquema
+# [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] grupo de campos de esquema
 
 >[!AVAILABILITY]
 >
->El grupo de campos [!UICONTROL Extensión completa de ExperienceEvent de Adobe Advertising Cloud] está actualmente en la versión beta. La documentación y las funcionalidades están sujetas a cambios.
+>El grupo de campos [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] se encuentra en la versión beta. La documentación y las funcionalidades están sujetas a cambios.
 
-[!UICONTROL Adobe Advertising Cloud ExperienceEvent Full Extension] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que captura métricas comunes recopiladas por Adobe Advertising (anteriormente denominadas &quot;[!DNL Advertising Cloud]&quot;).
+[!UICONTROL Adobe Advertising ExperienceEvent Full Extension] es un grupo de campos de esquema estándar para la [[!DNL XDM ExperienceEvent] clase](../../classes/experienceevent.md), que captura métricas comunes recopiladas por Adobe Advertising (anteriormente denominadas &quot;[!DNL Advertising Cloud]&quot;).
 
-Este documento describe la estructura y el caso de uso del grupo de campos de extensión [!DNL Advertising Cloud].
+Este documento describe la estructura y el caso de uso del grupo de campos de extensión [!DNL Advertising].
 
 >[!NOTE]
 >
@@ -27,7 +28,7 @@ Este documento describe la estructura y el caso de uso del grupo de campos de ex
 
 El grupo de campos proporciona un único objeto `_experience` a un esquema, que a su vez contiene un único objeto `adcloud`.
 
-![Campos de nivel superior para el grupo de campos [!DNL Advertising Cloud]](../../images/field-groups/advertising-full-extension/full-schema.png "Campos de nivel superior para el [!DNL Advertising Cloud] grupo de campos")
+![Campos de nivel superior para el grupo de campos [!DNL Advertising]](../../images/field-groups/advertising-full-extension/full-schema.png "Campos de nivel superior para el [!DNL Advertising] grupo de campos")
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
@@ -86,7 +87,7 @@ El objeto de campaña define la jerarquía de campañas de publicidad, incluidos
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
 | `accountId` | Cadena | El identificador de la cuenta. |
-| `dspId` | Cadena | El identificador de la Demand Side Platform (DSP) en la que se define la campaña. Normalmente, este identificador es el ID de Adobe Advertising Cloud DSP. |
+| `dspId` | Cadena | El identificador de la Demand Side Platform (DSP) en la que se define la campaña. Normalmente, este identificador es el ID de Adobe Advertising DSP. |
 | `campaignId` | Cadena | El identificador de la campaña. |
 | `placementId` | Cadena | El identificador de la ubicación. |
 | `packageId` | Cadena | El identificador del paquete de Advertising DSP. |
@@ -103,8 +104,8 @@ El objeto conversionDetails captura información de seguimiento para las convers
 
 | Propiedad | Tipo de datos | Descripción |
 | --- | --- | --- |
-| `trackingCode` | Cadena | El código de seguimiento de conversión del evento. Para obtener una lista de posibles formatos, consulte [Formatos de ID de AMO](https://experienceleague.adobe.com/es/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | Cadena | El EF ID o los detalles de identidad de seguimiento de un evento. Para obtener una lista de los posibles formatos, vea [Formatos EF ID](https://experienceleague.adobe.com/es/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | Cadena | El código de seguimiento de conversión del evento. Para obtener una lista de posibles formatos, consulte [Formatos de ID de AMO](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | Cadena | El EF ID o los detalles de identidad de seguimiento de un evento. Para obtener una lista de los posibles formatos, vea [Formatos EF ID](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objeto | Mapa de propiedades de conversión, representadas como una matriz de cadenas de pares clave-valor (como `subscriptions=253`). |
 
 ## `fees` {#fees}
@@ -142,10 +143,10 @@ El objeto de inventario registra detalles sobre la oportunidad de inventario de 
 | --- | --- | --- |
 | `sessionId` | Cadena | El ID de sesión asociado a un evento de experiencia, que se utiliza para vincular eventos independientes que se produjeron en la misma sesión. |
 | `feedID` | Cadena | Un ID compuesto del editor, el intercambio de anuncios y otras funciones. |
-| `sspPartnerCode` | Cadena | El socio (intercambio) a través del cual Adobe Advertising Cloud recibe la oportunidad de inventario. |
+| `sspPartnerCode` | Cadena | El socio (intercambio) a través del cual Adobe Advertising recibe la oportunidad de inventario. |
 | `siteID` | Cadena | El identificador del sitio web en el que se proporcionó la impresión publicitaria. |
 | `costCurrency` | Cadena | El código de divisa en formato ISO 4217 usado para pagar a un socio por una oportunidad publicitaria. El valor debe seguir el patrón de expresión regular ^[A-Z]{3}$ (tres letras mayúsculas). Por ejemplo: USD, EUR. |
-| `inventorySourceId` | Cadena | El ID del origen del inventario de Adobe Advertising Cloud en el que se entregó esta oportunidad. |
+| `inventorySourceId` | Cadena | El ID del origen de inventario de Adobe Advertising en el que se entregó esta oportunidad. |
 | `segment` | Objeto | Detalles asociados con las reglas de segmentación de usuarios. Entre sus propiedades se incluyen:<ul><li>`attributablePartnerId` (cadena): Identificador del proveedor del segmento propietario de attributeSegmentId.</li><li>`attributableSegmentId` (cadena): segmento acreditado por la segmentación de usuarios en la regla de segmentación de la ubicación. Esto se utiliza para los fines de seguimiento de costes y pago a socios.</li><li>`segments` (cadena): la intersección de los segmentos de usuario (a\) a los que pertenecía el usuario y (b\) a los que se dirigía el anuncio. Esta no es la lista completa de segmentos a los que pertenecía el usuario en el momento de la subasta.</li></ul> |
 | `optimizationTag` | Cadena | La etiqueta relacionada con la optimización. |
 | `attributableDeviceGraphId` | Cadena | El identificador del gráfico del dispositivo atribuido a un evento de conversión. |
@@ -167,6 +168,6 @@ El objeto `productDetails` contiene información sobre los productos que aparece
 
 ## Próximos pasos
 
-Este documento cubre la estructura y el caso de uso del grupo de campos de extensión [!DNL Advertising Cloud]. Para obtener más información sobre el propio grupo de campos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
+Este documento cubre la estructura y el caso de uso del grupo de campos de extensión [!DNL Adobe Advertising]. Para obtener más información sobre el propio grupo de campos, consulte el [repositorio XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
 
 Si utiliza este grupo de campos para recopilar datos de [!DNL Advertising] mediante Adobe Experience Platform Web SDK, consulte la guía sobre [configuración de una secuencia de datos](../../../datastreams/overview.md) para obtener información sobre cómo asignar datos a XDM en el servidor.

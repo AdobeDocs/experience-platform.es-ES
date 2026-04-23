@@ -2,9 +2,9 @@
 title: Información general sobre la extensión Adobe Privacy
 description: Obtenga información acerca de la extensión de etiquetas Adobe Privacy en Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '821'
 ht-degree: 6%
 
 ---
@@ -31,7 +31,7 @@ La siguiente pantalla le permite configurar de qué fuentes y soluciones desea q
 * Adobe Audience Manager (AAM)
 * Adobe Target
 * Servicio de identidad de Adobe Experience Cloud (visitante o ECID)
-* Adobe Advertising Cloud (AdCloud)
+* Adobe Advertising
 
 Seleccione una o varias soluciones y, a continuación, seleccione **[!UICONTROL Update]**.
 

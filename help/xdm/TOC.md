@@ -5,9 +5,9 @@ breadcrumb-title: Guía del Modelo de datos de experiencia (XDM)
 user-guide-description: Explore una descripción general del sistema Modelo de datos de experiencia (XDM) en Experience Platform y aprenda a utilizar clases y grupos de campos de esquema para estandarizar los datos de experiencia.
 feature: Schemas
 role: Developer
-source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 21%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 21%
    * [ExperienceEvent de XDM](./classes/experienceevent.md)
    * [Medicación](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Planificar &#x200B;](./classes/plan.md)
+   * [Planificar ](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Producto](./classes/product.md)
    * [Cliente potencial](./classes/prospect.md)
@@ -116,7 +116,7 @@ ht-degree: 21%
       * [Detalles del cliente potencial del socio (ejemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * ExperienceEvent de XDM {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
-      * [Extensión completa de Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
+      * [Adobe Advertising Full Extension](./field-groups/event/advertising-full-extension.md)
       * [Detalles de Advertising](./field-groups/event/advertising-details.md)
       * [Detalles de aplicación](./field-groups/event/application-details.md)
       * [Transferencias de saldo](./field-groups/event/balance-transfers.md)

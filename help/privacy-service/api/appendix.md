@@ -5,9 +5,9 @@ title: Apéndice de la Guía de API de Privacy Service
 description: Este documento contiene información adicional para trabajar con la API de Privacy Service.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 9b3fb0d545408369d96a3fc7c5c6e9c098af9933
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '551'
 ht-degree: 6%
 
 ---
@@ -26,7 +26,7 @@ En la tabla siguiente se describen varios tipos de identidad predefinidos utiliz
 | --- | --- | --- |
 | Correo electrónico | `Email` | `6` |
 | Teléfono | `Phone` | `7` |
-| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| ADOBE ADVERTISING ID | `AdCloud` | `411` |
 | UUID DE ADOBE AUDIENCE MANAGER | `CORE` | `0` |
 | ADOBE EXPERIENCE CLOUD ID | `ECID` | `4` |
 | ADOBE TARGET ID | `TNTID` | `9` |

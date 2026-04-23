@@ -2,7 +2,7 @@
 title: Resumen del perfil del cliente en tiempo real
 description: El perfil del cliente en tiempo real combina datos de varias fuentes y proporciona acceso a esos datos en forma de perfiles de clientes individuales y eventos de series temporales relacionados. Esta función permite a los especialistas en marketing impulsar experiencias coordinadas, coherentes y relevantes con sus audiencias en varios canales.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -113,7 +113,7 @@ La entrada en tiempo real es posible mediante un proceso denominado ingesta de t
 
 >[!NOTE]
 >
->Los datos recopilados a través de las soluciones de Adobe, incluyendo [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Advertising Cloud], fluyen a [!DNL Experience Platform] y se incorporan en [!DNL Profile].
+>Los datos recopilados a través de las soluciones de Adobe, incluyendo [!DNL Analytics Cloud], [!DNL Marketing Cloud] y [!DNL Adobe Advertising], fluyen a [!DNL Experience Platform] y se incorporan en [!DNL Profile].
 
 ### Métricas de ingesta de perfil
 

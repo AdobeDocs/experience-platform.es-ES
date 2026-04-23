@@ -6,9 +6,9 @@ user-guide-description: Aprenda a implementar y administrar etiquetas de anális
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '827'
 ht-degree: 43%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 43%
       * [Personalizador de Activity Map](https://exchange.adobe.com/apps/ec/101531)
       * [Actualizar página de acción](https://exchange.adobe.com/apps/ec/102848)
       * [Seguimiento Del Sitio Web De Adform](https://exchange.adobe.com/apps/ec/103195)
-      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Información general](./extensions/client/analytics/overview.md)
          * [Módulos compartidos](./extensions/client/analytics/shared-modules.md)
@@ -157,7 +157,7 @@ ht-degree: 43%
          * [Información general](./extensions/client/target-v2/overview.md)
          * [Notas de la versión](./extensions/client/target-v2/release-notes.md)
       * [Kit de herramientas de Adobe Target](https://exchange.adobe.com/apps/ec/100640)
-      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
       * [Información de recursos de AEM](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS del freno neumático](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] datos {#algolia-insights}

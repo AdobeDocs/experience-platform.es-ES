@@ -1,26 +1,26 @@
 ---
-keywords: Advertising Cloud; extensión de advertising cloud; destino de advertising cloud
-title: Extensión de Adobe Advertising Cloud
-description: La extensión de Adobe Advertising Cloud es un destino de publicidad en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
+keywords: extensión de publicidad; destino de publicidad
+title: Extensión de Adobe Advertising
+description: La extensión de Adobe Advertising es un destino de publicidad en Adobe Experience Platform. Para obtener más información sobre la funcionalidad de la extensión, consulte la página de extensión en Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '409'
 ht-degree: 4%
 
 ---
 
-# Extensión [!DNL Adobe Advertising Cloud] {#adobe-advertising-cloud-extension}
+# Extensión [!DNL Adobe Advertising] {#adobe-advertising-cloud-extension}
 
 ## Información general {#overview}
 
-Esta es la extensión [!DNL Advertising Cloud] para implementar las etiquetas de conversión y audiencia [!DNL Advertising Cloud] tanto para DSP como para Search (DCO no es compatible actualmente).
+Esta es la extensión [!DNL Adobe Advertising] para implementar la conversión de publicidad y las etiquetas de audiencia en DSP y Search (actualmente DCO no es compatible).
 
-[!DNL Adobe Advertising Cloud] es una extensión publicitaria en [!DNL Adobe Experience Platform].
+[!DNL Adobe Advertising] es una extensión publicitaria en [!DNL Adobe Experience Platform].
 
 Este destino es una extensión de etiqueta. Para obtener más información sobre cómo funcionan las extensiones de etiquetas en Experience Platform, consulte [descripción general de las extensiones de etiquetas](../launch-extensions/overview.md).
 
-![Extensión de Adobe Advertising Cloud](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Extensión de Adobe Advertising](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Requisitos previos {#prerequisites}
 
@@ -30,7 +30,7 @@ Para utilizar esta extensión, debe tener acceso a las etiquetas en Experience P
 
 ## Instalar extensión {#install-extension}
 
-Para instalar la extensión [!DNL Adobe Advertising Cloud]:
+Para instalar la extensión [!DNL Adobe Advertising]:
 
 En la [interfaz de Experience Platform](https://platform.adobe.com/), vaya a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 

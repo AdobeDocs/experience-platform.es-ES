@@ -3,10 +3,10 @@ title: Pestaña Auditor
 description: Aprenda a utilizar la pestaña Auditor en Adobe Experience Platform Debugger para probar las implementaciones de Adobe Experience Cloud.
 keywords: debugger;extensión de experience platform debugger;chrome;extensión;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 32%
+source-wordcount: '361'
+ht-degree: 33%
 
 ---
 
@@ -17,7 +17,7 @@ En Adobe Experience Platform Debugger, puede usar la ficha **[!UICONTROL Auditor
 Para utilizar esta función:
 
 1. Seleccione **[!UICONTROL Auditor]** en el panel de navegación izquierdo.
-1. Seleccione **[!UICONTROL Ejecutar pruebas de Auditor]**. Una vez completadas las pruebas, los resultados aparecen a continuación.
+1. Seleccione **[!UICONTROL Run Auditor Tests]**. Una vez completadas las pruebas, los resultados aparecen a continuación.
 
 ![Captura de pantalla de los resultados de la prueba en la ficha Auditor](../images/auditor-results.png)
 
@@ -42,12 +42,12 @@ Se **recomienda especialmente** corregir cualquier resultado de los niveles 4 o 
 
 Se **recomienda** corregir cualquier resultado de los niveles 1 a 3.
 
-## Tecnologías de Adobe compatibles
+## Tecnologías Adobe compatibles
 
 La función de auditor puede clasificar las siguientes tecnologías de Adobe:
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Búsqueda de Adobe Advertising
 * Adobe Analytics
 * Servicio de identidad de Adobe Experience Cloud
 * Adobe Target

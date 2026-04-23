@@ -1,18 +1,15 @@
 ---
 title: pushNotifications
 description: Configure las notificaciones push para Web SDK para habilitar la mensajería push basada en el explorador.
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+exl-id: a5cf4817-a4c2-4cf1-8f3a-7e92b807de8f
+source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
 
 # `pushNotifications` {#push-notifications}
-
->[!AVAILABILITY]
->
->Las notificaciones push para Web SDK se encuentran actualmente en **beta**. La funcionalidad y la documentación están sujetas a cambios.
 
 La propiedad `pushNotifications` le permite configurar las notificaciones push para las aplicaciones web. Esta función permite que la aplicación web reciba mensajes insertados desde un servidor, incluso cuando el sitio web no está cargado actualmente en el explorador.
 

@@ -2,7 +2,7 @@
 title: Implementar etiquetas de JavaScript para administrar el consentimiento del cliente
 description: Obtenga información sobre cómo administrar las señales de inclusión y exclusión de clientes para distintas soluciones de Adobe en Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 94%
@@ -19,9 +19,9 @@ Los desarrolladores de extensiones de Adobe Experience Platform usan las extensi
 
 Este documento contiene información sobre cómo evitar que las etiquetas de Adobe se activen antes de la adquisición del consentimiento.
 
-## Advertising Cloud
+## Adobe Advertising
 
-Adobe Experience Platform no activa [!DNL Advertising Cloud] automáticamente. [!DNL Advertising Cloud] solo se activa si lo indica específicamente en una acción de regla. Utilice las condiciones de regla para determinar cuándo y qué se debe activar. Por ejemplo, para utilizar cookies para determinar el estado de inclusión, configure un elemento de datos para que lea esa cookie y úselo como una condición de la regla para determinar cuándo se debe activar la acción de seguimiento de conversión.
+Adobe Experience Platform no activa [!DNL Adobe Advertising] automáticamente. [!DNL Advertising] solo se activa si lo indica específicamente en una acción de regla. Utilice las condiciones de regla para determinar cuándo y qué se debe activar. Por ejemplo, para utilizar cookies para determinar el estado de inclusión, configure un elemento de datos para que lea esa cookie y úselo como una condición de la regla para determinar cuándo se debe activar la acción de seguimiento de conversión.
 
 Las integraciones con los gestores de consentimiento (como OneTrust) pueden configurar y rastrear las cookies de consentimiento de los clientes, que luego pueden utilizarse en el generador de reglas.
 
