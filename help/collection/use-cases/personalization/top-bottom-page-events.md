@@ -2,9 +2,9 @@
 title: Configuración de la parte superior e inferior de los eventos de página en Web SDK
 description: Este artículo explica cómo utilizar la parte superior e inferior de los eventos de página en Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
+source-git-commit: 8058ee470717b95d30269a8072b12385c920c85f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -12,32 +12,24 @@ ht-degree: 1%
 
 # Configuración de la parte superior e inferior de los eventos de página en Web SDK
 
-Cuando se desea ofrecer experiencias personalizadas a los clientes, es esencial disponer de una página web a la hora de cargarla.
+Al ofrecer experiencias personalizadas, el tiempo de carga de una página web es esencial. Para minimizar el tiempo que un usuario espera contenido personalizado, Web SDK admite la configuración de los eventos superior e inferior de la página.
 
-Para optimizar los tiempos de carga y ofrecer personalización lo más rápido posible, Web SDK admite la configuración de los eventos superior e inferior de la página.
+Los eventos superior e inferior de página describen un método para cargar de forma asíncrona varios elementos en la página, manteniendo al mismo tiempo el tiempo de carga de la página como mínimo:
 
-Los eventos Top e Bottom of page describen un método para cargar de forma asíncrona varios elementos en la página, manteniendo al mismo tiempo el tiempo de carga de la página al mínimo.
+* La parte superior del evento de página solicita personalización en cuanto la página empieza a cargarse.
+* La parte inferior del evento de página registra una vista de página cuando la página termina de cargarse.
 
-Esta configuración minimiza el tiempo que un usuario tiene que esperar hasta que se cargue el contenido personalizado.
+Adobe Analytics ignora la parte superior de los eventos de página, lo que lleva a un registro de métricas más preciso, ya que solo se registra una visita a la página (la parte inferior del evento de página).
 
-En cuanto a la precisión de las métricas, Adobe Analytics puede ignorar los eventos de la parte superior de la página, lo que lleva a un registro de métricas más preciso, ya que solo se registra una visita a la página (la parte inferior del evento de la página).
+Puede configurar los eventos superior e inferior de la página de dos maneras: llamando directamente a la biblioteca de JavaScript de Web SDK (`alloy()`) o utilizando la extensión de etiquetas de Web SDK en la interfaz de usuario de etiquetas de Adobe Experience Platform. La acción [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) de la extensión de etiqueta incluye una opción &#39;[!UICONTROL Use guided events]&#39; que preconfigura valores de campo para los escenarios &#39;[!UICONTROL Request personalization]&#39; (parte superior de la página) y &#39;[!UICONTROL Collect analytics]&#39; (parte inferior de la página). Cada ejemplo siguiente muestra ambas implementaciones.
 
-## Casos de uso {#use-cases}
+## Evento de parte superior de la página {#top-of-page}
 
-Una retailer de ropa deportiva quiere ofrecer experiencias personalizadas a sus compradores, al tiempo que minimiza la fricción del usuario al visitar su sitio web, y todo ello sin dejar de poder recopilar métricas de visitantes con precisión.
-
-Mediante los eventos superior e inferior de página de Web SDK, el equipo de marketing puede configurar su envío de personalización de la forma más óptima:
-
-* Web SDK envía una solicitud de personalización que se carga en cuanto la página empieza a cargarse. Este es un evento de la parte superior de la página.
-* Cuando termina de cargarse la página, se registra un evento de vista de página. Esto sucede más adelante en el proceso de carga de página. Esta es una parte inferior del evento de la página.
-
-## Ejemplo del evento de la parte superior de la página {#top-of-page}
-
-El ejemplo de código siguiente ejemplifica una parte superior de la configuración de eventos de página que solicita personalización, pero no [envía eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) para propuestas procesadas automáticamente. Los [eventos de visualización](../personalization/display-events.md#send-sendEvent-calls) se enviarán como parte del evento de final de página.
+El ejemplo siguiente configura una parte superior del evento de página que solicita personalización pero suprime [eventos de visualización](display-events.md) para las propuestas procesadas automáticamente. Estos eventos de visualización se envían con la parte inferior del evento de página en su lugar.
 
 >[!BEGINTABS]
 
->[!TAB Evento de inicio de página]
+>[!TAB Biblioteca de JavaScript]
 
 ```js
 alloy("sendEvent", {
@@ -50,24 +42,28 @@ alloy("sendEvent", {
 ```
 
 | Parámetro | Obligatorio/Opcional | Descripción |
-|---|---|---|
-| `type` | Requerido | Establezca este parámetro en `decisioning.propositionFetch`. Este tipo de evento especial indica a Adobe Analytics que elimine este evento. Al utilizar Customer Journey Analytics, también puede configurar un filtro para soltar estos eventos. |
+| --- | --- | --- |
+| `type` | Requerido | Establezca este parámetro en `decisioning.propositionFetch`. Este tipo de evento especial indica a Adobe Analytics que elimine este evento. Al utilizar Customer Journey Analytics, también puede configurar un filtro para soltar estos eventos. Consulte [Tipos de eventos de Edge Network en Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) para obtener más información. |
 | `renderDecisions` | Requerido | Establezca este parámetro en `true`. Este parámetro indica a Web SDK que procese las decisiones devueltas por Edge Network. |
-| `personalization.sendDisplayEvent` | Requerido | Establezca este parámetro en `false`. Esto detiene el envío de eventos de visualización. |
+| `personalization.sendDisplayEvent` | Requerido | Establezca este parámetro en `false`. Este parámetro detiene el envío de eventos de visualización. |
+
+>[!TAB Extensión de etiqueta Web SDK]
+
+Configure una acción [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) en la regla que se active en la parte superior de la página. Habilite **[!UICONTROL Use guided events]** y luego seleccione **[!UICONTROL Request personalization]**. Esta opción bloquea &#39;[!UICONTROL Type]&#39; a &#39;[!UICONTROL Decisioning Proposition Fetch]&#39;, &#39;[!UICONTROL Render visual personalization decisions]&#39; a habilitado y &#39;[!UICONTROL Automatically send a display event]&#39; a deshabilitado.
+
+Para establecer estos campos manualmente, deje **[!UICONTROL Use guided events]** deshabilitado y configure cada campo usted mismo.
 
 >[!ENDTABS]
 
 ## Final de ejemplos de eventos de página {#bottom-of-page}
 
+### Proposiciones procesadas automáticamente {#bottom-auto-rendered}
+
+El ejemplo siguiente configura un evento de final de página que envía eventos de visualización para propuestas que se representaron automáticamente en la página pero se suprimieron en el evento [principio de página](#top-of-page).
+
 >[!BEGINTABS]
 
->[!TAB Propuestas procesadas automáticamente]
-
-El ejemplo de código siguiente ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron automáticamente en la página, pero para las que se suprimieron eventos de visualización en el evento [top of page](#top-of-page).
-
->[!NOTE]
->
->En este escenario, debe llamar a la parte inferior del evento de página _después de_, la parte superior de la página uno. Sin embargo, no es necesario esperar a la parte inferior del evento de página hasta que se haya completado la parte superior de la página uno.
+>[!TAB Biblioteca de JavaScript]
 
 ```js
 alloy("sendEvent", {
@@ -79,17 +75,29 @@ alloy("sendEvent", {
 ```
 
 | Parámetro | Obligatorio/Opcional | Descripción |
-|---|---|---|
-| `personalization.includeRenderedPropositions` | Requerido | Establezca este parámetro en `true`. Esto permite enviar eventos de visualización que se suprimieron en la parte superior del evento de página. |
-| `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
+| --- | --- | --- |
+| `personalization.includeRenderedPropositions` | Requerido | Establezca este parámetro en `true`. Este parámetro habilita el envío de eventos de visualización que se suprimieron en la parte superior del evento de página. |
+| `xdm` | Opcional | Utilice este objeto para incluir todos los datos que desee para la parte inferior del evento de página. |
 
->[!TAB Proposiciones procesadas manualmente]
+>[!TAB Extensión de etiqueta Web SDK]
 
-El ejemplo de código siguiente ejemplifica una parte inferior de la configuración de eventos de página que envía eventos de visualización para propuestas que se procesaron manualmente en la página (es decir, para ámbitos o superficies de decisión personalizados).
+Configure una acción [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) en la regla que se active en la parte inferior de la página. Habilite **[!UICONTROL Use guided events]** y luego seleccione **[!UICONTROL Collect analytics]**. Esta opción bloquea &#39;[!UICONTROL Include rendered propositions]&#39; para que esté habilitado.
+
+Para establecer este campo manualmente, deje **[!UICONTROL Use guided events]** deshabilitado y habilite **[!UICONTROL Include rendered propositions]** directamente. De forma opcional, rellene el campo **[!UICONTROL XDM]** con un elemento de datos de [objeto XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) que lleve los datos de su página.
+
+>[!ENDTABS]
+
+### Proposiciones procesadas manualmente {#bottom-manually-rendered}
+
+El ejemplo siguiente configura una parte inferior de un evento de página que envía eventos de visualización para propuestas que se procesaron manualmente en la página (es decir, para ámbitos o superficies de decisión personalizados).
 
 >[!NOTE]
 >
->En esta situación, el evento de la parte inferior de la página debe esperar hasta que la parte superior del evento de la página se haya completado para procesar las propuestas y registrar la parte inferior del evento de la página.
+>En esta situación, el evento de la parte inferior de la página debe esperar hasta que la parte superior del evento de la página se haya completado para que las propuestas se puedan procesar y registrar.
+
+>[!BEGINTABS]
+
+>[!TAB Biblioteca de JavaScript]
 
 ```js
 alloy("sendEvent", {
@@ -113,25 +121,34 @@ alloy("sendEvent", {
 });
 ```
 
-
-
 | Parámetro | Obligatorio/Opcional | Descripción |
-|---|---|---|
-| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir las propuestas `ID`, `scope` y `scopeDetails`. Consulte [Administrar eventos de visualización](display-events.md) para obtener más información. El contenido de personalización procesado manualmente debe incluirse en la parte inferior de la visita individual a la página. |
+| --- | --- | --- |
+| `xdm._experience.decisioning.propositions` | Requerido | Esta sección define las propuestas procesadas manualmente. Debe incluir las propuestas `id`, `scope` y `scopeDetails`. Consulte [Administrar eventos de visualización](display-events.md) para obtener más información. El contenido de personalización procesado manualmente debe incluirse en la parte inferior del evento de la página. |
 | `xdm._experience.decisioning.propositionEventType` | Requerido | Establezca este parámetro en `display: 1`. |
-| `xdm` | Opcional | Utilice esta sección para incluir todos los datos necesarios para la parte inferior del evento de página. |
+| `xdm` | Opcional | Utilice este objeto para incluir todos los datos que desee para la parte inferior del evento de página. |
+
+>[!TAB Extensión de etiqueta Web SDK]
+
+La opción &#39;[!UICONTROL Use guided events]&#39; no cubre este escenario, por lo que debe configurar la acción manualmente:
+
+1. Cree un elemento de datos [XDM object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) (o [Variable](/help/tags/extensions/client/web-sdk/data-element-types.md#variable)) que rellene `_experience.decisioning.propositions` con los `id`, `scope` y `scopeDetails` de cada propuesta procesada y establezca `_experience.decisioning.propositionEventType.display` en `1`. Consulte [Administrar eventos de visualización](display-events.md) para obtener más información.
+1. En la acción [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md) para la parte inferior de la regla de página, deje **[!UICONTROL Use guided events]** deshabilitado y haga referencia al elemento de datos del campo **[!UICONTROL XDM]**.
 
 >[!ENDTABS]
 
+## Aplicación de una sola página con eventos en la parte superior e inferior de la página {#spa-example}
 
-## Aplicación de una sola página con visitas individuales a las páginas superior e inferior {#spa-example}
+En una aplicación de una sola página, debe especificar el nombre de la vista en cada cambio de vista para que Web SDK procese la personalización correcta en la parte superior de la página y registre la vista correcta en la parte inferior de la página.
 
+### Primera vista de página {#spa-first-view}
+
+En este ejemplo, `home` es la vista cargada en la carga inicial de la página.
 
 >[!BEGINTABS]
 
->[!TAB Primera vista de página]
+>[!TAB Biblioteca de JavaScript]
 
-El ejemplo siguiente incluye la adición del parámetro `xdm.web.webPageDetails.viewName` requerido. Esto es lo que la convierte en una aplicación de una sola página. La `viewName` de este ejemplo es la vista que se carga al cargar la página.
+La llamada principal solicita personalización para la vista `home` sin registrar una visita de Analytics ni activar eventos de visualización. La llamada inferior registra la vista de página y activa los eventos de visualización suprimidos. Incluya el mismo `viewName` en ambas llamadas para que la vista se registre de manera consistente.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -151,10 +168,6 @@ alloy("sendEvent", {
 });
 
 // Bottom of page, send display events for the items that were rendered.
-// Note: You need to include the viewName in both top and bottom of page so that the
-// correct view is rendered at the top of the page, and the correct view is recorded
-// at the bottom of the page.
-
 alloy("sendEvent", {
     personalization: {
         includeRenderedPropositions: true
@@ -170,9 +183,21 @@ alloy("sendEvent", {
 });
 ```
 
->[!TAB Segunda vista de página (Opción 1)]
+>[!TAB Extensión de etiqueta Web SDK]
 
-En este ejemplo, no es necesario realizar una división superior/inferior de la página porque ya se ha recuperado la personalización de la página.
+1. Cree un elemento de datos [XDM object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) que establezca `web.webPageDetails.viewName` en el nombre de la vista (por ejemplo, `home`).
+1. Configure una acción de parte superior de la página [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md): habilite **[!UICONTROL Use guided events]**, seleccione **[!UICONTROL Request personalization]** y haga referencia al elemento de datos en el campo **[!UICONTROL XDM]**.
+1. Configure una acción en la parte inferior de la página **[!UICONTROL Send event]**: habilite **[!UICONTROL Use guided events]**, seleccione **[!UICONTROL Collect analytics]** y haga referencia al mismo elemento de datos en el campo **[!UICONTROL XDM]** para que `viewName` coincida en ambos eventos.
+
+>[!ENDTABS]
+
+### Segunda vista de página: opción 1 {#spa-second-view-option-1}
+
+En este ejemplo, un solo evento es suficiente porque ya se ha recuperado la personalización de la página.
+
+>[!BEGINTABS]
+
+>[!TAB Biblioteca de JavaScript]
 
 ```js
 alloy("sendEvent", {
@@ -188,21 +213,35 @@ alloy("sendEvent", {
 });
 ```
 
+>[!TAB Extensión de etiqueta Web SDK]
 
->[!TAB Segunda vista de página (Opción 2)]
+1. Cree un elemento de datos [XDM object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) que establezca `web.webPageDetails.viewName` en el nombre de la nueva vista (por ejemplo, `cart`).
+1. En el cambio de vista, configure una sola acción [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md): deje **[!UICONTROL Use guided events]** deshabilitado, habilite **[!UICONTROL Render visual personalization decisions]** y haga referencia al elemento de datos en el campo **[!UICONTROL XDM]**.
 
-Si todavía necesita retrasar la parte inferior de la visita individual a la página, puede usar `applyPropositions` para la parte superior de la visita individual a la página. Dado que no es necesario recuperar ninguna personalización ni registrar ningún dato de Analytics, no es necesario realizar una solicitud a Edge Network.
+>[!ENDTABS]
+
+### Segunda vista de página: opción 2 {#spa-second-view-option-2}
+
+Utilice este método cuando tenga que retrasar la parte inferior del evento de la página (por ejemplo, cuando los datos de análisis de la página no estén listos en el momento del cambio de vista). Gestionar el cambio de vista en dos pasos:
+
+1. En la parte superior de la página, procese las propuestas ya recuperadas sin realizar una llamada de Edge Network.
+1. Una vez que los datos de análisis estén listos, envíe la parte inferior del evento de página.
+
+Incluya el mismo `viewName` en ambas llamadas para que la vista se registre de manera consistente.
+
+>[!BEGINTABS]
+
+>[!TAB Biblioteca de JavaScript]
+
+Llame a [`applyPropositions`](/help/collection/js/commands/applypropositions.md) en la parte superior de la página para procesar las propuestas almacenadas en caché para la nueva vista. A continuación, llame a `sendEvent` en la parte inferior de la página con `includeRenderedPropositions: true` para que se activen los eventos de visualización suprimidos.
 
 ```js
-// top of page, render the decisions already fetched for the "cart" view.
+// Top of page, render the decisions already fetched for the "cart" view.
 alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display events for the items that were rendered.
-// Note: You need to include the viewName in both top and bottom of page so that the
-// correct view is rendered at the top of the page, and the correct view is recorded
-// at the bottom of the page.
+// Bottom of page, send display events for the items that were rendered.
 alloy("sendEvent", {
     personalization: {
         includeRenderedPropositions: true
@@ -218,8 +257,14 @@ alloy("sendEvent", {
 });
 ```
 
+>[!TAB Extensión de etiqueta Web SDK]
+
+1. Cree un elemento de datos [XDM object](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) que establezca `web.webPageDetails.viewName` en el nombre de la nueva vista (por ejemplo, `cart`).
+1. Para la parte superior del evento de página, configure una acción [[!UICONTROL Apply propositions]](/help/tags/extensions/client/web-sdk/actions/apply-propositions.md) y establezca el campo **[!UICONTROL View name]** en el nombre de la vista (por ejemplo, `cart`). Esta acción procesa las propuestas ya recuperadas sin ponerse en contacto con Edge Network.
+1. Para la parte inferior del evento de página, configure una acción de [[!UICONTROL Send event]](/help/tags/extensions/client/web-sdk/actions/send-event.md): habilite **[!UICONTROL Use guided events]**, seleccione **[!UICONTROL Collect analytics]** y haga referencia al elemento de datos en el campo **[!UICONTROL XDM]**.
+
 >[!ENDTABS]
 
 ## Ejemplo de GitHub {#github-sample}
 
-El ejemplo encontrado en [esta dirección](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) muestra cómo usar Experience Platform y Web SDK para solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Puede descargar el ejemplo y ejecutarlo localmente para comprender cómo funcionan los eventos superior e inferior de la página.
+La [muestra superior e inferior en el repositorio alloy-samples](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) muestra cómo solicitar personalización en la parte superior de la página y enviar métricas de análisis en la parte inferior. Descargue el ejemplo y ejecútelo localmente para ver cómo funcionan la parte superior e inferior de los eventos de página. El ejemplo utiliza la biblioteca JavaScript directamente; los mismos patrones se aplican cuando se configuran reglas equivalentes en la extensión de etiquetas Web SDK.

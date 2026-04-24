@@ -3,9 +3,9 @@ title: Información general sobre la extensión Algolia Event Forwarding
 description: Obtenga información sobre cómo configurar y utilizar la extensión de reenvío de eventos Algolia en Adobe Experience Platform. Reenvíe datos de comportamiento del usuario a través de la API de Insights, configure reglas, asigne campos XDM y verifique la entrega de eventos.
 last-substantial-update: 2025-05-09T00:00:00Z
 exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 61aeec69f782968a8c157b604ba1cd9e990b7f02
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -69,15 +69,15 @@ Asegúrese de agregar el grupo de campos de evento [!DNL Algolia] al esquema ant
 
 ![Configuración del grupo de campos de eventos de Algolia](../../../images/extensions/server/algolia/algolia-field-groups.png)
 
-### Agregar el grupo de campos de evento [!DNL Algolia] al esquema {#add-algolia-field-group}
+### Agregar el grupo de campos [!UICONTROL Algolia Event Details] al esquema {#add-algolia-field-group}
 
-Para agregar el grupo de campos de evento [!DNL Algolia]:
+Para agregar el grupo de campos [!UICONTROL Algolia Event Details]:
 
 Vaya a **[!UICONTROL Schemas]** y seleccione **[!UICONTROL Browse]**.
 
 Agregue un nuevo esquema o actualice uno existente que use para enviar eventos web y pase el ratón sobre el icono **[!UICONTROL Add]**. Escriba *[!DNL Algolia]* en el cuadro de búsqueda para reducir los resultados.
 
-Seleccione el botón **[!DNL Algolia]Detalles del evento** grupo de campos > **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
+Seleccione el botón **[!UICONTROL Algolia Event Details]** grupo de campos > **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
 
 ![Configuración del grupo de campos de perfil de Algolia en Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
@@ -167,5 +167,5 @@ Para obtener más información sobre cómo depurar la implementación con la her
 
 - [[!DNL Algolia] Documentación de la API de Insights](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentación de eventos](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentación del reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=es)
+- [[!DNL Adobe Experience Platform] Documentación del reenvío de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 - [[!DNL Algolia] Resumen de características de IA](https://www.algolia.com/products/ai-search/)
