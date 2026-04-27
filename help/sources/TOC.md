@@ -5,7 +5,7 @@ breadcrumb-title: Guía de conectores de origen
 user-guide-description: Introduzca datos de una variedad de fuentes. Aprenda a estructurar, etiquetar y mejorar los datos ya introducidos.
 feature: Sources
 role: Developer
-source-git-commit: 8a9dd740bb210ef125bca65a8358bb6b51f6d28f
+source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 34%
@@ -107,7 +107,7 @@ ht-degree: 34%
       - [Conector de carga de archivos locales](connectors/local-system/local-file-upload.md)
    - Lealtad {#loyalty}
       - [Eventos de flujo capilar](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
+      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automatización de marketing {#marketing-automation}
       - [Corrientes de Braze](connectors/marketing-automation/braze.md)
