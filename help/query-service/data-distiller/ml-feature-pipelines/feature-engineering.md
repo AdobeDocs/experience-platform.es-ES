@@ -2,10 +2,10 @@
 title: Funciones de ingeniero para el aprendizaje automático
 description: Aprenda a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. Utilice Data Distiller para calcular las funciones de ML a escala y compartirlas con su entorno de aprendizaje automático.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 12%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
@@ -231,11 +231,11 @@ df_training_set.head()
 
 |  | userId | eventType | timestamp | subscriptionOccurred | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissing | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 17-06-2023 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 06/06/2023:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Ninguna | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 19/18/06/2023:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | Ninguna | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21-06-2023 19:17:12,535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21-06-2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Ninguna | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | Ninguna | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Ninguna | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -248,11 +248,11 @@ Para ello, es necesario realizar algunas modificaciones en la consulta del conju
 - Añada la lógica para crear un nuevo conjunto de datos de aprendizaje si no existe e inserte las nuevas etiquetas y funciones en el conjunto de datos de aprendizaje existente en caso contrario. Esto requiere una serie de dos versiones de la consulta del conjunto de formación:
    - Primero, se usa la instrucción `CREATE TABLE IF NOT EXISTS {table_name} AS`
    - A continuación, utilice la instrucción `INSERT INTO {table_name}` para el caso en el que ya existe el conjunto de datos de aprendizaje
-- Agregue una instrucción `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` para limitar la consulta a los datos de evento que se agregaron dentro de un intervalo especificado. El prefijo `$` de los identificadores de instantánea indica que son variables que se pasarán cuando se ejecute la plantilla de consulta.
+- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicates that thy are variables that will be passed in when the query template is executed.
 
-La aplicación de estos cambios resulta en la siguiente consulta:
+Applying those changes results in the following query:
 
-+++Seleccione esta opción para ver la consulta de ejemplo
++++Select to view example query
 
 ```python
 ctas_table_name = "propensity_training_set"
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;
@@ -390,7 +390,7 @@ END $$;
 
 +++
 
-Por último, el siguiente código guarda la plantilla de consulta en Data Distiller:
+Finally, the following code saves the query template in Data Distiller:
 
 ```python
 template_res = dd.createQueryTemplate({
@@ -403,11 +403,11 @@ template_id = template_res["id"]
 print(f"Template for propensity training data created as ID {template_id}")
 ```
 
-**Salida de ejemplo**
+**Sample output**
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-Con la plantilla guardada, puede ejecutar la consulta en cualquier momento haciendo referencia al ID de plantilla y especificando el rango de ID de instantánea que debe incluirse en la consulta. La siguiente consulta recupera las instantáneas del conjunto de datos de eventos de experiencia original:
+With the template saved, you can execute the query at any time by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
 
 ```python
 query_snapshots = f"""
@@ -422,7 +422,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-El siguiente código muestra la ejecución de la plantilla de consulta, utilizando la primera y la última instantánea para consultar todo el conjunto de datos:
+The following code demonstrates execution of the query template, using the first and last snapshots to query the entire dataset:
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -441,11 +441,11 @@ query_final_id = query_final_res["id"]
 print(f"Query started successfully and got assigned ID {query_final_id} - it will take some time to execute")
 ```
 
-**Salida de ejemplo**
+**Sample output**
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
-Puede definir la siguiente función para comprobar periódicamente el estado de la consulta:
+You can define the following function to periodically check the status of the query:
 
 ```python
 def wait_for_query_completion(query_id):
@@ -468,7 +468,7 @@ def wait_for_query_completion(query_id):
 wait_for_query_completion(query_final_id)
 ```
 
-**Salida de ejemplo**
+**Sample output**
 
 ```console
 Query is still in progress, sleeping…
@@ -482,6 +482,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## Pasos siguientes:
+## Next steps:
 
-Al leer este documento, ha aprendido a transformar datos en Adobe Experience Platform en funciones o variables que un modelo de aprendizaje automático puede consumir. El siguiente paso para crear canalizaciones de características de Experience Platform para alimentar modelos personalizados en su entorno de aprendizaje automático es [exportar conjuntos de datos de características](./export-data.md).
+By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can be consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).

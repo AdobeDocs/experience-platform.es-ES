@@ -2,9 +2,9 @@
 title: Bloque anónimo en el servicio de consultas
 description: El bloque anónimo es una sintaxis SQL admitida por Adobe Experience Platform Query Service, que le permite ejecutar de forma eficaz una secuencia de consultas
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -28,23 +28,23 @@ Cabe señalar que un bloque es una instrucción ejecutable y, por lo tanto, se p
 >
 > Se recomienda encarecidamente probar las consultas en conjuntos de datos más pequeños y asegurarse de que funcionan según lo esperado. Si una consulta tiene un error de sintaxis, se generará la excepción y se anulará todo el bloque. Una vez verificada la integridad de las consultas, puede empezar a encadenarlas. Esto garantiza que el bloque funcione según lo esperado antes de ponerlo en funcionamiento.
 
-## Ejemplos de consultas de bloque anónimas
+## Sample anonymous block queries
 
-La siguiente consulta muestra un ejemplo de encadenamiento de instrucciones SQL. Consulte el documento [Sintaxis SQL en Query Service](../sql/syntax.md) para obtener más información sobre cualquiera de las sintaxis SQL utilizadas.
+The following query shows an example of chaining SQL statements. See the [SQL syntax in Query Service](../sql/syntax.md) document for more information on any of the SQL syntax used.
 
 ```SQL
 $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 ```
 
-En el ejemplo siguiente, `SET` conserva el resultado de una consulta `SELECT` en la variable local especificada. La variable está vinculada al bloque anónimo.
+In the example below, `SET` persists the result of a `SELECT` query in the specified local variable. The variable is scoped to the anonymous block.
 
-El id. de instantánea se almacena como variable local (`@current_sid`). A continuación, se utiliza en la siguiente consulta para devolver resultados basados en la INSTANTÁNEA del mismo conjunto de datos o tabla. Para obtener más [información sobre la cláusula de instantánea](../sql/syntax.md#SNAPSHOT-clause), consulte la documentación de sintaxis SQL.
+The snapshot ID is stored as a local variable (`@current_sid`). It is then used in the next query to return results based on the SNAPSHOT from the same dataset/table. For more [information on the snapshot clause](../sql/syntax.md#SNAPSHOT-clause) see the SQL syntax documentation.
 
 ```SQL
 $$ BEGIN                                             
@@ -54,11 +54,11 @@ END
 $$;
 ```
 
-## Bloque anónimo con clientes de terceros {#third-party-clients}
+## Anonymous block with third-party clients {#third-party-clients}
 
-Algunos clientes de terceros pueden requerir un identificador independiente antes y después de un bloque SQL para indicar que una parte de la secuencia de comandos debe gestionarse como una sola instrucción. Si recibe un mensaje de error al utilizar el servicio de consulta con un cliente de terceros, debe consultar la documentación del cliente de terceros sobre el uso de un bloque SQL.
+Certain third-party clients may require a separate identifier before and after an SQL block to indicate that a part of the script should be handled as a single statement. If you receive an error message when using Query Service with a third-party client, you should refer to the documentation of the third-party client regarding the use of an SQL block.
 
-Por ejemplo, **DbVisualizer** requiere que el delimitador sea el único texto de la línea. En DbVisualizer, el valor predeterminado para el identificador inicial es `--/` y para el identificador final es `/`. A continuación se muestra un ejemplo de bloque anónimo en DbVisualizer:
+For example, **DbVisualizer** requires that the delimiter must be the only text on the line. In DbVisualizer, the default value for the Begin Identifier is `--/` and for the End Identifier it is `/`. An example of an anonymous block in DbVisualizer is seen below:
 
 ```SQL
 --/
@@ -66,16 +66,16 @@ $$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
     CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+    EXCEPTION WHEN OTHERS THEN SET @ret = SELECT 'ERROR';
 END
 $$;
 /
 ```
 
-Para DbVisualizer en particular, también hay una opción en la IU para &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Consulte la [documentación de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) para obtener más información.
+For DbVisualizer in particular, there is also an option in the UI to &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. See the [DbVisualizer documentation](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) for more information.
 
-## Pasos siguientes
+## Próximos pasos
 
-Al leer este documento, ahora tiene una comprensión clara de los bloques anónimos y de cómo están estructurados. Lea la [guía de ejecución de consultas](../best-practices/writing-queries.md) para obtener más información sobre cómo escribir consultas.
+By reading this document, you now have a clear understanding of anonymous blocks and how they are structured. Please read the [query execution guide](../best-practices/writing-queries.md) for more information on writing queries.
 
-También debería leer acerca de [cómo se usan los bloques anónimos con el patrón de diseño de carga incremental](./incremental-load.md) para aumentar la eficacia de la consulta.
+You should also read about [how anonymous blocks are used with the incremental load design pattern](./incremental-load.md) to increase query efficiency.

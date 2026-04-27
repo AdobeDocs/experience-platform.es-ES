@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxis SQL en el servicio de consultas
 description: Este documento detalla y explica la sintaxis SQL admitida por Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
+source-wordcount: '4737'
 ht-degree: 1%
 
 ---
@@ -224,7 +224,7 @@ AS (select_query)
 | `rowvalidation` | (Opcional) Habilita la validación de nivel de fila para cada lote ingerido en el conjunto de datos. El valor predeterminado es True. |
 | `label` | (Opcional) Use el valor `PROFILE` para etiquetar el conjunto de datos como habilitado para la ingesta de perfiles. |
 | `transform` | (Opcional) Aplica transformaciones de ingeniería de funciones (como la indexación de cadenas, la codificación de un solo toque o TF-IDF) antes de materializar el conjunto de datos. Esta cláusula se utiliza para previsualizar funciones transformadas. Consulte la documentación de la cláusula [`TRANSFORM`](#transform) para obtener más información. |
-| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas &#x200B;](#select-queries) para obtener más información. |
+| `select_query` | Instrucción estándar `SELECT` que define el conjunto de datos. Consulte la sección [`SELECT` consultas ](#select-queries) para obtener más información. |
 
 >[!NOTE]
 >
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -647,7 +647,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -733,9 +733,9 @@ $$;
 
 ## Organización de recursos de datos
 
-Es importante organizar lógicamente los recursos de datos dentro del lago de datos de Adobe Experience Platform a medida que crezcan. El servicio de consultas amplía las construcciones SQL que permiten agrupar lógicamente los recursos de datos en una zona protegida. Este método de organización permite compartir recursos de datos entre esquemas sin necesidad de moverlos físicamente.
+It is important to logically organize your data assets within the Adobe Experience Platform data lake as they grow. Query Service extends SQL constructs that enable you to logically group data assets within a sandbox. This method of organization allows for the sharing of data assets between schemas without the need to move them physically.
 
-Se admiten las siguientes construcciones SQL con sintaxis SQL estándar para organizar lógicamente los datos.
+The following SQL constructs using standard SQL syntax are supported for you to logically organize your data.
 
 ```SQL
 CREATE DATABASE dg1;
@@ -746,15 +746,15 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Consulte la guía [organización lógica de recursos de datos](../best-practices/organize-data-assets.md) para obtener una explicación más detallada sobre las prácticas recomendadas del servicio de consultas.
+See the [logical organization of data assets](../best-practices/organize-data-assets.md) guide for a more detailed explanation on Query Service best practices.
 
-## La tabla existe
+## Table exists
 
-El comando SQL `table_exists` se usa para confirmar si existe actualmente una tabla en el sistema. El comando devuelve un valor booleano: `true` si la tabla **existe**, y `false` si la tabla existe **no**.
+The `table_exists` SQL command is used to confirm whether a table currently exists in the system. The command returns a boolean value: `true` if the table **does** exist, and `false` if the table does **not** exist.
 
-Al validar si existe una tabla antes de ejecutar las instrucciones, la característica `table_exists` simplifica el proceso de escribir un bloque anónimo para cubrir los casos de uso de `CREATE` y `INSERT INTO`.
+By validating whether a table exists before running the statements, the `table_exists` feature simplifies the process of writing an anonymous block to cover both the `CREATE` and `INSERT INTO` use cases.
 
-La siguiente sintaxis define el comando `table_exists`:
+The following syntax defines the `table_exists` command:
 
 ```SQL
 $$
@@ -775,22 +775,22 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
 
-## En línea {#inline}
+## Inline {#inline}
 
-La función `inline` separa los elementos de una matriz de estructuras y genera los valores en una tabla. Solo se puede colocar en la lista `SELECT` o en un `LATERAL VIEW`.
+The `inline` function separates the elements of an array of structs and generates the values into a table. It can only be placed in the `SELECT` list or a `LATERAL VIEW`.
 
-La función `inline` **no se puede** colocar en una lista de selección donde hay otras funciones de generador.
+The `inline` function **cannot** be placed in a select list where there are other generator functions.
 
-De forma predeterminada, las columnas producidas se denominan &quot;col1&quot;, &quot;col2&quot;, etc. Si la expresión es `NULL`, no se produce ninguna fila.
+By default, the columns produced are named &quot;col1&quot;, &quot;col2&quot;, and so on. If the expression is `NULL` then no rows are produced.
 
 >[!TIP]
 >
->Se puede cambiar el nombre de las columnas con el comando `RENAME`.
+>Column names can be renamed using the `RENAME` command.
 
 **Ejemplo**
 
@@ -798,16 +798,16 @@ De forma predeterminada, las columnas producidas se denominan &quot;col1&quot;, 
 > SELECT inline(array(struct(1, 'a'), struct(2, 'b'))), 'Spark SQL';
 ```
 
-El ejemplo devuelve lo siguiente:
+The example returns the following:
 
 ```text
 1  a Spark SQL
 2  b Spark SQL
 ```
 
-En este segundo ejemplo se muestra más el concepto y la aplicación de la función `inline`. El modelo de datos del ejemplo se ilustra en la siguiente imagen.
+This second example further demonstrates the concept and application of the `inline` function. The data model for the example is illustrated in the image below.
 
-![Un diagrama de esquema para productListItems.](../images/sql/productListItems.png)
+![A schema diagram for productListItems.](../images/sql/productListItems.png)
 
 **Ejemplo**
 
@@ -815,9 +815,9 @@ En este segundo ejemplo se muestra más el concepto y la aplicación de la funci
 select inline(productListItems) from source_dataset limit 10;
 ```
 
-Los valores tomados de `source_dataset` se utilizan para rellenar la tabla de destino.
+The values taken from the `source_dataset` are used to populate the target table.
 
-| SKU | _experience | cantidad | priceTotal |
+| SKU | _experience | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
 | product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;) | 5 | 10,5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;) |          |              |
@@ -898,20 +898,20 @@ La salida de la consola aparece como se ve a continuación.
 (1 row)
 ```
 
-Puede consultar las estadísticas calculadas directamente haciendo referencia a `Statistics ID`. Use `Statistics ID` o el nombre de alias como se muestra en la instrucción de ejemplo siguiente para ver el resultado completo. Para obtener más información acerca de esta característica, consulte la [documentación del nombre de alias](../key-concepts/dataset-statistics.md#alias-name).
+You can then query the computed statistics directly by referencing the `Statistics ID`. Use the the `Statistics ID` or the alias name as shown in the example statement below, to view the output in full. To learn more about this feature, see the [alias name documentation](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-Utilice el comando `SHOW STATISTICS` para mostrar los metadatos de todas las estadísticas temporales generadas en la sesión. Este comando puede ayudarle a refinar el ámbito del análisis estadístico.
+Use the `SHOW STATISTICS` command to display the metadata for all the temporary statistics generated in the session. This command can help you refine the scope of your statistical analysis.
 
 ```sql
 SHOW STATISTICS;
 ```
 
-A continuación se muestra un ejemplo de salida de SHOW STATISTICS.
+An example output of SHOW STATISTICS is seen below.
 
 ```console
       statsId         |   tableName   | columnSet |         filterContext       |      timestamp
@@ -921,17 +921,17 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Consulte la [documentación de estadísticas de conjuntos de datos](../key-concepts/dataset-statistics.md) para obtener más información.
+See the [dataset statistics documentation](../key-concepts/dataset-statistics.md) for more information.
 
 #### TABLESAMPLE {#tablesample}
 
-El servicio de consulta de Adobe Experience Platform proporciona conjuntos de datos de ejemplo como parte de sus capacidades aproximadas de procesamiento de consultas.
+Adobe Experience Platform Query Service provides sample datasets as part of its approximate query processing capabilities.
 
-Las muestras de conjuntos de datos se utilizan mejor cuando no necesita una respuesta exacta para una operación de agregado sobre un conjunto de datos. Para realizar consultas exploratorias más eficientes en conjuntos de datos grandes emitiendo una consulta aproximada para devolver una respuesta aproximada, use la característica `TABLESAMPLE`.
+Data set samples are best used when you do not need an exact answer for an aggregate operation over a dataset. To conduct more efficient exploratory queries on large datasets by issuing an approximate query to return an approximate answer, use the `TABLESAMPLE` feature.
 
-Los conjuntos de datos de ejemplo se crean con muestras aleatorias uniformes de conjuntos de datos de [!DNL Azure Data Lake Storage] (ADLS) existentes, que utilizan solo un porcentaje de registros del original. La característica de ejemplo del conjunto de datos amplía el comando `ANALYZE TABLE` con los comandos SQL `TABLESAMPLE` y `SAMPLERATE`.
+Sample datasets are created with uniform random samples from existing [!DNL Azure Data Lake Storage] (ADLS) datasets, using only a percentage of records from the original. The dataset sample feature extends the `ANALYZE TABLE` command with the `TABLESAMPLE` and `SAMPLERATE` SQL commands.
 
-En el ejemplo siguiente, la línea uno muestra cómo calcular una muestra del 5 % de la tabla. La línea dos muestra cómo calcular una muestra del 5 % a partir de una vista filtrada de los datos de la tabla.
+In the example below, line one demonstrates how to compute a 5% sample of the table. Line two demonstrates how to compute a 5% sample from a  filtered view of the data within the table.
 
 **Ejemplo**
 
@@ -940,11 +940,11 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Consulte la [documentación de ejemplos de conjuntos de datos](../key-concepts/dataset-samples.md) para obtener más información.
+See the [dataset samples documentation](../key-concepts/dataset-samples.md) for more information.
 
-### COMENZAR
+### BEGIN
 
-El comando `BEGIN`, o alternativamente el comando `BEGIN WORK` o `BEGIN TRANSACTION`, inicia un bloque de transacciones. Cualquier instrucción que se introduzca después del comando begin se ejecutará en una sola transacción hasta que se proporcione un comando COMMIT o ROLLBACK explícito. Este comando es el mismo que `START TRANSACTION`.
+The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
 
 ```sql
 BEGIN
@@ -952,16 +952,16 @@ BEGIN WORK
 BEGIN TRANSACTION
 ```
 
-### CERRAR
+### CLOSE
 
-El comando `CLOSE` libera los recursos asociados con un cursor abierto. Una vez cerrado el cursor, no se permiten operaciones posteriores. Se debe cerrar un cursor cuando ya no sea necesario.
+The `CLOSE` command frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
 
 ```sql
 CLOSE name
 CLOSE ALL
 ```
 
-Si se usa `CLOSE name`, `name` representa el nombre de un cursor abierto que debe cerrarse. Si se usa `CLOSE ALL`, se cierran todos los cursores abiertos.
+If `CLOSE name` is used, `name` represents the name of an open cursor that must be closed. Si se usa `CLOSE ALL`, se cierran todos los cursores abiertos.
 
 ### DESASIGNAR
 
@@ -1128,7 +1128,7 @@ SHOW ALL
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `name` | El nombre del parámetro de tiempo de ejecución del que desea obtener información. Entre los posibles valores del parámetro de tiempo de ejecución se incluyen los siguientes:<br>`SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.<br>`SERVER_ENCODING`: este parámetro muestra la codificación del conjunto de caracteres del servidor.<br>`LC_COLLATE`: este parámetro muestra la configuración regional de la base de datos para intercalación (orden de texto).<br>`LC_CTYPE`: este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.<br>`IS_SUPERUSER`: este parámetro muestra si el rol actual tiene privilegios de superusuario. |
+| `name` | El nombre del parámetro de tiempo de ejecución del que desea obtener información. Entre los posibles valores del parámetro de tiempo de ejecución se incluyen los siguientes:<br>`SERVER_VERSION`: Este parámetro muestra el número de versión del servidor.<br>`SERVER_ENCODING`: Este parámetro muestra la codificación del conjunto de caracteres del lado del servidor.<br>`LC_COLLATE`: Este parámetro muestra la configuración regional de la base de datos para intercalación (orden de texto).<br>`LC_CTYPE`: Este parámetro muestra la configuración regional de la base de datos para la clasificación de caracteres.<br>`IS_SUPERUSER`: Este parámetro muestra si el rol actual tiene privilegios de superusuario. |
 | `ALL` | Mostrar los valores de todos los parámetros de configuración con descripciones. |
 
 **Ejemplo**
@@ -1258,7 +1258,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 En la tabla siguiente se enumeran los tipos de datos aceptados para agregar columnas a una tabla con [!DNL Postgres SQL], XDM y [!DNL Accelerated Database Recovery] (ADR) en Azure SQL.
 
-| — | cliente PSQL | XDM | ADR | Descripción |
+| --- | cliente PSQL | XDM | ADR | Descripción |
 |---|---|---|---|---|
 | 1 | `bigint` | `int8` | `bigint` | Tipo de datos numéricos utilizados para almacenar enteros grandes comprendidos entre -9.223.372.036.854.775.807 y 9.223.372.036.854.775.807 en 8 bytes. |
 | 2 | `integer` | `int4` | `integer` | Tipo de datos numérico utilizado para almacenar enteros entre -2.147.483.648 y 2.147.483.647 en 4 bytes. |
@@ -1269,11 +1269,11 @@ En la tabla siguiente se enumeran los tipos de datos aceptados para agregar colu
 | 7 | `double precision` | `float8` | `double precision` | `FLOAT8` es un sinónimo válido de `double precision`.`double precision` es un tipo de datos de punto flotante. Los valores de punto flotante se almacenan en 8 bytes. |
 | 8 | `date` | `date` | `date` | Los tipos de datos `date` son valores de fecha de calendario almacenados de 4 bytes sin información de marca de tiempo. El rango de fechas válidas es del 01-01-0001 al 12-31-9999. |
 | 9 | `datetime` | `datetime` | `datetime` | Tipo de datos que se utiliza para almacenar un instante en el tiempo expresado como fecha y hora del día en el calendario. `datetime` incluye los calificadores de: año, mes, día, hora, segundo y fracción. Una declaración `datetime` puede incluir cualquier subconjunto de estas unidades de tiempo que se unen en esa secuencia, o incluso comprender una sola unidad de tiempo. |
-| 10 | `char(len)` | `string` | `char(len)` | La palabra clave `char(len)` se usa para indicar que el elemento es un carácter de longitud fija. |
+| 10 | `char(len)` | `string` | `char(len)` | The `char(len)` keyword is used to indicate that the item is fixed-length character. |
 
-#### AÑADIR ESQUEMA
+#### ADD SCHEMA
 
-La siguiente consulta SQL muestra un ejemplo de adición de una tabla a una base de datos o esquema.
+The following SQL query shows an example of adding a table to a database / schema.
 
 ```sql
 ALTER TABLE table_name ADD SCHEMA database_name.schema_name
@@ -1281,12 +1281,12 @@ ALTER TABLE table_name ADD SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> Las tablas y vistas de ADLS no se pueden añadir a bases de datos o esquemas DWH.
+> ADLS tables and views cannot be added to DWH databases / schemas.
 
 
-#### QUITAR ESQUEMA
+#### REMOVE SCHEMA
 
-La siguiente consulta SQL muestra un ejemplo de eliminación de una tabla de una base de datos o esquema.
+The following SQL query shows an example of removing a table from a database / schema.
 
 ```sql
 ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
@@ -1294,20 +1294,20 @@ ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
 
 >[!NOTE]
 >
-> Las tablas y vistas de DWH no se pueden eliminar de los esquemas o bases de datos de DWH vinculados físicamente.
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas.
 
 
 **Parámetros**
 
 | Parámetros | Descripción |
 | ------ | ------ |
-| `table_name` | El nombre de la tabla que está editando. |
-| `column_name` | Nombre de la columna que desea agregar. |
-| `data_type` | El tipo de datos de la columna que desea agregar. Los tipos de datos admitidos son los siguientes: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
+| `table_name` | The name of the table which you are editing. |
+| `column_name` | The name of the column you want to add. |
+| `data_type` | The data type of the column you want to add. Supported data types include the following: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar. |
 
-### MOSTRAR CLAVES PRIMARIAS
+### SHOW PRIMARY KEYS
 
-El comando `SHOW PRIMARY KEYS` enumera todas las restricciones de clave principal de la base de datos determinada.
+The `SHOW PRIMARY KEYS` command lists all the primary key constraints for the given database.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -1320,9 +1320,9 @@ SHOW PRIMARY KEYS
  table_name_2 | column_name2  | text     | "AAID"
 ```
 
-### MOSTRAR CLAVES EXTERNAS
+### SHOW FOREIGN KEYS
 
-El comando `SHOW FOREIGN KEYS` enumera todas las restricciones de clave externa de la base de datos determinada.
+The `SHOW FOREIGN KEYS` command lists all the foreign key constraints for the given database.
 
 ```sql
 SHOW FOREIGN KEYS
@@ -1336,9 +1336,9 @@ SHOW FOREIGN KEYS
 ```
 
 
-### MOSTRAR GRUPOS DE DATOS
+### SHOW DATAGROUPS
 
-El comando `SHOW DATAGROUPS` devuelve una tabla de todas las bases de datos asociadas. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
+The `SHOW DATAGROUPS` command returns a table of all associated databases. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS
@@ -1354,9 +1354,9 @@ SHOW DATAGROUPS
 ```
 
 
-### MOSTRAR GRUPOS DE DATOS PARA LA tabla
+### SHOW DATAGROUPS FOR table
 
-El comando `SHOW DATAGROUPS FOR 'table_name'` devuelve una tabla de todas las bases de datos asociadas que contienen el parámetro como elemento secundario. Para cada base de datos, la tabla incluye el esquema, el tipo de grupo, el tipo secundario, el nombre secundario y el ID secundario.
+The `SHOW DATAGROUPS FOR 'table_name'` command returns a table of all associated databases that contain the parameter as its child. For each database, the table includes schema, group type, child type, child name, and child ID.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'
@@ -1364,7 +1364,7 @@ SHOW DATAGROUPS FOR 'table_name'
 
 **Parámetros**
 
-- `table_name`: nombre de la tabla para la que desea buscar bases de datos asociadas.
+- `table_name`: The name of the table that you want to find associated databases for.
 
 ```console
    Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId

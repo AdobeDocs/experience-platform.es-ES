@@ -1,33 +1,33 @@
 ---
-title: Carga incremental en el servicio de consultas
-description: La función de carga incremental utiliza las funciones de bloque anónimo y de instantánea para proporcionar una solución casi en tiempo real que permite mover datos del lago de datos al almacén de datos e ignorar los datos coincidentes.
+title: Incremental Load in Query Service
+description: The incremental load feature uses both anonymous block and snapshot features to provide a near real-time solution for moving data from the data lake to your data warehouse whilst ignoring matching data.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
 
-# Carga incremental en el servicio de consultas
+# Incremental load in Query Service
 
-El patrón de diseño de carga incremental es una solución para administrar datos. El patrón solo procesa la información en el conjunto de datos que se ha creado o modificado desde la última ejecución de carga.
+The incremental load design pattern is a solution for managing data. The pattern only processes information in the dataset that has been created or modified since the last load execution.
 
-La carga incremental utiliza varias funciones proporcionadas por Adobe Experience Platform Query Service, como bloque anónimo e instantáneas. Este patrón de diseño aumenta la eficacia del procesamiento, ya que se omiten los datos que ya se han procesado desde el origen. Se puede utilizar con el procesamiento de datos por lotes y el streaming.
+Incremental load uses various features provided by Adobe Experience Platform Query Service such as anonymous block and snapshots. This design pattern increases processing efficiency as any data already processed from the source is skipped. It can be used with both streaming and batch data processing.
 
-Este documento proporciona una serie de instrucciones para crear un patrón de diseño para el procesamiento incremental. Estos pasos se pueden utilizar como plantilla para crear sus propias consultas de carga de datos incrementales.
+This document provides a series of instructions to build a design pattern for incremental processing. These steps can be used as a template to create your own incremental data load queries.
 
 ## Introducción
 
-Los ejemplos de SQL a lo largo de este documento requieren que comprenda las capacidades de bloqueo anónimo e instantánea. Se recomienda leer la documentación de [consultas de bloque anónimas de ejemplo](./anonymous-block.md) y también la documentación de [cláusula de instantánea](../sql/syntax.md#snapshot-clause).
+The SQL examples throughout this document require you to have an understanding of the anonymous block and snapshot capabilities. It is recommended that you read the [sample anonymous block queries](./anonymous-block.md) documentation and also the [snapshot clause](../sql/syntax.md#snapshot-clause) documentation.
 
-Para obtener instrucciones sobre cualquier terminología utilizada en esta guía, consulte la [guía de sintaxis SQL](../sql/syntax.md).
+For guidance on any terminology used within this guide, refer to the [SQL syntax guide](../sql/syntax.md).
 
-## Carga incremental de datos
+## Incrementally load data
 
-Los pasos siguientes muestran cómo crear y cargar datos de forma incremental mediante instantáneas y la función de bloque anónimo. El patrón de diseño se puede utilizar como plantilla para su propia secuencia de consultas.
+The steps below demonstrate how to create and incrementally load data using snapshots and the anonymous block feature. The design pattern can be used as a template for your own sequence of queries.
 
-1. Cree una tabla `checkpoint_log` para realizar el seguimiento de la instantánea más reciente utilizada para procesar datos correctamente. La tabla de seguimiento (`checkpoint_log` en este ejemplo) debe inicializarse primero en `null` para procesar de forma incremental un conjunto de datos.
+1. Create a `checkpoint_log` table to track the most recent snapshot used to process data successfully. The tracking table (`checkpoint_log` in this example) must first be initialized to `null` in order to incrementally process a dataset.
 
    ```SQL
    DROP TABLE IF EXISTS checkpoint_log;
@@ -40,7 +40,7 @@ Los pasos siguientes muestran cómo crear y cargar datos de forma incremental me
       WHERE false;
    ```
 
-1. Rellene la tabla `checkpoint_log` con un registro vacío para el conjunto de datos que necesita procesamiento incremental. `DIM_TABLE_ABC` es el conjunto de datos que se procesará en el ejemplo siguiente. En la primera vez que se procese `DIM_TABLE_ABC`, `last_snapshot_id` se inicializó como `null`. Esto le permite procesar todo el conjunto de datos la primera vez e incrementalmente a partir de entonces.
+1. Populate the `checkpoint_log` table with one empty record for the dataset that needs incremental processing. `DIM_TABLE_ABC` is the dataset to be processed in the example below. On the first occasion of processing `DIM_TABLE_ABC`, the `last_snapshot_id` is initialized as `null`. This allows you to process the entire dataset on the first occasion and incrementally thereafter.
 
    ```SQL
    INSERT INTO
@@ -52,9 +52,9 @@ Los pasos siguientes muestran cómo crear y cargar datos de forma incremental me
          CURRENT_TIMESTAMP process_timestamp;
    ```
 
-1. A continuación, inicialice `DIM_TABLE_ABC_Incremental` para que contenga el resultado procesado de `DIM_TABLE_ABC`. El bloque anónimo de la sección de ejecución **required** del ejemplo de SQL siguiente, tal como se describe en los pasos del uno al cuatro, se ejecuta secuencialmente para procesar los datos de forma incremental.
+1. Next, initialize `DIM_TABLE_ABC_Incremental` to contain processed output from `DIM_TABLE_ABC`. The anonymous block in the **required** execution section of the SQL example below, as described in steps one to four, is executed sequentially to process data incrementally.
 
-   1. Establezca `from_snapshot_id`, que indica desde dónde comienza el procesamiento. Se ha consultado el elemento `from_snapshot_id` del ejemplo en la tabla `checkpoint_log` para su uso con `DIM_TABLE_ABC`. En la primera ejecución, el ID de instantánea será `null`, lo que significa que se procesará todo el conjunto de datos.
+   1. Set the `from_snapshot_id` which indicates where the processing starts from. Se ha consultado el elemento `from_snapshot_id` del ejemplo en la tabla `checkpoint_log` para su uso con `DIM_TABLE_ABC`. En la primera ejecución, el ID de instantánea será `null`, lo que significa que se procesará todo el conjunto de datos.
    1. Establezca `to_snapshot_id` como el identificador de instantánea actual de la tabla de origen (`DIM_TABLE_ABC`). En el ejemplo, esto se consulta desde la tabla de metadatos de la tabla de origen.
    1. Use la palabra clave `CREATE` para crear `DIM_TABLE_ABC_Incremenal` como tabla de destino. La tabla de destino conserva los datos procesados del conjunto de datos de origen (`DIM_TABLE_ABC`). Esto permite que los datos procesados de la tabla de origen entre `from_snapshot_id` y `to_snapshot_id` se anexen gradualmente a la tabla de destino.
    1. Actualice la tabla `checkpoint_log` con `to_snapshot_id` para los datos de origen que `DIM_TABLE_ABC` procesó correctamente.
@@ -84,7 +84,7 @@ Los pasos siguientes muestran cómo crear y cargar datos de forma incremental me
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ Los pasos siguientes muestran cómo crear y cargar datos de forma incremental me
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,12 +154,12 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
 ```
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, debería comprender mejor cómo utilizar las funciones de bloqueo anónimo e instantáneas para realizar cargas incrementales y puede aplicar esta lógica a sus propias consultas específicas. Para obtener instrucciones generales sobre la ejecución de consultas, lea la [guía sobre la ejecución de consultas en el servicio de consultas](../best-practices/writing-queries.md).
