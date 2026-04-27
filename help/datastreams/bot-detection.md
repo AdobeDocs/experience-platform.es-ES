@@ -49,7 +49,7 @@ Antes de habilitar la detección de bots en sus flujos de datos, hay que tener e
 
 ## Requisitos previos {#prerequisites}
 
-Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
+Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
 
 ## Configuración de la detección de bots para flujos de datos {#configure}
 
