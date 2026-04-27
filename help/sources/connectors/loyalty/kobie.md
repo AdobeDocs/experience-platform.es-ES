@@ -3,31 +3,22 @@ title: Información general sobre Kobie Source
 description: Aprenda a conectar su cuenta de Kobie a Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: c9f35b85f6c71ceff42a724a189098ed26ba1354
+exl-id: e0a263f1-2803-45c2-be88-21a1975d3286
+source-git-commit: 4feff9b123aa7bf73f5f936c290cba15815c3f3a
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 5%
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 # [!DNL Kobie]
 
-[!DNL Kobie] proporciona una plataforma SaaS maquetable que puede usar para administrar todo el ciclo de vida de un programa de fidelidad. Normalmente utilizada por equipos de marketing, científicos de datos y administradores de experiencia del cliente, la plataforma [!DNL Kobie] incluye una interfaz sin código que puede usar para orquestar reglas de fidelidad complejas.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] es una plataforma MACH altamente configurable, segura y escalable que se adapta a su estrategia de fidelidad: acelera el tiempo de obtención de valor, mejora la eficiencia y protege su marca con un control de nivel empresarial. Con integraciones perfectas entre CDP, CRM, CMS y más, [!DNL KALC] permite a los especialistas en marketing ofrecer personalización en tiempo real en todos los canales, a la vez que proporciona la flexibilidad y la trazabilidad para evolucionar a medida que crezca la lealtad de su marca.
 
-Puede usar los orígenes [!DNL Kobie] en el catálogo de orígenes de Adobe Experience Platform para introducir datos de fidelidad por lotes y de flujo continuo desde su cuenta de [!DNL Kobie].
+>[!NOTE]
+>
+>**Configurar permisos en Experience Platform**
+>
+>Debe tener los permisos **[!UICONTROL View Sources]** y **[!UICONTROL Manage Sources]** habilitados para su cuenta a fin de conectar su cuenta de [!DNL Kobie Streaming Events] a Experience Platform. Póngase en contacto con el administrador del producto para obtener los permisos necesarios. Para obtener más información, lea la [guía de la interfaz de usuario de control de acceso](../../../access-control/abac/ui/permissions.md).
 
-- [[!DNL Kobie] lote](../../tutorials/ui/create/loyalty/kobie-batch.md)
-- [[!DNL Kobie] transmisión](../../tutorials/ui/create/loyalty/kobie-streaming.md)
-
-## Requisitos previos
-
-Proporcione valores para las siguientes credenciales a fin de autenticar y conectar [!DNL Kobie Batch Source Connector].
-
-| Credencial | Descripción | Ejemplo |
-| --- | --- | --- |
-
-## Asignación {#mapping}
-
-<!-- Mapping info here -->
-
-## Próximos pasos
+Use la [[!DNL Kobie Streaming Events] fuente](../../tutorials/ui/create/loyalty/kobie-streaming.md) en el catálogo de fuentes para transmitir datos de fidelidad de su cuenta de [!DNL Kobie] a Adobe Experience Platform.

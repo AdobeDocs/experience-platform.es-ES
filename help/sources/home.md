@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Información general sobre conectores Source
 description: Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f3026e0a717c07d95f12e3aeaf380ddc1b87c712
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1764'
 ht-degree: 11%
 
 ---
@@ -65,7 +65,7 @@ Experience Platform permite la ingesta de datos desde otras aplicaciones de Adob
 
 ### Fuentes empresariales avanzadas {#advanced-enterprise-sources}
 
-Las siguientes fuentes solo están disponibles para [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/es/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clientes que tengan licencia del SKU independiente de Advanced Enterprise Source Connectors.
+Las siguientes fuentes solo están disponibles para [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) o clientes que tengan licencia del SKU independiente de Advanced Enterprise Source Connectors.
 
 | Fuente | Categoría | Tipo de ingesta | Nube |
 | --- | --- | --- | --- |
@@ -225,7 +225,7 @@ Puede utilizar las siguientes fuentes para introducir datos del sistema local en
 
 ### Lealtad {#loyalty}
 
-Puede utilizar las siguientes fuentes para introducir la lealtad de los datos a Experience Platform.
+Puede utilizar las siguientes fuentes para introducir datos de fidelidad en Experience Platform.
 
 | Fuente | Tipo de ingesta | Nube |
 | --- | --- | --- |

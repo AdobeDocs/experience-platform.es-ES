@@ -1,19 +1,25 @@
 ---
 title: Transmitir Datos De Kobie A Experience Platform Mediante La Interfaz De Usuario
 description: Aprenda a transmitir datos de Kobie a Adobe Experience Platform mediante la interfaz de usuario de.
-badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 3cba7ab5ddadc0f3b940f25280eb66a85725d1a6
+exl-id: 4e2e3287-3673-4426-8666-5f2ee284ca3d
+source-git-commit: 8c78ef8897bd160ad50688deeef83f029e6940cf
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 2%
+source-wordcount: '881'
+ht-degree: 1%
 
 ---
 
-# Transmitir datos de [!DNL Kobie] a Experience Platform mediante la interfaz de usuario
+# Transmitir datos de [!DNL Kobie Streaming Events] a Experience Platform mediante la interfaz de usuario
 
-Lea esta guía para obtener información sobre cómo conectar y transmitir los datos de [!DNL Kobie] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
+[!DNL Kobie Alchemy Loyalty Cloud (KALC)] es una plataforma MACH altamente configurable, segura y escalable que se adapta a su estrategia de fidelidad: acelera el tiempo de obtención de valor, mejora la eficiencia y protege su marca con un control de nivel empresarial. Con integraciones perfectas entre CDP, CRM, CMS y más, [!DNL KALC] permite a los especialistas en marketing ofrecer personalización en tiempo real en todos los canales, a la vez que proporciona la flexibilidad y la trazabilidad para evolucionar a medida que crezca la lealtad de su marca.
+
+Lea esta guía para obtener información sobre cómo conectar y transmitir los datos de [!DNL Kobie Streaming Events] a Adobe Experience Platform mediante el área de trabajo de orígenes en la interfaz de usuario.
+
+>[!IMPORTANT]
+>
+>Para obtener información sobre la configuración y asignación de requisitos previos, comuníquese directamente con el representante de [!DNL Kobie Client Services].
 
 ## Introducción
 
@@ -23,10 +29,6 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
    * [Aspectos básicos de la composición de esquemas](../../../../../xdm/schema/composition.md): obtenga información sobre los componentes básicos de los esquemas XDM, incluidos los principios clave y las prácticas recomendadas en la composición de esquemas.
    * [Tutorial del editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): Aprenda a crear esquemas personalizados mediante la interfaz de usuario del editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): proporciona un perfil de consumidor unificado y en tiempo real basado en los datos agregados de varias fuentes.
-
->[!IMPORTANT]
->
->Lea la [[!DNL Kobie] descripción general](../../../../connectors/loyalty/kobie.md) para obtener información sobre los pasos previos que debe seguir antes de conectar su cuenta a Experience Platform.
 
 ## Navegar por el catálogo de fuentes
 
