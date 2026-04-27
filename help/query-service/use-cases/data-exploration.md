@@ -1,49 +1,49 @@
 ---
-title: Explorar, solucionar problemas y comprobar la ingesta por lotes con SQL
-description: Aprenda a comprender y administrar el proceso de ingesta de datos en Adobe Experience Platform. Este documento incluye cómo verificar lotes y consultar datos ingeridos.
+title: Explore, Troubleshoot, and Verify Batch Ingestion with SQL
+description: Learn how to understand and manage the data ingestion process in Adobe Experience Platform. This document includes how to verify batches and query ingested data.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
 
-# Explore, solucione problemas y verifique la ingesta por lotes con SQL
+# Explore, troubleshoot, and verify batch ingestion with SQL
 
-En este documento se explica cómo comprobar y validar registros en lotes ingeridos con SQL. Este documento le enseña cómo:
+This document explains how to verify and validate records in ingested batches with SQL. This document teaches you how to:
 
-- Acceder a metadatos por lotes
-- Solucione problemas y garantice la integridad de los datos consultando lotes
+- Access dataset batch metadata
+- Troubleshoot and ensure data integrity by querying batches
 
 >[!NOTE]
 >
->Algunas capturas de pantalla de esta guía se tomaron de [!DNL DBVisualizer]. Para obtener información sobre cómo [conectar el servicio de consultas con DBVisualizer](../clients/dbvisulaizer.md) u otras [herramientas de BI de terceros](../clients/overview.md), consulte la documentación vinculada.
+>Some screenshots in this guide are taken from [!DNL DBVisualizer]. To learn how to [connect Query Service with DBVisualizer](../clients/dbvisulaizer.md) or other [third-party BI tools](../clients/overview.md), see the linked documentation.
 
 ## Requisitos previos
 
-Para facilitar su comprensión de los conceptos mencionados en este documento, debe conocer los siguientes temas:
+To help your understanding of the concepts discussed in this document, you should have knowledge of the following topics:
 
-- **Ingesta de datos**: consulte la [descripción general de la ingesta de datos](../../ingestion/home.md) para conocer los conceptos básicos de cómo se incorporan los datos en Experience Platform, incluidos los diferentes métodos y procesos involucrados.
-- **Ingesta por lotes**: Consulte la [descripción general de la API de ingesta por lotes](../../ingestion/batch-ingestion/overview.md) para conocer los conceptos básicos de la ingesta por lotes. En concreto, qué es un &quot;lote&quot; y cómo funciona dentro del proceso de ingesta de datos de Experience Platform.
-- **Metadatos del sistema en conjuntos de datos**: consulte la [descripción general del servicio de catálogo](../../catalog/home.md) para obtener información sobre cómo se utilizan los campos de metadatos del sistema para realizar el seguimiento y consultar los datos ingeridos.
-- **Modelo de datos de experiencia (XDM)**: Consulte la [descripción general de la interfaz de usuario de esquemas](../../xdm/ui/overview.md) y los [&#39;conceptos básicos de la composición de esquemas&#39;](../../xdm/schema/composition.md) para obtener información sobre los esquemas XDM y cómo representan y validan la estructura y el formato de los datos ingeridos en Experience Platform.
+- **Data ingestion**: See the [data ingestion overview](../../ingestion/home.md) to learn the basics of how data is ingested into the Experience Platform, including the different methods and processes involved.
+- **Batch ingestion**: See the [batch ingestion API overview](../../ingestion/batch-ingestion/overview.md) to learn the basic concepts of batch ingestion. Specifically, what a &quot;batch&quot; is and how it functions within Experience Platform&#39;s data ingestion process.
+- **System metadata in datasets**: See the [Catalog Service overview](../../catalog/home.md) to learn how system metadata fields are used to track and query ingested data.
+- **Experience Data Model (XDM)**: See the [schemas UI overview](../../xdm/ui/overview.md) and the [&#39;basics of schema composition&#39;](../../xdm/schema/composition.md) to learn about XDM schemas and how they represent and validate the structure and format of data ingested into Experience Platform.
 
-## Acceder a metadatos por lotes {#access-dataset-batch-metadata}
+## Access dataset batch metadata {#access-dataset-batch-metadata}
 
-Para asegurarse de que las columnas del sistema (columnas de metadatos) se incluyen en los resultados de la consulta, utilice el comando SQL `set drop_system_columns=false` en el Editor de consultas. Esto configura el comportamiento de la sesión de consulta SQL. Esta entrada debe repetirse si se inicia una nueva sesión.
+To ensure that system columns (metadata columns) are included in the query results, use the SQL command `set drop_system_columns=false` in your Query Editor. This configures the behavior of your SQL query session. This input must be repeated if you start a new session.
 
-A continuación, para ver los campos del sistema del conjunto de datos, ejecute una instrucción SELECT all para mostrar los resultados del conjunto de datos, por ejemplo `select * from movie_data`. Los resultados incluyen dos nuevas columnas en el lado derecho `_acp_system_metadata` y `_ACP_BATCHID`. Las columnas de metadatos `_acp_system_metadata` y `_ACP_BATCHID` ayudan a identificar las particiones lógicas y físicas de los datos ingeridos.
+Next, to view the system fields of the dataset, execute a SELECT all statement to display the results from the dataset, for example `select * from movie_data`. The results include two new columns on the right-hand side `_acp_system_metadata` and `_ACP_BATCHID`. The metadata columns `_acp_system_metadata` and `_ACP_BATCHID` help identify the logical and physical partitions of ingested data.
 
-![Interfaz de usuario de DBVisualizer con la tabla movie_data y sus columnas de metadatos mostradas y resaltadas.](../images/use-cases/movie_data-table-with-metadata-columns.png)
+![The DBVisualizer UI with the movie_data table and its metadata columns displayed and highlighted.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Cuando se incorporan datos en Experience Platform, se les asigna una partición lógica basada en los datos entrantes. Esta partición lógica está representada por `_acp_system_metadata.sourceBatchId`. Este ID ayuda a agrupar e identificar los lotes de datos de forma lógica antes de procesarlos y almacenarlos.
+When data is ingested into Experience Platform, it is assigned a logical partition based on the incoming data. Esta partición lógica está representada por `_acp_system_metadata.acp_sourceBatchId`. Este ID ayuda a agrupar e identificar los lotes de datos de forma lógica antes de procesarlos y almacenarlos.
 
 Una vez que los datos se procesan e incorporan en el lago de datos, se les asigna una partición física representada por `_ACP_BATCHID`. Este ID refleja la partición de almacenamiento real del lago de datos en el que residen los datos introducidos.
 
 ### Utilice SQL para comprender las particiones lógicas y físicas {#understand-partitions}
 
-Para comprender mejor cómo se agrupan y distribuyen los datos después de la ingesta, utilice la siguiente consulta para contar el número de particiones físicas distintas (`_ACP_BATCHID`) para cada partición lógica (`_acp_system_metadata.sourceBatchId`).
+Para comprender mejor cómo se agrupan y distribuyen los datos después de la ingesta, utilice la siguiente consulta para contar el número de particiones físicas distintas (`_ACP_BATCHID`) para cada partición lógica (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
@@ -94,15 +94,15 @@ A continuación, valide y compruebe los registros que se han introducido en el c
 >
 >Para recuperar el ID de lote y los registros de consulta asociados a dicho ID de lote, primero debe crear un lote en Experience Platform. Si desea probar el proceso usted mismo, puede introducir datos CSV en Experience Platform. Lea la guía sobre cómo [asignar un archivo CSV a un esquema XDM existente mediante recomendaciones generadas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Una vez que haya ingerido un lote, debe navegar a la [!UICONTROL pestaña de actividad Conjuntos de datos] para el conjunto de datos en el que ha ingerido los datos.
+Una vez que haya ingerido un lote, debe navegar a [!UICONTROL Datasets activity tab] para el conjunto de datos en el que ha ingerido los datos.
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Conjuntos de datos]** en el panel de navegación izquierdo para abrir el panel [!UICONTROL Conjuntos de datos]. A continuación, seleccione el nombre del conjunto de datos en la pestaña [!UICONTROL Examinar] para acceder a la pantalla [!UICONTROL Actividad del conjunto de datos].
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Datasets]** en el panel de navegación izquierdo para abrir el panel [!UICONTROL Datasets]. A continuación, seleccione el nombre del conjunto de datos en la pestaña [!UICONTROL Browse] para acceder a la pantalla [!UICONTROL Dataset activity].
 
 ![Panel de conjuntos de datos de IU de Experience Platform con conjuntos de datos resaltados en la navegación izquierda.](../images/use-cases/datasets-workspace.png)
 
-Aparece la vista [!UICONTROL Actividad del conjunto de datos]. Esta vista contiene detalles del conjunto de datos seleccionado. Incluye todos los lotes introducidos que se muestran en formato de tabla.
+Aparecerá la vista [!UICONTROL Dataset activity]. Esta vista contiene detalles del conjunto de datos seleccionado. Incluye todos los lotes introducidos que se muestran en formato de tabla.
 
-Seleccione un lote de la lista de lotes disponibles y copie el [!UICONTROL ID de lote] en el panel de detalles de la derecha.
+Seleccione un lote de la lista de lotes disponibles y copie [!UICONTROL Batch ID] del panel de detalles de la derecha.
 
 ![La interfaz de usuario de los conjuntos de datos de Experience Platform muestra los registros ingeridos con un identificador de lote resaltado.](../images/use-cases/batch-id.png)
 
@@ -114,7 +114,7 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-La palabra clave `_ACP_BATCHID` se usa para filtrar [!UICONTROL ID de lote].
+La palabra clave `_ACP_BATCHID` se usa para filtrar [!UICONTROL Batch ID].
 
 >[!TIP]
 >
@@ -122,7 +122,7 @@ La palabra clave `_ACP_BATCHID` se usa para filtrar [!UICONTROL ID de lote].
 
 Al ejecutar esta consulta en el Editor de consultas, los resultados se truncan a 100 filas. El editor de consultas está diseñado para obtener previsualizaciones e investigaciones rápidas. Para recuperar hasta 50 000 filas, puede utilizar una herramienta de terceros como DBVisualizer o DBeaver.
 
-## Pasos siguientes {#next-steps}
+## Próximos pasos {#next-steps}
 
 Al leer este documento, ha aprendido los aspectos básicos de la verificación y validación de registros en lotes ingeridos como parte del proceso de ingesta de datos. También obtuvo información sobre el acceso a los metadatos por lotes del conjunto de datos, la comprensión de las particiones lógicas y físicas y la consulta de lotes específicos mediante comandos SQL. Estos conocimientos pueden ayudarle a garantizar la integridad de los datos y optimizar su almacenamiento de datos en Experience Platform.
 

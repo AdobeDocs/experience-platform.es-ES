@@ -2,9 +2,9 @@
 title: Administración de datos en Query Service
 description: Esta descripción general abarca los principales elementos del control de datos en Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: c98ae492b12fb5b9596f19a3d64785090439f7e1
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3182'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ La seguridad con respecto al servicio de consultas se divide en las siguientes c
 
 ### Control de acceso {#access-control}
 
-El control de acceso en Adobe Experience Platform le permite usar [Adobe Admin Console](https://adminconsole.adobe.com/) para administrar el acceso a las características del servicio de consultas mediante permisos basados en funciones. Del mismo modo, se puede controlar el acceso a atributos de datos específicos mediante la administración de etiquetas en esquemas y campos de datos.
+El control de acceso en Adobe Experience Platform se administra mediante permisos basados en funciones que determinan qué usuarios pueden utilizar las funciones del servicio de consultas. Del mismo modo, se puede controlar el acceso a atributos de datos específicos mediante la administración de etiquetas en esquemas y campos de datos.
 
 En esta sección se describen los permisos de control de acceso necesarios que debe tener un usuario para utilizar completamente las funciones del servicio de consulta. Consulte los documentos sobre [administración de permisos](../../access-control/ui/permissions.md) y [administración de usuarios](../../access-control/ui/users.md) para obtener instrucciones detalladas sobre cómo asignar acceso a un perfil de producto.
 
