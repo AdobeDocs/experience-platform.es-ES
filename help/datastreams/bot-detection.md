@@ -2,10 +2,10 @@
 title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 0%
+source-wordcount: '1485'
+ht-degree: 1%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 0%
 El tráfico no humano procedente de programas automatizados, raspadores web, arañas y escáneres con secuencias de comandos puede dificultar la identificación de eventos de visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
 
 La detección de bots le permite identificar eventos generados por [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) como generados por arañas web y bots conocidos.
+
+>[!NOTE]
+>
+>Use [!DNL Bot Detection Service] para identificar y filtrar el tráfico no humano (bot) de sus datos. Esto reduce el ruido en los conjuntos de datos recopilados y ayuda a garantizar que los análisis y los informes reflejen las interacciones genuinas del usuario.
 
 Al configurar la detección de bots para los flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud para clasificarlos como eventos de bots. Esto ayuda a proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil.
 
@@ -33,7 +37,7 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 >
 >La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](configure.md) que configuró.
 >
->Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=es) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
 ## Consideraciones técnicas {#technical-considerations}
 
@@ -45,7 +49,7 @@ Antes de habilitar la detección de bots en sus flujos de datos, hay que tener e
 
 ## Requisitos previos {#prerequisites}
 
-Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[!UICONTROL Bot Detection Information]** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
+Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
 
 ## Configuración de la detección de bots para flujos de datos {#configure}
 
