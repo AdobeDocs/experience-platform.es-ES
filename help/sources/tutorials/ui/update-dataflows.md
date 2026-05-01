@@ -2,9 +2,9 @@
 description: Obtenga información sobre cómo actualizar un flujo de datos de fuentes existente en la interfaz de usuario de Experience Platform.
 title: Actualización de un flujo de datos de conexión de Source en la IU
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="Caducidad del conjunto de datos"
->abstract="Esta columna indica el número de días que le quedan al conjunto de datos de destinatario antes de que caduque automáticamente.<br>Un flujo de datos fallará si caduca el conjunto de datos de destino. Para evitar que un flujo de datos falle, asegúrese de que un conjunto de datos de destinatario esté configurado para que caduque en la fecha correcta. Consulte la documentación para obtener información sobre cómo actualizar las fechas de caducidad."
+>abstract="Esta columna indica el número de días que le quedan al conjunto de datos de destino antes de que caduque automáticamente.<br>Un flujo de datos fallará si caduca el conjunto de datos de destino. Para evitar que un flujo de datos falle, asegúrese de que un conjunto de datos de destinatario esté configurado para que caduque en la fecha correcta. Consulte la documentación para obtener información sobre cómo actualizar las fechas de caducidad."
 
 En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo y, a continuación, seleccione **[!UICONTROL Dataflows]** en el encabezado superior.
 
@@ -47,7 +47,7 @@ Se le redirige al flujo de trabajo de orígenes, donde puede continuar actualiza
 
 >[!NOTE]
 >
->Actualmente, la característica de asignación de edición no es compatible con los siguientes orígenes: Adobe Analytics, Adobe Audience Manager, API HTTP y [!DNL Marketo Engage].
+>Actualmente, la función de asignación de edición no es compatible con las siguientes fuentes: Adobe Analytics, Adobe Audience Manager y API HTTP.
 
 Durante este proceso, también puede actualizar los conjuntos de asignaciones asociados al flujo de datos.  La interfaz de asignación muestra la asignación existente del flujo de datos y no un nuevo conjunto de asignaciones recomendado. Las actualizaciones de asignación solo se aplican a ejecuciones de flujo de datos programadas en el futuro. No se pueden actualizar los conjuntos de asignaciones de un flujo de datos programado para una ingesta única.
 
