@@ -3,9 +3,9 @@ title: Bombora Intent
 description: Obtenga información sobre la fuente Bombora Intent en Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 1%
 
 ---
@@ -204,5 +204,28 @@ La coincidencia de dominios en Experience Platform se basa en una coincidencia e
 +++Respuesta
 
 Los datos de intención se pueden usar en [Audiencias de cuenta](../../../segmentation/types/account-audiences.md) para mejorar el direccionamiento, la segmentación y la personalización. Al aprovechar las señales de intención, las empresas pueden identificar cuentas que muestran un alto interés en temas específicos y participar en ellas, lo que optimiza el alcance de marketing y ventas.
+
++++
+
+### ¿Es compatible el grupo de campos estándar [!DNL Account Key] con el esquema [!DNL Bombora Account Intent]?
+
++++Respuesta
+
+No. Utilice el campo `accountID` para establecer relaciones con el esquema de cuenta B2B. Esto evita la necesidad de introducir todo el grupo de campos en el esquema de referencia o de origen.
++++
+
+### ¿Cómo establece el esquema [!DNL Bombora Account Intent] una relación con el esquema de cuenta B2B?
+
++++Respuesta
+
+El esquema [!DNL Bombora Account Intent] utiliza el campo `accountID` para vincularlo al registro de cuenta B2B correspondiente. Este campo se rellena automáticamente durante la ingesta cuando se encuentra un dominio coincidente en ambos conjuntos de datos. Específicamente, `accountID` en el esquema [!DNL Bombora] hace referencia a `accountKey.sourceKey` en el esquema de cuenta B2B estándar.
+
++++
+
+### ¿Por qué el esquema [!DNL Bombora Account Intent] utiliza `accountID` en lugar de la estructura típica de grupo de campos [!DNL Account Key]?
+
++++Respuesta
+
+Los esquemas de [!DNL Bombora Intent] se centran en el almacenamiento y la eficacia del procesamiento. En lugar de utilizar un grupo de campos completo, el esquema utiliza un único campo optimizado (`accountID`) para establecer relaciones. Esto reduce la complejidad y se alinea con los patrones de procesamiento óptimos para los datos por intención.
 
 +++
