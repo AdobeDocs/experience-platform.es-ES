@@ -2,9 +2,9 @@
 title: Configuración de la detección de bots para flujos de datos
 description: Aprenda a configurar la detección de bots para flujos de datos a fin de diferenciar el tráfico humano del no humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1460'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 El tráfico no humano procedente de programas automatizados, raspadores web, arañas y escáneres con secuencias de comandos puede dificultar la identificación de eventos de visitantes humanos. Este tipo de tráfico puede afectar negativamente a métricas comerciales importantes, lo que provoca informes de tráfico incorrectos.
 
-La detección de bots le permite identificar eventos generados por [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) como generados por arañas web y bots conocidos.
+Use la detección de bots para identificar los eventos generados por [Web SDK](/help/collection/js/js-overview.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) y [Edge Network API](https://developer.adobe.com/data-collection-apis/docs/api/) generados por arañas web y bots conocidos.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ La detección de bots le permite identificar eventos generados por [Web SDK](/he
 
 Al configurar la detección de bots para los flujos de datos, puede identificar direcciones IP específicas, intervalos de IP y encabezados de solicitud para clasificarlos como eventos de bots. Esto ayuda a proporcionar una medición más precisa de la actividad del usuario en el sitio o la aplicación móvil.
 
-Cuando una solicitud a Edge Network coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1), como se muestra a continuación:
+Cuando una solicitud al [!DNL Edge Network] coincide con cualquiera de las reglas de detección de bots, el esquema XDM se actualiza con una puntuación de bots (siempre establecida en 1):
 
 ```json
 {
@@ -35,9 +35,9 @@ Esta puntuación de bots ayuda a las soluciones que reciben la solicitud a ident
 
 >[!IMPORTANT]
 >
->La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](configure.md) que configuró.
+>La detección de bots no elimina ninguna solicitud de bots. Solo actualiza el esquema XDM con la puntuación de bots y reenvía el evento al [servicio de secuencia de datos](/help/datastreams/configure.md) que configuró.
 >
->Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, Adobe Analytics usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=es) y no usa la puntuación establecida por Edge Network. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
+>Las soluciones de Adobe pueden gestionar la puntuación de bots de diferentes maneras. Por ejemplo, [!DNL Adobe Analytics] usa su propio [servicio de filtrado de bots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) y no usa la puntuación establecida por [!DNL Edge Network]. Los dos servicios usan la misma [lista de bots de la IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), por lo que la puntuación de bots es idéntica.
 
 ## Consideraciones técnicas {#technical-considerations}
 
@@ -45,15 +45,15 @@ Antes de habilitar la detección de bots en sus flujos de datos, hay que tener e
 
 * La detección de bots se aplica solamente a las solicitudes no autenticadas enviadas a `edge.adobedc.net`.
 * Las solicitudes autenticadas enviadas a `server.adobedc.net` no se evalúan para el tráfico de bots, ya que el tráfico autenticado se considera confiable.
-* Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse por Edge Network después de crearse.
+* Las reglas de detección de bots pueden tardar hasta 15 minutos en propagarse a través de [!DNL Edge Network] después de crearse.
 
 ## Requisitos previos {#prerequisites}
 
-Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** al esquema. Consulte la documentación del [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
+Para que la detección de bots funcione en la secuencia de datos, debe agregar el grupo de campos **[Información de detección de bots](/help/xdm/field-groups/event/bot-detection-information.md)** al esquema. Consulte la documentación del [esquema XDM](/help/xdm/ui/resources/schemas.md#add-field-groups) para obtener información sobre cómo agregar grupos de campos a un esquema.
 
 ## Configuración de la detección de bots para flujos de datos {#configure}
 
-Puede configurar la detección de bots después de crear una configuración de secuencia de datos. Consulte la documentación sobre cómo [crear y configurar un conjunto de datos](configure.md) y, a continuación, siga las instrucciones que se indican a continuación para agregar capacidades de detección de bots a su conjunto de datos.
+Puede configurar la detección de bots después de crear una configuración de secuencia de datos. Consulte la documentación sobre cómo [crear y configurar un conjunto de datos](/help/datastreams/configure.md) y, a continuación, siga las instrucciones que se indican a continuación para agregar capacidades de detección de bots a su conjunto de datos.
 
 Vaya a la lista de flujos de datos y seleccione el flujo de datos al que desea añadir la detección de bots.
 
@@ -123,19 +123,19 @@ Para crear una regla de detección de bots, siga los pasos a continuación:
 
    >[!TIP]
    >
-   >Las condiciones de IP se basan en una operación `OR` lógica. Una solicitud se marca como originada en un bot si coincide con cualquiera de las condiciones de IP definidas.
+   >Las condiciones de IP se basan en una operación [!DNL OR] lógica. Una solicitud se marca como originada en un bot si coincide con cualquiera de las condiciones de IP definidas.
 
 4. Si desea agregar condiciones de encabezado a la regla, seleccione **[!UICONTROL Add header conditions group]** y, a continuación, los encabezados que desea que utilice la regla.
 
-   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-conditions.png)
+   ![Pantalla de regla de detección de bots que muestra la opción de grupo Agregar condiciones de encabezado.](assets/bot-detection/header-conditions.png)
 
    A continuación, añada las condiciones que desea utilizar para el encabezado seleccionado.
 
-   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/header-condition-rule.png)
+   ![Pantalla de regla de detección de bots que muestra los campos de condición de encabezado completados.](assets/bot-detection/header-condition-rule.png)
 
 5. Después de configurar las reglas de detección de bots que desee, seleccione **[!UICONTROL Save]** para que se apliquen las reglas al conjunto de datos.
 
-   ![Pantalla de regla de detección de bots con las condiciones de encabezado resaltadas.](assets/bot-detection/bot-detection-save.png)
+   ![Pantalla de regla de detección de bots que muestra el botón Guardar resaltado.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Ejemplos de reglas de detección de bots {#examples}
@@ -144,39 +144,35 @@ Para empezar a utilizar la detección de bots, puede utilizar los ejemplos detal
 
 ### Detección de bots basada en una dirección IP {#one-ip}
 
-Para marcar todas las solicitudes procedentes de una dirección IP específica como tráfico de bots, cree una nueva regla de detección de bots que evalúe una sola dirección IP, como se muestra en la imagen siguiente.
+Para marcar todas las solicitudes procedentes de una dirección IP específica como tráfico de bots, cree una nueva regla de detección de bots que evalúe una sola dirección IP.
 
-![Regla de detección de bots basada en una dirección IP.](assets/bot-detection/bot-detection-one-ip.png)
+![Regla de detección de bots configurada para evaluar una sola dirección IP.](assets/bot-detection/bot-detection-one-ip.png)
 
 ### Detección de bots basada en dos direcciones IP {#two-ip}
 
-Para marcar todas las solicitudes procedentes de cualquiera de las dos direcciones IP específicas como tráfico de bots, cree una nueva regla de detección de bots que evalúe dos direcciones IP, como se muestra en la siguiente imagen.
+Para marcar todas las solicitudes procedentes de cualquiera de las dos direcciones IP específicas como tráfico de bots, cree una nueva regla de detección de bots que evalúe dos direcciones IP.
 
-![Regla de detección de bots basada en dos direcciones IP.](assets/bot-detection/bot-detection-two-ips.png)
+![Regla de detección de bots configurada para evaluar dos direcciones IP específicas.](assets/bot-detection/bot-detection-two-ips.png)
 
 ### Detección de bots basada en un intervalo de direcciones IP {#range}
 
-Para marcar todas las solicitudes procedentes de cualquier dirección IP de un intervalo específico como tráfico de bots, cree una nueva regla de detección de bots que evalúe un intervalo de direcciones IP completo, como se muestra en la siguiente imagen.
+Para marcar todas las solicitudes procedentes de cualquier dirección IP de un intervalo específico como tráfico de bots, cree una nueva regla de detección de bots que evalúe un intervalo de direcciones IP completo.
 
-![Regla de detección de bots basada en el intervalo de IP.](assets/bot-detection/bot-detection-range.png)
+![Regla de detección de bots configurada para evaluar un intervalo de direcciones IP.](assets/bot-detection/bot-detection-range.png)
 
 ### Detección de bots basada en una dirección IP y un encabezado de solicitud {#ip-header}
 
-Para marcar todas las solicitudes procedentes de una dirección IP específica y que contengan un encabezado de solicitud específico como tráfico de bots, cree una nueva regla de detección de bots como se muestra en la imagen siguiente.
+Para marcar todas las solicitudes procedentes de una dirección IP específica y que contengan un encabezado de solicitud específico como tráfico de bots, cree una nueva regla de detección de bots. Esta regla comprueba si la solicitud se origina desde una dirección IP específica y si el encabezado de solicitud `referer` comienza con `www.adobe.com`.
 
-Esta regla comprueba si la solicitud se origina desde una dirección IP específica y si el encabezado de solicitud `referer` comienza con `www.adobe.com`.
-
-![Regla de detección de bots basada en la dirección IP y el encabezado de solicitud.](assets/bot-detection/bot-detection-header-ip.png)
+![Regla de detección de bots configurada para evaluar una dirección IP y el encabezado de solicitud de referente.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Detección de bots basada en varias condiciones {#multiple-conditions}
 
 Puede crear reglas de detección de bots basadas en lo siguiente:
 
-* **Varias condiciones diferentes**: Las distintas condiciones se evalúan como una operación lógica `AND`, lo que significa que las condiciones deben cumplirse simultáneamente para que se pueda identificar la solicitud como originada en un bot.
-* **Varias condiciones del mismo tipo**: Las condiciones del mismo tipo se evalúan como una operación lógica `OR`, lo que significa que si se cumple cualquiera de las condiciones, se identifica que la solicitud se origina desde un bot.
+* **Varias condiciones diferentes**: Las condiciones diferentes se evalúan como una operación lógica [!DNL AND], lo que significa que todas las condiciones deben cumplirse simultáneamente para que el sistema identifique la solicitud como tráfico de bots.
+* **Varias condiciones del mismo tipo**: las condiciones del mismo tipo se evalúan como una operación lógica [!DNL OR], lo que significa que si se cumple una condición, la solicitud se identifica como tráfico de bots.
 
-La regla que se muestra en la siguiente imagen identifica una solicitud de origen de bots si se cumplen las siguientes condiciones:
+La siguiente regla identifica una solicitud de origen de bots si se cumplen estas condiciones: la solicitud se origina desde cualquiera de las dos direcciones IP, el encabezado `referer` comienza con `www.adobe.com` y el encabezado `sec-ch-ua-mobile` identifica la solicitud como originada desde un explorador de escritorio.
 
-La solicitud se origina desde cualquiera de las dos direcciones IP, el encabezado `referer` comienza con `www.adobe.com` y el encabezado `sec-ch-ua-mobile` identifica la solicitud como originada desde un explorador de escritorio.
-
-![Regla de detección de bots basada en varias condiciones.](assets/bot-detection/bot-detection-multiple.png)
+![Regla de detección de bots configurada con varias condiciones de IP, referente y agente de usuario.](assets/bot-detection/bot-detection-multiple.png)

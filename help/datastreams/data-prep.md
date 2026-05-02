@@ -2,55 +2,55 @@
 title: Preparación de datos para la recopilación de datos
 description: Obtenga información sobre cómo asignar los datos a un esquema de evento del Modelo de datos de experiencia (XDM) al configurar una secuencia de datos para los SDK web y móviles de Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 41%
+source-wordcount: '1143'
+ht-degree: 29%
 
 ---
 
 # Preparación de datos para la recopilación de datos
 
-La preparación de datos es un servicio de Adobe Experience Platform que puede usar para asignar, transformar y validar datos desde y hacia [Experience Data Model (XDM)](../xdm/home.md). Al configurar una secuencia de datos [habilitada para Experience Platform](./overview.md), puede usar las funcionalidades de preparación de datos para asignar los datos de origen a XDM al enviarlos a Experience Platform Edge Network.
+Use [!DNL Data Prep], un servicio de [!DNL Adobe Experience Platform], para asignar, transformar y validar datos desde y hacia [Experience Data Model (XDM)](/help/xdm/home.md). Al configurar una secuencia de datos [habilitada para Experience Platform](/help/datastreams/overview.md), puede usar las capacidades de [!DNL Data Prep] para asignar los datos de origen a XDM al enviarlos a [!DNL Adobe Experience Platform Edge Network].
 
-Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Existen tres formas de traducir datos de una capa de datos en la página al XDM aceptado por Experience Platform:
+Todos los datos enviados desde una página web deben aterrizar en Experience Platform como XDM. Tiene tres formas de traducir datos de una capa de datos en la página al XDM aceptado por Experience Platform:
 
 1. Vuelva a dar formato a la capa de datos en XDM en la propia página web.
-2. Utilice la funcionalidad Etiquetas de elementos de datos nativos para reformatear el formato de capa de datos existente de una página web en XDM.
-3. Vuelva a dar formato al formato de capa de datos existente de una página web en XDM mediante Edge Network y utilice la preparación de datos para la recopilación de datos.
+2. Utilice la funcionalidad [!DNL Tags] de elementos de datos integrada para cambiar el formato de la capa de datos existente de una página web a XDM.
+3. Vuelva a dar formato al formato de capa de datos existente de una página web en XDM mediante [!DNL Edge Network], con la preparación de datos para la recopilación de datos.
 
-Esta guía se centra en la tercera opción.
+Esta guía cubre la tercera opción.
 
 ## Cuándo utilizar la preparación de datos para la recopilación de datos {#when-to-use-data-prep}
 
-Existen dos casos de uso en los que la preparación de datos para la recopilación de datos es útil:
+La preparación de datos para la recopilación de datos es útil en dos situaciones:
 
-1. El sitio web tiene una capa de datos bien formada, controlada y mantenida, y hay una preferencia por enviarla directamente a Edge Network en lugar de utilizar la manipulación de JavaScript para convertirla a XDM en la página (ya sea mediante elementos de datos de etiquetas o mediante la manipulación manual de JavaScript).
-2. En el sitio se implementa un sistema de etiquetado que no sea Etiquetas.
+1. El sitio web tiene una capa de datos bien formada, controlada y mantenida, y usted prefiere enviarla directamente a [!DNL Edge Network] en lugar de utilizar la manipulación de JavaScript para convertirla a XDM en la página (ya sea a través de [!DNL Tags] elementos de datos o a través de la manipulación manual de JavaScript).
+2. Se ha implementado un sistema de etiquetado que no es [!DNL Tags] en el sitio.
 
-## Envíe una capa de datos existente a Edge Network a través de WebSDK {#send-datalayer-via-websdk}
+## Envíe una capa de datos existente a Edge Network a través de Web SDK {#send-datalayer-via-websdk}
 
 La capa de datos existente debe enviarse usando el objeto [`data`](/help/collection/js/commands/sendevent/data.md) dentro del comando `sendEvent`.
 
-Si está usando etiquetas, debe usar el campo **[!UICONTROL Data]** del tipo de acción [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
+Si está usando [!DNL Tags], debe usar el campo **[!UICONTROL Data]** del tipo de acción [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
-El resto de esta guía se centrará en cómo asignar la capa de datos a los estándares XDM después de que el SDK web la haya enviado.
+El resto de esta guía explica cómo asignar la capa de datos a los estándares XDM después de que la SDK web la haya enviado.
 
 >[!NOTE]
 >
->Para obtener instrucciones completas sobre todas las funcionalidades de preparación de datos, incluidas las funciones de transformación para los campos calculados, consulte la siguiente documentación:
+>Para obtener instrucciones detalladas sobre todas las capacidades de [!DNL Data Prep], incluidas las funciones de transformación para los campos calculados, consulte la siguiente documentación:
 >
->* [Información general de preparación de datos](../data-prep/home.md)
->* [Funciones de asignación de preparación de datos](../data-prep/functions.md)
->* [Administración de formatos de datos con preparación de datos](../data-prep/data-handling.md)
+>* [Información general de preparación de datos](/help/data-prep/home.md)
+>* [Funciones de asignación de preparación de datos](/help/data-prep/functions.md)
+>* [Administración de formatos de datos con preparación de datos](/help/data-prep/data-handling.md)
 
-Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Para seguir estos pasos, inicie el proceso de creación de una secuencia de datos hasta (e incluyendo) el [paso de configuración básica](./overview.md#create).
+Esta guía explica cómo asignar los datos dentro de la interfaz de usuario. Para completar los pasos, inicie el proceso de creación de un conjunto de datos hasta el [paso de configuración básico](/help/datastreams/configure.md#create) (que lo incluye).
 
-Para obtener una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
+Para ver una demostración rápida del proceso de preparación de datos para la recopilación de datos, consulte el siguiente vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/345563?captions=spa&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Select data] {#select-data}
+## Proporcionar datos de ejemplo {#select-data}
 
 Seleccione **[!UICONTROL Save and Add Mapping]** después de completar la configuración básica de una secuencia de datos y aparecerá el paso **[!UICONTROL Select data]**. Desde aquí, debe proporcionar un objeto JSON de muestra que represente la estructura de los datos que planea enviar a Experience Platform.
 
@@ -158,9 +158,9 @@ Puede seleccionar la opción para cargar el objeto como un archivo o pegar el ob
 
 >[!NOTE]
 >
->Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, los elementos de la capa de datos del carro de compras deben incluirse en este objeto JSON de muestra.
+>Utilice un objeto JSON de muestra que represente cada elemento de capa de datos que se pueda utilizar en cualquier página. Por ejemplo, no todas las páginas utilizan elementos de capa de datos del carro de compras. Sin embargo, incluya los elementos de la capa de datos del carro de compras en este objeto JSON de muestra.
 
-## [!UICONTROL Mapping]
+## Asignación de datos {#mapping}
 
 Aparece el paso **[!UICONTROL Mapping]**, que le permite asignar los campos de los datos de origen al esquema de evento de destino en Experience Platform. Desde aquí, puede configurar la asignación de dos formas:
 
@@ -169,7 +169,7 @@ Aparece el paso **[!UICONTROL Mapping]**, que le permite asignar los campos de l
 
 >[!IMPORTANT]
 >
->La asignación de la preparación de datos anula las cargas XDM de `identityMap`, lo que puede afectar aún más a la coincidencia de perfiles con audiencias de Real-Time CDP.
+>La asignación [!DNL Data Prep] anula las cargas XDM `identityMap`, lo que puede afectar aún más a la coincidencia de perfiles con audiencias [!DNL Real-Time CDP].
 
 ### Creación de reglas de asignación {#create-mapping}
 
@@ -177,11 +177,11 @@ Para crear una regla de asignación, seleccione **[!UICONTROL Add new mapping]**
 
 ![Agregando nueva asignación.](assets/data-prep/add-new-mapping.png)
 
-Seleccione el icono de origen (![Icono de origen](/help/images/icons/source.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desea asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Select]** para continuar.
+Seleccione el icono de origen (![icono del selector de campo Source](/help/images/icons/source.png)) y, en el cuadro de diálogo que aparece, seleccione el campo de origen que desee asignar en el lienzo proporcionado. Una vez que haya elegido un campo, utilice el botón **[!UICONTROL Select]** para continuar.
 
 ![Seleccionando el campo que se va a asignar en el esquema de origen.](assets/data-prep/source-mapping.png)
 
-A continuación, seleccione el icono de esquema (![Icono de esquema](/help/images/icons/schema.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destinatario. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Select]**.
+A continuación, seleccione el icono de esquema (![Icono del selector de esquema de destino](/help/images/icons/schema.png)) para abrir un cuadro de diálogo similar para el esquema de evento de destino. Elija el campo al que desea asignar los datos antes de confirmar con **[!UICONTROL Select]**.
 
 ![Seleccionando el campo que se va a asignar en el esquema de destino.](assets/data-prep/target-mapping.png)
 
@@ -213,7 +213,7 @@ En el cuadro de diálogo que aparece, seleccione la secuencia de datos cuyas reg
 
 >[!NOTE]
 >
->Las secuencias de datos solo se pueden importar dentro de la misma [zona protegida](../sandboxes/home.md). En otras palabras, no se puede importar una secuencia de datos de una zona protegida a otra.
+>Las secuencias de datos solo se pueden importar dentro de la misma [zona protegida](/help/sandboxes/home.md). No se puede importar una secuencia de datos de una zona protegida a otra.
 
 La siguiente pantalla muestra una previsualización de las reglas de asignación guardadas para la secuencia de datos seleccionada. Asegúrese de que las asignaciones mostradas sean las esperadas y, a continuación, seleccione **[!UICONTROL Import]** para confirmar y agregar las asignaciones a la nueva secuencia de datos.
 
@@ -223,14 +223,14 @@ La siguiente pantalla muestra una previsualización de las reglas de asignación
 >
 >Si algún campo de origen en las reglas de asignación importadas no se incluye en los datos JSON de muestra que [ha proporcionado anteriormente](#select-data) estas asignaciones de campos no se incluirán en la importación.
 
-### Finalización de la asignación
+### Finalización de la asignación {#complete-mapping}
 
-Siga los pasos anteriores para asignar el resto de los campos al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino definido como obligatorio debe asignarse para completar este paso. El contador **[!UICONTROL Required fields]** indica cuántos campos obligatorios aún no están asignados en la configuración actual.
+Continúe asignando los campos restantes al esquema de destino. Aunque no tiene que asignar todos los campos de origen disponibles, cualquier campo del esquema de destino definido como obligatorio debe asignarse para completar este paso. El contador **[!UICONTROL Required fields]** indica cuántos campos obligatorios aún no están asignados en la configuración actual.
 
-Una vez que el recuento de campos requerido llegue a cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Save]** para finalizar los cambios.
+Cuando el recuento de campos requerido llegue a cero y esté satisfecho con la asignación, seleccione **[!UICONTROL Save]** para finalizar los cambios.
 
-![Asignación completa](assets/data-prep/mapping-complete.png)
+![Interfaz de asignación que muestra todos los campos obligatorios asignados correctamente con un recuento de campos obligatorios cero.](assets/data-prep/mapping-complete.png)
 
-## Próximos pasos
+## Próximos pasos {#next-steps}
 
-En esta guía se explica cómo asignar los datos a XDM al configurar una secuencia de datos en la interfaz de usuario. Si estaba siguiendo el tutorial general de secuencia de datos, ahora puede volver al paso sobre [visualización de detalles de secuencia de datos](./overview.md).
+En esta guía se explica cómo asignar los datos a XDM al configurar una secuencia de datos en la interfaz de usuario. Si estaba siguiendo el tutorial general de flujos de datos, ahora puede volver al paso [ver detalles de flujos de datos](/help/datastreams/overview.md).

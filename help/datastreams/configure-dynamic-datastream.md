@@ -2,25 +2,25 @@
 title: Crear configuraciones de flujo de datos dinámico
 description: Aprenda a crear configuraciones de flujo de datos dinámico para enrutar los datos a varios servicios de Experience Cloud, según las reglas.
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1040'
 ht-degree: 3%
 
 ---
 
 # Crear configuraciones de flujo de datos dinámico
 
-De manera predeterminada, Experience Platform Edge Network envía todos los eventos que llegan a una secuencia de datos a todos los [servicios](configure.md#add-services) de Experience Cloud que haya habilitado para sus secuencias de datos. Este podría no ser siempre el flujo de trabajo ideal, según sus casos de uso.
+De manera predeterminada, [!DNL Adobe Experience Platform Edge Network] envía todos los eventos que llegan a una secuencia de datos a todos los [!DNL Experience Cloud] [servicios](/help/datastreams/configure.md#add-services) que ha habilitado para sus secuencias de datos. Según sus casos de uso, este puede no ser siempre el flujo de trabajo ideal.
 
-Las configuraciones de flujo de datos dinámico solucionan este problema mediante conjuntos de reglas configurables por el usuario que se definen para cada servicio habilitado para el flujo de datos, que dictan qué solución de Experience Cloud debe recibir cada tipo de datos.
+Las configuraciones de flujo de datos dinámico solucionan esto mediante conjuntos de reglas que se definen para cada servicio habilitado para el flujo de datos, que controlan qué solución de [!DNL Experience Cloud] recibe cada tipo de datos.
 
 ## Requisitos previos {#prerequisites}
 
 Para crear una configuración dinámica para el conjunto de datos, deben cumplirse dos condiciones:
 
-* Debe haber creado *al menos* un conjunto de datos para trabajar con él. Consulte la documentación sobre cómo [crear un conjunto de datos](configure.md) para obtener información detallada.
-* Debe tener *al menos* un servicio de Experience Cloud agregado a su secuencia de datos. Consulte la documentación sobre cómo [agregar un servicio](configure.md#add-services) a un conjunto de datos para obtener información detallada.
+* Debe haber creado *al menos* un conjunto de datos para trabajar con él. Consulte la documentación sobre cómo [crear un conjunto de datos](/help/datastreams/configure.md) para obtener información detallada.
+* Debe tener *al menos* un servicio [!DNL Experience Cloud] agregado a su secuencia de datos. Consulte la documentación sobre cómo [agregar un servicio](/help/datastreams/configure.md#add-services) a un conjunto de datos para obtener información detallada.
 
 Después de crear una secuencia de datos y agregarle un servicio de Experience Cloud, puede [crear una configuración dinámica](#create-dynamic-configuration).
 
@@ -32,19 +32,19 @@ Las configuraciones de flujo de datos dinámico tienen límites específicos y r
 |---------|------------|------|
 | Número máximo de configuraciones de flujo de datos dinámico por flujo de datos para servicios de Experience Platform | 5 | Protección de rendimiento |
 | Número máximo de configuraciones de flujo de datos dinámico por flujo de datos para el reenvío de eventos | 5 | Protección de rendimiento |
-| Número máximo de configuraciones de flujo de datos dinámico por flujo de datos para Adobe Analytics | 5 | Protección de rendimiento |
-| Número máximo de configuraciones de flujo de datos dinámico por flujo de datos para Adobe Target | 5 | Protección de rendimiento |
-| Número máximo de configuraciones de flujo de datos dinámico por flujo de datos para Adobe Audience Manager | 5 | Protección de rendimiento |
+| Número máximo de configuraciones de secuencia de datos dinámica por secuencia de datos para [!DNL Adobe Analytics] | 5 | Protección de rendimiento |
+| Número máximo de configuraciones de secuencia de datos dinámica por secuencia de datos para [!DNL Adobe Target] | 5 | Protección de rendimiento |
+| Número máximo de configuraciones de secuencia de datos dinámica por secuencia de datos para [!DNL Adobe Audience Manager] | 5 | Protección de rendimiento |
 | Número máximo de condiciones (predicados) que se pueden combinar dentro de una sola regla | 100 | Protección de rendimiento |
 | Tiempo máximo permitido para evaluar todas las configuraciones de flujo de datos dinámico por flujo de datos antes de agotar el tiempo de espera | 25 ms | Protección impuesta por el sistema |
 
 ## Configuraciones dinámicas de flujo de datos frente a anulaciones de configuración de flujo de datos {#dynamic-versus-overrides}
 
-Las configuraciones dinámicas de secuencia de datos y las [anulaciones de configuración de secuencia de datos](overrides.md) son funcionalidades mutuamente exclusivas.
+Las configuraciones dinámicas de secuencia de datos y las [anulaciones de configuración de secuencia de datos](/help/datastreams/overrides.md) son funcionalidades mutuamente exclusivas.
 
-Esto significa que no puede utilizar configuraciones de flujo de datos dinámico junto con anulaciones de configuración de flujo de datos. Debe elegir una o la otra.
+No puede utilizar configuraciones de flujo de datos dinámico junto con invalidaciones de configuración de flujo de datos. Debe elegir una o la otra.
 
-Si habilita tanto las configuraciones de flujo de datos dinámico como las invalidaciones de configuración de flujo de datos, las invalidaciones de configuración tendrán prioridad y las reglas de configuración de flujo de datos dinámico se omitirán.
+Si habilita ambas, las invalidaciones de configuración tienen prioridad y el sistema ignora las reglas de configuración de flujo de datos dinámico.
 
 ## Crear una configuración de flujo de datos dinámico {#create-dynamic-configuration}
 
@@ -72,13 +72,13 @@ Después de [crear un conjunto de datos](configure.md) y [agregarle un servicio]
 
    ![Interfaz de usuario de flujos de datos que muestra el generador de reglas de configuración dinámica con los recursos que se arrastran.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. En la sección **[!UICONTROL Configuration]**, active o desactive los servicios que desee habilitar o deshabilitar para cada regla, en función de si desea que se envíen los datos a cada servicio. Si desactiva la opción, el enrutamiento del servicio se deshabilita y *no se enviarán datos* al servicio descendente.
+1. En la sección **[!UICONTROL Configuration]**, habilite o deshabilite los servicios para cada regla, en función de si desea que se envíen los datos a cada servicio. Si deshabilita un servicio, el enrutamiento se deshabilita y *no se envían datos* al servicio descendente.
 
    Interfaz de usuario de ![Datastreams que muestra la regla de configuración dinámica con conmutadores de servicio.](assets/configure-dynamic-datastream/enable-service.png)
 
 1. Cuando termine de configurar las reglas, seleccione **[!UICONTROL Save]**.
 
-## Consideraciones de prioridad de reglas {#considerations}
+## Consideraciones de prioridad de reglas {#rule-priority}
 
 Puede definir varias reglas para cada configuración de flujo de datos dinámico. Sin embargo, si los datos coinciden con las condiciones de varias reglas, solo se tendrá en cuenta la primera regla que coincida en la lista y el resto de reglas que coincidan se ignorarán.
 
@@ -86,7 +86,7 @@ Para lograr el comportamiento de enrutamiento de datos deseado, preste atención
 
 Para configurar el orden de las reglas, puede arrastrar y soltar las ventanas de reglas en el orden que desee.
 
-![GIF muestra cómo cambiar el orden de las reglas arrastrando y soltando.](assets/configure-dynamic-datastream/move-rules.gif)
+![Reordenación de reglas de flujo de datos dinámico mediante arrastrar y soltar.](assets/configure-dynamic-datastream/move-rules.gif)
 
 ## Criterios de elegibilidad de regla {#eligibility-criteria}
 
@@ -117,7 +117,7 @@ Las reglas pueden utilizar los siguientes operadores, según el tipo de datos:
 | **Booleano** | `equals true/false`, `does not equal true/false` |
 | **Enumeración** | `equals`, `does not equal`, `exists`, `does not exist` |
 | **Fecha** | `today`, `yesterday`, `this month`, `this year`, `custom date`, `in last`, `from`, `during`, `within`, `before`, `after`, `rolling range`, `in next`, `exists`, `does not exist` |
-| **Lógico** | `INCLUDE`, `ANY/ALL` (equivalente a AND/OR) |
+| **Lógico** | `INCLUDE`, `ANY/ALL` (equivalente a [!DNL AND]/[!DNL OR]) |
 
 >[!NOTE]
 >
@@ -127,17 +127,17 @@ Las reglas pueden utilizar los siguientes operadores, según el tipo de datos:
 
 Al crear reglas para configuraciones de flujo de datos dinámico, es importante comprender los requisitos estructurales que garantizan un rendimiento óptimo y la compatibilidad del sistema. La estructura de reglas afecta directamente a la eficacia con la que los datos se procesan y enrutan a través del sistema.
 
-**Use expresiones simples**. Debe definir las reglas como expresiones lógicas planas. No se admiten expresiones lógicas anidadas (que utilizan contenedores o varios niveles de AND/OR). Si necesita lógica compleja, divídala en varias reglas planas.
+**Use expresiones simples**. Debe definir las reglas como expresiones lógicas planas. No se admiten expresiones lógicas anidadas (que usan contenedores o varios niveles de [!DNL AND]/[!DNL OR]). Si necesita lógica compleja, divídala en varias reglas planas.
 
-Por ejemplo, considere la regla compleja que se muestra en la siguiente imagen.
+Por ejemplo, considere la siguiente regla compleja.
 
-![Imagen de la interfaz de usuario de la plataforma que muestra una regla compleja.](assets/configure-dynamic-datastream/complex-rule.png)
+![Ejemplo de una regla compleja anidada con varias condiciones AND/OR.](assets/configure-dynamic-datastream/complex-rule.png)
 
 Puede dividir esta regla en las siguientes reglas más sencillas:
 
-![Imagen de la interfaz de usuario de la plataforma que muestra la primera regla simplificada.](assets/configure-dynamic-datastream/simple-rule-1.png)
+![Primera regla simplificada que reemplaza la regla compleja anidada.](assets/configure-dynamic-datastream/simple-rule-1.png)
 
-![Imagen de la interfaz de usuario de la plataforma que muestra la segunda regla simplificada.](assets/configure-dynamic-datastream/simple-rule-2.png)
+![Segunda regla simplificada que reemplaza la regla compleja anidada.](assets/configure-dynamic-datastream/simple-rule-2.png)
 
 **Evite reglas complejas**. Las reglas más sencillas garantizan una evaluación más rápida y una mejor capacidad de mantenimiento.
 
@@ -145,11 +145,7 @@ Puede dividir esta regla en las siguientes reglas más sencillas:
 
 Las siguientes prácticas recomendadas al crear reglas de configuración de flujo de datos dinámico garantizan un rendimiento óptimo, fiabilidad del sistema y configuraciones mantenibles. Estas directrices le ayudan a evitar escollos comunes y a crear reglas eficientes que funcionan perfectamente con la arquitectura de la plataforma.
 
-* **Mantenga las reglas simples y planas.** Si necesita expresar una lógica compleja, utilice varias reglas en lugar de anidar.
+* **Mantenga las reglas simples y uniformes.** Si necesita expresar una lógica compleja, utilice varias reglas en lugar de anidar.
 * **Use solamente [tipos de datos compatibles](#supported-data-types) y [operadores](#supported-operators).**
-* **Prueba el rendimiento de las reglas.** Las reglas demasiado complejas o no admitidas pueden hacer que el sistema las rechace o afectar al rendimiento del sistema.
-
-
-
-
+* **Probar el rendimiento de las reglas.** Las reglas demasiado complejas o no admitidas pueden hacer que el sistema las rechace o afectar al rendimiento del sistema.
 
