@@ -2,9 +2,9 @@
 title: Información general sobre los destinos
 description: Los destinos son integraciones prediseñadas con plataformas de destino que permiten la activación perfecta de datos de Adobe Experience Platform. Puede usar Destinos en Adobe Experience Platform para activar los datos conocidos y desconocidos para campañas de marketing entre canales, campañas por correo electrónico, publicidad segmentada y muchos otros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -99,6 +99,12 @@ Después de establecer una conexión con un destino y completar el flujo de trab
 ![Ejemplo de página de supervisión de destinos.](./assets/overview/monitoring-page-example.png)
 
 También puede validar si los datos llegan a su destino correctamente. La mayoría de las páginas de documentación de destino del catálogo tienen una *sección Validar exportación de datos*, que indica cómo se puede comprobar en la plataforma de destino que los datos se están introduciendo correctamente desde Experience Platform. Vea un ejemplo de esta sección para [Amazon Ads destination](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Cifrado de datos {#encryption}
+
+Todos los datos en tránsito exportados desde [!DNL Experience Platform] a través de destinos viajan a través de conexiones seguras y cifradas usando [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) o posterior. El protocolo TLS utilizado por [!DNL Experience Platform] en la comunicación saliente también admite [Indicación de nombre de servidor (SNI)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+Para obtener más información sobre cómo se incorporan, cifran y mantienen los datos, consulte [cifrado de datos en Experience Platform](../landing/governance-privacy-security/encryption.md).
 
 ## Restricciones de la gobernanza de datos al activar datos en destinos {#data-governance}
 
