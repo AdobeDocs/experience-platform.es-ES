@@ -1,15 +1,15 @@
 ---
-title: Ajustes de configuración de recopilación de datos
+title: Ajustes de configuración de la recopilación de datos
 description: Configure las opciones de recopilación de datos en la extensión de etiquetas Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 4%
 
 ---
 
-# Ajustes de configuración de recopilación de datos {#data-collection}
+# Ajustes de configuración de la recopilación de datos {#data-collection}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datacollection"

@@ -8,8 +8,8 @@ hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 14%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -94,8 +94,8 @@ Cuando intenta autenticarse con una cuenta de trabajo, es posible que se le redi
 
 Una vez que el administrador de TI apruebe la solicitud en el portal de Azure, puede volver a Experience Platform y autenticarse con su cuenta de trabajo. Para obtener instrucciones, consulte la documentación de Microsoft:
 
-* [Revisar y tomar medidas en las solicitudes de consentimiento de los administradores](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
-* [Configurar el flujo de trabajo de consentimiento del administrador](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Revisar y realizar acciones en solicitudes de consentimiento de administrador](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configuración del flujo de trabajo de consentimiento de administrador](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
 * [Configurar el consentimiento de los usuarios a las aplicaciones](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
 Si el administrador de TI aún no ha aprobado la solicitud, la autenticación fallará con el siguiente error: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
@@ -104,8 +104,8 @@ Si el administrador de TI aún no ha aprobado la solicitud, la autenticación fa
 
 Al configurar el destino, debe proporcionar la siguiente información:
 
-* [!UICONTROL Customer ID]: su [!DNL Microsoft Ads] ID de cliente (CID), en formato entero. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cliente.
-* [!UICONTROL Customer Account ID]: su ID de cuenta de cliente [!DNL Microsoft Ads]. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cuenta de cliente.
+* [!UICONTROL Customer ID]: su [!DNL Microsoft Ads] ID de cliente (CID), en formato entero. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cliente.
+* [!UICONTROL Customer Account ID]: su ID de cuenta de cliente [!DNL Microsoft Ads]. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cuenta de cliente.
 
 ## Conectar con el destino {#connect}
 
@@ -120,34 +120,34 @@ Para conectarse a este destino, siga los pasos descritos en el [tutorial de conf
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="Su ID de cliente de Microsoft Advertising, también conocido como ID de cuenta de responsable. Este es el identificador de nivel superior de Microsoft Advertising que puede tener varias cuentas de anunciante (ID de cuenta de cliente)."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Búsqueda del ID de cliente"
+>abstract="Su ID de cliente de Microsoft Advertising, también conocido como ID de cuenta de administrador. Este es el identificador de nivel superior de Microsoft Advertising que puede tener varias cuentas de anunciante (ID de cuenta de cliente)."
+>additional-url="https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids" text="Búsqueda del ID de cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="ID de cuenta de cliente"
 >abstract="Su ID de cuenta de cliente de Microsoft Advertising, también conocido como ID de cuenta del anunciante. Esto identifica una cuenta de anunciante específica en su ID de cliente."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Búsqueda del ID de cuenta de cliente"
+>additional-url="https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids" text="Búsqueda del ID de cuenta de cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="Duración de abono"
+>title="Duración del abono"
 >abstract="El número de días que un usuario permanece en la lista de coincidencia de clientes. Los valores aceptados están entre 1 y 390 días."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="Disponibilidad de lista de coincidencia de clientes"
->abstract="Seleccione si la lista de coincidencia de clientes está disponible para una sola cuenta de anunciante o para todas las cuentas de la cuenta de responsable. Seleccione ID de cliente para que la lista esté disponible en todas las cuentas de anunciante con su ID de cliente. Seleccione ID de cuenta de cliente para restringir la lista al ID de cuenta de cliente específico."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Obtenga más información sobre cómo compartir listas de audiencias en Microsoft Advertising"
+>title="Disponibilidad de la lista de coincidencia de clientes"
+>abstract="Seleccione si la lista de coincidencia de clientes está disponible para una sola cuenta de anunciante o para todas las cuentas de la cuenta de administrador. Seleccione ID de cliente para que la lista esté disponible en todas las cuentas de anunciante con su ID de cliente. Seleccione ID de cuenta de cliente para restringir la lista al ID de cuenta de cliente específico."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/es/56727" text="Obtenga más información sobre cómo compartir listas de públicos en Microsoft Advertising"
 
 Mientras [configura](../../ui/connect-destination.md) este destino, debe proporcionar la siguiente información:
 
 * **[!UICONTROL Name]**: un nombre con el cual reconocerá este destino en el futuro.
 * **[!UICONTROL Description]**: una descripción que le ayudará a identificar este destino en el futuro.
-* **[!UICONTROL Customer ID]**: Su [!DNL Microsoft Ads] ID de cliente (CID). Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cliente.
-* **[!UICONTROL Customer Account ID]**: Su ID de cuenta de cliente [!DNL Microsoft Ads]. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cuenta de cliente.
+* **[!UICONTROL Customer ID]**: Su [!DNL Microsoft Ads] ID de cliente (CID). Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cliente.
+* **[!UICONTROL Customer Account ID]**: Su ID de cuenta de cliente [!DNL Microsoft Ads]. Consulte la [documentación de Microsoft Advertising](https://learn.microsoft.com/es-es/advertising/guides/get-started?view=bingads-13#get-ids) para obtener instrucciones sobre cómo encontrar su ID de cuenta de cliente.
 * **[!UICONTROL Membership Duration]**: número de días que un usuario permanece en la lista de coincidencia de clientes. Los valores aceptados están entre 1 y 390 días.
-* **[!UICONTROL Customer Match List Availability]**: seleccione la disponibilidad de la lista de coincidencia de clientes. En [!DNL Microsoft Advertising], un ID de cliente puede tener varios ID de cuenta de cliente (cuentas de anunciante). Seleccione **[!UICONTROL Customer ID (all advertising accounts)]** para que la lista esté disponible en todas las cuentas de anunciante bajo su ID de cliente o **[!UICONTROL Customer Account ID (single advertising account)]** para restringir la lista al ID de cuenta de cliente específico que proporcionó anteriormente. Consulte la [documentación de Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) para obtener más información.
+* **[!UICONTROL Customer Match List Availability]**: seleccione la disponibilidad de la lista de coincidencia de clientes. En [!DNL Microsoft Advertising], un ID de cliente puede tener varios ID de cuenta de cliente (cuentas de anunciante). Seleccione **[!UICONTROL Customer ID (all advertising accounts)]** para que la lista esté disponible en todas las cuentas de anunciante bajo su ID de cliente o **[!UICONTROL Customer Account ID (single advertising account)]** para restringir la lista al ID de cuenta de cliente específico que proporcionó anteriormente. Consulte la [documentación de Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/es/56727) para obtener más información.
 
   ![Imagen de la interfaz de usuario de la plataforma que muestra los campos de detalles de destino del destino de Customer Match de Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
@@ -161,7 +161,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions)Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades* a destinos, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Consulte [Activar datos de audiencia en destinos de exportación de audiencia de streaming](../../ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.

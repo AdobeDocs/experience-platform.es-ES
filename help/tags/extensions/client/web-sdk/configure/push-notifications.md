@@ -1,15 +1,15 @@
 ---
-title: Configuración de notificaciones push
+title: Configuración de notificación push
 description: Configure las notificaciones push para la extensión de etiquetas Web SDK.
 exl-id: 96ab7ea8-7180-46bb-9c15-eecba2009c52
 source-git-commit: d38cfb7d2ace7c1bb45dcb584a2cdf10063da06a
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '180'
 ht-degree: 10%
 
 ---
 
-# Configuración de notificaciones push {#push-notifications}
+# Configuración de notificación push {#push-notifications}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_pushnotifications"

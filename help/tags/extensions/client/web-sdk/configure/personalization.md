@@ -1,15 +1,15 @@
 ---
-title: Ajustes de configuración de Personalization
+title: Ajustes de configuración de personalización
 description: Configure las opciones de personalización en la extensión de etiquetas Web SDK.
 exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '486'
+ht-degree: 4%
 
 ---
 
-# Ajustes de configuración de Personalization {#personalization}
+# Ajustes de configuración de personalización {#personalization}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_personalization"
@@ -32,7 +32,7 @@ Las opciones disponibles son las siguientes:
 
 Utilice esta opción para permitir que Web SDK lea y escriba las cookies heredadas `mbox` y `mboxEdgeCluster` que utilizan las bibliotecas `at.js` 1.x o 2.x. Esta configuración ayuda a mantener intactos los perfiles de los visitantes al moverlos entre páginas mediante Web SDK o `at.js` en el mismo sitio web. Si no tiene `at.js` implementado en ninguna parte del sitio, no necesita habilitar esta casilla de verificación. La biblioteca JavaScript equivalente a esta casilla es [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
 
-Al habilitar esta opción, asegúrese de habilitar también [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/es/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) en `targetGlobalSettings()`.
+Al habilitar esta opción, asegúrese de habilitar también [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) en `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

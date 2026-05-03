@@ -5,18 +5,18 @@ description: Administre usuarios y grupos de usuarios a través de la interfaz P
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 4%
+source-wordcount: '937'
+ht-degree: 6%
 
 ---
 
-# Administrar usuarios y agregar grupos de usuarios {#manage-users}
+# Administrar usuarios y añadir grupos de usuarios {#manage-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
 >title="¿Qué son los usuarios?"
 >abstract="Los usuarios son las personas que tienen acceso a Experience Platform. El acceso de un usuario individual a los recursos de una organización se administra mediante las funciones."
->additional-url="https://experienceleague.adobe.com/es/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles?lang=es" text="Administrar funciones"
 
 Los usuarios son las personas que tienen acceso a Adobe Experience Platform. El acceso de un usuario individual a los recursos de una organización se administra mediante [roles](./roles.md){target="_blank"}. Una organización también puede crear [grupos de usuarios](#user-groups) para dar acceso sin problemas a varios usuarios al mismo tiempo. Los usuarios se administran en Admin Console y los usuarios asociados a la tarjeta de producto de Adobe Experience Platform aparecen como parte de la lista de usuarios en Experience Platform.
 
@@ -142,7 +142,7 @@ La ficha **[!UICONTROL Details]** proporciona información general sobre las cre
 
 ![Espacio de trabajo de detalles de una credencial de API.](../../images/ui/users/api-credential-details.png){zoomable="yes"}
 
-Seleccione la pestaña **[!UICONTROL Roles]** Aparecerá una lista de funciones asociadas a la credencial de la API.
+Seleccione la pestaña **[!UICONTROL Roles]** . Aparecerá una lista de funciones asociadas a la credencial de la API.
 
 ![Área de trabajo de funciones de una credencial de API.](../../images/ui/users/api-credential-roles.png){zoomable="yes"}
 
@@ -173,5 +173,5 @@ Ahora sabe cómo ver los detalles y las funciones de un usuario, un grupo de usu
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446401/?captions=spa&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 -->

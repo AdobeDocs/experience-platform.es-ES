@@ -1,20 +1,20 @@
 ---
-title: Ajustes de anulación de configuración de flujo de datos
+title: Ajustes de anulación de configuración de secuencia de datos
 description: Modifique las opciones de configuración cuando se cumplan determinadas condiciones.
 exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 3%
+source-wordcount: '611'
+ht-degree: 10%
 
 ---
 
-# Ajustes de anulación de configuración de flujo de datos {#config-overrides}
+# Ajustes de anulación de configuración de secuencia de datos {#config-overrides}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_overrides"
 >title="Anulaciones de configuración de secuencia de datos"
->abstract="Almacene en déclencheur condicionalmente diferentes comportamientos de flujo de datos sin requerir un flujo de datos independiente. Al establecer cualquier anulación de la configuración del flujo de datos del lado del cliente para un entorno en esta sección, se anula cualquier configuración del flujo de datos dinámico del lado del servidor y las reglas para ese entorno."
+>abstract="Active de forma condicional diferentes comportamientos de la secuencia de datos sin necesidad de una secuencia de datos independiente. Al establecer cualquier anulación de la configuración de la secuencia de datos del lado del cliente para un entorno en esta sección, se anula cualquier configuración de secuencia de datos dinámica del lado del servidor y las reglas para ese entorno."
 
 Las anulaciones de flujos de datos permiten definir configuraciones adicionales para los flujos de datos, que se pasan a Edge Network a través de Web SDK. Esta función le ayuda a almacenar en déclencheur de forma condicional diferentes comportamientos de flujo de datos sin crear un nuevo flujo de datos ni modificar la configuración existente.
 

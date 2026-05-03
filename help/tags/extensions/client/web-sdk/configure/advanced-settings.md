@@ -1,20 +1,20 @@
 ---
-title: Opciones de configuración avanzadas
+title: Configuración avanzada
 description: Configure las opciones avanzadas de la extensión de etiquetas Web SDK.
 exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '153'
+ht-degree: 21%
 
 ---
 
-# Opciones de configuración avanzadas {#advanced}
+# Configuración avanzada {#advanced}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advanced"
 >title="Configuración avanzada"
->abstract="Opciones de configuración avanzadas. Adobe recomienda dejar estas opciones tal cual para la mayoría de las implementaciones."
+>abstract="Configuración avanzada. Adobe recomienda dejar estas opciones tal cual para la mayoría de las implementaciones."
 
 Esta sección de configuración le permite modificar la configuración avanzada. Adobe recomienda dejar estas opciones tal cual para la mayoría de las implementaciones.
 
