@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Resumen de preparación de datos
 description: Este documento presenta la preparación de datos en Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,20 @@ Para obtener más información sobre los campos calculados, lea la [guía de cam
 
 ### Escapar de caracteres especiales {#escape-special-characters}
 
-Puede aplicar secuencias de escape a los caracteres especiales de un campo usando `${...}`. Sin embargo, este mecanismo no admite archivos JSON que contengan campos con un punto (`.`). Al interactuar con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir los caracteres especiales. Por ejemplo, `address` es un objeto que contiene el atributo `street.name`, entonces se puede hacer referencia a este como `address.street\.name` en lugar de `address.street.name`.
+Puede aplicar secuencias de escape a los caracteres especiales de un campo usando `${...}`. Sin embargo, este mecanismo no admite archivos JSON que contengan campos con un punto (`.`).
+
+Al interactuar con jerarquías, si un atributo secundario tiene un punto (`.`), debe utilizar una barra invertida (`\`) para omitir los caracteres especiales. Por ejemplo, el siguiente `address` es un objeto que contiene el atributo `street.name`:
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+Para hacer referencia a este campo en una asignación, debe usar `${address.street\.name}`.
 
 ## Conjunto de asignaciones
 
@@ -66,6 +79,6 @@ El control de acceso basado en atributos garantiza que sólo puede asignar los a
 
 Consulte la [descripción general del control de acceso basado en atributos](../access-control/abac/overview.md) para obtener más información.
 
-## Pasos siguientes
+## Próximos pasos
 
 Este documento abarcaba los conceptos básicos de la preparación de datos en Adobe Experience Platform. Para obtener más información acerca de las diferentes funciones de asignación, lea la [guía de funciones de asignación](./functions.md). Para obtener más información sobre cómo la preparación de datos administra diferentes tipos de datos, lea la [guía de administración de formato de datos](./data-handling.md#dates). Para aprender a usar la API de preparación de datos, lea la [Guía para desarrolladores de preparación de datos](api/overview.md).
