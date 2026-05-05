@@ -1,12 +1,12 @@
 ---
 title: Conexión de flujo Snowflake
 description: Cree un recurso compartido de datos de Snowflake en directo para recibir actualizaciones de audiencia de flujo continuo directamente como tablas compartidas en su cuenta.
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ Para autenticarse en el destino, seleccione **[!UICONTROL Connect to destination
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
->title="Escriba su ID de cuenta técnica de Snofwflake "
+>title="Escriba su ID de cuenta técnica de Snofwflake"
 >abstract="Si su cuenta está vinculada a una organización, use este formato: `OrganizationName.AccountName`<br><br>Si su cuenta no está vinculada a una organización, use este formato: `AccountName`"
 
 Para configurar los detalles del destino, rellene los campos obligatorios y opcionales a continuación. Un asterisco junto a un campo en la interfaz de usuario indica que el campo es obligatorio.
@@ -164,7 +164,7 @@ Cuando termine de proporcionar detalles para la conexión de destino, seleccione
 
 >[!IMPORTANT]
 >
->* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5&rbrace;. &#x200B;](/help/access-control/home.md#permissions) Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
+>* Para activar los datos, necesita los permisos de control de acceso **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** y **[!UICONTROL View Segments]** [5}. ](/help/access-control/home.md#permissions)Lea la [descripción general del control de acceso](/help/access-control/ui/overview.md) o póngase en contacto con el administrador del producto para obtener los permisos necesarios.
 >* Para exportar *identidades*, necesita el **[!UICONTROL View Identity Graph]** [permiso de control de acceso](/help/access-control/home.md#permissions). <br> ![Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Seleccione el área de nombres de identidad resaltada en el flujo de trabajo para activar audiencias en los destinos."){width="100" zoomable="yes"}
 
 Lea [Activar perfiles y audiencias en destinos de exportación de audiencias de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obtener instrucciones sobre cómo activar audiencias en este destino.
@@ -183,12 +183,13 @@ Los datos se comparten en la cuenta de Snowflake a través de una tabla comparti
 
 El siguiente ejemplo muestra filas de muestra de una tabla compartida: algunas columnas almacenan identidades y pertenencia a segmentos como JSON; los atributos de perfil asignados aparecen como columnas de cadena independientes.
 
-![Filas de hoja de cálculo de Snowflake de muestra que muestran las columnas IDENTITYMAP, SEGMENT_MEMBERSHIP y atributos asignados](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Filas de hoja de cálculo de Snowflake de muestra que muestran las columnas de atributo TS, IDENTITYMAP, SEGMENT_MEMBERSHIP y asignadas.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Estructura de datos {#data-structure}
 
 La captura de pantalla anterior muestra las siguientes columnas:
 
+* **TS**: Una marca de tiempo que indica cuándo se actualizó cada fila por última vez.
 * **IDENTITYMAP**: objeto JSON para cada mapa de identidad de perfil.
 * **SEGMENT_MEMBERSHIP**: objeto JSON para cada audiencia activada en el flujo de datos. Los valores incluyen `lastQualificationTime` y `status` (por ejemplo `realized` cuando el perfil se califica para el segmento).
 * **Atributos de asignación**: cada atributo de asignación que seleccione durante el flujo de trabajo de activación se representa como un encabezado de columna en [!DNL Snowflake].
