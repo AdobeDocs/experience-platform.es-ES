@@ -3,10 +3,10 @@ title: Activar audiencias para destinos de exportación de perfiles por lotes
 type: Tutorial
 description: Obtenga información sobre cómo activar las audiencias que tiene en Adobe Experience Platform enviándolas a destinos basados en perfiles por lotes.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ce9b0bd5cc733ed67909898b45f4ee42ae015608
 workflow-type: tm+mt
-source-wordcount: '4769'
-ht-degree: 11%
+source-wordcount: '4961'
+ht-degree: 12%
 
 ---
 
@@ -119,7 +119,7 @@ Para editar varias programaciones al mismo tiempo, seleccione las audiencias med
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Opciones de exportación de archivos"
->abstract="Seleccione **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el público. Seleccione **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el público desde la última exportación. <br> La primera exportación incremental de archivos incluye todos los perfiles que cumplen los requisitos para el público, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el público desde la primera exportación de archivos incrementales."
+>abstract="Seleccione **Exportar archivos completos** para exportar una instantánea completa de todos los perfiles que cumplen los requisitos para el público. Seleccione **Exportar archivos incrementales** para exportar solo los perfiles que cumplen los requisitos para el público desde la última exportación. <br> La primera exportación de archivos incrementales incluye todos los perfiles que cumplen los requisitos para el público, actuando como relleno. Los futuros archivos incrementales incluyen solo los perfiles que cumplen los requisitos para el público desde la primera exportación de archivos incrementales."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=es#export-incremental-files" text="Exportación de archivos incrementales"
 
 >[!CONTEXTUALHELP]
@@ -496,7 +496,7 @@ Adobe recomienda seleccionar un área de nombres de identidad como [!DNL CRM ID]
 
 ### Comportamiento de deduplicación para perfiles con la misma marca de tiempo {#deduplication-same-timestamp}
 
-Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/es/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Al exportar perfiles a destinos basados en archivos, la deduplicación garantiza que solo se exporte un perfil cuando varios perfiles comparten la misma clave de deduplicación y la misma marca de tiempo de referencia. Esta marca de tiempo representa el momento en el que se actualizó por última vez el gráfico de identidad o la pertenencia a audiencias de un perfil. Para obtener más información sobre cómo se actualizan y exportan los perfiles, consulte el documento [comportamiento de exportación de perfiles](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Consideraciones clave {#key-considerations}
 
@@ -614,6 +614,21 @@ Las exportaciones de archivos varían de las siguientes maneras, dependiendo de 
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Excluir atributos de enriquecimiento"
 >abstract="Habilite esta opción para exportar los perfiles de los públicos que se han cargado, personalizado y seleccionado a su destino, excluyendo al mismo tiempo todos sus atributos."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="Salida jerárquica habilitada"
+>abstract="Este destino admite resultados jerárquicos porque la opción Habilitar exportación de matrices, mapas y objetos está activada. Puede exportar matrices de nivel superior, elementos de matriz o varios campos de la misma matriz en una asignación. Consulte la documentación para obtener más detalles."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="Campo de origen"
+>abstract="Seleccione un atributo de enriquecimiento para exportar. Para los campos dentro de una matriz, el origen se rellena automáticamente con una expresión de transformación. Para exportar varios campos en una asignación, agregue primero un campo y, a continuación, edite la expresión de origen. Consulte la documentación para obtener más detalles."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="Campo de destino"
+>abstract="El campo de destino se rellena automáticamente con el nombre del campo de origen. Edítela para utilizar un alias diferente si desea que el campo tenga un nombre diferente en los archivos exportados."
 
 >[!IMPORTANT]
 >
