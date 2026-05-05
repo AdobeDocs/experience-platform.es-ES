@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creación y edición de grupos de campos de esquema en la interfaz de usuario
 description: Obtenga información sobre cómo crear y editar grupos de campos de esquema en la interfaz de usuario de Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 8%
@@ -23,6 +23,8 @@ En el modelo de datos de experiencia (XDM), los grupos de campos de esquema son 
 Un grupo de campos define con qué clase es compatible, según el comportamiento de los datos que representa el grupo de campos (registro o serie temporal). Esto significa que no todos los grupos de campos están disponibles para su uso con todas las clases.
 
 Adobe Experience Platform proporciona muchos grupos de campos estándar que abarcan una amplia gama de casos de uso de marketing. Sin embargo, también puede crear y editar sus propios grupos de campos personalizados para definir conceptos adicionales relacionados con su negocio dentro de los esquemas XDM. Esta guía proporciona información general sobre cómo crear, editar y administrar grupos de campos personalizados para su organización en la interfaz de usuario de Experience Platform.
+
+Para examinar los grupos de campos de la biblioteca de esquemas y comprender el uso, el filtrado y los metadatos del esquema que afecta al diseño del esquema y a la ingesta de datos, vea [Explorar recursos de esquema en la interfaz de usuario](../explore.md).
 
 >[!NOTE]
 >
@@ -79,10 +81,6 @@ Para agregar campos a un grupo de campos personalizados, comience seleccionando 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
 Aparece un marcador de posición **[!UICONTROL Untitled Field]** en el lienzo y el carril derecho se actualiza para mostrar controles para configurar las propiedades del campo. Consulte la guía [definición de campos en la interfaz de usuario](../fields/overview.md#define) para ver pasos específicos sobre cómo configurar diferentes tipos de campos.
-
-En **[!UICONTROL Assign to]**, seleccione la opción **[!UICONTROL Field Group]** y, a continuación, utilice la lista desplegable para seleccionar el grupo de campos deseado en la lista. Puede empezar a escribir el nombre del grupo de campos para reducir los resultados.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
 
 En **[!UICONTROL Assign to]**, seleccione la opción **[!UICONTROL Field Group]** y, a continuación, utilice la lista desplegable para seleccionar el grupo de campos deseado en la lista. Puede empezar a escribir el nombre del grupo de campos para reducir los resultados.
 

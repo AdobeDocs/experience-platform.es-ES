@@ -5,9 +5,9 @@ title: Exploración de los recursos de esquema en la IU
 description: Aprenda a explorar esquemas, clases, grupos de campos de esquema y tipos de datos existentes en la interfaz de usuario de Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Schem
 
 ![Espacio de trabajo de esquemas con varias fichas resaltadas.](../images/ui/explore/tabs.png)
 
-El icono de filtro (![Imagen del icono de filtro](/help/images/icons/filter.png)) muestra los controles en el carril izquierdo para reducir los resultados de la lista. Los filtros de recursos están disponibles para esquemas y relaciones en las fichas **[!UICONTROL Browse]** y **[!UICONTROL Relationships]** respectivamente.
+El icono de filtro (![Imagen del icono de filtro](/help/images/icons/filter.png)) muestra los controles en el carril izquierdo para reducir los resultados de la lista. Los filtros de recursos están disponibles para esquemas y relaciones en las fichas **[!UICONTROL Browse]** y **[!UICONTROL Relationships]** respectivamente. En la ficha **[!UICONTROL Field groups]**, use los filtros descritos en [Filtrado y metadatos de grupos de campos](#field-group-metadata-and-filtering) para reducir la lista según etiquetas de clase e industria compatibles.
 
 En la ficha [!UICONTROL Browse] del área de trabajo [!UICONTROL Schemas], puede filtrar el inventario de esquemas. Utilice la opción **[!UICONTROL Included in Profile]** para mostrar solo los esquemas que se han habilitado para su uso en [Perfil del cliente en tiempo real](../../profile/home.md). Utilice la opción **[!UICONTROL Show adhoc schemas]** para filtrar la lista de esquemas creados con campos con espacio de nombres para su uso solamente por un único conjunto de datos.
 
@@ -164,7 +164,7 @@ Si un campo de matriz se basa en un tipo de objeto, puede seleccionar su icono e
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Al seleccionar el nombre de cualquier campo en el lienzo, el carril derecho se actualiza para mostrar detalles sobre ese campo en **[!UICONTROL Field properties]**. Esto puede incluir una descripción del caso de uso previsto del campo, los valores predeterminados, los patrones, los formatos, si el campo es obligatorio o no, y más.
+Al seleccionar el nombre de cualquier campo en el lienzo, el carril derecho se actualiza para mostrar detalles sobre ese campo en **[!UICONTROL Field properties]**. Esto puede incluir una descripción del caso de uso previsto del campo, los valores predeterminados, los patrones, los formatos, si el campo es obligatorio y más. Cuando explora un grupo de campos, los detalles relacionados con etiquetas para el campo seleccionado también pueden aparecer aquí; consulte [Etiquetas en la vista de estructura](#field-group-labels-in-structure).
 
 ![Campo seleccionado del tipo de datos Commerce con las propiedades de campo resaltadas.](../images/ui/explore/field-properties.png)
 
@@ -195,6 +195,92 @@ Para ver el área de nombres de identidad de la identidad principal del esquema 
 ![Cuadro de diálogo Editar relación con los parámetros de relación mostrados.](../images/ui/explore/edit-relationship-dialog.png)
 
 Consulte el tutorial sobre [creación de una relación en la interfaz de usuario](../tutorials/relationship-ui.md) para obtener más información sobre el uso de relaciones en esquemas XDM.
+
+## Explorar grupos de campos: uso y metadatos {#explore-field-groups}
+
+Vaya a **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** para explorar grupos de campos. En la pestaña **[!UICONTROL Field groups]**, las capacidades adicionales le ayudan a comprender dónde se utiliza un grupo de campos en los esquemas y lo que incluye, como la compatibilidad, los campos obligatorios (que aplican requisitos de ingesta) y las señales de control.
+
+Estas funciones le ayudan a evaluar el impacto antes de realizar cambios e identificar grupos de campos relevantes de forma más eficaz durante el diseño del esquema.
+
+### Ver el uso del esquema para grupos de campos {#view-schema-usage-for-field-groups}
+
+En la tabla **[!UICONTROL Field groups]**, seleccione un grupo de campos para abrir su vista de detalles. El lienzo se actualiza para mostrar la estructura del grupo de campos y el carril de propiedades muestra información adicional sobre el recurso seleccionado.
+
+#### Esquemas que utilizan este grupo de campos
+
+En el carril de propiedades derecho, la sección **[!UICONTROL Schemas using this field group]** enumera los esquemas que actualmente incluyen el grupo de campos.
+
+![Carril de propiedades del grupo de campos que muestra los esquemas que utilizan esta sección de grupo de campos.](../images/ui/explore/field-group-properties.png)
+
+- Si tres o menos esquemas utilizan el grupo de campos, se muestran todos los nombres de esquema.
+- Si lo utilizan más de tres esquemas, solo se muestran algunos nombres, junto con una opción para ver la lista completa.
+
+Seleccione un nombre de esquema para abrir su vista de detalles en una nueva pestaña e inspeccione cómo se implementa el grupo de campos dentro de ese esquema.
+
+#### Ver más y una lista de esquemas completa
+
+Si existen más esquemas de los que se pueden mostrar en línea, seleccione **[!UICONTROL View more]** para abrir el cuadro de diálogo completo.
+
+![La opción Ver más de la sección Esquemas que utilizan este grupo de campos.](../images/ui/explore/view-more-schemas.png)
+
+Aparece el cuadro de diálogo **[!UICONTROL Schemas using this field group]**, que muestra la lista completa de esquemas que utilizan el grupo de campos.
+
+![Los esquemas que utilizan este cuadro de diálogo de grupo de campos muestran la lista de esquemas y las columnas.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+En el cuadro de diálogo **[!UICONTROL Schemas using this field group]**, puede:
+
+- Examinar todos los esquemas que utilizan el grupo de campos
+- Página a través de grandes conjuntos de resultados
+- Seleccione un esquema para abrir su vista de detalles en una nueva pestaña
+
+Puede ver detalles del esquema, como el nombre del esquema, la clase y otros atributos.
+
+Este flujo de trabajo está diseñado para **análisis y exploración de impacto solamente**. No modifica esquemas ni grupos de campos. Para cambiar la estructura del esquema, consulte [Crear y editar esquemas en la interfaz de usuario](./resources/schemas.md).
+
+### Metadatos y filtrado de grupos de campos {#field-group-metadata-and-filtering}
+
+La ficha **[!UICONTROL Field groups]** proporciona herramientas de filtrado y metadatos que le ayudarán a localizar y evaluar los grupos de campos antes de seleccionarlos.
+
+#### Examinar tabla y filtros
+
+La tabla de inventario de grupos de campos incluye columnas adicionales que exponen los metadatos directamente en la vista de lista, como **[!UICONTROL Compatible classes]**, que indica a qué clases se puede aplicar un grupo de campos. Los grupos de campos solo se pueden añadir a esquemas que utilicen una de las clases compatibles enumeradas, según el comportamiento de los datos que representan (por ejemplo, datos basados en registros o en series temporales). La tabla puede mostrar **[!UICONTROL All]** cuando el grupo de campos es compatible con todas las clases. **[!UICONTROL Industry tags]** ayuda a categorizar los grupos de campos para la detección.
+
+Para restringir la lista, seleccione el icono de filtro (![Imagen del icono de filtro](/help/images/icons/filter.png)) para abrir el panel de filtro en el carril izquierdo. La siguiente imagen muestra el panel de filtro abierto en el carril izquierdo.
+
+![La pestaña Grupos de campos muestra las clases compatibles, las etiquetas del sector y el panel de filtros.](../images/ui/explore/field-group-filters.png)
+
+En el panel de filtro, puede:
+
+- **[!UICONTROL Compatible classes]**: utilice el menú desplegable para filtrar grupos de campos por compatibilidad de clase
+- **[!UICONTROL Industry tags]**: utilice las casillas de verificación para filtrar por una o más categorías del sector
+
+Durante la exploración, seleccione una fila de la tabla para actualizar el carril de información. El carril de información muestra metadatos como clases compatibles y etiquetas del sector para que pueda revisar los detalles clave sin abrir el grupo de campos.
+
+#### Metadatos de detalle de grupo de campos
+
+Cuando se abre un grupo de campos, el carril de propiedades muestra metadatos adicionales asociados al recurso.
+
+El carril de propiedades puede mostrar los siguientes metadatos:
+
+- **[!UICONTROL Compatible classes]** — Clases que el grupo de campos puede ampliar
+- **[!UICONTROL Required attributes]**: atributos que deben tener valores válidos cuando el grupo de campos lo requiera durante la ingesta de datos. Los requisitos dependen de la estructura de datos y los registros en los que falten valores obligatorios o no sean válidos no superan la validación
+- **[!UICONTROL Labels]** — Las etiquetas no se muestran en el nivel de grupo de campos. Seleccione un campo para ver los detalles de la etiqueta en el carril **[!UICONTROL Field properties]**
+
+Esta información le ayuda a comprender las restricciones y los requisitos antes de utilizar o modificar el grupo de campos.
+
+#### Etiquetas en la vista de estructura
+
+Cuando un grupo de campos está abierto en el lienzo, puede ver la información de las etiquetas directamente en la estructura. Seleccione el icono de configuración (![El icono de configuración.](../../images/icons/settings.png)) en la barra de herramientas lienzo y habilite **[!UICONTROL Show labels on tree]** para mostrar indicadores de etiqueta en los campos del lienzo.
+
+![El lienzo del grupo de campos que muestra el cuadro de diálogo de opciones de visualización del árbol con Mostrar etiquetas resaltadas en el árbol.](../images/ui/explore/show-labels-on-tree.png)
+
+Seleccione un campo en el lienzo para ver los detalles de la etiqueta en el carril **[!UICONTROL Field properties]**, incluidas las etiquetas aplicadas a ese campo.
+
+![Lienzo del grupo de campos que muestra etiquetas en los campos y detalles de etiqueta en el carril de propiedades del campo.](../images/ui/explore/field-group-labels.png)
+
+Las etiquetas se agrupan por categoría (por ejemplo, etiquetas de identidad y confidenciales) y proporcionan visibilidad sobre la gobernanza o las restricciones relacionadas con el acceso aplicadas a los datos.
+
+Estos indicadores solo son para visibilidad y no cambian la estructura del esquema. Para obtener más información, consulte [Administrar etiquetas de uso de datos para un esquema](../tutorials/labels.md).
 
 ## Próximos pasos
 
