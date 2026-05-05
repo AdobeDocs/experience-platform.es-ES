@@ -424,7 +424,7 @@ Ejemplos de PQL:
 
 >[!BEGINTABS]
 
->[!TAB Ejemplo 1] de PQL
+>[!TAB Ejemplo 1 de PQL]
 
 ```json
 {
@@ -447,7 +447,7 @@ Ejemplos de PQL:
 }
 ```
 
->[!TAB Ejemplo 2] de PQL
+>[!TAB Ejemplo 2 de PQL]
 
 ```json
 {
@@ -468,7 +468,7 @@ Ejemplos de PQL:
 }
 ```
 
->[!TAB Ejemplo 3] de PQL
+>[!TAB Ejemplo 3 de PQL]
 
 ```json
   "type": "PQL",
