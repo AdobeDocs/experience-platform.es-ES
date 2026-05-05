@@ -5,9 +5,9 @@ title: Enviar varios mensajes en una única solicitud HTTP
 type: Tutorial
 description: Este documento proporciona un tutorial para enviar varios mensajes a Adobe Experience Platform dentro de una sola solicitud HTTP mediante la ingesta por flujo continuo.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Primero debe crear una conexión de flujo continuo para poder iniciar la transmi
 
 Después de registrar una conexión de flujo continuo, usted, como productor de datos, tendrá una URL única que se puede utilizar para transmitir datos a Experience Platform.
 
-## Transmitir a un conjunto de datos
+## Transmitir a un conjunto de datos {#stream-to-dataset}
 
 El siguiente ejemplo muestra cómo enviar varios mensajes a un conjunto de datos específico dentro de una única solicitud HTTP. Inserte la ID del conjunto de datos en el encabezado del mensaje para que ese mensaje se incorpore directamente en él.
 
@@ -519,6 +519,42 @@ Los mensajes fallidos se identifican mediante un código de estado de error en l
 Los mensajes no válidos se recopilan y almacenan en un lote de &quot;error&quot; dentro del conjunto de datos especificado por `{DATASET_ID}`.
 
 Lea la guía [recuperación de lotes con errores](../quality/retrieve-failed-batches.md) para obtener más información sobre la recuperación de mensajes por lotes con errores.
+
+### Envío de varias entidades XDM a un flujo de datos {#send-multiple-xdm-entities-to-a-dataflow}
+
+Para enviar varias entidades XDM a un flujo de datos, se puede:
+
+- Envíe una o más entidades en una matriz `messages` dentro de una solicitud HTTP al extremo de flujo continuo.
+- Cargue un archivo con varias entidades mediante la ingesta por lotes.
+
+Elija el método que coincida con su volumen de datos y caso de uso.
+
+>[!BEGINTABS]
+
+>[!TAB Entidades de grupo en una solicitud HTTP]
+
+Puede incluir varias entidades XDM en una matriz `messages` dentro de una sola solicitud HTTP al extremo de ingesta de transmisión. Todos los mensajes pueden dirigirse a los mismos conjuntos de datos y esquemas, o a conjuntos de datos y esquemas diferentes, siempre que todos pertenezcan a la organización y a la zona protegida **same**.
+
+Utilice esta opción cuando desee:
+
+- Reduzca las solicitudes enviando varias entidades XDM en una llamada HTTP.
+- Transmita datos en tiempo real a través del punto final de ingesta.
+
+Para obtener más información e instrucciones detalladas sobre cómo enviar la solicitud, lea la sección [transmisión a un conjunto de datos](#stream-to-dataset).
+
+>[!TAB Cargar un archivo por lotes]
+
+Puede cargar un archivo por lotes que contenga una o más entidades XDM en un flujo de datos. Todos los archivos cargados en el mismo lote se procesan juntos como una sola unidad de ingesta.
+
+Utilice este método cuando:
+
+- Introduzca volúmenes de datos más grandes (por ejemplo, archivos CSV, JSON o Parquet).
+- Trabaja con exportaciones basadas en archivos de sistemas ascendentes.
+- Prefiera la ingesta programada o masiva.
+
+Consulte [Guía de ingesta por lotes](../batch-ingestion/api-overview.md) para obtener instrucciones paso a paso.
+
+>[!ENDTABS]
 
 ## Confirmar mensajes introducidos
 

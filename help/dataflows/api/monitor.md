@@ -5,10 +5,10 @@ title: Monitorización de flujos de datos mediante la API de Flow Service
 type: Tutorial
 description: Este tutorial cubre los pasos para monitorizar los datos de ejecución de flujo en busca de integridad, errores y métricas mediante la API de Flow Service.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 12%
 
 ---
 
@@ -34,11 +34,11 @@ Las secciones siguientes proporcionan información adicional que necesitará con
 
 ### Lectura de llamadas de API de muestra
 
-Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de ejemplo, consulte la sección sobre [cómo leer las llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
+Este tutorial proporciona llamadas de API de ejemplo para demostrar cómo dar formato a las solicitudes. Estas incluyen rutas, encabezados obligatorios y cargas de solicitud con el formato correcto. También se proporciona el JSON de muestra devuelto en las respuestas de la API. Para obtener información sobre las convenciones utilizadas en la documentación de las llamadas de API de muestra, consulte la sección sobre [cómo leer llamadas de API de ejemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) en la guía de solución de problemas de [!DNL Experience Platform].
 
 ### Recopilación de valores para los encabezados obligatorios
 
-Para poder realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
+Para realizar llamadas a las API de [!DNL Experience Platform], primero debe completar el [tutorial de autenticación](https://www.adobe.com/go/platform-api-authentication-en). Al completar el tutorial de autenticación, se proporcionan los valores para cada uno de los encabezados obligatorios en todas las llamadas de API de [!DNL Experience Platform], como se muestra a continuación:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -198,6 +198,8 @@ Una respuesta correcta devuelve detalles sobre la ejecución de flujo, incluida 
 | `fileSummary.extensions` | Contiene información específica de la actividad. Por ejemplo, `manifest` es solo parte de la &quot;Actividad de promoción&quot; y, por lo tanto, se incluye con el objeto `extensions`. |
 | `statusSummary` | Muestra si la ejecución del flujo es un éxito o un error. |
 
-## Pasos siguientes
+## Próximos pasos
 
 Al seguir este tutorial, ha recuperado las métricas y la información de error del flujo de datos mediante la API [!DNL Flow Service]. Ahora puede seguir monitorizando el flujo de datos, según la programación de ingesta, para rastrear su estado y las tasas de ingesta. Para obtener información sobre cómo monitorizar los flujos de datos de las fuentes, lea el tutorial [monitorización de flujos de datos de fuentes mediante la interfaz de usuario](../ui/monitor-sources.md). Para obtener más información sobre cómo supervisar flujos de datos para destinos, lea el tutorial [supervisión de flujos de datos para destinos mediante la interfaz de usuario](../ui/monitor-destinations.md).
+
+Para enviar varias entidades XDM a un flujo de datos, utilice una matriz `messages` en la solicitud HTTP o cargue un archivo (CSV, JSON o Parquet) con varios registros. Para obtener instrucciones detalladas y prácticas recomendadas, lea [cómo enviar varias entidades XDM a un flujo de datos](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
