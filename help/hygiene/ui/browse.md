@@ -2,10 +2,10 @@
 title: Examinar órdenes de trabajo del ciclo vital de datos
 description: Obtenga información sobre cómo ver y administrar las solicitudes de trabajo del ciclo vital de datos existentes en la interfaz de usuario de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 26%
+source-wordcount: '846'
+ht-degree: 25%
 
 ---
 
@@ -86,6 +86,10 @@ Según el tipo de orden de trabajo seleccionada, se proporciona información y c
 ### Registrar detalles de eliminación {#record-delete}
 
 Los detalles de una solicitud de eliminación de registro incluyen su estado actual y el tiempo transcurrido desde que se realizó la solicitud. Cada solicitud también incluye una sección **[!UICONTROL Status by service]** que proporciona detalles de estado individuales sobre cada servicio descendente involucrado en la eliminación. En el carril derecho, puede utilizar controles para actualizar el nombre y la descripción de la orden de trabajo.
+
+>[!TIP]
+>
+>Las solicitudes de eliminación de registros se procesan por lotes antes de que comience el procesamiento y pueden tardar hasta 30 días en completarse con la SLA estándar. Para obtener un desglose de lo que sucede en cada fase, consulte [Registrar cronologías de eliminación](../home.md#record-delete-transparency).
 
 ![Imagen que muestra la página de detalles de una orden de trabajo de eliminación de registros](../images/ui/browse/record-delete-details.png)
 

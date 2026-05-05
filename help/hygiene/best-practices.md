@@ -2,9 +2,9 @@
 title: Prácticas recomendadas para la administración avanzada del ciclo de vida de datos
 description: Aprenda a administrar de forma eficaz las solicitudes de higiene de los datos en Adobe Experience Platform mediante la interfaz de usuario avanzada de administración del ciclo vital de datos y la API de higiene de datos. Esta guía describe las prácticas recomendadas, como maximizar identidades por solicitud, especificar conjuntos de datos individuales y tener en cuenta la limitación de API para evitar ralentizaciones. El documento incluye instrucciones para configurar la limpieza automática de conjuntos de datos, cómo monitorizar los estados de las órdenes de trabajo y métodos de recuperación de respuestas detallados. Siga estas prácticas para optimizar el procesamiento de las solicitudes y los tiempos de respuesta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Esta guía requiere una comprensión práctica del espacio de trabajo del ciclo 
 
 ## Directrices de creación de órdenes de trabajo {#work-order-creation-guidelines}
 
-Puede usar el extremo `/workorder` en la API de higiene de datos para administrar mediante programación las solicitudes de eliminación de registros en Experience Platform. Con este punto de conexión, puede crear una solicitud de eliminación, comprobar su estado o actualizar una solicitud existente. Consulte el [documento de extremo de orden de trabajo](./api/workorder.md) para obtener información sobre cómo realizar estas acciones mediante la API.
+Puede usar el extremo `/workorder` en la API de higiene de datos para administrar mediante programación las solicitudes de eliminación de registros en Experience Platform. Con este punto de conexión, puede crear una solicitud de eliminación, comprobar su estado o actualizar una solicitud existente. Consulte el [documento de extremo de orden de trabajo](./api/workorder.md) para obtener información sobre cómo realizar estas acciones mediante la API. Las solicitudes de eliminación de registros se procesan por lotes antes de que comience el procesamiento y pueden tardar hasta 30 días (SLA estándar) o 15 días (Escudo de seguridad y privacidad o Escudo de atención sanitaria) en completarse. Para obtener un desglose completo de lo que sucede en cada fase, consulte [Registrar las escalas de tiempo de eliminación](./home.md#record-delete-transparency).
 
 >[!TIP]
 >
@@ -51,7 +51,7 @@ Las alertas de eventos de E/S se pueden enviar a un webhook configurado para hab
 
 Utilice los siguientes métodos y directrices del ciclo vital de datos para recuperar y supervisar de forma eficaz los estados de los trabajos:
 
-### Eventos de E/S {#io-events}
+### I/O Events {#io-events}
 
 Para supervisar de forma eficaz el progreso de las tareas del ciclo vital de datos, configure y utilice Eventos de E/S siguiendo estos pasos:
 
