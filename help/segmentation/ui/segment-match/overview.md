@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Resumen de coincidencia de segmentos
 description: La coincidencia de segmentos es un servicio de uso compartido de segmentos en Adobe Experience Platform que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2123'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe introdujo [!DNL Segment Match] en 2021 para que los clientes colaboraran e intercambiaran audiencias. A principios de 2025, Adobe introdujo [Real-Time CDP Collaboration](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/home), el enfoque a largo plazo para cumplir con este caso de uso.
+>Adobe introdujo [!DNL Segment Match] en 2021 para que los clientes colaboraran e intercambiaran audiencias. A principios de 2025, Adobe introdujo [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), el enfoque a largo plazo para cumplir con este caso de uso.
 >
->* Para clientes de Estados Unidos, Canadá, Australia, Nueva Zelanda y EMEA: Adobe recomienda a los clientes de Real-Time CDP Prime y Ultimate realizar la transición de los casos de uso de colaboración de datos de [!DNL Segment Match] a Real-Time CDP Collaboration. Consulta la [documentación](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/home) y la [guía de inicio rápido](https://experienceleague.adobe.com/es/docs/real-time-cdp-collaboration/using/quick-start-guide) para Real-Time CDP Collaboration y ponte en contacto con el equipo de tu cuenta de Adobe para obtener más información.
+>* Para clientes de Estados Unidos, Canadá, Australia, Nueva Zelanda y EMEA: Adobe recomienda a los clientes de Real-Time CDP Prime y Ultimate realizar la transición de los casos de uso de colaboración de datos de [!DNL Segment Match] a Real-Time CDP Collaboration. Consulta la [documentación](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) y la [guía de inicio rápido](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) para Real-Time CDP Collaboration y ponte en contacto con el equipo de tu cuenta de Adobe para obtener más información.
 >* Para clientes de todas las demás regiones geográficas: [!DNL Segment Match] es la opción recomendada hasta que Real-Time CDP Collaboration se publique en esas regiones geográficas en 2026.
 
 La coincidencia de segmentos de Adobe Experience Platform es un servicio de uso compartido de segmentos que permite a dos o más usuarios de Experience Platform intercambiar datos de segmentos de una manera segura, controlada y compatible con la privacidad. [!DNL Segment Match] usa estándares de privacidad de Experience Platform e identificadores personales como correos electrónicos con hash, números de teléfono con hash e identificadores de dispositivo como IDFA y GAID.
@@ -51,7 +51,7 @@ La lista de áreas de nombres admitidas es la siguiente:
 
 | Espacio de nombres | Descripción |
 | --------- | ----------- |
-| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Experience Platform ofrece dos métodos para admitir la función hash en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=es#hashing-support) y a través de la [preparación de datos](../../../data-prep/functions.md#hashing). |
+| Correos electrónicos (SHA256, en minúsculas) | Un área de nombres para las direcciones de correo electrónico con hash previo. Los valores proporcionados en este área de nombres se convierten a minúsculas antes de crear valores hash con SHA256. Los espacios iniciales y finales deben recortarse antes de normalizar una dirección de correo electrónico. Esta configuración no se puede cambiar de forma retroactiva. Experience Platform ofrece dos métodos para admitir la función hash en la recopilación de datos, a través de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) y a través de la [preparación de datos](../../../data-prep/functions.md#hashing). |
 | Teléfono (SHA256_E.164) | Un espacio de nombres que representa los números de teléfono sin procesar que deben llevar un hash con los formatos SHA256 y E.164. |
 | ECID | Un área de nombres que representa un valor de Experience Cloud ID (ECID). Este área de nombres también se puede mencionar mediante los siguientes alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte la [descripción general de ECID](../../../identity-service/features/ecid.md) para obtener más información. |
 | Apple IDFA (ID para anunciantes) | Área de nombres que representa el Apple ID para anunciantes. Consulte el siguiente documento sobre [anuncios basados en intereses](https://support.apple.com/en-us/HT202074) para obtener más información. |
@@ -59,11 +59,11 @@ La lista de áreas de nombres admitidas es la siguiente:
 
 ### Configuración del consentimiento
 
-Debe proporcionar una configuración de consentimiento y establecer su valor predeterminado en `opt-in` o `opt-out` para una comprobación de consentimiento.
+Debe proporcionar una configuración de consentimiento y establecer su valor predeterminado en Opt-in o Opt-out para una comprobación de consentimiento.
 
-La comprobación de consentimiento de inclusión y exclusión determina si puede operar con el consentimiento para compartir datos de usuario de forma predeterminada. Si la configuración de consentimiento predeterminada se establece en `opt-out`, los datos de usuario se pueden compartir, a menos que un usuario se excluya explícitamente. Si el valor predeterminado es `opt-in`, los datos de usuario no se podrán compartir, a menos que un usuario se incluya explícitamente.
+La comprobación de consentimiento de inclusión y exclusión determina si puede operar con el consentimiento para compartir datos de usuario de forma predeterminada. Si la configuración de consentimiento predeterminada se establece en Opt-in, los datos de usuario se pueden compartir, a menos que un usuario se excluya explícitamente. Si el valor predeterminado es exclusión, los datos de usuario no se pueden compartir, a menos que un usuario se excluya explícitamente.
 
-La configuración de consentimiento predeterminada para [!DNL Segment Match] está establecida en `opt-out`. Para aplicar un modelo de inclusión a sus datos, envíe una solicitud por correo electrónico al equipo de la cuenta de Adobe.
+La configuración de consentimiento predeterminada para Coincidencia de segmentos está establecida en exclusión. Para aplicar un modelo de inclusión a sus datos, envíe una solicitud por correo electrónico al equipo de la cuenta de Adobe.
 
 Para obtener más información sobre el atributo `share` utilizado para establecer el valor del consentimiento para compartir datos, consulte la siguiente documentación sobre [grupo de campos de privacidad y consentimientos](../../../xdm/field-groups/profile/consents.md). Para obtener información sobre el grupo de campos específico que se usa para recopilar el consentimiento del consumidor para recopilar y usar datos relacionados con la privacidad, la personalización y las preferencias de marketing, consulte el siguiente [Ejemplo de consentimiento para preferencias de privacidad, Personalization y marketing en GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -120,7 +120,7 @@ Para conectar un socio usando su [!UICONTROL connect ID], ingrese su valor de id
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Crear fuente   {#create-feed}
+### Crear fuente {#create-feed}
 
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"
