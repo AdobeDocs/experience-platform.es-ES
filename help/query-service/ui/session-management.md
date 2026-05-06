@@ -3,11 +3,10 @@ title: Administración de sesiones del servicio de consultas en Adobe Experience
 description: Descubra cómo los administradores pueden ver, monitorizar y finalizar sesiones de servicio de consultas activas para liberar la capacidad de inactividad y mantener flujos de trabajo de Data Distiller fiables.
 keywords: Experience Platform;Servicio de consultas;sesiones;administración de sesiones;Data Distiller;admin
 solution: Experience Platform
-badgeLimitedAvailability: label="Disponibilidad limitada" type="Informative"
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
-source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
+source-git-commit: f9b5e32da94625623926102fb236ba2d17bdecea
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->La administración de sesiones para el servicio de consultas está actualmente en disponibilidad limitada y solo está disponible para organizaciones con derechos de **Data Distiller**. Para solicitar acceso, póngase en contacto con el equipo de cuenta de Adobe.
+>La administración de sesiones para Query Service solo está disponible para organizaciones con derechos de **Data Distiller**. Para solicitar acceso, póngase en contacto con el equipo de cuenta de Adobe.
 
 Utilice esta guía para administrar sesiones del servicio de consultas activas desde la interfaz de usuario de Adobe Experience Platform. La administración de sesiones ayuda a los administradores a monitorizar las sesiones simultáneas del Editor de consultas en entornos limitados y a liberar capacidad cuando los usuarios dejan las sesiones abiertas.
 

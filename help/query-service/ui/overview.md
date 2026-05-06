@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guía de IU del servicio de consultas
 description: Adobe Experience Platform Query Service proporciona una interfaz de usuario que se puede utilizar para escribir y ejecutar consultas, ver consultas ejecutadas anteriormente y acceder a las guardadas por usuarios de su organización.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -42,17 +42,29 @@ La sección [!UICONTROL Data Distiller capabilities] proporciona vínculos de do
 
 ![Se resaltó el área de trabajo del servicio de consultas con la sección de funciones de Data Distiller.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Aceleradores {#accelerators}
+
+La ficha **[!UICONTROL Accelerators]** del área de trabajo Consultas proporciona un catálogo de plantillas SQL parametrizadas y creadas por Adobe para casos de uso analítico comunes. Cada acelerador aparece como una fila en una tabla con un nombre, una vista previa SQL y metadatos.
+
+Seleccione un acelerador para abrirlo en el Editor de consultas. Proporcione valores de parámetro y ejecute la consulta para generar resultados. Adobe mantiene los aceleradores en modo de solo lectura para garantizar la coherencia. Para modificar la lógica, cree una copia editable con **[!UICONTROL Create custom template]**. Consulte la guía [Aceleradores de Data Distiller](./accelerators.md) para obtener información sobre cómo detectar, ejecutar, programar y personalizar aceleradores.
+
 ### Aceleradores recomendados de Data Distiller {#recommended-accelerators}
 
-Seleccione un enlace rápido para ir a los paneles de Data Distiller correspondientes [!UICONTROL Templates]. Cada acelerador proporciona potentes herramientas y visualizaciones que le ayudarán a analizar los datos de audiencia, optimizar la segmentación y mejorar las estrategias de segmentación.
+La sección **[!UICONTROL Recommended Data Distiller accelerators]** de la ficha Información general proporciona acceso rápido a los aceleradores más utilizados. Aparecen como tarjetas y admiten dos flujos de trabajo:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: desde este panel puede analizar intersecciones de audiencia entre varios segmentos de audiencia para descubrir información valiosa y optimizar estrategias de segmentación. También puede exportar sus perspectivas para realizar más análisis sin conexión o generar informes.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: en este tablero puede comparar y contrastar métricas clave de audiencia en paralelo para analizar dos grupos de audiencias en detalle. Estas perspectivas le ayudan a comprender el tamaño de la audiencia, el crecimiento y otros indicadores de rendimiento clave, lo que le permite refinar la segmentación y optimizar las estrategias de segmentación con decisiones basadas en datos.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: use el panel [!UICONTROL Audience trends] para visualizar cómo evolucionan las audiencias a lo largo del tiempo mediante métricas clave como el crecimiento de la audiencia, los recuentos de identidad y los perfiles de identidad únicos. Realice un seguimiento de las tendencias para descubrir perspectivas valiosas sobre el comportamiento de la audiencia, lo que le permite refinar la segmentación, mejorar la participación y optimizar las estrategias de segmentación para campañas más eficaces.
-Realice un seguimiento de las métricas de audiencia a lo largo del tiempo para monitorizar los cambios en el tamaño de la audiencia, el crecimiento de la identidad y la participación general.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: utilice el panel Superposiciones de identidad de audiencia para analizar las superposiciones de identidad dentro de las audiencias seleccionadas. Las visualizaciones y los datos tabulados proporcionan perspectivas para optimizar la vinculación de identidad, reducir la redundancia y mejorar la segmentación. Estas perspectivas permiten una segmentación más eficaz, una personalización mejorada y unas interacciones con los clientes optimizadas.
+- **Los aceleradores vinculados a paneles** se abren en el área de trabajo de paneles con visualizaciones creadas previamente. No requieren la entrada de parámetros ni la ejecución manual de consultas.
+- **Los aceleradores basados en consultas** se abren en el Editor de consultas, donde puede proporcionar valores de parámetros, ejecutar la consulta o programarla.
 
-![Área de trabajo del servicio de consultas con la sección de aceleradores de Data Distiller resaltada.](../images/ui/overview/data-distiller-accelerators.png)
+Seleccione una tarjeta para abrir el acelerador. Utilice esta sección para acceder rápidamente a flujos de trabajo comunes o vaya a la pestaña **[!UICONTROL Accelerators]** para ver el catálogo completo. Para obtener la lista completa de aceleradores e instrucciones detalladas, consulte la [pestaña Aceleradores](./accelerators.md#discovery-paths) o la [guía de aceleradores de Data Distiller](./accelerators.md).
+
+Los siguientes aceleradores vinculados al panel están disponibles:
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: analice las intersecciones entre segmentos de audiencia para identificar patrones de superposición y refinar la segmentación.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: compare métricas clave entre dos audiencias, incluido el tamaño, la composición y los cambios con el paso del tiempo.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: realiza un seguimiento de cómo cambian las métricas de audiencia con el paso del tiempo, incluidos el tamaño de la audiencia y los recuentos de identidad.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: examine cómo se superponen los tipos de identidad dentro de las audiencias para admitir la vinculación de identidad y la precisión de segmentación.
+
+![Información general del servicio de consultas que muestra la sección de aceleradores de Data Distiller con las tarjetas aceleradoras recomendadas.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Ejemplos de Data Distiller {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ La sección de métricas clave muestra visualizaciones de datos importantes que 
 
 #### Establecer un filtro de fecha {#set-date-filter}
 
-Para aplicar un filtro de fecha global a estas visualizaciones, seleccione el icono de filtro (![Un icono de filtro.](../../images/icons/filter-icon-white.png)) y ajuste el intervalo de fechas en el cuadro de diálogo **[!UICONTROL Filters]**. Aplique este filtro para adaptar las métricas mostradas para un lapso de tiempo específico y mejorar la relevancia del análisis.
+Para aplicar un filtro de fecha global a estas visualizaciones, seleccione el icono de filtro (![Un icono de filtro.](../../images/icons/filter-icon-white.png)) y ajuste el intervalo de fecha en el cuadro de diálogo **[!UICONTROL Filters]**. Aplique este filtro para adaptar las métricas mostradas para un lapso de tiempo específico y mejorar la relevancia del análisis.
 
 ![Cuadro de diálogo Filtros para los gráficos de métricas clave en el Workspace de Query Service.](../images/ui/overview/filters-dialog.png)
 

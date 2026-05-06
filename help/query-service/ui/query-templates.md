@@ -2,9 +2,9 @@
 title: Plantillas de consulta
 description: Las plantillas de consulta son consultas SQL guardadas reutilizables que otros usuarios pueden reutilizar para ahorrar tiempo y esfuerzo. Se pueden crear mediante el Editor de consultas o la API del servicio de consultas y están disponibles para su uso en todos los conjuntos de datos de Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento proporciona la información necesaria para crear plantillas de co
 
 ## Requisitos previos
 
-Debe tener el permiso [!UICONTROL Administrar consultas] habilitado para acceder al Editor de consultas y ver el panel de consultas en la interfaz de usuario de Experience Platform. El permiso se habilita a través de Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través de Admin Console](../../access-control/home.md).
+Debe tener el permiso [!UICONTROL Manage queries] habilitado para acceder al Editor de consultas y ver el panel de consultas dentro de la interfaz de usuario de Experience Platform. El permiso se habilita a través de Adobe [Admin Console](https://adminconsole.adobe.com/). Póngase en contacto con el administrador de su organización si no tiene privilegios de administrador para habilitar este permiso. Consulte la documentación de control de acceso para obtener [instrucciones completas sobre cómo agregar permisos a través de Admin Console](../../access-control/home.md).
 
 ## Creación de una plantilla de consulta
 
@@ -25,7 +25,15 @@ Puede crear plantillas de consulta mediante dos métodos, ya sea realizando una 
 
 ### Utilice el Editor de consultas para crear y guardar una consulta como plantilla
 
-Consulte la documentación para obtener instrucciones sobre cómo usar el Editor de consultas para [escribir](./user-guide.md#query-authoring) y [guardar consultas](./user-guide.md#saving-queries). Una vez que haya asignado un nombre a la consulta y la haya guardado, podrá volver a utilizarla como plantilla de consulta en la ficha [!UICONTROL Plantillas].
+Consulte la documentación para obtener instrucciones sobre cómo usar el Editor de consultas para [escribir](./user-guide.md#query-authoring) y [guardar consultas](./user-guide.md#saving-queries). Una vez que haya asignado un nombre a la consulta y la haya guardado, podrá volver a utilizarla como plantilla de consulta desde la ficha [!UICONTROL Templates].
+
+### Creación de una plantilla a partir de un acelerador de Data Distiller {#create-from-accelerator}
+
+Los aceleradores de Data Distiller son de solo lectura. Para modificar un acelerador, cree una plantilla editable a partir de él en el Editor de consultas.
+
+Abra un acelerador y, a continuación, seleccione **[!UICONTROL Create custom template]** para clonar el SQL. Guarde la plantilla para agregarla a la ficha **[!UICONTROL Templates]**. La plantilla clonada es totalmente editable y se puede ejecutar, programar o modificar según sea necesario.
+
+Consulte la guía de [Aceleradores de Data Distiller](./accelerators.md#create-custom-template) para obtener instrucciones detalladas.
 
 >[!TIP]
 >
@@ -33,7 +41,7 @@ Consulte la documentación para obtener instrucciones sobre cómo usar el Editor
 
 ## Examinar plantillas de consulta {#browse}
 
-En el área de trabajo Consultas de la IU de Experience Platform, seleccione **[!UICONTROL Plantillas]** para mostrar la lista de consultas guardadas disponibles.
+En el área de trabajo Consultas de la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Templates]** para mostrar la lista de consultas guardadas disponibles.
 
 ![Espacio de trabajo de consultas con la ficha Plantillas resaltada.](../images/ui/query-templates/query-templates.png)
 
@@ -43,10 +51,10 @@ Para buscar información de plantilla relevante, seleccione cualquier plantilla 
 
 Desde el panel de detalles puede ejecutar las siguientes acciones:
 
-* Seleccione **[!UICONTROL Ejecutar como CTAS]** para crear una tabla nueva seleccionando datos de una tabla o tablas existentes. Esta opción sólo está disponible si tiene una consulta SELECT.
-* Seleccione **[!UICONTROL Agregar programación]** para comenzar a editar la programación de la plantilla de consulta.
-* Seleccione **[!UICONTROL Ver programación]** para ir a la ficha [!UICONTROL Programaciones] del Editor de consultas. Esta vista contiene toda la información de programación asociada a la consulta.
-* Seleccione **[!UICONTROL Eliminar consulta]** para eliminar la plantilla.
+* Seleccione **[!UICONTROL Run as CTAS]** para crear una nueva tabla seleccionando datos de una tabla o tablas existentes. Esta opción sólo está disponible si tiene una consulta SELECT.
+* Seleccione **[!UICONTROL Add schedule]** para comenzar a editar la programación de la plantilla de consulta.
+* Seleccione **[!UICONTROL View schedule]** para navegar a la ficha [!UICONTROL Schedules] del Editor de consultas. Esta vista contiene toda la información de programación asociada a la consulta.
+* Seleccione **[!UICONTROL Delete query]** para eliminar la plantilla.
 * Seleccione el nombre de la plantilla para navegar hasta el Editor de consultas, donde el SQL se rellena previamente para su edición.
 
 ### Utilice la API del servicio de consultas para crear una plantilla
@@ -57,7 +65,7 @@ Consulte la documentación para obtener instrucciones sobre [cómo crear una pla
 >
 >Las plantillas creadas mediante la API también están visibles en la pestaña Plantillas del servicio de consulta de la interfaz de usuario de Experience Platform.
 
-## Pasos siguientes
+## Próximos pasos
 
 Al leer este documento, ahora comprende mejor cómo crear plantillas de consulta en el servicio de consultas. Consulte la [descripción general de la interfaz de usuario](./overview.md) o la [guía de la API del servicio de consultas](../api/getting-started.md) para obtener más información acerca de las funcionalidades del servicio de consultas.
 
