@@ -4,9 +4,9 @@ title: Extremo de API de trabajos de segmento
 description: El extremo de trabajos de segmento de la API del servicio de segmentación de Adobe Experience Platform le permite administrar mediante programación los trabajos de segmento de su organización.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1240'
 ht-degree: 3%
 
 ---
@@ -451,8 +451,6 @@ Una respuesta correcta devuelve el estado HTTP 200 con información detallada so
 | `metrics` | Un objeto que contiene información de diagnóstico sobre el trabajo de segmentación. |
 
 +++
-
->[!ENDTABS]
 
 ## Recuperar trabajos de segmentos por lotes {#bulk-get}
 
