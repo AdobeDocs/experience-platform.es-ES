@@ -314,4 +314,4 @@ La siguiente respuesta muestra información para el id. de conexión base: `3e90
 Siguiendo este tutorial, ha creado una conexión base [!DNL Salesforce] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar datos de CRM a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/crm.md)
+* [Cree un flujo de datos para llevar datos de CRM a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)
