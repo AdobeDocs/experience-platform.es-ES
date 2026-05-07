@@ -2,9 +2,9 @@
 title: Conexión de Salesforce a Experience Platform mediante la API de Flow Service
 description: Obtenga información sobre cómo conectar Adobe Experience Platform a una cuenta de Salesforce mediante la API de Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '952'
 ht-degree: 3%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 Lea esta guía para saber cómo conectar su cuenta de origen de [!DNL Salesforce] a Adobe Experience Platform mediante la [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
-## Introducción 
+## Introducción
 
 Esta guía requiere una comprensión práctica de los siguientes componentes de Adobe Experience Platform:
 
@@ -30,30 +30,7 @@ Lea los pasos siguientes para obtener información sobre cómo conectar su orige
 
 ### Recopilar credenciales necesarias
 
->[!WARNING]
->
->La autenticación básica para el origen [!DNL Salesforce] quedará obsoleta en enero de 2026. Debe pasar a la autenticación de credencial de cliente de OAuth 2 para seguir usando el origen e ingiriendo datos de su cuenta de [!DNL Salesforce] a Experience Platform.
-
-El origen [!DNL Salesforce] admite la autenticación básica y la credencial de cliente OAuth2.
-
->[!BEGINTABS]
-
->[!TAB Autenticación básica]
-
-Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante autenticación básica, proporcione valores para las siguientes credenciales:
-
-| Credencial | Descripción |
-| --- | --- |
-| `environmentUrl` | Dirección URL de la instancia de origen [!DNL Salesforce]. El formato de `environmentUrl` es `https://[domain].my.salesforce.com`. |
-| `username` | Nombre de usuario para la cuenta de usuario [!DNL Salesforce]. |
-| `password` | Contraseña de la cuenta de usuario [!DNL Salesforce]. |
-| `securityToken` | Token de seguridad para la cuenta de usuario [!DNL Salesforce]. |
-| `apiVersion` | (Opcional) La versión de la API de REST de la instancia [!DNL Salesforce] que está utilizando. El valor de la versión de la API debe tener formato decimal. Por ejemplo, si está usando la versión de API `52`, debe introducir el valor como `52.0`. Si este campo se deja en blanco, Experience Platform utilizará automáticamente la última versión disponible. |
-| `connectionSpec.id` | La especificación de conexión devuelve las propiedades del conector de origen, incluidas las especificaciones de autenticación relacionadas con la creación de las conexiones base y origen. El id. de especificación de conexión para [!DNL Salesforce] es: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-Para obtener más información sobre cómo empezar, visite [este documento de Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
-
->[!TAB Credencial de cliente de OAuth 2]
+El origen [!DNL Salesforce] admite la autenticación mediante la credencial de cliente OAuth2.
 
 Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante la credencial de cliente de OAuth 2, proporcione valores para las siguientes credenciales:
 
@@ -68,8 +45,6 @@ Para conectar su cuenta de [!DNL Salesforce] a [!DNL Flow Service] mediante la c
 
 Para obtener más información sobre el uso de OAuth para [!DNL Salesforce], lea la [[!DNL Salesforce] guía sobre flujos de autorización de OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
->[!ENDTABS]
-
 ### Crear una conexión base para [!DNL Salesforce] en Experience Platform en [!DNL Azure]
 
 Una conexión base retiene información entre el origen y Experience Platform, incluidas las credenciales de autenticación del origen, el estado actual de la conexión y el identificador único de la conexión base. El ID de conexión base le permite explorar y navegar por archivos desde el origen e identificar los elementos específicos que desea introducir, incluida la información sobre sus tipos de datos y formatos.
@@ -82,67 +57,7 @@ Para crear una conexión base y conectar su cuenta de [!DNL Salesforce] a Experi
 POST /connections
 ```
 
->[!BEGINTABS]
-
->[!TAB Autenticación básica]
-
-+++Solicitud
-
-La siguiente solicitud crea una conexión base para [!DNL Salesforce] mediante autenticación básica:
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "ACME Salesforce account",
-      "description": "Salesforce account using basic authentication",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params":
-            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
-            "username": "acme-salesforce",
-            "password": "xxxx",
-            "securityToken": "xxxx"
-        }
-      },
-      "connectionSpec": {
-          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Propiedad | Descripción |
-| --- | --- |
-| `auth.params.environmentUrl` | La URL de su instancia [!DNL Salesforce]. |
-| `auth.params.username` | El nombre de usuario asociado con su cuenta de [!DNL Salesforce]. |
-| `auth.params.password` | La contraseña asociada a su cuenta de [!DNL Salesforce]. |
-| `auth.params.securityToken` | El token de seguridad asociado con su cuenta de [!DNL Salesforce]. |
-| `connectionSpec.id` | Identificador de especificación de conexión [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
-
-+++
-
-+++Respuesta
-
-Una respuesta correcta devuelve la conexión base recién creada junto con su ID único.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700df7b-0000-0200-0000-5e3b424f0000\""
-}
-```
-
-+++
-
->[!TAB Credencial de cliente de OAuth 2]
-
-+++Solicitud
++++Seleccionar para ver la solicitud
 
 La siguiente solicitud crea una conexión base para [!DNL Salesforce] mediante la credencial de cliente de OAuth 2:
 
@@ -186,7 +101,7 @@ curl -X POST \
 +++
 
 
-+++Respuesta
++++Seleccionar para ver la respuesta
 
 Una respuesta correcta devuelve la conexión base recién creada junto con su ID único.
 
@@ -198,8 +113,6 @@ Una respuesta correcta devuelve la conexión base recién creada junto con su ID
 ```
 
 +++
-
->[!ENDTABS]
 
 ## Conectar [!DNL Salesforce] a Experience Platform en Amazon Web Service (AWS) {#aws}
 
@@ -307,7 +220,7 @@ curl -X GET \
 
 >[!TAB Inicializando]
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 La siguiente respuesta muestra información para el id. de conexión base: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` mientras se encuentra en el estado `initializing`.
 
@@ -350,7 +263,7 @@ La siguiente respuesta muestra información para el id. de conexión base: `3e90
 
 >[!TAB Habilitado]
 
-+++Seleccione para ver el ejemplo de respuesta
++++Seleccionar para ver el ejemplo de respuesta
 
 La siguiente respuesta muestra información para el id. de conexión base: `3e908d3f-c390-482b-9f44-43d3d4f2eb82` mientras se encuentra en el estado `enabled`.
 
@@ -401,4 +314,4 @@ La siguiente respuesta muestra información para el id. de conexión base: `3e90
 Siguiendo este tutorial, ha creado una conexión base [!DNL Salesforce] mediante la API [!DNL Flow Service]. Puede utilizar este ID de conexión base en los siguientes tutoriales:
 
 * [Explore la estructura y el contenido de las tablas de datos mediante la API  [!DNL Flow Service] B](../../explore/tabular.md)
-* [Cree un flujo de datos para llevar datos de CRM a Experience Platform mediante la API  [!DNL Flow Service] &#x200B;](../../collect/crm.md)
+* [Cree un flujo de datos para llevar datos de CRM a Experience Platform mediante la API  [!DNL Flow Service] ](../../collect/crm.md)

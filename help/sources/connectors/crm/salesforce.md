@@ -2,9 +2,9 @@
 title: Información general sobre el conector Salesforce Source
 description: Obtenga información sobre cómo conectar Salesforce a Adobe Experience Platform mediante API o la interfaz de usuario.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 501cb5e34e565b40160b39aed306a23cf77328ea
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >Ahora puede usar el origen [!DNL Salesforce] al ejecutar Adobe Experience Platform en Amazon Web Service (AWS). Experience Platform que se ejecuta en AWS está disponible actualmente para un número limitado de clientes. Para obtener más información sobre la infraestructura de Experience Platform compatible, consulte la [descripción general de la nube múltiple de Experience Platform](../../../landing/multi-cloud.md).
-
->[!WARNING]
->
->La autenticación básica para el origen [!DNL Salesforce] quedará obsoleta en enero de 2026. Debe pasar a la autenticación de credencial de cliente de OAuth 2 para seguir usando el origen e ingiriendo datos de su cuenta de [!DNL Salesforce] a Experience Platform.
 
 Adobe Experience Platform permite la ingesta de datos desde fuentes externas, al tiempo que ofrece la posibilidad de estructurar, etiquetar y mejorar los datos entrantes mediante los servicios de Experience Platform. Puede introducir datos de una variedad de fuentes, como aplicaciones de Adobe, almacenamiento basado en la nube, bases de datos y muchas otras.
 
@@ -303,7 +299,7 @@ En primer lugar, utilice lo siguiente para crear un certificado/par clave de arc
 openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem  
 ```
 
-1. En el panel [!DNL Salesforce], seleccione la configuración (![El icono de configuración.](/help/images/icons/settings.png)) y después seleccione **[!DNL Setup]**.
+1. En el panel [!DNL Salesforce], seleccione la configuración (![El icono de configuración.](/help/images/icons/settings.png)) y luego seleccione **[!DNL Setup]**.
 2. Vaya a [!DNL App Manager] y seleccione **[!DNL New Connection App]**.
 3. Asigne un nombre a la aplicación y permita que el resto de los campos se rellenen automáticamente.
 4. Habilite la casilla para [!DNL Enable OAuth Settings].
@@ -435,7 +431,7 @@ public class Main {
 }
 ```
 
-| Propiedad | Configuraciones  |
+| Propiedad | Configuraciones |
 | --- | --- |
 | `claimArray[0]` | Actualice `claimArray[0]` con su ID de cliente. |
 | `claimArray[1]` | Actualice `claimArray[1]` con el nombre de usuario [!DNL Salesforce] autorizado para la aplicación. |

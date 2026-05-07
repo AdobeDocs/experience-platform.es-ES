@@ -4,9 +4,9 @@ type: Tutorial
 description: Obtenga información sobre cómo crear una conexión de origen de Snowflake mediante la interfaz de usuario de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
+source-git-commit: ea8100cf8e032371b6c5187ba142bc12047b35d1
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1079'
 ht-degree: 2%
 
 ---
@@ -36,13 +36,13 @@ Este tutorial requiere una comprensión práctica de los siguientes componentes 
 
 ## Navegar por el catálogo de fuentes {#navigate}
 
-En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Fuentes]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Fuentes]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
+En la interfaz de usuario de Experience Platform, seleccione **[!UICONTROL Sources]** en el panel de navegación izquierdo para acceder al área de trabajo [!UICONTROL Sources]. Puede seleccionar la categoría adecuada del catálogo en la parte izquierda de la pantalla. También puede encontrar la fuente específica con la que desea trabajar utilizando la opción de búsqueda.
 
-Seleccione **[!DNL Snowflake]** en la categoría *[!UICONTROL Bases de datos]* y luego seleccione **[!UICONTROL Configurar]**.
+Seleccione **[!DNL Snowflake]** en la categoría *[!UICONTROL Databases]* y luego seleccione **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Agregar datos]**.
+>Los orígenes del catálogo de orígenes muestran la opción **[!UICONTROL Set up]** cuando un origen determinado aún no tiene una cuenta autenticada. Una vez que existe una cuenta autenticada, esta opción cambia a **[!UICONTROL Add data]**.
 
 ![El catálogo de orígenes con la tarjeta de Snowflake seleccionada..](../../../../images/tutorials/create/snowflake/catalog.png)
 
@@ -50,7 +50,7 @@ Seleccione **[!DNL Snowflake]** en la categoría *[!UICONTROL Bases de datos]* y
 
 A continuación, se le redirige al paso de autenticación del flujo de trabajo de fuentes. Aquí puede usar una cuenta existente o crear una nueva cuenta.
 
-Para usar una cuenta existente, seleccione la cuenta de [!DNL Snowflake] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Siguiente]** para continuar.
+Para usar una cuenta existente, seleccione la cuenta de [!DNL Snowflake] con la que desee conectarse y, a continuación, seleccione **[!UICONTROL Next]** para continuar.
 
 ![Interfaz de cuenta existente en el flujo de trabajo de orígenes.](../../../../images/tutorials/create/snowflake/existing.png)
 
@@ -58,35 +58,15 @@ Para usar una cuenta existente, seleccione la cuenta de [!DNL Snowflake] con la 
 
 Si no tiene una cuenta existente, debe crear una nueva cuenta proporcionando las credenciales de autenticación necesarias que se correspondan con su origen.
 
-Para crear una cuenta nueva, selecciona **[!UICONTROL Cuenta nueva]** y, a continuación, proporciona un nombre y, opcionalmente, agrega una descripción para tu cuenta.
+Para crear una cuenta nueva, seleccione **[!UICONTROL New account]**, proporcione un nombre y, opcionalmente, agregue una descripción para la cuenta.
 
 ### Conectarse a Experience Platform en Azure {#azure}
 
-Puede conectar su cuenta de [!DNL Snowflake] a Experience Platform en Azure mediante la autenticación de clave de cuenta o la autenticación de par de claves.
+Puede conectar su cuenta de [!DNL Snowflake] a Experience Platform en Azure mediante la autenticación de par de claves.
 
->[!BEGINTABS]
+Para usar la autenticación de par clave, seleccione **[!UICONTROL KeyPair authentication]**, proporcione valores para su cuenta, nombre de usuario, clave privada, frase de contraseña de clave privada, base de datos y almacén, y luego seleccione **[!UICONTROL Connect to source]**.
 
->[!TAB Autenticación de clave de cuenta]
-
-Para usar la autenticación de clave de cuenta, selecciona **[!UICONTROL Autenticación de clave de cuenta]**, proporciona la cadena de conexión en el formulario de entrada y, a continuación, selecciona **[!UICONTROL Conectarse al origen]**.
-
-![Interfaz de autenticación de clave de cuenta.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
-
-| Credencial | Descripción |
-| --- | --- |
-| Cuenta | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la guía sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obtener instrucciones adicionales. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
-| Base de datos | La base de datos [!DNL Snowflake] contiene los datos que desea obtener de Experience Platform. |
-| Nombre de usuario | El nombre de usuario de la cuenta [!DNL Snowflake]. |
-| Contraseña | Contraseña de la cuenta de usuario [!DNL Snowflake]. |
-| Función | La función de control de acceso predeterminada que se usará en la sesión [!DNL Snowflake]. La función debe ser una función existente que ya se haya asignado al usuario especificado. La función predeterminada es `PUBLIC`. |
-| Cadena de conexión | Cadena de conexión utilizada para conectarse a la instancia [!DNL Snowflake]. El patrón de cadena de conexión de [!DNL Snowflake] es `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-
->[!TAB Autenticación de par de claves]
-
-Para usar la autenticación de par clave, selecciona **[!UICONTROL Autenticación de par clave]**, proporciona valores para tu cuenta, nombre de usuario, clave privada, frase de contraseña de clave privada, base de datos y almacén y, a continuación, selecciona **[!UICONTROL Conectar con el origen]**.
-
-![Interfaz de autenticación de par de claves de cuenta.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+![Interfaz de autenticación de par de claves de cuenta.](../../../../images/tutorials/create/snowflake/new.png)
 
 Con la autenticación de par clave, debe generar un par clave RSA de 2048 bits y, a continuación, proporcionar los siguientes valores al crear una cuenta para el origen [!DNL Snowflake].
 
@@ -95,13 +75,11 @@ Con la autenticación de par clave, debe generar un par clave RSA de 2048 bits y
 | Cuenta | Un nombre de cuenta identifica de forma exclusiva una cuenta de su organización. En este caso, debe identificar una cuenta de forma exclusiva en diferentes organizaciones de [!DNL Snowflake]. Para ello, debe anteponer el nombre de su organización al nombre de la cuenta. Por ejemplo: `orgname-account_name`. Lee la guía sobre [cómo recuperar tu [!DNL Snowflake] identificador de cuenta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obtener instrucciones adicionales. Para obtener más información, consulte la [[!DNL Snowflake] documentación](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Nombre de usuario | El nombre de usuario de su cuenta de [!DNL Snowflake]. |
 | Clave privada | La clave privada codificada [!DNL Base64-] de su cuenta de [!DNL Snowflake]. Puede generar claves privadas cifradas o no cifradas. Si utiliza una clave privada cifrada, también debe proporcionar una frase de contraseña de clave privada al autenticarse con Experience Platform. Lee la guía sobre [recuperar tu [!DNL Snowflake] clave privada](../../../../connectors/databases/snowflake.md) para obtener más información. |
-| Frase de contraseña de clave privada | La frase de contraseña de clave privada es una capa adicional de seguridad que debe utilizar al autenticarse con una clave privada cifrada. No es necesario que proporcione la frase de contraseña si utiliza una clave privada no cifrada. |
+| Frase de contraseña privada | La frase de contraseña de clave privada es una capa adicional de seguridad que debe utilizar al autenticarse con una clave privada cifrada. No es necesario que proporcione la frase de contraseña si utiliza una clave privada no cifrada. |
 | Base de datos | La base de datos [!DNL Snowflake] que contiene los datos que desea introducir en Experience Platform. |
-| Almacén | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
+| Data warehouse | El almacén [!DNL Snowflake] administra el proceso de ejecución de consultas para la aplicación. Cada almacén de [!DNL Snowflake] es independiente entre sí y se debe acceder a él de forma individual al llevar datos a Experience Platform. |
 
 Para obtener más información sobre estos valores, consulte [este documento de Snowflake](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-
->[!ENDTABS]
 
 ### Conectarse a Experience Platform en AWS {#aws}
 
@@ -115,7 +93,7 @@ Para crear una nueva cuenta de [!DNL Snowflake] y conectarse a Experience Platfo
 
 >[!TAB Autenticación de par de claves]
 
-Para conectar usando pares de claves, selecciona **[!UICONTROL Autenticación KeyPair]**, proporciona tus credenciales de autenticación y luego selecciona **[!UICONTROL Conectarse al origen]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Para conectarse usando pares de claves, seleccione **[!UICONTROL KeyPair Authentication]**, proporcione sus credenciales de autenticación y luego seleccione **[!UICONTROL Connect to source]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
 ![El nuevo paso de creación de cuenta para la autenticación de pares de claves.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
 
@@ -125,7 +103,7 @@ Para conectar usando pares de claves, selecciona **[!UICONTROL Autenticación Ke
 >
 >La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-Para conectarse usando una combinación de nombre de usuario y contraseña, seleccione **[!UICONTROL Autenticación básica]**, proporcione sus credenciales de autenticación y luego seleccione **[!UICONTROL Conectarse al origen]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Para conectarse usando una combinación de nombre de usuario y contraseña, seleccione **[!UICONTROL Basic authentication]**, proporcione sus credenciales de autenticación y luego seleccione **[!UICONTROL Connect to source]**. Para obtener más información sobre estas credenciales, lea la [[!DNL Snowflake] descripción general por lotes](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
 ![Paso de nueva cuenta en el flujo de trabajo de orígenes donde puede conectar Snowflake a Experience Platform en AWS.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
@@ -133,7 +111,7 @@ Para conectarse usando una combinación de nombre de usuario y contraseña, sele
 
 ### Omitir vista previa de datos de ejemplo {#skip-preview-of-sample-data}
 
-Durante el paso de selección de datos, puede encontrar un tiempo de espera al ingerir tablas o archivos de datos grandes. Puede omitir la previsualización de datos para evitar el tiempo de espera y seguir viendo el esquema, aunque sin datos de ejemplo. Para omitir la vista previa de datos, active la opción **[!UICONTROL Omitir vista previa de datos de ejemplo]**.
+Durante el paso de selección de datos, puede encontrar un tiempo de espera al ingerir tablas o archivos de datos grandes. Puede omitir la previsualización de datos para evitar el tiempo de espera y seguir viendo el esquema, aunque sin datos de ejemplo. Para omitir la vista previa de datos, habilite la opción **[!UICONTROL Skip previewing sample data]**.
 
 El resto del flujo de trabajo sigue siendo el mismo. La única advertencia es que omitir la previsualización de datos puede impedir que los campos calculados y requeridos se validen automáticamente durante el paso de asignación y, a continuación, tendrá que validar manualmente esos campos durante la asignación.
 

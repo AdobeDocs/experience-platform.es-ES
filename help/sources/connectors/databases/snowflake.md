@@ -3,14 +3,14 @@ title: Información general sobre el conector Snowflake Source
 description: Obtenga información sobre cómo conectar Snowflake a Adobe Experience Platform mediante API o la interfaz de usuario.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 2%
 
 ---
 
-# Fuente de [!DNL Snowflake] 
+# Fuente de [!DNL Snowflake]
 
 >[!IMPORTANT]
 >
@@ -72,7 +72,11 @@ Proporcione valores para las siguientes credenciales a fin de conectar [!DNL Sno
 
 >[!WARNING]
 >
->La autenticación básica (o autenticación de clave de cuenta) para el origen [!DNL Snowflake] quedará obsoleta en noviembre de 2025. Debe pasar a la autenticación basada en pares de claves para seguir utilizando el origen e introduciendo datos de la base de datos en Experience Platform. Para obtener más información sobre la obsolescencia, lea la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>La autenticación básica (también denominada autenticación de clave de cuenta) para el origen [!DNL Snowflake] está **totalmente obsoleta para las conexiones a Experience Platform en regiones de Azure**; debe utilizar la autenticación de par de claves para todas las conexiones nuevas y existentes basadas en Azure.
+>
+>Para [!DNL Snowflake] orígenes que se conectan a Experience Platform en **regiones de AWS**, la autenticación básica sigue siendo compatible por ahora, pero está en proceso de desaprobación y se eliminará en el futuro. Se recomienda migrar a la autenticación de par de claves lo antes posible para garantizar una conectividad continua.
+>
+>Para obtener más información sobre la desaprobación y las instrucciones, consulte la [[!DNL Snowflake] guía de prácticas recomendadas sobre cómo mitigar los riesgos de compromiso de credenciales](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Credencial | Descripción |
 | --- | --- |
