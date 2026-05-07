@@ -3,9 +3,9 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
+source-git-commit: a8a466778b74e6f64d258f759a36e1a4361f0a6b
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '2988'
 ht-degree: 6%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 6%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.33.1: 7 de mayo de 2026
+
+- Se ha corregido un problema en el cual los componentes necesarios, como Contexto, se excluían del paquete de SDK e impedían que se enviaran eventos.
 
 ## Versión 2.33.0: 7 de mayo de 2026
 
@@ -86,7 +90,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../identity/overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../identity/overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 
