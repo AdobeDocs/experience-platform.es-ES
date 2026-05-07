@@ -3,10 +3,10 @@ title: Notas de la versión del SDK web de Adobe Experience Platform
 description: Últimas notas de la versión del SDK web de Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de la versión;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 5%
+source-wordcount: '2963'
+ht-degree: 6%
 
 ---
 
@@ -15,6 +15,16 @@ ht-degree: 5%
 
 Este documento describe las notas de la versión de Adobe Experience Platform Web SDK.
 Para obtener las últimas notas de la versión de la extensión de etiquetas Web SDK, consulte las [notas de la versión de la extensión de etiquetas Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versión 2.33.0: 7 de mayo de 2026
+
+- Se ha corregido un problema en el cual los eventos de análisis de medios puente adBreak, Chapter y QoE devolvían errores de API.
+- Se agregó Adobe Advertising `stitchId` a los eventos de experiencia salientes cuando se configuró Advertising.
+- Se mejoró el rendimiento de `sendEvent` comandos al eliminar un bloque en el procesamiento de destino de ID.
+- Se ha corregido un problema en el cual la resolución de identidad de publicidad cargaba scripts e iframes de terceros, incluso cuando la publicidad no estaba configurada.
+- Se agregó la capacidad de leer `adobe_mc` parámetro de transferencia de identidad del hash (anteriormente solo estaba en los parámetros de consulta).
+- Se ha corregido un problema en el cual `adobe_mc` no se podía leer cuando la dirección URL se codificaba varias veces.
+- Incluya XDM en todos los eventos de Brand Concierge salientes.
 
 ## Versión 2.32.0: 23 de marzo de 2026
 
@@ -76,7 +86,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 **Correcciones y mejoras**
 
 - Se ha corregido un error en el [rastreador de Media Analytics](commands/getmediaanalyticstracker.md) por el que la propiedad `length` del objeto de medios aceptaba incorrectamente tipos de datos no válidos.
-- Se ha mejorado la administración de identidades [1&rbrace; para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../identity/overview.md)
+- Se ha mejorado la administración de identidades [1} para procesar correctamente los rechazos de promesas cuando falle la búsqueda de identidades.](../identity/overview.md)
 - Se ha resuelto un problema en el cual el contenido de personalización con elementos de contenido de HTML no se podía procesar con un error relacionado con un elemento que faltaba `renderStatusHandler`.
 - Se ha corregido la colección de direcciones URL [de Activity Map](commands/configure/clickcollectionenabled.md) para que administre correctamente las direcciones URL que no son HTTP.
 
@@ -267,7 +277,7 @@ Para obtener las últimas notas de la versión de la extensión de etiquetas Web
 
 ## Versión 2.13.1: viernes, 13 de octubre de 2022
 
-- Se ha corregido un problema en el cual la migración de visitantes no funcionaba si window.Visitor se definía después de configurar. Esto es especialmente un problema cuando se ejecuta con etiquetas de Adobe.
+- Se ha corregido un problema en el cual la migración de visitantes no funcionaba si la ventanaEl visitante se define después de configurar. Esto es especialmente un problema cuando se ejecuta con etiquetas de Adobe.
 - Se corrigió un problema en el cual `device.screenWidth` y `device.screenHeight` se rellenaban como cadenas en algunos entornos.
 
 ## Versión 2.13.0: 28 de septiembre de 2022
